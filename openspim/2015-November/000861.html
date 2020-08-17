@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] 3D Reconstruction
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%203D%20Reconstruction&In-Reply-To=%3Ctencent_609E697E0A4C348843206897%40qq.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000874.html">
+   <LINK REL="Next"  HREF="000865.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] 3D Reconstruction</H1>
+    <B>&#25919;</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%203D%20Reconstruction&In-Reply-To=%3Ctencent_609E697E0A4C348843206897%40qq.com%3E"
+       TITLE="[OpenSPIM] 3D Reconstruction">709314090 at qq.com
+       </A><BR>
+    <I>Tue Nov 10 07:34:15 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000874.html">[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D	Reconstruction)
+</A></li>
+        <LI>Next message: <A HREF="000865.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#861">[ date ]</a>
+              <a href="thread.html#861">[ thread ]</a>
+              <a href="subject.html#861">[ subject ]</a>
+              <a href="author.html#861">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, Dylan,
+    I also have the problem as you described, and I haven't fixed the problem yet. 
+    I used the genetically modified Zebrafish to do the experiment, which makes the blood vessel fluorescent, so I didn't use the beads.
+    In my situation, if I just moved the x or y position to do the experiment, the SPIM can do the registration at some situation (the overlap size between different stacks and the parameters you use to registration would affect the registration). 
+    However, if I rotated the angle, the registration would fail. I also think that it's maybe the FEP tube is not straight, since when I rotated the angle, I had to change the x and y to move the fish back to screen.
+    In one kind of Leica's light sheet microscope, it is not necessary to change angles to achieve 3D-image. it just move the x, y and z. Of cause, this method would lower the resolution in z-axis.
+     If you make any progress in this problem, please tell me, Thank you!
+
+
+P.S. you can try the software Vaa3D to do the stitch the stacks.
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+
+
+ 
+
+
+
+
+------------------ Original ------------------
+From:  &quot;Windell, Dylan&quot;;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;;
+Date:  Tue, Nov 10, 2015 07:39 PM
+To:  &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;; 
+
+Subject:  [OpenSPIM] 3D Reconstruction
+
+
+
+  
+Hi All,
+ 
+ 
+ 
+I have been trying to register Z-stacks of Zebrafish using the SPIM plugin with various concentrations of beads but despite everything I try I cannot get the beads to match with different angles.
+ 
+ 
+ 
+I am not sure if this is because of the light sheet not being aligned properly (I am calculating the PSF very soon and will re-align the system from scratch) or due to sample prep etc. I have corrected bead drifting (as this was evident  in low concentrations of agarose) and I am pretty sure the xy and z resolution numbers are correct. I will attempt the Multiview reconstruction package, FluoRender or even ClearVolume but without bead registration working I am not sure if that will work either.
+ 
+ 
+ 
+Would it be possible that if the FEP tube is not straight, the manual positioning of the next angles would misalign bead registration? I have also thought that as the embryo fills up the tube, I am not getting enough volume of beads on  either side of the stack for bead registration?
+ 
+ 
+ 
+If anyone has had difficulty in this or have done work on Zebrafish with SPIM I would really appreciate any help.
+ 
+ 
+ 
+Kind regards,
+ 
+ 
+ 
+Dylan
+ 
+ 
+ 
+Dylan Windell
+ 
+Postgraduate Researcher
+ 
+College of Life and Environmental  Sciences
+ 
+University of Exeter, Geoffrey Pope
+ 
+Stocker Road, Exeter EX4 4QD, UK 
+ 
+phone: +44 (0) 7596725056
+ 
+email: <A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151110/40846541/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20151110/40846541/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000874.html">[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D	Reconstruction)
+</A></li>
+	<LI>Next message: <A HREF="000865.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#861">[ date ]</a>
+              <a href="thread.html#861">[ thread ]</a>
+              <a href="subject.html#861">[ subject ]</a>
+              <a href="author.html#861">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

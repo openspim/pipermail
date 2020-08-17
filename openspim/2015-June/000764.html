@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20Image%20Processing%20-%3E%20in%20my%20case%20seems%0A%20linked%20to%20Switching%20to%20BigTIFF&In-Reply-To=%3Cbf04a15db1709969ddc56cf59f5d0d02%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000756.html">
+   <LINK REL="Next"  HREF="000757.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20Image%20Processing%20-%3E%20in%20my%20case%20seems%0A%20linked%20to%20Switching%20to%20BigTIFF&In-Reply-To=%3Cbf04a15db1709969ddc56cf59f5d0d02%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Mon Jun 29 08:14:32 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000756.html">[OpenSPIM]  Problems with Image Processing
+</A></li>
+        <LI>Next message: <A HREF="000757.html">[OpenSPIM] storage strategies for SPIM datasets?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#764">[ date ]</a>
+              <a href="thread.html#764">[ thread ]</a>
+              <a href="subject.html#764">[ subject ]</a>
+              <a href="author.html#764">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I noticed the following: when the TOTAL about of data (not a single 
+stack, but the whole series) to be collected is large (&gt;4 GB I think), a 
+following line appears in the fiji console: &quot;Switching to BigTIFF (by 
+file size)&quot; and then the files behave differently. For example, 
+sometimes I have the behavious that Dylan described: the last displayed 
+message in the Fiji status bar is &quot;Import preparations complete&quot;, but no 
+image ever appears. If the total amount of data is smaller, I have no 
+problems opening files. So the BigTIFF behaviour is somehow different. 
+But I thought BigTIFF should be only used if one file and not the whole 
+series are &gt;4GB...?
+
+By the way, I also get now and then the 'Could not get 
+charToByteConverterClass!', also coming from Fiji.
+
+I realize that these are not really OpenSPIM problems, but I'm not sure 
+where to look/how to understand it better.
+
+Regards,
+Monika
+
+
+W dniu 2015-06-15 16:26, Windell, Dylan napisa&#322;(a):
+&gt;<i> Hi Johannes,
+</I>&gt;<i> 
+</I>&gt;<i> Thank you for your email. I changed the settings to open the files
+</I>&gt;<i> without any prompts but it still seems to bring up all the different
+</I>&gt;<i> stacks every time I try to open a file or convert the file types. The
+</I>&gt;<i> files are actually converting now but they are taking &gt;3 hours each
+</I>&gt;<i> and sometimes an error pops up telling me the file type incompatible
+</I>&gt;<i> and will not convert at all.
+</I>&gt;<i> 
+</I>&gt;<i> The macro only converts one at a time too, can it convert them all at
+</I>&gt;<i> once? Whenever I type in 'setBatchMode( true )' I get the attached
+</I>&gt;<i> error.
+</I>&gt;<i> 
+</I>&gt;<i> Furthermore, I also get this warning quite often: 'Could not get
+</I>&gt;<i> charToByteConverterClass!' Any idea what this is?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks again,
+</I>&gt;<i> 
+</I>&gt;<i> Dylan
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Johannes Schindelin [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>]
+</I>&gt;<i> Sent: 09 June 2015 14:02
+</I>&gt;<i> To: Windell, Dylan
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] Problems with Image Processing
+</I>&gt;<i> 
+</I>&gt;<i> Hi Dylan,
+</I>&gt;<i> 
+</I>&gt;<i> On 2015-06-09 14:45, Windell, Dylan wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I am very new to OpenSPIM and do not have previous experience with
+</I>&gt;&gt;<i> regards to coding or ImageJ so I do apologise for all the basic
+</I>&gt;&gt;<i> questions.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I have managed to take some practise stack image stacks at 6 angles
+</I>&gt;&gt;<i> (300 images - ~2-4GB) but they do not open normally in Image J and the
+</I>&gt;&gt;<i> program just says this:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Reading heading file header (Bio-Formats Import Options listing all
+</I>&gt;&gt;<i> series), Cancelling thumbnail generation, Import preparations complete
+</I>&gt;&gt;<i> - which is followed by nothing.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> When I tried pre-processing the images using the macro I used the
+</I>&gt;&gt;<i> following adaptions to the code as I only have 1 time-point:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> for ( t = 1; t &lt;= 1; t++ ) {
+</I>&gt;&gt;<i>     for ( a = 0; a &lt;= 5; a++ )
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> As I have Windows 7 64bit, I changed the directory to this:
+</I>&gt;&gt;<i> open(&quot;E:\\SPIM_Images\\&lt;<A HREF="file:///\\E:\SPIM_Images\">file:///\\E:\SPIM_Images\</A>&gt;....spim_TL&quot;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I also attached an exception message I received when trying to process
+</I>&gt;&gt;<i> the files.
+</I>&gt;<i> 
+</I>&gt;<i> It appears as if the time lapse might have been interrupted (but this
+</I>&gt;<i> is just a wild guess).
+</I>&gt;<i> 
+</I>&gt;<i> You could try to open the files individually by using
+</I>&gt;<i> File&gt;Import&gt;Bio-Formats and then adjusting the setting so that it does
+</I>&gt;<i> *not* group the images.
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000756.html">[OpenSPIM]  Problems with Image Processing
+</A></li>
+	<LI>Next message: <A HREF="000757.html">[OpenSPIM] storage strategies for SPIM datasets?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#764">[ date ]</a>
+              <a href="thread.html#764">[ thread ]</a>
+              <a href="subject.html#764">[ subject ]</a>
+              <a href="author.html#764">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

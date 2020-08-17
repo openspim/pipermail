@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8%40ee.columbia.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001312.html">
+   <LINK REL="Next"  HREF="001315.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Nikul</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8%40ee.columbia.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">nikul at ee.columbia.edu
+       </A><BR>
+    <I>Wed Feb  5 16:49:22 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001312.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="001315.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1313">[ date ]</a>
+              <a href="thread.html#1313">[ thread ]</a>
+              <a href="subject.html#1313">[ subject ]</a>
+              <a href="author.html#1313">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+&gt;<i> In the concrete case of writing data to a RAID as fast as possible, I
+</I>&gt;<i> would suggest writing *raw* data, though. You can always stitch back the
+</I>&gt;<i> metadata. The only metadata you have to store at the same time as the
+</I>&gt;<i> frames you are writing out are the metadata that *do* change with the
+</I>&gt;<i> frame, i.e. z position and time. All the other metadata can be written out
+</I>&gt;<i> at a much, much slower pace, some of them actually need to be written only
+</I>&gt;<i> once per experiment.
+</I>
+That's a good idea! I will try that out as well.
+
+&gt;<i> P.S.: It might make sense to experiment with a low-impact compression
+</I>&gt;<i> scheme such as LZO (e.g. via <A HREF="https://github.com/Karmasphere/lzo-java">https://github.com/Karmasphere/lzo-java</A>)
+</I>&gt;<i> because it can reduce a large chunk of the redundancies at the cost of CPU
+</I>&gt;<i> but at the benefit of the network or processor bus. If you find time to
+</I>&gt;<i> experiment with this, I would be very much interested in hearing how you
+</I>&gt;<i> fared!
+</I>
+We might look at some sort of compression later, but for now I am going
+to concentrate on trying to maximize throughput.
+
+---------------------------------------------
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+<A HREF="http://www.bionet.ee.columbia.edu/">http://www.bionet.ee.columbia.edu/</A>
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140205/9050395d/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20140205/9050395d/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001312.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="001315.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1313">[ date ]</a>
+              <a href="thread.html#1313">[ thread ]</a>
+              <a href="subject.html#1313">[ subject ]</a>
+              <a href="author.html#1313">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

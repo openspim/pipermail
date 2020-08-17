@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard stage adapter problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20stage%20adapter%20problem&In-Reply-To=%3CCAHAw%2B8Z-RVCqLjOgzkojfKMSiLTGFjo1stVC5hb1Zg-b2wGvrQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001132.html">
+   <LINK REL="Next"  HREF="001139.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard stage adapter problem</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20stage%20adapter%20problem&In-Reply-To=%3CCAHAw%2B8Z-RVCqLjOgzkojfKMSiLTGFjo1stVC5hb1Zg-b2wGvrQ%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Picard stage adapter problem">aureliaomega at gmail.com
+       </A><BR>
+    <I>Thu Sep 19 08:25:30 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001132.html">[OpenSPIM] Picard stage adapter problem
+</A></li>
+        <LI>Next message: <A HREF="001139.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1134">[ date ]</a>
+              <a href="thread.html#1134">[ thread ]</a>
+              <a href="subject.html#1134">[ subject ]</a>
+              <a href="author.html#1134">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+
+Thank you very much!  On re-updating Fiji this morning, the stage issue has
+resolved - PicardStage appears and is available for configuration.  I am
+now all set except that my camera (I am using a Photometrics one rather
+than the Hamamatsu, so I added the PVCAM dll file) is able to load and snap
+images, but times out when I try to use the live view.   Has anyone seen a
+similar issue, or happen to have any suggestions for fixing this?
+
+Thanks again,
+Aurelia
+
+
+
+On Thu, Sep 19, 2013 at 11:48 AM, Aurelia Honerkamp-Smith &lt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt; wrote:
+
+&gt;<i> Thanks very much, this is really helpful!  I will give this advice a try
+</I>&gt;<i> and let you know when I succeed.  And it's great news that things work with
+</I>&gt;<i> Windows 7, that should save me some time.  I am actually hoping to use a
+</I>&gt;<i> Photometrics camera (which we already had) rather than the Hamamatsu, and I
+</I>&gt;<i> know it works in Micromanager on Windows 7 already, so hopefully that will
+</I>&gt;<i> go smoothly.
+</I>&gt;<i>  Aurelia
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Wed, Sep 18, 2013 at 9:10 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Aurelia,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 09/18/13, Aurelia Honerkamp-Smith  wrote:
+</I>&gt;&gt;<i> &gt; I'm running into a problem when I try to configure my 4D stage. If I
+</I>&gt;&gt;<i> configure using the January 31 2013 OpenSPIM download, without updating
+</I>&gt;&gt;<i> through the website first, the Picard stage loads and works normally.
+</I>&gt;&gt;<i> However once I run the update, the stage can't be found (I get the error
+</I>&gt;&gt;<i> message, &quot;OpenSPIM Unable to load library: file not accessible or
+</I>&gt;&gt;<i> corrupted,&quot; and it appears as &quot;Picard stage (unavailable)&quot; in the hardware
+</I>&gt;&gt;<i> configuration wizard list of devices. Has anyone else had this problem?
+</I>&gt;&gt;<i> The error message itself is expected now; the old mmgr_dal_OpenSPIM.dll
+</I>&gt;&gt;<i> file is deprecated (meaning when you update, it deletes that file). As
+</I>&gt;&gt;<i> Johannes explained, you'll need to re-make the configuration file to use
+</I>&gt;&gt;<i> the new device adapter.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> In the list of devices, is there also a 'PicardStage' subtree you can
+</I>&gt;&gt;<i> see? If so, the devices there should be used instead of those under
+</I>&gt;&gt;<i> OpenSPIM. Once your configuration files no longer try to use OpenSPIM,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> If not (which is what the &quot;(unavailable)&quot; seems to be indicating), please
+</I>&gt;&gt;<i> make sure that the PiUsb.dll file exists in the same directory as
+</I>&gt;&gt;<i> mmgr_dal_PicardStage.dll (which should be, from the ImageJ/Fiji directory,
+</I>&gt;&gt;<i> in &quot;mm/win32/&quot;). If this file is missing for some reason, running the Fiji
+</I>&gt;&gt;<i> Updater might restore it.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> If the above doesn't help solve the problem, you can try using the Fiji
+</I>&gt;&gt;<i> Updater's advanced mode: After launching the updater, click &quot;Advanced
+</I>&gt;&gt;<i> Mode&quot;. At the top of the window is &quot;View Options:&quot; -- set it to &quot;View files
+</I>&gt;&gt;<i> of the 'OpenSPIM' site&quot;. In the list of files, look for
+</I>&gt;&gt;<i> &quot;mm/win32/PiUsb.dll&quot;. The second column should show the status of that
+</I>&gt;&gt;<i> file: &quot;Up-to-date&quot; or perhaps &quot;Not installed&quot;. If the file is marked as
+</I>&gt;&gt;<i> &quot;Not installed&quot; or &quot;Update available&quot;, clicking on that text should allow
+</I>&gt;&gt;<i> you to set it to &quot;Install / Update&quot;; from there, clicking &quot;Apply Changes&quot;
+</I>&gt;&gt;<i> will install the missing file. (If the file is marked as &quot;Up-to-date&quot;, then
+</I>&gt;&gt;<i> some other problem is making the PicardStage adapter unavailable -- please
+</I>&gt;&gt;<i> let me know if this is the case.)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt; Also, the MicroManager version changes to 1.4.x dev after I run the
+</I>&gt;&gt;<i> updater; is that as it should be? I would simply not update, except that I
+</I>&gt;&gt;<i> need to do so for my camera to be recognized.
+</I>&gt;&gt;<i> The change in Micro-Manager version is also expected; part of the recent
+</I>&gt;&gt;<i> updates was to switch to a newer version of the underlying Micro-Manager
+</I>&gt;&gt;<i> code.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt; A second question: is there any possibility or plan for the OpenSPIM
+</I>&gt;&gt;<i> software to be made compatible with Windows 7? I can&#39;t acquire a new
+</I>&gt;&gt;<i> computer and run XP on it anymore, as our computing department won&#39;t
+</I>&gt;&gt;<i> purchase XP now that it&#39;s not supported. I&#39;m using an older machine
+</I>&gt;&gt;<i> with XP now, to set up, but I suspect it will be inadequate once I&#39;m
+</I>&gt;&gt;<i> acquiring real data sets.
+</I>&gt;&gt;<i> As Johannes pointed out, this may already be possible provided the latest
+</I>&gt;&gt;<i> DCAM driver is used. There are plans to make Windows 7 officially supported
+</I>&gt;&gt;<i> in the future.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Please let me know if this doesn't help solve the problem!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> Luke Stuyvenberg
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130919/31b5445a/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20130919/31b5445a/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001132.html">[OpenSPIM] Picard stage adapter problem
+</A></li>
+	<LI>Next message: <A HREF="001139.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1134">[ date ]</a>
+              <a href="thread.html#1134">[ thread ]</a>
+              <a href="subject.html#1134">[ subject ]</a>
+              <a href="author.html#1134">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

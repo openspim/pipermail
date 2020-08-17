@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &quot;Acquire SPIM Image&quot; plugin does not open
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Acquire%20SPIM%20Image%22%20plugin%20does%20not%20open&In-Reply-To=%3CCADN69y%3D72evtgPZiNeH9JO4%3Da5awdEjX1gezHpcAzgp9ON%2BHVA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002027.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &quot;Acquire SPIM Image&quot; plugin does not open</H1>
+    <B>Curtis Rueden</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Acquire%20SPIM%20Image%22%20plugin%20does%20not%20open&In-Reply-To=%3CCADN69y%3D72evtgPZiNeH9JO4%3Da5awdEjX1gezHpcAzgp9ON%2BHVA%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] &quot;Acquire SPIM Image&quot; plugin does not open">ctrueden at wisc.edu
+       </A><BR>
+    <I>Fri Jun 16 12:55:21 CDT 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002027.html">[OpenSPIM] &quot;Acquire SPIM Image&quot; plugin does not open
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2029">[ date ]</a>
+              <a href="thread.html#2029">[ thread ]</a>
+              <a href="subject.html#2029">[ subject ]</a>
+              <a href="author.html#2029">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Kathrin,
+
+&gt;<i> java.lang.IllegalStateException: Context already injected:
+</I>&gt;<i> net.imagej.updater.CheckForUpdates#commandService
+</I>
+This sort of error suggests a possible skew between versions of the
+libraries (OpenSPIM.app\jars\*.jar).
+
+Is your OpenSPIM fully up-to-date? Have you tried downloading a new package
+from <A HREF="http://openspim.org/Downloads,">http://openspim.org/Downloads,</A> and updating from there via Help &gt;
+Update...? (Your existing installation appears to be at least partially
+broken, such that the Updater might not function correctly, but you can try
+it.)
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - <A HREF="https://loci.wisc.edu/software">https://loci.wisc.edu/software</A>
+ImageJ2 lead, Fiji maintainer - <A HREF="https://imagej.net/User:Rueden">https://imagej.net/User:Rueden</A>
+Did you know ImageJ has a forum? <A HREF="http://forum.imagej.net/">http://forum.imagej.net/</A>
+
+
+On Fri, Jun 16, 2017 at 4:22 AM, Kathrin Callaghan &lt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">kathrincallaghan at gmail.com</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Would it be possible that someone could help me with a software issue?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I have just installed OpenSpim and configured all hardware components in
+</I>&gt;<i> MicroManager. The laser is a Coherent Obis, the stage is from Picard and
+</I>&gt;<i> the camera is a Point Grey Grasshopper USB3.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> To configure the camera I had to copy a few .dll files in the MM folder,
+</I>&gt;<i> as it was not preconfigured in the list of available hardware devices, but
+</I>&gt;<i> it is recognized now.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> All hardware devices seem to work independently in MM. However, when I
+</I>&gt;<i> click on &quot;Acquire SPIM image&quot;, nothing happens. I have attached a copy of
+</I>&gt;<i> the error log too in case that helps to solve the issue.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thank you for your help.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Kathrin
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> *Dr. Kathrin Callaghan geb. Scherer*
+</I>&gt;<i> Sales &amp; Applications Engineer
+</I>&gt;<i>
+</I>&gt;<i> Mobile: +44(0)7787812833 &lt;+44%207787%20812833&gt;
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20170616/c674ddfe/attachment.html">http://openspim.org/pipermail/openspim/attachments/20170616/c674ddfe/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002027.html">[OpenSPIM] &quot;Acquire SPIM Image&quot; plugin does not open
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2029">[ date ]</a>
+              <a href="thread.html#2029">[ thread ]</a>
+              <a href="subject.html#2029">[ subject ]</a>
+              <a href="author.html#2029">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

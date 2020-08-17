@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Anti-drift
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift&In-Reply-To=%3C7370fa96539ba.53ce53fc%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000499.html">
+   <LINK REL="Next"  HREF="000501.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Anti-drift</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift&In-Reply-To=%3C7370fa96539ba.53ce53fc%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Anti-drift">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Tue Jul 22 12:07:24 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000499.html">[OpenSPIM] Anti-drift
+</A></li>
+        <LI>Next message: <A HREF="000501.html">[OpenSPIM] Anti-drift
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#500">[ date ]</a>
+              <a href="thread.html#500">[ thread ]</a>
+              <a href="subject.html#500">[ subject ]</a>
+              <a href="author.html#500">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Aurelia,
+On 07/21/14, Aurelia Honerkamp-Smith&#160;wrote:
+&gt;<i> Hello, First, I wanted to say that after last week&#39;s updates, the MicroManager error I was seeing on starting my camera is gone and configurations are loading correctly, so thanks for those! And, I have a question about the anti-drift function. Is it supposed to be autonomous at all, or does one need to be present, correcting the sample position for each timepoint? I had assumed that it was supposed to run on its own, but my samples always end up spiraling out of the field of view. Maybe I have inappropriate expectations of it? My pixel size is set correctly, and I don&#39;t know what else would affect it.&#160;
+</I>
+
+In theory, the user shouldn't need to interact with it at all, though sometimes it helps to provide the first few corrections to get the sample in place. I've only seen it wildly overcorrect when the pixel size is missing/defaulted to 1... Could you possibly verify your pixel size setting, using Micro-Manager's 'mouse moves stage' feature? Try to drag a particular structure around in the view, making sure it follows the mouse pointer closely across the entire field of view. (You might need to flip the camera's view using properties in the Property Browser, if the stage is moving in the wrong direction.) I suggest this particular test since, at its basic level, this is precisely what anti-drift does: move particular features around to 'keep' their positions. Please also make sure that the pixel size you set is still in use after starting the OpenSPIM plugin, and that your configuration is saved with the correct pixel size set. (Importantly, also make sure that the property criteria set for your pixel size are being fulfilled by your setup -- usually the only property I specify is &quot;Core-Initialize&quot; must be &quot;1&quot;.) One final idea is to try over-setting the pixel size slightly; this should reduce the offset size of the anti-drift somewhat.
+
+
+Barring this most likely possibility, the problem could also be something physical -- a motor snagging on its track or something like that, distorting the plugin's perception of position or interfering with the stage's ability to adjust its position. Alternatively, depending on the nature of the sample, the phase correlation may be having trouble automatically determining the offset (looking through the diffs directory might help). Another source of information may be the 'log.txt' file in the acquisition directory (though it is only made in the output directory of the first acquisition each time after the software is started); historically the plugin has logged the offsets applied to each view to that file.
+
+
+And of course, if you're okay with not getting any sleep, you CAN manually intercede at each timepoint. ;-)
+
+
+I'm sorry I can't immediately be of more help; ruling out pixel size leaves many equally unlikely explanations that are more difficult to verify. If you find the problem, or need more help, please feel free to write the list again; I'll see what I can do. Thanks,
+Luke
+
+
+On 07/21/14, Aurelia Honerkamp-Smith  wrote:
+&gt;<i> Hello, First, I wanted to say that after last week&#39;s updates, the MicroManager error I was seeing on starting my camera is gone and configurations are loading correctly, so thanks for those! And, I have a question about the anti-drift function. Is it supposed to be autonomous at all, or does one need to be present, correcting the sample position for each timepoint? I had assumed that it was supposed to run on its own, but my samples always end up spiraling out of the field of view. Maybe I have inappropriate expectations of it? My pixel size is set correctly, and I don&#39;t know what else would affect it. 
+</I>&gt;<i> Thanks, 
+</I>&gt;<i> Aurelia
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000499.html">[OpenSPIM] Anti-drift
+</A></li>
+	<LI>Next message: <A HREF="000501.html">[OpenSPIM] Anti-drift
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#500">[ date ]</a>
+              <a href="thread.html#500">[ thread ]</a>
+              <a href="subject.html#500">[ subject ]</a>
+              <a href="author.html#500">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &#22238;&#22797;&#65306;  Can you tell me the possible reasons for registration failure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%0A%20%3D%3Futf-8%3Fb%3F5Zue5aSN77yaICBDYW4geW91IHRlbGwgbWUgdGhlIHBv%3F%3D%0A%20%3D%3Futf-8%3Fq%3Fssible_reasons_for_registration_failure%3F%3D&In-Reply-To=%3C79F84AC6-A5BC-4803-8DE2-B9487E1E5B05%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000815.html">
+   <LINK REL="Next"  HREF="000817.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &#22238;&#22797;&#65306;  Can you tell me the possible reasons for registration failure</H1>
+    <B>Pavel Tomancak</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%0A%20%3D%3Futf-8%3Fb%3F5Zue5aSN77yaICBDYW4geW91IHRlbGwgbWUgdGhlIHBv%3F%3D%0A%20%3D%3Futf-8%3Fq%3Fssible_reasons_for_registration_failure%3F%3D&In-Reply-To=%3C79F84AC6-A5BC-4803-8DE2-B9487E1E5B05%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] &#22238;&#22797;&#65306;  Can you tell me the possible reasons for registration failure">tomancak at mpi-cbg.de
+       </A><BR>
+    <I>Mon Sep 14 06:52:56 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000815.html">[OpenSPIM] &#22238;&#22797;&#65306;  Can you tell me the possible reasons for registration failure
+</A></li>
+        <LI>Next message: <A HREF="000817.html">[OpenSPIM] changing &quot;objectives&quot;
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#816">[ date ]</a>
+              <a href="thread.html#816">[ thread ]</a>
+              <a href="subject.html#816">[ subject ]</a>
+              <a href="author.html#816">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i>     Thanks for your reply! I will go to read the documentation as you recommended.
+</I>&gt;<i>     The xy resolution is just as described in <A HREF="http://openspim.org/Pixel_Size_Calibration">http://openspim.org/Pixel_Size_Calibration</A> (I have done the calibration with rule mode), and the z resolution is just the number of z-step when acquire the data. Is that all right?
+</I>&gt;<i>     I have antoher question. As in the sample data, there are 0-4 angles for each time lapses. If I want to acquire multi-views for different angles, does only the rotional stage be moved when I change to another view?  The reason for I ask this question is that the detected part of sample would leave the view of CMOS when I just changed the angle stage, and I have to change the x or y stage to move it back. I don't know whether this process lead to the registration fail.
+</I>
+Each view has to be fully defined by positioning the sample using the xyz motors and defining the first slice, step size and number of slices. The system will try re-visiting these exact locations. If you would just move the rotational stage the sample would most likely disappear from the field of view as it is not centred on the rotation axis and that axis is anyway undefined with our simple sample holder.
+
+All the best
+
+PAvel
+
+
+&gt;<i> 
+</I>&gt;<i>    Thank you for your reply again!
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------
+</I>&gt;<i> Zheng Huang
+</I>&gt;<i> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+</I>&gt;<i> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+</I>&gt;<i> Tel: 13120836853
+</I>&gt;<i> E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------ &#21407;&#22987;&#37038;&#20214; ------------------
+</I>&gt;<i> &#21457;&#20214;&#20154;: &quot;Pavel Tomancak&quot;;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt;;
+</I>&gt;<i> &#21457;&#36865;&#26102;&#38388;: 2015&#24180;9&#26376;14&#26085;(&#26143;&#26399;&#19968;) &#26202;&#19978;6:15
+</I>&gt;<i> &#25910;&#20214;&#20154;: &quot;&#25919;&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt;;
+</I>&gt;<i> &#25220;&#36865;: &quot;openspim&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;;
+</I>&gt;<i> &#20027;&#39064;: Re: [OpenSPIM] Can you tell me the possible reasons for registration failure
+</I>&gt;<i> 
+</I>&gt;<i> Dear Zheng,
+</I>&gt;<i> 
+</I>&gt;<i> This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+</I>&gt;<i> 
+</I>&gt;<i> I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration.
+</I>&gt;<i> 
+</I>&gt;<i> All the best
+</I>&gt;<i> 
+</I>&gt;<i> PAvel
+</I>&gt;<i> 
+</I>&gt;<i> [1] <A HREF="http://fiji.sc/SPIM_Registration_Method">http://fiji.sc/SPIM_Registration_Method</A>
+</I>&gt;<i> --------------------------------------------------------------------------------------------------
+</I>&gt;<i> Pavel Tomancak, Ph.D.
+</I>&gt;<i> 
+</I>&gt;<i> Research Group Leader
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+</I>&gt;<i> Pfotenhauerstr. 108
+</I>&gt;<i> D-01307 Dresden							Tel.: +49 351 210 2670
+</I>&gt;<i> Germany									Fax: +49 351 210 2020
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>
+</I>&gt;<i> twitter: @PavelTomancak
+</I>&gt;<i> --------------------------------------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Sep 14, 2015, at 4:48 AM, &#25919; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Hi, everyone,
+</I>&gt;&gt;<i>     Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+</I>&gt;&gt;<i> spim_TL01_Angle2.tif&lt;-&gt;spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+</I>&gt;&gt;<i> spim_TL01_Angle2.tif&lt;-&gt;spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>     Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>     Thank you very much!
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> All best!
+</I>&gt;&gt;<i> ------------------
+</I>&gt;&gt;<i> Zheng Huang
+</I>&gt;&gt;<i> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+</I>&gt;&gt;<i> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China
+</I>&gt;&gt;<i> Tel: 13120836853
+</I>&gt;&gt;<i> E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150914/5ed1cd59/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150914/5ed1cd59/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000815.html">[OpenSPIM] &#22238;&#22797;&#65306;  Can you tell me the possible reasons for registration failure
+</A></li>
+	<LI>Next message: <A HREF="000817.html">[OpenSPIM] changing &quot;objectives&quot;
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#816">[ date ]</a>
+              <a href="thread.html#816">[ thread ]</a>
+              <a href="subject.html#816">[ subject ]</a>
+              <a href="author.html#816">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

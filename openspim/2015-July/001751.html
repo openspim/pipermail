@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Acquisition Error (setBigTIff)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Acquisition%20Error%20%28setBigTIff%29&In-Reply-To=%3C005022868505164C94291D8DD2D8EBAA788808E3%40000S-EX-MBX-QS4.unimelb.edu.au%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001750.html">
+   <LINK REL="Next"  HREF="001752.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Acquisition Error (setBigTIff)</H1>
+    <B>Gabriel Davis Jones</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Acquisition%20Error%20%28setBigTIff%29&In-Reply-To=%3C005022868505164C94291D8DD2D8EBAA788808E3%40000S-EX-MBX-QS4.unimelb.edu.au%3E"
+       TITLE="[OpenSPIM] Acquisition Error (setBigTIff)">gabriel.jones at florey.edu.au
+       </A><BR>
+    <I>Sun Jul 26 18:37:35 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001750.html">[OpenSPIM] Fwd: Open Imaging: Micro-Manager's new home
+</A></li>
+        <LI>Next message: <A HREF="001752.html">[OpenSPIM] Fwd: [micro-manager-general] 1.4.22 Release schedule	(Aug 14)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1751">[ date ]</a>
+              <a href="thread.html#1751">[ thread ]</a>
+              <a href="subject.html#1751">[ subject ]</a>
+              <a href="author.html#1751">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi All,
+
+I'm constantly receiving this error when I try and acquire an image &gt;4GB:
+
+java.lang.RuntimeException: loci.formats.FormatException: File is too large; call setBigTiff(true)
+at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:113)
+at java.lang.Thread.run(Thread.java:745)
+Caused by: loci.formats.FormatException: File is too large; call setBigTiff(true)
+at loci.formats.out.TiffWriter.prepareToWriteImage(TiffWriter.java:343)
+at loci.formats.out.TiffWriter.saveBytes(TiffWriter.java:221)
+at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:190)
+at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:180)
+at loci.formats.FormatWriter.saveBytes(FormatWriter.java:124)
+at spim.progacq.OMETIFFHandler.processSlice(OMETIFFHandler.java:175)
+at spim.progacq.AsyncOutputWrapper.handleNext(AsyncOutputWrapper.java:232)
+at spim.progacq.AsyncOutputWrapper.access$300(AsyncOutputWrapper.java:18)
+at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:98)
+
+Any ideas how I may get around it, or are we restricted to image sizes &lt;4GB for now?
+
+
+Kind regards,
+
+
+Gabriel Davis Jones
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150726/4a7b51fa/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150726/4a7b51fa/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001750.html">[OpenSPIM] Fwd: Open Imaging: Micro-Manager's new home
+</A></li>
+	<LI>Next message: <A HREF="001752.html">[OpenSPIM] Fwd: [micro-manager-general] 1.4.22 Release schedule	(Aug 14)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1751">[ date ]</a>
+              <a href="thread.html#1751">[ thread ]</a>
+              <a href="subject.html#1751">[ subject ]</a>
+              <a href="author.html#1751">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

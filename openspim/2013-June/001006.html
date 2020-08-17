@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C86EE16AF-03F3-49BD-B64A-4360B5C992CC%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001004.html">
+   <LINK REL="Next"  HREF="001010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C86EE16AF-03F3-49BD-B64A-4360B5C992CC%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Thu Jun  6 02:49:47 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001004.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001010.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1006">[ date ]</a>
+              <a href="thread.html#1006">[ thread ]</a>
+              <a href="subject.html#1006">[ subject ]</a>
+              <a href="author.html#1006">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+&gt;&gt;<i> However, I realised that our laser (Cobolt) does not appear into the list of available Shutter. Any idea of what could go wrong? I can turn it ON/OFF using the Device/Properties editor of MM.
+</I>&gt;<i> I just looked into this, and it seems the developers of the Cobolt device adapter didn't make the device a shutter -- as a result, it won't appear in the shutter list. I don't want to alter this myself just yet, for fear of stepping on the author's toes -- <A HREF="seehttp://valelab.ucsf.edu/~MM/MMwiki/index.php/Cobolt">seehttp://valelab.ucsf.edu/~MM/MMwiki/index.php/Cobolt</A> for details.
+</I>&gt;<i> Unfortunately, this will present problems with the OpenSPIM software, which expects a shutter device and might refuse to function without one. (At the very least, it should give you a warning.)
+</I>&gt;<i> You might try asking the Micro-Manager mailing list, or Karl Bellve (the DAL's author) in particular, if there are plans to implement this behavior. Or, if you're feeling ambitious, once we have your development environment working, you may wish to make the changes yourself and contribute them to Micro-Manager.
+</I>
+I do not mind altering the code myself. I have actually already  fixed and recompiled the code of this device adapter to squash a nasty line ending bug that was impeding proper commands to be sent on Windows. The bug had been here for ages but apparently that device adapter is not heavily used on Windows and I was the first one to notice it. Karl and I have committed the changes to MM code base.
+  
+I have been already  in contact with Karl so I can liaise with him to see if he objects to me adding the shutter feature.    
+
+The 64'000$ question: how do I make a device a shutter? Can you point me to the appropriate documentation or code example? Although I have only limited C coding experience, the Cobolt device adapter code is definitively something in my league.
+
+With my best regards,
+
+Alexis
+  
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001004.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001010.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1006">[ date ]</a>
+              <a href="thread.html#1006">[ thread ]</a>
+              <a href="subject.html#1006">[ subject ]</a>
+              <a href="author.html#1006">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

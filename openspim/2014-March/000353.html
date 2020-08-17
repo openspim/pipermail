@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Registration plugin software torture-test
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Registration%20plugin%20software%20torture-test&In-Reply-To=%3C7520993cf4a83.531dd6e6%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000354.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Registration plugin software torture-test</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Registration%20plugin%20software%20torture-test&In-Reply-To=%3C7520993cf4a83.531dd6e6%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Registration plugin software torture-test">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Mon Mar 10 15:14:46 CDT 2014</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000354.html">[OpenSPIM] Off Center Rotation &amp; Calibration Tools in Open SPIM	Software
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#353">[ date ]</a>
+              <a href="thread.html#353">[ thread ]</a>
+              <a href="subject.html#353">[ subject ]</a>
+              <a href="author.html#353">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hey everyone,
+
+To try to get a feel for which parts of the reconstruction process were holding us up, I ran a registration torture test on some data acquired while I was in Dresden at the MPI.
+
+
+The data was taken on an OpenSPIM 1.0. The sample was a zebrafish embryo infected with a fungus that fluoresced. Nine views, in 20-degree increments, each consisting of a stack ranging from 300 - 450 um (at 3 um steps) were recorded. The Cube laser was set to 3 mW, and the Orca ER camera was set to 100ms exposure time.
+
+
+I ran the registration plugin in both modes (Difference of Gaussians and Difference of Mean), and with threshold values ranging from 0.004 to 0.018 in steps of 0.002. The bead radii (sigma) values passed to the plugin were 1 and 2. Each combination of these settings was run 100 times, and scored as follows: Each time the RANSAC algorithm deduced a model, denoted in the logs by &quot;Remaining inliers after RANSAC:&quot;, the percentage of remaining inliers was included in a running average.
+
+
+The results are as follows:
+
+
+Difference-of-Mean (Integral image based):
+ Average score for threshold 0.004: 89.19%
+ Average score for threshold 0.006: 91.72%
+ Average score for threshold 0.008: 86.44%
+ Average score for threshold 0.010: 69.39%
+ Average score for threshold 0.012: 25.00%
+ Average score for threshold 0.014: 7.39%
+ Average score for threshold 0.016: 0.00%
+ Average score for threshold 0.018: 0.00%
+
+
+Difference-of-Gaussian:
+ Average score for threshold 0.004: 93.94%
+ Average score for threshold 0.006: 93.53%
+ Average score for threshold 0.008: 92.75%
+ Average score for threshold 0.010: 48.25%
+ Average score for threshold 0.012: 12.31%
+ Average score for threshold 0.014: 2.42%
+ Average score for threshold 0.016: 0.00%
+ Average score for threshold 0.018: 0.00%
+
+
+
+I have two notes to make:
+- First, any score above ~ 50% might have been able to be fused into a final image, though whether or not the reconstruction is correct would be a different matter.
+- Second, despite the nature of the RANSAC algorithm, the results were largely deterministic -- for a given threshold and mode, each view combination seemed to end up with the same number of remaining inliers.
+
+
+
+Given the results of this test, I have a few suggestions for problematic registrations:
+- First, and above all else, no amount of software processing can make up for noisy data or a low number of beads. When recording, it might help to make stacks overlong, to get more beads before and after the sample in the recorded volume. Play around with bead concentrations -- make bead-only samples at varying concentrations and see if they look too dense or sparse. Keep in mind that it's difficult to get beads close to the sample.
+- Second, choose the threshold carefully. Although the data above seem to indicate that lower is better, this is only true so far. For OpenSPIM data with settings similar to these (3 mW, 100 ms), I'd suggest starting with 0.008 (If I recall correctly, this is the default threshold for the Difference-of-Gaussians method). If you're having trouble, try experimenting with the radii as well -- 1/2 should work for subresolution beads, but if your system is slightly misaligned, 2/3 might work better. (If you can't seem to find the right setting, try recording a macro and putting it in a loop to test different values.)
+- Third, if your processing computer can handle it, Difference of Gaussians might produce better results -- it's a more complex calculation and (I believe) requires more memory than the alternative, but it seems to produce more consistent results.
+
+
+Sorry for the long e-mail!
+Luke Stuyvenberg
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000354.html">[OpenSPIM] Off Center Rotation &amp; Calibration Tools in Open SPIM	Software
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#353">[ date ]</a>
+              <a href="thread.html#353">[ thread ]</a>
+              <a href="subject.html#353">[ subject ]</a>
+              <a href="author.html#353">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

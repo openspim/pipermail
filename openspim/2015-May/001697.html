@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fiji/Micromanager conflicts
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fiji/Micromanager%20conflicts&In-Reply-To=%3Cop.xymhl1yjahhlbl%40pc511-7cad.ibd%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001696.html">
+   <LINK REL="Next"  HREF="001698.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fiji/Micromanager conflicts</H1>
+    <B>Monika Pawłowska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fiji/Micromanager%20conflicts&In-Reply-To=%3Cop.xymhl1yjahhlbl%40pc511-7cad.ibd%3E"
+       TITLE="[OpenSPIM] Fiji/Micromanager conflicts">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Thu May 14 06:16:39 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001696.html">[OpenSPIM] OpenSPIM Digest, Vol 25, Issue 11
+</A></li>
+        <LI>Next message: <A HREF="001698.html">[OpenSPIM] Orca ER problem with mm1.4.22
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1697">[ date ]</a>
+              <a href="thread.html#1697">[ thread ]</a>
+              <a href="subject.html#1697">[ subject ]</a>
+              <a href="author.html#1697">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+just for your information - just now the strategy of using  
+Fiji+Micro-manager-dev+Openspim is not perfect. The Micro-manager-dev  
+update site is not updating since 30.04., and this version has some  
+conflicts with the newest version of Fiji, so there might be errors. Below  
+the response I got from Micromanager that hopefully explains this better.
+
+(I found about this because I tried to use the Micro-Manager  
+Multi-Dimensional Acquisition and I was getting an exception when trying  
+to save a stack).
+
+Regards,
+Monika
+
+
+
+
+
+------- Treść oryginalnej wiadomości -------
+Od: &quot;Mark Tsuchida&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt;
+Do: &quot;Chris Weisiger&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">cweisiger at msg.ucsf.edu</A>&gt;
+Kopia dla: <A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>, &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">info at micro-manager.org</A>  
+micromanager&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">info at micro-manager.org</A>&gt;
+Temat: Re: New Problem Report: 2015-05-13 Monika Pawlowska
+Data: środa, .05.2015,
+
+Hi Monika,
+
+On Wed, May 13, 2015 at 09:38:21AM -0700, Chris Weisiger wrote:
+&gt;<i> On Wed, May 13, 2015 at 9:15 AM, &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt; wrote:
+</I>&gt;<i> &gt; W dniu 2015-05-13 17:52, Chris Weisiger napisał(a):
+</I>&gt;<i> &gt; indeed, with the newest nightly build the acquisition works. But this
+</I>&gt;<i> &gt; solves my problem only partly. I am normally using fiji with  
+</I>&gt;<i> Micromanager
+</I>&gt;<i> &gt; update site, and from there the newest build is the 20150430, this is  
+</I>&gt;<i> why
+</I>&gt;<i> &gt; I'm using this version. I would prefer to use fiji to have all the
+</I>&gt;<i> &gt; aditional functionality. Is there any chance to get the update site
+</I>&gt;<i> &gt; updated, so to say?
+</I>&gt;<i>
+</I>&gt;<i> Okay, good to know we've at least narrowed down what's going on. In this
+</I>&gt;<i> case I suspect the actual problem isn't the version of Micro-Manager, but
+</I>&gt;<i> the version of the OME library in Fiji. Sometimes Micro-Manager and Fiji
+</I>&gt;<i> depend on the same library, but require different versions of that  
+</I>&gt;<i> library,
+</I>&gt;<i> which is unfortunate; we're trying to resolve such issues when we  
+</I>&gt;<i> discover
+</I>&gt;<i> them.
+</I>&gt;<i>
+</I>&gt;<i> In the meantime, you can try replacing the library manually. This is a  
+</I>&gt;<i> jar
+</I>&gt;<i> file called &quot;ome-xml.jar&quot;, which should be in the &quot;plugins/Micro-Manager&quot;
+</I>&gt;<i> directory of the nightly download. You can try just replacing the
+</I>&gt;<i> corresponding .jar file in your Fiji installation with the one from the
+</I>&gt;<i> nightly build. Make a backup of the original .jar file though, just in  
+</I>&gt;<i> case
+</I>&gt;<i> something else in Fiji breaks. In the meantime, we can look into what it
+</I>&gt;<i> would take to get the update site updated.
+</I>
+The conflict is in other JARs. We still use an outdated version of
+scifio.jar, which conflicts with the newer version in Fiji. We fully
+intend to fix this, and it will hopefully not be too hard, but it is not
+trivial (we need to make sure we don't introduce issues into file saving
+in our official release, and that will require careful testing).
+
+Please consider the Micro-Manager-dev update site to be experimental.
+
+I don't think there is an easy fix at this moment that can be done by
+just replacing JARs. We'll keep working on it!
+
+Best,
+Mark
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 427
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001696.html">[OpenSPIM] OpenSPIM Digest, Vol 25, Issue 11
+</A></li>
+	<LI>Next message: <A HREF="001698.html">[OpenSPIM] Orca ER problem with mm1.4.22
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1697">[ date ]</a>
+              <a href="thread.html#1697">[ thread ]</a>
+              <a href="subject.html#1697">[ subject ]</a>
+              <a href="author.html#1697">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

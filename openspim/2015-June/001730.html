@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Image Stitching Best Practices
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Image%20Stitching%20Best%20Practices&In-Reply-To=%3C869c6507e2020dcfb5d166141d8c6a3c%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001729.html">
+   <LINK REL="Next"  HREF="001732.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Image Stitching Best Practices</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Image%20Stitching%20Best%20Practices&In-Reply-To=%3C869c6507e2020dcfb5d166141d8c6a3c%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] Image Stitching Best Practices">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Mon Jun 29 04:23:51 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001729.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+        <LI>Next message: <A HREF="001732.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1730">[ date ]</a>
+              <a href="thread.html#1730">[ thread ]</a>
+              <a href="subject.html#1730">[ subject ]</a>
+              <a href="author.html#1730">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Gabriel,
+
+I was struggling a bit with the stitching step. In the end what worked 
+for me is:
+first convert to tif using modified script from here:
+<A HREF="http://openspim.org/Pre-processing">http://openspim.org/Pre-processing</A>
+
+then use Grid&amp;collection stitching with settings: type=[Grid: 
+column-by-column] order=[Down &amp; Right]
+
+It seems stupid to convert images to tiff and lose the metadata 
+contained in ome, but I get errors otherwise. :/ If anybody has a better 
+procedure, maybe they could describe it?
+
+Regards,
+Monika
+
+
+
+W dniu 2015-06-27 07:18, Gabriel Davis Jones napisał(a):
+&gt;<i> Hi All,
+</I>&gt;<i> 
+</I>&gt;<i> We are currently imaging large volumes that require us to acquire
+</I>&gt;<i> multiple stacks of the same angle.
+</I>&gt;<i> Is there currently a best way to stitch images acquired OpenSPIM?
+</I>&gt;<i> Should we use the grid/collection stitching plugin or is there a
+</I>&gt;<i> better way to go about it?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> 
+</I>&gt;<i> Gabriel
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001729.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+	<LI>Next message: <A HREF="001732.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1730">[ date ]</a>
+              <a href="thread.html#1730">[ thread ]</a>
+              <a href="subject.html#1730">[ subject ]</a>
+              <a href="author.html#1730">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

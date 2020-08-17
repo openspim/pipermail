@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C4b0909c42b9b27fdb84a5be0b48f742e%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001112.html">
+   <LINK REL="Next"  HREF="001114.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>LUKE ADAM STUYVENBERG</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C4b0909c42b9b27fdb84a5be0b48f742e%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Aug 23 14:49:30 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001112.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+        <LI>Next message: <A HREF="001114.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1113">[ date ]</a>
+              <a href="thread.html#1113">[ thread ]</a>
+              <a href="subject.html#1113">[ subject ]</a>
+              <a href="author.html#1113">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+&gt;<i> I did some test and have good news: the new SPIMAcquisition.jar solves the
+</I>&gt;<i> issue. The slices are now reliably written in the right order. I also have
+</I>&gt;<i> the feeling it is a bit faster than the 'original/old' one and the metadata a
+</I>&gt;<i> properly written.
+</I>Excellent!
+
+&gt;<i> -test2: same thing, but with the new SPIMAcquisition.jar. Everything is fine
+</I>&gt;<i> (slices in the right order &amp; metadata present). I observed the async monitor:
+</I>&gt;<i> it climbed to 27/240 (writing) then slowly decreased to 0/240 (Idle). Overall
+</I>&gt;<i> it felt faster.
+</I>My async monitor still rarely exceeds 1 before writing it out, though I've
+noticed that sometimes it snowballs (i.e. if it doesn't get one written quickly
+enough, they start to pile up until a break in the acquisition). Still, 27/240
+gives lots of room, and that limit is pretty conservative. It's good to know
+things are working properly now, and the associated speed boost is also a big
+plus.
+
+&gt;<i> I'll keep on using this version until the next update.
+</I>If I don't get the update uploaded today, it will almost certainly be Monday. At
+this point my biggest obstacle is deciding where to put the checkboxes to make
+it show the monitor. ;-)
+
+I should warn you in advance, though I'll try to make it clear when I announce
+the update: the next update *will* obsolete the changes you made to the Cobalt
+adapter. The reason is because it will be designed to work with the Cobalt
+adapter in MM's nightly build -- I'm afraid you will need to revert your
+changes.
+
+Thanks again for experimenting, and for bringing this to light!
+
+Luke
+
+On Fri, 23 Aug 2013 11:34:18 +0200 Alexis Maizel
+&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Alexis.Maizel at cos.uni-heidelberg.de</A>&gt; wrote
+
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> I did some test and have good news: the new SPIMAcquisition.jar solves the
+</I>&gt;<i> issue. The slices are now reliably written in the right order. I also have
+</I>&gt;<i> the feeling it is a bit faster than the 'original/old' one and the metadata a
+</I>&gt;<i> properly written.
+</I>&gt;<i> 
+</I>&gt;<i> You can get the stacks and logs of my tests here:
+</I>&gt;<i> <A HREF="http://dl.dropbox.com/u/484859/2013-08-23.zip">http://dl.dropbox.com/u/484859/2013-08-23.zip</A>
+</I>&gt;<i> 
+</I>&gt;<i> I did 3 acquisitions:
+</I>&gt;<i> - test 1: A  stack of 40 slices (1024*1024)  with the original 
+</I>&gt;<i> SPIMAcquisition.jar; the slices are mixed up. You will also notice in the
+</I>&gt;<i> log.txt file the message &quot;Warning: asynchronous writer may have been
+</I>&gt;<i> cancelled before completing. (0)&quot; I had that everytime the metadata are not
+</I>&gt;<i> written. I did not hit &quot;abort&quot; at any time; after acquisition I simply waited
+</I>&gt;<i> for the file to finish writing to disk (a couple of minutes)  and opened it
+</I>&gt;<i> in Fiji (then the message appeared in the log).
+</I>&gt;<i> 
+</I>&gt;<i> -test2: same thing, but with the new SPIMAcquisition.jar. Everything is fine
+</I>&gt;<i> (slices in the right order &amp; metadata present). I observed the async monitor:
+</I>&gt;<i> it climbed to 27/240 (writing) then slowly decreased to 0/240 (Idle). Overall
+</I>&gt;<i> it felt faster.
+</I>&gt;<i> 
+</I>&gt;<i> -test3: time lapse (5 time steps) of  a 40-slices stack; one stack every
+</I>&gt;<i> 120sec. Absolutely no problems. The async monitor showed the same behaviour
+</I>&gt;<i> as for test 2.
+</I>&gt;<i> 
+</I>&gt;<i> I'll keep on using this version until the next update.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks a lot for your help.
+</I>&gt;<i> 
+</I>&gt;<i> With my best regards,
+</I>&gt;<i> 
+</I>&gt;<i> Alexis
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &gt;&gt; - First, it does some timing over the acquisition, outputting the results
+</I>&gt;<i> &gt;&gt; to the log; although it isn't very detailed, it gives a breakdown of how
+</I>time
+&gt;<i> &gt;&gt; is used while acquiring (for example, if the async isn't appropriately
+</I>&gt;<i> &gt;&gt; asynchronous, the acquisition time will be roughly the same as though it
+</I>were
+&gt;<i> &gt;&gt; off).
+</I>&gt;<i> &gt;&gt; - Second, and more importantly for you, the async writer has been
+</I>&gt;<i> &gt;&gt; completely revamped. It now queues the begin/end stack events as well as
+</I>new
+&gt;<i> &gt;&gt; slices, so these operations shouldn't *ever* get out of order. It also puts
+</I>&gt;<i> &gt;&gt; up a monitor showing the state of its queue, which will let us know if it's
+</I>&gt;<i> &gt;&gt; filling up or not.
+</I>&gt;<i> &gt;&gt; If you're willing to play guinea pig again, please try replacing
+</I>&gt;<i> &gt;&gt; mmplugins/SPIMAcquisition.jar with the version from:
+</I>&gt;<i> &gt;&gt; <A HREF="https://dl.dropboxusercontent.com/u/57890359/SPIMAcquisition.jar">https://dl.dropboxusercontent.com/u/57890359/SPIMAcquisition.jar</A>
+</I>&gt;<i> &gt;&gt; Anyone is free to try this JAR out, but I haven't put it on our Fiji
+</I>&gt;<i> &gt;&gt; update site for a few reasons -- the new features are only conditionally
+</I>&gt;<i> &gt;&gt; useful, and can't (yet) be disabled. That said, if the new async fixes your
+</I>&gt;<i> &gt;&gt; output problems, I'll polish these changes and incorporate them.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Thanks,
+</I>&gt;<i> &gt;&gt; Luke
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001112.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+	<LI>Next message: <A HREF="001114.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1113">[ date ]</a>
+              <a href="thread.html#1113">[ thread ]</a>
+              <a href="subject.html#1113">[ subject ]</a>
+              <a href="author.html#1113">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

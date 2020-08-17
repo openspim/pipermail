@@ -1,0 +1,157 @@
+
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] -------->>
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] Core session started by Admin on BCO237100
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] Debug logging disabled
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] Debug logging disabled
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] > MM Studio version: 1.4.x dev
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] > MMCore version 2.3.2
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] > Device API version 57, Module API version 8
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] > Operating System: Windows 7 (x86) 6.1
+2014-08-18T09:39:32.508570 p:3780 t:4480 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24, 32-bit
+2014-08-18T09:39:32.508570 p:3780 t:4480 [dbg] Circular buffer set to 25 MB.
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > #uManager plugins: 119
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.MouseListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ItemListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ItemListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.util.Comparator
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.io.FilenameFilter
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ItemListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.SPIMCalibrator
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.MouseListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.SPIMCalibrator
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.SPIMCalibrator
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.MouseListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.WindowListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.KeyListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.FocusListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ActionListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Runnable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.KeyListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.KeyListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.lang.Iterable
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.awt.event.ItemListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: java.util.EventListener
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.633370 p:3780 t:2012 [LOG] > interface found: spim.setup.Device$Factory
+2014-08-18T09:39:32.648970 p:3780 t:2012 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-08-18T09:39:32.648970 p:3780 t:2012 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-08-18T09:39:32.648970 p:3780 t:2012 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-08-18T09:39:32.648970 p:3780 t:2012 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-08-18T09:39:32.648970 p:3780 t:2012 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-08-18T09:39:34.380573 p:3780 t:4480 [LOG] System state cache updated.
+2014-08-18T09:39:34.380573 p:3780 t:4480 [LOG] > Startup script file (C:\Users\Admin\Desktop\Program Backups\Fiji 11_08_14\Fiji.app/MMStartup.bsh) not present.
+2014-08-18T09:39:39.232181 p:3780 t:4480 [LOG] All devices unloaded.
+2014-08-18T09:39:39.232181 p:3780 t:4480 [LOG] System reset.
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] > CoherentCube
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    CoherentCube, CoherentCube Laser
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] > DemoCamera
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DCam, Demo camera
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DWheel, Demo filter wheel
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DStateDevice, Demo State Device
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DObjective, Demo objective turret
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DStage, Demo stage
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DXYStage, Demo XY stage
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DLightPath, Demo light path
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DAutoFocus, Demo auto focus
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DShutter, Demo shutter
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    D-DA, Demo DA
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DOptovar, Demo Optovar
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    TransposeProcessor, TransposeProcessor
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    ImageFlipX, ImageFlipX
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    ImageFlipY, ImageFlipY
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    MedianFilter, MedianFilter
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    DHub, DHub
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] > Hamamatsu
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    Hamamatsu_DCAM, Legacy adapter for Hamamatsu DCAM interface; use HamamatsuHam for new configurations
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] > HamamatsuHam
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] >    HamamatsuHam_DCAM, Universal adapter using Hamamatsu DCAM interface
+2014-08-18T09:39:39.310182 p:3780 t:4480 [LOG] > PicardStage
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    Picard Twister, Twister
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    Picard Z Stage, Z stage
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    Picard XY Stage, XY stage
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] > QCam
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    QCamera, QImaging universal camera adapter
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] > SerialManager
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    COM5, Serial communication port
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    COM1, Serial communication port
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    COM4, Serial communication port
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] > Stradus
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] >    VLTStradus, VLTStradus
+2014-08-18T09:39:39.778182 p:3780 t:4480 [LOG] > TIScam
+2014-08-18T09:39:39.793782 p:3780 t:4480 [LOG] >    TIS_DCAM, The Imaging Source
+2014-08-18T09:39:41.962186 p:3780 t:4480 [LOG] Device COM5 loaded from SerialManager and labeled as COM5
+2014-08-18T09:39:41.962186 p:3780 t:4480 [LOG] Device COM1 loaded from SerialManager and labeled as COM1
+2014-08-18T09:39:41.962186 p:3780 t:4480 [LOG] Device COM4 loaded from SerialManager and labeled as COM4
+2014-08-18T09:39:45.877793 p:3780 t:4480 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-08-18T09:39:47.000995 p:3780 t:4480 [dbg] Will set property: "Picard Twister"-"Serial Number" = "89"
+2014-08-18T09:39:47.000995 p:3780 t:4480 [dbg] Did set property: "Picard Twister"-"Serial Number" = "89"
+2014-08-18T09:39:47.032195 p:3780 t:4480 [LOG] Device Picard Twister initialized.
+2014-08-18T09:39:49.028999 p:3780 t:4480 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-08-18T09:39:55.440610 p:3780 t:4480 [dbg] Will set property: "Picard Z Stage"-"Serial Number" = "255"
+2014-08-18T09:39:55.456210 p:3780 t:4480 [dbg] Did set property: "Picard Z Stage"-"Serial Number" = "255"
+2014-08-18T09:39:55.487410 p:3780 t:4480 [LOG] Device Picard Z Stage initialized.
+2014-08-18T09:39:58.045815 p:3780 t:4480 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-08-18T09:40:17.392249 p:3780 t:4480 [dbg] Will set property: "Picard XY Stage"-"Serial Number (X)" = "253"
+2014-08-18T09:40:17.392249 p:3780 t:4480 [dbg] Did set property: "Picard XY Stage"-"Serial Number (X)" = "253"
+2014-08-18T09:40:17.392249 p:3780 t:4480 [dbg] Will set property: "Picard XY Stage"-"Serial Number (Y)" = "254"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Did set property: "Picard XY Stage"-"Serial Number (Y)" = "254"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Will set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Did set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Will set property: "Picard XY Stage"-"X-Min" = "1"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Did set property: "Picard XY Stage"-"X-Min" = "1"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Will set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Did set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Will set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-08-18T09:40:17.423449 p:3780 t:4480 [dbg] Did set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-08-18T09:40:17.485849 p:3780 t:4480 [LOG] Device Picard XY Stage initialized.

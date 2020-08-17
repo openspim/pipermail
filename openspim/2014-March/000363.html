@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Unable%20to%20launch%20Open%20SPIM%20GUI%20After%20Fiji%20Update&In-Reply-To=%3C53293CE5.3090706%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000362.html">
+   <LINK REL="Next"  HREF="000364.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Unable%20to%20launch%20Open%20SPIM%20GUI%20After%20Fiji%20Update&In-Reply-To=%3C53293CE5.3090706%40wisc.edu%3E"
+       TITLE="[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Mar 19 01:44:53 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000362.html">[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+</A></li>
+        <LI>Next message: <A HREF="000364.html">[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#363">[ date ]</a>
+              <a href="thread.html#363">[ thread ]</a>
+              <a href="subject.html#363">[ subject ]</a>
+              <a href="author.html#363">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi John,
+
+On 3/18/2014 8:53 PM, LIM Soon Yew John (IMB) wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i>
+</I>&gt;<i> Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day.
+</I>&gt;<i>
+</I>&gt;<i> Hopefully those log files will help you identify the issue I faced. Thanks.
+</I>They do indeed help; I see the problem -- one of your stages has moved 
+out of its expected range (most likely the twister, as the others have a 
+physical limit to their movement). I can push a software fix for this 
+soon, but there are two immediate workarounds (either one should work):
+
+1. If you have the software for the Picard 4D stage, you can use that to 
+reset the position. (It can also be downloaded from the Picard 
+Industries website [1].) Launch the software, enter the appropriate 
+serial number, then click 'Home'.
+
+2. If you do not have that software and would rather not download it, it 
+should still be possible to reset the stage's position from Micro-Manager:
+- Launch Micro-Manager.
+- Click Tools -&gt; Script Panel.
+- Type or copy/paste the following (If you did not use the default 
+twister name, be sure to replace the text in the line below with the 
+correct name.):
+
+mmc.setPosition(&quot;Picard Twister&quot;, 0);
+
+- Press enter.
+
+Please let me know if the trouble persists after this. I'll also soon 
+make change to the software to make sure this case doesn't stop the 
+software from loading in the future.
+
+Thanks again,
+Luke
+
+[1] There is a link to this software under 
+<A HREF="http://www.picard-industries.com/products.html#usb-4d-stage">http://www.picard-industries.com/products.html#usb-4d-stage</A>
+
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000362.html">[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+</A></li>
+	<LI>Next message: <A HREF="000364.html">[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#363">[ date ]</a>
+              <a href="thread.html#363">[ thread ]</a>
+              <a href="subject.html#363">[ subject ]</a>
+              <a href="author.html#363">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

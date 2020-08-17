@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Best practices for using a different camera?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Best%20practices%20for%20using%20a%20different%20camera%3F&In-Reply-To=%3C005022868505164C94291D8DD2D8EBAA741558DF%40000S-EX-MBX-QS4.unimelb.edu.au%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001541.html">
+   <LINK REL="Next"  HREF="001560.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Best practices for using a different camera?</H1>
+    <B>Gabriel Davis Jones</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Best%20practices%20for%20using%20a%20different%20camera%3F&In-Reply-To=%3C005022868505164C94291D8DD2D8EBAA741558DF%40000S-EX-MBX-QS4.unimelb.edu.au%3E"
+       TITLE="[OpenSPIM] Best practices for using a different camera?">gabriel.jones at florey.edu.au
+       </A><BR>
+    <I>Wed Jan 21 17:49:27 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001541.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+        <LI>Next message: <A HREF="001560.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1559">[ date ]</a>
+              <a href="thread.html#1559">[ thread ]</a>
+              <a href="subject.html#1559">[ subject ]</a>
+              <a href="author.html#1559">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ulrik,
+
+Thanks so much for your help.
+I tried to run micromanager from the package you provided, but whenever I try and add the Andor SDK3, the whole program crashes.
+
+The error log created has the following:
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363) at pc=0x000007fefdb2cacd, pid=2964, tid=4296
+#
+# JRE version: 6.0_31-b05
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.6-b01 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [KERNELBASE.dll+0xcacd]
+#
+# If you would like to submit a bug report, please visit:
+#   <A HREF="http://java.sun.com/webapps/bugreport/crash.jsp">http://java.sun.com/webapps/bugreport/crash.jsp</A>
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000010175800):  JavaThread &quot;AWT-EventQueue-0&quot; [_thread_in_native, id=4296, stack(0x0000000012500000,0x0000000012700000)]
+
+siginfo: ExceptionCode=0xe06d7363, ExceptionInformation=0x0000000019930520 0x00000000126f79d0 0x000007feea5133e8 0x000007feea4b0000
+
+Registers:
+RAX=0x000000006516301e, RBX=0x00000000126f79d0, RCX=0x00000000126f71d0, RDX=0x00000000000000d0
+RSP=0x00000000126f77e0, RBP=0x00000000126f7910, RSI=0x00000000126f7fa0, RDI=0x000007feea5133e8
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x000007feea4b0000, R11=0x00000000126f7820
+R12=0x0000000000000000, R13=0x000007feea518840, R14=0xffffffffffffffff, R15=0x0000000010175800
+RIP=0x000007fefdb2cacd, EFLAGS=0x0000000000000206
+
+Top of Stack: (sp=0x00000000126f77e0)
+0x00000000126f77e0:   00000000126f79d0 00000000126f7fa0
+0x00000000126f77f0:   000007feea5133e8 000007feea4e443f
+0x00000000126f7800:   00000001e06d7363 0000000000000000
+0x00000000126f7810:   000007fefdb2cacd 000007fe00000004
+0x00000000126f7820:   0000000019930520 00000000126f79d0
+0x00000000126f7830:   000007feea5133e8 000007feea4b0000
+0x00000000126f7840:   000007fef919c728 00000000126f78c8
+0x00000000126f7850:   00000000126f78b0 00000000656b3b02
+0x00000000126f7860:   000000000ca0ecc0 00000000656a20f2
+0x00000000126f7870:   00000000126f79e8 000007feea4b5a84
+0x00000000126f7880:   ffffffffffffffff 000007feea518840
+0x00000000126f7890:   0000000000000000 000007feea5133e8
+0x00000000126f78a0:   00000000126f7fa0 000007feea4e08a9
+0x00000000126f78b0:   00000000126f79d0 00000000126f7920
+0x00000000126f78c0:   000007fe00000001 000007feea4b00f8
+0x00000000126f78d0:   00000001e06d7363 0000000000000000
+
+Instructions: (pc=0x000007fefdb2cacd)
+0x000007fefdb2caad:   54 24 24 48 89 4c 24 28 4d 85 c9 0f 85 e0 06 00
+0x000007fefdb2cabd:   00 89 4c 24 38 48 8d 4c 24 20 ff 15 d3 e7 03 00
+0x000007fefdb2cacd:   48 81 c4 c8 00 00 00 c3 90 90 90 90 90 90 90 90
+0x000007fefdb2cadd:   90 90 90 48 89 5c 24 18 55 41 54 41 55 41 56 41
+
+
+Register to memory mapping:
+
+RAX=0x000000006516301e is an unknown value
+RBX=0x00000000126f79d0 is pointing into the stack for thread: 0x0000000010175800
+RCX=0x00000000126f71d0 is pointing into the stack for thread: 0x0000000010175800
+RDX=0x00000000000000d0 is an unknown value
+RSP=0x00000000126f77e0 is pointing into the stack for thread: 0x0000000010175800
+RBP=0x00000000126f7910 is pointing into the stack for thread: 0x0000000010175800
+RSI=0x00000000126f7fa0 is pointing into the stack for thread: 0x0000000010175800
+RDI=0x000007feea5133e8 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x000007feea4b0000 is an unknown value
+R11=0x00000000126f7820 is pointing into the stack for thread: 0x0000000010175800
+R12=0x0000000000000000 is an unknown value
+R13=0x000007feea518840 is an unknown value
+R14=0xffffffffffffffff is an unknown value
+R15=0x0000000010175800 is a thread
+
+
+Stack: [0x0000000012500000,0x0000000012700000],  sp=0x00000000126f77e0,  free space=2013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [KERNELBASE.dll+0xcacd]  RaiseException+0x3d
+C  [mmgr_dal_AndorSDK3.dll+0x13d39]  DeleteDevice+0x128d9
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  mmcorej.MMCoreJJNI.CMMCore_initializeDevice(JLmmcorej/CMMCore;Ljava/lang/String;)V+0
+j  mmcorej.CMMCore.initializeDevice(Ljava/lang/String;)V+6
+j  org.micromanager.conf2.DeviceSetupDlg.initializeDevice()Z+150
+j  org.micromanager.conf2.DeviceSetupDlg.onOK()V+298
+j  org.micromanager.conf2.DeviceSetupDlg$1.actionPerformed(Ljava/awt/event/ActionEvent;)V+4
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Ljava/awt/event/MouseEvent;)V+35
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+j  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V+18
+j  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V+570
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+42
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V+320
+j  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z+139
+j  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z+50
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+12
+j  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V+65
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V+41
+j  java.awt.EventQueue.access$000(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V+3
+j  java.awt.EventQueue$1.run()Ljava/lang/Void;+12
+j  java.awt.EventQueue$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+6
+j  java.awt.EventQueue$2.run()Ljava/lang/Void;+11
+j  java.awt.EventQueue$2.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V+73
+j  java.awt.EventDispatchThread.pumpOneEventForFilters(I)Z+204
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+30
+j  java.awt.EventDispatchThread.pumpEventsForFilter(Ljava/awt/Conditional;Ljava/awt/EventFilter;)V+4
+j  java.awt.Dialog$1.run()V+23
+j  java.awt.Dialog$3.run()Ljava/lang/Object;+4
+v  ~StubRoutines::call_stub
+J  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;
+j  java.awt.Dialog.show()V+223
+j  java.awt.Component.show(Z)V+5
+j  java.awt.Component.setVisible(Z)V+2
+j  java.awt.Window.setVisible(Z)V+2
+j  java.awt.Dialog.setVisible(Z)V+2
+j  org.micromanager.conf2.DevicesPage.addDevice()Z+280
+j  org.micromanager.conf2.DevicesPage.access$100(Lorg/micromanager/conf2/DevicesPage;)Z+1
+j  org.micromanager.conf2.DevicesPage$TreeMouseListener.mousePressed(Ljava/awt/event/MouseEvent;)V+12
+j  java.awt.AWTEventMulticaster.mousePressed(Ljava/awt/event/MouseEvent;)V+21
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+54
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+j  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V+18
+j  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V+570
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+42
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V+320
+j  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z+126
+j  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z+50
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+12
+j  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V+65
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V+41
+j  java.awt.EventQueue.access$000(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V+3
+j  java.awt.EventQueue$1.run()Ljava/lang/Void;+12
+j  java.awt.EventQueue$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+6
+j  java.awt.EventQueue$2.run()Ljava/lang/Void;+11
+j  java.awt.EventQueue$2.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V+73
+j  java.awt.EventDispatchThread.pumpOneEventForFilters(I)Z+204
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+30
+j  java.awt.EventDispatchThread.pumpEventsForFilter(Ljava/awt/Conditional;Ljava/awt/EventFilter;)V+4
+j  java.awt.Dialog$1.run()V+23
+j  java.awt.Dialog$3.run()Ljava/lang/Object;+4
+v  ~StubRoutines::call_stub
+J  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;
+j  java.awt.Dialog.show()V+223
+j  java.awt.Component.show(Z)V+5
+j  java.awt.Component.setVisible(Z)V+2
+j  java.awt.Window.setVisible(Z)V+2
+j  java.awt.Dialog.setVisible(Z)V+2
+j  org.micromanager.MMStudioMainFrame.runHardwareWizard()V+140
+j  org.micromanager.MMStudioMainFrame.access$2400(Lorg/micromanager/MMStudioMainFrame;)V+1
+j  org.micromanager.MMStudioMainFrame$40.run()V+4
+j  org.micromanager.utils.GUIUtils$3.actionPerformed(Ljava/awt/event/ActionEvent;)V+4
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.AbstractButton.doClick(I)V+64
+j  javax.swing.plaf.basic.BasicMenuItemUI.doClick(Ljavax/swing/MenuSelectionManager;)V+53
+j  javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Ljava/awt/event/MouseEvent;)V+62
+j  java.awt.AWTEventMulticaster.mouseReleased(Ljava/awt/event/MouseEvent;)V+8
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+j  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V+18
+j  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V+570
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+42
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V+320
+j  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z+139
+j  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z+50
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+12
+j  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V+65
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V+41
+j  java.awt.EventQueue.access$000(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V+3
+j  java.awt.EventQueue$1.run()Ljava/lang/Void;+12
+j  java.awt.EventQueue$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+6
+j  java.awt.EventQueue$2.run()Ljava/lang/Void;+11
+j  java.awt.EventQueue$2.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V+73
+j  java.awt.EventDispatchThread.pumpOneEventForFilters(I)Z+204
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+30
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( =&gt; current thread )
+  0x0000000015e22000 JavaThread &quot;BeanShell interpreter&quot; [_thread_blocked, id=5880, stack(0x0000000017600000,0x0000000017800000)]
+  0x0000000015e21000 JavaThread &quot;Thread-4&quot; [_thread_blocked, id=3804, stack(0x00000000162e0000,0x00000000164e0000)]
+  0x000000000fff7800 JavaThread &quot;TimerQueue&quot; daemon [_thread_blocked, id=4484, stack(0x0000000014bb0000,0x0000000014db0000)]
+  0x000000000057e000 JavaThread &quot;DestroyJavaVM&quot; [_thread_blocked, id=6072, stack(0x0000000000030000,0x0000000000230000)]
+  0x000000001002a800 JavaThread &quot;SciJava-ba3bc8c-Thread-1&quot; [_thread_blocked, id=4924, stack(0x0000000014310000,0x0000000014510000)]
+  0x0000000010223000 JavaThread &quot;SciJava-ba3bc8c-Thread-0&quot; [_thread_blocked, id=2944, stack(0x0000000012700000,0x0000000012900000)]
+=&gt;0x0000000010175800 JavaThread &quot;AWT-EventQueue-0&quot; [_thread_in_native, id=4296, stack(0x0000000012500000,0x0000000012700000)]
+  0x0000000010385000 JavaThread &quot;AWT-Windows&quot; daemon [_thread_in_native, id=4136, stack(0x0000000012300000,0x0000000012500000)]
+  0x0000000010dc1800 JavaThread &quot;AWT-Shutdown&quot; [_thread_blocked, id=3984, stack(0x0000000012100000,0x0000000012300000)]
+  0x0000000010354000 JavaThread &quot;Java2D Disposer&quot; daemon [_thread_blocked, id=1844, stack(0x0000000011f00000,0x0000000012100000)]
+  0x000000000632f800 JavaThread &quot;Low Memory Detector&quot; daemon [_thread_blocked, id=5756, stack(0x000000000e390000,0x000000000e590000)]
+  0x0000000006324000 JavaThread &quot;C2 CompilerThread1&quot; daemon [_thread_blocked, id=5804, stack(0x000000000e190000,0x000000000e390000)]
+  0x000000000631c000 JavaThread &quot;C2 CompilerThread0&quot; daemon [_thread_blocked, id=4576, stack(0x000000000df90000,0x000000000e190000)]
+  0x000000000631b000 JavaThread &quot;Attach Listener&quot; daemon [_thread_blocked, id=6020, stack(0x000000000dd90000,0x000000000df90000)]
+  0x0000000006318000 JavaThread &quot;Signal Dispatcher&quot; daemon [_thread_blocked, id=3880, stack(0x000000000db90000,0x000000000dd90000)]
+  0x000000000d5d0800 JavaThread &quot;Surrogate Locker Thread (Concurrent GC)&quot; daemon [_thread_blocked, id=5784, stack(0x000000000d990000,0x000000000db90000)]
+  0x0000000006305000 JavaThread &quot;Finalizer&quot; daemon [_thread_blocked, id=4068, stack(0x000000000d390000,0x000000000d590000)]
+  0x00000000062ff000 JavaThread &quot;Reference Handler&quot; daemon [_thread_blocked, id=5868, stack(0x000000000d190000,0x000000000d390000)]
+
+Other Threads:
+  0x00000000062fa000 VMThread [stack: 0x000000000cf90000,0x000000000d190000] [id=4260]
+  0x000000000d5da000 WatcherThread [stack: 0x000000000e590000,0x000000000e790000] [id=3532]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ par new generation   total 19136K, used 10690K [0x000000077b000000, 0x000000077c4c0000, 0x0000000782cc0000)
+  eden space 17024K,  50% used [0x000000077b000000, 0x000000077b8608e0, 0x000000077c0a0000)
+  from space 2112K, 100% used [0x000000077c0a0000, 0x000000077c2b0000, 0x000000077c2b0000)
+  to   space 2112K,   0% used [0x000000077c2b0000, 0x000000077c2b0000, 0x000000077c4c0000)
+ concurrent mark-sweep generation total 63872K, used 22029K [0x0000000782cc0000, 0x0000000786b20000, 0x00000007f8000000)
+ concurrent-mark-sweep perm gen total 131072K, used 65428K [0x00000007f8000000, 0x0000000800000000, 0x0000000800000000)
+
+Code Cache  [0x0000000002670000, 0x0000000002a70000, 0x0000000005670000)
+ total_blobs=1681 nmethods=1018 adapters=615 free_code_cache=46259456 largest_free_block=33536
+
+Dynamic libraries:
+0x0000000000400000 - 0x0000000000462000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\ImageJ-win64.exe
+0x0000000077610000 - 0x00000000777b9000 C:\Windows\SYSTEM32\ntdll.dll
+0x00000000774f0000 - 0x000000007760f000 C:\Windows\system32\kernel32.dll
+0x000007fefdb20000 - 0x000007fefdb8c000 C:\Windows\system32\KERNELBASE.dll
+0x000007feff4c0000 - 0x000007feff59b000 C:\Windows\system32\ADVAPI32.dll
+0x000007feff110000 - 0x000007feff1af000 C:\Windows\system32\msvcrt.dll
+0x000007feff900000 - 0x000007feff91f000 C:\Windows\SYSTEM32\sechost.dll
+0x000007fefefe0000 - 0x000007feff10d000 C:\Windows\system32\RPCRT4.dll
+0x0000000076f30000 - 0x000000007702a000 C:\Windows\system32\USER32.dll
+0x000007feff5b0000 - 0x000007feff617000 C:\Windows\system32\GDI32.dll
+0x000007feff5a0000 - 0x000007feff5ae000 C:\Windows\system32\LPK.dll
+0x000007fefe180000 - 0x000007fefe249000 C:\Windows\system32\USP10.dll
+0x000007feff250000 - 0x000007feff27e000 C:\Windows\system32\IMM32.DLL
+0x000007fefdf50000 - 0x000007fefe059000 C:\Windows\system32\MSCTF.dll
+0x000000006d6c0000 - 0x000000006d6ea000 C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji\jre\bin\splashscreen.dll
+0x000007fefc060000 - 0x000007fefc0b6000 C:\Windows\system32\uxtheme.dll
+0x000000006d800000 - 0x000000006dfb8000 C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji\jre\bin\server\jvm.dll
+0x000007fefb7e0000 - 0x000007fefb81b000 C:\Windows\system32\WINMM.dll
+0x000000006d770000 - 0x000000006d77e000 C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji\jre\bin\verify.dll
+0x000000006d3b0000 - 0x000000006d3d7000 C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji\jre\bin\java.dll
+0x000007fef3ac0000 - 0x000007fef3b08000 C:\Program Files (x86)\TeamViewer\Version9\tv_x64.dll
+0x000007fefca10000 - 0x000007fefca1c000 C:\Windows\system32\VERSION.dll
+0x000007fefa740000 - 0x000007fefa7e0000 C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_a4d6a923711520a9\COMCTL32.dll
+0x000007fefe250000 - 0x000007fefefd8000 C:\Windows\system32\SHELL32.dll
+0x000007feff620000 - 0x000007feff691000 C:\Windows\system32\SHLWAPI.dll
+0x000007feff6f0000 - 0x000007feff8f3000 C:\Windows\system32\ole32.dll
+0x000000006d7c0000 - 0x000000006d7d2000 C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji\jre\bin\zip.dll
+0x000007fefd9a0000 - 0x000007fefd9af000 C:\Windows\system32\CRYPTBASE.dll
+0x000000006d000000 - 0x000000006d1c4000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\jre\bin\awt.dll
+0x000007fefab40000 - 0x000007fefabb1000 C:\Windows\system32\WINSPOOL.DRV
+0x000007fefbb70000 - 0x000007fefbb88000 C:\Windows\system32\DWMAPI.DLL
+0x000000006d2a0000 - 0x000000006d307000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\jre\bin\fontmanager.dll
+0x000000006d610000 - 0x000000006d627000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\jre\bin\net.dll
+0x000007feff6a0000 - 0x000007feff6ed000 C:\Windows\system32\WS2_32.dll
+0x000007fefde40000 - 0x000007fefde48000 C:\Windows\system32\NSI.dll
+0x000007fefd1f0000 - 0x000007fefd245000 C:\Windows\system32\mswsock.dll
+0x000007fefd2a0000 - 0x000007fefd2a7000 C:\Windows\System32\wship6.dll
+0x000000006d630000 - 0x000000006d63b000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\jre\bin\nio.dll
+0x000007fefde70000 - 0x000007fefdf47000 C:\Windows\system32\OLEAUT32.DLL
+0x000000006d210000 - 0x000000006d238000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\jre\bin\dcpr.dll
+0x000007fefb4c0000 - 0x000007fefb4e7000 C:\Windows\system32\iphlpapi.dll
+0x000007fefb4b0000 - 0x000007fefb4bb000 C:\Windows\system32\WINNSI.DLL
+0x000007fefb260000 - 0x000007fefb271000 C:\Windows\system32\dhcpcsvc6.DLL
+0x000007fefb120000 - 0x000007fefb138000 C:\Windows\system32\dhcpcsvc.DLL
+0x000007fefcae0000 - 0x000007fefcae7000 C:\Windows\System32\wshtcpip.dll
+0x000007fefd080000 - 0x000007fefd0db000 C:\Windows\system32\DNSAPI.dll
+0x000007fef98a0000 - 0x000007fef98ce000 C:\Program Files\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+0x00000000777d0000 - 0x00000000777d7000 C:\Windows\system32\PSAPI.DLL
+0x00000000718d0000 - 0x00000000718f6000 C:\Program Files\Bonjour\mdnsNSP.dll
+0x000007fef9890000 - 0x000007fef9898000 C:\Windows\system32\rasadhlp.dll
+0x000007fefb3b0000 - 0x000007fefb403000 C:\Windows\System32\fwpuclnt.dll
+0x000007feea530000 - 0x000007feea641000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\MMCoreJ_wrap.dll
+0x0000000065760000 - 0x00000000657f8000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\MSVCP100.dll
+0x0000000065680000 - 0x0000000065751000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\MSVCR100.dll
+0x000000006d550000 - 0x000000006d55a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\jre\bin\management.dll
+0x000007fefba80000 - 0x000007fefba95000 C:\Windows\system32\NLAapi.dll
+0x000007fef8500000 - 0x000007fef8515000 C:\Windows\system32\napinsp.dll
+0x000007fef83a0000 - 0x000007fef83b9000 C:\Windows\system32\pnrpnsp.dll
+0x000007fef8390000 - 0x000007fef839b000 C:\Windows\System32\winrnr.dll
+0x000007fefd4f0000 - 0x000007fefd507000 C:\Windows\system32\CRYPTSP.dll
+0x000007fefcfd0000 - 0x000007fefd017000 C:\Windows\system32\rsaenh.dll
+0x000007fefcf60000 - 0x000007fefcf7e000 C:\Windows\system32\USERENV.dll
+0x000007fefda70000 - 0x000007fefda7f000 C:\Windows\system32\profapi.dll
+0x000007fefbb50000 - 0x000007fefbb6b000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_PicardStage.dll
+0x000007fefb160000 - 0x000007fefb1a7000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\PiUsb.dll
+0x000007feff280000 - 0x000007feff457000 C:\Windows\system32\SETUPAPI.dll
+0x000007fefdd20000 - 0x000007fefdd56000 C:\Windows\system32\CFGMGR32.dll
+0x000007fefdb90000 - 0x000007fefdbaa000 C:\Windows\system32\DEVOBJ.dll
+0x000007fefc050000 - 0x000007fefc05b000 C:\Windows\system32\HID.DLL
+0x000007fefdd60000 - 0x000007fefdd9a000 C:\Windows\system32\WINTRUST.dll
+0x000007fefdbb0000 - 0x000007fefdd17000 C:\Windows\system32\CRYPT32.dll
+0x000007fefdb10000 - 0x000007fefdb1f000 C:\Windows\system32\MSASN1.dll
+0x000007fefb140000 - 0x000007fefb157000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_AAAOTF.dll
+0x000007fef9420000 - 0x000007fef945e000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ABSCamera.dll
+0x000007fef9f60000 - 0x000007fef9f7c000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_AgilentLaserCombiner.dll
+0x000007fef9400000 - 0x000007fef9417000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Aladdin.dll
+0x000007fef4950000 - 0x000007fef498a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Andor.dll
+0x000007feea260000 - 0x000007feea370000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\atmcd64d.dll
+0x000007fef9190000 - 0x000007fef91a4000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\atcore.dll
+0x000007fef93a0000 - 0x000007fef93b1000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\atspooler.dll
+0x000007fefbb00000 - 0x000007fefbb0a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\atutility.dll
+0x000007fefaf60000 - 0x000007fefaf68000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\atblkbx.dll
+0x000007fef4920000 - 0x000007fef4945000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_AndorLaserCombiner.dll
+0x000007feea4b0000 - 0x000007feea524000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_AndorSDK3.dll
+0x000007fef8200000 - 0x000007fef8218000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_AOTF.dll
+0x000000000c9c0000 - 0x000000000c9d3000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\inpoutx64.dll
+0x000007fef7960000 - 0x000007fef7976000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Aquinas.dll
+0x000007feec8b0000 - 0x000007feec8d4000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Arduino.dll
+0x000007fef7940000 - 0x000007fef795d000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ASIFW1000.dll
+0x000007feec870000 - 0x000007feec8af000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ASIStage.dll
+0x000007feea0a0000 - 0x000007feea14a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ASITiger.dll
+0x000007fef4900000 - 0x000007fef4915000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ASIwptr.dll
+0x000007feec840000 - 0x000007feec865000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_AxioCam.dll
+0x000007feec810000 - 0x000007feec83c000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_BaumerOptronic.dll
+0x000007fee9e50000 - 0x000007feea092000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\FxLib.dll
+0x000007feea480000 - 0x000007feea4a7000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\SysInfo.dll
+0x000007fefd250000 - 0x000007fefd259000 C:\Windows\system32\WSOCK32.dll
+0x000007feea450000 - 0x000007feea478000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_CARVII.dll
+0x000007fef3b50000 - 0x000007fef3b6a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Cobolt.dll
+0x000007fee9e30000 - 0x000007fee9e4a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_CoherentCube.dll
+0x000007fee9e10000 - 0x000007fee9e28000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_CoherentOBIS.dll
+0x000007fee9de0000 - 0x000007fee9e05000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Conix.dll
+0x000007fee9dc0000 - 0x000007fee9ddd000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Corvus.dll
+0x000007fee9d90000 - 0x000007fee9dbd000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_CSUW1.dll
+0x000007fee9d50000 - 0x000007fee9d87000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_CSUX.dll
+0x000007fee9c70000 - 0x000007fee9d49000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_DECamera.dll
+0x000007fee9c30000 - 0x000007fee9c6f000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_DemoCamera.dll
+0x000007fee9c00000 - 0x000007fee9c28000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ESIOImagingControllers.dll
+0x000007fee9bc0000 - 0x000007fee9bf5000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_FLICamera.dll
+0x000007fee9ba0000 - 0x000007fee9bb9000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_FreeSerialPort.dll
+0x000007fee9b80000 - 0x000007fee9b9b000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_GenericSLM.dll
+0x000007fee9b60000 - 0x000007fee9b78000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_HIDManager.dll
+0x000007fefacc0000 - 0x000007fefacc8000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\hidapi.dll
+0x000007fee9b40000 - 0x000007fee9b56000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_ImageProcessorChain.dll
+0x000007fee9b20000 - 0x000007fee9b3f000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_K8055.dll
+0x000007fee9b00000 - 0x000007fee9b1f000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_K8061.dll
+0x000007fee9ae0000 - 0x000007fee9af8000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_KDV.dll
+0x000007fee9a80000 - 0x000007fee9ad5000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_LeicaDMI.dll
+0x000007fee9a50000 - 0x000007fee9a75000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_LeicaDMR.dll
+0x000007fee9a30000 - 0x000007fee9a4a000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_LeicaDMSTC.dll
+0x000007fee9a00000 - 0x000007fee9a2b000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Ludl.dll
+0x000007fee99e0000 - 0x000007fee99fc000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_LudlLow.dll
+0x000007fee99b0000 - 0x000007fee99d4000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_LumencorCIA.dll
+0x000007fee9990000 - 0x000007fee99a6000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_LumencorSpectra.dll
+0x000007fee9970000 - 0x000007fee9986000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_MaestroServo.dll
+0x000007fee9930000 - 0x000007fee9969000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_Marzhauser.dll
+0x000007fee9900000 - 0x000007fee9925000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_MarzhauserLStep.dll
+0x000007fee9850000 - 0x000007fee98f3000 C:\Users\OpenSPIM\Downloads\mFiji (1)\mFiji\mmgr_dal_MCL_MicroDrive.dll
+
+VM Arguments:
+jvm_args: -Xmx2000m -XX:MaxDirectMemorySize=1000g -Dpython.cachedir.skip=true -Dplugins.dir=C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji -Xincgc -XX:PermSize=128m
+java_command: &lt;unknown&gt;
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji/.\jre
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\PROGRA~2\Borland\Delphi5\Projects\Bpl;C:\PROGRA~2\Borland\Delphi5\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\Wave Systems Corp\Gemalto\Access Client\v5\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;\Serial;\Serial;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Apache Software Foundation\apache-maven-3.2.3\bin;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files (x86)\Git\cmd;C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji/lib/win64;C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji/mm/win64;C:\Users\OpenSPIM\DOWNLO~1\MFIJI(~1\mFiji/.\jre/bin
+USERNAME=OpenSPIM
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 44 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 6 (6 cores per cpu, 2 threads per core) family 6 model 44 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 25163352k(22438988k free), swap 50324856k(46985820k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.6-b01) for windows-amd64 JRE (1.6.0_31-b05), built on Feb  3 2012 18:34:57 by &quot;java_re&quot; with MS VC++ 8.0 (VS2005)
+
+time: Tue Jan 20 19:01:52 2015
+elapsed time: 30 seconds
+
+Any thoughts?
+
+
+Kind regards,
+
+Gabriel Davis Jones
+
+
+Florey Institute for Neuroscience and Mental Health
+Laboratory for Ion Channels and Human Diseases
+Level 1 Kenneth Myer Building
+Genetics Lane on Royal Parade
+The University of Melbourne  Vic  3010
+Phone: +61 3 9035 3633&lt;<A HREF="tel://Phone:%A0%20+61%203%209035%203633">tel://Phone:%A0%20+61%203%209035%203633</A>&gt;
+Email:  <A HREF="http://openspim.org/mailman/listinfo/openspim">gabriel.jones at florey.edu.au</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">gabriel.jones at florey.edu.au</A>&gt;
+Mobile: 0449 703 373&lt;<A HREF="tel://Mobile:%200449%20703%20373">tel://Mobile:%200449%20703%20373</A>&gt;
+
+________________________________
+From: Ulrik Günther [<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>]
+Sent: 16 January 2015 22:23
+To: Gabriel Davis Jones
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: [OpenSPIM] Best practices for using a different camera?
+
+Hello Gabriel,
+
+we are also using Andor Neo cameras and they work pretty great.
+
+Currently, we are refactoring the OpenSPIM plugin, so it can be used with a normal installation of Fiji and MicroManager, so our special package is not needed anymore. I have a recent nightly build available, based on MicroManager 1.4.18, which you can find at <A HREF="https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/mFiji.zip">https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/mFiji.zip</A> The corresponding OpenSPIM plugin is available at <A HREF="https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/SPIMacquisition.jar">https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/SPIMacquisition.jar</A> and has to be put into the mmplugins/ directory. This version also works on 64bit machines.
+
+With this version, you can just create your setup as usual, just select the Andor SDK3 as camera.
+
+Please let me know if that worked for you :-)
+
+cheers,
+
+ulrik
+
+
+-
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group &amp; Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+E-Mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+
+On Jan 15, 2015, at 3:10 PM, Gabriel Davis Jones &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">gabriel.jones at florey.edu.au</A>&gt; wrote:
+
+Hi All,
+
+We are currently trying to use an Andor Neo camera in our OpenSPIM setup instead of the described Hamamatsu.
+Is there some &quot;best practices&quot; advice anyone could give regarding how to go about using a different camera in the setup (preferably the Andor Neo) and how to get the FIJI/OpenSPIM package to cooperate with the camera?
+
+Thank you,
+
+
+Gabriel Davis Jones
+
+
+Florey Institute for Neuroscience and Mental Health
+Laboratory for Ion Channels and Human Diseases
+Level 1 Kenneth Myer Building
+Genetics Lane on Royal Parade
+
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150121/15294809/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150121/15294809/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001541.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+	<LI>Next message: <A HREF="001560.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1559">[ date ]</a>
+              <a href="thread.html#1559">[ thread ]</a>
+              <a href="subject.html#1559">[ subject ]</a>
+              <a href="author.html#1559">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

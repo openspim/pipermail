@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] defining interest points fails
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20defining%20interest%20points%20fails&In-Reply-To=%3Cc8fef2152327b71ca332d635bb0071c0%40cam.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000962.html">
+   <LINK REL="Next"  HREF="000963.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] defining interest points fails</H1>
+    <B>Dr S. Hoehn</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20defining%20interest%20points%20fails&In-Reply-To=%3Cc8fef2152327b71ca332d635bb0071c0%40cam.ac.uk%3E"
+       TITLE="[OpenSPIM] defining interest points fails">S.Hoehn at damtp.cam.ac.uk
+       </A><BR>
+    <I>Mon Jun  6 11:02:09 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000962.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+        <LI>Next message: <A HREF="000963.html">[OpenSPIM] Fwd: Open SPIM- Cube laser problems
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#960">[ date ]</a>
+              <a href="thread.html#960">[ thread ]</a>
+              <a href="subject.html#960">[ subject ]</a>
+              <a href="author.html#960">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+Dear All,
+
+Has anyone recently had trouble with the registration of multi-view SPIM
+data? If you encountered the problem described below I'll write a bug
+report, but I first wanted to know if I'm just forgetting something:
+
+I have been trying to register z-stacks from 3 angles at a single time
+point with the old fiji plugin (SPIM Registration) and the new one
+(Multiview Reconstruction). In each case when I try to choose a z-stack
+for finding interest points I get the following error message:
+
+(Fiji Is Just) ImageJ 2.0.0-rc-43/1.51a; Java 1.6.0_24 [64-bit]; Windows
+7 6.1; 428MB of 490870MB (&lt;1%)
+
+java.lang.IllegalArgumentException: STACK IS EMPTY
+     at ij.ImagePlus.setStack(ImagePlus.java:642)
+     at ij.ImagePlus.&lt;init&gt;(ImagePlus.java:149)
+     at
+net.imglib2.img.display.imagej.ImageJFunctions.makeImagePlus(ImageJFunctions.java:245)
+     at
+net.imglib2.img.display.imagej.ImageJFunctions.wrapFloat(ImageJFunctions.java:240)
+     at
+spim.fiji.plugin.interestpointdetection.DifferenceOfGaussian.setInteractiveValues(DifferenceOfGaussian.java:238)
+     at
+spim.fiji.plugin.interestpointdetection.DifferenceOf.queryParameters(DifferenceOf.java:225)
+     at
+spim.fiji.plugin.Interest_Point_Detection.detectInterestPoints(Interest_Point_Detection.java:161)
+     at
+spim.fiji.plugin.Interest_Point_Detection.run(Interest_Point_Detection.java:67)
+     at ij.IJ.runUserPlugIn(IJ.java:216)
+     at ij.IJ.runPlugIn(IJ.java:180)
+     at ij.Executer.runCommand(Executer.java:137)
+     at ij.Executer.run(Executer.java:66)
+     at java.lang.Thread.run(Thread.java:662)
+
+I attached the z-stacks I wanted to register and fuse (as Google Drive
+links, below). I chose the first one to find beads.&#8203;
+  spim_TL01_Angle2.tif [1]&#8203;&#8203;
+  spim_TL01_Angle0.tif [2]&#8203;&#8203;
+  spim_TL01_Angle1.tif [3]&#8203;
+
+With the old SPIM Registration a window opens showing the first image of
+the stack (instead of the entire z-stack) and it doesn't show any green
+or red circles around beads, no matter where I set the threshold.
+
+Would anyone have any ideas what's going wrong?
+
+Thanks a lot!
+
+Best wishes,
+Stephanie
+
+-- 
+
+Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+OFFICE TEL: 01223 337859
+Office: H0.03
+
+-- 
+
+Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+OFFICE TEL: 01223 337859
+Office: H0.03
+
+Links:
+------
+[1] 
+<A HREF="https://drive.google.com/file/d/0B7_ptH2Tf_XdcEowRDJncF9mekE/view?usp=drive_web">https://drive.google.com/file/d/0B7_ptH2Tf_XdcEowRDJncF9mekE/view?usp=drive_web</A>
+[2] 
+<A HREF="https://drive.google.com/file/d/0B7_ptH2Tf_XdazFFRlBYSXp5YzA/view?usp=drive_web">https://drive.google.com/file/d/0B7_ptH2Tf_XdazFFRlBYSXp5YzA/view?usp=drive_web</A>
+[3] 
+<A HREF="https://drive.google.com/file/d/0B7_ptH2Tf_XdWkV2cGtGQU1yUDQ/view?usp=drive_web">https://drive.google.com/file/d/0B7_ptH2Tf_XdWkV2cGtGQU1yUDQ/view?usp=drive_web</A>
+
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000962.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+	<LI>Next message: <A HREF="000963.html">[OpenSPIM] Fwd: Open SPIM- Cube laser problems
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#960">[ date ]</a>
+              <a href="thread.html#960">[ thread ]</a>
+              <a href="subject.html#960">[ subject ]</a>
+              <a href="author.html#960">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

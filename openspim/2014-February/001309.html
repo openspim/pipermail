@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C7670f32b2fd36.52efc83d%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001308.html">
+   <LINK REL="Next"  HREF="001310.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C7670f32b2fd36.52efc83d%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Mon Feb  3 16:47:57 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001308.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="001310.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1309">[ date ]</a>
+              <a href="thread.html#1309">[ thread ]</a>
+              <a href="subject.html#1309">[ subject ]</a>
+              <a href="author.html#1309">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Nikul,
+
+I'm not sure about actually improving the write speed, but if you haven't already, and your computer has a significant amount of memory, try enabling Asynchronous Output (a checkbox next to the destination directory) in OpenSPIM. With this setting on, the software will grab frames as quickly as it can capture them (until your RAM fills up, anyway). Bear in mind also that if you aren't recording video, getting 100 fps suggests that all inter-frame actions complete in 10 ms. Since the default Z-stage settle delay (see &quot;More Options&quot;) is 10 ms, achieving this may be quite difficult.
+
+
+Thanks for working through all these issues! If possible, could you document any necessary changes? I'd love to include a 64-bit OpenSPIM version in the near future.
+
+
+Hope this helps,
+Luke
+
+On 02/03/14, Nikul  wrote:
+&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Hi Luke and Johannes,
+</I>&gt;<i> 
+</I>&gt;<i> I was able to figure out what the problem was. MMCoreJJNI.java lists
+</I>&gt;<i> the root directory and mm/Win64 as the search directories for a 64-bit
+</I>&gt;<i> build while openspim.build.xml was staging the files to mm/x64. Changing
+</I>&gt;<i> the staging directory in openspim.build.xml solved the problem!
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+</I>&gt;<i> and am using a RAID0 array of four ssd drives. The write speed I get through 
+</I>&gt;<i> OpenSPIM (or micromanager) is at the moment only able to handle about 
+</I>&gt;<i> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+</I>&gt;<i> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+</I>&gt;<i> to get full frame rate capture from the camera.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> ---
+</I>&gt;<i> Nikul Ukani
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Doctoral Candidate,
+</I>&gt;<i> Dept. of Electrical Engineering,
+</I>&gt;<i> Columbia University.
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://www.bionet.ee.columbia.edu/">http://www.bionet.ee.columbia.edu/</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Jan 31, 2014, at 4:42 PM, Nikul &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nikul at ee.columbia.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nikul at ee.columbia.edu</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &gt; I'll look into it and get back. If it works, it will be great to have some resourceon the OpenSPIM website for compiling it in 64-bit.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Thanks,
+</I>&gt;<i> &gt; ---
+</I>&gt;<i> &gt; Nikul Ukani
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Doctoral Candidate,
+</I>&gt;<i> &gt; Dept. of Electrical Engineering,
+</I>&gt;<i> &gt; Columbia University.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; <A HREF="http://www.bionet.ee.columbia.edu/">http://www.bionet.ee.columbia.edu/</A>
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt; wrote:
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; Hi Nikul,
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; --x64 is supposed to change &quot;mm.architecture&quot; to &quot;x64&quot; before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that &quot;build.sh&quot; and/or &quot;openspim.build.xml&quot; do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in &quot;stage&quot; or &quot;build&quot; subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of &quot;openspim.build.xml&quot;) and make sure the correct architecture is copied from.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Hope this helps,
+</I>&gt;<i> &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; On 01/31/14, Nikul Ukani wrote:
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Hi Johannes,
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; Nikul
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; On Jan 31, 2014, at 2:21 PM, Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt;&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Hi Nikul,
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; On Fri, 31 Jan 2014, Nikul Ukani wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; I am currently trying to compile OpenSPIM on a 64 bit machine running
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Windows 7. While I was able to get it to compile by modifying some of
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; the build scripts; upon trying to open it from Fiji, I get the following
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; error
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Error: Failed to open libMMCoreJ_wrap.jnilib
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; mmcorej.MMCoreJJNI.swig_module_init()V
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+</I>&gt;<i> &gt; &gt; &gt; &gt; library. Possible?
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Ciao,
+</I>&gt;<i> &gt; &gt; &gt; &gt; Johannes
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001308.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="001310.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1309">[ date ]</a>
+              <a href="thread.html#1309">[ thread ]</a>
+              <a href="subject.html#1309">[ subject ]</a>
+              <a href="author.html#1309">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

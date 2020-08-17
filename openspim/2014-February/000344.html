@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3CCE820091-E2BE-4E0F-A872-5995FF83FCC6%40columbia.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000343.html">
+   <LINK REL="Next"  HREF="000345.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Nikul</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3CCE820091-E2BE-4E0F-A872-5995FF83FCC6%40columbia.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">nhu2001 at columbia.edu
+       </A><BR>
+    <I>Wed Feb  5 10:29:45 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000343.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="000345.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#344">[ date ]</a>
+              <a href="thread.html#344">[ thread ]</a>
+              <a href="subject.html#344">[ subject ]</a>
+              <a href="author.html#344">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi everyone,
+
+Thanks for the replies!
+
+&gt;<i> Are you working with Brian McCabe? If yes, say hi to him. 
+</I>
+I work in the lab of Prof. Lazar, but we do collaborate with Brian. I'll
+make sure to pass the greetings!
+
+
+
+
+&gt;<i> May I ask how you plan to handle the data once it is acquired at this
+</I>&gt;<i> rate?! This is no small feat... I'm also interested in what you will
+</I>&gt;<i> image
+</I>
+We will be imaging drosophila larvae. For now, I am just dumping the 
+data to a 4 TB raid array. Still working on the eventual data storage framework :)
+
+
+
+
+&gt;<i> I'm not sure about actually improving the write speed, but if you haven't already, and your computer has a significant amount of memory, try enabling Asynchronous Output (a checkbox next to the destination directory) in OpenSPIM. With this setting on, the software will grab frames as quickly as it can capture them (until your RAM fills up, anyway).
+</I>
+Hi Luke, I am using the asynchronous output option and have been running some profiling tests.
+Disabling all stage movements and calls to get positions from the stage, I am able to
+get a 20fps capture from the camera. I suspect this is due to the use of software triggering.
+Will investigate further
+
+The write speed to the RAID array through openspim is really bad at this point(2-3 fps). I suspect
+this is due to the use of the BioFormats writer., which somehow doesn't perform well
+in this scenario. I will try to interface the TaggedImageStorageMultiPageTiff class from
+MM with the openspim AsyncOutputWrapper to see if that improves things. (I am able to 
+get 50 fps writes through micromanager) 
+
+&gt;<i> Bear in mind also that if you aren't recording video, getting 100 fps suggests that all inter-frame actions complete in 10 ms. Since the default Z-stage settle delay (see &quot;More Options&quot;) is 10 ms, achieving this may be quite difficult.
+</I>&gt;<i> 
+</I>
+Right now, I am just trying to ensure that the acquisition and output operations aren't a bottleneck.
+I understand that the speed will be less once I include the stage movements. I am trying to take
+a modular approach to maximize throughput. I have commented all calls to the
+stage(even getPosition) to run acquisition/output benchmarks. 
+
+&gt;<i> 
+</I>&gt;<i> Thanks for working through all these issues! If possible, could you document any necessary changes? I'd love to include a 64-bit OpenSPIM version in the near future.
+</I>
+If you could send me the code you used to produce the 32 bit self extracting archive, I can try
+modifying it to have a 64 bit version in the coming weeks. On a related note, references to
+commons-math3-3.2.jar might be necessary in the build xml files for 32 bit as well. I see that
+the switch to commons math 3 was made recently but I wasn't able to find it included in the 
+build files.
+
+
+
+
+
+
+
+&gt;<i> - Writing a lot of small files takes a lot more time than a single big one. You might want to test your RAID system with something like ATTO Disk Benchmark, which measures data rates for different files sizes.
+</I>
+Hi Michael, I am getting a write speed of 1.4GBps for 16kb writes and more than 2GBps for 
+anything more than 32kb writes through benchmarks,.
+I will investigate further by writing a standalone program in Java using Java's I/O module and
+another one using the BioFormats class to test their respective speeds.
+
+&gt;<i> - Buffering the data in the RAM before writing to SSD could help, or streaming everything to RAM. Requires a lot of RAM, though.
+</I>
+I currently have 128 GB of DDR3-1600 ram. But even acquisition to ram at this point
+seems to be slow(20fps) through openspim. 
+
+In the video mode, I am able to get 50 fps in openspim, so it seems to be stemming from 
+repeated calls to snapImage() as opposed to initiating a sequence acquisition.
+
+----------------------------------------------
+Nikul Ukani
+
+Research assistant,
+Bionet lab,
+Columbia University.
+<A HREF="http://www.bionet.ee.columbia.edu/">http://www.bionet.ee.columbia.edu/</A>
+
+
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140205/04b935fd/attachment.html">http://openspim.org/pipermail/openspim/attachments/20140205/04b935fd/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000343.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="000345.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#344">[ date ]</a>
+              <a href="thread.html#344">[ thread ]</a>
+              <a href="subject.html#344">[ subject ]</a>
+              <a href="author.html#344">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

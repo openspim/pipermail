@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Multiview registration - no inliers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Multiview%20registration%20-%20no%20inliers&In-Reply-To=%3CCAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu%3D7A%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001949.html">
+   <LINK REL="Next"  HREF="001952.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Multiview registration - no inliers</H1>
+    <B>Tania Mendonca</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Multiview%20registration%20-%20no%20inliers&In-Reply-To=%3CCAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu%3D7A%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Multiview registration - no inliers">tvmendonca1 at sheffield.ac.uk
+       </A><BR>
+    <I>Fri Aug 19 14:31:08 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="001949.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+        <LI>Next message (by thread): <A HREF="001952.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1950">[ date ]</a>
+              <a href="thread.html#1950">[ thread ]</a>
+              <a href="subject.html#1950">[ subject ]</a>
+              <a href="author.html#1950">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi
+
+Just tried it but it still doesn't work.
+
+Thanks
+Tania
+
+On 19 August 2016 at 20:13, <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A> &lt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>&gt; wrote:
+
+&gt;<i> Hi, I just think that in the beginning when you define your dataset the
+</I>&gt;<i> pixel sizes were wrong which potentially corrupts the downstream workflow.
+</I>&gt;<i> Try to start from the very beginning, and define a new dataset and manually
+</I>&gt;<i> put in the correct calibration. This might just work ...
+</I>&gt;<i>
+</I>&gt;<i> All the best,
+</I>&gt;<i> Stephan
+</I>&gt;<i>
+</I>&gt;<i> Sent from my iPhone
+</I>&gt;<i>
+</I>&gt;<i> On Aug 19, 2016, at 21:00, Tania Mendonca &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tvmendonca1 at sheffield.ac.uk</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi
+</I>&gt;<i>
+</I>&gt;<i> I've just checked to make sure but yes I have corrected the voxel size on
+</I>&gt;<i> the image stacks and there shouldn't be a mistake in that. However, your
+</I>&gt;<i> reply gave me an idea and I did a quick test. I duplicated one of the
+</I>&gt;<i> images and ran the multiview reconstruction plugin for the two duplicates.
+</I>&gt;<i> It worked, so it makes me think that there's nothing wrong with the files
+</I>&gt;<i> themselves and you might be right about the issue being with my voxel
+</I>&gt;<i> depth. I've referred to SVI's Nyquist calculator to workout my step size,
+</I>&gt;<i> is there a recommended step size that people use?
+</I>&gt;<i>
+</I>&gt;<i> Best wishes
+</I>&gt;<i> Tania
+</I>&gt;<i>
+</I>&gt;<i> On 19 August 2016 at 16:58, <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi, my first guess would be that your calibration (pixel size is x,y and
+</I>&gt;&gt;<i> z) is wrong ... Can you make sure this is correct when you define your
+</I>&gt;&gt;<i> dataset?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> All the best,
+</I>&gt;&gt;<i> Stephan
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Aug 19, 2016, at 17:17, Tania Mendonca &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tvmendonca1 at sheffield.ac.uk</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi all
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hope your microscopes are aligned and treating you well! I'm sorry if
+</I>&gt;&gt;<i> I've missed this conversation before but I was wondering if any of you have
+</I>&gt;&gt;<i> had similar problems as me with trying to get the Fiji multiview
+</I>&gt;&gt;<i> reconstruction plugin to like my data.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I've tried a range of microspheres - different colours, different sizes
+</I>&gt;&gt;<i> and different concentrations but it never seems to find enough
+</I>&gt;&gt;<i> correspondences between views. I've been primarily experimenting with
+</I>&gt;&gt;<i> interactively detec​​ting interest points. I've tried the presets as well
+</I>&gt;&gt;<i> but with no luck. I've tried to systematically work through various
+</I>&gt;&gt;<i> combinations of sigma and threshold but always end up with 0 inliers.
+</I>&gt;&gt;<i> Registrations always terminates with the following error: &quot;There are no
+</I>&gt;&gt;<i> connected tiles, cannot do an optimization. Quitting.&quot;
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> My home built system doesn't run on µManager and my images are acquired
+</I>&gt;&gt;<i> as .cxd files which I convert to .tifs before processing. I'm attaching
+</I>&gt;&gt;<i> some of my test data - <A HREF="https://drive.google.com/file/">https://drive.google.com/file/</A>
+</I>&gt;&gt;<i> d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+</I>&gt;&gt;<i> the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm
+</I>&gt;&gt;<i> beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct
+</I>&gt;&gt;<i> the 10µm beads. I use the same objectives as on the OpenSPIM system (10X
+</I>&gt;&gt;<i> for illumination and 20X for detection), magnification on the system is
+</I>&gt;&gt;<i> 27.7X. The illumination here is 473nm and detection at 520nm.​​
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> A log file has been included in the zip file to give you an idea of what
+</I>&gt;&gt;<i> I've been trying.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I hope I'm just missing a trick somewhere. Any help would be greatly
+</I>&gt;&gt;<i> appreciated!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best wishes
+</I>&gt;&gt;<i> Tania
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i> Tania Mendonca
+</I>&gt;&gt;<i> Doctoral Research Student
+</I>&gt;&gt;<i> University of Sheffield
+</I>&gt;&gt;<i> S10 2TN
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> -------------------------
+</I>&gt;<i> Tania Mendonca
+</I>&gt;<i> Doctoral Research Student
+</I>&gt;<i> University of Sheffield
+</I>&gt;<i> S10 2TN
+</I>&gt;<i> -------------------------
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160819/b132d639/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20160819/b132d639/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="001949.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+	<LI>Next message (by thread): <A HREF="001952.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1950">[ date ]</a>
+              <a href="thread.html#1950">[ thread ]</a>
+              <a href="subject.html#1950">[ subject ]</a>
+              <a href="author.html#1950">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

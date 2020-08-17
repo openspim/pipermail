@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Acquire SPIM image data saving problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Acquire%20SPIM%20image%20data%20saving%20problem&In-Reply-To=%3Ce8df0c61c90c421980123d3f1e7317a3%40tum.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002066.html">
+   <LINK REL="Next"  HREF="002068.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Acquire SPIM image data saving problem</H1>
+    <B>Bartels, Judith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Acquire%20SPIM%20image%20data%20saving%20problem&In-Reply-To=%3Ce8df0c61c90c421980123d3f1e7317a3%40tum.de%3E"
+       TITLE="[OpenSPIM] Acquire SPIM image data saving problem">judith.bartels at tum.de
+       </A><BR>
+    <I>Tue Jan 23 22:40:19 CST 2018</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002066.html">[OpenSPIM] Light Sheet Imaging &amp; Analysis Position in Emory's Integrated Cellular Imaging (ICI) Core
+</A></li>
+        <LI>Next message (by thread): <A HREF="002068.html">[OpenSPIM] Job Offer at Chan Zuckerberg Biohub (Please forward)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2067">[ date ]</a>
+              <a href="thread.html#2067">[ thread ]</a>
+              <a href="subject.html#2067">[ subject ]</a>
+              <a href="author.html#2067">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+the data saving problem I described in the last email still persists. I have now run out of ideas what to try and would be very grateful for any help.
+
+The problem is the automatic saving to an output directory.
+If no directory is defined, the acquisition can be completed successfully and the images saved as .tiff.
+But when defining an output directory to save datasets as .ome.tiff, the acquisition fails as the plugin is not able to save images. The following error occurs (the complete CoreLog is attached):
+
+java.lang.Error: Error acquiring!
+   at spim.SPIMAcquisition$29.run(SPIMAcquisition.java:2042)
+Caused by exception: java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+   at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+   at java.lang.Thread.run(Thread.java:748)
+Caused by exception: java.lang.ClassCastException: [I cannot be cast to [B
+   at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+   at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+   at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+   at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+   at java.lang.Thread.run(Thread.java:748)
+
+The log gives the following information, but saving does not work, even if the async writer is not selected:
+
+The acquisition is RUNNING.
+Async writer failed!
+[WARNING] The current process takes longer than 5 secs delay.
+
+or:
+
+The acquisition is RUNNING.
+The acquisition is DONE.
+Async writer failed!
+Estimated tiles count: 1.0
+Tiles count: 1
+calling setBigTiff(true)
+
+So far I tried various versions of the OpenSPIM software (the package downloaded from openspim.org, a newer version and the most recent version updated today).
+I included the update sites for: OpenSPIM, Micro-Manager-dev, Fiji, ImageJ, Java-8, Bio-Formats (in different combinations).
+The error was reproducable on another computer and also on another operating system (windows 8 and windows 7).
+
+Could it possibly be related to the setup we use? Instead of a Hamamatsu camera we use an Edmund Optics USB CCD Color camera.
+
+Has anyone an idea how to solve the problem? Or any suggestion what else I might try?
+Any help would be very much appreciated.
+
+Thank you and kind regards,
+Judith
+
+
+
+________________________________________
+Von: OpenSPIM &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>&gt; im Auftrag von Bartels, Judith &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">judith.bartels at tum.de</A>&gt;
+Gesendet: Montag, 18. Dezember 2017 15:22
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: [OpenSPIM] Acquire SPIM image data saving and Anti-Drift problem
+
+Dear all,
+
+thank you very much for this great project and the effort you put in answering all these questions.
+
+I spent the last few months building and aligning an OpenSpim microscope.
+Now two problems are left I was not yet able to solve.
+
+When defining an output directory and starting an acquisition, the Acquire SPIM image plugin throws an error (&quot;Error acquiring: [I cannot be cast to [B&quot;) and stops the acquisition. Fiji then has to be restarted.
+The error in the console reads:
+
+java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+     at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+     at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+     at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+     ... 1 more
+
+The second problem is that I do not know how to use the Anti-Drift function. I am able to manually alter the position, but when selecting automatic application of the
+suggested value nothing changes and the sample just keeps drifting out of the field of view.
+
+Has anyone encountered these problems before or has an idea how to solve them?
+
+Thank you very much,
+Judith
+
+
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20180123T193138_pid6364.txt
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20180124/305ee5dc/attachment-0001.txt">http://openspim.org/pipermail/openspim/attachments/20180124/305ee5dc/attachment-0001.txt</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002066.html">[OpenSPIM] Light Sheet Imaging &amp; Analysis Position in Emory's Integrated Cellular Imaging (ICI) Core
+</A></li>
+	<LI>Next message (by thread): <A HREF="002068.html">[OpenSPIM] Job Offer at Chan Zuckerberg Biohub (Please forward)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2067">[ date ]</a>
+              <a href="thread.html#2067">[ thread ]</a>
+              <a href="subject.html#2067">[ subject ]</a>
+              <a href="author.html#2067">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

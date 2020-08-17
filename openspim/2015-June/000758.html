@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] storage strategies for SPIM datasets?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20storage%20strategies%20for%20SPIM%20datasets%3F&In-Reply-To=%3CD1A6E722.341B%25tnf8%40pitt.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000757.html">
+   <LINK REL="Next"  HREF="000759.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] storage strategies for SPIM datasets?</H1>
+    <B>Feinstein, Timothy N</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20storage%20strategies%20for%20SPIM%20datasets%3F&In-Reply-To=%3CD1A6E722.341B%25tnf8%40pitt.edu%3E"
+       TITLE="[OpenSPIM] storage strategies for SPIM datasets?">tnf8 at pitt.edu
+       </A><BR>
+    <I>Wed Jun 17 08:14:07 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000757.html">[OpenSPIM] storage strategies for SPIM datasets?
+</A></li>
+        <LI>Next message: <A HREF="000759.html">[OpenSPIM] Laser Power Suggestion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#758">[ date ]</a>
+              <a href="thread.html#758">[ thread ]</a>
+              <a href="subject.html#758">[ subject ]</a>
+              <a href="author.html#758">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Maarten, 
+
+We ran into a similar dilemma with large volume data from a
+spectral-detecting confocal.  Ultimately you either need to invest in an
+enterprise-scale storage server or you have to redefine what &#338;raw&#185; data
+means.  We concluded that our spectral deconvolution algorithms were
+pretty well optimized and unlikely to be revisited soon, so we archived
+the three/four/five-channel spectrally deconvolved datasets as the &#338;raw&#185;
+file and did not keep the 300 GB+ 32-channel original.  Friends who work
+with X-ray data from free electron lasers face the same dilemma since a
+single &#338;raw&#185; dataset can add up to 100+ TBs.  The key is to work out how
+confident you feel about your processing steps.  If you are likely to
+revisit your alignment/cropping protocol then keep the raw data, at least
+on platter drives in a closet.  Either way I recommend managing processed
+files with OMERO.  I am a big fan of that software and very grateful to
+the OME group for making it.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 6/17/15, 8:47 AM, &quot;Maarten Hilbrant&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.hilbrant at uni-koeln.de</A>&gt; wrote:
+
+&gt;<i>Dear all,
+</I>&gt;<i>
+</I>&gt;<i>our SPIM (which in fact is an mDSLM) is up and running -wonderful.
+</I>&gt;<i>
+</I>&gt;<i>This also means that we're producing a lot of data very quickly
+</I>&gt;<i>(typically about 500GB per time lapse recording, about one recording per
+</I>&gt;<i>week). In an attempt to streamline our data analysis and storage
+</I>&gt;<i>workflow, I wondered what your experiences are.
+</I>&gt;<i>
+</I>&gt;<i>I currently just dump our data on our two 13.5TB NAS servers (a second
+</I>&gt;<i>set of NAS servers is used as a backup). Whenever I want to analyse a
+</I>&gt;<i>dataset, I first copy it to the 5TB internal hd of a reasonably powerful
+</I>&gt;<i>workstation, as reading/writing is often the limiting step for most
+</I>&gt;<i>analysis procedures. After cropping, making Z-projections, 3D
+</I>&gt;<i>registration/fusion etc I copy the results back to subfolders of the
+</I>&gt;<i>original data on the NAS server, creating an ever-growing swamp of data.
+</I>&gt;<i>Until I've finally convinced myself that it's ok to delete the raw data:-)
+</I>&gt;<i>
+</I>&gt;<i>This &quot;workflow&quot; has worked for me reasonably well, but it is rather
+</I>&gt;<i>difficult to keep an overview of all the data and I just know I'm
+</I>&gt;<i>occupying much more storage space than strictly necessary to answer our
+</I>&gt;<i>biological questions. So I'm investigating the possibilities for setting
+</I>&gt;<i>up a relational database to at least keep track of all the metadata,
+</I>&gt;<i>analyses performed etc. Ideally, such a database would include thumbnails
+</I>&gt;<i>of the imaging data and allow for easy import of metadata. Any ideas? Of
+</I>&gt;<i>course not very &quot;open&quot;, but I'm tempted to use Filemaker Pro. Anything
+</I>&gt;<i>else seems like re-inventing the OMERO wheel. Does any one have
+</I>&gt;<i>experience with using OMERO for storing all data from large SPIM
+</I>&gt;<i>datasets? Or would you just store projections and keep the raw data
+</I>&gt;<i>somewhere else? Any ideas appreciated!
+</I>&gt;<i>
+</I>&gt;<i>cheers,
+</I>&gt;<i>Maarten
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>_______________________________________________
+</I>&gt;<i>OpenSPIM mailing list
+</I>&gt;<i><A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i><A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000757.html">[OpenSPIM] storage strategies for SPIM datasets?
+</A></li>
+	<LI>Next message: <A HREF="000759.html">[OpenSPIM] Laser Power Suggestion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#758">[ date ]</a>
+              <a href="thread.html#758">[ thread ]</a>
+              <a href="subject.html#758">[ subject ]</a>
+              <a href="author.html#758">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

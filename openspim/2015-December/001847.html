@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Getting started with SPIM plugin code
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Getting%20started%20with%20SPIM%20plugin%20code&In-Reply-To=%3CE88FF6A5-CB98-48EA-9003-E84726FCA8F2%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001846.html">
+   <LINK REL="Next"  HREF="001848.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Getting started with SPIM plugin code</H1>
+    <B>HongKee Moon</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Getting%20started%20with%20SPIM%20plugin%20code&In-Reply-To=%3CE88FF6A5-CB98-48EA-9003-E84726FCA8F2%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Getting started with SPIM plugin code">moon at mpi-cbg.de
+       </A><BR>
+    <I>Tue Dec 15 03:12:47 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001846.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+        <LI>Next message: <A HREF="001848.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1847">[ date ]</a>
+              <a href="thread.html#1847">[ thread ]</a>
+              <a href="subject.html#1847">[ subject ]</a>
+              <a href="author.html#1847">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Neil,
+
+It is great to have you as a contributor in OpenSPIM.
+Simply, you can visit <A HREF="https://github.com/openspim/SPIMAcquisition">https://github.com/openspim/SPIMAcquisition</A> &lt;<A HREF="https://github.com/openspim/SPIMAcquisition">https://github.com/openspim/SPIMAcquisition</A>&gt; where all the SPIMAcquisition codes are located.
+Jenkins compiles/packages these source codes and upload it to the OpenSPIM update site.
+
+Please, use fork this repository for having your own version of the code. Some git knowledge is required to work with.
+When you think your source codes are ready, you can simply create a pull request.
+We will evaluate your changes and guide you to merge it to the production master branch.
+
+Please, let me know if you need more help. I will try to help you as much as I can.
+
+Best Regards,
+HongKee
+
+&gt;<i> On Dec 15, 2015, at 5:15 AM, Anthony, Neil &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi all, I hope the science is treating you well.
+</I>&gt;<i> 
+</I>&gt;<i> I have been looking at getting started with getting into the code, which I see is here:
+</I>&gt;<i> <A HREF="http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/">http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/</A>
+</I>&gt;<i> but I'm a little lost about how to get started, and how to be part of the open source effort vs. just making my own version.
+</I>&gt;<i> 
+</I>&gt;<i> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab, Igor Pro, LabView, NIDAQ to varying levels) and I have all the applications in place (Netbeans, Eclipse, Visual Studio Express 2010, 2015, and all the java SDKs I might need).  Where I get lost is how to incorporate anything I do into the existing code?  What parts should I, can I work on?  Do these changes need to be vetted before being incorporated?  How do I get started with version control?  Etc. etc.  I feel this is, for me, the biggest hurdle in open source coding:  Not being able to code, but being able to 'open source'.  I've always been a lone coder up until this point, so please excuse my ignorance to these details.
+</I>&gt;<i> 
+</I>&gt;<i> Also, I think maybe I'm stuck on the Maven thing.  I see in the README.md that it's Maven, drawing on SciJava, and I can import into Netbeans for example.  Does anybody have any good links to help me get started with that?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks in advance for your time.
+</I>&gt;<i> 
+</I>&gt;<i> Neil
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ________________________________
+</I>&gt;<i> 
+</I>&gt;<i> This e-mail message (including any attachments) is for the sole use of
+</I>&gt;<i> the intended recipient(s) and may contain confidential and privileged
+</I>&gt;<i> information. If the reader of this message is not the intended
+</I>&gt;<i> recipient, you are hereby notified that any dissemination, distribution
+</I>&gt;<i> or copying of this message (including any attachments) is strictly
+</I>&gt;<i> prohibited.
+</I>&gt;<i> 
+</I>&gt;<i> If you have received this message in error, please contact
+</I>&gt;<i> the sender by reply e-mail message and destroy all copies of the
+</I>&gt;<i> original message (including attachments).
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151215/ff3b0cac/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20151215/ff3b0cac/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001846.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+	<LI>Next message: <A HREF="001848.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1847">[ date ]</a>
+              <a href="thread.html#1847">[ thread ]</a>
+              <a href="subject.html#1847">[ subject ]</a>
+              <a href="author.html#1847">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

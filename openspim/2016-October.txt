@@ -1,0 +1,112 @@
+From florian.vollrath at brain.mpg.de  Wed Oct  5 10:27:39 2016
+From: florian.vollrath at brain.mpg.de (Florian Vollrath)
+Date: Wed, 5 Oct 2016 17:27:39 +0200
+Subject: [OpenSPIM] better 4D-Stages for openSPIM
+Message-ID: <09b37a5b-a7f1-3849-e80d-c4d88925559d@brain.mpg.de>
+
+Hi all,
+I am really glad for my participation of the EMBO light sheet course 
+this year. I learned really a lot. This knowledge now led to the point 
+that we want to build our own light sheet microscope in our institute 
+(MPI for Brain Research in Frankfurt).
+We will begin with a simple openSPIM setup and put in more advanced 
+things in the future. The reason why I am writing here is that the 
+recommended 4D stage is not as good as we would like it to be. Does 
+anybody know of good commercial 4D stages with a range of 1-2 cm or even 
+more and a resolution as good as possible (>500nm)? Or would you 
+recommend to build one on our own? I would be very thankful for any help.
+Kind regards,
+Florian
+
+-- 
+Florian Vollrath
+Imaging facility
+Max Planck Institute for Brain Research
+Max-von-Laue-Str. 4
+60438 Frankfurt am Main
+Germany
+
+florian.vollrath at brain.mpg.de
+T: +49 69 850033 – 2531
+
+
+
+From m.pawlowska at nencki.gov.pl  Thu Oct  6 04:24:11 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Thu, 06 Oct 2016 11:24:11 +0200
+Subject: [OpenSPIM] better 4D-Stages for openSPIM
+In-Reply-To: <09b37a5b-a7f1-3849-e80d-c4d88925559d@brain.mpg.de>
+References: <09b37a5b-a7f1-3849-e80d-c4d88925559d@brain.mpg.de>
+Message-ID: <op.yowm2lyeahhlbl@pc507-99ff.ibd>
+
+Dear Florian,
+
+I spent quite some time on this issue when first building my setup. First,  
+bad news:
+-I haven't found any other ready-made 4D stage
+-do I understand correctly that the OpenSPIM plugin only works with Picard?
+
+But one can get a XYZ stage and then somehow add an arm for the sample and  
+rotation, for example by using the R part of the Picard 4D if you already  
+have it. And then, if you want to use uManager, pick something compatible  
+with uManager. I recently abandoned my Picard and picked a XYZ stage by  
+Standa - they have a good choice of ranges, I chose 25 mm from the 8MT173  
+series. It works fine with uManager. I only have manual rotation right  
+now, because I don't use multiview. Thorlabs also has a compact XYZ stage.  
+All the other I found were much more expensive.
+
+I hope this helps.
+
+Monika
+
+W dniu .10.2016 o 17:27 Florian Vollrath <florian.vollrath at brain.mpg.de>  
+pisze:
+
+> Hi all,
+> I am really glad for my participation of the EMBO light sheet course  
+> this year. I learned really a lot. This knowledge now led to the point  
+> that we want to build our own light sheet microscope in our institute  
+> (MPI for Brain Research in Frankfurt).
+> We will begin with a simple openSPIM setup and put in more advanced  
+> things in the future. The reason why I am writing here is that the  
+> recommended 4D stage is not as good as we would like it to be. Does  
+> anybody know of good commercial 4D stages with a range of 1-2 cm or even  
+> more and a resolution as good as possible (>500nm)? Or would you  
+> recommend to build one on our own? I would be very thankful for any help.
+> Kind regards,
+> Florian
+>
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From c.fischer at biologie.uni-muenchen.de  Mon Oct 24 08:41:39 2016
+From: c.fischer at biologie.uni-muenchen.de (Christian Fischer)
+Date: Mon, 24 Oct 2016 15:41:39 +0200
+Subject: [OpenSPIM] Comparing SPIM data
+Message-ID: <3c2b72c7-95e1-8cd9-c463-24ce9c31ebec@biologie.uni-muenchen.de>
+
+Dear OpenSPIM community,
+
+I was wondering if there is any chance to compare two SPIM datasets, 
+both recorded from the same two angles, but of which one dataset could 
+not be successfully registered and fused due to a bead distribution 
+problem? Both datasets are subjected to cell tracking and the question 
+is, if these cell tracks are comparable despite one dataset being fused, 
+while the other one is not.
+
+Thanks for your help!
+
+Best regards,
+
+Christian
+
+
+
+

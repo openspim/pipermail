@@ -1,0 +1,770 @@
+From sutcliff at mrc-lmb.cam.ac.uk  Thu Apr  5 07:07:35 2018
+From: sutcliff at mrc-lmb.cam.ac.uk (Ben Sutcliffe)
+Date: Thu, 5 Apr 2018 13:07:35 +0100
+Subject: [OpenSPIM] ThorlabsAPTStage 64bit issues
+Message-ID: <75eaed9f8e8288d306689635c6784bc4.squirrel@mail.mrc-lmb.cam.ac.uk>
+
+Hi,
+Has anyone had success in implementing the ThorlabsAPTStage with their
+OpenSPIM setup?
+I have a Thorlabs BSC201 controller and would like to implement a DRV001
+stepper motor as my Z drive for improved Z stepping. I have however hit a
+wall when trying to add the ThorlabsAPTStage to my configuration. I have
+followed the instructions here
+(https://micro-manager.org/wiki/ThorlabsAPTStage) but never get the option
+of the ThorlabsAPTStage in the Hardware Configuration Wizard.
+I am running a 64bit version of the OpenSPIM/Fiji package on Windows 7.
+Any help would be gratefully received.
+Best,
+Ben
+
+
+-- 
+Dr Ben Sutcliffe,
+Light Microscopy Facility,
+Division of Cell Biology, Room 2S459
+MRC Laboratory of Molecular Biology,
+Francis Crick Avenue,
+Cambridge Biomedical Campus,
+Cambridge,
+CB2 0QH, UK.
+Office: +44 (0)1223 267915
+
+
+
+From tnf8 at pitt.edu  Mon Apr  9 08:50:25 2018
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 9 Apr 2018 13:50:25 +0000
+Subject: [OpenSPIM] holographic diffusers
+Message-ID: <7E625B7D-CB7F-4E9B-B144-493E4DD6CB60@contoso.com>
+
+Hi folks,
+
+Salili and co-workers (Review Sci. Instruments 89: 036107) just published a very interesting technique for eliminating stripe artifacts using elliptical holographic diffusers.  It looks like a much simpler version of mSPIM, with just a couple filters and no moving parts.  This would be great news for me since my mSPIM design doesn’t work – instead of tilting, the sheet moves up and down in a parallel track.
+
+Has anyone tried holographic diffusers before?  They look like they need to be quite close to the sample, so it’s possible they would not work with a conventional openSPIM sample holder.  Any feedback would be appreciated.
+
+Thanks!
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+Department of Developmental Biology
+University of Pittsburgh
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180409/0076514f/attachment.html>
+
+From tomancak at mpi-cbg.de  Mon Apr  9 08:59:31 2018
+From: tomancak at mpi-cbg.de (tomancak)
+Date: Mon, 9 Apr 2018 15:59:31 +0200
+Subject: [OpenSPIM] EMBO practical course on light sheet microscopy, Dresden,
+ MPI-CBG, Aug 2018
+Message-ID: <C082CC93-9429-4866-A554-7E22E7A330A3@mpi-cbg.de>
+
+Dear All,
+
+There are 5 days left to apply for the EMBO practical course on Light Sheet Microscopy to be held in Dresden Germany Aug 2-12th 2018.
+
+http://meetings.embo.org/event/18-lsm <http://meetings.embo.org/event/18-lsm>
+
+We have an exciting line-up of speakers and instructors to guide selected participants through 10 intense days of microscopy with light sheet systems. The course features a complete line-up of commercially available light sheet microscopy technology including several flavours of multi-view SPIMs, Ultramicroscope, lattice light sheet, SCAPE, diSPIM as well as optical table setups and open access systems. The course covers all aspects of light sheet technology from microscope assembly, sample preparation, imaging to light sheet data processing with commercial and open access tools such as Fiji.
+
+We are looking for biologists, physicists and computer scientists to form interdisciplinary teams that will perform experiments with their own samples brought to the course. All this will happen in the stimulating and open atmosphere of the Max Planck Institute of Molecular Cell Biology and Genetics in Dresden (MPI-CBG) for the third time in 6 years.
+
+The course will be followed by the 10th Anniversary Light Sheet Fluorescence Microscopy Conference Aug 12-15th 2018 @MPI-CBG in Dresden that brings together leading scientists in the light sheet field: 
+
+http://lightsheet.mpi-cbg.de <http://lightsheet.mpi-cbg.de/>
+
+Students of the course are expected to actively participate in this conference.
+
+We encourage application on all levels from undergrads, PhD students, post-docs, junior faculty to staff of imaging facilities. Travel fellowships are available for students from Central and Eastern Europe.
+
+Apply by April 15th 2018!
+
+Pavel Tomancak on behalf of the organizers (Jan Peychl, Emmanuel Reynaud)
+
+P.S. For latest news on the course search the twitter hashtag #LISH18 or follow @PavelTomancak
+
+Pavel Tomancak
+Senior Research Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics, Dresden
++49 351 210 2670
+tomancak at mpi-cbg.de
+@PavelTomancak
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180409/39542bf8/attachment.html>
+
+From huisken at mpi-cbg.de  Mon Apr  9 15:52:22 2018
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Mon, 9 Apr 2018 15:52:22 -0500
+Subject: [OpenSPIM] holographic diffusers
+In-Reply-To: <7E625B7D-CB7F-4E9B-B144-493E4DD6CB60@contoso.com>
+References: <7E625B7D-CB7F-4E9B-B144-493E4DD6CB60@contoso.com>
+Message-ID: <F163F0F2-AD7D-4C1F-9971-4104FF1E8294@mpi-cbg.de>
+
+Hi Tim
+
+We have not yet tried those diffusers.
+
+Why is your mSPIM not working? Sounds like your resonant mirror is not in the right plane. Please let us know if there is anything we can help with.
+
+Best
+Jan
+
+> On Apr 9, 2018, at 8:50 AM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+> 
+> Hi folks, 
+>  
+> Salili and co-workers (Review Sci. Instruments 89: 036107) just published a very interesting technique for eliminating stripe artifacts using elliptical holographic diffusers.  It looks like a much simpler version of mSPIM, with just a couple filters and no moving parts.  This would be great news for me since my mSPIM design doesn’t work – instead of tilting, the sheet moves up and down in a parallel track. 
+>  
+> Has anyone tried holographic diffusers before?  They look like they need to be quite close to the sample, so it’s possible they would not work with a conventional openSPIM sample holder.  Any feedback would be appreciated.  
+>  
+> Thanks!
+>  
+> 
+> Tim
+>  
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> Department of Developmental Biology
+> University of Pittsburgh
+>  
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180409/f98e82db/attachment.html>
+
+From sutcliff at mrc-lmb.cam.ac.uk  Tue Apr 10 09:50:06 2018
+From: sutcliff at mrc-lmb.cam.ac.uk (Ben Sutcliffe)
+Date: Tue, 10 Apr 2018 15:50:06 +0100
+Subject: [OpenSPIM] ThorlabsAPTStage 64bit issues
+In-Reply-To: <75eaed9f8e8288d306689635c6784bc4.squirrel@mail.mrc-lmb.cam.ac.uk>
+References: <75eaed9f8e8288d306689635c6784bc4.squirrel@mail.mrc-lmb.cam.ac.uk>
+Message-ID: <5C886E6B-9606-43B3-B695-1B54DBC77DF1@mrc-lmb.cam.ac.uk>
+
+Hi, 
+
+I have managed to configure a ThorlabsAPTStage in my 64bit OpenSPIM asetup.
+This was fixed by doing the following with great assistance from Jerome Boulanger:
+1. Downloading the micro-manager source code as instructed here (https://micro-manager.org/wiki/Micro-Manager_Source_Code).
+2. Installing all the relevant programs for building micro-manager as instructed here (https://micro-manager.org/wiki/Building_MM_on_Windows).
+3. Setting up Visual C++ 2010 Express as here (https://micro-manager.org/wiki/Visual_Studio_project_settings_for_device_adapters).
+4. Installing the 64bit APT software from Thorlabs (https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=Motion_Control).
+5. Downloading and unzipping the APTx64 form here (https://micro-manager.org/wiki/File:APT_x64.zip).
+6. Then building the ThorlabsAPTStage Device Adapter in 64bit on a 64bit Windows 7 machine, using the ‘APT.lib’ downloaded in point 5.
+7. The resulting .dll file was renamed to 'mmgr_dal_ThorlabAPTStage.dll' then placed into the OpenSPIM.app folder along with the ‘APT.dll’ downloaded in point 5.
+8. The OpenSPIM Fiji/MM bundle was then restarted and a ThorlabAPTStage could be configured as described for a 32bit system here (https://micro-manager.org/wiki/ThorlabsAPTStage).
+
+If you want to try this 64bit ThorlabsAPTStage Device Adapter then download the .zip file here (https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip) and unzip into the OpenSPIM or Micro-Manager main folder.
+
+Best, 
+Ben
+
+> On 5 Apr 2018, at 13:07, Ben Sutcliffe <sutcliff at mrc-lmb.cam.ac.uk> wrote:
+> 
+> Hi,
+> Has anyone had success in implementing the ThorlabsAPTStage with their
+> OpenSPIM setup?
+> I have a Thorlabs BSC201 controller and would like to implement a DRV001
+> stepper motor as my Z drive for improved Z stepping. I have however hit a
+> wall when trying to add the ThorlabsAPTStage to my configuration. I have
+> followed the instructions here
+> (https://micro-manager.org/wiki/ThorlabsAPTStage) but never get the option
+> of the ThorlabsAPTStage in the Hardware Configuration Wizard.
+> I am running a 64bit version of the OpenSPIM/Fiji package on Windows 7.
+> Any help would be gratefully received.
+> Best,
+> Ben
+> 
+> 
+> -- 
+> Dr Ben Sutcliffe,
+> Light Microscopy Facility,
+> Division of Cell Biology, Room 2S459
+> MRC Laboratory of Molecular Biology,
+> Francis Crick Avenue,
+> Cambridge Biomedical Campus,
+> Cambridge,
+> CB2 0QH, UK.
+> Office: +44 (0)1223 267915
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From alessandro.ciccarelli at crick.ac.uk  Thu Apr 12 05:02:32 2018
+From: alessandro.ciccarelli at crick.ac.uk (Alessandro Ciccarelli)
+Date: Thu, 12 Apr 2018 10:02:32 +0000
+Subject: [OpenSPIM]  Imaging drosophila pupae
+In-Reply-To: <F163F0F2-AD7D-4C1F-9971-4104FF1E8294@mpi-cbg.de>
+References: <7E625B7D-CB7F-4E9B-B144-493E4DD6CB60@contoso.com>,
+ <F163F0F2-AD7D-4C1F-9971-4104FF1E8294@mpi-cbg.de>
+Message-ID: <AM6PR0302MB34792E92C98D5F8BA73B9A3BB3BC0@AM6PR0302MB3479.eurprd03.prod.outlook.com>
+
+Dear light-sheet users,
+
+does anybody have experience in long-term imaging of drosophila pupae with light-sheet? I`m currently looking for suggestions about how to mount this tricky sample; actually the pupa needs to be:
+
+- partially in contact with air (it needs to breath)
+
+- immersed in water (I`m using water dipping lenses)
+
+
+
+I`m currently using a Luxendo MuVi-SPIM, where the holder is coming from the bottom of the chamber.
+
+Thanks in advance!
+
+Best,
+
+Alessandro
+
+
+
+---
+
+Alessandro Ciccarelli
+
+Light Sheet Specialist
+
+CALM - Crick Advanced Light Microscopy Facility
+
+The Francis Crick Institute
+
+1 Midland Road - London -NW1 1AT
+
+United Kingdom
+
+
+
+T: +442037960913
+
+E: alessandro.ciccarelli at crick.ac.uk<mailto:alessandro.ciccarelli at crick.ac.uk>
+
+W: www.crick.ac.uk<http://www.crick.ac.uk/>
+
+
+________________________________
+From: OpenSPIM <openspim-bounces at openspim.org> on behalf of Jan Huisken <huisken at mpi-cbg.de>
+Sent: 09 April 2018 21:52
+To: Feinstein, Timothy N; openspim at openspim.org
+Subject: Re: [OpenSPIM] holographic diffusers
+
+Hi Tim
+
+We have not yet tried those diffusers.
+
+Why is your mSPIM not working? Sounds like your resonant mirror is not in the right plane. Please let us know if there is anything we can help with.
+
+Best
+Jan
+
+
+On Apr 9, 2018, at 8:50 AM, Feinstein, Timothy N <tnf8 at PITT.EDU<mailto:tnf8 at PITT.EDU>> wrote:
+
+Hi folks,
+
+Salili and co-workers (Review Sci. Instruments 89: 036107) just published a very interesting technique for eliminating stripe artifacts using elliptical holographic diffusers.  It looks like a much simpler version of mSPIM, with just a couple filters and no moving parts.  This would be great news for me since my mSPIM design doesn't work - instead of tilting, the sheet moves up and down in a parallel track.
+
+Has anyone tried holographic diffusers before?  They look like they need to be quite close to the sample, so it's possible they would not work with a conventional openSPIM sample holder.  Any feedback would be appreciated.
+
+Thanks!
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+Department of Developmental Biology
+University of Pittsburgh
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180412/03d5a1a3/attachment.html>
+
+From daniel.von.wangenheim at physikalischebiologie.de  Thu Apr 12 05:50:21 2018
+From: daniel.von.wangenheim at physikalischebiologie.de (Daniel von Wangenheim)
+Date: Thu, 12 Apr 2018 10:50:21 +0000
+Subject: [OpenSPIM] Imaging drosophila pupae
+In-Reply-To: <AM6PR0302MB34792E92C98D5F8BA73B9A3BB3BC0@AM6PR0302MB3479.eurprd03.prod.outlook.com>
+References: <7E625B7D-CB7F-4E9B-B144-493E4DD6CB60@contoso.com>,
+ <F163F0F2-AD7D-4C1F-9971-4104FF1E8294@mpi-cbg.de>
+ <AM6PR0302MB34792E92C98D5F8BA73B9A3BB3BC0@AM6PR0302MB3479.eurprd03.prod.outlook.com>
+Message-ID: <B217D4AB5B53EB47AE5EE8AB46FD8EE9DE653A41@EX10MBOX1K.hosting.inetserver.de>
+
+Dear Alessandro,
+
+I can recommend to have a look at these publications from Frederic Strobl in Ernst Stelzer's Group. The mDSLM also has a stage  holding the specimen from below. Frederic established some clever mounting techniques for Tribolium.
+
+https://www.jove.com/video/55629/light-sheet-based-fluorescence-microscopy-living-or-fixed-stained
+
+https://www.nature.com/articles/nprot.2017.028
+
+I am a plant biologist and roots need oxygen too. I thought about emptying the chamber in between time points or move the sample outside to let the tissue get in contact with air but to be honest I have never tried it. Instead I use a perfusion system and stir or bubble air in the medium outside of the microscope chamber, which helps!
+
+Greetings!
+Daniel
+
+
+
+Daniel von Wangenheim
+Plant & Crop Sciences
+School of Biosciences
+University of Nottingham
+Sutton Bonington Campus
+LE12 5RD
+
+
+
+
+From: OpenSPIM <openspim-bounces at openspim.org> On Behalf Of Alessandro Ciccarelli
+Sent: 12 April 2018 11:03
+To: openspim at openspim.org
+Subject: [OpenSPIM] Imaging drosophila pupae
+
+
+Dear light-sheet users,
+
+does anybody have experience in long-term imaging of drosophila pupae with light-sheet? I`m currently looking for suggestions about how to mount this tricky sample; actually the pupa needs to be:
+
+- partially in contact with air (it needs to breath)
+
+- immersed in water (I`m using water dipping lenses)
+
+
+
+I`m currently using a Luxendo MuVi-SPIM, where the holder is coming from the bottom of the chamber.
+
+Thanks in advance!
+
+Best,
+
+Alessandro
+
+
+
+---
+
+Alessandro Ciccarelli
+
+Light Sheet Specialist
+
+CALM - Crick Advanced Light Microscopy Facility
+
+The Francis Crick Institute
+
+1 Midland Road - London -NW1 1AT
+
+United Kingdom
+
+
+
+T: +442037960913
+
+E: alessandro.ciccarelli at crick.ac.uk<mailto:alessandro.ciccarelli at crick.ac.uk>
+
+W: www.crick.ac.uk<http://www.crick.ac.uk/>
+
+
+________________________________
+From: OpenSPIM <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Jan Huisken <huisken at mpi-cbg.de<mailto:huisken at mpi-cbg.de>>
+Sent: 09 April 2018 21:52
+To: Feinstein, Timothy N; openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] holographic diffusers
+
+Hi Tim
+
+We have not yet tried those diffusers.
+
+Why is your mSPIM not working? Sounds like your resonant mirror is not in the right plane. Please let us know if there is anything we can help with.
+
+Best
+Jan
+
+On Apr 9, 2018, at 8:50 AM, Feinstein, Timothy N <tnf8 at PITT.EDU<mailto:tnf8 at PITT.EDU>> wrote:
+
+Hi folks,
+
+Salili and co-workers (Review Sci. Instruments 89: 036107) just published a very interesting technique for eliminating stripe artifacts using elliptical holographic diffusers.  It looks like a much simpler version of mSPIM, with just a couple filters and no moving parts.  This would be great news for me since my mSPIM design doesn't work - instead of tilting, the sheet moves up and down in a parallel track.
+
+Has anyone tried holographic diffusers before?  They look like they need to be quite close to the sample, so it's possible they would not work with a conventional openSPIM sample holder.  Any feedback would be appreciated.
+
+Thanks!
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+Department of Developmental Biology
+University of Pittsburgh
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180412/35e5b06b/attachment-0001.html>
+
+From sutcliff at mrc-lmb.cam.ac.uk  Thu Apr 12 07:49:46 2018
+From: sutcliff at mrc-lmb.cam.ac.uk (Ben Sutcliffe)
+Date: Thu, 12 Apr 2018 13:49:46 +0100
+Subject: [OpenSPIM] Problems adding a new Z drive to "Aquire SPIM Image"
+ plugin
+In-Reply-To: <5C886E6B-9606-43B3-B695-1B54DBC77DF1@mrc-lmb.cam.ac.uk>
+References: <75eaed9f8e8288d306689635c6784bc4.squirrel@mail.mrc-lmb.cam.ac.uk>
+ <5C886E6B-9606-43B3-B695-1B54DBC77DF1@mrc-lmb.cam.ac.uk>
+Message-ID: <B0B71D39-1E89-4EEE-826D-994197AE41C7@mrc-lmb.cam.ac.uk>
+
+Hi,
+
+I am trying to upgrade the Z stepper motor on my OpenSPIM setup to achieve improved Z resolution. I am currently using a Thorlabs PT3 stage with the Picard stepper motors and twister to get a 4D stage. The new motor is a Thorlabs DRV001 connected via a Thorlabs BSC201 controller. 
+
+I set up a new hardware configuration and added the new DRV001 stepper motor to my existing config (naming it Thorlabs Z Stage) so that I could test the system before physically replacing the Picard Z stepper motor on the setup.
+
+The DRV001 is controlled nicely by the 64bit ThorlabsAPTStage Device Adapter (https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip <https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip>) and can be controlled using the Stage Control plugin under Device Control with no problem.
+
+When I try to use the “Acquire SPIM Image” plugin I get the error message: “Your setup appears to be invalid. Please make sure you have a camera and 4D stage set up. You may need to restart Micro-Manager for the OpenSPIM plugin to detect the correct setup”. A restart of Micro-Manager does not fix this.
+
+What I would like to do is simply change the Z Stage stepper motor under the “Manage Devices” options of “Acquire SPIM Image” from the Picard Z Stage to my new Thorlabs Z Stage (i.e. the DRV001).
+
+I would be happy to try and modify the “Acquire SPIM Image” plugin if someone could give me some assistance in get started doing so?
+
+I look forward to hearing any suggestions.
+
+Kind regards, 
+Ben
+
+--
+Dr Ben Sutcliffe
+Cell Biology Division / Light Microscopy
+MRC Laboratory of Molecular Biology
+Francis Crick Avenue
+Cambridge Biomedical Campus
+Cambridge CB2 0QH, UK
+Tel: (+44) (0)1223 267915
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180412/cd47edb9/attachment.html>
+
+From huisken at mpi-cbg.de  Fri Apr 13 10:41:21 2018
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Fri, 13 Apr 2018 10:41:21 -0500
+Subject: [OpenSPIM] Imaging drosophila pupae
+In-Reply-To: <AM6PR0302MB34792E92C98D5F8BA73B9A3BB3BC0@AM6PR0302MB3479.eurprd03.prod.outlook.com>
+References: <7E625B7D-CB7F-4E9B-B144-493E4DD6CB60@contoso.com>
+ <F163F0F2-AD7D-4C1F-9971-4104FF1E8294@mpi-cbg.de>
+ <AM6PR0302MB34792E92C98D5F8BA73B9A3BB3BC0@AM6PR0302MB3479.eurprd03.prod.outlook.com>
+Message-ID: <8F5EC547-DAE6-4651-B6BD-10777FD06773@mpi-cbg.de>
+
+Dear Alessandro
+
+We have imaged pupae held with glass capillaries, where they have air supply from the top. I guess it does not matter if the capillary is held from the top or bottom as long as it is open on the top. You can also try FEP tubes.
+
+https://www.ncbi.nlm.nih.gov/pubmed/19465594 <https://www.ncbi.nlm.nih.gov/pubmed/19465594>
+
+
+
+Best
+Jan
+
+> On Apr 12, 2018, at 5:02 AM, Alessandro Ciccarelli <alessandro.ciccarelli at crick.ac.uk> wrote:
+> 
+> Dear light-sheet users,
+> does anybody have experience in long-term imaging of drosophila pupae with light-sheet? I`m currently looking for suggestions about how to mount this tricky sample; actually the pupa needs to be:
+> - partially in contact with air (it needs to breath)
+> - immersed in water (I`m using water dipping lenses)
+>  
+> I`m currently using a Luxendo MuVi-SPIM, where the holder is coming from the bottom of the chamber.
+> Thanks in advance!
+> Best,
+> Alessandro
+>  
+> --- 
+> Alessandro Ciccarelli  
+> Light Sheet Specialist 
+> CALM - Crick Advanced Light Microscopy Facility 
+> The Francis Crick Institute 
+> 1 Midland Road - London -NW1 1AT 
+> United Kingdom 
+>  
+> T: +442037960913 
+> E: alessandro.ciccarelli at crick.ac.uk <mailto:alessandro.ciccarelli at crick.ac.uk> 
+> W: www.crick.ac.uk <http://www.crick.ac.uk/> 
+>  
+>  
+> 
+> From: OpenSPIM <openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org>> on behalf of Jan Huisken <huisken at mpi-cbg.de <mailto:huisken at mpi-cbg.de>>
+> Sent: 09 April 2018 21:52
+> To: Feinstein, Timothy N; openspim at openspim.org <mailto:openspim at openspim.org>
+> Subject: Re: [OpenSPIM] holographic diffusers
+>  
+> Hi Tim
+>  
+> We have not yet tried those diffusers.
+>  
+> Why is your mSPIM not working? Sounds like your resonant mirror is not in the right plane. Please let us know if there is anything we can help with.
+>  
+> Best
+> Jan
+> 
+> 
+> On Apr 9, 2018, at 8:50 AM, Feinstein, Timothy N <tnf8 at PITT.EDU <mailto:tnf8 at PITT.EDU>> wrote:
+>  
+> Hi folks, 
+>  
+> Salili and co-workers (Review Sci. Instruments 89: 036107) just published a very interesting technique for eliminating stripe artifacts using elliptical holographic diffusers.  It looks like a much simpler version of mSPIM, with just a couple filters and no moving parts.  This would be great news for me since my mSPIM design doesn’t work – instead of tilting, the sheet moves up and down in a parallel track. 
+>  
+> Has anyone tried holographic diffusers before?  They look like they need to be quite close to the sample, so it’s possible they would not work with a conventional openSPIM sample holder.  Any feedback would be appreciated.  
+>  
+> Thanks!
+>  
+> 
+> Tim
+>  
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> Department of Developmental Biology
+> University of Pittsburgh
+>  
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+>  
+> The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180413/3f6415f0/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screen Shot 2018-04-13 at 10.40.20 AM.png
+Type: image/png
+Size: 184680 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20180413/3f6415f0/attachment-0001.png>
+
+From S.Hoehn at damtp.cam.ac.uk  Mon Apr 23 12:10:59 2018
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Mon, 23 Apr 2018 18:10:59 +0100
+Subject: [OpenSPIM] =?utf-8?q?weird_images_-_endian_problem=3F?=
+Message-ID: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+
+
+Dear All,
+
+my images/stacks acquired with the OpenSPIM plugin have suddenly started 
+looking weird. I attached an example image (spim_TL00_Angle0.ome.tiff). 
+If I do not define an output directory and save the image manually after 
+acquisition, it looks normal (see attached SimpleOutput.tif).
+
+I have been told it could be a big-endian/little-endian problem 
+(https://en.wikipedia.org/wiki/Endianness).
+
+I haven’t found anything to adjust that turns them back to normal (not 
+contrast/brightness, inversion,…).
+
+Does anyone have an idea how to fix this?
+
+Thank you very much,
+
+Stephanie
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: SimpleOutput.tif
+Type: image/tiff
+Size: 5664968 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20180423/c0dbe90f/attachment-0001.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: spim_TL00_Angle0.ome.tiff
+Type: image/tiff
+Size: 5690291 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20180423/c0dbe90f/attachment-0001.tiff>
+
+From S.Hoehn at damtp.cam.ac.uk  Mon Apr 23 12:13:27 2018
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Mon, 23 Apr 2018 18:13:27 +0100
+Subject: [OpenSPIM] =?utf-8?q?weird_images_-_endian_problem=3F?=
+In-Reply-To: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+References: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+Message-ID: <a4ff877aa5fa23eb5e6fa57439a98f6b@cam.ac.uk>
+
+P.S. The log file reads:
+
+The acquisition is INIT.
+Tiles count: 1
+calling setBigTiff(true)
+Opened log file V:\Users\sh753\2018_04_23_V.ferrisii_test\log.txt
+The acquisition is RUNNING.
+The acquisition is DONE.
+
+
+
+
+On 2018-04-23 18:10, Dr S. Hoehn wrote:
+> Dear All,
+> 
+> my images/stacks acquired with the OpenSPIM plugin have suddenly
+> started looking weird. I attached an example image
+> (spim_TL00_Angle0.ome.tiff). If I do not define an output directory
+> and save the image manually after acquisition, it looks normal (see
+> attached SimpleOutput.tif).
+> 
+> I have been told it could be a big-endian/little-endian problem
+> (https://en.wikipedia.org/wiki/Endianness).
+> 
+> I haven’t found anything to adjust that turns them back to normal (not
+> contrast/brightness, inversion,…).
+> 
+> Does anyone have an idea how to fix this?
+> 
+> Thank you very much,
+> 
+> Stephanie
+
+
+
+From Michael_Weber at hms.harvard.edu  Mon Apr 23 12:25:59 2018
+From: Michael_Weber at hms.harvard.edu (Weber, Michael)
+Date: Mon, 23 Apr 2018 17:25:59 +0000
+Subject: [OpenSPIM] weird images - endian problem?
+In-Reply-To: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+References: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+Message-ID: <2D7B923A-7F92-4EDD-A2EF-32F86BCD8078@hms.harvard.edu>
+
+Hi Stephanie,
+
+The image looks good to me. I drag-and-dropped it to Fiji, converted the auto-scaled image to 8 bit and saved it as png.
+
+Best,
+Michael
+
+[cid:D7B2382C-C94F-4475-87E6-62739BC3A72F at med.harvard.edu]
+
+On Apr 23, 2018, at 1:10 PM, Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk<mailto:S.Hoehn at damtp.cam.ac.uk>> wrote:
+
+
+Dear All,
+
+my images/stacks acquired with the OpenSPIM plugin have suddenly started looking weird. I attached an example image (spim_TL00_Angle0.ome.tiff). If I do not define an output directory and save the image manually after acquisition, it looks normal (see attached SimpleOutput.tif).
+
+I have been told it could be a big-endian/little-endian problem (https://en.wikipedia.org/wiki/Endianness).
+
+I haven’t found anything to adjust that turns them back to normal (not contrast/brightness, inversion,…).
+
+Does anyone have an idea how to fix this?
+
+Thank you very much,
+
+Stephanie
+
+<SimpleOutput.tif><spim_TL00_Angle0.ome.tiff>_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180423/ab65e9e9/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: SimpleOutput.png
+Type: image/png
+Size: 1206997 bytes
+Desc: SimpleOutput.png
+URL: <http://openspim.org/pipermail/openspim/attachments/20180423/ab65e9e9/attachment-0001.png>
+
+From mcgorty at gmail.com  Mon Apr 23 14:38:30 2018
+From: mcgorty at gmail.com (Ryan McGorty)
+Date: Mon, 23 Apr 2018 12:38:30 -0700
+Subject: [OpenSPIM] weird images - endian problem?
+In-Reply-To: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+References: <b1fb80ebe924dbac7eda3c4fc01160d0@cam.ac.uk>
+Message-ID: <CADd-3aC+d47b4VoP-XnQwK-rOXtPofk3ERCraLKF=aahMxocyw@mail.gmail.com>
+
+Hi Stephanie,
+
+Yes, it is an endian issue.
+
+You probably want a way to fix this endian problem from happening in the
+first place which I don't know how to do. But you can use the Byte Swapper (
+https://imagej.nih.gov/ij/plugins/swapper.html) imagej plugin to fix things
+after the fact.
+
+Best,
+Ryan
+
+On Mon, Apr 23, 2018 at 10:10 AM, Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk>
+wrote:
+
+>
+> Dear All,
+>
+> my images/stacks acquired with the OpenSPIM plugin have suddenly started
+> looking weird. I attached an example image (spim_TL00_Angle0.ome.tiff). If
+> I do not define an output directory and save the image manually after
+> acquisition, it looks normal (see attached SimpleOutput.tif).
+>
+> I have been told it could be a big-endian/little-endian problem (
+> https://en.wikipedia.org/wiki/Endianness).
+>
+> I haven’t found anything to adjust that turns them back to normal (not
+> contrast/brightness, inversion,…).
+>
+> Does anyone have an idea how to fix this?
+>
+> Thank you very much,
+>
+> Stephanie
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180423/9439a4aa/attachment.html>
+

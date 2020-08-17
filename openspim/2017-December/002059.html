@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] focal part changing when I move beads
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20focal%20part%20changing%20when%20I%20move%20beads&In-Reply-To=%3C667622714.22136667.1513005540182.JavaMail.zimbra%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002058.html">
+   <LINK REL="Next"  HREF="002060.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] focal part changing when I move beads</H1>
+    <B>Wiebke Jahr</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20focal%20part%20changing%20when%20I%20move%20beads&In-Reply-To=%3C667622714.22136667.1513005540182.JavaMail.zimbra%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] focal part changing when I move beads">jahr at mpi-cbg.de
+       </A><BR>
+    <I>Mon Dec 11 09:19:00 CST 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002058.html">[OpenSPIM] focal part changing when I move beads
+</A></li>
+        <LI>Next message (by thread): <A HREF="002060.html">[OpenSPIM] where to save Fiji
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2059">[ date ]</a>
+              <a href="thread.html#2059">[ thread ]</a>
+              <a href="subject.html#2059">[ subject ]</a>
+              <a href="author.html#2059">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello Yan,
+
+I'm guessing that you're facing two problems at the same time:
+
+1) a tilted lightsheet that you need to align
+2) a changing optical path length as you're moving the cuvette.
+
+To be sure, could you please clarify:
+Do you use the original open SPIM design with water-filled chamber and water dipping lens? The beads would be embedded in agarose, inserted into the chamber from the top and moved through the medium. In that case, changing optical path wouldn't be a problem.
+Or do you use a modified design with an air lens, looking into the chamber? Do you then move the whole chamber (you're writing about a &quot;cuvette&quot;) through the light sheet? Then the optical path would change as you move the chamber. As a result, the plane that your detection path focusses at would change. In combination with a tilted lightsheet, you'd get the feeling that the &quot;in-focus&quot; portion of the image translate.
+
+To test for a tilted light sheet, just turn the bottom screw of the corner mirror (the one that's installed first in the original openSPIM instructions). If the light sheet is not tilted, it will just go out of focus over the whole field of view. If it's tilted, the in-focus part of the image translates, because the line where your tilted light sheet and the detection focal plane overlap shifts along the image.
+
+Best, Wiebke
+
+--
+------------------------------------------------------------
+Wiebke Jahr
+PhD Student
+Tel. +49 351 210-2768
+
+Huisken Lab,
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauer Str. 108, 01307 Dresden
+------------------------------------------------------------
+
+----- Original Message -----
+From: &quot;胡衍&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">huyan1020 at sjtu.edu.cn</A>&gt;
+To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Sent: Friday, December 8, 2017 5:52:27 AM
+Subject: [OpenSPIM] focal part changing when I move beads
+
+Hello, everyone.
+
+I used my openSPIM to take photo for beads, 
+and found the focal part is always changing when I move the beads, as shown in the attachment.
+The beads are in a cuvette.
+
+Is there anyone knows the problem?
+What can I do to solve this?
+
+Best,
+Yan
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002058.html">[OpenSPIM] focal part changing when I move beads
+</A></li>
+	<LI>Next message (by thread): <A HREF="002060.html">[OpenSPIM] where to save Fiji
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2059">[ date ]</a>
+              <a href="thread.html#2059">[ thread ]</a>
+              <a href="subject.html#2059">[ subject ]</a>
+              <a href="author.html#2059">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

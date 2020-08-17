@@ -1,0 +1,3800 @@
+From dscho at mit.edu  Wed May  8 13:12:14 2013
+From: dscho at mit.edu (Johannes Schindelin)
+Date: Wed, 8 May 2013 13:12:14 -0500 (CDT)
+Subject: [OpenSPIM] Mailing list move is complete.
+Message-ID: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+
+Hi all,
+
+we now have a shiny new mailing list,  openspim at openspim.org no longer
+forwards to openspim at mpi-cbg.de but is a real mailing list with real
+subscription rather than the exclusive tightly-controlled predecessor.
+
+Please let me know if you have problems with it so I can fix them!
+
+Ciao,
+Johannes
+
+
+From Johannes.Schindelin at gmx.de  Wed May  8 14:09:03 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 8 May 2013 14:09:03 -0500 (CDT)
+Subject: [OpenSPIM] Mailing list move is complete.
+In-Reply-To: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+Message-ID: <alpine.DEB.1.00.1305081407500.8213@s15462909.onlinehome-server.info>
+
+Hi,
+
+On Wed, 8 May 2013, Johannes Schindelin wrote:
+
+> we now have a shiny new mailing list,  openspim at openspim.org no longer
+> forwards to openspim at mpi-cbg.de but is a real mailing list with real
+> subscription rather than the exclusive tightly-controlled predecessor.
+> 
+> Please let me know if you have problems with it so I can fix them!
+
+Of course I forgot to mention: the painless and swift switch to a mailing
+list was made possible by the always-helpful Curtis Rueden. If you want to
+thank anybody for this, thank him.
+
+Ciao,
+Johannes
+
+
+From eliceiri at wisc.edu  Wed May  8 14:11:13 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Wed, 08 May 2013 14:11:13 -0500
+Subject: [OpenSPIM] Mailing list move is complete.
+In-Reply-To: <alpine.DEB.1.00.1305081407500.8213@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+	<alpine.DEB.1.00.1305081407500.8213@s15462909.onlinehome-server.info>
+Message-ID: <7740cd9e1a812.518a5d01@wiscmail.wisc.edu>
+
+thanks guys, great stuffk
+
+On 05/08/13, Johannes Schindelin  wrote:
+> Hi,
+> 
+> On Wed, 8 May 2013, Johannes Schindelin wrote:
+> 
+> > we now have a shiny new mailing list, openspim at openspim.org no longer
+> > forwards to openspim at mpi-cbg.de but is a real mailing list with real
+> > subscription rather than the exclusive tightly-controlled predecessor.
+> > 
+> > Please let me know if you have problems with it so I can fix them!
+> 
+> Of course I forgot to mention: the painless and swift switch to a mailing
+> list was made possible by the always-helpful Curtis Rueden. If you want to
+> thank anybody for this, thank him.
+> 
+> Ciao,
+> Johannes
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From Johannes.Schindelin at gmx.de  Thu May  9 17:06:36 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 9 May 2013 17:06:36 -0500 (CDT)
+Subject: [OpenSPIM] OpenSPIM Wiki spring time cleaning
+Message-ID: <alpine.DEB.1.00.1305091658590.8213@s15462909.onlinehome-server.info>
+
+Dear fans of OpenSPIM,
+
+The following accounts on the OpenSPIM Wiki have not only been inactive,
+but in fact never activated:
+
+Aureliaomega registered on 11:09, 7 May 2013
+Fahrbach registered on 14:35, 12 October 2012
+Flyer2o13 registered on 21:12, 4 May 2013
+Freddy registered on 13:18, 29 September 2012
+Krieger registered on 14:10, 24 December 2012
+Olaf registered on 15:45, 24 September 2012
+Reynaud registered on 07:59, 25 September 2012
+Schmid registered on 14:36, 12 October 2012
+Shah registered on 14:38, 12 October 2012
+
+I encourage those of you who actually want to contribute to authenticate
+using the link you got in your mail on the respective dates. All
+still-unauthenticated accounts will be deleted in the very short-term
+future.
+
+Ciao,
+Johannes
+
+
+From skf-ee at ipt.rwth-aachen.de  Tue May 14 09:43:20 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Tue, 14 May 2013 16:43:20 +0200
+Subject: [OpenSPIM] About the OpenSPIM/Fiji package
+Message-ID: <OFFF592FE2.4B0B67A9-ONC1257B6B.0050DF25-C1257B6B.0050DF2A@ipt.rwth-aachen.de>
+
+Hi all,
+
+I have unpackaged the OpenSPIM/Fiji package and followed the instructions to
+make the update. After making the update I ran Micro-Manager Studio and
+an error appeared when Micro-Manager studio started:
+
+Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V
+
+Then I tried to open the Hardware Configuration Wizard and another error appaeared:
+
+Error: org.micromanager.MMStudioMainFrame.runHardwareWizard(MMStudioMainFrame.java:4763)
+
+I noticed that if I don't make the update I have no problems with Micro-Manager.
+I would like to know how neccesary is to make the updated of the Fiji software.
+
+Thanks a lot in advance.
+Kind regards,
+Edgar Escobar Nieto
+_________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+Steinbachstra?e 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130514/39885c32/attachment.html>
+
+From wjs at buffalo.edu  Thu May 16 09:01:50 2013
+From: wjs at buffalo.edu (Wade Sigurdson)
+Date: Thu, 16 May 2013 10:01:50 -0400
+Subject: [OpenSPIM] [openspim] laser questions
+In-Reply-To: <alpine.DEB.1.00.1303141653310.3794@s15462909.onlinehome-server.info>
+References: <5141C5A3.3020907@buffalo.edu>
+	<alpine.DEB.1.00.1303141653310.3794@s15462909.onlinehome-server.info>
+Message-ID: <5194E6CE.8070702@buffalo.edu>
+
+Hi Johannes,
+
+We are making good progress on our Open SPIM project.  Machining almost 
+done and we just received the USB Pickard stage.
+
+I'm now trying the get the software working.  I use Fiji all the time 
+for image processing (great package and a pleasure to use) and so am 
+familiar with installation and operation.  But when I installed the 
+OpenSPIM version and opened MicroManager Studio I get the following 
+error window:
+
+Failed to open libMMCoreJ_wrap.jnilib
+mmcorej.MMCoreJJNI.swig_module_init()V
+
+The MM window opens, but when I try to run the Hardware config wizard I 
+get the following:
+
+org.micromanager.MMStudioMainFrame.run HardwareWizard 
+(MMStudioMainFrame.java:4763)
+
+which I'm guessing is due to the first error.
+
+I looked around at the MM forum for some ideas on what might be wrong 
+and even tried copying the MMCoreJ_wrap.dll into the OpenSPIM root 
+directory, but still have the error.
+
+Is there something wrong with my XP environment variables or is there a 
+path I need to configure?
+
+Thanks for any help.
+
+Wade
+On 03/14/2013 11:58 AM, Johannes Schindelin wrote:
+> Hi Wade,
+>
+> On Thu, 14 Mar 2013, Wade Sigurdson wrote:
+>
+>> We are planning on building the OpenSPIM system as described on your
+>> wiki page and are trying to re-purpose an Ar/Kr laser from an old
+>> Bio-Rad Confocal as the illumination source.  For the 488nm line, I
+>> measured about 2mW  output from the fiber optic after aligning the laser
+>> launch.
+>>
+>> We could easily design and make a mount for the fiber optic which would
+>> replace the Coherent laser in your original plans, but is this enough
+>> power to be usable?
+> IIRC we often drive it with about 1mW or even less, so you should be fine.
+> Note, however, that we needed computer control over the laser in long-term
+> time-lapse recordings because the specimen bleached too much otherwise.
+>
+>> Since this is a proof of principle project and if we get the system
+>> working without purchasing the diode laser, we likely could interest
+>> other potential uses to contribute money to the project.
+>>
+>> We also have in hand a Zeiss 63x/1.0 water immersion objective which we
+>> may interested in using as a replacement for the Olympus 20x lens. Could
+>> this be used with the Olympus tube lens without introducing significant
+>> aberrations?  I believe that Zeiss does some chromatic aberration
+>> correction in the tube lens of their microscopes, but have no idea if
+>> the  Olympus tube lens would be compatible with Zeiss objectives.
+> The tube lens is on the illumination side, for which I would stay with a
+> 10x lens. On the detection side, we have a 20x objective that might be
+> easily replaced by your 63x objective. I am no optics expert and depending
+> who I asked, I got encouraging and discouraging answers whether it would
+> work to replace the detection objective with a different magnification
+> one.
+>
+> Ciao,
+> Johannes
+>
+>
+
+-- 
+*Wade J. Sigurdson, Ph.D.
+Director, Confocal Microscope and Flow Cytometry Facility
+School of Medicine and Biomedical Sciences
+University at Buffalo
+*
+Voice - 716-829-3589
+FAX - 716-829-3589
+wjs at buffalo.edu
+www.smbs.buffalo.edu/confocal
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130516/a095a0f8/attachment.html>
+
+From john.lim at imb.a-star.edu.sg  Fri May 17 03:37:20 2013
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Fri, 17 May 2013 16:37:20 +0800
+Subject: [OpenSPIM] Thickness of Open SPIM Light Sheet
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B303A00318D2FD@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Dear All,
+
+Can I please find out the thickness of the light sheet generated by the Open SPIM system and how can we measure the thickness of the light sheet in the Open SPIM setup?
+
+Thank You,
+John
+
+From Johannes.Schindelin at gmx.de  Mon May 20 15:57:02 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 20 May 2013 22:57:02 +0200 (CEST)
+Subject: [OpenSPIM] Getting the code back on track
+Message-ID: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+
+Hi Luke,
+
+thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+will summarize a few points to keep everybody interested in the loop:
+
+- since Microsoft does not allow redistribution of the debug libraries, we
+  had to recompile everything in release mode
+
+- there was a bug that would prevent release mode from working correctly:
+  it still included debug information
+
+- the old redistributable libraries (i.e. Visual Studio 2008's) required a
+  manifest to be loaded (a small .xml file)
+
+- some setting in Micro-Manager enforces compatibility with the old
+  runtime libraries (as can be seen in
+  MMCoreJ_wrap.dll.intermediate.manifest)
+
+- we therefore need to ship
+
+	- the old runtime libraries
+	- the old runtime manifest
+	- the new runtime
+	- the manifest for MMCoreJ_wrap.dll
+
+Now, in my tests on the VM (you have credentials to log in), I could start
+Micro-Manager again, without getting thos unsatisfied links.
+
+May I ask you to check a couple of things, still?
+
+- I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+  retry with ImageJ-win32.exe? I think the change was not actually needed.
+
+- Could you try without 2010 runtime libraries in mm/Win32/? I think they
+  are needed, but it would be nice to know.
+
+- The name "intermediate" suggests that Micro-Manager's build process does
+  something funny to that manifest. Could you please check that? "git grep
+  intermediate" should tell
+
+Thank you!
+Dscho
+
+
+From stuyvenberg at wisc.edu  Mon May 20 16:55:14 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 20 May 2013 16:55:14 -0500
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+References: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7690d38ad025f.519a9101@wiscmail.wisc.edu>
+	<76a0f593d6213.519a913d@wiscmail.wisc.edu>
+	<7680df0fd7ae8.519a917a@wiscmail.wisc.edu>
+	<7720d188d4298.519a91b6@wiscmail.wisc.edu>
+	<7750838dd5fda.519a93d5@wiscmail.wisc.edu>
+	<7680f500d658a.519a9412@wiscmail.wisc.edu>
+	<7720d93cd46f7.519a9451@wiscmail.wisc.edu>
+	<7620999dd11bb.519a948d@wiscmail.wisc.edu>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.wisc.edu>
+	<7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+Message-ID: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+
+Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+
+We believe we have a solution for the "Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V"?bug.
+
+
+First, a reply to Johannes' e-mail:
+
+
+Regarding the things we have to ship:
+- Obviously the old runtime and manifest are already included.
+- The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+
+
+Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+- The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+- Removing the runtime DLLs does break it again. They have to be present.
+- As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+
+
+Now, the promised aside to Edgar and Wade:
+
+
+The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+
+
+You should get a few things:
+- A new ImageJ-win32.exe that will find the right files.
+- Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+- msvcr100.dll and msvcp100.dll, the new runtime.
+
+
+After updating, please try launching Micro-Manager again!
+
+
+Thank you,
+Luke Stuyvenberg
+
+
+On 05/20/13, Johannes Schindelin  wrote:
+> Hi Luke,
+> 
+> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+> will summarize a few points to keep everybody interested in the loop:
+> 
+> - since Microsoft does not allow redistribution of the debug libraries, we
+> had to recompile everything in release mode
+> 
+> - there was a bug that would prevent release mode from working correctly:
+> it still included debug information
+> 
+> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+> manifest to be loaded (a small .xml file)
+> 
+> - some setting in Micro-Manager enforces compatibility with the old
+> runtime libraries (as can be seen in
+> MMCoreJ_wrap.dll.intermediate.manifest)
+> 
+> - we therefore need to ship
+> 
+> - the old runtime libraries
+> - the old runtime manifest
+> - the new runtime
+> - the manifest for MMCoreJ_wrap.dll
+> 
+> Now, in my tests on the VM (you have credentials to log in), I could start
+> Micro-Manager again, without getting thos unsatisfied links.
+> 
+> May I ask you to check a couple of things, still?
+> 
+> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+> retry with ImageJ-win32.exe? I think the change was not actually needed.
+> 
+> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+> are needed, but it would be nice to know.
+> 
+> - The name "intermediate" suggests that Micro-Manager's build process does
+> something funny to that manifest. Could you please check that? "git grep
+> intermediate" should tell
+> 
+> Thank you!
+> Dscho
+
+
+From wjs at buffalo.edu  Tue May 21 08:34:48 2013
+From: wjs at buffalo.edu (Wade Sigurdson)
+Date: Tue, 21 May 2013 09:34:48 -0400
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+References: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7720d93cd46f7.519a9451@wiscmail.wisc.edu>
+	<7620999dd11bb.519a948d@wiscmail.wisc.edu>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.wisc.edu>
+	<7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+	<75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+Message-ID: <519B77F8.2080405@buffalo.edu>
+
+Hi Luke,
+
+Tried the new, updated version and all seems to be working.  No error 
+messages and I was able to start the hardware wizard and configure the 
+stage and camera.
+
+Only caveat is that I had to delete the OPEN_SPIM folder where the 
+download zip had been extracted and re-extract the zip. Then after doing 
+the FIJI upgrade the MM Studio plugin worked. Trying to simply upgrade 
+the previously installed version resulted in the same error. I'm not 
+sure if there was something that I had done in trying to get MM Studio 
+to function before your modifications or if the software needs to have 
+all the upgrades applied in a specific order.
+
+Still waiting on our machine shop to finish a few items, but will keep 
+the list updated once we get the system assembled, aligned and imaging.
+
+Thanks to all.
+
+Wade
+On 05/20/2013 05:55 PM, Luke Stuyvenberg wrote:
+> Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+>
+> We believe we have a solution for the "Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V" bug.
+>
+>
+> First, a reply to Johannes' e-mail:
+>
+>
+> Regarding the things we have to ship:
+> - Obviously the old runtime and manifest are already included.
+> - The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+> However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+>
+>
+> Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+> - The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+> - Removing the runtime DLLs does break it again. They have to be present.
+> - As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+> You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+>
+>
+> Now, the promised aside to Edgar and Wade:
+>
+>
+> The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+>
+>
+> You should get a few things:
+> - A new ImageJ-win32.exe that will find the right files.
+> - Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+> - msvcr100.dll and msvcp100.dll, the new runtime.
+>
+>
+> After updating, please try launching Micro-Manager again!
+>
+>
+> Thank you,
+> Luke Stuyvenberg
+>
+>
+> On 05/20/13, Johannes Schindelin  wrote:
+>> Hi Luke,
+>>
+>> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+>> will summarize a few points to keep everybody interested in the loop:
+>>
+>> - since Microsoft does not allow redistribution of the debug libraries, we
+>> had to recompile everything in release mode
+>>
+>> - there was a bug that would prevent release mode from working correctly:
+>> it still included debug information
+>>
+>> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+>> manifest to be loaded (a small .xml file)
+>>
+>> - some setting in Micro-Manager enforces compatibility with the old
+>> runtime libraries (as can be seen in
+>> MMCoreJ_wrap.dll.intermediate.manifest)
+>>
+>> - we therefore need to ship
+>>
+>> - the old runtime libraries
+>> - the old runtime manifest
+>> - the new runtime
+>> - the manifest for MMCoreJ_wrap.dll
+>>
+>> Now, in my tests on the VM (you have credentials to log in), I could start
+>> Micro-Manager again, without getting thos unsatisfied links.
+>>
+>> May I ask you to check a couple of things, still?
+>>
+>> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+>> retry with ImageJ-win32.exe? I think the change was not actually needed.
+>>
+>> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+>> are needed, but it would be nice to know.
+>>
+>> - The name "intermediate" suggests that Micro-Manager's build process does
+>> something funny to that manifest. Could you please check that? "git grep
+>> intermediate" should tell
+>>
+>> Thank you!
+>> Dscho
+>
+
+-- 
+*Wade J. Sigurdson, Ph.D.
+Director, Confocal Microscope and Flow Cytometry Facility
+School of Medicine and Biomedical Sciences
+University at Buffalo
+*
+Voice - 716-829-3589
+FAX - 716-829-3589
+wjs at buffalo.edu
+www.smbs.buffalo.edu/confocal
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130521/9fd05b96/attachment.html>
+
+From Johannes.Schindelin at gmx.de  Tue May 21 10:33:18 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 May 2013 17:33:18 +0200 (CEST)
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <519B77F8.2080405@buffalo.edu>
+References: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.wisc.edu>
+	<7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+	<75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+	<519B77F8.2080405@buffalo.edu>
+Message-ID: <alpine.DEB.1.00.1305211725460.650@s15462909.onlinehome-server.info>
+
+Hi Wade,
+
+On Tue, 21 May 2013, Wade Sigurdson wrote:
+
+> Tried the new, updated version and all seems to be working.  No error
+> messages and I was able to start the hardware wizard and configure the
+> stage and camera.
+
+Great!
+
+> Only caveat is that I had to delete the OPEN_SPIM folder where the
+> download zip had been extracted and re-extract the zip. Then after doing
+> the FIJI upgrade the MM Studio plugin worked. Trying to simply upgrade
+> the previously installed version resulted in the same error. I'm not
+> sure if there was something that I had done in trying to get MM Studio
+> to function before your modifications or if the software needs to have
+> all the upgrades applied in a specific order.
+
+Well, it seems you hit a bug in the updater here because it should not
+matter at all in which order the upgrades are applied.
+
+If it happens again, may I ask you to just zip up the complete
+(non-working) OpenSpim.app/ directory and upload it via Help>Upload Sample
+File?
+
+> Still waiting on our machine shop to finish a few items, but will keep
+> the list updated once we get the system assembled, aligned and imaging.
+
+Cool! When you have a working setup, maybe you could take a photo and post
+information here: http://openspim.org/Who_has_an_OpenSPIM%3F
+
+Ciao,
+Johannes
+
+
+From skf-ee at ipt.rwth-aachen.de  Wed May 22 05:00:49 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Wed, 22 May 2013 12:00:49 +0200
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+References: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>,
+	<alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7690d38ad025f.519a9101@wiscmail.wisc.edu>
+	<76a0f593d6213.519a913d@wiscmail.wisc.edu>
+	<7680df0fd7ae8.519a917a@wiscmail.wisc.edu>
+	<7720d188d4298.519a91b6@wiscmail.wisc.edu>
+	<7750838dd5fda.519a93d5@wiscmail.wisc.edu>
+	<7680f500d658a.519a9412@wiscmail.wisc.edu>
+	<7720d93cd46f7.519a9451@wiscmail.wisc.edu>
+	<7620999dd11bb.519a948d@wiscmail.wisc.edu>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.w
+	isc.edu> <7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+Message-ID: <OFC93CB2F2.57933509-ONC1257B73.003701B8-C1257B73.003701BF@ipt.rwth-aachen.de>
+
+Hi Luke,
+
+I have updated the OpenSPIM/Fiji package and now errors are not present anymore when
+I launch the ?Manager plugin.
+
+Thanks a lot,
+Edgar
+_________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+
+Steinbachstra?e 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+
+
+
+
+
+-----Luke Stuyvenberg <stuyvenberg at wisc.edu> schrieb: ----- 
+An: Johannes Schindelin <Johannes.Schindelin at gmx.de>, Wade Sigurdson <wjs at buffalo.edu>, Edgar Escobar Nieto <skf-ee at ipt.rwth-aachen.de>
+Von: Luke Stuyvenberg <stuyvenberg at wisc.edu>
+Datum: 20.05.2013 23:55
+Kopie: openspim at openspim.org
+Betreff: Re: laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+
+
+Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+
+We believe we have a solution for the "Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V" bug.
+
+
+First, a reply to Johannes' e-mail:
+
+
+Regarding the things we have to ship:
+- Obviously the old runtime and manifest are already included.
+- The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+
+
+Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+- The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+- Removing the runtime DLLs does break it again. They have to be present.
+- As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+
+
+Now, the promised aside to Edgar and Wade:
+
+
+The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+
+
+You should get a few things:
+- A new ImageJ-win32.exe that will find the right files.
+- Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+- msvcr100.dll and msvcp100.dll, the new runtime.
+
+
+After updating, please try launching Micro-Manager again!
+
+
+Thank you,
+Luke Stuyvenberg
+
+
+On 05/20/13, Johannes Schindelin  wrote:
+> Hi Luke,
+> 
+> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+> will summarize a few points to keep everybody interested in the loop:
+> 
+> - since Microsoft does not allow redistribution of the debug libraries, we
+> had to recompile everything in release mode
+> 
+> - there was a bug that would prevent release mode from working correctly:
+> it still included debug information
+> 
+> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+> manifest to be loaded (a small .xml file)
+> 
+> - some setting in Micro-Manager enforces compatibility with the old
+> runtime libraries (as can be seen in
+> MMCoreJ_wrap.dll.intermediate.manifest)
+> 
+> - we therefore need to ship
+> 
+> - the old runtime libraries
+> - the old runtime manifest
+> - the new runtime
+> - the manifest for MMCoreJ_wrap.dll
+> 
+> Now, in my tests on the VM (you have credentials to log in), I could start
+> Micro-Manager again, without getting thos unsatisfied links.
+> 
+> May I ask you to check a couple of things, still?
+> 
+> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+> retry with ImageJ-win32.exe? I think the change was not actually needed.
+> 
+> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+> are needed, but it would be nice to know.
+> 
+> - The name "intermediate" suggests that Micro-Manager's build process does
+> something funny to that manifest. Could you please check that? "git grep
+> intermediate" should tell
+> 
+> Thank you!
+> Dscho
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130522/864254c7/attachment.html>
+
+From skf-ee at ipt.rwth-aachen.de  Wed May 22 05:35:26 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Wed, 22 May 2013 12:35:26 +0200
+Subject: [OpenSPIM] About the illumination source (laser)
+Message-ID: <OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aachen.de>
+
+Hi to all,
+
+I am having some options and at the same time some problems about the illumination source for the SPIM system.
+
+The firs option is a CoolLED pE-1 system http://www.coolled.com/Life-Sciences-Analytical/Products/pE-1/ with a Led of 470 nm wavelength, the problem of this illumination system is that the output light is not very well collimated, and the diamater of the light is so big. I have found out that there is a fiber adaptor http://www.coolled.com/Life-Sciences-Analytical/Products/pE-100F/ for this system. My question is that if after
+the fiber, the light will be as collimated and coherent as a laser source? The good thing is that this system
+is already supported by ?Manager.
+
+The second option is a NKT Photonics SuperK EXTREME http://www.nktphotonics.com/superkextreme?cid=7858, this one is a very good laser source, but the problem is that it is not supported by ?Manager.
+
+Have somebody had some issues like the ones I am having?
+Thank you very much in advance, suggestions are welcome.
+
+Edgar Escobar Nieto
+_________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+
+Steinbachstra?e 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130522/80326385/attachment.html>
+
+From pitrone at mpi-cbg.de  Wed May 22 09:09:56 2013
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 22 May 2013 16:09:56 +0200 (CEST)
+Subject: [OpenSPIM] About the illumination source (laser)
+In-Reply-To: <OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aa
+	chen.de>
+References: <OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aachen.de>
+Message-ID: <38471.10.1.36.128.1369231796.squirrel@webmail.mpi-cbg.de>
+
+
+Hello Edgar,
+
+Get the laser!! I've wanted to do this for a while: all you need are normal fluorescent filters on
+a six position filter wheel to filter out the light for excitation, and a Quad or Penta Emission
+filter. You would then have an extremely versatile imaging system.
+
+My $0.02
+
+Have a good one!!
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Wed, May 22, 2013 12:35 pm, skf-ee at ipt.rwth-aachen.de wrote:
+<|> Hi to all,
+<|>
+<|> I am having some options and at the same time some problems about the illumination source for the
+<|> SPIM system.
+<|>
+<|> The firs option is a CoolLED pE-1 system
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-1/ with a Led of 470 nm wavelength,
+<|> the problem of this illumination system is that the output light is not very well collimated, and
+<|> the diamater of the light is so big. I have found out that there is a fiber adaptor
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-100F/ for this system. My question is
+<|> that if after
+<|> the fiber, the light will be as collimated and coherent as a laser source? The good thing is that
+<|> this system
+<|> is already supported by ?Manager.
+<|>
+<|> The second option is a NKT Photonics SuperK EXTREME
+<|> http://www.nktphotonics.com/superkextreme?cid=7858, this one is a very good laser source, but the
+<|> problem is that it is not supported by ?Manager.
+<|>
+<|> Have somebody had some issues like the ones I am having?
+<|> Thank you very much in advance, suggestions are welcome.
+<|>
+<|> Edgar Escobar Nieto
+<|> _________________________________________________________________________
+<|>
+<|> Fraunhofer-Institut f?r Produktionstechnologie IPT
+<|> Edgar Escobar Nieto
+<|>
+<|>
+<|>
+<|>
+<|> Steinbachstra?e 17
+<|> 52074 Aachen
+<|>
+<|> skf-ee at ipt.rwth-aachen.de
+<|> http://www.ipt.fraunhofer.de
+<|>
+________________________________________________________________________________________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+From skf-ee at ipt.rwth-aachen.de  Wed May 22 15:52:35 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Wed, 22 May 2013 22:52:35 +0200
+Subject: [OpenSPIM] About the illumination source (laser)
+In-Reply-To: <38471.10.1.36.128.1369231796.squirrel@webmail.mpi-cbg.de>
+References: <38471.10.1.36.128.1369231796.squirrel@webmail.mpi-cbg.de>,
+	<OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aachen.de>
+Message-ID: <OFD0A946A3.74068733-ONC1257B73.0072ADB2-C1257B73.0072ADB8@ipt.rwth-aachen.de>
+
+Hello Peter,
+
+I will use the Laser, however it is not portable, it is a very good illumination source. I think I won't need filter for excitation
+since this laser is of variable wavelength and has accesories like variable and tunable filters. About the emission filter it is a
+good idea to have a quad or?penta band filter. Right now I have a band pass filter especially for GFP intended for the first
+experiments.
+
+Kind regards,
+Edgar
+_________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+
+Steinbachstra?e 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+
+
+-----"Peter Gabriel Pitrone" <pitrone at mpi-cbg.de> schrieb: -----
+An: skf-ee at ipt.rwth-aachen.de
+Von: "Peter Gabriel Pitrone" <pitrone at mpi-cbg.de>
+Datum: 22.05.2013 16:10
+Kopie: openspim at openspim.org
+Betreff: Re: [OpenSPIM] About the illumination source (laser)
+
+Hello Edgar,
+
+Get the laser!! I've wanted to do this for a while: all you need are normal fluorescent filters on
+a six position filter wheel to filter out the light for excitation, and a Quad or Penta Emission
+filter. You would then have an extremely versatile imaging system.
+
+My $0.02
+
+Have a good one!!
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Wed, May 22, 2013 12:35 pm, skf-ee at ipt.rwth-aachen.de wrote:
+<|> Hi to all,
+<|>
+<|> I am having some options and at the same time some problems about the illumination source for the
+<|> SPIM system.
+<|>
+<|> The firs option is a CoolLED pE-1 system
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-1/?with a Led of 470 nm wavelength,
+<|> the problem of this illumination system is that the output light is not very well collimated, and
+<|> the diamater of the light is so big. I have found out that there is a fiber adaptor
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-100F/?for this system. My question is
+<|> that if after
+<|> the fiber, the light will be as collimated and coherent as a laser source? The good thing is that
+<|> this system
+<|> is already supported by ?Manager.
+<|>
+<|> The second option is a NKT Photonics SuperK EXTREME
+<|> http://www.nktphotonics.com/superkextreme?cid=7858, this one is a very good laser source, but the
+<|> problem is that it is not supported by ?Manager.
+<|>
+<|> Have somebody had some issues like the ones I am having?
+<|> Thank you very much in advance, suggestions are welcome.
+<|>
+<|> Edgar Escobar Nieto
+<|> _________________________________________________________________________
+<|>
+<|> Fraunhofer-Institut f?r Produktionstechnologie IPT
+<|> Edgar Escobar Nieto
+<|>
+<|>
+<|>
+<|>
+<|> Steinbachstra?e 17
+<|> 52074 Aachen
+<|>
+<|> skf-ee at ipt.rwth-aachen.de
+<|> http://www.ipt.fraunhofer.de
+<|>
+________________________________________________________________________________________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130522/c0c8cb25/attachment.html>
+
+From eliceiri at wisc.edu  Mon May 27 21:38:50 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Mon, 27 May 2013 21:38:50 -0500
+Subject: [OpenSPIM] Preparing for increased response with release of Nature
+	Methods paper
+In-Reply-To: <7580eac26028b.51a4187e@wiscmail.wisc.edu>
+References: <7710d5d064d24.51a41713@wiscmail.wisc.edu>
+	<76a0db53671c0.51a4174f@wiscmail.wisc.edu>
+	<77408b696759a.51a4178c@wiscmail.wisc.edu>
+	<7720c80c613ce.51a417c8@wiscmail.wisc.edu>
+	<77508be363f29.51a41805@wiscmail.wisc.edu>
+	<7580c6ac65092.51a41841@wiscmail.wisc.edu>
+	<7580eac26028b.51a4187e@wiscmail.wisc.edu>
+Message-ID: <76c08cfa6541d.51a3d26a@wiscmail.wisc.edu>
+
+Hi All,
+
+Pavel and I were talking today, and we both talking about how to prepare for the increased?activity?once the paper goes out. To prepare for this, we have the following plan:
+
+
+1) We are?actively?pursuing funding including a planned grant in September to help support software in particular (in addition to hardware). But in meantime LOCI's priority will be to support the configuration as listed on the openspim webpage, and fix any problems with that. Any support for new hardware will be limited and labs wanting to use new unsupported hardware should be aware of this priority and also be encourage to add support themselves. I will be in touch about the grant this summer but if any of you have wish lists for OpenSPIM development (hardware and software) please let me know. Pavel will be sending me his. 
+
+
+2) Improved documentation for OpenSpim Analysis, Pavel will be adding a section to OpenSPIM.org before the paper comes out about how to do analysis. We will all help, in particular there is another LOCI scientist (Julie last) who is starting to use openspim for zebrafish imaging and she can help with the documentation.
+
+
+3) Also this summer we will be doing a JOVE hardware paper with Pavel (with section on software) that will be filmed in Dresden. This will help complement the NM paper. Pavel plans on sending a first draft of this to all of us in July.
+
+
+thanks everyone
+best
+kevin
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From eliceiri at wisc.edu  Mon May 27 21:47:25 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Mon, 27 May 2013 21:47:25 -0500
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+Message-ID: <7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+
+also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample??
+
+Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+
+
+best
+k
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From tomancak at mpi-cbg.de  Tue May 28 02:17:47 2013
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Tue, 28 May 2013 09:17:47 +0200
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+Message-ID: <5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+
+> also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+
+We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+
+> 
+> Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+
+Yes, good idea, I will include it into my SPIMage processing tutorial.
+
+All the best
+
+PAvel
+
+> 
+> 
+> best
+> k
+> 
+> --
+> Kevin W. Eliceiri
+> Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> Departments Cell and Molecular Biology and Biomedical Engineering
+> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> Phone: 608-263-6288
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From weber at mpi-cbg.de  Tue May 28 04:04:30 2013
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Tue, 28 May 2013 11:04:30 +0200
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+	<5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+Message-ID: <4E2E7A2A-58E7-43D4-BBD2-F88D2084EE1A@mpi-cbg.de>
+
+We have a Jove publication regarding fish mounting in the loop. Once it's published I can contribute a "fish mounting" section with the current embedding strategies. I will also work on a bead sample protocol.
+
+Best,
+Michael
+
+
+On May 28, 2013, at 9:17 AM, Pavel Tomancak <tomancak at mpi-cbg.de> wrote:
+
+>> also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+> 
+> We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+> 
+>> 
+>> Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+> 
+> Yes, good idea, I will include it into my SPIMage processing tutorial.
+> 
+> All the best
+> 
+> PAvel
+> 
+>> 
+>> 
+>> best
+>> k
+>> 
+>> --
+>> Kevin W. Eliceiri
+>> Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+>> Departments Cell and Molecular Biology and Biomedical Engineering
+>> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+>> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+>> Phone: 608-263-6288
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130528/86c697b5/attachment.html>
+
+From eliceiri at wisc.edu  Tue May 28 05:29:23 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Tue, 28 May 2013 05:29:23 -0500
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <4E2E7A2A-58E7-43D4-BBD2-F88D2084EE1A@mpi-cbg.de>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+	<5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+	<4E2E7A2A-58E7-43D4-BBD2-F88D2084EE1A@mpi-cbg.de>
+Message-ID: <7700d24ef0f03.51a440b3@wiscmail.wisc.edu>
+
+sounds great.?
+
+best
+kevin
+
+On 05/28/13, Michael Weber  wrote:
+> 
+> 
+> 
+> We have a Jove publication regarding fish mounting in the loop. Once it's published I can contribute a "fish mounting" section with the current embedding strategies. I will also work on a bead sample protocol.
+> 
+> 
+> Best,
+> Michael
+> 
+> 
+> 
+> On May 28, 2013, at 9:17 AM, Pavel Tomancak <tomancak at mpi-cbg.de <tomancak at mpi-cbg.de>> wrote:
+> 
+> 
+> > 
+> > > also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+> > > 
+> > 
+> > We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+> > 
+> > 
+> > > 
+> > > Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+> > > 
+> > 
+> > Yes, good idea, I will include it into my SPIMage processing tutorial.
+> > 
+> > All the best
+> > 
+> > PAvel
+> > 
+> > 
+> > > 
+> > > 
+> > > best
+> > > k
+> > > 
+> > > --
+> > > Kevin W. Eliceiri
+> > > Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> > > Departments Cell and Molecular Biology and Biomedical Engineering
+> > > Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> > > Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> > > Phone: 608-263-6288
+> > > 
+> > > _______________________________________________
+> > > OpenSPIM mailing list
+> > > OpenSPIM at openspim.org <OpenSPIM at openspim.org>
+> > > http://openspim.org/mailman/listinfo/openspim
+> > > 
+> > 
+> > 
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org <OpenSPIM at openspim.org>
+> > http://openspim.org/mailman/listinfo/openspim
+> > 
+> 
+> 
+> _____________
+> 
+> Michael Weber
+> PhD Student, Huisken lab
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstrasse 108, 01307 Dresden
+> Tel. 0049 351/2102837
+> 
+> http://www.mpi-cbg.de/huisken
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From eliceiri at wisc.edu  Tue May 28 05:29:45 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Tue, 28 May 2013 05:29:45 -0500
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+	<5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+Message-ID: <7700d2ebf7152.51a440c9@wiscmail.wisc.edu>
+
+great, thanks Pavel.
+
+best
+k
+
+On 05/28/13, Pavel Tomancak  wrote:
+> > also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+> 
+> We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+> 
+> > 
+> > Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+> 
+> Yes, good idea, I will include it into my SPIMage processing tutorial.
+> 
+> All the best
+> 
+> PAvel
+> 
+> > 
+> > 
+> > best
+> > k
+> > 
+> > --
+> > Kevin W. Eliceiri
+> > Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> > Departments Cell and Molecular Biology and Biomedical Engineering
+> > Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> > Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> > Phone: 608-263-6288
+> > 
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From stuyvenberg at wisc.edu  Tue May 28 16:20:34 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Tue, 28 May 2013 16:20:34 -0500
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290043020.8213@s15462909.onlinehome-server.info>
+	<517E162E.9070101@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290950590.8213@s15462909.onlinehome-server.info>
+	<51820BF4.6000705@bii.a-star.edu.sg>
+	<7720a3cb4e9a.5182c3c2@wiscmail.wisc.edu>
+	<7720e0d11c24.5182c3fe@wiscmail.wisc.edu>
+	<7780ca69983.5182c43a@wiscmail.wisc.edu>
+	<7680e9762394.5182c477@wiscmail.wisc.edu>
+	<7670b3ad4af4.5182c4ef@wiscmail.wisc.edu>
+	<771090a8688b.5182c52c@wiscmail.wisc.edu>
+	<7680b33758ae.5182d94b@wiscmail.wisc.edu>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+Message-ID: <76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+
+Chaohui,
+
+Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -> Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+
+Thanks,
+Luke Stuyvenberg
+
+On 05/02/13, "HUANG, Chao-Hui" wrote:
+> Dear Johnnaes,
+> 
+> Thanks.
+> 
+> May I ask if the OpenSPIM on Github is updated?
+> 
+> Actually I really suggest to test the problem that I mentioned. We've
+> found that problem on PVCAM, and it can be happened either 64, 32 bits
+> on DemoCamera. Of course, if in the same configuration, it would not be
+> happened on your side, that will be another story :-)
+> 
+> Sincerely,
+> 
+> Chaohui
+> 
+> On 29/04/2013 23:04, Johannes Schindelin wrote:
+> > Hi Chaohui,
+> >
+> > On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+> >
+> >> We are glad to see that the code will be updated soon.
+> > Don't hold your breath, though ;-)
+> >
+> >> Just in the case that you might not aware. We found a problem in 1/31
+> >> binary version. When you click snap on the live window of MM, you can
+> >> only click one time. after the first time snap, the button is not going
+> >> to update the live view screen.
+> >>
+> >> This problem can be happened even using DemoCamera.
+> >>
+> >> Are you aware this?
+> > No, I wasn't, and in fact, I did not have that problem. But then, I
+> > haven't used the DemoCamera in a while...
+> >
+> > Ciao,
+> > Johannes
+> >
+> 
+> 
+> -- 
+> HUANG, Chao-Hui (Ph.D.)
+> -----------------------
+> Research Fellow
+> Bioinformatic Institute, Agency for Science, Technology Research
+> National University of Singapore
+> Singapore Mobile: +65 92426558
+> Singapore Office: +65 64788353
+> Taiwan Mobile: +886 928338607
+> Email 1: ch at mail2000.com.tw
+> Email 2: huangch at bii.a-star.edu.sg
+> WWW: http://web.bii-sg.org/~huangch/
+
+
+From huangch at bii.a-star.edu.sg  Wed May 29 03:02:29 2013
+From: huangch at bii.a-star.edu.sg (HUANG Chao-Hui)
+Date: Wed, 29 May 2013 16:02:29 +0800
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290043020.8213@s15462909.onlinehome-server.info>
+	<517E162E.9070101@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290950590.8213@s15462909.onlinehome-server.info>
+	<51820BF4.6000705@bii.a-star.edu.sg>
+	<7720a3cb4e9a.5182c3c2@wiscmail.wisc.edu>
+	<7720e0d11c24.5182c3fe@wiscmail.wisc.edu>
+	<7780ca69983.5182c43a@wiscmail.wisc.edu>
+	<7680e9762394.5182c477@wiscmail.wisc.edu>
+	<7670b3ad4af4.5182c4ef@wiscmail.wisc.edu>
+	<771090a8688b.5182c52c@wiscmail.wisc.edu>
+	<7680b33758ae.5182d94b@wiscmail.wisc.edu>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+Message-ID: <51A5B615.2020305@bii.a-star.edu.sg>
+
+Hi Luke,
+
+Thanks for replying. I would like to provide more information about the 
+package.
+
+I am not sure but it might be because of inconsistent of the source 
+code. I've found it will have problems when using java classes from 3rd 
+party folder. I have some problems when I was trying to compile it by my 
+own (and yes I solved the not-to-snap problem by build it from source 
+code).
+
+Actually I even have to make some modification on the downloaded source 
+code. By following the instruction on OpenSPIM web site, it will not 
+generate the same binary executable as the mentioned zip file. I think 
+there are some inconsistent problem on the actual souce code the source 
+code you used to build the zip file, including the 3rd party folder, 
+perhaps different versions of the jar files?), and the one which can be 
+downloaded from the github.
+
+A more solid example is, when compiling, according to the instruction, 
+we have to import the classes from ''3rdpartypublic\classext''. But when 
+running it, I think the code invoked the classes from jars folder in 
+somewhere under micromanager folder.
+
+I would like to suggest if that is possible, maybe it would be better to 
+to go for a full synchronization? Of course if you have tested and 
+verified the code from the github, this is not an issue anymore.
+
+Sincerely,
+
+Chaohui
+
+
+On 29/5/2013 5:20 AM, Luke Stuyvenberg wrote:
+> Chaohui,
+>
+> Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -> Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+> We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+>
+> Thanks,
+> Luke Stuyvenberg
+>
+> On 05/02/13, "HUANG, Chao-Hui" wrote:
+>> Dear Johnnaes,
+>>
+>> Thanks.
+>>
+>> May I ask if the OpenSPIM on Github is updated?
+>>
+>> Actually I really suggest to test the problem that I mentioned. We've
+>> found that problem on PVCAM, and it can be happened either 64, 32 bits
+>> on DemoCamera. Of course, if in the same configuration, it would not be
+>> happened on your side, that will be another story :-)
+>>
+>> Sincerely,
+>>
+>> Chaohui
+>>
+>> On 29/04/2013 23:04, Johannes Schindelin wrote:
+>>> Hi Chaohui,
+>>>
+>>> On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+>>>
+>>>> We are glad to see that the code will be updated soon.
+>>> Don't hold your breath, though ;-)
+>>>
+>>>> Just in the case that you might not aware. We found a problem in 1/31
+>>>> binary version. When you click snap on the live window of MM, you can
+>>>> only click one time. after the first time snap, the button is not going
+>>>> to update the live view screen.
+>>>>
+>>>> This problem can be happened even using DemoCamera.
+>>>>
+>>>> Are you aware this?
+>>> No, I wasn't, and in fact, I did not have that problem. But then, I
+>>> haven't used the DemoCamera in a while...
+>>>
+>>> Ciao,
+>>> Johannes
+>>>
+>>
+>> -- 
+>> HUANG, Chao-Hui (Ph.D.)
+>> -----------------------
+>> Research Fellow
+>> Bioinformatic Institute, Agency for Science, Technology Research
+>> National University of Singapore
+>> Singapore Mobile: +65 92426558
+>> Singapore Office: +65 64788353
+>> Taiwan Mobile: +886 928338607
+>> Email 1: ch at mail2000.com.tw
+>> Email 2: huangch at bii.a-star.edu.sg
+>> WWW: http://web.bii-sg.org/~huangch/
+
+
+
+From alexis at maizel.net  Wed May 29 10:50:19 2013
+From: alexis at maizel.net (Alexis Maizel)
+Date: Wed, 29 May 2013 17:50:19 +0200
+Subject: [OpenSPIM] HamamatsuHam, Windows 7 & OpenSPIM
+Message-ID: <6AC67ADA-D916-4905-93ED-94A75B3169F1@cos.uni-heidelberg.de>
+
+Hi there,
+
+I use an ORCA Flash4 in our OpenSPIM setup but I run into severe problems regarding its integration with the OpenSPIM software. 
+
+The latest  DCAM drivers (Feb 2013) brought compatibility with windows 7 (what we run on) and allow the integration and use of e.g. an Orca Flash4 in micro-manager (MM v1.4.13) using the HamamatsuHam device adapter . I tested this in a standalone MM and it works great. 
+
+However, as the current micro-manager code base used by OpenSPIM is anterior (seems to be MM v1.4.9), this latest  HamamatsuHam device adapter is not recognised/loaded by the OpenSPIM software.
+
+Unless I am mistaken, in order  to have this  HamamatsuHam device adapter compatible with OpenSPIM, the OpenSPIM/MicroManager code  has to be brought in sync to the current MM version 1.4.13/14; which in other words mean, recompiling OpenSPIM using the latest Micromanager source code, correct?
+
+I have been struggling for several weeks now to try to do just that?
+
+First, and unfortunately for me,  the OpenSPIM development environment installer (http://openspim.org/downloads/OpenSPIM-dev-env-20130201.exe) which is supposed to make it really easy for everyone, did not work for me (it hangs and does not fetch the different sources). So I had to go the "hard way" and download, configure everything properly (d/l the boostPro libs, Ant, JDK, PATHs configurations, etc?). After a few hours of sweating, I troubleshooted almost everything. However, I am far from the described step " by clicking on Build>Build Solution or by pressing the F7 key" everything builds auto-magically.
+
+If I understood correctly, to get a functional OpenSPIM software compatible with MM v1.4.13, I have to , a minima,  recompile:
+- MMCore
+- MMcoreJ_wrap
+- Any  DeviceAdapter I  need (OpenSPIM, Cobolt, etc?) or on which the MMCoreJ_wrap depends (SerialManager, ?)
+- mmstudio
+- SPIMAcquisition
+
+I have questions regarding the last 2:
+- mmstudio: about 40 devices adapters are listed as dependencies (AAOTF, etc?). Do I have to recompile them or it will be OK to forget about them (assuming I do not need them) or adding them from the current MM release? It is unclear whether I can recompile this in Visual Studio or using Ant. 
+
+- SPIMAcquisition: that's a JAVA plugin how do I do that? Using Ant?
+
+I have the feeling that I am getting lost in territories that have been charted by others before. 
+At this point I could really benefit from help of any good samaritans in the community to point me into the right directions to help me recompile the whole OpenSPIM using a more recent MM code base. In my opinion, this effort would actually benefit the whole community, as I am probably not the only one which may suffer from OpenSPIM  being based on a several-month old MM release. 
+
+Best,
+
+Alexis
+ 
+
+From stuyvenberg at wisc.edu  Wed May 29 15:21:28 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 29 May 2013 15:21:28 -0500
+Subject: [OpenSPIM] HamamatsuHam, Windows 7 & OpenSPIM
+In-Reply-To: <7780c8e86d06f.51a66280@wiscmail.wisc.edu>
+References: <6AC67ADA-D916-4905-93ED-94A75B3169F1@cos.uni-heidelberg.de>
+	<7790d7716cb17.51a642a6@wiscmail.wisc.edu>
+	<76d0ab6d6fbb6.51a642e4@wiscmail.wisc.edu>
+	<76e0ffdb6d124.51a64320@wiscmail.wisc.edu>
+	<76e0aa3468adc.51a6435c@wiscmail.wisc.edu>
+	<76e0815b6e873.51a64399@wiscmail.wisc.edu>
+	<7650bb1b6acd7.51a643d5@wiscmail.wisc.edu>
+	<7690a2d96ee2d.51a64411@wiscmail.wisc.edu>
+	<77909cd06d80a.51a6444e@wiscmail.wisc.edu>
+	<76d0f56d6be62.51a6448a@wiscmail.wisc.edu>
+	<76508f036a096.51a644c7@wiscmail.wisc.edu>
+	<7620c48f6a08a.51a64503@wiscmail.wisc.edu>
+	<76b0e66f6c738.51a6453f@wiscmail.wisc.edu>
+	<76909b6f6e7ff.51a645b8@wiscmail.wisc.edu>
+	<7790c1db6d07f.51a645f4@wiscmail.wisc.edu>
+	<76b0e07f6c11c.51a64632@wiscmail.wisc.edu>
+	<76b0aefb68cd8.51a6466e@wiscmail.wisc.edu>
+	<7780d6ce6ae2f.51a646ab@wiscmail.wisc.edu>
+	<7780ad5f6965c.51a646e7@wiscmail.wisc.edu>
+	<7660c0d26c891.51a64724@wiscmail.wisc.edu>
+	<7620f6e66d346.51a64760@wiscmail.wisc.edu>
+	<7620c3256dae7.51a6479d@wiscmail.wisc.edu>
+	<7670cb8469d0c.51a647d9@wiscmail.wisc.edu>
+	<7670fb796eb32.51a64815@wiscmail.wisc.edu>
+	<7650d9c56f60f.51a64852@wiscmail.wisc.edu>
+	<765096e26f1bd.51a6488e@wiscmail.wisc.edu>
+	<7670d5e0686e1.51a64909@wiscmail.wisc.edu>
+	<7690f5b56cff9.51a64946@wiscmail.wisc.edu>
+	<7660baf46c161.51a64d7e@wiscmail.wisc.edu>
+	<7650b2236f025.51a64dbb@wiscmail.wisc.edu>
+	<76b0e12f69003.51a64eea@wiscmail.wisc.edu>
+	<7670beeb6c1d2.51a65055@wiscmail.wisc.edu>
+	<77808f9f6dc04.51a65094@wiscmail.wisc.edu>
+	<7650bae56d1f5.51a65187@wiscmail.wisc.edu>
+	<7790f0ec6a555.51a651c5@wiscmail.wisc.edu>
+	<7690f9486a03a.51a65240@wiscmail.wisc.edu>
+	<76d0f4636a41c.51a6527d@wiscmail.wisc.edu>
+	<7660bc3868091.51a652f8@wiscmail.wisc.edu>
+	<7790ba396cbf4.51a65335@wiscmail.wisc.edu>
+	<766088fc6f012.51a65371@wiscmail.wisc.edu>
+	<77908f2b6a2a5.51a653b0@wiscmail.wisc.edu>
+	<76d085346a794.51a653ed@wiscmail.wisc.edu>
+	<76b0e19b6dff5.51a65429@wiscmail.wisc.edu>
+	<76d0d9db6e1a8.51a65774@wiscmail.wisc.edu>
+	<7650b9c26f054.51a657b0@wiscmail.wisc.edu>
+	<7650c0686e0a0.51a657ed@wiscmail.wisc.edu>
+	<76509b0769f8b.51a6582a@wiscmail.wisc.edu>
+	<7620a2986e3aa.51a66023@wiscmail.wisc.edu>
+	<7690d9ca6ec58.51a66060@wiscmail.wisc.edu>
+	<76509d366ad83.51a6609c@wiscmail.wisc.edu>
+	<7740de7d6f7ca.51a660d8@wiscmail.wisc.edu>
+	<7690a2116eeaf.51a66115@wiscmail.wisc.edu>
+	<7690ba9668eeb.51a66151@wiscmail.wisc.edu>
+	<76b0ad07682c3.51a6618e@wiscmail.wisc.edu>
+	<7780920e68587.51a661cb@wiscmail.wisc.edu>
+	<76e0c9946fdbc.51a66208@wiscmail.wisc.edu>
+	<7780c8e86d06f.51a66280@wiscmail.wisc.edu>
+Message-ID: <7670897768185.51a61cf8@wiscmail.wisc.edu>
+
+Hello Alexis,
+
+A little over a month ago, we finished rebasing the OpenSPIM source code onto the (then) latest Micro-Manager code. If you fully update your OpenSPIM installation (Help -> Update Fiji), when you launch Micro-Manager it should register as 'v1.4.x dev' (I believe the code was between 1.4.13 and 1.4.14). I just tested now (Windows XP, freshly up-to-date OpenSPIM-20130131.zip, with an Orca R^2), and the software can load the mmgr_dal_HamamatsuHam.dll file included in the latest MM nightly build. I can't make any certain statements about support for Windows 7, unfortunately, since our goal at present is to maximize support for Windows XP first.
+
+
+Regarding the development environment, I'm actively working on bringing it up-to-date, and your assistance in this would be invaluable -- I was hoping you might test something for me: Please try downloading?https://dl.dropboxusercontent.com/u/57890359/OpenSPIM-dev-env-20130529.exe and installing it. This is a newer version of the installer, and hopefully should at least finish putting everything into place.
+
+
+You are also correct about the necessary steps for building a functional OpenSPIM installation. To answer your questions:
+1. a) I believe the mmstudio project only has the device adapters as dependencies to ensure they are built at all. You should be able to build it without compiling them first.
+b) mmstudio is meant to be built by ant -- using the build32.xml file in its directory. However, the Visual Studio project has been configured to do just that, as long as your directory structure has '3rdpartypublic' alongside 'micromanager'.
+
+
+2. The SPIM Acquisition plugin is also built by ant. Unfortunately, there isn't a neat way to do this quite yet -- you can call it from the command line (within plugins/SPIMAcquisition) with ../../../3rdpartypublic/apache-ant-1.6.5/bin/ant -buildfile build.xml
+
+
+A few extra notes regarding compiling from source:
+- Please make sure you're using the latest version of the source code, obtained from github.com/openspim -- preferably using Git for Windows.
+- If you're feeling a little daring and haven't already done so, I'd recommend moving to Visual C++ 2010 Express, available for free from Microsoft. The latest code from github includes the project and solution files used by 2010, and even an (experimental) build script -- build-openspim.sh, meant to replace build.sh -- which builds the necessary objects.
+
+
+Thank you for your help,
+Luke Stuyvenberg
+
+On 05/29/13, Alexis Maizel  wrote:
+> Hi there,
+> 
+> I use an ORCA Flash4 in our OpenSPIM setup but I run into severe problems regarding its integration with the OpenSPIM software. 
+> 
+> The latest DCAM drivers (Feb 2013) brought compatibility with windows 7 (what we run on) and allow the integration and use of e.g. an Orca Flash4 in micro-manager (MM v1.4.13) using the HamamatsuHam device adapter . I tested this in a standalone MM and it works great. 
+> 
+> However, as the current micro-manager code base used by OpenSPIM is anterior (seems to be MM v1.4.9), this latest HamamatsuHam device adapter is not recognised/loaded by the OpenSPIM software.
+> 
+> Unless I am mistaken, in order to have this HamamatsuHam device adapter compatible with OpenSPIM, the OpenSPIM/MicroManager code has to be brought in sync to the current MM version 1.4.13/14; which in other words mean, recompiling OpenSPIM using the latest Micromanager source code, correct?
+> 
+> I have been struggling for several weeks now to try to do just that?
+> 
+> First, and unfortunately for me, the OpenSPIM development environment installer (http://openspim.org/downloads/OpenSPIM-dev-env-20130201.exe) which is supposed to make it really easy for everyone, did not work for me (it hangs and does not fetch the different sources). So I had to go the "hard way" and download, configure everything properly (d/l the boostPro libs, Ant, JDK, PATHs configurations, etc?). After a few hours of sweating, I troubleshooted almost everything. However, I am far from the described step " by clicking on Build>Build Solution or by pressing the F7 key" everything builds auto-magically.
+> 
+> If I understood correctly, to get a functional OpenSPIM software compatible with MM v1.4.13, I have to , a minima, recompile:
+> - MMCore
+> - MMcoreJ_wrap
+> - Any DeviceAdapter I need (OpenSPIM, Cobolt, etc?) or on which the MMCoreJ_wrap depends (SerialManager, ?)
+> - mmstudio
+> - SPIMAcquisition
+> 
+> I have questions regarding the last 2:
+> - mmstudio: about 40 devices adapters are listed as dependencies (AAOTF, etc?). Do I have to recompile them or it will be OK to forget about them (assuming I do not need them) or adding them from the current MM release? It is unclear whether I can recompile this in Visual Studio or using Ant. 
+> 
+> - SPIMAcquisition: that's a JAVA plugin how do I do that? Using Ant?
+> 
+> I have the feeling that I am getting lost in territories that have been charted by others before. 
+> At this point I could really benefit from help of any good samaritans in the community to point me into the right directions to help me recompile the whole OpenSPIM using a more recent MM code base. In my opinion, this effort would actually benefit the whole community, as I am probably not the only one which may suffer from OpenSPIM being based on a several-month old MM release. 
+> 
+> Best,
+> 
+> Alexis
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From stuyvenberg at wisc.edu  Wed May 29 17:02:41 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 29 May 2013 17:02:41 -0500
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <7780b3d06c461.51a67521@wiscmail.wisc.edu>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290043020.8213@s15462909.onlinehome-server.info>
+	<517E162E.9070101@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290950590.8213@s15462909.onlinehome-server.info>
+	<51820BF4.6000705@bii.a-star.edu.sg>
+	<7720a3cb4e9a.5182c3c2@wiscmail.wisc.edu>
+	<7720e0d11c24.5182c3fe@wiscmail.wisc.edu>
+	<7780ca69983.5182c43a@wiscmail.wisc.edu>
+	<7680e9762394.5182c477@wiscmail.wisc.edu>
+	<7670b3ad4af4.5182c4ef@wiscmail.wisc.edu>
+	<771090a8688b.5182c52c@wiscmail.wisc.edu>
+	<7680b33758ae.5182d94b@wiscmail.wisc.edu>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+	<51A5B615.2020305@bii.a-star.edu.sg>
+	<7780b3d06c461.51a67521@wiscmail.wisc.edu>
+Message-ID: <7660d08a71dac.51a634b1@wiscmail.wisc.edu>
+
+Hi Chaohui,
+
+The classes from "3rdpartypublic\classext" should be identical to the classes in "bin_Win32\jars". The instructions say to use the files in classext because, before compiling mmstudio, they are not in bin_Win32 -- I think they are copied when mmstudio is compiled.
+
+
+Compiling from source will download the latest binary executable, which might be why it doesn't match the executable in the zip file. The zip file is getting old, but I plan to replace it with a new version soon, which shouldn't have any of these problems.
+
+
+The latest code from github shouldn't have this problem any more, and most users should be able to get rid of it by updating (Help -> Update Fiji).
+
+
+Thank you for your help!
+
+
+Sincerely,
+Luke Stuyvenberg
+
+
+On 05/29/13, HUANG Chao-Hui  wrote:
+> Hi Luke,
+> 
+> Thanks for replying. I would like to provide more information about the package.
+> 
+> I am not sure but it might be because of inconsistent of the source code. I've found it will have problems when using java classes from 3rd party folder. I have some problems when I was trying to compile it by my own (and yes I solved the not-to-snap problem by build it from source code).
+> 
+> Actually I even have to make some modification on the downloaded source code. By following the instruction on OpenSPIM web site, it will not generate the same binary executable as the mentioned zip file. I think there are some inconsistent problem on the actual souce code the source code you used to build the zip file, including the 3rd party folder, perhaps different versions of the jar files?), and the one which can be downloaded from the github.
+> 
+> A more solid example is, when compiling, according to the instruction, we have to import the classes from ''3rdpartypublic\classext''. But when running it, I think the code invoked the classes from jars folder in somewhere under micromanager folder.
+> 
+> I would like to suggest if that is possible, maybe it would be better to to go for a full synchronization? Of course if you have tested and verified the code from the github, this is not an issue anymore.
+> 
+> Sincerely,
+> 
+> Chaohui
+> 
+> 
+> On 29/5/2013 5:20 AM, Luke Stuyvenberg wrote:
+> >Chaohui,
+> >
+> >Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -> Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+> >We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+> >
+> >Thanks,
+> >Luke Stuyvenberg
+> >
+> >On 05/02/13, "HUANG, Chao-Hui" wrote:
+> >>Dear Johnnaes,
+> >>
+> >>Thanks.
+> >>
+> >>May I ask if the OpenSPIM on Github is updated?
+> >>
+> >>Actually I really suggest to test the problem that I mentioned. We've
+> >>found that problem on PVCAM, and it can be happened either 64, 32 bits
+> >>on DemoCamera. Of course, if in the same configuration, it would not be
+> >>happened on your side, that will be another story :-)
+> >>
+> >>Sincerely,
+> >>
+> >>Chaohui
+> >>
+> >>On 29/04/2013 23:04, Johannes Schindelin wrote:
+> >>>Hi Chaohui,
+> >>>
+> >>>On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+> >>>
+> >>>>We are glad to see that the code will be updated soon.
+> >>>Don't hold your breath, though ;-)
+> >>>
+> >>>>Just in the case that you might not aware. We found a problem in 1/31
+> >>>>binary version. When you click snap on the live window of MM, you can
+> >>>>only click one time. after the first time snap, the button is not going
+> >>>>to update the live view screen.
+> >>>>
+> >>>>This problem can be happened even using DemoCamera.
+> >>>>
+> >>>>Are you aware this?
+> >>>No, I wasn't, and in fact, I did not have that problem. But then, I
+> >>>haven't used the DemoCamera in a while...
+> >>>
+> >>>Ciao,
+> >>>Johannes
+> >>>
+> >>
+> >>-- 
+> >>HUANG, Chao-Hui (Ph.D.)
+> >>-----------------------
+> >>Research Fellow
+> >>Bioinformatic Institute, Agency for Science, Technology Research
+> >>National University of Singapore
+> >>Singapore Mobile: +65 92426558
+> >>Singapore Office: +65 64788353
+> >>Taiwan Mobile: +886 928338607
+> >>Email 1: ch at mail2000.com.tw
+> >>Email 2: huangch at bii.a-star.edu.sg
+> >>WWW: http://web.bii-sg.org/~huangch/
+
+
+From Johannes.Schindelin at gmx.de  Fri May 31 15:18:10 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 May 2013 22:18:10 +0200 (CEST)
+Subject: [OpenSPIM] Switching from DropBox to BitTorrent Sync
+Message-ID: <alpine.DEB.1.00.1305312215340.650@s15462909.onlinehome-server.info>
+
+Hi all,
+
+we are switching from the DropBox (which is very limiting) to a BitTorrent
+Sync system:
+
+	http://labs.bittorrent.com/experiments/sync.html
+
+Basically, it is the same as DropBox except that files are only stored
+locally (i.e. if no other participating computer is online, you'll not get
+the latest updates), *and* you can have multiple "accounts" identified by
+secret keys.
+
+Ciao,
+Dscho
+
+
+From dscho at mit.edu  Wed May  8 13:12:14 2013
+From: dscho at mit.edu (Johannes Schindelin)
+Date: Wed, 8 May 2013 13:12:14 -0500 (CDT)
+Subject: [OpenSPIM] Mailing list move is complete.
+Message-ID: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+
+Hi all,
+
+we now have a shiny new mailing list,  openspim at openspim.org no longer
+forwards to openspim at mpi-cbg.de but is a real mailing list with real
+subscription rather than the exclusive tightly-controlled predecessor.
+
+Please let me know if you have problems with it so I can fix them!
+
+Ciao,
+Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Wed May  8 14:09:03 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 8 May 2013 14:09:03 -0500 (CDT)
+Subject: [OpenSPIM] Mailing list move is complete.
+In-Reply-To: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+Message-ID: <alpine.DEB.1.00.1305081407500.8213@s15462909.onlinehome-server.info>
+
+Hi,
+
+On Wed, 8 May 2013, Johannes Schindelin wrote:
+
+> we now have a shiny new mailing list,  openspim at openspim.org no longer
+> forwards to openspim at mpi-cbg.de but is a real mailing list with real
+> subscription rather than the exclusive tightly-controlled predecessor.
+> 
+> Please let me know if you have problems with it so I can fix them!
+
+Of course I forgot to mention: the painless and swift switch to a mailing
+list was made possible by the always-helpful Curtis Rueden. If you want to
+thank anybody for this, thank him.
+
+Ciao,
+Johannes
+
+
+
+From eliceiri at wisc.edu  Wed May  8 14:11:13 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Wed, 08 May 2013 14:11:13 -0500
+Subject: [OpenSPIM] Mailing list move is complete.
+In-Reply-To: <alpine.DEB.1.00.1305081407500.8213@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1305081310070.8213@s15462909.onlinehome-server.info>
+	<alpine.DEB.1.00.1305081407500.8213@s15462909.onlinehome-server.info>
+Message-ID: <7740cd9e1a812.518a5d01@wiscmail.wisc.edu>
+
+thanks guys, great stuffk
+
+On 05/08/13, Johannes Schindelin  wrote:
+> Hi,
+> 
+> On Wed, 8 May 2013, Johannes Schindelin wrote:
+> 
+> > we now have a shiny new mailing list, openspim at openspim.org no longer
+> > forwards to openspim at mpi-cbg.de but is a real mailing list with real
+> > subscription rather than the exclusive tightly-controlled predecessor.
+> > 
+> > Please let me know if you have problems with it so I can fix them!
+> 
+> Of course I forgot to mention: the painless and swift switch to a mailing
+> list was made possible by the always-helpful Curtis Rueden. If you want to
+> thank anybody for this, thank him.
+> 
+> Ciao,
+> Johannes
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From Johannes.Schindelin at gmx.de  Thu May  9 17:06:36 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 9 May 2013 17:06:36 -0500 (CDT)
+Subject: [OpenSPIM] OpenSPIM Wiki spring time cleaning
+Message-ID: <alpine.DEB.1.00.1305091658590.8213@s15462909.onlinehome-server.info>
+
+Dear fans of OpenSPIM,
+
+The following accounts on the OpenSPIM Wiki have not only been inactive,
+but in fact never activated:
+
+Aureliaomega registered on 11:09, 7 May 2013
+Fahrbach registered on 14:35, 12 October 2012
+Flyer2o13 registered on 21:12, 4 May 2013
+Freddy registered on 13:18, 29 September 2012
+Krieger registered on 14:10, 24 December 2012
+Olaf registered on 15:45, 24 September 2012
+Reynaud registered on 07:59, 25 September 2012
+Schmid registered on 14:36, 12 October 2012
+Shah registered on 14:38, 12 October 2012
+
+I encourage those of you who actually want to contribute to authenticate
+using the link you got in your mail on the respective dates. All
+still-unauthenticated accounts will be deleted in the very short-term
+future.
+
+Ciao,
+Johannes
+
+
+
+From skf-ee at ipt.rwth-aachen.de  Tue May 14 09:43:20 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Tue, 14 May 2013 16:43:20 +0200
+Subject: [OpenSPIM] About the OpenSPIM/Fiji package
+Message-ID: <OFFF592FE2.4B0B67A9-ONC1257B6B.0050DF25-C1257B6B.0050DF2A@ipt.rwth-aachen.de>
+
+Hi all,
+
+I have unpackaged the OpenSPIM/Fiji package and followed the instructions to
+make the update. After making the update I ran Micro-Manager Studio and
+an error appeared when Micro-Manager studio started:
+
+Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V
+
+Then I tried to open the Hardware Configuration Wizard and another error appaeared:
+
+Error: org.micromanager.MMStudioMainFrame.runHardwareWizard(MMStudioMainFrame.java:4763)
+
+I noticed that if I don't make the update I have no problems with Micro-Manager.
+I would like to know how neccesary is to make the updated of the Fiji software.
+
+Thanks a lot in advance.
+Kind regards,
+Edgar Escobar Nieto
+_________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+Steinbachstraße 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130514/39885c32/attachment-0002.html>
+
+From wjs at buffalo.edu  Thu May 16 09:01:50 2013
+From: wjs at buffalo.edu (Wade Sigurdson)
+Date: Thu, 16 May 2013 10:01:50 -0400
+Subject: [OpenSPIM] [openspim] laser questions
+In-Reply-To: <alpine.DEB.1.00.1303141653310.3794@s15462909.onlinehome-server.info>
+References: <5141C5A3.3020907@buffalo.edu>
+	<alpine.DEB.1.00.1303141653310.3794@s15462909.onlinehome-server.info>
+Message-ID: <5194E6CE.8070702@buffalo.edu>
+
+Hi Johannes,
+
+We are making good progress on our Open SPIM project.  Machining almost 
+done and we just received the USB Pickard stage.
+
+I'm now trying the get the software working.  I use Fiji all the time 
+for image processing (great package and a pleasure to use) and so am 
+familiar with installation and operation.  But when I installed the 
+OpenSPIM version and opened MicroManager Studio I get the following 
+error window:
+
+Failed to open libMMCoreJ_wrap.jnilib
+mmcorej.MMCoreJJNI.swig_module_init()V
+
+The MM window opens, but when I try to run the Hardware config wizard I 
+get the following:
+
+org.micromanager.MMStudioMainFrame.run HardwareWizard 
+(MMStudioMainFrame.java:4763)
+
+which I'm guessing is due to the first error.
+
+I looked around at the MM forum for some ideas on what might be wrong 
+and even tried copying the MMCoreJ_wrap.dll into the OpenSPIM root 
+directory, but still have the error.
+
+Is there something wrong with my XP environment variables or is there a 
+path I need to configure?
+
+Thanks for any help.
+
+Wade
+On 03/14/2013 11:58 AM, Johannes Schindelin wrote:
+> Hi Wade,
+>
+> On Thu, 14 Mar 2013, Wade Sigurdson wrote:
+>
+>> We are planning on building the OpenSPIM system as described on your
+>> wiki page and are trying to re-purpose an Ar/Kr laser from an old
+>> Bio-Rad Confocal as the illumination source.  For the 488nm line, I
+>> measured about 2mW  output from the fiber optic after aligning the laser
+>> launch.
+>>
+>> We could easily design and make a mount for the fiber optic which would
+>> replace the Coherent laser in your original plans, but is this enough
+>> power to be usable?
+> IIRC we often drive it with about 1mW or even less, so you should be fine.
+> Note, however, that we needed computer control over the laser in long-term
+> time-lapse recordings because the specimen bleached too much otherwise.
+>
+>> Since this is a proof of principle project and if we get the system
+>> working without purchasing the diode laser, we likely could interest
+>> other potential uses to contribute money to the project.
+>>
+>> We also have in hand a Zeiss 63x/1.0 water immersion objective which we
+>> may interested in using as a replacement for the Olympus 20x lens. Could
+>> this be used with the Olympus tube lens without introducing significant
+>> aberrations?  I believe that Zeiss does some chromatic aberration
+>> correction in the tube lens of their microscopes, but have no idea if
+>> the  Olympus tube lens would be compatible with Zeiss objectives.
+> The tube lens is on the illumination side, for which I would stay with a
+> 10x lens. On the detection side, we have a 20x objective that might be
+> easily replaced by your 63x objective. I am no optics expert and depending
+> who I asked, I got encouraging and discouraging answers whether it would
+> work to replace the detection objective with a different magnification
+> one.
+>
+> Ciao,
+> Johannes
+>
+>
+
+-- 
+*Wade J. Sigurdson, Ph.D.
+Director, Confocal Microscope and Flow Cytometry Facility
+School of Medicine and Biomedical Sciences
+University at Buffalo
+*
+Voice - 716-829-3589
+FAX - 716-829-3589
+wjs at buffalo.edu
+www.smbs.buffalo.edu/confocal
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130516/a095a0f8/attachment-0002.html>
+
+From john.lim at imb.a-star.edu.sg  Fri May 17 03:37:20 2013
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Fri, 17 May 2013 16:37:20 +0800
+Subject: [OpenSPIM] Thickness of Open SPIM Light Sheet
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B303A00318D2FD@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Dear All,
+
+Can I please find out the thickness of the light sheet generated by the Open SPIM system and how can we measure the thickness of the light sheet in the Open SPIM setup?
+
+Thank You,
+John
+
+
+From Johannes.Schindelin at gmx.de  Mon May 20 15:57:02 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 20 May 2013 22:57:02 +0200 (CEST)
+Subject: [OpenSPIM] Getting the code back on track
+Message-ID: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+
+Hi Luke,
+
+thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+will summarize a few points to keep everybody interested in the loop:
+
+- since Microsoft does not allow redistribution of the debug libraries, we
+  had to recompile everything in release mode
+
+- there was a bug that would prevent release mode from working correctly:
+  it still included debug information
+
+- the old redistributable libraries (i.e. Visual Studio 2008's) required a
+  manifest to be loaded (a small .xml file)
+
+- some setting in Micro-Manager enforces compatibility with the old
+  runtime libraries (as can be seen in
+  MMCoreJ_wrap.dll.intermediate.manifest)
+
+- we therefore need to ship
+
+	- the old runtime libraries
+	- the old runtime manifest
+	- the new runtime
+	- the manifest for MMCoreJ_wrap.dll
+
+Now, in my tests on the VM (you have credentials to log in), I could start
+Micro-Manager again, without getting thos unsatisfied links.
+
+May I ask you to check a couple of things, still?
+
+- I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+  retry with ImageJ-win32.exe? I think the change was not actually needed.
+
+- Could you try without 2010 runtime libraries in mm/Win32/? I think they
+  are needed, but it would be nice to know.
+
+- The name "intermediate" suggests that Micro-Manager's build process does
+  something funny to that manifest. Could you please check that? "git grep
+  intermediate" should tell
+
+Thank you!
+Dscho
+
+
+
+From stuyvenberg at wisc.edu  Mon May 20 16:55:14 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 20 May 2013 16:55:14 -0500
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+References: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7690d38ad025f.519a9101@wiscmail.wisc.edu>
+	<76a0f593d6213.519a913d@wiscmail.wisc.edu>
+	<7680df0fd7ae8.519a917a@wiscmail.wisc.edu>
+	<7720d188d4298.519a91b6@wiscmail.wisc.edu>
+	<7750838dd5fda.519a93d5@wiscmail.wisc.edu>
+	<7680f500d658a.519a9412@wiscmail.wisc.edu>
+	<7720d93cd46f7.519a9451@wiscmail.wisc.edu>
+	<7620999dd11bb.519a948d@wiscmail.wisc.edu>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.wisc.edu>
+	<7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+Message-ID: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+
+Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+
+We believe we have a solution for the "Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V" bug.
+
+
+First, a reply to Johannes' e-mail:
+
+
+Regarding the things we have to ship:
+- Obviously the old runtime and manifest are already included.
+- The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+
+
+Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+- The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+- Removing the runtime DLLs does break it again. They have to be present.
+- As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+
+
+Now, the promised aside to Edgar and Wade:
+
+
+The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+
+
+You should get a few things:
+- A new ImageJ-win32.exe that will find the right files.
+- Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+- msvcr100.dll and msvcp100.dll, the new runtime.
+
+
+After updating, please try launching Micro-Manager again!
+
+
+Thank you,
+Luke Stuyvenberg
+
+
+On 05/20/13, Johannes Schindelin  wrote:
+> Hi Luke,
+> 
+> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+> will summarize a few points to keep everybody interested in the loop:
+> 
+> - since Microsoft does not allow redistribution of the debug libraries, we
+> had to recompile everything in release mode
+> 
+> - there was a bug that would prevent release mode from working correctly:
+> it still included debug information
+> 
+> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+> manifest to be loaded (a small .xml file)
+> 
+> - some setting in Micro-Manager enforces compatibility with the old
+> runtime libraries (as can be seen in
+> MMCoreJ_wrap.dll.intermediate.manifest)
+> 
+> - we therefore need to ship
+> 
+> - the old runtime libraries
+> - the old runtime manifest
+> - the new runtime
+> - the manifest for MMCoreJ_wrap.dll
+> 
+> Now, in my tests on the VM (you have credentials to log in), I could start
+> Micro-Manager again, without getting thos unsatisfied links.
+> 
+> May I ask you to check a couple of things, still?
+> 
+> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+> retry with ImageJ-win32.exe? I think the change was not actually needed.
+> 
+> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+> are needed, but it would be nice to know.
+> 
+> - The name "intermediate" suggests that Micro-Manager's build process does
+> something funny to that manifest. Could you please check that? "git grep
+> intermediate" should tell
+> 
+> Thank you!
+> Dscho
+
+
+
+From wjs at buffalo.edu  Tue May 21 08:34:48 2013
+From: wjs at buffalo.edu (Wade Sigurdson)
+Date: Tue, 21 May 2013 09:34:48 -0400
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+References: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7720d93cd46f7.519a9451@wiscmail.wisc.edu>
+	<7620999dd11bb.519a948d@wiscmail.wisc.edu>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.wisc.edu>
+	<7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+	<75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+Message-ID: <519B77F8.2080405@buffalo.edu>
+
+Hi Luke,
+
+Tried the new, updated version and all seems to be working.  No error 
+messages and I was able to start the hardware wizard and configure the 
+stage and camera.
+
+Only caveat is that I had to delete the OPEN_SPIM folder where the 
+download zip had been extracted and re-extract the zip. Then after doing 
+the FIJI upgrade the MM Studio plugin worked. Trying to simply upgrade 
+the previously installed version resulted in the same error. I'm not 
+sure if there was something that I had done in trying to get MM Studio 
+to function before your modifications or if the software needs to have 
+all the upgrades applied in a specific order.
+
+Still waiting on our machine shop to finish a few items, but will keep 
+the list updated once we get the system assembled, aligned and imaging.
+
+Thanks to all.
+
+Wade
+On 05/20/2013 05:55 PM, Luke Stuyvenberg wrote:
+> Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+>
+> We believe we have a solution for the "Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V" bug.
+>
+>
+> First, a reply to Johannes' e-mail:
+>
+>
+> Regarding the things we have to ship:
+> - Obviously the old runtime and manifest are already included.
+> - The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+> However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+>
+>
+> Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+> - The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+> - Removing the runtime DLLs does break it again. They have to be present.
+> - As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+> You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+>
+>
+> Now, the promised aside to Edgar and Wade:
+>
+>
+> The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+>
+>
+> You should get a few things:
+> - A new ImageJ-win32.exe that will find the right files.
+> - Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+> - msvcr100.dll and msvcp100.dll, the new runtime.
+>
+>
+> After updating, please try launching Micro-Manager again!
+>
+>
+> Thank you,
+> Luke Stuyvenberg
+>
+>
+> On 05/20/13, Johannes Schindelin  wrote:
+>> Hi Luke,
+>>
+>> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+>> will summarize a few points to keep everybody interested in the loop:
+>>
+>> - since Microsoft does not allow redistribution of the debug libraries, we
+>> had to recompile everything in release mode
+>>
+>> - there was a bug that would prevent release mode from working correctly:
+>> it still included debug information
+>>
+>> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+>> manifest to be loaded (a small .xml file)
+>>
+>> - some setting in Micro-Manager enforces compatibility with the old
+>> runtime libraries (as can be seen in
+>> MMCoreJ_wrap.dll.intermediate.manifest)
+>>
+>> - we therefore need to ship
+>>
+>> - the old runtime libraries
+>> - the old runtime manifest
+>> - the new runtime
+>> - the manifest for MMCoreJ_wrap.dll
+>>
+>> Now, in my tests on the VM (you have credentials to log in), I could start
+>> Micro-Manager again, without getting thos unsatisfied links.
+>>
+>> May I ask you to check a couple of things, still?
+>>
+>> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+>> retry with ImageJ-win32.exe? I think the change was not actually needed.
+>>
+>> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+>> are needed, but it would be nice to know.
+>>
+>> - The name "intermediate" suggests that Micro-Manager's build process does
+>> something funny to that manifest. Could you please check that? "git grep
+>> intermediate" should tell
+>>
+>> Thank you!
+>> Dscho
+>
+
+-- 
+*Wade J. Sigurdson, Ph.D.
+Director, Confocal Microscope and Flow Cytometry Facility
+School of Medicine and Biomedical Sciences
+University at Buffalo
+*
+Voice - 716-829-3589
+FAX - 716-829-3589
+wjs at buffalo.edu
+www.smbs.buffalo.edu/confocal
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130521/9fd05b96/attachment-0002.html>
+
+From Johannes.Schindelin at gmx.de  Tue May 21 10:33:18 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 May 2013 17:33:18 +0200 (CEST)
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <519B77F8.2080405@buffalo.edu>
+References: <alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.wisc.edu>
+	<7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+	<75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+	<519B77F8.2080405@buffalo.edu>
+Message-ID: <alpine.DEB.1.00.1305211725460.650@s15462909.onlinehome-server.info>
+
+Hi Wade,
+
+On Tue, 21 May 2013, Wade Sigurdson wrote:
+
+> Tried the new, updated version and all seems to be working.  No error
+> messages and I was able to start the hardware wizard and configure the
+> stage and camera.
+
+Great!
+
+> Only caveat is that I had to delete the OPEN_SPIM folder where the
+> download zip had been extracted and re-extract the zip. Then after doing
+> the FIJI upgrade the MM Studio plugin worked. Trying to simply upgrade
+> the previously installed version resulted in the same error. I'm not
+> sure if there was something that I had done in trying to get MM Studio
+> to function before your modifications or if the software needs to have
+> all the upgrades applied in a specific order.
+
+Well, it seems you hit a bug in the updater here because it should not
+matter at all in which order the upgrades are applied.
+
+If it happens again, may I ask you to just zip up the complete
+(non-working) OpenSpim.app/ directory and upload it via Help>Upload Sample
+File?
+
+> Still waiting on our machine shop to finish a few items, but will keep
+> the list updated once we get the system assembled, aligned and imaging.
+
+Cool! When you have a working setup, maybe you could take a photo and post
+information here: http://openspim.org/Who_has_an_OpenSPIM%3F
+
+Ciao,
+Johannes
+
+
+
+From skf-ee at ipt.rwth-aachen.de  Wed May 22 05:00:49 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Wed, 22 May 2013 12:00:49 +0200
+Subject: [OpenSPIM] laser questions, About the OpenSPIM/Fiji package,
+ Getting the code back on track
+In-Reply-To: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>
+References: <75a0a8c7d3212.519a5572@wiscmail.wisc.edu>,
+	<alpine.DEB.1.00.1305202236301.650@s15462909.onlinehome-server.info>
+	<7690d38ad025f.519a9101@wiscmail.wisc.edu>
+	<76a0f593d6213.519a913d@wiscmail.wisc.edu>
+	<7680df0fd7ae8.519a917a@wiscmail.wisc.edu>
+	<7720d188d4298.519a91b6@wiscmail.wisc.edu>
+	<7750838dd5fda.519a93d5@wiscmail.wisc.edu>
+	<7680f500d658a.519a9412@wiscmail.wisc.edu>
+	<7720d93cd46f7.519a9451@wiscmail.wisc.edu>
+	<7620999dd11bb.519a948d@wiscmail.wisc.edu>
+	<7750a6f5d1677.519a94c9@wiscmail.wisc.edu>
+	<7630c6acd7b6f.519a9508@wiscmail.wisc.edu>
+	<7790aae0d1a76.519a9545@wiscmail.wisc.edu>
+	<762090add4e62.519a9581@wiscmail.wisc.edu>
+	<7620d97dd36a0.519a95bd@wiscmail.wisc.edu>
+	<7620d020d462e.519a95fa@wiscmail.wisc.edu>
+	<7680e557d7896.519a9672@wiscmail.wisc.edu>
+	<7690937ed4fa9.519a96ed@wiscmail.wisc.edu>
+	<7790a4b7d319d.519a972a@wiscmail.wisc.edu>
+	<76b0aedbd6398.519a9769@wiscmail.wisc.edu>
+	<75a096e9d6957.519a97a5@wiscmail.wisc.edu>
+	<75a08581d11c0.519a97e1@wiscmail.w
+	isc.edu> <7750cc0ad061a.519a981e@wiscmail.wisc.edu>
+	<7620cbcad0ab2.519a9899@wiscmail.wisc.edu>
+	<7630c50ed6fec.519a9af4@wiscmail.wisc.edu>
+	<76a084bcd14a5.519a9b30@wiscmail.wisc.edu>
+	<75d0bd70d23d4.519a9b6f@wiscmail.wisc.edu>
+	<7720bdd0d7c57.519a9bab@wiscmail.wisc.edu>
+Message-ID: <OFC93CB2F2.57933509-ONC1257B73.003701B8-C1257B73.003701BF@ipt.rwth-aachen.de>
+
+Hi Luke,
+
+I have updated the OpenSPIM/Fiji package and now errors are not present anymore when
+I launch the µManager plugin.
+
+Thanks a lot,
+Edgar
+_________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+
+Steinbachstraße 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+
+
+
+
+
+-----Luke Stuyvenberg <stuyvenberg at wisc.edu> schrieb: ----- 
+An: Johannes Schindelin <Johannes.Schindelin at gmx.de>, Wade Sigurdson <wjs at buffalo.edu>, Edgar Escobar Nieto <skf-ee at ipt.rwth-aachen.de>
+Von: Luke Stuyvenberg <stuyvenberg at wisc.edu>
+Datum: 20.05.2013 23:55
+Kopie: openspim at openspim.org
+Betreff: Re: laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+
+
+Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+
+We believe we have a solution for the "Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V" bug.
+
+
+First, a reply to Johannes' e-mail:
+
+
+Regarding the things we have to ship:
+- Obviously the old runtime and manifest are already included.
+- The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+
+
+Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+- The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+- Removing the runtime DLLs does break it again. They have to be present.
+- As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+
+
+Now, the promised aside to Edgar and Wade:
+
+
+The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+
+
+You should get a few things:
+- A new ImageJ-win32.exe that will find the right files.
+- Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+- msvcr100.dll and msvcp100.dll, the new runtime.
+
+
+After updating, please try launching Micro-Manager again!
+
+
+Thank you,
+Luke Stuyvenberg
+
+
+On 05/20/13, Johannes Schindelin  wrote:
+> Hi Luke,
+> 
+> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+> will summarize a few points to keep everybody interested in the loop:
+> 
+> - since Microsoft does not allow redistribution of the debug libraries, we
+> had to recompile everything in release mode
+> 
+> - there was a bug that would prevent release mode from working correctly:
+> it still included debug information
+> 
+> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+> manifest to be loaded (a small .xml file)
+> 
+> - some setting in Micro-Manager enforces compatibility with the old
+> runtime libraries (as can be seen in
+> MMCoreJ_wrap.dll.intermediate.manifest)
+> 
+> - we therefore need to ship
+> 
+> - the old runtime libraries
+> - the old runtime manifest
+> - the new runtime
+> - the manifest for MMCoreJ_wrap.dll
+> 
+> Now, in my tests on the VM (you have credentials to log in), I could start
+> Micro-Manager again, without getting thos unsatisfied links.
+> 
+> May I ask you to check a couple of things, still?
+> 
+> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+> retry with ImageJ-win32.exe? I think the change was not actually needed.
+> 
+> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+> are needed, but it would be nice to know.
+> 
+> - The name "intermediate" suggests that Micro-Manager's build process does
+> something funny to that manifest. Could you please check that? "git grep
+> intermediate" should tell
+> 
+> Thank you!
+> Dscho
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130522/864254c7/attachment-0002.html>
+
+From skf-ee at ipt.rwth-aachen.de  Wed May 22 05:35:26 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Wed, 22 May 2013 12:35:26 +0200
+Subject: [OpenSPIM] About the illumination source (laser)
+Message-ID: <OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aachen.de>
+
+Hi to all,
+
+I am having some options and at the same time some problems about the illumination source for the SPIM system.
+
+The firs option is a CoolLED pE-1 system http://www.coolled.com/Life-Sciences-Analytical/Products/pE-1/ with a Led of 470 nm wavelength, the problem of this illumination system is that the output light is not very well collimated, and the diamater of the light is so big. I have found out that there is a fiber adaptor http://www.coolled.com/Life-Sciences-Analytical/Products/pE-100F/ for this system. My question is that if after
+the fiber, the light will be as collimated and coherent as a laser source? The good thing is that this system
+is already supported by µManager.
+
+The second option is a NKT Photonics SuperK EXTREME http://www.nktphotonics.com/superkextreme?cid=7858, this one is a very good laser source, but the problem is that it is not supported by µManager.
+
+Have somebody had some issues like the ones I am having?
+Thank you very much in advance, suggestions are welcome.
+
+Edgar Escobar Nieto
+_________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+
+Steinbachstraße 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130522/80326385/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Wed May 22 09:09:56 2013
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 22 May 2013 16:09:56 +0200 (CEST)
+Subject: [OpenSPIM] About the illumination source (laser)
+In-Reply-To: <OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aa
+	chen.de>
+References: <OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aachen.de>
+Message-ID: <38471.10.1.36.128.1369231796.squirrel@webmail.mpi-cbg.de>
+
+
+Hello Edgar,
+
+Get the laser!! I've wanted to do this for a while: all you need are normal fluorescent filters on
+a six position filter wheel to filter out the light for excitation, and a Quad or Penta Emission
+filter. You would then have an extremely versatile imaging system.
+
+My $0.02
+
+Have a good one!!
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Wed, May 22, 2013 12:35 pm, skf-ee at ipt.rwth-aachen.de wrote:
+<|> Hi to all,
+<|>
+<|> I am having some options and at the same time some problems about the illumination source for the
+<|> SPIM system.
+<|>
+<|> The firs option is a CoolLED pE-1 system
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-1/ with a Led of 470 nm wavelength,
+<|> the problem of this illumination system is that the output light is not very well collimated, and
+<|> the diamater of the light is so big. I have found out that there is a fiber adaptor
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-100F/ for this system. My question is
+<|> that if after
+<|> the fiber, the light will be as collimated and coherent as a laser source? The good thing is that
+<|> this system
+<|> is already supported by µManager.
+<|>
+<|> The second option is a NKT Photonics SuperK EXTREME
+<|> http://www.nktphotonics.com/superkextreme?cid=7858, this one is a very good laser source, but the
+<|> problem is that it is not supported by µManager.
+<|>
+<|> Have somebody had some issues like the ones I am having?
+<|> Thank you very much in advance, suggestions are welcome.
+<|>
+<|> Edgar Escobar Nieto
+<|> _________________________________________________________________________
+<|>
+<|> Fraunhofer-Institut für Produktionstechnologie IPT
+<|> Edgar Escobar Nieto
+<|>
+<|>
+<|>
+<|>
+<|> Steinbachstraße 17
+<|> 52074 Aachen
+<|>
+<|> skf-ee at ipt.rwth-aachen.de
+<|> http://www.ipt.fraunhofer.de
+<|>
+________________________________________________________________________________________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+
+From skf-ee at ipt.rwth-aachen.de  Wed May 22 15:52:35 2013
+From: skf-ee at ipt.rwth-aachen.de (skf-ee at ipt.rwth-aachen.de)
+Date: Wed, 22 May 2013 22:52:35 +0200
+Subject: [OpenSPIM] About the illumination source (laser)
+In-Reply-To: <38471.10.1.36.128.1369231796.squirrel@webmail.mpi-cbg.de>
+References: <38471.10.1.36.128.1369231796.squirrel@webmail.mpi-cbg.de>,
+	<OF38A991C4.1C8A2F0C-ONC1257B73.003A2CF4-C1257B73.003A2CF7@ipt.rwth-aachen.de>
+Message-ID: <OFD0A946A3.74068733-ONC1257B73.0072ADB2-C1257B73.0072ADB8@ipt.rwth-aachen.de>
+
+Hello Peter,
+
+I will use the Laser, however it is not portable, it is a very good illumination source. I think I won't need filter for excitation
+since this laser is of variable wavelength and has accesories like variable and tunable filters. About the emission filter it is a
+good idea to have a quad or penta band filter. Right now I have a band pass filter especially for GFP intended for the first
+experiments.
+
+Kind regards,
+Edgar
+_________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto 
+
+
+
+
+Steinbachstraße 17 
+52074 Aachen 
+
+skf-ee at ipt.rwth-aachen.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+
+
+-----"Peter Gabriel Pitrone" <pitrone at mpi-cbg.de> schrieb: -----
+An: skf-ee at ipt.rwth-aachen.de
+Von: "Peter Gabriel Pitrone" <pitrone at mpi-cbg.de>
+Datum: 22.05.2013 16:10
+Kopie: openspim at openspim.org
+Betreff: Re: [OpenSPIM] About the illumination source (laser)
+
+Hello Edgar,
+
+Get the laser!! I've wanted to do this for a while: all you need are normal fluorescent filters on
+a six position filter wheel to filter out the light for excitation, and a Quad or Penta Emission
+filter. You would then have an extremely versatile imaging system.
+
+My $0.02
+
+Have a good one!!
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Wed, May 22, 2013 12:35 pm, skf-ee at ipt.rwth-aachen.de wrote:
+<|> Hi to all,
+<|>
+<|> I am having some options and at the same time some problems about the illumination source for the
+<|> SPIM system.
+<|>
+<|> The firs option is a CoolLED pE-1 system
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-1/ with a Led of 470 nm wavelength,
+<|> the problem of this illumination system is that the output light is not very well collimated, and
+<|> the diamater of the light is so big. I have found out that there is a fiber adaptor
+<|> http://www.coolled.com/Life-Sciences-Analytical/Products/pE-100F/ for this system. My question is
+<|> that if after
+<|> the fiber, the light will be as collimated and coherent as a laser source? The good thing is that
+<|> this system
+<|> is already supported by µManager.
+<|>
+<|> The second option is a NKT Photonics SuperK EXTREME
+<|> http://www.nktphotonics.com/superkextreme?cid=7858, this one is a very good laser source, but the
+<|> problem is that it is not supported by µManager.
+<|>
+<|> Have somebody had some issues like the ones I am having?
+<|> Thank you very much in advance, suggestions are welcome.
+<|>
+<|> Edgar Escobar Nieto
+<|> _________________________________________________________________________
+<|>
+<|> Fraunhofer-Institut für Produktionstechnologie IPT
+<|> Edgar Escobar Nieto
+<|>
+<|>
+<|>
+<|>
+<|> Steinbachstraße 17
+<|> 52074 Aachen
+<|>
+<|> skf-ee at ipt.rwth-aachen.de
+<|> http://www.ipt.fraunhofer.de
+<|>
+________________________________________________________________________________________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130522/c0c8cb25/attachment-0002.html>
+
+From eliceiri at wisc.edu  Mon May 27 21:38:50 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Mon, 27 May 2013 21:38:50 -0500
+Subject: [OpenSPIM] Preparing for increased response with release of Nature
+	Methods paper
+In-Reply-To: <7580eac26028b.51a4187e@wiscmail.wisc.edu>
+References: <7710d5d064d24.51a41713@wiscmail.wisc.edu>
+	<76a0db53671c0.51a4174f@wiscmail.wisc.edu>
+	<77408b696759a.51a4178c@wiscmail.wisc.edu>
+	<7720c80c613ce.51a417c8@wiscmail.wisc.edu>
+	<77508be363f29.51a41805@wiscmail.wisc.edu>
+	<7580c6ac65092.51a41841@wiscmail.wisc.edu>
+	<7580eac26028b.51a4187e@wiscmail.wisc.edu>
+Message-ID: <76c08cfa6541d.51a3d26a@wiscmail.wisc.edu>
+
+Hi All,
+
+Pavel and I were talking today, and we both talking about how to prepare for the increased activity once the paper goes out. To prepare for this, we have the following plan:
+
+
+1) We are actively pursuing funding including a planned grant in September to help support software in particular (in addition to hardware). But in meantime LOCI's priority will be to support the configuration as listed on the openspim webpage, and fix any problems with that. Any support for new hardware will be limited and labs wanting to use new unsupported hardware should be aware of this priority and also be encourage to add support themselves. I will be in touch about the grant this summer but if any of you have wish lists for OpenSPIM development (hardware and software) please let me know. Pavel will be sending me his. 
+
+
+2) Improved documentation for OpenSpim Analysis, Pavel will be adding a section to OpenSPIM.org before the paper comes out about how to do analysis. We will all help, in particular there is another LOCI scientist (Julie last) who is starting to use openspim for zebrafish imaging and she can help with the documentation.
+
+
+3) Also this summer we will be doing a JOVE hardware paper with Pavel (with section on software) that will be filmed in Dresden. This will help complement the NM paper. Pavel plans on sending a first draft of this to all of us in July.
+
+
+thanks everyone
+best
+kevin
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From eliceiri at wisc.edu  Mon May 27 21:47:25 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Mon, 27 May 2013 21:47:25 -0500
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+Message-ID: <7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+
+also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+
+Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+
+
+best
+k
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From tomancak at mpi-cbg.de  Tue May 28 02:17:47 2013
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Tue, 28 May 2013 09:17:47 +0200
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+Message-ID: <5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+
+> also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+
+We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+
+> 
+> Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+
+Yes, good idea, I will include it into my SPIMage processing tutorial.
+
+All the best
+
+PAvel
+
+> 
+> 
+> best
+> k
+> 
+> --
+> Kevin W. Eliceiri
+> Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> Departments Cell and Molecular Biology and Biomedical Engineering
+> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> Phone: 608-263-6288
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+
+From weber at mpi-cbg.de  Tue May 28 04:04:30 2013
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Tue, 28 May 2013 11:04:30 +0200
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+	<5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+Message-ID: <4E2E7A2A-58E7-43D4-BBD2-F88D2084EE1A@mpi-cbg.de>
+
+We have a Jove publication regarding fish mounting in the loop. Once it's published I can contribute a "fish mounting" section with the current embedding strategies. I will also work on a bead sample protocol.
+
+Best,
+Michael
+
+
+On May 28, 2013, at 9:17 AM, Pavel Tomancak <tomancak at mpi-cbg.de> wrote:
+
+>> also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+> 
+> We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+> 
+>> 
+>> Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+> 
+> Yes, good idea, I will include it into my SPIMage processing tutorial.
+> 
+> All the best
+> 
+> PAvel
+> 
+>> 
+>> 
+>> best
+>> k
+>> 
+>> --
+>> Kevin W. Eliceiri
+>> Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+>> Departments Cell and Molecular Biology and Biomedical Engineering
+>> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+>> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+>> Phone: 608-263-6288
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20130528/86c697b5/attachment-0002.html>
+
+From eliceiri at wisc.edu  Tue May 28 05:29:23 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Tue, 28 May 2013 05:29:23 -0500
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <4E2E7A2A-58E7-43D4-BBD2-F88D2084EE1A@mpi-cbg.de>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+	<5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+	<4E2E7A2A-58E7-43D4-BBD2-F88D2084EE1A@mpi-cbg.de>
+Message-ID: <7700d24ef0f03.51a440b3@wiscmail.wisc.edu>
+
+sounds great. 
+
+best
+kevin
+
+On 05/28/13, Michael Weber  wrote:
+> 
+> 
+> 
+> We have a Jove publication regarding fish mounting in the loop. Once it's published I can contribute a "fish mounting" section with the current embedding strategies. I will also work on a bead sample protocol.
+> 
+> 
+> Best,
+> Michael
+> 
+> 
+> 
+> On May 28, 2013, at 9:17 AM, Pavel Tomancak <tomancak at mpi-cbg.de <tomancak at mpi-cbg.de>> wrote:
+> 
+> 
+> > 
+> > > also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+> > > 
+> > 
+> > We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+> > 
+> > 
+> > > 
+> > > Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+> > > 
+> > 
+> > Yes, good idea, I will include it into my SPIMage processing tutorial.
+> > 
+> > All the best
+> > 
+> > PAvel
+> > 
+> > 
+> > > 
+> > > 
+> > > best
+> > > k
+> > > 
+> > > --
+> > > Kevin W. Eliceiri
+> > > Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> > > Departments Cell and Molecular Biology and Biomedical Engineering
+> > > Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> > > Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> > > Phone: 608-263-6288
+> > > 
+> > > _______________________________________________
+> > > OpenSPIM mailing list
+> > > OpenSPIM at openspim.org <OpenSPIM at openspim.org>
+> > > http://openspim.org/mailman/listinfo/openspim
+> > > 
+> > 
+> > 
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org <OpenSPIM at openspim.org>
+> > http://openspim.org/mailman/listinfo/openspim
+> > 
+> 
+> 
+> _____________
+> 
+> Michael Weber
+> PhD Student, Huisken lab
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstrasse 108, 01307 Dresden
+> Tel. 0049 351/2102837
+> 
+> http://www.mpi-cbg.de/huisken
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From eliceiri at wisc.edu  Tue May 28 05:29:45 2013
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Tue, 28 May 2013 05:29:45 -0500
+Subject: [OpenSPIM] standards/test samples for OpenSpim
+In-Reply-To: <5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+References: <75808ac167384.51a41a40@wiscmail.wisc.edu>
+	<76b080e566b32.51a41a80@wiscmail.wisc.edu>
+	<76708eb767a8b.51a41abc@wiscmail.wisc.edu>
+	<7670cf71646ac.51a3d46d@wiscmail.wisc.edu>
+	<5B9FFCE6-E849-4525-875A-C9B835DBB935@mpi-cbg.de>
+Message-ID: <7700d2ebf7152.51a440c9@wiscmail.wisc.edu>
+
+great, thanks Pavel.
+
+best
+k
+
+On 05/28/13, Pavel Tomancak  wrote:
+> > also it would be good for us to have on the site, some good test samples that people could use for testing their spim system. Any ideas? Could describe simple fly or fish mount. But perhaps a fluorescent bead sample? 
+> 
+> We have an extremely detailed protocol for Drosophila sample preparation. Fish would be good of course.
+> 
+> > 
+> > Also would be good to have a example raw data set (for download) so folks can try SPIM registration.
+> 
+> Yes, good idea, I will include it into my SPIMage processing tutorial.
+> 
+> All the best
+> 
+> PAvel
+> 
+> > 
+> > 
+> > best
+> > k
+> > 
+> > --
+> > Kevin W. Eliceiri
+> > Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> > Departments Cell and Molecular Biology and Biomedical Engineering
+> > Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> > Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> > Phone: 608-263-6288
+> > 
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From stuyvenberg at wisc.edu  Tue May 28 16:20:34 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Tue, 28 May 2013 16:20:34 -0500
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290043020.8213@s15462909.onlinehome-server.info>
+	<517E162E.9070101@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290950590.8213@s15462909.onlinehome-server.info>
+	<51820BF4.6000705@bii.a-star.edu.sg>
+	<7720a3cb4e9a.5182c3c2@wiscmail.wisc.edu>
+	<7720e0d11c24.5182c3fe@wiscmail.wisc.edu>
+	<7780ca69983.5182c43a@wiscmail.wisc.edu>
+	<7680e9762394.5182c477@wiscmail.wisc.edu>
+	<7670b3ad4af4.5182c4ef@wiscmail.wisc.edu>
+	<771090a8688b.5182c52c@wiscmail.wisc.edu>
+	<7680b33758ae.5182d94b@wiscmail.wisc.edu>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+Message-ID: <76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+
+Chaohui,
+
+Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -> Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+
+Thanks,
+Luke Stuyvenberg
+
+On 05/02/13, "HUANG, Chao-Hui" wrote:
+> Dear Johnnaes,
+> 
+> Thanks.
+> 
+> May I ask if the OpenSPIM on Github is updated?
+> 
+> Actually I really suggest to test the problem that I mentioned. We've
+> found that problem on PVCAM, and it can be happened either 64, 32 bits
+> on DemoCamera. Of course, if in the same configuration, it would not be
+> happened on your side, that will be another story :-)
+> 
+> Sincerely,
+> 
+> Chaohui
+> 
+> On 29/04/2013 23:04, Johannes Schindelin wrote:
+> > Hi Chaohui,
+> >
+> > On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+> >
+> >> We are glad to see that the code will be updated soon.
+> > Don't hold your breath, though ;-)
+> >
+> >> Just in the case that you might not aware. We found a problem in 1/31
+> >> binary version. When you click snap on the live window of MM, you can
+> >> only click one time. after the first time snap, the button is not going
+> >> to update the live view screen.
+> >>
+> >> This problem can be happened even using DemoCamera.
+> >>
+> >> Are you aware this?
+> > No, I wasn't, and in fact, I did not have that problem. But then, I
+> > haven't used the DemoCamera in a while...
+> >
+> > Ciao,
+> > Johannes
+> >
+> 
+> 
+> -- 
+> HUANG, Chao-Hui (Ph.D.)
+> -----------------------
+> Research Fellow
+> Bioinformatic Institute, Agency for Science, Technology Research
+> National University of Singapore
+> Singapore Mobile: +65 92426558
+> Singapore Office: +65 64788353
+> Taiwan Mobile: +886 928338607
+> Email 1: ch at mail2000.com.tw
+> Email 2: huangch at bii.a-star.edu.sg
+> WWW: http://web.bii-sg.org/~huangch/
+
+
+
+From huangch at bii.a-star.edu.sg  Wed May 29 03:02:29 2013
+From: huangch at bii.a-star.edu.sg (HUANG Chao-Hui)
+Date: Wed, 29 May 2013 16:02:29 +0800
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290043020.8213@s15462909.onlinehome-server.info>
+	<517E162E.9070101@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290950590.8213@s15462909.onlinehome-server.info>
+	<51820BF4.6000705@bii.a-star.edu.sg>
+	<7720a3cb4e9a.5182c3c2@wiscmail.wisc.edu>
+	<7720e0d11c24.5182c3fe@wiscmail.wisc.edu>
+	<7780ca69983.5182c43a@wiscmail.wisc.edu>
+	<7680e9762394.5182c477@wiscmail.wisc.edu>
+	<7670b3ad4af4.5182c4ef@wiscmail.wisc.edu>
+	<771090a8688b.5182c52c@wiscmail.wisc.edu>
+	<7680b33758ae.5182d94b@wiscmail.wisc.edu>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+Message-ID: <51A5B615.2020305@bii.a-star.edu.sg>
+
+Hi Luke,
+
+Thanks for replying. I would like to provide more information about the 
+package.
+
+I am not sure but it might be because of inconsistent of the source 
+code. I've found it will have problems when using java classes from 3rd 
+party folder. I have some problems when I was trying to compile it by my 
+own (and yes I solved the not-to-snap problem by build it from source 
+code).
+
+Actually I even have to make some modification on the downloaded source 
+code. By following the instruction on OpenSPIM web site, it will not 
+generate the same binary executable as the mentioned zip file. I think 
+there are some inconsistent problem on the actual souce code the source 
+code you used to build the zip file, including the 3rd party folder, 
+perhaps different versions of the jar files?), and the one which can be 
+downloaded from the github.
+
+A more solid example is, when compiling, according to the instruction, 
+we have to import the classes from ''3rdpartypublic\classext''. But when 
+running it, I think the code invoked the classes from jars folder in 
+somewhere under micromanager folder.
+
+I would like to suggest if that is possible, maybe it would be better to 
+to go for a full synchronization? Of course if you have tested and 
+verified the code from the github, this is not an issue anymore.
+
+Sincerely,
+
+Chaohui
+
+
+On 29/5/2013 5:20 AM, Luke Stuyvenberg wrote:
+> Chaohui,
+>
+> Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -> Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+> We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+>
+> Thanks,
+> Luke Stuyvenberg
+>
+> On 05/02/13, "HUANG, Chao-Hui" wrote:
+>> Dear Johnnaes,
+>>
+>> Thanks.
+>>
+>> May I ask if the OpenSPIM on Github is updated?
+>>
+>> Actually I really suggest to test the problem that I mentioned. We've
+>> found that problem on PVCAM, and it can be happened either 64, 32 bits
+>> on DemoCamera. Of course, if in the same configuration, it would not be
+>> happened on your side, that will be another story :-)
+>>
+>> Sincerely,
+>>
+>> Chaohui
+>>
+>> On 29/04/2013 23:04, Johannes Schindelin wrote:
+>>> Hi Chaohui,
+>>>
+>>> On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+>>>
+>>>> We are glad to see that the code will be updated soon.
+>>> Don't hold your breath, though ;-)
+>>>
+>>>> Just in the case that you might not aware. We found a problem in 1/31
+>>>> binary version. When you click snap on the live window of MM, you can
+>>>> only click one time. after the first time snap, the button is not going
+>>>> to update the live view screen.
+>>>>
+>>>> This problem can be happened even using DemoCamera.
+>>>>
+>>>> Are you aware this?
+>>> No, I wasn't, and in fact, I did not have that problem. But then, I
+>>> haven't used the DemoCamera in a while...
+>>>
+>>> Ciao,
+>>> Johannes
+>>>
+>>
+>> -- 
+>> HUANG, Chao-Hui (Ph.D.)
+>> -----------------------
+>> Research Fellow
+>> Bioinformatic Institute, Agency for Science, Technology Research
+>> National University of Singapore
+>> Singapore Mobile: +65 92426558
+>> Singapore Office: +65 64788353
+>> Taiwan Mobile: +886 928338607
+>> Email 1: ch at mail2000.com.tw
+>> Email 2: huangch at bii.a-star.edu.sg
+>> WWW: http://web.bii-sg.org/~huangch/
+
+
+
+
+From alexis at maizel.net  Wed May 29 10:50:19 2013
+From: alexis at maizel.net (Alexis Maizel)
+Date: Wed, 29 May 2013 17:50:19 +0200
+Subject: [OpenSPIM] HamamatsuHam, Windows 7 & OpenSPIM
+Message-ID: <6AC67ADA-D916-4905-93ED-94A75B3169F1@cos.uni-heidelberg.de>
+
+Hi there,
+
+I use an ORCA Flash4 in our OpenSPIM setup but I run into severe problems regarding its integration with the OpenSPIM software. 
+
+The latest  DCAM drivers (Feb 2013) brought compatibility with windows 7 (what we run on) and allow the integration and use of e.g. an Orca Flash4 in micro-manager (MM v1.4.13) using the HamamatsuHam device adapter . I tested this in a standalone MM and it works great. 
+
+However, as the current micro-manager code base used by OpenSPIM is anterior (seems to be MM v1.4.9), this latest  HamamatsuHam device adapter is not recognised/loaded by the OpenSPIM software.
+
+Unless I am mistaken, in order  to have this  HamamatsuHam device adapter compatible with OpenSPIM, the OpenSPIM/MicroManager code  has to be brought in sync to the current MM version 1.4.13/14; which in other words mean, recompiling OpenSPIM using the latest Micromanager source code, correct?
+
+I have been struggling for several weeks now to try to do just that…
+
+First, and unfortunately for me,  the OpenSPIM development environment installer (http://openspim.org/downloads/OpenSPIM-dev-env-20130201.exe) which is supposed to make it really easy for everyone, did not work for me (it hangs and does not fetch the different sources). So I had to go the "hard way" and download, configure everything properly (d/l the boostPro libs, Ant, JDK, PATHs configurations, etc…). After a few hours of sweating, I troubleshooted almost everything. However, I am far from the described step " by clicking on Build>Build Solution or by pressing the F7 key" everything builds auto-magically.
+
+If I understood correctly, to get a functional OpenSPIM software compatible with MM v1.4.13, I have to , a minima,  recompile:
+- MMCore
+- MMcoreJ_wrap
+- Any  DeviceAdapter I  need (OpenSPIM, Cobolt, etc…) or on which the MMCoreJ_wrap depends (SerialManager, …)
+- mmstudio
+- SPIMAcquisition
+
+I have questions regarding the last 2:
+- mmstudio: about 40 devices adapters are listed as dependencies (AAOTF, etc…). Do I have to recompile them or it will be OK to forget about them (assuming I do not need them) or adding them from the current MM release? It is unclear whether I can recompile this in Visual Studio or using Ant. 
+
+- SPIMAcquisition: that's a JAVA plugin how do I do that? Using Ant?
+
+I have the feeling that I am getting lost in territories that have been charted by others before. 
+At this point I could really benefit from help of any good samaritans in the community to point me into the right directions to help me recompile the whole OpenSPIM using a more recent MM code base. In my opinion, this effort would actually benefit the whole community, as I am probably not the only one which may suffer from OpenSPIM  being based on a several-month old MM release. 
+
+Best,
+
+Alexis
+ 
+
+
+From stuyvenberg at wisc.edu  Wed May 29 15:21:28 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 29 May 2013 15:21:28 -0500
+Subject: [OpenSPIM] HamamatsuHam, Windows 7 & OpenSPIM
+In-Reply-To: <7780c8e86d06f.51a66280@wiscmail.wisc.edu>
+References: <6AC67ADA-D916-4905-93ED-94A75B3169F1@cos.uni-heidelberg.de>
+	<7790d7716cb17.51a642a6@wiscmail.wisc.edu>
+	<76d0ab6d6fbb6.51a642e4@wiscmail.wisc.edu>
+	<76e0ffdb6d124.51a64320@wiscmail.wisc.edu>
+	<76e0aa3468adc.51a6435c@wiscmail.wisc.edu>
+	<76e0815b6e873.51a64399@wiscmail.wisc.edu>
+	<7650bb1b6acd7.51a643d5@wiscmail.wisc.edu>
+	<7690a2d96ee2d.51a64411@wiscmail.wisc.edu>
+	<77909cd06d80a.51a6444e@wiscmail.wisc.edu>
+	<76d0f56d6be62.51a6448a@wiscmail.wisc.edu>
+	<76508f036a096.51a644c7@wiscmail.wisc.edu>
+	<7620c48f6a08a.51a64503@wiscmail.wisc.edu>
+	<76b0e66f6c738.51a6453f@wiscmail.wisc.edu>
+	<76909b6f6e7ff.51a645b8@wiscmail.wisc.edu>
+	<7790c1db6d07f.51a645f4@wiscmail.wisc.edu>
+	<76b0e07f6c11c.51a64632@wiscmail.wisc.edu>
+	<76b0aefb68cd8.51a6466e@wiscmail.wisc.edu>
+	<7780d6ce6ae2f.51a646ab@wiscmail.wisc.edu>
+	<7780ad5f6965c.51a646e7@wiscmail.wisc.edu>
+	<7660c0d26c891.51a64724@wiscmail.wisc.edu>
+	<7620f6e66d346.51a64760@wiscmail.wisc.edu>
+	<7620c3256dae7.51a6479d@wiscmail.wisc.edu>
+	<7670cb8469d0c.51a647d9@wiscmail.wisc.edu>
+	<7670fb796eb32.51a64815@wiscmail.wisc.edu>
+	<7650d9c56f60f.51a64852@wiscmail.wisc.edu>
+	<765096e26f1bd.51a6488e@wiscmail.wisc.edu>
+	<7670d5e0686e1.51a64909@wiscmail.wisc.edu>
+	<7690f5b56cff9.51a64946@wiscmail.wisc.edu>
+	<7660baf46c161.51a64d7e@wiscmail.wisc.edu>
+	<7650b2236f025.51a64dbb@wiscmail.wisc.edu>
+	<76b0e12f69003.51a64eea@wiscmail.wisc.edu>
+	<7670beeb6c1d2.51a65055@wiscmail.wisc.edu>
+	<77808f9f6dc04.51a65094@wiscmail.wisc.edu>
+	<7650bae56d1f5.51a65187@wiscmail.wisc.edu>
+	<7790f0ec6a555.51a651c5@wiscmail.wisc.edu>
+	<7690f9486a03a.51a65240@wiscmail.wisc.edu>
+	<76d0f4636a41c.51a6527d@wiscmail.wisc.edu>
+	<7660bc3868091.51a652f8@wiscmail.wisc.edu>
+	<7790ba396cbf4.51a65335@wiscmail.wisc.edu>
+	<766088fc6f012.51a65371@wiscmail.wisc.edu>
+	<77908f2b6a2a5.51a653b0@wiscmail.wisc.edu>
+	<76d085346a794.51a653ed@wiscmail.wisc.edu>
+	<76b0e19b6dff5.51a65429@wiscmail.wisc.edu>
+	<76d0d9db6e1a8.51a65774@wiscmail.wisc.edu>
+	<7650b9c26f054.51a657b0@wiscmail.wisc.edu>
+	<7650c0686e0a0.51a657ed@wiscmail.wisc.edu>
+	<76509b0769f8b.51a6582a@wiscmail.wisc.edu>
+	<7620a2986e3aa.51a66023@wiscmail.wisc.edu>
+	<7690d9ca6ec58.51a66060@wiscmail.wisc.edu>
+	<76509d366ad83.51a6609c@wiscmail.wisc.edu>
+	<7740de7d6f7ca.51a660d8@wiscmail.wisc.edu>
+	<7690a2116eeaf.51a66115@wiscmail.wisc.edu>
+	<7690ba9668eeb.51a66151@wiscmail.wisc.edu>
+	<76b0ad07682c3.51a6618e@wiscmail.wisc.edu>
+	<7780920e68587.51a661cb@wiscmail.wisc.edu>
+	<76e0c9946fdbc.51a66208@wiscmail.wisc.edu>
+	<7780c8e86d06f.51a66280@wiscmail.wisc.edu>
+Message-ID: <7670897768185.51a61cf8@wiscmail.wisc.edu>
+
+Hello Alexis,
+
+A little over a month ago, we finished rebasing the OpenSPIM source code onto the (then) latest Micro-Manager code. If you fully update your OpenSPIM installation (Help -> Update Fiji), when you launch Micro-Manager it should register as 'v1.4.x dev' (I believe the code was between 1.4.13 and 1.4.14). I just tested now (Windows XP, freshly up-to-date OpenSPIM-20130131.zip, with an Orca R^2), and the software can load the mmgr_dal_HamamatsuHam.dll file included in the latest MM nightly build. I can't make any certain statements about support for Windows 7, unfortunately, since our goal at present is to maximize support for Windows XP first.
+
+
+Regarding the development environment, I'm actively working on bringing it up-to-date, and your assistance in this would be invaluable -- I was hoping you might test something for me: Please try downloading https://dl.dropboxusercontent.com/u/57890359/OpenSPIM-dev-env-20130529.exe and installing it. This is a newer version of the installer, and hopefully should at least finish putting everything into place.
+
+
+You are also correct about the necessary steps for building a functional OpenSPIM installation. To answer your questions:
+1. a) I believe the mmstudio project only has the device adapters as dependencies to ensure they are built at all. You should be able to build it without compiling them first.
+b) mmstudio is meant to be built by ant -- using the build32.xml file in its directory. However, the Visual Studio project has been configured to do just that, as long as your directory structure has '3rdpartypublic' alongside 'micromanager'.
+
+
+2. The SPIM Acquisition plugin is also built by ant. Unfortunately, there isn't a neat way to do this quite yet -- you can call it from the command line (within plugins/SPIMAcquisition) with ../../../3rdpartypublic/apache-ant-1.6.5/bin/ant -buildfile build.xml
+
+
+A few extra notes regarding compiling from source:
+- Please make sure you're using the latest version of the source code, obtained from github.com/openspim -- preferably using Git for Windows.
+- If you're feeling a little daring and haven't already done so, I'd recommend moving to Visual C++ 2010 Express, available for free from Microsoft. The latest code from github includes the project and solution files used by 2010, and even an (experimental) build script -- build-openspim.sh, meant to replace build.sh -- which builds the necessary objects.
+
+
+Thank you for your help,
+Luke Stuyvenberg
+
+On 05/29/13, Alexis Maizel  wrote:
+> Hi there,
+> 
+> I use an ORCA Flash4 in our OpenSPIM setup but I run into severe problems regarding its integration with the OpenSPIM software. 
+> 
+> The latest DCAM drivers (Feb 2013) brought compatibility with windows 7 (what we run on) and allow the integration and use of e.g. an Orca Flash4 in micro-manager (MM v1.4.13) using the HamamatsuHam device adapter . I tested this in a standalone MM and it works great. 
+> 
+> However, as the current micro-manager code base used by OpenSPIM is anterior (seems to be MM v1.4.9), this latest HamamatsuHam device adapter is not recognised/loaded by the OpenSPIM software.
+> 
+> Unless I am mistaken, in order to have this HamamatsuHam device adapter compatible with OpenSPIM, the OpenSPIM/MicroManager code has to be brought in sync to the current MM version 1.4.13/14; which in other words mean, recompiling OpenSPIM using the latest Micromanager source code, correct?
+> 
+> I have been struggling for several weeks now to try to do just that…
+> 
+> First, and unfortunately for me, the OpenSPIM development environment installer (http://openspim.org/downloads/OpenSPIM-dev-env-20130201.exe) which is supposed to make it really easy for everyone, did not work for me (it hangs and does not fetch the different sources). So I had to go the "hard way" and download, configure everything properly (d/l the boostPro libs, Ant, JDK, PATHs configurations, etc…). After a few hours of sweating, I troubleshooted almost everything. However, I am far from the described step " by clicking on Build>Build Solution or by pressing the F7 key" everything builds auto-magically.
+> 
+> If I understood correctly, to get a functional OpenSPIM software compatible with MM v1.4.13, I have to , a minima, recompile:
+> - MMCore
+> - MMcoreJ_wrap
+> - Any DeviceAdapter I need (OpenSPIM, Cobolt, etc…) or on which the MMCoreJ_wrap depends (SerialManager, …)
+> - mmstudio
+> - SPIMAcquisition
+> 
+> I have questions regarding the last 2:
+> - mmstudio: about 40 devices adapters are listed as dependencies (AAOTF, etc…). Do I have to recompile them or it will be OK to forget about them (assuming I do not need them) or adding them from the current MM release? It is unclear whether I can recompile this in Visual Studio or using Ant. 
+> 
+> - SPIMAcquisition: that's a JAVA plugin how do I do that? Using Ant?
+> 
+> I have the feeling that I am getting lost in territories that have been charted by others before. 
+> At this point I could really benefit from help of any good samaritans in the community to point me into the right directions to help me recompile the whole OpenSPIM using a more recent MM code base. In my opinion, this effort would actually benefit the whole community, as I am probably not the only one which may suffer from OpenSPIM being based on a several-month old MM release. 
+> 
+> Best,
+> 
+> Alexis
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From stuyvenberg at wisc.edu  Wed May 29 17:02:41 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 29 May 2013 17:02:41 -0500
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <7780b3d06c461.51a67521@wiscmail.wisc.edu>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290043020.8213@s15462909.onlinehome-server.info>
+	<517E162E.9070101@bii.a-star.edu.sg>
+	<alpine.DEB.1.00.1304290950590.8213@s15462909.onlinehome-server.info>
+	<51820BF4.6000705@bii.a-star.edu.sg>
+	<7720a3cb4e9a.5182c3c2@wiscmail.wisc.edu>
+	<7720e0d11c24.5182c3fe@wiscmail.wisc.edu>
+	<7780ca69983.5182c43a@wiscmail.wisc.edu>
+	<7680e9762394.5182c477@wiscmail.wisc.edu>
+	<7670b3ad4af4.5182c4ef@wiscmail.wisc.edu>
+	<771090a8688b.5182c52c@wiscmail.wisc.edu>
+	<7680b33758ae.5182d94b@wiscmail.wisc.edu>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+	<51A5B615.2020305@bii.a-star.edu.sg>
+	<7780b3d06c461.51a67521@wiscmail.wisc.edu>
+Message-ID: <7660d08a71dac.51a634b1@wiscmail.wisc.edu>
+
+Hi Chaohui,
+
+The classes from "3rdpartypublic\classext" should be identical to the classes in "bin_Win32\jars". The instructions say to use the files in classext because, before compiling mmstudio, they are not in bin_Win32 -- I think they are copied when mmstudio is compiled.
+
+
+Compiling from source will download the latest binary executable, which might be why it doesn't match the executable in the zip file. The zip file is getting old, but I plan to replace it with a new version soon, which shouldn't have any of these problems.
+
+
+The latest code from github shouldn't have this problem any more, and most users should be able to get rid of it by updating (Help -> Update Fiji).
+
+
+Thank you for your help!
+
+
+Sincerely,
+Luke Stuyvenberg
+
+
+On 05/29/13, HUANG Chao-Hui  wrote:
+> Hi Luke,
+> 
+> Thanks for replying. I would like to provide more information about the package.
+> 
+> I am not sure but it might be because of inconsistent of the source code. I've found it will have problems when using java classes from 3rd party folder. I have some problems when I was trying to compile it by my own (and yes I solved the not-to-snap problem by build it from source code).
+> 
+> Actually I even have to make some modification on the downloaded source code. By following the instruction on OpenSPIM web site, it will not generate the same binary executable as the mentioned zip file. I think there are some inconsistent problem on the actual souce code the source code you used to build the zip file, including the 3rd party folder, perhaps different versions of the jar files?), and the one which can be downloaded from the github.
+> 
+> A more solid example is, when compiling, according to the instruction, we have to import the classes from ''3rdpartypublic\classext''. But when running it, I think the code invoked the classes from jars folder in somewhere under micromanager folder.
+> 
+> I would like to suggest if that is possible, maybe it would be better to to go for a full synchronization? Of course if you have tested and verified the code from the github, this is not an issue anymore.
+> 
+> Sincerely,
+> 
+> Chaohui
+> 
+> 
+> On 29/5/2013 5:20 AM, Luke Stuyvenberg wrote:
+> >Chaohui,
+> >
+> >Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -> Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+> >We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+> >
+> >Thanks,
+> >Luke Stuyvenberg
+> >
+> >On 05/02/13, "HUANG, Chao-Hui" wrote:
+> >>Dear Johnnaes,
+> >>
+> >>Thanks.
+> >>
+> >>May I ask if the OpenSPIM on Github is updated?
+> >>
+> >>Actually I really suggest to test the problem that I mentioned. We've
+> >>found that problem on PVCAM, and it can be happened either 64, 32 bits
+> >>on DemoCamera. Of course, if in the same configuration, it would not be
+> >>happened on your side, that will be another story :-)
+> >>
+> >>Sincerely,
+> >>
+> >>Chaohui
+> >>
+> >>On 29/04/2013 23:04, Johannes Schindelin wrote:
+> >>>Hi Chaohui,
+> >>>
+> >>>On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+> >>>
+> >>>>We are glad to see that the code will be updated soon.
+> >>>Don't hold your breath, though ;-)
+> >>>
+> >>>>Just in the case that you might not aware. We found a problem in 1/31
+> >>>>binary version. When you click snap on the live window of MM, you can
+> >>>>only click one time. after the first time snap, the button is not going
+> >>>>to update the live view screen.
+> >>>>
+> >>>>This problem can be happened even using DemoCamera.
+> >>>>
+> >>>>Are you aware this?
+> >>>No, I wasn't, and in fact, I did not have that problem. But then, I
+> >>>haven't used the DemoCamera in a while...
+> >>>
+> >>>Ciao,
+> >>>Johannes
+> >>>
+> >>
+> >>-- 
+> >>HUANG, Chao-Hui (Ph.D.)
+> >>-----------------------
+> >>Research Fellow
+> >>Bioinformatic Institute, Agency for Science, Technology Research
+> >>National University of Singapore
+> >>Singapore Mobile: +65 92426558
+> >>Singapore Office: +65 64788353
+> >>Taiwan Mobile: +886 928338607
+> >>Email 1: ch at mail2000.com.tw
+> >>Email 2: huangch at bii.a-star.edu.sg
+> >>WWW: http://web.bii-sg.org/~huangch/
+
+
+
+From Johannes.Schindelin at gmx.de  Fri May 31 15:18:10 2013
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 May 2013 22:18:10 +0200 (CEST)
+Subject: [OpenSPIM] Switching from DropBox to BitTorrent Sync
+Message-ID: <alpine.DEB.1.00.1305312215340.650@s15462909.onlinehome-server.info>
+
+Hi all,
+
+we are switching from the DropBox (which is very limiting) to a BitTorrent
+Sync system:
+
+	http://labs.bittorrent.com/experiments/sync.html
+
+Basically, it is the same as DropBox except that files are only stored
+locally (i.e. if no other participating computer is online, you'll not get
+the latest updates), *and* you can have multiple "accounts" identified by
+secret keys.
+
+Ciao,
+Dscho
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SPIM with no laser control
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIM%20with%20no%20laser%20control&In-Reply-To=%3C7740ab4842157.524c4e6b%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000205.html">
+   <LINK REL="Next"  HREF="000207.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SPIM with no laser control</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIM%20with%20no%20laser%20control&In-Reply-To=%3C7740ab4842157.524c4e6b%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] SPIM with no laser control">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Oct  2 16:48:43 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000205.html">[OpenSPIM] Temperature Control for the SPIM chamber
+</A></li>
+        <LI>Next message: <A HREF="000207.html">[OpenSPIM] SPIM with no laser control
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#206">[ date ]</a>
+              <a href="thread.html#206">[ thread ]</a>
+              <a href="subject.html#206">[ subject ]</a>
+              <a href="author.html#206">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Aurelia,
+
+Is the ThorLabs shutter set as the default shutter for your setup? (i.e. does it respond to Micro-Manager's auto-shutter functionality?) This is specified during hardware configuration. If so, please attach a core log (any should do, as long as you got the 'setup is invalid' warning) -- the SPIM device manager should be trying to use it as a laser; if this isn't happening, an exception may be appearing in the core log. If the issue is as simple as this, I may be able to fix it with minimal work, which is arguably preferable to the alternative.
+
+
+The alternative: Although the ThorLabs shutter *should* be supported as a 'generic laser', it is possible to specifically add support for the device, though it requires some Java programming. If you're already familiar with our development environment (see&#160;<A HREF="http://openspim.org/How_to_build_the_software&#160;--">http://openspim.org/How_to_build_the_software&#160;--</A> fair warning: setting up the development environment can take some time), the place to start is plugins/SPIMAcquisition/src/main/java/; in here are various files like PicardStage.java and CoherentCube.java. I recommend reading the top of PicardStage.java for an explanation of the block at the top of the class, then copying and renaming CoherentCube.java to i.e. ThorLabsShutter.java. Rename the contained class and change the string &quot;CoherentCube&quot; to the appropriate device name -- according to the device adapter source code in DeviceAdapters/ThorlabsSC10/, the right string is &quot;SC10&quot; -- and change the rest of the functions however you see fit.
+
+
+Thanks,
+Luke
+
+On 10/01/13, Aurelia Honerkamp-Smith  wrote:
+&gt;<i> Hi everyone, 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I guess now is a good time to mention that I built my SPIM using a laser line we already had instead of purchasing the Coherent Cube, by diverting the existing line to the SPIM with a flip mirror and a periscope. Laser power control is manual. The fact that I have no laser connected is causing a problem for SPIM acquisition, though. I get an error message that my setup is invalid when I first start the plugin; then, although acquisition through the Video tab works OK, I can&#39;t acquire a regular stack or timelapse: I get &quot;Error acquiring: null&quot; when I push the Oh Snap button. I need to change the plugin so that it ignores the laser power control, and uses a Thorlabs shutter for blinking instead of the laser. I realize this might be a tall order, so I&#39;m ready to start working on it myself, but I would appreciate being pointed in the right direction for how to do this most efficiently. 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks again, 
+</I>&gt;<i> Aurelia
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Fri, Sep 27, 2013 at 12:03 PM, Aurelia Honerkamp-Smith &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>(javascript:main.compose()&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; Perfect, the 26 September nightly build version of the PVCAM adapter has cleared up my live view problem! Thanks very much, I am so happy! 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Aurelia
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On Fri, Sep 27, 2013 at 4:15 AM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>(javascript:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; On Thu, 26 Sep 2013, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Thanks for this latest update: it has almost fixed my PVCAM problem.
+</I>&gt;<i> &gt; &gt; &gt; Now I can load the camera, and since the last update I no longer get a
+</I>&gt;<i> &gt; &gt; &gt; time-out error message when I use the live view. But, the live window
+</I>&gt;<i> &gt; &gt; &gt; opens and displays an image, then it doesn&#39;t refresh, so I see the same
+</I>&gt;<i> &gt; &gt; &gt; image until I stop and start live view again. I can now run the Open
+</I>&gt;<i> &gt; &gt; &gt; SPIM plugin, but have to keep stopping and starting live view in order
+</I>&gt;<i> &gt; &gt; &gt; to see what is going on with my calibration sample. I&#39;m so close! Any
+</I>&gt;<i> &gt; &gt; &gt; suggestions for fixing this? Live view through my camera works fine in
+</I>&gt;<i> &gt; &gt; &gt; a plain, non-Fiji and non-OpenSPIM installation of Micromanager, so I
+</I>&gt;<i> &gt; &gt; &gt; can align and take pictures at the moment, but I want to use your lovely
+</I>&gt;<i> &gt; &gt; &gt; plugin.
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Yes, I seem to remember other reports of this trouble (also with PVCAM, if I recall correctly), though I had thought them resolved... I believe Johannes is correct, and synchronizing with Micro-Manager may resolve this issue. I&#39;ve started work on this, but the process is (frustratingly) intricate, and might take some time. In the future I hope to make the process unnecessary.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; As a temporary measure, you should have no trouble using the PVCAM device adapter from the Micro-Manager nightly build (The file should be wherever you installed the &#39;vanilla&#39; Micro-Manager to; simply copy it to OpenSPIM&#39;s &quot;mm/win32&quot; directory -- it may ask you to overwrite). If you decide to try this, please let me know how it works out.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;
+</I>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000205.html">[OpenSPIM] Temperature Control for the SPIM chamber
+</A></li>
+	<LI>Next message: <A HREF="000207.html">[OpenSPIM] SPIM with no laser control
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#206">[ date ]</a>
+              <a href="thread.html#206">[ thread ]</a>
+              <a href="subject.html#206">[ subject ]</a>
+              <a href="author.html#206">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20All%20C%2B%2B%20developers%3A%20Transition%20to%20Visual%20Studio%202010&In-Reply-To=%3CCAKGYTB%3Df%3D6X%2BUjqz7LqofLzqLAuG-5UBzRAkm4nqUEP%3D47%3D_Kw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001182.html">
+   <LINK REL="Next"  HREF="001201.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] All C++ developers: Transition to Visual Studio 2010</H1>
+    <B>Mark Tsuchida</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20All%20C%2B%2B%20developers%3A%20Transition%20to%20Visual%20Studio%202010&In-Reply-To=%3CCAKGYTB%3Df%3D6X%2BUjqz7LqofLzqLAuG-5UBzRAkm4nqUEP%3D47%3D_Kw%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] All C++ developers: Transition to Visual Studio 2010">marktsuchida at gmail.com
+       </A><BR>
+    <I>Wed Oct  9 12:32:50 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001182.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+        <LI>Next message: <A HREF="001201.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1192">[ date ]</a>
+              <a href="thread.html#1192">[ thread ]</a>
+              <a href="subject.html#1192">[ subject ]</a>
+              <a href="author.html#1192">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi All,
+
+On Thu, Oct 3, 2013 at 6:34 PM, Mark Tsuchida &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt; wrote:
+&gt;<i> Micro-Manager's Windows build is soon to make a long overdue switch from Visual
+</I>&gt;<i> Studio 2008 SP1 to Visual Studio 2010 SP1.
+</I>[...]
+&gt;<i> Currently, I have a private branch of MM building with VS2010. The VS2010
+</I>&gt;<i> branch is maintained so that it is based off a recent head of the SVN trunk.
+</I>&gt;<i> I plan to merge this branch with the trunk, if nothing goes wrong, on
+</I>&gt;<i>
+</I>&gt;<i>   Thursday, October 10.
+</I>&gt;<i>
+</I>&gt;<i> The nightly builds will also switch to using VS2010 at that time.
+</I>&gt;<i>
+</I>&gt;<i> The consequence of the merge will be that all VS2008 project files (.vcproj)
+</I>&gt;<i> will be removed and corresponding VS2010 project files (.vcxproj) will be
+</I>&gt;<i> added. In addition, various changes will be made to allow MM to build with
+</I>&gt;<i> VS2010.
+</I>[...]
+&gt;<i> The source code, patch set, and binary installers for the VS2010 branch are
+</I>&gt;<i> available here:
+</I>&gt;<i> <A HREF="http://valelab.ucsf.edu/~mtsuchida/ephemeral/expires-20131031/vs2010/">http://valelab.ucsf.edu/~mtsuchida/ephemeral/expires-20131031/vs2010/</A>
+</I>
+I have updated the patch set and installers (available from the same
+link). The VS2010 test build now includes changes on the SVN trunk up
+to yesterday (20131008 PDT).
+
+I have also added a patch (22/22) that renames the Visual Studio
+project files for some of the device adapters, where the name did not
+match the name of the device adapter (the device adapter name is
+generated from the project name in the Visual Studio solution used to
+build, which, confusingly, can differ from the project filename). This
+is a good opportunity to eliminate the inconsistency, since the
+filenames are changing anyway (from .vcproj to .vcxproj). The
+directory names containing the device adapter projects are also often
+inconsistent with the project name and adapter name, but I'm leaving
+this unchanged to prevent confusion (and repository administration
+complexities).
+
+All this will be merged to the trunk tomorrow (Oct 10). We may briefly
+disable write access to the repository during the merge; progress will
+be posted here.
+
+Best,
+Mark
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001182.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+	<LI>Next message: <A HREF="001201.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1192">[ date ]</a>
+              <a href="thread.html#1192">[ thread ]</a>
+              <a href="subject.html#1192">[ subject ]</a>
+              <a href="author.html#1192">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

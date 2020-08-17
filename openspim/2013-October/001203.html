@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] [micro-manager-general] Picard stage
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20Picard%20stage&In-Reply-To=%3C74a0f6bc296b8.5265452e%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001200.html">
+   <LINK REL="Next"  HREF="001211.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] [micro-manager-general] Picard stage</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20Picard%20stage&In-Reply-To=%3C74a0f6bc296b8.5265452e%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] [micro-manager-general] Picard stage">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Mon Oct 21 15:15:58 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001200.html">[OpenSPIM] new acquisition problem: writing to disk SOLVED!
+</A></li>
+        <LI>Next message: <A HREF="001211.html">[OpenSPIM] [micro-manager-general] Picard stage
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1203">[ date ]</a>
+              <a href="thread.html#1203">[ thread ]</a>
+              <a href="subject.html#1203">[ subject ]</a>
+              <a href="author.html#1203">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Angela et al:
+
+As I've mentioned on the OpenSPIM mailing list, I'm currently in the process of synchronizing our version of Micro-Manager with the latest source code changes (to pull in the VS2012 updates and new build process). Thankfully, this is nearly complete; I expect to be finished in a few days. At that point, I'll update the version of the code we have on our Fiji update site; if you're using the OpenSPIM package (downloaded from our wiki), you should only need to update Fiji to get the latest version of Micro-Manager and the PicardStage adapter.
+
+
+Once that's complete, I'm hoping to simplify our source code quite a bit, so we can submit our device adapter to the Micro-Manager repository as Nico suggested; this way the device adapter will be included in the new builds of Micro-Manager, and so you'll need only download new versions of Micro-Manager as they are released. I'm hesitant to put an exact timeline on this step, but ideally it will happen within a week or two.
+
+
+In the mean time, you shouldn't have any trouble using our device adapter provided through our Fiji distribution. (If you are using the 32-bit version of Micro-Manager, it may also work to copy &quot;mmgr_dal_PicardStage.dll&quot; and &quot;PiUsb.dll&quot; from our mm/win32 directory to Micro-Manager's directory in Program Files.)
+
+
+Thanks,
+Luke Stuyvenberg
+
+On 10/21/13, Nico Stuurman  wrote:
+&gt;<i> Hi Angela,
+</I>&gt;<i> 
+</I>&gt;<i> &gt; I have a Picard stage which I can use with the 1.4.x dev MM version, but not with the last one-1.4.16.
+</I>&gt;<i> &gt; Indeed, in this last one the stage is not even found between the devices.
+</I>&gt;<i> 
+</I>&gt;<i> A little bit of searching showed that the OpenSPIM people have written a DeviceAdapter for the Picard Stage. It is not in our repository and I do not think that it was ever part of a Micro-Manager distribution. You can ask them to contribute the code to the Micro-Manager repository so that it will be incorporated in future builds.
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> 
+</I>&gt;<i> Nico
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------------------------
+</I>&gt;<i> October Webinars: Code for Performance
+</I>&gt;<i> Free Intel webinars can help you accelerate application performance.
+</I>&gt;<i> Explore tips for MPI, OpenMP, advanced profiling, and more. Get the most from 
+</I>&gt;<i> the latest Intel processors and coprocessors. See abstracts and register &gt;
+</I>&gt;<i> <A HREF="http://pubads.g.doubleclick.net/gampad/clk?id=60135031&amp;iu=/4140/ostg.clktrk">http://pubads.g.doubleclick.net/gampad/clk?id=60135031&amp;iu=/4140/ostg.clktrk</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> micro-manager-general mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>
+</I>&gt;<i> <A HREF="https://lists.sourceforge.net/lists/listinfo/micro-manager-general">https://lists.sourceforge.net/lists/listinfo/micro-manager-general</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001200.html">[OpenSPIM] new acquisition problem: writing to disk SOLVED!
+</A></li>
+	<LI>Next message: <A HREF="001211.html">[OpenSPIM] [micro-manager-general] Picard stage
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1203">[ date ]</a>
+              <a href="thread.html#1203">[ thread ]</a>
+              <a href="subject.html#1203">[ subject ]</a>
+              <a href="author.html#1203">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

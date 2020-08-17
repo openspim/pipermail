@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] 3D Reconstruction
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%203D%20Reconstruction&In-Reply-To=%3CHE1PR03MB10834B6B5E599670E1C403D2DD140%40HE1PR03MB1083.eurprd03.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001830.html">
+   <LINK REL="Next"  HREF="001835.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] 3D Reconstruction</H1>
+    <B>Windell, Dylan</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%203D%20Reconstruction&In-Reply-To=%3CHE1PR03MB10834B6B5E599670E1C403D2DD140%40HE1PR03MB1083.eurprd03.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] 3D Reconstruction">dw388 at exeter.ac.uk
+       </A><BR>
+    <I>Tue Nov 10 10:57:21 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001830.html">[OpenSPIM] 3D Reconstruction
+</A></li>
+        <LI>Next message: <A HREF="001835.html">[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D Reconstruction)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1831">[ date ]</a>
+              <a href="thread.html#1831">[ thread ]</a>
+              <a href="subject.html#1831">[ subject ]</a>
+              <a href="author.html#1831">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Pete,
+
+I have a cut micrometre slide stuck in a syringe which I use to check the laser sheet straightness as per OpenSPIM instructions followed by checking the embryos for image sharpness. I probably should be doing it with beads but I am more comfortable with an embryo as I am not 100% what an optimal bead scan would look like.
+
+Kind regards,
+
+Dylan
+
+From: Peter Gabriel Pitrone [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>]
+Sent: 10 November 2015 17:41
+To: Windell, Dylan &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;
+Cc: Pavel Tomancak &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt;; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: [OpenSPIM] 3D Reconstruction
+
+Hello Dylan,
+
+Can you tell me your light sheet alignment procedure that you do, hopefully before each experiment, maybe it could help exclude that possibility from the equation…
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &amp;
+<A HREF="http://www.openspim.org">http://www.openspim.org</A>
+
+&quot;I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who.&quot; Rudyard Kipling - The Elephant's Child
+
+
+
+On Nov 10, 2015, at 5:20 PM, Windell, Dylan &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;&gt; wrote:
+
+Dear Pavel,
+
+Thank you for your email. I just ran the registrations again on a couple of datasets I had. They were taken at 60 degrees apart at 10 or 20x magnification. The logs correspond with the raw data I have uploaded on my onedrive if you want to have a look at those too:
+
+<A HREF="http://1drv.ms/1M426qo">http://1drv.ms/1M426qo</A>
+
+I have purchased some wider borosilicate capillaries that might help in both having more volume for beads and ensuring the tube is dead straight. Zhung, you might find that helpful? I will be running tests on them very soon so would let you know. I will also try Vaa3D, thanks for the suggestion.
+
+Let me know if you need any more information.
+
+Thanks again,
+
+Dylan
+
+From: Pavel Tomancak [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>]
+Sent: 10 November 2015 13:33
+To: Windell, Dylan
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+Subject: Re: [OpenSPIM] 3D Reconstruction
+
+Dear Dylan,
+
+
+
+
+I have been trying to register Z-stacks of Zebrafish using the SPIM plugin with various concentrations of beads but despite everything I try I cannot get the beads to match with different angles.
+
+I am not sure if this is because of the light sheet not being aligned properly (I am calculating the PSF very soon and will re-align the system from scratch) or due to sample prep etc. I have corrected bead drifting (as this was evident in low concentrations of agarose) and I am pretty sure the xy and z resolution numbers are correct. I will attempt the Multiview reconstruction package, FluoRender or even ClearVolume but without bead registration working I am not sure if that will work either.
+
+Did you already run the multi-view reconstruction? Can you attach the ImageJ log.  I am particularly looking for numbers of beads and numbers of RANSAC inliers. That would be the way to start troubleshooting.
+
+
+
+Would it be possible that if the FEP tube is not straight, the manual positioning of the next angles would misalign bead registration? I have also thought that as the embryo fills up the tube, I am not getting enough volume of beads on either side of the stack for bead registration?
+
+That maybe a problem. There may be not enough beads in the OVERLAP between the views. You can visualise that in the Multiview Reconstruction application.
+
+I will help more after you send the logs or even deposit the data somewhere.
+
+All the best
+
+PAvel
+
+
+
+
+
+If anyone has had difficulty in this or have done work on Zebrafish with SPIM I would really appreciate any help.
+
+Kind regards,
+
+Dylan
+
+Dylan Windell
+Postgraduate Researcher
+College&lt;<A HREF="http://business-school.exeter.ac.uk/research/areas/centres/isr/">http://business-school.exeter.ac.uk/research/areas/centres/isr/</A>&gt; of Life and Environmental Sciences
+University of Exeter, Geoffrey Pope
+Stocker Road, Exeter EX4 4QD, UK
+phone: +44 (0) 7596725056
+email: <A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;
+
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+&lt;5um_140exp_3_angles.txt&gt;&lt;3um_3_angles.txt&gt;_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151110/2547cef4/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20151110/2547cef4/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001830.html">[OpenSPIM] 3D Reconstruction
+</A></li>
+	<LI>Next message: <A HREF="001835.html">[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D Reconstruction)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1831">[ date ]</a>
+              <a href="thread.html#1831">[ thread ]</a>
+              <a href="subject.html#1831">[ subject ]</a>
+              <a href="author.html#1831">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

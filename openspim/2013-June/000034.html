@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C775084217bb30.51ade50f%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000031.html">
+   <LINK REL="Next"  HREF="000036.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C775084217bb30.51ade50f%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Tue Jun  4 13:01:03 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000031.html">[OpenSPIM] MSIM
+</A></li>
+        <LI>Next message: <A HREF="000036.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#34">[ date ]</a>
+              <a href="thread.html#34">[ thread ]</a>
+              <a href="subject.html#34">[ subject ]</a>
+              <a href="author.html#34">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello Alexis,
+
+On 06/04/13, Alexis Maizel&#160;wrote:
+&gt;<i> Indeed it can now load the mmgr_dal_HamamatsuHam.dll
+</I>&gt;<i> Unfortunately, it still can not communicate properly with the Camera (OrcaFlash4). The errors messages I get are:
+</I>&gt;<i> Device HamamatsuHam_DCAM. Error in device HamamatsuHam_DCAM: Error code 40 (28 hex)
+</I>&gt;<i> Device HamamatsuHam_DCAM. Error in device HamamatsuHam_DCAM: Native Module failed to load
+</I>&gt;<i>&#160;
+</I>&gt;<i> What is really surprising is that the same device Adapter works perfectly (camera is operated and live stream works) when run into a 'standalone' MicroManager (tested: latest nightly build, v1.4.13 and v1.4.14). Therefore it seems that the issue resides into the MM version embedded into OpenSPIM (and/or that I am running Windows 7).
+</I>
+
+
+I think the difference, as Johannes mentioned, is Fiji's approach to memory usage. OpenSPIM uses the Fiji loader, which is generally greedy about memory, where (if I recall correctly) plain ImageJ (which the standalone MicroManager software runs off of) is more conservative. Specifying a sensible memory limit in Fiji should resolve the issue -- though oddly, I still get it the first time I start OpenSPIM after a reboot. Please let me know if you encounter the same issue.
+
+
+&gt;<i> Trying to downgrade to windows XP is something I have tried at the very beginning, but it seems the laptop we use is too modern for XP and after hours of attempts, I dropped that option. (I might add that in the medium-long term only supporting XP may really impair the 'Open' nature of OpenSPIM).&#160;
+</I>
+
+
+I agree completely; it would be excellent to get this software running on Windows 7 -- moreover, I aim to support x64. Now that Micro-Manager has released a 64-bit version, this is looking promising, though I have the suspicion it will entail another rebase.
+
+
+&gt;<i> Basically, it seems that the 7z archive extracts Git-related files, then I am presented with a command prompt inviting me to install Visual Express Studio (see screenshot). Nothing beyond this point.&#160;
+</I>
+
+
+Yes, this is the error the startup script provides when it doesn't find Visual C++ Express. Unfortunately, the script's current detection is limited to checking 'C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\VCExpress.exe' for existence -- meaning it expects an entirely normal hard drive setup and default VC Express installation. I hope to have an updated version of the script (and, with luck, perhaps another new installer) available in a few hours which will be considerably more flexible in its detection (hopefully, it will find and use VC Express 2008/2010 wherever it is installed, but in the worst case, you can change the aforementioned location by editing /src/micromanager/openspim.sh -- right at the top we tell it where to look).
+
+
+Thank you for your help!
+Luke Stuyvenberg
+
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000031.html">[OpenSPIM] MSIM
+</A></li>
+	<LI>Next message: <A HREF="000036.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#34">[ date ]</a>
+              <a href="thread.html#34">[ thread ]</a>
+              <a href="subject.html#34">[ subject ]</a>
+              <a href="author.html#34">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

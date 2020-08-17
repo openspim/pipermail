@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM in 64bit system?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20in%2064bit%20system%3F&In-Reply-To=%3CCANQL1Fta%2BwXdTWGDbJx6CmGkR86Fbz9x66n8VP0aC%2BGHiDoh3w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001456.html">
+   <LINK REL="Next"  HREF="001458.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM in 64bit system?</H1>
+    <B>Ke Li</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20in%2064bit%20system%3F&In-Reply-To=%3CCANQL1Fta%2BwXdTWGDbJx6CmGkR86Fbz9x66n8VP0aC%2BGHiDoh3w%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] OpenSPIM in 64bit system?">tianlankeke at gmail.com
+       </A><BR>
+    <I>Tue Jul  8 17:04:59 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001456.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+        <LI>Next message: <A HREF="001458.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1457">[ date ]</a>
+              <a href="thread.html#1457">[ thread ]</a>
+              <a href="subject.html#1457">[ subject ]</a>
+              <a href="author.html#1457">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>For base installation, you mean install the OpenSPIM/Fiji package here:
+<A HREF="http://openspim.org/Downloads">http://openspim.org/Downloads</A> again?
+
+I followed the troubleshooting instructions in the compatibility tab and
+the result is &quot;its an incompatible application&quot;.
+
+I did the following steps to open the uManager studio:
+
+   1. Download the Fiji package of the continuous release version for
+Windows 7(64bit) from  : <A HREF="http://fiji.sc/Fiji">http://fiji.sc/Fiji</A>
+
+   2. Download the OpenSPIM package (*OpenSPIM-20140207.zip*) from :
+<A HREF="http://openspim.org/Downloads">http://openspim.org/Downloads</A>
+
+   3. Launch Fiji: in the Fiji.app/folder, open *ImageJ-win64.exe*
+
+   4. Update Fiji (and OpenSPIM and uManager):* Help-&gt;Update Fiji *
+
+   5. Run Micromanager Studio: In the *OpenSPIM.app* folder, open
+*ImageJ-win32.exe*, then *plugins-&gt;Micro-manager-&gt;Micro-manager studio*
+(Before this step, I have followed your steps and set the compatibility
+mode of the *ImageJ-win32.exe* as Windows XP (Service Pack 3))
+
+After Step 5, an error shows as follows:
+*    Error:Failed to load the MMCoreJ_wrap native library
+mmcorej.MMCoreJJNI.swig_module_init()V*
+
+To solve this error, I copied the file *MMCoreJ_wrap.dll* in the *mm*
+folder of the *OpenSPIM.app* folder into the same directory of the
+*ImageJ-win32.exe.
+*Then when I reloaded the uManager studio from the ImageJ (32bit), the
+error was as follows:
+   *Error:Failed to load the MMcoreJ_wrap native library *
+*
+ C:\Users\Kuolab\Downloads\SPIM\OpenSPIM-20140207\OpenSPIM.app\MMCoreJ_wrap.dll:
+Can't load IA 32-bit. dll on a AMD 64-bit platform. *
+
+    I tried to open the uManager studio from *ImageJ-win32.exe and*
+*ImageJ-win64.exe*, while the second error above happened all the time in
+the two cases.
+
+   The camera driver has been installed correctly before based on the test
+image results.
+
+Is there any step I misconducted? (Maybe copying the *MMCoreJ_warp.dll*
+into the same directory of the *ImageJ-win32.exe* is not correct?)
+
+Thanks,
+Ke
+
+Ke Li
+Research Assistant
+Biomedical Engineering
+Johns Hopkins University
+Phone: 410-934-9802
+Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+
+
+On Tue, Jul 8, 2014 at 5:16 PM, Kieran Short &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt; wrote:
+
+&gt;<i> This is strange. I'm not sure what OpenSPIM fiji build we are running but
+</I>&gt;<i> it works here.
+</I>&gt;<i>
+</I>&gt;<i> Have you tried going back to a base installation?
+</I>&gt;<i>
+</I>&gt;<i> It sounds odd that uManager can even detect your pc as a &quot;amd64&quot; system as
+</I>&gt;<i> compatibility mode should mask that as 32bit.
+</I>&gt;<i>
+</I>&gt;<i> What says &quot;its an incompatible application&quot;?
+</I>&gt;<i>
+</I>&gt;<i> Of course, mm *should* be able to load a 32bit dll on 64bit architecture.
+</I>&gt;<i> I don't understand why that should be a problem for mm in the first place.
+</I>&gt;<i> The whole x86 instruction set is encapsulated within the x64 set. To
+</I>&gt;<i> Johannes/Mark is this directly related to the available jre?
+</I>&gt;<i> On 09/07/2014 5:18 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Kieran,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I followed your suggestion. While the problem still existed. When I tried
+</I>&gt;&gt;<i> to launch the uManager studio from the ImageJ(ImageJ-win32.exe) in the
+</I>&gt;&gt;<i> OpenSPIM.app folder, an error: *Failed to load the MMCoreJ_wrap native
+</I>&gt;&gt;<i> library* (*Can't load IA 32-bit.dll on a AMD 64-bit platform*) showed
+</I>&gt;&gt;<i> every time. I did the troubleshooting and the result showed that it's a
+</I>&gt;&gt;<i> incompatible application.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Is there any other way to solve this problem?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> Ke
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Ke Li
+</I>&gt;&gt;<i> Research Assistant
+</I>&gt;&gt;<i> Biomedical Engineering
+</I>&gt;&gt;<i> Johns Hopkins University
+</I>&gt;&gt;<i> Phone: 410-934-9802
+</I>&gt;&gt;<i> Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Mon, Jul 7, 2014 at 9:03 PM, Ke Li &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Hi Kieran,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Thanks so much for your solution. I'll try it tomorrow.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Best,
+</I>&gt;&gt;&gt;<i> Ke
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Kieran Short &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;于2014年7月7日星期一写道：
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Run it in compatibility mode.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> To do this, do the following.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Right click imagej/fiji.
+</I>&gt;&gt;&gt;&gt;<i> Select properties.
+</I>&gt;&gt;&gt;&gt;<i> Go to the Compatibility tab.
+</I>&gt;&gt;&gt;&gt;<i> Check the &quot;run this program in compatibility mode for:&quot; box.
+</I>&gt;&gt;&gt;&gt;<i> Select Windows XP (Service Pack 3).
+</I>&gt;&gt;&gt;&gt;<i> Click Apply.
+</I>&gt;&gt;&gt;&gt;<i> Click OK.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Then try and run it.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> When I can work out how to include plugins during compilation I will
+</I>&gt;&gt;&gt;&gt;<i> try to compile.a win64 version. At such q time i'd happily provide
+</I>&gt;&gt;&gt;&gt;<i> binaries. Im only a part time python progammer though and therefore have
+</I>&gt;&gt;&gt;&gt;<i> little experience with debugging compilation issues. Since Compatibility
+</I>&gt;&gt;&gt;&gt;<i> Mode 'just works' for us, it isn't a high priority for me.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Cheers Kieran
+</I>&gt;&gt;&gt;&gt;<i> On 08/07/2014 10:32 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; wrote:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hi Mark &amp; Luke,
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> I'm writing to ask whether there is a solution for running the
+</I>&gt;&gt;&gt;&gt;&gt;<i> openSPIM software in the 64bit system? (The uManager studio can't be loaded
+</I>&gt;&gt;&gt;&gt;&gt;<i> normally in my 64 bit system) Can I get access to the source code for
+</I>&gt;&gt;&gt;&gt;&gt;<i> modification?
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> [image: Inline image 1]
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Thanks,
+</I>&gt;&gt;&gt;&gt;&gt;<i> Ke
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Ke Li
+</I>&gt;&gt;&gt;&gt;&gt;<i> Research Assistant
+</I>&gt;&gt;&gt;&gt;&gt;<i> Biomedical Engineering
+</I>&gt;&gt;&gt;&gt;&gt;<i> Johns Hopkins University
+</I>&gt;&gt;&gt;&gt;&gt;<i> Phone: 410-934-9802
+</I>&gt;&gt;&gt;&gt;&gt;<i> Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;<i> Ke Li
+</I>&gt;&gt;&gt;<i> Research Assistant
+</I>&gt;&gt;&gt;<i> Biomedical Engineering
+</I>&gt;&gt;&gt;<i> Johns Hopkins University
+</I>&gt;&gt;&gt;<i> Phone: 410-934-9802
+</I>&gt;&gt;&gt;<i> Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140708/2a733d80/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20140708/2a733d80/attachment-0002.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2014-07-07 20.24.57.png
+Type: image/png
+Size: 31316 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140708/2a733d80/attachment-0002.png">http://openspim.org/pipermail/openspim/attachments/20140708/2a733d80/attachment-0002.png</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001456.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+	<LI>Next message: <A HREF="001458.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1457">[ date ]</a>
+              <a href="thread.html#1457">[ thread ]</a>
+              <a href="subject.html#1457">[ subject ]</a>
+              <a href="author.html#1457">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

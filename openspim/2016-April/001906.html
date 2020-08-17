@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Out of focus signal and optics questions
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Out%20of%20focus%20signal%20and%20optics%20questions&In-Reply-To=%3CDM2PR05MB68599DE79A7F6BED5F76D03EC940%40DM2PR05MB685.namprd05.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001905.html">
+   <LINK REL="Next"  HREF="001907.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Out of focus signal and optics questions</H1>
+    <B>Anthony, Neil</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Out%20of%20focus%20signal%20and%20optics%20questions&In-Reply-To=%3CDM2PR05MB68599DE79A7F6BED5F76D03EC940%40DM2PR05MB685.namprd05.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] Out of focus signal and optics questions">nantho2 at emory.edu
+       </A><BR>
+    <I>Mon Apr 11 08:31:24 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001905.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+        <LI>Next message: <A HREF="001907.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1906">[ date ]</a>
+              <a href="thread.html#1906">[ thread ]</a>
+              <a href="subject.html#1906">[ subject ]</a>
+              <a href="author.html#1906">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Pete, thanks for the tips.
+
+Can I ask how the slit plays a role?  Once I find the focus, am I correct in thinking that opening the slit will create a more pronounced focus (more divergence either end)?
+
+Thanks
+Neil
+
+-----Original Message-----
+From: Peter Gabriel Pitrone [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>] 
+Sent: Monday, April 11, 2016 9:16 AM
+To: Anthony, Neil
+Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+
+Hey Anthony,
+
+First off, congrats...
+
+I think your issues have to do with the second telescope and the positions of it's lenses. I know it seems counter intuitive that the lens closest to the illumination objective is so far away from where it &quot;should&quot; be, but it works.
+
+Here's a quick run down of what I would recommend you do:
+
+1. take the emission filter out of the infinity tube (or make a batch of fluorescine agarose in a capillary), and take the cylidrical lens out of the beam path
+
+2. adjust the positions of the two lenses of the conjugate plane telescope until you find the beam focus (i.e. see the beam converge and diverge on either side of the field of view, with the thinnest part in the middle... both horizontally and vertically), this might/will require fiddling with the gimbal mount positioning.
+
+3. put the cylidrical lens back in it's place, as you should be done.
+
+Good luck!
+Pete
+
+
+
+ 
+
+----- Original Message -----
+From: &quot;Anthony, Neil&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt;
+To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Sent: Friday, April 8, 2016 10:03:20 PM
+Subject: [OpenSPIM] Out of focus signal and optics questions
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+<A HREF="https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif">https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif</A>
+
+Second telescope optics image:
+<A HREF="https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing">https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing</A>
+
+BFP location image from Olympus:
+<A HREF="https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing">https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing</A>
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001905.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+	<LI>Next message: <A HREF="001907.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1906">[ date ]</a>
+              <a href="thread.html#1906">[ thread ]</a>
+              <a href="subject.html#1906">[ subject ]</a>
+              <a href="author.html#1906">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

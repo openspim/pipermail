@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF	packages?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Why%20do%20SPIM%20and%20Micro-Manager%20use%20different%20TIFF%0A%09packages%3F&In-Reply-To=%3CB511E8CE-7FF8-45EF-AEE7-745F5A70F032%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001861.html">
+   <LINK REL="Next"  HREF="001862.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Why do SPIM and Micro-Manager use different TIFF	packages?</H1>
+    <B>HongKee Moon</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Why%20do%20SPIM%20and%20Micro-Manager%20use%20different%20TIFF%0A%09packages%3F&In-Reply-To=%3CB511E8CE-7FF8-45EF-AEE7-745F5A70F032%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Why do SPIM and Micro-Manager use different TIFF	packages?">moon at mpi-cbg.de
+       </A><BR>
+    <I>Wed Jan 13 05:18:55 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001861.html">[OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+</A></li>
+        <LI>Next message: <A HREF="001862.html">[OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1859">[ date ]</a>
+              <a href="thread.html#1859">[ thread ]</a>
+              <a href="subject.html#1859">[ subject ]</a>
+              <a href="author.html#1859">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Bill,
+
+I think SPIMAcquistion was intended to be compatible with Fiji seamlessly. That is why it uses OME TIFF package.
+Recently, we have updated SPIMAcquisition before Christmas in order to support HDF5 export and fix Anti-Drift.
+The update contains the fix for “over 4GB tiffs” too.
+Please, update and give it a try.
+
+For the z-space, you can specify z-space and click “stack at this Z plus:”.
+Each stack contains the z-space based on what you enter.
+The pixel calibration is also crucial for having the correct Metadata which will be read by image readers in Fiji.
+
+
+
+
+Thank you for your comments.
+Please, let us know if you have any feature request and/or feedback.
+
+Cheers,
+HongKee
+
+
+&gt;<i> On Jan 12, 2016, at 7:03 PM, Bill Whitney &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">whitnewn at clarkson.edu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+</I>&gt;<i> 
+</I>&gt;<i> Here is what I have discovered so far:
+</I>&gt;<i> MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+</I>&gt;<i> OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+</I>&gt;<i> The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write &quot;CORRECT&quot; metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers). 
+</I>&gt;<i> The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ. 
+</I>&gt;<i> In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z. 
+</I>&gt;<i> 
+</I>&gt;<i> I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+</I>&gt;<i> 
+</I>&gt;<i> I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+</I>&gt;<i> Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+</I>&gt;<i> 
+</I>&gt;<i> I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+</I>&gt;<i> I also appreciate any other suggestions people have about better ways to move forward.
+</I>&gt;<i> 
+</I>&gt;<i> I am using the following versions at the moment:
+</I>&gt;<i>  - Micro-Manager: 1.4.23 20151021
+</I>&gt;<i>  - ImageJ: 1.50b
+</I>&gt;<i>  - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used. 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Bill Whitney
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0002.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM.png
+Type: image/png
+Size: 25136 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0002.png">http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0002.png</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001861.html">[OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+</A></li>
+	<LI>Next message: <A HREF="001862.html">[OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1859">[ date ]</a>
+              <a href="thread.html#1859">[ thread ]</a>
+              <a href="subject.html#1859">[ subject ]</a>
+              <a href="author.html#1859">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

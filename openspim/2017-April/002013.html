@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] acquisition error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20acquisition%20error&In-Reply-To=%3C3a630edfa2c819ebd131029ee1807c13%40cam.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002012.html">
+   <LINK REL="Next"  HREF="002014.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] acquisition error</H1>
+    <B>Dr S. Hoehn</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20acquisition%20error&In-Reply-To=%3C3a630edfa2c819ebd131029ee1807c13%40cam.ac.uk%3E"
+       TITLE="[OpenSPIM] acquisition error">S.Hoehn at damtp.cam.ac.uk
+       </A><BR>
+    <I>Thu Apr  6 11:31:03 CDT 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002012.html">[OpenSPIM] light sheet characterization in solvents (BABB etc)
+</A></li>
+        <LI>Next message (by thread): <A HREF="002014.html">[OpenSPIM] acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2013">[ date ]</a>
+              <a href="thread.html#2013">[ thread ]</a>
+              <a href="subject.html#2013">[ subject ]</a>
+              <a href="author.html#2013">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear All,
+
+when I try to acquire a stack with the OpenSPIM software I get the error 
+below (it used to work before). I updated Fiji, but that didn't fix it. 
+Has anyone seen this and knows what to do?
+
+Thanks a lot!
+
+Best wishes,
+Stephanie
+
+
+
+Unable to retrieve constructor for class 
+loci.formats.services.OMEXMLServiceImpl
+	at 
+loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:190)
+	at 
+loci.common.services.ServiceFactory.getInstance(ServiceFactory.java:161)
+	at spim.io.OMETIFFHandler.&lt;init&gt;(OMETIFFHandler.java:73)
+	at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1982)
+	at 
+javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at 
+javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at 
+javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at 
+javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at 
+javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6505)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3320)
+	at java.awt.Component.processEvent(Component.java:6270)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4861)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at 
+java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at 
+java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at 
+java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at 
+java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at 
+java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+	at 
+java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at 
+java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at 
+java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at 
+java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at 
+java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NoClassDefFoundError: 
+loci/common/xml/XMLTools$SchemaReader
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at 
+loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:185)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: 
+loci.common.xml.XMLTools$SchemaReader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 42 more
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002012.html">[OpenSPIM] light sheet characterization in solvents (BABB etc)
+</A></li>
+	<LI>Next message (by thread): <A HREF="002014.html">[OpenSPIM] acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2013">[ date ]</a>
+              <a href="thread.html#2013">[ thread ]</a>
+              <a href="subject.html#2013">[ subject ]</a>
+              <a href="author.html#2013">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

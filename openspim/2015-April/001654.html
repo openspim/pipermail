@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HiRes Picard stage: the solution!
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HiRes%20Picard%20stage%3A%20the%20solution%21&In-Reply-To=%3Cop.xw8r2pn3ahhlbl%40pc511-7cad.ibd%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001657.html">
+   <LINK REL="Next"  HREF="001658.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HiRes Picard stage: the solution!</H1>
+    <B>Monika Pawłowska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HiRes%20Picard%20stage%3A%20the%20solution%21&In-Reply-To=%3Cop.xw8r2pn3ahhlbl%40pc511-7cad.ibd%3E"
+       TITLE="[OpenSPIM] HiRes Picard stage: the solution!">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Fri Apr 17 10:02:39 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001657.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+        <LI>Next message: <A HREF="001658.html">[OpenSPIM] 64-bit Fiji Memory Limit Issue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1654">[ date ]</a>
+              <a href="thread.html#1654">[ thread ]</a>
+              <a href="subject.html#1654">[ subject ]</a>
+              <a href="author.html#1654">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+as I wrote previously, I have the new version of the Picard stage and I  
+had issues with the maximum available position being limited to 32 767  
+steps, and the slider in the plugin being limited to 9000 um. The solution  
+that works for me is:
+
+1) replace PiUSB.dll with the newest version from the Picard website -  
+this fixes the 32 767 steps problem
+2) I modified the SPIMAcquisition code so that the slider reflects the  
+values of Max set during device configuration (where you also set the  
+serial numbers). My code is currently here:
+<A HREF="https://github.com/openspim/SPIMAcquisition/compare/master...pawlowska:addMaxPropertyReading">https://github.com/openspim/SPIMAcquisition/compare/master...pawlowska:addMaxPropertyReading</A>
+I assume that the max value you set during configuration is the maxiumum  
+number of STEPS (not um)
+
+maybe this helps somebody.
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 427
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001657.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+	<LI>Next message: <A HREF="001658.html">[OpenSPIM] 64-bit Fiji Memory Limit Issue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1654">[ date ]</a>
+              <a href="thread.html#1654">[ thread ]</a>
+              <a href="subject.html#1654">[ subject ]</a>
+              <a href="author.html#1654">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

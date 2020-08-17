@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Low Magnification SPIM Chamber Concept&#8230; (Was:  SCAPE)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Fwindows-1252%3Fq%3FLow_Magnification_SPIM_Chamber_Concep%3F%3D%0A%20%3D%3Fwindows-1252%3Fq%3Ft%3D85_%3D28Was%3D3A__SCAPE%3D29%3F%3D&In-Reply-To=%3C4F4E9AFE-F041-4C2C-92B1-0FA335AB19BF%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000608.html">
+   <LINK REL="Next"  HREF="000610.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Low Magnification SPIM Chamber Concept&#8230; (Was:  SCAPE)</H1>
+    <B>Peter Gabriel Pitrone</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Fwindows-1252%3Fq%3FLow_Magnification_SPIM_Chamber_Concep%3F%3D%0A%20%3D%3Fwindows-1252%3Fq%3Ft%3D85_%3D28Was%3D3A__SCAPE%3D29%3F%3D&In-Reply-To=%3C4F4E9AFE-F041-4C2C-92B1-0FA335AB19BF%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Low Magnification SPIM Chamber Concept&#8230; (Was:  SCAPE)">pitrone at mpi-cbg.de
+       </A><BR>
+    <I>Fri Jan 23 06:52:43 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000608.html">[OpenSPIM] SCAPE
+</A></li>
+        <LI>Next message: <A HREF="000610.html">[OpenSPIM] SCAPE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#609">[ date ]</a>
+              <a href="thread.html#609">[ thread ]</a>
+              <a href="subject.html#609">[ subject ]</a>
+              <a href="author.html#609">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello List,
+
+This conversation on a &quot;sophisticated algorithm&quot; to compute the off-axis oblique illumination got me to thinking about how it could be used with Nikon's 10x/0.3 water dipping lenses. Due to the objectives having only a 30 degree taper off the optical axis, you could cram 6 of them in a circle around a sample. It wouldn't be the best detection objective for really small samples, but I think it would work just fine with zebrafish embryos&#8230; Not sure about OPT though.
+
+Any one care to chime in?!
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist, Imaging Specialist &amp;
+Technologist for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra&#223;e 108
+01307 Dresden, Saxony
+Germany
+
+<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &amp;
+<A HREF="http://www.openspim.org">http://www.openspim.org</A>
+
+&quot;I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who.&quot; Rudyard Kipling - The Elephant's Child
+
+On Jan 23, 2015, at 12:59 PM, Johannes Schindelin wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> On 2015-01-23 10:08, Balki K wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> You were saying that it requires a sophisticated reconstruction algorithm
+</I>&gt;&gt;<i> because of the non-uniform pixel spacings.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Yes. As you can see from the figure I linked to earlier:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Please keep in mind that I bring the software engineering expertise to
+</I>&gt;&gt;<i> the OpenSPIM project in our lab, not the optics expertise (you probably
+</I>&gt;&gt;<i> have much more knowledge of optics, given that you are tasked to build a
+</I>&gt;&gt;<i> microscope). And please keep in mind that I form the following
+</I>&gt;&gt;<i> understanding only from reading the abstract of the article, supported
+</I>&gt;&gt;<i> only by the figure at
+</I>&gt;&gt;<i> <A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/">http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/</A>
+</I>&gt;&gt;<i> nphoton.2014.323_F1.html.
+</I>&gt;<i> 
+</I>&gt;<i> ... you can actually see for yourself how the pixel spacing differs between planes (and possibly between the pixels in each plane).
+</I>&gt;<i> 
+</I>&gt;<i> Now, I am not an optical expert, but I assume you are. So you should be in a better position to answer the question how the pixel spacings (often called &quot;pixel dimensions&quot;) differ.
+</I>&gt;<i> 
+</I>&gt;<i> In practice, it might be that the differences are negligible, both within and between planes. If that is the case, you do not need that &quot;sophisticated algorithm&quot; I referred to. In that case, you would only need to compensate for the obliqueness of the planes, i.e. the fact that the planes are *not* perpendicular to the axis along which the plane is moved. It will require a little bit of coding and you should make sure to have some colleague or employee who can do that for you (I would probably use the interpolation algorithms of ImgLib2 to reconstruct the volume stacks).
+</I>&gt;<i> 
+</I>&gt;<i> As stated above, you should not take my hunches at face value. It is really important that you understand the intrinsic properties of the acquisition to reconstruct the images in software. I would be interested in that analysis, too, so if you would share it with this mailing list, that would be really cool.
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150123/d7d40f63/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150123/d7d40f63/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000608.html">[OpenSPIM] SCAPE
+</A></li>
+	<LI>Next message: <A HREF="000610.html">[OpenSPIM] SCAPE
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#609">[ date ]</a>
+              <a href="thread.html#609">[ thread ]</a>
+              <a href="subject.html#609">[ subject ]</a>
+              <a href="author.html#609">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

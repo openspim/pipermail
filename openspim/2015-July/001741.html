@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fwd: [micro-manager-general] Announcement: Micro-Manager	2.0 Alpha
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20%5Bmicro-manager-general%5D%20Announcement%3A%20Micro-Manager%0A%092.0%20Alpha&In-Reply-To=%3C792970e135ca4a28046b4cbd06850d5d%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001740.html">
+   <LINK REL="Next"  HREF="001742.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fwd: [micro-manager-general] Announcement: Micro-Manager	2.0 Alpha</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20%5Bmicro-manager-general%5D%20Announcement%3A%20Micro-Manager%0A%092.0%20Alpha&In-Reply-To=%3C792970e135ca4a28046b4cbd06850d5d%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] Fwd: [micro-manager-general] Announcement: Micro-Manager	2.0 Alpha">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Tue Jul  7 15:30:10 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001740.html">[OpenSPIM] Alternative to Agarose
+</A></li>
+        <LI>Next message: <A HREF="001742.html">[OpenSPIM] A trouble in initial hardware configuration of the laser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1741">[ date ]</a>
+              <a href="thread.html#1741">[ thread ]</a>
+              <a href="subject.html#1741">[ subject ]</a>
+              <a href="author.html#1741">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] Announcement: Micro-Manager 2.0 Alpha
+Date: 2015-07-07 21:06
+ From: Chris Weisiger &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">cweisiger at msg.ucsf.edu</A>&gt;
+To: Micro-Manager General &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>&gt;
+Reply-To: Micro-Manager General 
+&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>&gt;
+
+Folks, I'm pleased to announce that the first alpha build of 
+Micro-Manager
+2.0 is now available. Version 2.0 will be a major overhaul of
+Micro-Manager's user interface (UI) and of the way the Java layer 
+organizes
+image data. It's designed to be easier to use than 1.4 (i.e. the current
+official releases), while remaining backwards compatible with it. We'd
+appreciate your assistance in testing it; while we've done a heck of a 
+lot
+of testing already, there's always the potential for bugs to sneak in
+unnoticed.
+
+Support for Micro-Manager 1.4 is going to continue for the foreseeable
+future; we aren't going to shift all of our development focus to 2.0 
+until
+it's ready. Still, we believe that 2.0 is a major improvement over 1.4.
+We've worked really hard to make this version of Micro-Manager the best 
+it
+can be. Examples of some of the many new features in the UI include:
+
+  * An overhauled image display window with controls readily at hand
+  * &quot;Inspector&quot; windows for easy access to histograms, metadata, and 
+more,
+allowing for side-by-side comparisons of multiple datasets
+  * The ability to synchronize aspects of the display across multiple
+windows, so windows can share histogram scalings, always show the same Z
+slice, etc.
+  * A user profile system so each user of the program can have their own
+saved settings
+  * Timestamp and scale bar overlays
+  * A much better &quot;day/night&quot; system for more pleasant use in darkrooms
+
+Here's a screenshot of the new UI:
+<A HREF="http://i.imgur.com/PSqB8jJ.jpg">http://i.imgur.com/PSqB8jJ.jpg</A>
+
+Additionally, the Java API has been vastly expanded and simplified (the
+Core API is untouched). If you're a developer who works with 
+Micro-Manager,
+you should appreciate easy access to image data and metadata, control 
+and
+customization of image display windows, access to events, and more. On 
+the
+flip side, many old methods in the API are unfortunately no longer
+available, so your plugins that depend on those methods will need to be
+updated. We hope to keep this version of the API stable for many years 
+to
+come. For more information on the API, please see our wiki 
+documentation:
+<A HREF="https://micro-manager.org/wiki/Version_2.0">https://micro-manager.org/wiki/Version_2.0</A>
+
+NOTE: as this is an alpha build, we cannot promise that it is &quot;safe&quot;. It
+does not modify the hardware control systems or the MDA, but data files 
+it
+generates will differ from data files generated in 1.4, if only in the
+metadata. While I would love for people to try acquiring data with 2.0, 
+I
+can't recommend that you do serious, high-stakes science with it just 
+yet.
+Additionally, while 2.0 can read data files generated with 1.4, the 
+reverse
+may not be the case. Be careful about mixing files from 1.4 and 2.0.
+
+You can download the most recent version of the alpha build from here:
+<A HREF="http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Mac/">http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Mac/</A>
+<A HREF="http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Windows/">http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Windows/</A>
+
+If you find bugs, please let us know! If you have comments or feedback,
+please let us know! If you have questions or requests, please let us 
+know!
+You can email the main mailing list (
+<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>) or our internal email 
+address (
+<A HREF="http://openspim.org/mailman/listinfo/openspim">info at micro-manager.org</A>) for more private reports. Either way, please put
+&quot;[2.0]&quot; in the email subject line so we can easily recognize that your
+email relates to the alpha.
+
+Additionally, we are moving our development towards using GitHub. Our
+GitHub account is here:
+<A HREF="https://github.com/micro-manager/micro-manager">https://github.com/micro-manager/micro-manager</A>
+
+You can file bug reports via the &quot;Issues&quot; link in the top-right. If you
+want to download the source code for 2.0, use the &quot;mm2&quot; branch, not the
+&quot;master&quot; branch.
+
+Thank you for your time, and thanks for using Micro-Manager!
+
+-Chris and the rest of the Micro-Manager team
+
+------------------------------------------------------------------------------
+Don't Limit Your Business. Reach for the Cloud.
+GigeNET's Cloud Solutions provide you with the tools and support that
+you need to offload your IT needs and focus on growing your business.
+Configured For All Businesses. Start Your Cloud Today.
+<A HREF="https://www.gigenetcloud.com/">https://www.gigenetcloud.com/</A>
+_______________________________________________
+micro-manager-general mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>
+<A HREF="https://lists.sourceforge.net/lists/listinfo/micro-manager-general">https://lists.sourceforge.net/lists/listinfo/micro-manager-general</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001740.html">[OpenSPIM] Alternative to Agarose
+</A></li>
+	<LI>Next message: <A HREF="001742.html">[OpenSPIM] A trouble in initial hardware configuration of the laser
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1741">[ date ]</a>
+              <a href="thread.html#1741">[ thread ]</a>
+              <a href="subject.html#1741">[ subject ]</a>
+              <a href="author.html#1741">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

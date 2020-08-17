@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fwd: Re:  unwanted extra files auto-saved
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20Re%3A%20%20unwanted%20extra%20files%20auto-saved&In-Reply-To=%3C52D07EA9.9060106%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000314.html">
+   <LINK REL="Next"  HREF="000317.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fwd: Re:  unwanted extra files auto-saved</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20Re%3A%20%20unwanted%20extra%20files%20auto-saved&In-Reply-To=%3C52D07EA9.9060106%40wisc.edu%3E"
+       TITLE="[OpenSPIM] Fwd: Re:  unwanted extra files auto-saved">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Jan 10 17:13:45 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000314.html">[OpenSPIM] unwanted extra files auto-saved
+</A></li>
+        <LI>Next message: <A HREF="000317.html">[OpenSPIM] lasers for openspim
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#316">[ date ]</a>
+              <a href="thread.html#316">[ thread ]</a>
+              <a href="subject.html#316">[ subject ]</a>
+              <a href="author.html#316">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+Sorry, forgot to reply to the list as well!
+
+Luke
+
+-------- Original Message --------
+Subject: 	Re: [OpenSPIM] unwanted extra files auto-saved
+Date: 	Fri, 10 Jan 2014 09:34:37 +0100
+From: 	Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+To: 	Dr S. Hoehn &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">S.Hoehn at damtp.cam.ac.uk</A>&gt;
+
+
+
+Stephanie,
+
+The files you refer to are saved by the anti-drift feature to give system operators some idea of the sample's drift over time. Unless saving to a slow hard drive or over a network, their creation really shouldn't cause a timeout; this may not be the cause of your errors. Still, I agree that the saving of these images should be optional; I'll add a ticket to our bugtracker and attend to it as soon as I have time.
+
+
+Device timeouts usually occur with either low stage velocities (1-3) or deep stacks (500+ um?): the stage motors spend too long moving from one location to another, and Micro-Manager assumes they've stopped working. Please try enabling the &quot;Override Timeout&quot; feature. The checkbox is located on the bottom of the Acquisition tab; check the box, then enter a new device timeout in milliseconds. The default is 5000ms; try increasing this to 15000 or so. (I often use this feature when imaging as insurance against these errors.)
+
+
+Hope this is helpful!
+
+
+Luke
+
+On 01/09/14, &quot;Dr S. Hoehn&quot;  wrote:
+&gt;<i> dear open spim users,
+</I>&gt;<i>
+</I>&gt;<i> i am using the spim at cambridge university and am facing a problem with my time-lapse experiments.
+</I>&gt;<i> since i last updated the software, an extra folder is automatically saved in addition to the wanted z-scans. the folder is called &quot;diffs&quot; and contains subfolders named e.g. &quot;XYZ4366.50x1479.00x588.00_Theta0.00&quot;. the subfolders contain 3dimages as tiff-files. since this happens, the time-lapse is regularly abborted and i get an error message saying &quot;device timed out&quot;.
+</I>&gt;<i> does anyone know how to disable the autosaving of these extra files? i couldn't find it anywhere.
+</I>&gt;<i>
+</I>&gt;<i> thanks a lot and best wishes,
+</I>&gt;<i>
+</I>&gt;<i> stephanie
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140111/4e44658f/attachment.html">http://openspim.org/pipermail/openspim/attachments/20140111/4e44658f/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000314.html">[OpenSPIM] unwanted extra files auto-saved
+</A></li>
+	<LI>Next message: <A HREF="000317.html">[OpenSPIM] lasers for openspim
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#316">[ date ]</a>
+              <a href="thread.html#316">[ thread ]</a>
+              <a href="subject.html#316">[ subject ]</a>
+              <a href="author.html#316">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

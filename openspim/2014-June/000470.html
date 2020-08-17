@@ -1,0 +1,638 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3CCAHAw%2B8bikqydCuo95OD3r5_jjOpBN2ZHdM4GTCQdJ8dQ7RM_aw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000469.html">
+   <LINK REL="Next"  HREF="000471.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3CCAHAw%2B8bikqydCuo95OD3r5_jjOpBN2ZHdM4GTCQdJ8dQ7RM_aw%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20">aureliaomega at gmail.com
+       </A><BR>
+    <I>Mon Jun 30 13:00:38 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000469.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+        <LI>Next message: <A HREF="000471.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#470">[ date ]</a>
+              <a href="thread.html#470">[ thread ]</a>
+              <a href="subject.html#470">[ subject ]</a>
+              <a href="author.html#470">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Sorry, I meant to also say that I can't load individual components, I get
+the same error messages about COM3.  The only configuration I can actually
+complete is the shutter on its own, but it doesn't function.
+
+
+
+On Mon, Jun 30, 2014 at 6:55 PM, Aurelia Honerkamp-Smith &lt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt; wrote:
+
+&gt;<i> Hi!,
+</I>&gt;<i> With the SerialManager dll from June 24, I get the same error messages but
+</I>&gt;<i> entire system doesn't crash, it seems to be an improvement!  New core log
+</I>&gt;<i> is attached again.
+</I>&gt;<i>  Thanks again!
+</I>&gt;<i> Aurelia
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Mon, Jun 30, 2014 at 6:01 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Aurelia,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;&gt;<i> &gt; Thank you! I am still having a problem, probably because I&#39;m using
+</I>&gt;&gt;<i> a nonstandard setup. There seems to be a conflict in loading my camera (a
+</I>&gt;&gt;<i> PVCam one) and the shutter I use to block the laser (Thorlabs SC10); when I
+</I>&gt;&gt;<i> try to configure, I get a message &quot;the specified label COM3 is already in
+</I>&gt;&gt;<i> use&quot; before anything has been configured, and then several times after I
+</I>&gt;&gt;<i> load both, one that says &quot;Line8: device, COM3, serialmanager, COM3.&quot; The
+</I>&gt;&gt;<i> shutter should be on COM3 but not the camera, and I don&#39;t run into this
+</I>&gt;&gt;<i> conflict when I load both shutter and camera in the vanilla MM from 24
+</I>&gt;&gt;<i> June. I attach a core log showing an attempt to load shutter and camera.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Do the devices work individually in OpenSPIM? i.e. if only one is loaded,
+</I>&gt;&gt;<i> do you ever get that message? It sounds like a problem with the
+</I>&gt;&gt;<i> SerialManager, a device adapter which I hadn't updated -- you might try
+</I>&gt;&gt;<i> pulling mmgr_dal_SerialManager.dll from the 24 June nightly build. I'll
+</I>&gt;&gt;<i> also be looking into this.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;&gt;<i> &gt; The Picard stage now appears in the list of available hardware, but
+</I>&gt;&gt;<i> when I try to load all three the computer bluescreens.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Load all three devices (camera, shutter, stage), or load all three
+</I>&gt;&gt;<i> stages? Does it bluescreen reliably? (I've not seen/heard of this happening
+</I>&gt;&gt;<i> before...)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I'll let you know what I work out. Thanks again!
+</I>&gt;&gt;<i> Luke
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 06/30/14, Aurelia Honerkamp-Smith  wrote:
+</I>&gt;&gt;<i> &gt; Hi Luke,
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; Thank you! I am still having a problem, probably because I&#39;m using
+</I>&gt;&gt;<i> a nonstandard setup. There seems to be a conflict in loading my camera (a
+</I>&gt;&gt;<i> PVCam one) and the shutter I use to block the laser (Thorlabs SC10); when I
+</I>&gt;&gt;<i> try to configure, I get a message &quot;the specified label COM3 is already in
+</I>&gt;&gt;<i> use&quot; before anything has been configured, and then several times after I
+</I>&gt;&gt;<i> load both, one that says &quot;Line8: device, COM3, serialmanager, COM3.&quot; The
+</I>&gt;&gt;<i> shutter should be on COM3 but not the camera, and I don&#39;t run into this
+</I>&gt;&gt;<i> conflict when I load both shutter and camera in the vanilla MM from 24
+</I>&gt;&gt;<i> June. I attach a core log showing an attempt to load shutter and camera.
+</I>&gt;&gt;<i> The Picard stage now appears in the list of available hardware, but when I
+</I>&gt;&gt;<i> try to load all three the computer bluescreens.
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; Thanks again,
+</I>&gt;&gt;<i> &gt; Aurelia
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; On Mon, Jun 30, 2014 at 3:03 PM, Luke Stuyvenberg &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>')&quot; target=&quot;1&quot;&gt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; &gt; Hi Aurelia,
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; Sorry about that; it seems a lot more had changed than I had
+</I>&gt;&gt;<i> expected. I&#39;ve updated the update site again, with a number of changes
+</I>&gt;&gt;<i> (new MMCore, new versions of the device adapters). It tested okay on my
+</I>&gt;&gt;<i> virtual machine, but if there&#39;s still a problem, please let me know. If
+</I>&gt;&gt;<i> you run into other device adapter problems (i.e. not with PicardStage), try
+</I>&gt;&gt;<i> getting updated device adapter versions from the nightly build as of 24
+</I>&gt;&gt;<i> June or so.
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; Thanks!
+</I>&gt;&gt;<i> &gt; &gt; Luke
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; On 06/29/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; Hello,
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; I am afraid that after updating to the newest PicardStage dll, my
+</I>&gt;&gt;<i> previous configuration is unable to load the stage. I get an error message:
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 8: Device,Picard Twister,PicardStage,Picard Twister
+</I>&gt;&gt;<i> &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 9: Device,Picard Z Stage,PicardStage,Picard Z Stage
+</I>&gt;&gt;<i> &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 10: Device,Picard XY Stage,PicardStage,Picard XY Stage
+</I>&gt;&gt;<i> &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 22: Property,Picard Twister,Serial Number,60
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard Twister&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 23: Property,Picard Z Stage,Serial Number,181
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard Z Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 24: Property,Picard XY Stage,Serial Number (X),182
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 25: Property,Picard XY Stage,Serial Number (Y),180
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 26: Property,Picard XY Stage,X-Max,8000
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 27: Property,Picard XY Stage,X-Min,1
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 28: Property,Picard XY Stage,Y-Max,8000
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 29: Property,Picard XY Stage,Y-Min,1
+</I>&gt;&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; Line 44: Property,Core,Focus,Picard Z Stage
+</I>&gt;&gt;<i> &gt; &gt; &gt; Cannot set Core property Focus to invalid value &quot;Picard Z Stage&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; I can still load the camera and my shutter. The Picard Stage now
+</I>&gt;&gt;<i> appears unavailable in the hardware configuration wizard. I am also using
+</I>&gt;&gt;<i> 32-bit Fiji on a 64-bit machine, but haven&#39;t had trouble loading the
+</I>&gt;&gt;<i> stage before (it appeared to work normally, with the exception of the
+</I>&gt;&gt;<i> occasional communication delay that I mentioned earlier). I attach a core
+</I>&gt;&gt;<i> log.
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; On Sat, Jun 28, 2014 at 6:00 PM, &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&amp;#39;new(javascript:main.compose(">http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&#39;new(javascript:main.compose(</A>'new
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(">http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(</A>'new(javascript:main.compose('new&gt;',
+</I>&gt;&gt;<i> 't=<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt;&#39;)&quot; target=&quot;1&quot;&gt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt;&gt; wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Send OpenSPIM mailing list submissions to
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &lt;a href=)
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; or, via email, send a message with subject or body &#39;help&#39;
+</I>&gt;&gt;<i> to
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; You can reach the person managing the list at
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; When replying, please edit your Subject line so it is more
+</I>&gt;&gt;<i> specific
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Today&#39;s Topics:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; 1. Re: Problems with OpenSPIM system (Ke Li)
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> ----------------------------------------------------------------------
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Message: 1
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Date: Fri, 27 Jun 2014 22:35:42 -0400
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; From: Ke Li &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; To: Kieran Short &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Subject: Re: [OpenSPIM] Problems with OpenSPIM system
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Message-ID:
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A>&gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Content-Type: text/plain; charset=&quot;utf-8&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Hi Kieran,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Thanks for your detailed info. The 4D stage can be controlled
+</I>&gt;&gt;<i> normally by
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; the software from Picard in my system. While I just can&#39;t add
+</I>&gt;&gt;<i> the Z stage
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; when I try to create the hardware configuration wizard by
+</I>&gt;&gt;<i> micro-manager. So
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; there is no place I can put the serial number of the Z stage in.
+</I>&gt;&gt;<i> (I can add
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; XY stage and the twister normally and change -1 into the correct
+</I>&gt;&gt;<i> serial
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; number of the XY stage).
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; I can also reproduce the problem exactly as what Mark did and
+</I>&gt;&gt;<i> encountered
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; (From Mark: I can reproduce the problem: with no Picard hardware
+</I>&gt;&gt;<i> connected
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; to the computer, no configuration dialog for the
+</I>&gt;&gt;<i> pre-initialization
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; settings (including the serial number) is displayed in the
+</I>&gt;&gt;<i> hardware
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; configuration
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; wizard. This is the case for the Twister and Z stage, but not the
+</I>&gt;&gt;<i> XY stage
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; (at least on my computer).)
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Thanks,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Ke
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Ke Li
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Research Assistant
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Biomedical Engineering
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Johns Hopkins University
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Phone: 410-934-9802(tel:410-934-9802)(tel:410-934-9802(tel:
+</I>&gt;&gt;<i> 410-934-9802))
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; On Fri, Jun 27, 2014 at 6:49 PM, Kieran Short &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; Hi Ke,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; You still can add the seral number to the Z in the Picard
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; application/program. This is totally independent of
+</I>&gt;&gt;<i> micromanager.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; The other thing is, the 4D stage axes are labeled with stickers
+</I>&gt;&gt;<i> which have
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; 2 bits of info . 1st is stage name and the other is the serial
+</I>&gt;&gt;<i> number. The
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; stage name doesn&#39;t necessarily represent what you think it
+</I>&gt;&gt;<i> does. Our &quot;Z&quot;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; actually translates the stage toward and away from the
+</I>&gt;&gt;<i> detection objective!
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; That doesn&#39;t really matter though, I see Z as just a name
+</I>&gt;&gt;<i> that doesn&#39;t
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; truly reflect its function. It still works fine.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; Once you enter in the correct serial number in the Picard
+</I>&gt;&gt;<i> application the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; indicators for the stage communication in the software should
+</I>&gt;&gt;<i> turn from red
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; to green.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; The picard software is*very* strict about this serial number
+</I>&gt;&gt;<i> setting. I
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; could use just about any numbers and micromanager worked -- but
+</I>&gt;&gt;<i> this really
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; wont.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; My feeling is that if you at least have picards app working you
+</I>&gt;&gt;<i> will know
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; if its a &quot;driver&quot; problem or not.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; It&#39;ll make Luke&#39;s job a lot easier if this is done.
+</I>&gt;&gt;<i> Have you already done
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; this and is there communication between the 4d stage and its
+</I>&gt;&gt;<i> own software
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; once you have entered tge correct serial numbers?
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; Cheers Kieran
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt; On 28/06/2014 8:17 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Hi Luke,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Thanks so much. Could you please send the link of the changed
+</I>&gt;&gt;<i> version to
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; me? And since my system is 64-bit, how can I solve the Z stage
+</I>&gt;&gt;<i> problem (no
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; field to change the serial number since I can&#39;t add the Z
+</I>&gt;&gt;<i> stage first)?
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Thanks,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Ke
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Ke Li
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Research Assistant
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Biomedical Engineering
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Johns Hopkins University
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Phone: 410-934-9802(tel:410-934-9802)(tel:410-934-9802(tel:
+</I>&gt;&gt;<i> 410-934-9802))
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; On Fri, Jun 27, 2014 at 2:55 PM, Luke Stuyvenberg &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Hi everyone,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; On 06/27/14, Luke Stuyvenberg wrote:
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; I&#39;ll report back after fixing/testing and
+</I>&gt;&gt;<i> committing/uploading the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; device adapter.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; And so here I am. I&#39;ve committed the changes to SVN and
+</I>&gt;&gt;<i> uploaded the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; 32-bit version of the DLL to the OpenSPIM update site.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Mark -- Following your suggestion, those lines were removed
+</I>&gt;&gt;<i> -- in
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; hindsight, it&#39;s not really the correct behavior, and the
+</I>&gt;&gt;<i> possible issue
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; with obtaining an invalid serial number shouldn&#39;t be
+</I>&gt;&gt;<i> common at all. Thanks!
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Kieran -- I recently became aware of the homing problem; the
+</I>&gt;&gt;<i> stage
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; sometimes resets its internal location (when it loses power,
+</I>&gt;&gt;<i> perhaps?), so
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; over time it will be pushed away. The X/Y stage can be homed
+</I>&gt;&gt;<i> using the MM
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Script Panel, running mmc.home(&quot;Picard XY Stage&quot;) -- the Z
+</I>&gt;&gt;<i> stage has no
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; appropriate API call, so for the time being, there is a
+</I>&gt;&gt;<i> property &quot;GoHome&quot;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; that will home that stage when set to 1. It&#39;s a
+</I>&gt;&gt;<i> workaround until I can
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; submit a more useful patch to the MM team (though, as an API
+</I>&gt;&gt;<i> change, that
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; may take a little while).
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Ke -- Please let me know if there are any more problems; hope
+</I>&gt;&gt;<i> this helps!
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Luke
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; On 06/27/14, Luke Stuyvenberg wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; Hi Ke, Mark, Johannes,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; On 06/26/14, Mark Tsuchida wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, I also found the cause: OnSerialGeneric() is
+</I>&gt;&gt;<i> calling the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Initialize() function, which fails. This happens before
+</I>&gt;&gt;<i> the Hardware
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Wizard calls Initialize (actually, when the wizard is
+</I>&gt;&gt;<i> trying to get
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; the initial values of the pre-init properties), so the
+</I>&gt;&gt;<i> wizard has no
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; chance to display the configuration dialog.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Simply taking out the calls to Initialize
+</I>&gt;&gt;<i> (PicardStage.cpp lines
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; 243-245, 258) seems to fix this, but I&#39;m not sure if
+</I>&gt;&gt;<i> that is all that
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; needs to be done (since I don&#39;t have a Picard stage
+</I>&gt;&gt;<i> and cannot figure
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; out what the intent of calling Initialize() at this point
+</I>&gt;&gt;<i> was).
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, can you take a look at this?
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; The intent of the Initialize call was to test the serial
+</I>&gt;&gt;<i> number
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; received from the Pi-detector, but I didn&#39;t account for
+</I>&gt;&gt;<i> the possibility of
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; CPiDetector returning DEFAULT_SERIAL_UNKNOWN, which it does
+</I>&gt;&gt;<i> if the
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; requested device hadn&#39;t been found. I&#39;m preparing a
+</I>&gt;&gt;<i> fix for this that I
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; will submit via SVN as soon as possible.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; The ultimate issue is this: The Pi-detector only tested
+</I>&gt;&gt;<i> serial numbers
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; up to 250. I&#39;ve doubled this for now, but this is a
+</I>&gt;&gt;<i> stop-gap measure that
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; causes an ugly pause in the device adding process while it
+</I>&gt;&gt;<i> probes the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; serial numbers; I will need to seek a different approach to
+</I>&gt;&gt;<i> detecting the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; motors.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; I&#39;ll report back after fixing/testing and
+</I>&gt;&gt;<i> committing/uploading the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; device adapter.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; Luke
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; On 06/26/14, Mark Tsuchida wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Hi Ke and Johannes,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; On Thu, Jun 26, 2014 at 11:57 AM, Mark Tsuchida &lt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt;&gt;&gt; wrote:
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; On Wed, Jun 25, 2014 at 10:27:54PM -0400, Ke Li wrote:
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; 1. I still can&#39;t add the Z stage when I create the
+</I>&gt;&gt;<i> hardware
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; configuration.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; I tried both 64-bit and 32-bit Windows system, neither
+</I>&gt;&gt;<i> can work.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Since the
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; problem report doesn&#39;t give much info, I&#39;m not
+</I>&gt;&gt;<i> sure whether there
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; are other
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; ways to solve this problem? And what possible reasons
+</I>&gt;&gt;<i> can cause
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; problem?
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Are you sure you have the correct serial number for the
+</I>&gt;&gt;<i> Z stage (as
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Johannes suggested)? In the problem report you sent us,
+</I>&gt;&gt;<i> it looked
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; like
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; you had not set the serial number when adding the Z
+</I>&gt;&gt;<i> stage in the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Hardware Configuration Wizard. This causes the device
+</I>&gt;&gt;<i> adapter to
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; use the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; serial number &quot;-1&quot;, which always results in an error.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Do you see a field to enter the serial number for the Z
+</I>&gt;&gt;<i> stage? If
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; you cannot
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; get it to work even when entering the correct serial
+</I>&gt;&gt;<i> number, could
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; you try
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; sending another Problem Report?
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Sorry, I hadn&#39;t seen your reply to Johannes that
+</I>&gt;&gt;<i> answered that
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; question of mine.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; I can reproduce the problem: with no Picard hardware
+</I>&gt;&gt;<i> connected to the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; computer, no configuration dialog for the
+</I>&gt;&gt;<i> pre-initialization settings
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; (including the serial number) is displayed in the hardware
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; configuration wizard. This is the case for the Twister
+</I>&gt;&gt;<i> and Z stage,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; but not the XY stage (at least on my computer).
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, I also found the cause: OnSerialGeneric() is
+</I>&gt;&gt;<i> calling the
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Initialize() function, which fails. This happens before
+</I>&gt;&gt;<i> the Hardware
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Wizard calls Initialize (actually, when the wizard is
+</I>&gt;&gt;<i> trying to get
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; the initial values of the pre-init properties), so the
+</I>&gt;&gt;<i> wizard has no
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; chance to display the configuration dialog.
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Simply taking out the calls to Initialize
+</I>&gt;&gt;<i> (PicardStage.cpp lines
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; 243-245, 258) seems to fix this, but I&#39;m not sure if
+</I>&gt;&gt;<i> that is all that
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; needs to be done (since I don&#39;t have a Picard stage
+</I>&gt;&gt;<i> and cannot figure
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; out what the intent of calling Initialize() at this point
+</I>&gt;&gt;<i> was).
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, can you take a look at this?
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Best,
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Mark
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; --
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Mark Tsuchida
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Micro-Manager Team (UCSF Vale Lab)
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; _______________________________________________
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; _______________________________________________
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; OpenSPIM mailing list
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; -------------- next part --------------
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; An HTML attachment was scrubbed...
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; URL: &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/pipermail/openspim/attachments/20140627/6a368a1d/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20140627/6a368a1d/attachment-0001.html</A>
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; ------------------------------
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; _______________________________________________
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; End of OpenSPIM Digest, Vol 14, Issue 20
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt; ****************************************
+</I>&gt;&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i> &gt; &gt;
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140630/27257ea6/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20140630/27257ea6/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000469.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+	<LI>Next message: <A HREF="000471.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#470">[ date ]</a>
+              <a href="thread.html#470">[ thread ]</a>
+              <a href="subject.html#470">[ subject ]</a>
+              <a href="author.html#470">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

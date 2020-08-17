@@ -1,0 +1,76 @@
+<tt>
+&lt;div&nbsp;dir=&quot;ltr&quot;&gt;&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;----------&nbsp;Forwarded&nbsp;message&nbsp;----------&lt;br&gt;From: &quot;G.D.&nbsp;Marquart&quot;&nbsp;&lt;&lt;a&nbsp;href=&quot;mailto:gmarquart@gmail.com&quot;&gt;gmarquart@gmail.com&lt;/a&gt;&gt;&lt;br&gt;To: &lt;a&nbsp;href=&quot;mailto:rk685@york.ac.uk&quot;&gt;rk685@york.ac.uk&lt;/a&gt;, &lt;br&gt;Cc: &lt;br&gt;Date: Tue,&nbsp;3&nbsp;Mar&nbsp;2015&nbsp;13:37:09&nbsp;-0500&lt;br&gt;Subject: Re:&nbsp;OpenSPIM&nbsp;Digest,&nbsp;Vol&nbsp;23,&nbsp;Issue&nbsp;2&lt;br&gt;&lt;div&nbsp;dir=&quot;ltr&quot;&gt;Hey&nbsp;Rob,&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Someone&nbsp;more&nbsp;knowledgeable&nbsp;feel&nbsp;free&nbsp;to&nbsp;correct&nbsp;me,&nbsp;but...&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;I&nbsp;believe&nbsp;the&nbsp;SPIMAcq&nbsp;won&#39;t&nbsp;work&nbsp;with&nbsp;any&nbsp;laser&nbsp;but&nbsp;those&nbsp;specifically&nbsp;defined&nbsp;in&nbsp;the&nbsp;code&nbsp;(or&nbsp;with&nbsp;variables&nbsp;identical&nbsp;to&nbsp;those&nbsp;in&nbsp;src/main/java/spim/setup/Laser.java). &nbsp;So&nbsp;in&nbsp;order&nbsp;to&nbsp;get&nbsp;your&nbsp;laser&nbsp;working&nbsp;in&nbsp;the&nbsp;plugin,&nbsp;I&nbsp;believe&nbsp;you&#39;ll&nbsp;have&nbsp;to&nbsp;download&nbsp;the&nbsp;source&nbsp;for&nbsp;the&nbsp;&lt;a&nbsp;href=&quot;https://github.com/openspim/SPIMAcquisition&quot;&nbsp;target=&quot;_blank&quot;&gt;SPIMAcq&nbsp;plugin&lt;/a&gt;,&nbsp;make&nbsp;a&nbsp;java&nbsp;profile&nbsp;similar&nbsp;to&nbsp;&lt;a&nbsp;href=&quot;https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/setup/Cobolt.java&quot;&nbsp;target=&quot;_blank&quot;&gt;this&lt;/a&gt;&nbsp;for&nbsp;your&nbsp;OBIS&nbsp;using&nbsp;variable&nbsp;names&nbsp;you&nbsp;can&nbsp;find&nbsp;&lt;a&nbsp;href=&quot;https://github.com/hadim/micromanager/blob/96f12e31227b2173b98093036c735a6f42b5516e/DeviceAdapters/CoherentOBIS/CoherentOBIS.cpp&quot;&nbsp;target=&quot;_blank&quot;&gt;here&lt;/a&gt;,&nbsp;place&nbsp;that&nbsp;new&nbsp;file&nbsp;in&nbsp;the&nbsp;appropriate&nbsp;folder&nbsp;(src/main/java/setup/)&nbsp;and&nbsp;then&nbsp;compile&nbsp;it&nbsp;yourself&nbsp;(using&nbsp;maven). &nbsp;Because&nbsp;it&#39;s&nbsp;still&nbsp;a&nbsp;Coherent&nbsp;laser&nbsp;and&nbsp;they&nbsp;appear&nbsp;to&nbsp;use&nbsp;the&nbsp;same&nbsp;variable&nbsp;names&nbsp;to&nbsp;address&nbsp;the&nbsp;laser,&nbsp;I&nbsp;think&nbsp;you&nbsp;can&nbsp;just&nbsp;copy&nbsp;the&nbsp;CoherentCube.java&nbsp;file,&nbsp;rename&nbsp;where&nbsp;you&nbsp;see&nbsp;CoherentCube&nbsp;to&nbsp;OBIS,&nbsp;and&nbsp;rename&nbsp;the&nbsp;file&nbsp;to&nbsp;OBIS.java.&nbsp; &lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;To&nbsp;compile,&nbsp;you&#39;ll&nbsp;need&nbsp;Maven&nbsp;which&nbsp;you&nbsp;can&nbsp;get&nbsp;&lt;a&nbsp;href=&quot;http://maven.apache.org/download.cgi&quot;&nbsp;target=&quot;_blank&quot;&gt;here&lt;/a&gt; (need&nbsp;to&nbsp;setup&nbsp;a&nbsp;number&nbsp;of&nbsp;user&nbsp;variables&nbsp;to&nbsp;get&nbsp;it&nbsp;to&nbsp;run,&nbsp;see&nbsp;installation&nbsp;instructions).&nbsp; once&nbsp;maven&nbsp;is&nbsp;installed,&nbsp;copy&nbsp;the&nbsp;SPIMAcq&nbsp;source&nbsp;from&nbsp;the&nbsp;git&nbsp;repository&nbsp;into&nbsp;Fiji.app/plugins/Micro-Manager&nbsp;and&nbsp;run&nbsp;the&nbsp;following&nbsp;commands&nbsp;(in&nbsp;cmd.exe)&nbsp;from&nbsp;that&nbsp;directory&nbsp;to&nbsp;compile.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;mvn<br>
+install:install-file&nbsp;-DgroupId=org.micromanager&nbsp;-Dversion=1.4.20-SNAPSHOT<br>
+-Dpackaging=jar&nbsp;-DartifactId=MMJ_&nbsp;-Dfile=MMJ_.jar&lt;/p&gt;<br>
+<br>
+&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;mvn<br>
+install:install-file&nbsp;-DgroupId=org.micromanager&nbsp;-Dversion=1.4.20-SNAPSHOT<br>
+-Dpackaging=jar&nbsp;-DartifactId=MMCoreJ&nbsp;-Dfile=MMCoreJ.jar&lt;/p&gt;<br>
+<br>
+&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;mvn<br>
+-Dscijava.enforce.skip&lt;/p&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;This&nbsp;should&nbsp;create&nbsp;a&nbsp;SPIMAcq&nbsp;that&nbsp;now&nbsp;supports&nbsp;your&nbsp;laser&nbsp;that&nbsp;you&nbsp;can&nbsp;copy&nbsp;into&nbsp;the&nbsp;appropriate&nbsp;folder&nbsp;in&nbsp;Fiji.&lt;/p&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;Hope&nbsp;this&nbsp;helps,&lt;/p&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&nbsp;class=&quot;MsoNormal&quot;&nbsp;style=&quot;margin-bottom:0.0001pt&quot;&gt;Graham&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&nbsp;class=&quot;gmail_extra&quot;&gt;&lt;br&gt;&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;On&nbsp;Tue,&nbsp;Mar&nbsp;3,&nbsp;2015&nbsp;at&nbsp;1:00&nbsp;PM,&nbsp;&lt;a&nbsp;href=&quot;mailto:openspim-request@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;openspim-request@openspim.org&lt;/a&gt;&nbsp;&lt;span&nbsp;dir=&quot;ltr&quot;&gt;&lt;&lt;a&nbsp;href=&quot;mailto:openspim-request@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;openspim-request@openspim.org&lt;/a&gt;&gt;&lt;/span&gt;&nbsp;wrote:&lt;br&gt;&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;Send&nbsp;OpenSPIM&nbsp;mailing&nbsp;list&nbsp;submissions&nbsp;to&lt;br&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;a&nbsp;href=&quot;mailto:openspim@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;openspim@openspim.org&lt;/a&gt;&lt;br&gt;<br>
+&lt;br&gt;<br>
+To&nbsp;subscribe&nbsp;or&nbsp;unsubscribe&nbsp;via&nbsp;the&nbsp;World&nbsp;Wide&nbsp;Web,&nbsp;visit&lt;br&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;a&nbsp;href=&quot;http://openspim.org/mailman/listinfo/openspim&quot;&nbsp;target=&quot;_blank&quot;&gt;http://openspim.org/mailman/listinfo/openspim&lt;/a&gt;&lt;br&gt;<br>
+or,&nbsp;via&nbsp;email,&nbsp;send&nbsp;a&nbsp;message&nbsp;with&nbsp;subject&nbsp;or&nbsp;body&nbsp;&#39;help&#39;&nbsp;to&lt;br&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;a&nbsp;href=&quot;mailto:openspim-request@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;openspim-request@openspim.org&lt;/a&gt;&lt;br&gt;<br>
+&lt;br&gt;<br>
+You&nbsp;can&nbsp;reach&nbsp;the&nbsp;person&nbsp;managing&nbsp;the&nbsp;list&nbsp;at&lt;br&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;a&nbsp;href=&quot;mailto:openspim-owner@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;openspim-owner@openspim.org&lt;/a&gt;&lt;br&gt;<br>
+&lt;br&gt;<br>
+When&nbsp;replying,&nbsp;please&nbsp;edit&nbsp;your&nbsp;Subject&nbsp;line&nbsp;so&nbsp;it&nbsp;is&nbsp;more&nbsp;specific&lt;br&gt;<br>
+than&nbsp;&quot;Re:&nbsp;Contents&nbsp;of&nbsp;OpenSPIM&nbsp;digest...&quot;&lt;br&gt;<br>
+&lt;br&gt;<br>
+&lt;br&gt;<br>
+Today&#39;s&nbsp;Topics:&lt;br&gt;<br>
+&lt;br&gt;<br>
+ &nbsp; 1.&nbsp;OpenSPIM&nbsp;plugin&nbsp;does&nbsp;not&nbsp;allow&nbsp;to&nbsp;control&nbsp;laser&lt;br&gt;<br>
+ &nbsp; &nbsp; &nbsp;(Robert&nbsp;Konstandelos)&lt;br&gt;<br>
+&lt;br&gt;<br>
+&lt;br&gt;<br>
+----------------------------------------------------------------------&lt;br&gt;<br>
+&lt;br&gt;<br>
+Message:&nbsp;1&lt;br&gt;<br>
+Date:&nbsp;Tue,&nbsp;3&nbsp;Mar&nbsp;2015&nbsp;13:52:48&nbsp;+0000&lt;br&gt;<br>
+From:&nbsp;Robert&nbsp;Konstandelos&nbsp;&lt;&lt;a&nbsp;href=&quot;mailto:rk685@york.ac.uk&quot;&nbsp;target=&quot;_blank&quot;&gt;rk685@york.ac.uk&lt;/a&gt;&gt;&lt;br&gt;<br>
+To:&nbsp;&lt;a&nbsp;href=&quot;mailto:openspim@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;openspim@openspim.org&lt;/a&gt;&lt;br&gt;<br>
+Subject:&nbsp;[OpenSPIM]&nbsp;OpenSPIM&nbsp;plugin&nbsp;does&nbsp;not&nbsp;allow&nbsp;to&nbsp;control&nbsp;laser&lt;br&gt;<br>
+Message-ID:&lt;br&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;&lt;a&nbsp;href=&quot;mailto:CALKrRTGuUBTOvhVfbNS8QP9pEfB2pMUnJYb5dn2gVkZOsiRmdQ@mail.gmail.com&quot;&nbsp;target=&quot;_blank&quot;&gt;CALKrRTGuUBTOvhVfbNS8QP9pEfB2pMUnJYb5dn2gVkZOsiRmdQ@mail.gmail.com&lt;/a&gt;&gt;&lt;br&gt;<br>
+Content-Type:&nbsp;text/plain;&nbsp;charset=&quot;utf-8&quot;&lt;br&gt;<br>
+&lt;br&gt;<br>
+Hello,&lt;br&gt;<br>
+&lt;br&gt;<br>
+I&nbsp;am&nbsp;having&nbsp;an&nbsp;issue&nbsp;with&nbsp;the&nbsp;OpenSPIM&nbsp;plugin&nbsp;as&nbsp;it&nbsp;does&nbsp;not&nbsp;allow&nbsp;me&nbsp;to&lt;br&gt;<br>
+control&nbsp;my&nbsp;coherent&nbsp;obis&nbsp;laser&nbsp;through&nbsp;this&nbsp;application.&nbsp;The&nbsp;app&nbsp;constantly&lt;br&gt;<br>
+says&nbsp;my&nbsp;power&nbsp;is&nbsp;zero&nbsp;and&nbsp;whenever&nbsp;I&nbsp;try&nbsp;to&nbsp;change&nbsp;the&nbsp;setting&nbsp;it&nbsp;returns&lt;br&gt;<br>
+to&nbsp;zero&nbsp;even&nbsp;when&nbsp;it&nbsp;is&nbsp;on!&lt;br&gt;<br>
+&lt;br&gt;<br>
+I&nbsp;am&nbsp;just&nbsp;wondering&nbsp;whether&nbsp;there&nbsp;is&nbsp;a&nbsp;way&nbsp;that&nbsp;this&nbsp;can&nbsp;be&nbsp;fixed.&nbsp;I&nbsp;have&lt;br&gt;<br>
+the&nbsp;correct&nbsp;settings&nbsp;specified&nbsp;on&nbsp;the&nbsp;micromanager&nbsp;page&nbsp;for&nbsp;the&nbsp;coherent&lt;br&gt;<br>
+obis&nbsp;so&nbsp;I&nbsp;am&nbsp;wondering&nbsp;whether&nbsp;there&nbsp;maybe&nbsp;something&nbsp;I&nbsp;have&nbsp;missed.&lt;br&gt;<br>
+&lt;br&gt;<br>
+Any&nbsp;help&nbsp;would&nbsp;be&nbsp;much&nbsp;appreciated.&lt;br&gt;<br>
+&lt;br&gt;<br>
+Thanks&lt;br&gt;<br>
+&lt;br&gt;<br>
+Rob&lt;br&gt;<br>
+--------------&nbsp;next&nbsp;part&nbsp;--------------&lt;br&gt;<br>
+An&nbsp;HTML&nbsp;attachment&nbsp;was&nbsp;scrubbed...&lt;br&gt;<br>
+URL:&nbsp;&lt;&lt;a&nbsp;href=&quot;http://openspim.org/pipermail/openspim/attachments/20150303/ae615648/attachment-0001.html&quot;&nbsp;target=&quot;_blank&quot;&gt;http://openspim.org/pipermail/openspim/attachments/20150303/ae615648/attachment-0001.html&lt;/a&gt;&gt;&lt;br&gt;<br>
+&lt;br&gt;<br>
+------------------------------&lt;br&gt;<br>
+&lt;br&gt;<br>
+_______________________________________________&lt;br&gt;<br>
+OpenSPIM&nbsp;mailing&nbsp;list&lt;br&gt;<br>
+&lt;a&nbsp;href=&quot;mailto:OpenSPIM@openspim.org&quot;&nbsp;target=&quot;_blank&quot;&gt;OpenSPIM@openspim.org&lt;/a&gt;&lt;br&gt;<br>
+&lt;a&nbsp;href=&quot;http://openspim.org/mailman/listinfo/openspim&quot;&nbsp;target=&quot;_blank&quot;&gt;http://openspim.org/mailman/listinfo/openspim&lt;/a&gt;&lt;br&gt;<br>
+&lt;br&gt;<br>
+&lt;br&gt;<br>
+End&nbsp;of&nbsp;OpenSPIM&nbsp;Digest,&nbsp;Vol&nbsp;23,&nbsp;Issue&nbsp;2&lt;br&gt;<br>
+***************************************&lt;br&gt;<br>
+&lt;/blockquote&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;<br>
+&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;<br>
+
+</tt>

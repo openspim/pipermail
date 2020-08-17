@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C7560ba822bb5e.52ebc161%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001299.html">
+   <LINK REL="Next"  HREF="001303.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C7560ba822bb5e.52ebc161%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Jan 31 15:29:37 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001299.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="001303.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1301">[ date ]</a>
+              <a href="thread.html#1301">[ thread ]</a>
+              <a href="subject.html#1301">[ subject ]</a>
+              <a href="author.html#1301">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Nikul,
+
+--x64 is supposed to change &quot;mm.architecture&quot; to &quot;x64&quot; before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that &quot;build.sh&quot; and/or &quot;openspim.build.xml&quot; do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in &quot;stage&quot; or &quot;build&quot; subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of &quot;openspim.build.xml&quot;) and make sure the correct architecture is copied from.
+
+
+Hope this helps,
+Luke
+
+On 01/31/14, Nikul Ukani  wrote:
+&gt;<i> Hi Johannes,
+</I>&gt;<i> 
+</I>&gt;<i> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Nikul
+</I>&gt;<i> 
+</I>&gt;<i> &gt; On Jan 31, 2014, at 2:21 PM, Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; wrote:
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Hi Nikul,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;&gt; On Fri, 31 Jan 2014, Nikul Ukani wrote:
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I am currently trying to compile OpenSPIM on a 64 bit machine running
+</I>&gt;<i> &gt;&gt; Windows 7. While I was able to get it to compile by modifying some of
+</I>&gt;<i> &gt;&gt; the build scripts; upon trying to open it from Fiji, I get the following
+</I>&gt;<i> &gt;&gt; error
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; Error: Failed to open libMMCoreJ_wrap.jnilib
+</I>&gt;<i> &gt;&gt; mmcorej.MMCoreJJNI.swig_module_init()V
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+</I>&gt;<i> &gt; library. Possible?
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Ciao,
+</I>&gt;<i> &gt; Johannes
+</I>&gt;<i> &gt; 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001299.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="001303.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1301">[ date ]</a>
+              <a href="thread.html#1301">[ thread ]</a>
+              <a href="subject.html#1301">[ subject ]</a>
+              <a href="author.html#1301">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

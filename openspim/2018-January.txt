@@ -1,0 +1,496 @@
+From ddowless at gmail.com  Fri Jan  5 10:35:19 2018
+From: ddowless at gmail.com (dave dowless)
+Date: Fri, 5 Jan 2018 11:35:19 -0500
+Subject: [OpenSPIM] Clearing solvents and plastics? Delrin? Any experiences
+	out there?
+Message-ID: <CAM=c-cAM=hbwLyG3twWQzBvATWpBgeOJ4niokERh5tD_zrLLFQ@mail.gmail.com>
+
+Hi,
+
+This is my first build. It's a hybrid setup with non-dipping objectives.
+
+Delrin is a great plastic with decent chemical compatibility.
+
+Anybody build a chamber from Delrin?
+
+We''ll be trying various clearing protocols. Unsure which ones, etc.
+
+Anybody used Delrin? Success? Failed?
+
+Dave
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180105/3be517f6/attachment.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Fri Jan 12 08:13:57 2018
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Fri, 12 Jan 2018 14:13:57 +0000
+Subject: [OpenSPIM] Bio-Formats
+Message-ID: <5a18daf16b244bef51c110610bc651e8@cam.ac.uk>
+
+Dear All,
+
+I had to re-install the Fiji-OpenSPIM software after replacing my C 
+drive.
+I enabled the update sites for Java-8 and Bio-Formats and updated Fiji.
+
+Now I am getting the following error when starting the Micro-Manager 
+plugin (before starting the OpenSPIM-Plugin in Micro-Manager):
+
+"Jan 12, 2018 2:07:03 PM java.util.prefs.WindowsPreferences openKey
+WARNING: Could not open windows registry node 
+Software\JavaSoft\Prefs\org\micromanager at root 0x80000002. Windows 
+RegOpenKey(...) returned error code 5."
+
+
+The acquisition seems to work, but whenever I try to open a single 
+z-stack (ome.tif) Bio-Formats tries to open the entire time-lapse (and 
+fails mostly cause they are too big).
+This only happens with data I acquired after re-installing Fiji. When I 
+drag an older ome.tif file into Fiji, it opens it without even starting 
+Bio-Formats.
+
+Does anyone have an idea what else I need to do? Is this a problem with 
+Java or with Fiji or Bio-Formats?
+
+I have noticed before that when dragging data into Fiji, it  opens the 
+Bio-Formats window for some data, but not for others. Why is that?
+
+Thank you very much for any input.
+
+Best wishes,
+Stephanie
+
+
+
+
+
+
+From nantho2 at emory.edu  Mon Jan 22 10:01:37 2018
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 22 Jan 2018 16:01:37 +0000
+Subject: [OpenSPIM] Light Sheet Imaging & Analysis Position in Emory's
+ Integrated Cellular Imaging (ICI) Core
+Message-ID: <MWHPR05MB3503257D62CEAACB0319BDD6ECEC0@MWHPR05MB3503.namprd05.prod.outlook.com>
+
+Hi all, I hope the science and scopes are treating you well.
+
+
+
+We are currently looking for an additional member to join our team of imaging experts in Emory University's Integrated Cellular Imaging (ICI) core facility.  The ICI is one of the largest microscopy core facilities in the south eastern region with 18 microscopes and 5 analysis workstations across 4 locations on Emory's main campus (http://www.cores.emory.edu/ici/).  We have multiple standard options such as widefield, confocal, and live cell spinning disk, together with advanced techniques including multiphoton, super-res, SPIM and lattice light sheet.  We are looking for a dedicated person passionate about imaging and helping life sciences researchers get the most out of today's cutting-edge microscopes and the ever-complicated data sets.
+
+
+
+The role includes working with our light sheet and super-resolution microscopes (advising and assisting with acquisitions, and optimizing data analysis and post-acquisition workflows), together with troubleshooting and optimizing image acquisitions across multiple microscopes with an emphasis on quantitative data analysis.  In addition, the position requires regular meetings with researcher to train and assist with 2D/3D/4D data analyses using Fiji, CellProfiler, Imaris, Matlab etc.  Depending on interest and expertise there may also be threads of cloud computing and data logistics, 2D/3D/4D media and graphics, and more.
+
+
+
+We're looking for a bachelors or masters level applicant with a passion for learning, helping, and attention to detail.  Ideal candidates should have experience with data analysis and a background that overlaps in one or more of the following subject areas: physics, optics, engineering, programming, or computer science.  While experience with fluorescence microscopy and biology is beneficial, it's not explicitly required, just an interest in learning the underlying principles of modern microscopy data.
+
+
+
+Please see here for the posting on the Emory HR website:
+
+https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?PageType=JobDetails&partnerid=25066&siteid=5043&areq=77746br#jobDetails=637740_5043
+
+(If the above does not properly direct, please visit http://www.hr.emory.edu/eu/careers/index.html click "Search for Staff Jobs (External Candidates)" and search for 77746.
+
+
+
+Don't hesitate to contact for further details
+
+
+
+Thanks
+
+Neil
+
+
+
+
+
+Neil Anthony, PhD  |  Technical Director
+
+neil.anthony at emory.edu<mailto:neil.anthony at emory.edu>
+
+ici.emory.edu<http://www.cores.emory.edu/ici>
+
+404 969-CORE
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180122/7678b4c6/attachment.html>
+
+From judith.bartels at tum.de  Tue Jan 23 22:40:19 2018
+From: judith.bartels at tum.de (Bartels, Judith)
+Date: Wed, 24 Jan 2018 04:40:19 +0000
+Subject: [OpenSPIM] Acquire SPIM image data saving problem
+In-Reply-To: <6237127c3edc499b80fe7feb60691846@tum.de>
+References: <9cb8518dac6147e29933b92f5465262b@tum.de>,
+ <6237127c3edc499b80fe7feb60691846@tum.de>
+Message-ID: <e8df0c61c90c421980123d3f1e7317a3@tum.de>
+
+Dear all,
+
+the data saving problem I described in the last email still persists. I have now run out of ideas what to try and would be very grateful for any help.
+
+The problem is the automatic saving to an output directory.
+If no directory is defined, the acquisition can be completed successfully and the images saved as .tiff.
+But when defining an output directory to save datasets as .ome.tiff, the acquisition fails as the plugin is not able to save images. The following error occurs (the complete CoreLog is attached):
+
+java.lang.Error: Error acquiring!
+   at spim.SPIMAcquisition$29.run(SPIMAcquisition.java:2042)
+Caused by exception: java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+   at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+   at java.lang.Thread.run(Thread.java:748)
+Caused by exception: java.lang.ClassCastException: [I cannot be cast to [B
+   at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+   at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+   at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+   at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+   at java.lang.Thread.run(Thread.java:748)
+
+The log gives the following information, but saving does not work, even if the async writer is not selected:
+
+The acquisition is RUNNING.
+Async writer failed!
+[WARNING] The current process takes longer than 5 secs delay.
+
+or:
+
+The acquisition is RUNNING.
+The acquisition is DONE.
+Async writer failed!
+Estimated tiles count: 1.0
+Tiles count: 1
+calling setBigTiff(true)
+
+So far I tried various versions of the OpenSPIM software (the package downloaded from openspim.org, a newer version and the most recent version updated today).
+I included the update sites for: OpenSPIM, Micro-Manager-dev, Fiji, ImageJ, Java-8, Bio-Formats (in different combinations).
+The error was reproducable on another computer and also on another operating system (windows 8 and windows 7).
+
+Could it possibly be related to the setup we use? Instead of a Hamamatsu camera we use an Edmund Optics USB CCD Color camera.
+
+Has anyone an idea how to solve the problem? Or any suggestion what else I might try?
+Any help would be very much appreciated.
+
+Thank you and kind regards,
+Judith
+
+
+
+________________________________________
+Von: OpenSPIM <openspim-bounces at openspim.org> im Auftrag von Bartels, Judith <judith.bartels at tum.de>
+Gesendet: Montag, 18. Dezember 2017 15:22
+An: openspim at openspim.org
+Betreff: [OpenSPIM] Acquire SPIM image data saving and Anti-Drift problem
+
+Dear all,
+
+thank you very much for this great project and the effort you put in answering all these questions.
+
+I spent the last few months building and aligning an OpenSpim microscope.
+Now two problems are left I was not yet able to solve.
+
+When defining an output directory and starting an acquisition, the Acquire SPIM image plugin throws an error ("Error acquiring: [I cannot be cast to [B") and stops the acquisition. Fiji then has to be restarted.
+The error in the console reads:
+
+java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+     at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+     at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+     at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+     ... 1 more
+
+The second problem is that I do not know how to use the Anti-Drift function. I am able to manually alter the position, but when selecting automatic application of the
+suggested value nothing changes and the sample just keeps drifting out of the field of view.
+
+Has anyone encountered these problems before or has an idea how to solve them?
+
+Thank you very much,
+Judith
+
+
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20180123T193138_pid6364.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20180124/305ee5dc/attachment-0001.txt>
+
+From loic.royer at czbiohub.org  Sun Jan 28 11:24:46 2018
+From: loic.royer at czbiohub.org (Loic Royer)
+Date: Sun, 28 Jan 2018 18:24:46 +0100
+Subject: [OpenSPIM] Job Offer at Chan Zuckerberg Biohub (Please forward)
+Message-ID: <4D977380-44B8-4C75-AC3E-D68A374A3944@czbiohub.org>
+
+
+Dear Friends and Colleagues,
+
+My lab at the Chan Zuckerberg Biohub in San Francisco is booting up!
+We will build smart lightsheet microscopes and other cool instruments to advance the initiatives at the CZ Biohub. The lab will be highly interdisciplinary with projects at the interface between Artificial Intelligence, Optics and Biology.
+
+For this purpose, I am hiring a Software Engineer with a taste for smart microscopy, real-time image processing&analysis, deep learning, controlling hardware, robotics, visualization, etc…
+My current smart microscopy software stack is 95% Java and a bit of OpenCL and OpenGL here and there, and extensively relies on the FiJi / ImageJ / Imglib2 / ClearVolume / Scenery / BDV / etc.. ecosystem.
+
+
+If you know someone who might be interested please forward and direct them here:
+
+https://www.workable.com <https://czbiohub.workable.com/j/03608E017E>
+
+Job opening: Software Engineer - Smart Microscope Control Software Development... <https://czbiohub.workable.com/j/03608E017E>
+Job opening: Software Engineer - Smart Microscope Control Software Development at Chan Zuckerberg Biohub. Apply at Workable.
+Btw, I am also hiring a biologist and a physicist:
+
+twitter.com <https://twitter.com/loicaroyer/status/943933654773899264>
+
+Loic A. Royer 💻🔬⚗️ (loicaroyer) <https://twitter.com/loicaroyer/status/943933654773899264>
+The Royer Lab at the Chan Zuckerberg Biohub is hiring! Apply!
+A Microscope Builder  https://t.co/dEnsE8eM37 <https://t.co/dEnsE8eM37>
+A Computer Scientist  https://t.co/zK6oQLmh4B <https://t.co/zK6oQLmh4B> 
+A Biologist                   https://t.co/YoXwgWnBZ2 <https://t.co/YoXwgWnBZ2> 
+Come build amazing microscopes, write code, and make discoveries!
+11:58 AM - 21 Dec 2017 <https://twitter.com/loicaroyer/status/943933654773899264>
+
+Please forward this email to anybody that might know someone…
+
+Thanks!
+
+Dr. Loic Alain Royer
+Group Leader, Chan Zuckerberg Biohub
+Twitter: @royerloic <http://forum.imagej.net/u/royerloic>
+Lab Vision:
+
+The Discovery Machine Lab led by Loic Royer at the Chan Zuckerberg Biohub will design and build lightsheet microscopy based ‘discovery machines’ that will not only acquire image data, but also perform online processing, instant 3D visualization, adaptive imaging, and automated photo-manipulation. These integrated instruments bring together state of the art optics, robotics, machine learning, and image analysis with the aim of building comprehensive atlases of development and modeling complex cellular choreographies.
+
+Opportunity:
+
+We are looking for a Software scientist or engineer that will help write hardware microscope control software and deep learning based image analysis algorithms.
+
+What we provide:
+
+The resources to conceive disruptive technology and obtain ground-breaking results to advance knowledge of cell biology.
+Collaborative environment with access to talent and resources of the Biohub platforms
+(Bioengineering, Genome Editing, Data Sciences, and Advanced Imaging).
+Access to collaborators, resources and facilities at Stanford, Berkeley and UCSF.
+Competitive compensation and benefits commensurate with experience.
+On site free snacks and beverages 
+Responsibilities:
+
+Maintain a large Java code-base (> 10 interdependent projects, >100’000 loc) together with a growing international community (FiJi, ImgLib2, ClearVolume, ClearControl, Scenery, …)
+Interface Java framework with C/C++ device drivers
+Write software to control robotic systems
+Write new or integrate existing image processing, image analysis, control algorithms
+Write or adapt real-time deep learning algorithms for microscopy
+Maintain and improve JavaFX based GUIs
+Collaborate with Lab’s microscope builder on instrument control
+Collaborate with the Biohub’s Bioengineering team on instrument control
+Collaborate with the Biohub’s DataScience on backend storage and processing
+REQUIREMENTS
+
+Experience in live fluorescence microscopy and computational optics is highly desired. The candidate should be willing to learn new skills and knowledge, think creatively and show enthusiasm while engaging in risky but potentially rewarding projects.
+
+Mandatory:
+
+Programming is your first language and you love to build software and/or control robots
+At least 5 years of Java programming experience and have the know-how to handle large collections of large and interdependent projects (>20 projects >1000 classes)
+Familiarity with the FiJi / ImageJ / ImgLib2 / ClearVolume / KNIME ecosystem
+Experience with large Java software engineering projects and familiarity with tools and frameworks such as: Gradle and Eclipse.
+Computer vision and image processing experience
+Experience in controlling hardware via device drivers using C/C++ libraries interfaces
+GPU-based (OpenCL) image processing and analysis algorithms
+Software and hardware interfacing
+Desired:
+
+C++/ Labview / OpenCL / OpenGL
+Computer Graphics: 3D Volume rendering
+Notions of Digital and analog electronics for instrument control
+Robotics
+Physics knowledge, ideally optics and mechanics
+Signal processing
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180128/4099adee/attachment.html>
+
+From matthew.pearson at igmm.ed.ac.uk  Mon Jan 29 06:26:04 2018
+From: matthew.pearson at igmm.ed.ac.uk (PEARSON Matthew)
+Date: Mon, 29 Jan 2018 12:26:04 +0000
+Subject: [OpenSPIM] Heating/CO2 solutions for sample chamber
+Message-ID: <E944BD3E-A8A2-4190-8BBD-B04593DE95D4@exseed.ed.ac.uk>
+
+Hi all,
+
+I was wondering if anyone has any advice/experience they'd like to share on how to implement heating (up to 37C) and 5% CO2 supply to a SPIM sample chamber.  What samples  do you image and over what kind of time frame?
+
+Thanks for the help,
+
+Matt
+
+--
+Matt Pearson
+Microscopy Facility
+MRC Human Genetics Unit
+Institute of Genetics and Molecular Medicine (IGMM)
+University of Edinburgh
+Crewe Road
+EH4 2XU
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180129/3b0ffc37/attachment.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20180129/3b0ffc37/attachment.ksh>
+
+From david.potter at monash.edu  Mon Jan 29 20:41:25 2018
+From: david.potter at monash.edu (David Potter)
+Date: Tue, 30 Jan 2018 13:41:25 +1100
+Subject: [OpenSPIM] Heating and CO2
+Message-ID: <CAHmtN7kpnNHPYiknv+ADOrWVYL0k5CKMtS3iJg9Ehj2tOsRTig@mail.gmail.com>
+
+Matt,
+
+I haven't had a need for CO2 yet so I can't help you there but I have been
+successfully heating my chamber to 27C for up to 24 hours. Longer wouldn't
+be a problem. Samples are largely zebrafish. The chamber is anodized
+aluminum and the liquid volume is 150mL. I cap the chamber to slow
+evaporation while leaving a hole for the sample mount to move. I went the
+simple route and attached two polyimide encapsulated  copper foils, via
+PSA, to the chamber bottom paired with a very low tech controller, an NTC
+thermistor and an old 12V laptop power supply. The foils and controller are
+from Minco (https://www.minco.com/Components/Shop-by-Product). Your chamber
+size will dictate the specific foil but an example would be, say, part
+number HK6912. The controller I used is the CT325. Throw in a fuse to keep
+OHS moderately happy. You'll need to calculate the thermal mass of your
+chamber plus medium (plus anything the chamber touches i.e. transfer heat)
+and the warm-up time blah blah and match the parts correctly but that's all
+straightforward. My chamber warms up from 18C to 27C in about 10 minutes.
+Put the thermistor as close as you can to the sample. I put a temp probe in
+an agarose mount and adjusted the CT325 to give me 27 at the probe. It's
+not sexy but it works and it was cheap at ~$200 USD.
+
+If I wanted CO2 control, I would probably do nothing fancier than a well
+sealed plexi box around the sample chamber and stage. Feed in heated
+CO2/air dual gas (or air/N2/CO2 tri-gas) at a slight positive pressure and
+you don't need CO2 controllers. I would include an IR sensor (not a wet
+sensor) as it's good form and allow record keeping. Add a gas pressure
+sensor and wire every sensor into a beagle bone to record all the data. You
+might find an old system designed for a microscope nobody wants anymore and
+up-cycle the parts. I would put the stage inside the box as a bigger box is
+way cheaper and simpler than soft sealing the sample holder arm. Or go
+crazy and box everything but the camera and lasers with opaque plexi and
+you get gas, temp and safety all in one. Send me photos if you build one.
+
+Good luck.
+
+- David
+
+David Potter
+Lattice Light Sheet Microscopy Manager
+Monash Micro Imaging - Advanced Optical Microscopy
+Monash University Clayton, VIC 3800, Australia
+
+
+
+On 30 January 2018 at 05:00, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Heating/CO2 solutions for sample chamber (PEARSON Matthew)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Mon, 29 Jan 2018 12:26:04 +0000
+> From: PEARSON Matthew <matthew.pearson at igmm.ed.ac.uk>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] Heating/CO2 solutions for sample chamber
+> Message-ID: <E944BD3E-A8A2-4190-8BBD-B04593DE95D4 at exseed.ed.ac.uk>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Hi all,
+>
+> I was wondering if anyone has any advice/experience they'd like to share
+> on how to implement heating (up to 37C) and 5% CO2 supply to a SPIM sample
+> chamber.  What samples  do you image and over what kind of time frame?
+>
+> Thanks for the help,
+>
+> Matt
+>
+> --
+> Matt Pearson
+> Microscopy Facility
+> MRC Human Genetics Unit
+> Institute of Genetics and Molecular Medicine (IGMM)
+> University of Edinburgh
+> Crewe Road
+> EH4 2XU
+>
+>
+>
+>
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20180129/3b0ffc37/attachment-0001.html>
+> -------------- next part --------------
+> An embedded and charset-unspecified text was scrubbed...
+> Name: not available
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20180129/3b0ffc37/attachment-0001.ksh>
+>
+> ------------------------------
+>
+> Subject: Digest Footer
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> ------------------------------
+>
+> End of OpenSPIM Digest, Vol 53, Issue 6
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180130/58651409/attachment.html>
+

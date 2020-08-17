@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] computer configuration
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20computer%20configuration&In-Reply-To=%3CD991F899-4996-428A-905B-CCD5258E24A5%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000899.html">
+   <LINK REL="Next"  HREF="000902.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] computer configuration</H1>
+    <B>Ulrik G&#252;nther</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20computer%20configuration&In-Reply-To=%3CD991F899-4996-428A-905B-CCD5258E24A5%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] computer configuration">guenther at mpi-cbg.de
+       </A><BR>
+    <I>Wed Jan 27 10:28:52 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000899.html">[OpenSPIM] computer configuration
+</A></li>
+        <LI>Next message: <A HREF="000902.html">[OpenSPIM] computer configuration
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#900">[ date ]</a>
+              <a href="thread.html#900">[ thread ]</a>
+              <a href="subject.html#900">[ subject ]</a>
+              <a href="author.html#900">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hey Thomas,
+
+
+in addition to Michael&#8217;s remarks, I&#8217;d like to add that the graphics cards in your listing are quite dated, but anyway still expensive &#8212; I found them for around 1000EUR online.
+
+
+If you plan on running things like Multiview Deconvolution (<A HREF="http://fiji.sc/Multi-View_Deconvolution">http://fiji.sc/Multi-View_Deconvolution</A>) on the GPU, you&#8217;d probably be better off getting a more recent card, like a GeForce Titan X with 12 GB RAM, instead. That card also costs around 1000EUR.
+
+
+The main difference (apart from the Titan X having a much more recent architecture) between the two is the double precision calculation speed: The consumer (read non-Quadro) cards are artificially capped at 1/8th of the single precision processing speed. For most image processing tasks however, double precision is not necessary, but more RAM on the GPU helps tremendously.
+
+
+Hope that helped :)
+
+
+cheers!
+
+
+ulrik
+
+
+&#8212;
+Ulrik G&#252;nther, Dipl.-Phys.
+PhD Student
+MOSAIC Group &amp; Tomancak Lab,&#160;Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail:&#160;<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+
+
+
+
+&gt;<i> On Jan 26, 2016, at 6:04 PM, Thomas Pujol &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">thomas.pujol at crg.eu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Hello dear light sheet enthousiaste.
+</I>&gt;<i> 
+</I>&gt;<i> An email to fish advices regarding computer configuration.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I convince my boss that we need a super duper computer to process the spim data that we are producing and I want to know if the configuration advice by the open spim website is up to date(description below) or if I should/could aim for even bigger machine. Online, I also found the HP Z840 that can accomodate a tremendous amount of ram, any recommandation?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> We have to choose between buying a work station with massive a amount ram or our private node on the institute cluster, does anyone has advice or feedback on previous expererience ?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> thank you and may the light sheet be with you
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> cheers
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> thomas pujol
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Processor&#160;: Two Intel Xeon Processor E5-2630 (Six Core, 2.30GHz Turbo, 15MB, 7.2 GT/s) 
+</I>&gt;<i> Memory&#160;: 128GB (16x8GB) 1600MHz DDR3 ECC RDIMM
+</I>&gt;<i> Hard Drive&#160;: 4x2TB 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+</I>&gt;<i> HDD Controller&#160;: PERC H310 SATA/SAS Controller for Dell Precision
+</I>&gt;<i> HDD Configuration&#160;: C1 SATA 3.5inch, 1-4 Hard Drives
+</I>&gt;<i> Graphics&#160;: Dual 2 GB NVIDIA Quadro 4000 (2cards w/ 2DP &amp; 1DVI-I each) (2DP-DVI &amp; 2DVI-VGA adapter) (MRGA17H)
+</I>&gt;<i> Network&#160;: Intel X520-T2 Dual Port 10GbE Network Interface Card
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160127/a10933be/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20160127/a10933be/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000899.html">[OpenSPIM] computer configuration
+</A></li>
+	<LI>Next message: <A HREF="000902.html">[OpenSPIM] computer configuration
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#900">[ date ]</a>
+              <a href="thread.html#900">[ thread ]</a>
+              <a href="subject.html#900">[ subject ]</a>
+              <a href="author.html#900">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

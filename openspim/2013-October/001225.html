@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20WG%3A%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%20plus%22%20problem%0A%09persisting&In-Reply-To=%3C7740cb6c211b4.52726da2%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001224.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20WG%3A%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%20plus%22%20problem%0A%09persisting&In-Reply-To=%3C7740cb6c211b4.52726da2%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Thu Oct 31 14:48:02 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001224.html">[OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1225">[ date ]</a>
+              <a href="thread.html#1225">[ thread ]</a>
+              <a href="subject.html#1225">[ subject ]</a>
+              <a href="author.html#1225">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Edgar,
+
+So the issue appears regardless of operating system (Windows XP versus Windows 7) and architecture (32-bit versus 64-bit)? Did you try going back to the no-shutter configuration? (It shouldn't have a problem now that I've added some checks for an absent laser.)
+
+
+I take it all the motor controls are fully functional? That is, the sliders all report the current position correctly, and let you change the position without trouble, for all four stage axes?
+
+I've uploaded another version of the plugin which is a little more direct about its error reporting; please try updating once more -- although this may not fix the issue, it might produce useful error output.
+
+
+Thanks again,
+Luke
+
+
+On 10/31/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> About the error files, you are right, they appear as long as I close µManager/Fiji. The &quot;Stack at this Z plus&quot; button is the only problem, I can
+</I>&gt;<i> still made everthing else as I menctioned before. I just updated Fiji and the problem persist. The button is unstucked as long as I move the mouse
+</I>&gt;<i> cursor outside the area of the button and I am able to click it again. The problem is comparable as if I place the cursor over a normal button e.g.
+</I>&gt;<i> Oh Snap!, then click the mouse and move the cursor outside Oh Snap! and finally release the mouse outside Oh Snap! 
+</I>&gt;<i> If you do that simply nothing happens. That is just the way the &quot;Stack at this Z plus&quot; button behaves.
+</I>&gt;<i> 
+</I>&gt;<i> I also thought that the problem was related with the TIS cam but I already test Fiji in a different computer (Windows 7 64 bits). In that computer
+</I>&gt;<i> is not installed any driver or software from the camera. I made a test using only the Picard Stage, a demo shutter and a demo camera
+</I>&gt;<i> and the problem about &quot;Stack at this Z plus&quot; remains, the only difference I noticed is that when I close µManager/Fiji there is no error files.
+</I>&gt;<i> 
+</I>&gt;<i> Hope this information is useful. Have a happy longweekend. 
+</I>&gt;<i> 
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> Edgar
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> Edgar Escobar Nieto 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Steinbachstraße 17 
+</I>&gt;<i> 52074 Aachen 
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> <A HREF="http://www.ipt.fraunhofer.de(http://www.ipt.fraunhofer.de/">http://www.ipt.fraunhofer.de(http://www.ipt.fraunhofer.de/</A>&quot; target=&quot;1&quot;&gt; <A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A> 
+</I>&gt;<i> _________________________________________________________________________ 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; schrieb: ----- An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+</I>&gt;<i> Von: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+</I>&gt;<i> Datum: 30.10.2013 20:54
+</I>&gt;<i> Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Betreff: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting
+</I>&gt;<i> 
+</I>&gt;<i> Hi Edgar,
+</I>&gt;<i> 
+</I>&gt;<i> Unfortunately the files were not as revealing as I had hoped. They seem to indicate a persistent problem with either the TIScam device adapter or the way we interact with it. (Most of the hardware errors point into TIScam's extra DLL -- TIS_DShowLib10.dll+0x2eced.) I will eventually need to do some digging to try and discern the source of that error; however, I'm not convinced it's the cause of the stack insert problem (another symptom of the problem, perhaps) -- if the software isn't crashing when you click the button, then these files are probably being generated when Micro-Manager is closed.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> When you click the 'insert stack' button, it is only that button that sticks, correct? The remaining buttons still work? You can change between tabs, move motors, et cetera? Can it be un-stuck and clicked on again? It's still possible that there is a silent exception being generated; I'll check on that.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Also, please try updating to the latest version again -- I recently pushed an update that should eliminate the need for the demo-shutter trick by being prepared for the absence of a laser.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Luke
+</I>&gt;<i> 
+</I>&gt;<i> On 10/28/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; Hi Luke,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I attach the files that you requested, I hope they can give you a clue about the problem.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Thank you and kind regards,
+</I>&gt;<i> &gt; Edgar
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; _________________________________________________________________________
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> &gt; Edgar Escobar Nieto 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Steinbachstraße 17 
+</I>&gt;<i> &gt; 52074 Aachen 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> &gt;
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001224.html">[OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1225">[ date ]</a>
+              <a href="thread.html#1225">[ thread ]</a>
+              <a href="subject.html#1225">[ subject ]</a>
+              <a href="author.html#1225">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM]  Planning an appropriate SPIM build for my experiments
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%20Planning%20an%20appropriate%20SPIM%20build%20for%20my%20experiments&In-Reply-To=%3Cfdb8980b-3415-1a00-5431-e76a1010a885%40uvm.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001921.html">
+   <LINK REL="Next"  HREF="001925.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM]  Planning an appropriate SPIM build for my experiments</H1>
+    <B>Menelaos Symeonides</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%20Planning%20an%20appropriate%20SPIM%20build%20for%20my%20experiments&In-Reply-To=%3Cfdb8980b-3415-1a00-5431-e76a1010a885%40uvm.edu%3E"
+       TITLE="[OpenSPIM]  Planning an appropriate SPIM build for my experiments">msymeoni at uvm.edu
+       </A><BR>
+    <I>Thu Jun  2 06:48:30 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001921.html">[OpenSPIM] how many slices per second by the system
+</A></li>
+        <LI>Next message: <A HREF="001925.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1922">[ date ]</a>
+              <a href="thread.html#1922">[ thread ]</a>
+              <a href="subject.html#1922">[ subject ]</a>
+              <a href="author.html#1922">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello OpenSPIM,
+
+I've been following this list and reading papers in the field for about 
+a year. In our lab, we've come to a point where we need to carry out 
+long term fast nontoxic imaging of cell cultures that is only possible 
+with SPIM, and have just obtained funding to build our own microscope to 
+do these experiments. I was hoping to pick the brains of this mailing 
+list to hopefully design an appropriate setup, perhaps based on the 
+OpenSPIM platform, so that we can carry out these experiments.
+
+In general, the experiment involves imaging HIV-infected T cells 
+embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+spread the infection to other cells and do various other things related 
+to the infection, e.g. bystander cell killing. Here are some of the 
+considerations:
+
+1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+apoptosis sensor in the iRFP channel, and will also need to somehow 
+label nuclei and perhaps also membranes. That would be a maximum of 4 
+channels, with 3 channels being &quot;acceptable&quot;.
+
+2. The cells will need to be imaged for 2 to 3 days, with a time 
+resolution on the order of 2 Hz (for the full volume). T cells migrate 
+at about 15 μm/sec, and we would like sufficient time resolution to 
+capture each cell at least twice during each body length movement (body 
+length is about 10 μm, hence needing around 2 Hz).
+
+3. The entire volume (or close to that) of the hydrogel will need to be 
+imaged at each timepoint. The volume of the hydrogel is up to our 
+discretion, but generally it is on the order of 150 to 300 μL.
+
+4. Spatial resolution is not of particular concern, as we are more 
+interested in the cells as whole entities rather than e.g. the details 
+of virus assembly in each cell. However, we would like comparable 
+resolution in all three dimensions, as there is no real &quot;plane&quot; we are 
+interested in and the cells can go in any direction.
+
+5. The hydrogel can be fairly optically dense, and we experience 
+prohibitive distortion at anything deeper than ~100 μm with widefield 
+single photon imaging.
+
+6. Of course, temperature control and media perfusion will be required. 
+Given the nature of the pathogen, we will need to be able to fully 
+decontaminate the sample chamber and anything that has come into contact 
+with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+ideas for the tissue culture chamber. We have access to a fabrication 
+service at our institute that can help us design and build the chamber.
+
+
+Just to give you a general idea, we have about $100K available to us to 
+purchase parts for this, not including the fabrication fee for the 
+culture chamber for which we have other money set aside.
+
+Other than general ideas of what direction we should be heading in, or 
+links to papers for setups we could emulate, I also have some more 
+specific questions:
+
+A. Would two-photon imaging be an inevitable requirement given the 
+density of the sample?
+
+B. If the sort of speed of acquisition we are looking for is beyond 
+reach for any system we could feasibly build ourselves (especially given 
+the need for exposing in multiple fluorescence channels at each 
+position), what should we sacrifice in our experimental plan to make it 
+more within reach?
+
+C. Does anyone know of any labs in the Northeast US/Quebec that have 
+implemented a similar setup that we could go see in person? We are based 
+in Vermont.
+
+
+I appreciate the work everyone on this list puts in for newcomers, so 
+thank you!
+
+Best regards,
+Mel
+
+
+-- 
+Menelaos Symeonides
+Post-Doctoral Associate, Thali Lab
+Department of Microbiology and Molecular Genetics
+University of Vermont
+318 Stafford Hall
+95 Carrigan Dr
+Burlington, VT 05405
+<A HREF="http://openspim.org/mailman/listinfo/openspim">msymeoni at uvm.edu</A>
+Phone: 802-656-1161
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001921.html">[OpenSPIM] how many slices per second by the system
+</A></li>
+	<LI>Next message: <A HREF="001925.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1922">[ date ]</a>
+              <a href="thread.html#1922">[ thread ]</a>
+              <a href="subject.html#1922">[ subject ]</a>
+              <a href="author.html#1922">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

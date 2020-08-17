@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SCAPE
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE&In-Reply-To=%3C009c79a8fa5f36a4d0338f7702628e9a%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000607.html">
+   <LINK REL="Next"  HREF="001576.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SCAPE</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE&In-Reply-To=%3C009c79a8fa5f36a4d0338f7702628e9a%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] SCAPE">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Fri Jan 23 05:59:43 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000607.html">[OpenSPIM] SCAPE
+</A></li>
+        <LI>Next message: <A HREF="001576.html">[OpenSPIM] Low Magnification SPIM Chamber Concept… (Was:  SCAPE)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1575">[ date ]</a>
+              <a href="thread.html#1575">[ thread ]</a>
+              <a href="subject.html#1575">[ subject ]</a>
+              <a href="author.html#1575">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+On 2015-01-23 10:08, Balki K wrote:
+
+&gt;<i> You were saying that it requires a sophisticated reconstruction 
+</I>&gt;<i> algorithm
+</I>&gt;<i> because of the non-uniform pixel spacings.
+</I>
+
+Yes. As you can see from the figure I linked to earlier:
+
+&gt;<i> Please keep in mind that I bring the software engineering expertise to
+</I>&gt;<i> the OpenSPIM project in our lab, not the optics expertise (you probably
+</I>&gt;<i> have much more knowledge of optics, given that you are tasked to build 
+</I>&gt;<i> a
+</I>&gt;<i> microscope). And please keep in mind that I form the following
+</I>&gt;<i> understanding only from reading the abstract of the article, supported
+</I>&gt;<i> only by the figure at
+</I>&gt;<i> <A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/">http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/</A>
+</I>&gt;<i> nphoton.2014.323_F1.html.
+</I>
+... you can actually see for yourself how the pixel spacing differs 
+between planes (and possibly between the pixels in each plane).
+
+Now, I am not an optical expert, but I assume you are. So you should be 
+in a better position to answer the question how the pixel spacings 
+(often called &quot;pixel dimensions&quot;) differ.
+
+In practice, it might be that the differences are negligible, both 
+within and between planes. If that is the case, you do not need that 
+&quot;sophisticated algorithm&quot; I referred to. In that case, you would only 
+need to compensate for the obliqueness of the planes, i.e. the fact that 
+the planes are *not* perpendicular to the axis along which the plane is 
+moved. It will require a little bit of coding and you should make sure 
+to have some colleague or employee who can do that for you (I would 
+probably use the interpolation algorithms of ImgLib2 to reconstruct the 
+volume stacks).
+
+As stated above, you should not take my hunches at face value. It is 
+really important that you understand the intrinsic properties of the 
+acquisition to reconstruct the images in software. I would be interested 
+in that analysis, too, so if you would share it with this mailing list, 
+that would be really cool.
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000607.html">[OpenSPIM] SCAPE
+</A></li>
+	<LI>Next message: <A HREF="001576.html">[OpenSPIM] Low Magnification SPIM Chamber Concept… (Was:  SCAPE)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1575">[ date ]</a>
+              <a href="thread.html#1575">[ thread ]</a>
+              <a href="subject.html#1575">[ subject ]</a>
+              <a href="author.html#1575">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

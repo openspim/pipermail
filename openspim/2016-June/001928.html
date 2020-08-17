@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Planning an appropriate SPIM build for my experiments
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Planning%20an%20appropriate%20SPIM%20build%20for%20my%20experiments&In-Reply-To=%3C91E32B1C-9BDC-4BD8-A564-906E40C448C1%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001925.html">
+   <LINK REL="Next"  HREF="001929.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Planning an appropriate SPIM build for my experiments</H1>
+    <B>Michael Weber</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Planning%20an%20appropriate%20SPIM%20build%20for%20my%20experiments&In-Reply-To=%3C91E32B1C-9BDC-4BD8-A564-906E40C448C1%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Planning an appropriate SPIM build for my experiments">weber at mpi-cbg.de
+       </A><BR>
+    <I>Mon Jun  6 14:48:51 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001925.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+        <LI>Next message: <A HREF="001929.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1928">[ date ]</a>
+              <a href="thread.html#1928">[ thread ]</a>
+              <a href="subject.html#1928">[ subject ]</a>
+              <a href="author.html#1928">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Mel,
+
+that’s a long list of requirements. Here are some thoughts:
+
+- test your samples on existing light sheet setups
+- also test/consider a diSPIM-like configuration
+- 2-Photon is beyond reach for $100k - and hard to do for 3-4 channels
+- a fiber-coupled laser launch with 4 lines will be expensive - you might want to start with less lines and upgrade later
+- a feasible detection combination would be a single sCMOS camera plus a filter wheel
+
+Best,
+Michael
+
+&gt;<i> On Jun 4, 2016, at 7:45 PM, Menelaos Symeonides &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">msymeoni at UVM.EDU</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> A little correction... the velocity of the cells is 15 μm/min, not /sec, meaning that the desired imaging speed would be on the order of 2-3 volumes/min, which should be a bit more manageable!
+</I>&gt;<i> 
+</I>&gt;<i> Mel
+</I>&gt;<i> 
+</I>&gt;<i> -------- Original message --------
+</I>&gt;<i> From: Menelaos Symeonides &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">msymeoni at uvm.edu</A>&gt;
+</I>&gt;<i> Date: 6/2/16 7:48 AM (GMT-05:00)
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+</I>&gt;<i> 
+</I>&gt;<i> Hello OpenSPIM,
+</I>&gt;<i> 
+</I>&gt;<i> I've been following this list and reading papers in the field for about 
+</I>&gt;<i> a year. In our lab, we've come to a point where we need to carry out 
+</I>&gt;<i> long term fast nontoxic imaging of cell cultures that is only possible 
+</I>&gt;<i> with SPIM, and have just obtained funding to build our own microscope to 
+</I>&gt;<i> do these experiments. I was hoping to pick the brains of this mailing 
+</I>&gt;<i> list to hopefully design an appropriate setup, perhaps based on the 
+</I>&gt;<i> OpenSPIM platform, so that we can carry out these experiments.
+</I>&gt;<i> 
+</I>&gt;<i> In general, the experiment involves imaging HIV-infected T cells 
+</I>&gt;<i> embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+</I>&gt;<i> spread the infection to other cells and do various other things related 
+</I>&gt;<i> to the infection, e.g. bystander cell killing. Here are some of the 
+</I>&gt;<i> considerations:
+</I>&gt;<i> 
+</I>&gt;<i> 1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+</I>&gt;<i> apoptosis sensor in the iRFP channel, and will also need to somehow 
+</I>&gt;<i> label nuclei and perhaps also membranes. That would be a maximum of 4 
+</I>&gt;<i> channels, with 3 channels being &quot;acceptable&quot;.
+</I>&gt;<i> 
+</I>&gt;<i> 2. The cells will need to be imaged for 2 to 3 days, with a time 
+</I>&gt;<i> resolution on the order of 2 Hz (for the full volume). T cells migrate 
+</I>&gt;<i> at about 15 μm/sec, and we would like sufficient time resolution to 
+</I>&gt;<i> capture each cell at least twice during each body length movement (body 
+</I>&gt;<i> length is about 10 μm, hence needing around 2 Hz).
+</I>&gt;<i> 
+</I>&gt;<i> 3. The entire volume (or close to that) of the hydrogel will need to be 
+</I>&gt;<i> imaged at each timepoint. The volume of the hydrogel is up to our 
+</I>&gt;<i> discretion, but generally it is on the order of 150 to 300 μL.
+</I>&gt;<i> 
+</I>&gt;<i> 4. Spatial resolution is not of particular concern, as we are more 
+</I>&gt;<i> interested in the cells as whole entities rather than e.g. the details 
+</I>&gt;<i> of virus assembly in each cell. However, we would like comparable 
+</I>&gt;<i> resolution in all three dimensions, as there is no real &quot;plane&quot; we are 
+</I>&gt;<i> interested in and the cells can go in any direction.
+</I>&gt;<i> 
+</I>&gt;<i> 5. The hydrogel can be fairly optically dense, and we experience 
+</I>&gt;<i> prohibitive distortion at anything deeper than ~100 μm with widefield 
+</I>&gt;<i> single photon imaging.
+</I>&gt;<i> 
+</I>&gt;<i> 6. Of course, temperature control and media perfusion will be required. 
+</I>&gt;<i> Given the nature of the pathogen, we will need to be able to fully 
+</I>&gt;<i> decontaminate the sample chamber and anything that has come into contact 
+</I>&gt;<i> with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+</I>&gt;<i> ideas for the tissue culture chamber. We have access to a fabrication 
+</I>&gt;<i> service at our institute that can help us design and build the chamber.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Just to give you a general idea, we have about $100K available to us to 
+</I>&gt;<i> purchase parts for this, not including the fabrication fee for the 
+</I>&gt;<i> culture chamber for which we have other money set aside.
+</I>&gt;<i> 
+</I>&gt;<i> Other than general ideas of what direction we should be heading in, or 
+</I>&gt;<i> links to papers for setups we could emulate, I also have some more 
+</I>&gt;<i> specific questions:
+</I>&gt;<i> 
+</I>&gt;<i> A. Would two-photon imaging be an inevitable requirement given the 
+</I>&gt;<i> density of the sample?
+</I>&gt;<i> 
+</I>&gt;<i> B. If the sort of speed of acquisition we are looking for is beyond 
+</I>&gt;<i> reach for any system we could feasibly build ourselves (especially given 
+</I>&gt;<i> the need for exposing in multiple fluorescence channels at each 
+</I>&gt;<i> position), what should we sacrifice in our experimental plan to make it 
+</I>&gt;<i> more within reach?
+</I>&gt;<i> 
+</I>&gt;<i> C. Does anyone know of any labs in the Northeast US/Quebec that have 
+</I>&gt;<i> implemented a similar setup that we could go see in person? We are based 
+</I>&gt;<i> in Vermont.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I appreciate the work everyone on this list puts in for newcomers, so 
+</I>&gt;<i> thank you!
+</I>&gt;<i> 
+</I>&gt;<i> Best regards,
+</I>&gt;<i> Mel
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> Menelaos Symeonides
+</I>&gt;<i> Post-Doctoral Associate, Thali Lab
+</I>&gt;<i> Department of Microbiology and Molecular Genetics
+</I>&gt;<i> University of Vermont
+</I>&gt;<i> 318 Stafford Hall
+</I>&gt;<i> 95 Carrigan Dr
+</I>&gt;<i> Burlington, VT 05405
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">msymeoni at uvm.edu</A>
+</I>&gt;<i> Phone: 802-656-1161
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001925.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+	<LI>Next message: <A HREF="001929.html">[OpenSPIM] Planning an appropriate SPIM build for my experiments
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1928">[ date ]</a>
+              <a href="thread.html#1928">[ thread ]</a>
+              <a href="subject.html#1928">[ subject ]</a>
+              <a href="author.html#1928">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

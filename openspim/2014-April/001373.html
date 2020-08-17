@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] stradus laser in OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20stradus%20laser%20in%20OpenSPIM&In-Reply-To=%3C7670cb05f8ed.5361451c%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001372.html">
+   <LINK REL="Next"  HREF="001374.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] stradus laser in OpenSPIM</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20stradus%20laser%20in%20OpenSPIM&In-Reply-To=%3C7670cb05f8ed.5361451c%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] stradus laser in OpenSPIM">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Apr 30 18:46:52 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001372.html">[OpenSPIM] stradus laser in OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001374.html">[OpenSPIM] stradus laser in OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1373">[ date ]</a>
+              <a href="thread.html#1373">[ thread ]</a>
+              <a href="subject.html#1373">[ subject ]</a>
+              <a href="author.html#1373">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Zuomin Zhao,
+
+On 04/30/14, Zuomin Zhao  wrote:
+&gt;<i> We used a stradus laser in OpenSPIM. But we cannot open the Acquire OpenSPIM option from Micro-manager. The settings can be seen in attachments. It always shows error like &quot;Error in device VLTStradus: Duplicate property names are not allowed&quot;
+</I>
+Since the Stradus device adapter is &quot;secret&quot;, my ability to help is limited. My suggestion is:
+- First, please make sure you are using the Stradus device adapter (mmgr_dal_Stradus.dll) from the 5 February 2014 nightly build of Micro-Manager[1].
+- Run OpenSPIM, but before clicking &quot;Acquire SPIM Image&quot;, create a pixel size:
+ - On Micro-Manager, click &quot;Tools -&gt; Pixel Size Calibration...&quot;
+ - Click &quot;New&quot;
+ - Set Label to &quot;Uncalibrated&quot;
+ - Set Pixel Size (um/pixel) to 1.00
+ - Across from &quot;Core - Initialize&quot; click &quot;Use&quot; checkbox.
+ - Click &quot;OK&quot;.
+- Try &quot;Acquire SPIM Image&quot; again.
+
+
+&gt;<i> Another problem is the information in Corelog20140430 that &quot;Startup script file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present.&quot; I do not know why miss this file MMSartup.bsh. How handle it?
+</I>This error should not cause any problems right now. It only means that the &quot;Acquire SPIM Image&quot; window will not open automatically.
+
+
+If you continue to have trouble, please e-mail us again and I will try to help more.
+Luke Stuyvenberg
+
+
+[1] <A HREF="http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_32bit_1.4.17_20140205.exe">http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_32bit_1.4.17_20140205.exe</A> -- or find it on the Micro-Manager website: Downloads -&gt; Download Nightly Builds -&gt; Version 1.4 (Windows) -&gt; MMSetup_32bit_1.4.17_20140205.exe Install this file, then copy mmgr_dal_Stradus.dll from where it was installed to OpenSPIM.app/mm/win32/.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001372.html">[OpenSPIM] stradus laser in OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001374.html">[OpenSPIM] stradus laser in OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1373">[ date ]</a>
+              <a href="thread.html#1373">[ thread ]</a>
+              <a href="subject.html#1373">[ subject ]</a>
+              <a href="author.html#1373">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

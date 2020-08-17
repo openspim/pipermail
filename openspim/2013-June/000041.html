@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3CBC12CD45-E3A7-437C-9D2A-EE8D5AE17932%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000043.html">
+   <LINK REL="Next"  HREF="000044.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3CBC12CD45-E3A7-437C-9D2A-EE8D5AE17932%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Thu Jun  6 03:32:52 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000043.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="000044.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#41">[ date ]</a>
+              <a href="thread.html#41">[ thread ]</a>
+              <a href="subject.html#41">[ subject ]</a>
+              <a href="author.html#41">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> When it hangs, do you mean it gives you the missing VC Express error? Or does it actually, physically stop doing anything?
+</I>Here is the sequence of event: 
+	- I double click the OpenSPIM-dev-env-XXXX.exe 
+	- I pick the folder where to install
+	- The 7z unarchiver unpacks the ~200Mb of files. (see screenshot for the content of the folder where things are extracted) 
+	- The Command prompt requesting for VCExpress installation appears (other screenshot).
+	- I close the terminal window. Nothing else happens.
+
+&gt;<i> In the former case, it means there's a problem with detecting VC Express. Using regedit, please check the following registry keys:
+</I>&gt;<i> - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VCExpress\10.0\InstallDir (it should match the path you gave me above)
+</I>
+ I indeed have the correct path in this entry.
+ 
+&gt;<i> - HKEY_CLASSES_ROOT\VCExpress.DTE\CurVer (the default value should have something like &quot;VCExpress.DTE.10.0&quot;)
+</I>
+Nothing at that location; however, I found it at:
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\VCExpress.DTE\CurVer  and indeed contains &quot;VCExpress.DTE.10.0&quot;
+
+With my best regards,
+
+Alexis
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Capture 10.18.39.PNG
+Type: image/png
+Size: 114704 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130606/2af65c4c/attachment-0002.png">http://openspim.org/pipermail/openspim/attachments/20130606/2af65c4c/attachment-0002.png</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Capture.PNG
+Type: image/png
+Size: 53943 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130606/2af65c4c/attachment-0003.png">http://openspim.org/pipermail/openspim/attachments/20130606/2af65c4c/attachment-0003.png</A>&gt;
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000043.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="000044.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#41">[ date ]</a>
+              <a href="thread.html#41">[ thread ]</a>
+              <a href="subject.html#41">[ subject ]</a>
+              <a href="author.html#41">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

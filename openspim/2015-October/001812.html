@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM and optically cleared 3D tissue
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20and%20optically%20cleared%203D%20tissue&In-Reply-To=%3Cop.x65yexv6ahhlbl%40pc507-99ff.ibd%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001811.html">
+   <LINK REL="Next"  HREF="001813.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM and optically cleared 3D tissue</H1>
+    <B>Monika Pawłowska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20and%20optically%20cleared%203D%20tissue&In-Reply-To=%3Cop.x65yexv6ahhlbl%40pc507-99ff.ibd%3E"
+       TITLE="[OpenSPIM] OpenSPIM and optically cleared 3D tissue">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Tue Oct 27 07:02:47 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001811.html">[OpenSPIM] OpenSPIM and optically cleared 3D tissue
+</A></li>
+        <LI>Next message: <A HREF="001813.html">[OpenSPIM] OpenSPIM and optically cleared 3D tissue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1812">[ date ]</a>
+              <a href="thread.html#1812">[ thread ]</a>
+              <a href="subject.html#1812">[ subject ]</a>
+              <a href="author.html#1812">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I am working on a SPIM microscope for cleared tissue. I plan to put it in  
+Wiki at some point, but my boss wants to wait until the paper is written.  
+Anyway, I use the approach of a closed chamber and an air objective. My  
+chamber is 3D printed with windows made of microscope cover glasses - the  
+&quot;cost effective&quot; approach :P. This only work for the non-corrosive media  
+though. An alternative is a big glass cuvette. The RI of glass is already  
+quite similar to the cleared tissue, so I don't think the windows are a  
+big issue. Note that Deisseroth also has a cuvette in his design.
+
+If you find a mounting medium that has the same RI as your sample, and you  
+only move the sample while the chamber is stationary (same as in  
+OpenSPIM), then you don't have drift, or at least not that much.  However.  
+the air objective approach works for small NA, so it's best for small  
+magnification - for me 4X/0.13 works nicely. Afterwards the aberrations  
+will prevent you from achieving the resolution that you would have in air  
+(there is a paper about it, Silvestri &quot;Correcting spherical aberrations in  
+confocal light sheet microscopy: A theoretical study&quot;). It's a good way to  
+start while collecting funds for a proper objective ;)
+
+For mounting medium, the easiest and cheapest solution is to go the oil  
+way, like in the CUBIC papers (Susaki et al, see in Methods/Imaging). The  
+stuff that is used for confocal microscopy - FocusClear, sRIMS, Reagent 2,  
+you name it - is usually too expensive, too unstable, or both (i.e.  
+Reagent 2 for CUBIC tends to crystallize if your lab's air-conditioning is  
+set too low, sRIMS also does something very weird).
+
+If you have more specific questions, go ahead and ask. Greetings,
+Monika
+
+W dniu .10.2015 o 19:16 Michael Weber &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">weber at mpi-cbg.de</A>&gt; pisze:
+
+&gt;<i> Hi Jamie,
+</I>&gt;<i>
+</I>&gt;<i> if you are using hazardous clearing media and don't have a dedicated  
+</I>&gt;<i> dipping objective available, one idea would be to use long-working  
+</I>&gt;<i> distance air &gt;objectives and a smaller, closed glass chamber. The main  
+</I>&gt;<i> issue I would expect from such a combination would be a drift of your  
+</I>&gt;<i> detection focal plane &gt;when moving the sample through the light sheet,  
+</I>&gt;<i> because the light has to travel through layers of different refractive  
+</I>&gt;<i> indices, and you change the &gt;&quot;thickness&quot; of those layers. But this drift  
+</I>&gt;<i> should be linear and could be corrected by adapting the distance between  
+</I>&gt;<i> light sheet and detection &gt;objective while acquiring a z-stack. So you  
+</I>&gt;<i> would either need to motorize the mirror for translating the light  
+</I>&gt;<i> sheet, or your detection objective, and &gt;then implement the drift  
+</I>&gt;<i> correction in the software. Might be worth a try, unless I overlooked  
+</I>&gt;<i> something important here.
+</I>&gt;<i>
+</I>&gt;<i> Cheers,
+</I>&gt;<i> Michael
+</I>&gt;<i>
+</I>&gt;<i> On Oct 24, 2015, at 8:27 AM, Jamie Flynn &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Jamie.Flynn at uon.edu.au</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Pete,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks for the link. Some very impressive images from the mesolens.  
+</I>&gt;&gt;<i> You¹re
+</I>&gt;&gt;<i> right that pickings are slim for commercially available lenses. Leica  
+</I>&gt;&gt;<i> and
+</I>&gt;&gt;<i> Olympus have some objectives that are suitable for various types of
+</I>&gt;&gt;<i> cleared tissue, but come with hefty price tags. Apparently Zeiss have
+</I>&gt;&gt;<i> something in the works as well (not that it¹ll be cheap!). The RI range  
+</I>&gt;&gt;<i> of
+</I>&gt;&gt;<i> imaging media for different clearing techniques is obviously one of the
+</I>&gt;&gt;<i> bigger challenges (e.g. 1.45 for Focusclear and 1.56 for DBE). Will look
+</I>&gt;&gt;<i> into a custom design as you suggest.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Cheers
+</I>&gt;&gt;<i> Jamie
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 23/10/2015 7:16 pm, &quot;Peter Gabriel Pitrone&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>&gt;  
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> with the exeption of the &quot;Meso-lens&quot; from Prof. Brad Amos... But I'm  
+</I>&gt;&gt;&gt;<i> sure
+</I>&gt;&gt;&gt;<i> it uses glue, and you probably can not afford it.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> <A HREF="http://www2.mrc-lmb.cam.ac.uk/research/technology-transfer/mesolens-micros">http://www2.mrc-lmb.cam.ac.uk/research/technology-transfer/mesolens-micros</A>
+</I>&gt;&gt;&gt;<i> copy/
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ----- Original Message -----
+</I>&gt;&gt;&gt;<i> From: &quot;Peter Gabriel Pitrone&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>&gt;
+</I>&gt;&gt;&gt;<i> To: &quot;Jamie Flynn&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Jamie.Flynn at uon.edu.au</A>&gt;
+</I>&gt;&gt;&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;&gt;&gt;<i> Sent: Friday, October 23, 2015 10:14:06 AM
+</I>&gt;&gt;&gt;<i> Subject: Re: [OpenSPIM] OpenSPIM and optically cleared 3D tissue
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Hey Jamie,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> I would have someone design the lenses (and therefor chamber as well)  
+</I>&gt;&gt;&gt;<i> for
+</I>&gt;&gt;&gt;<i> you made in a way the is fluid/liquid proof WITHOUT using glue, also
+</I>&gt;&gt;&gt;<i> keeping in mind the absolute largest (NA in terms of detection lens,  
+</I>&gt;&gt;&gt;<i> and)
+</I>&gt;&gt;&gt;<i> working distance possible so you could put in bigger tissues. I doubt
+</I>&gt;&gt;&gt;<i> that there is a objective on the market that would meet your  
+</I>&gt;&gt;&gt;<i> requirements.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Regards,
+</I>&gt;&gt;&gt;<i> Pete
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ----- Original Message -----
+</I>&gt;&gt;&gt;<i> From: &quot;Jamie Flynn&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Jamie.Flynn at uon.edu.au</A>&gt;
+</I>&gt;&gt;&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;&gt;&gt;<i> Sent: Friday, October 23, 2015 1:58:29 AM
+</I>&gt;&gt;&gt;<i> Subject: [OpenSPIM] OpenSPIM and optically cleared 3D tissue
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Hi everyone,
+</I>&gt;&gt;&gt;<i> We¹re building a dual illumination OpenSPIM at the Hunter Medical
+</I>&gt;&gt;&gt;<i> Research Institute in Newcastle, Australia. Our ai m is to have the  
+</I>&gt;&gt;&gt;<i> scope
+</I>&gt;&gt;&gt;<i> and analysis pipeline used as a core facility for lab groups to image  
+</I>&gt;&gt;&gt;<i> 3D
+</I>&gt;&gt;&gt;<i> tumour cell cultures, developing embryos and most importantly for us,
+</I>&gt;&gt;&gt;<i> optically cleared 3D tissue samples (e.g. CLARITY, CUBIC, 3DISCO, Scale
+</I>&gt;&gt;&gt;<i> etc.). Imaging cleared 3D samples would be an interesting avenue for
+</I>&gt;&gt;&gt;<i> OpenSPIM and it¹d be great to hear about any hardware modifications or
+</I>&gt;&gt;&gt;<i> mounting protocols others may have used to do it.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> If anyone wants to try clearing out their own tissue samples, my
+</I>&gt;&gt;&gt;<i> colleagues and I put together a handbook that describes the reagents,
+</I>&gt;&gt;&gt;<i> equipment and detailed protocols for ŒPassive CLARITY¹. We compiled the
+</I>&gt;&gt;&gt;<i> protocols outlined in Tomer et al. Nat. Prot. 9(7) 2014 and Yang et al.
+</I>&gt;&gt;&gt;<i> Cell (158) 2014 and added in our own refinements (after much trial and
+</I>&gt;&gt;&gt;<i> error!). It¹s a very simple technique and has worked really well in our
+</I>&gt;&gt;&gt;<i> hands. Here¹s the link. Download it to your desktop in case the link  
+</I>&gt;&gt;&gt;<i> gets
+</I>&gt;&gt;&gt;<i> broken:
+</I>&gt;&gt;&gt;<i> <A HREF="https://drive.google.com/open?id=0BzIZDgZFR2srNFk2dHFqT1UycFk">https://drive.google.com/open?id=0BzIZDgZFR2srNFk2dHFqT1UycFk</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> All the best--------------------
+</I>&gt;&gt;&gt;<i> Jamie Flynn (PhD)University of Newcastle
+</I>&gt;&gt;&gt;<i> Hunter Medical Research Institute
+</I>&gt;&gt;&gt;<i> Room 3613 level 3 east
+</I>&gt;&gt;&gt;<i> 1 Kookaburra Circuit, New Lambton Heights
+</I>&gt;&gt;&gt;<i> NSW 2305, Australia.
+</I>&gt;&gt;&gt;<i> pH: +612 40420468Mobile: +61 416003787
+</I>&gt;&gt;&gt;<i> Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">jamie.flynn at uon.edu.au</A>
+</I>&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> _____________
+</I>&gt;<i>
+</I>&gt;<i> Michael Weber
+</I>&gt;<i> Postdoc, Huisken lab
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstrasse 108, 01307 Dresden
+</I>&gt;<i> Tel. 0049 351/2102837
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+</I>&gt;<i>
+</I>
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151027/c99b3740/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20151027/c99b3740/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001811.html">[OpenSPIM] OpenSPIM and optically cleared 3D tissue
+</A></li>
+	<LI>Next message: <A HREF="001813.html">[OpenSPIM] OpenSPIM and optically cleared 3D tissue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1812">[ date ]</a>
+              <a href="thread.html#1812">[ thread ]</a>
+              <a href="subject.html#1812">[ subject ]</a>
+              <a href="author.html#1812">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

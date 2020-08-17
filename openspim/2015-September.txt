@@ -1,0 +1,2678 @@
+From johannes.schindelin at gmx.de  Tue Sep  1 01:39:01 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 01 Sep 2015 08:39:01 +0200
+Subject: [OpenSPIM] =?utf-8?q?Fwd=3A_Discount_extended_for_=C2=B5Manager_U?=
+ =?utf-8?q?ser_Service_Program?=
+In-Reply-To: <127807c7306171ababea968c891db95b688.20150831224320@mail182.wdc02.mcdlv.net>
+References: <127807c7306171ababea968c891db95b688.20150831224320@mail182.wdc02.mcdlv.net>
+Message-ID: <38637109a0490282e9913044a48c93a8@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: Discount extended for ?Manager User Service Program
+Date: 2015-09-01 00:43
+ From: Mark Tsuchida (Open Imaging) <mark at open-imaging.com>
+To: Johannes Schindelin <johannes.schindelin at gmx.de>
+
+Sign up now for the ?Manager User Service Program
+
+View this email in your browser 
+(http://us11.campaign-archive1.com/?u=127807c7306171ababea968c8&id=1678c98058&e=91db95b688)
+
+http://open-imaging.us11.list-manage1.com/track/click?u=127807c7306171ababea968c8&id=c8bf01e8da&e=91db95b688
+
+
+** Sign up now for the ?Manager User Service Program
+------------------------------------------------------------
+
+
+** Ensure uninterrupted support as ?Manager moves to Open Imaging
+------------------------------------------------------------
+
+Dear Johannes,
+
+Open Imaging's ?Manager User Service Program 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=b9a275e987&e=91db95b688) 
+  is the best way to make sure you can get ?Manager technical support 
+when you need it ? and your subscription will help us make sure ?Manager 
+continues to be the successful open source program it is today.
+
+We've extended our 10% first-year discount on the User Service Program 
+through September 15, so make sure you request a quote today 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=fe181b43e4&e=91db95b688) 
+! Service will begin on October 1, 2015.
+
+Yours sincerely,
+Mark Tsuchida
+CEO & Co-CTO
+Open Imaging, Inc.
+
+============================================================
+Copyright ? 2015 Open Imaging, Inc., All rights reserved.
+  You are receiving this email because you opted in at our website 
+(https://open-imaging.com) or asked us to notify you about our User 
+Service Program.
+
+Our mailing address is:
+Open Imaging, Inc.
+1030 El Monte Ave #12
+Mountain View, CA 94040-2350
+USA
+** unsubscribe from this list 
+(http://open-imaging.us11.list-manage.com/unsubscribe?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688&c=1678c98058)
+** update subscription preferences 
+(http://open-imaging.us11.list-manage.com/profile?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688)
+  Email Marketing Powered by MailChimp
+http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=127807c7306171ababea968c8&afl=1
+
+
+From tnf8 at pitt.edu  Wed Sep  2 07:28:48 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 2 Sep 2015 12:28:48 +0000
+Subject: [OpenSPIM] transmitted light
+Message-ID: <D20C63BF.53A7%tnf8@pitt.edu>
+
+Hello all,
+
+Has anyone found a convenient solution for transmitted light illumination that can be controlled Micro-Manager? On the one hand you can use a handheld flashlight (torch), which works but is not something you can program.  On the other hand you have collimated light sources from e.g. Thorlabs.  Those do the job but they seem excessively powerful and expensive for what should be a pretty basic task.  I went searching for cheap USB-powered lamps that can be controlled through a software interface rather than a physical switch but those seem strangely hard to find.  As it stands I might put a DIY LED bulb in a cheap 'collimator' like the one below and link it to uManager through an arduino.
+
+http://www.mouser.com/ds/2/38/V02-1702EN-107315.pdf
+
+Even so I feel like I must have missed a simpler option.  Any thoughts appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150902/9cbaf813/attachment.html>
+
+From 709314090 at qq.com  Wed Sep  2 09:00:40 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Wed, 2 Sep 2015 22:00:40 +0800
+Subject: [OpenSPIM] Data Registration Failure
+Message-ID: <tencent_5648661F582935EA7FBA45F4@qq.com>
+
+Hi, ALL!
+  I bulit my OpenSPIM last week, and I began to require data of zebrafish. But the data was registration failed.  The log of fiji was at the last of this mail. I try to change the threshold and nothing went well. 
+  I wonder it's maybe something worry with my require processing,  so I descirbe my require processing below. 
+  First, I selected a view, then set the Stack-Z = 400, and the step=7.5um, angle=-55.8.
+  Second, I wanted to select another view, so I changed the angle to -19.8. But at the same time, I had to change the x-value to keep the the zebrafish in the view of camera. Of cause, the range of Stack-z was also changed. Was this step wrong? I should not change the x-value?
+   Third, I repeated the second step to choose another three views and began to require data.
+   I hope to get your help?
+
+
+   By the way, I found the OpenSPIM.app(20150427) can not do data processing. When I did registration, the program alerted that missing 3D Viewer. I try to download the 3D Viewer, and it could work in this compter. Then I copyed the app folder to another computer, it couldn't work again. Was the 3D Viewer not installed in the app folder?  PS. The computer in lab can not access to Internet.
+    Thank you?
+
+
+Best ALL?
+
+
+***************************************************
+r1 = 1.0
+r2 = 2.0
+threshold = 0.015172152779996395
+....
+(Wed Sep 02 20:59:13 CST 2015): Subpixel localization using quadratic n-dimensional fit
+Found peaks (possible beads): 6160 in view spim_TL01_Angle4.tif
+Opening files took: 0 sec (17 %)
+Computation took: 4 sec (83 %)
+(Wed Sep 02 20:59:13 CST 2015): Finished Bead Extraction
+(Wed Sep 02 20:59:13 CST 2015): Starting Registration
+spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+spim_TL01_Angle1.tif<->spim_TL01_Angle3.tif: Not enough correspondences found 7, should be at least 12
+
+
+
+......
+spim_TL01_Angle0.tif (id = 0) has 0 correspondences in 0 other views.
+spim_TL01_Angle1.tif (id = 1) has 0 correspondences in 0 other views.
+
+.....
+The total number of detections was: 32007
+The total number of correspondence candidates was: 126
+The total number of true correspondences is: 0
+
+Successfully optimized configuration of 0 tiles after 202 iterations:
+  average displacement: ?px
+  minimal displacement: 179,769,313,486,231,570,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000.000px
+  maximal displacement: 0.000px
+Optimizer Matrices
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle0.tif (id = 0) is not part of the structure of my view spim_TL01_Angle0.tif (id = 0)
+spim_TL01_Angle0.tif (id = 0): is not connected to any other tile!
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle1.tif (id = 1) is not part of the structure of my view spim_TL01_Angle1.tif (id = 1)
+spim_TL01_Angle1.tif (id = 1): is not connected to any other tile!
+
+
+
+.....
+*****************************************************
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150902/483aea30/attachment.html>
+
+From winfrees at iu.edu  Wed Sep  2 10:14:34 2015
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Wed, 2 Sep 2015 15:14:34 +0000
+Subject: [OpenSPIM] transmitted light
+In-Reply-To: <D20C63BF.53A7%tnf8@pitt.edu>
+References: <D20C63BF.53A7%tnf8@pitt.edu>
+Message-ID: <4c886332df8c491a896a4c93e247e2e0@bl-cci-exch04.ads.iu.edu>
+
+My response isn't really simple but...
+
+I set up oblique illumination and a camera to aid in sample position after occluding the views of the sample chamber with heating and perfusion lines-and a sore neck from constantly checking the chamber during positioning.  It has worked great for positioning zebrafish to organoids.  Right now the illumination is from an old RGB LED board I designed being driven with PWM from a TLC5940 on an Arduino.  The Arduino is also driving an RGB screen for control.  The firmware for the Arduino could be adapted to use a customized version of the Arduino  micromanager driver-haven't gotten to it yet.  For that matter, I'd like the camera feed to be fed to micromanager too.  That's all too much development for me right now though.  I do have an extra RGB board that is populated and could probably dig up a version of the TLC5940 board that is unpopulated(I might have the parts squirreled away) if you're interested-firmwares too of course.
+
+Seth
+
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Wednesday, September 02, 2015 8:29 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] transmitted light
+
+Hello all,
+
+Has anyone found a convenient solution for transmitted light illumination that can be controlled Micro-Manager? On the one hand you can use a handheld flashlight (torch), which works but is not something you can program.  On the other hand you have collimated light sources from e.g. Thorlabs.  Those do the job but they seem excessively powerful and expensive for what should be a pretty basic task.  I went searching for cheap USB-powered lamps that can be controlled through a software interface rather than a physical switch but those seem strangely hard to find.  As it stands I might put a DIY LED bulb in a cheap 'collimator' like the one below and link it to uManager through an arduino.
+
+http://www.mouser.com/ds/2/38/V02-1702EN-107315.pdf
+
+Even so I feel like I must have missed a simpler option.  Any thoughts appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150902/9de7d0ef/attachment-0001.html>
+
+From veli-pekka.ronkainen at oulu.fi  Thu Sep  3 07:20:11 2015
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Thu, 3 Sep 2015 12:20:11 +0000
+Subject: [OpenSPIM] transmitted light
+In-Reply-To: <D20C63BF.53A7%tnf8@pitt.edu>
+References: <D20C63BF.53A7%tnf8@pitt.edu>
+Message-ID: <bde5aa7556b64bb4b46d8683087addde@nippu11.univ.yo.oulu.fi>
+
+Hi Tim and others,
+
+We use ScopeLED G180 Series RGB LED light source, a fiber light guide and a basic collimator for transmitted light illumination. It is a convenient solution, but not very cheap. The light source can be controlled directly by ?Manager (color, intensity and shutter), and if you use ?Manager multidimensional acquisition (MDA) and channels tools, the bright field imaging can be automatically integrated to time lapse, z-stacking etc. fluorescence experiments. However, on-off cycling and intensity modulation responses seem to have some delay when the device is controlled via USB. Typically it doesn't matter, but it can be a problem if BF and fluorescence channels have to be imaged in a rapid sequence, e.g. in fast time lapse experiments.
+
+RGB color modulation is a nice "extra" feature, since a user can select an appropriate BF illumination color depending on the band pass wavelength of the used emission filter, and use a very little amount of narrow bandwidth light for TL imaging.
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: 2. syyskuuta 2015 15:29
+To: openspim at openspim.org
+Subject: [OpenSPIM] transmitted light
+
+Hello all,
+
+Has anyone found a convenient solution for transmitted light illumination that can be controlled Micro-Manager? On the one hand you can use a handheld flashlight (torch), which works but is not something you can program.  On the other hand you have collimated light sources from e.g. Thorlabs.  Those do the job but they seem excessively powerful and expensive for what should be a pretty basic task.  I went searching for cheap USB-powered lamps that can be controlled through a software interface rather than a physical switch but those seem strangely hard to find.  As it stands I might put a DIY LED bulb in a cheap 'collimator' like the one below and link it to uManager through an arduino.
+
+http://www.mouser.com/ds/2/38/V02-1702EN-107315.pdf
+
+Even so I feel like I must have missed a simpler option.  Any thoughts appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150903/73ccc23d/attachment.html>
+
+From Jamie.Flynn at uon.edu.au  Sat Sep  5 20:39:15 2015
+From: Jamie.Flynn at uon.edu.au (Jamie Flynn)
+Date: Sun, 6 Sep 2015 01:39:15 +0000
+Subject: [OpenSPIM] Compatibility with Windows 8
+Message-ID: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+
+Hi everyone,
+
+We've started to build a dual illumination OpenSPIM scope in Newcastle, Australia and our parts are mostly here. Our workstation has just arrived and it's come preinstalled with Windows 8. Before I start putting the software and drivers on, has anyone had any compatibility issues with the OpenSPIM software and this operating system? Would it be wise to step back to Windows 7?
+
+Thanks in advance for your advice.
+
+All the best
+--------------------
+Dr. Jamie Flynn (PhD)
+University of Newcastle
+Hunter Medical Research Institute
+Room 3613 level 3 east
+1 Kookaburra Circuit, New Lambton Heights
+NSW 2305, Australia.
+pH: +612 40423613
+Mobile: +61 416003787
+Email: jamie.flynn at uon.edu.au
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150906/c8286627/attachment.html>
+
+From pitrone at mpi-cbg.de  Sun Sep  6 03:26:54 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Sun, 6 Sep 2015 10:26:54 +0200 (CEST)
+Subject: [OpenSPIM] Compatibility with Windows 8
+In-Reply-To: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+References: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+Message-ID: <700068453.9623655.1441528014501.JavaMail.zimbra@mpi-cbg.de>
+
+Hello Jamie,
+
+I would personally revert back to 7, due to the fact that it is more thoroughly tested... tried and true.
+
+Regards,
+Pete 
+
+----- Original Message -----
+From: "Jamie Flynn" <Jamie.Flynn at uon.edu.au>
+To: openspim at openspim.org
+Sent: Sunday, September 6, 2015 3:39:15 AM
+Subject: [OpenSPIM] Compatibility with Windows 8
+
+Hi everyone, 
+
+We?ve started to build a dual illumination OpenSPIM scope in Newcastle, Australia and our parts are mostly here. Our workstation has just arrived and it?s come preinstalled with Windows 8. Before I start putting the software and drivers on, has anyone had any compatibility issues with the OpenSPIM software and this operating system? Would it be wise to step back to Windows 7? 
+
+Thanks in advance for your advice. 
+
+All the best 
+-------------------- 
+Dr. Jamie Flynn (PhD) 
+University of Newcastle 
+Hunter Medical Research Institute 
+Room 3613 level 3 east 
+1 Kookaburra Circuit, New Lambton Heights 
+NSW 2305, Australia. 
+pH: +612 40423613 
+Mobile: +61 416003787 
+Email: jamie.flynn at uon.edu.au 
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From Jamie.Flynn at uon.edu.au  Sun Sep  6 07:49:32 2015
+From: Jamie.Flynn at uon.edu.au (Jamie Flynn)
+Date: Sun, 6 Sep 2015 12:49:32 +0000
+Subject: [OpenSPIM] Compatibility with Windows 8
+In-Reply-To: <700068453.9623655.1441528014501.JavaMail.zimbra@mpi-cbg.de>
+References: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+	<700068453.9623655.1441528014501.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <D2126D20.C19E%jamie.flynn@uon.edu.au>
+
+Hi Pete,
+
+Yep I figured that?d be the safe bet. Thanks for the response!
+
+Cheers
+Jamie
+
+
+
+On 6/09/2015 6:26 pm, "Peter Gabriel Pitrone" <pitrone at mpi-cbg.de> wrote:
+
+>Hello Jamie,
+>
+>I would personally revert back to 7, due to the fact that it is more
+>thoroughly tested... tried and true.
+>
+>Regards,
+>Pete 
+>
+>----- Original Message -----
+>From: "Jamie Flynn" <Jamie.Flynn at uon.edu.au>
+>To: openspim at openspim.org
+>Sent: Sunday, September 6, 2015 3:39:15 AM
+>Subject: [OpenSPIM] Compatibility with Windows 8
+>
+>Hi everyone, 
+>
+>We?ve started to build a dual illumination OpenSPIM scope in Newcastle,
+>Australia and our parts are mostly here. Our workstation has just arrived
+>and it?s come preinstalled with Windows 8. Before I start putting the
+>software and drivers on, has anyone had any compatibility issues with the
+>OpenSPIM software and this operating system? Would it be wise to step
+>back to Windows 7?
+>
+>Thanks in advance for your advice.
+>
+>All the best 
+>--------------------
+>Dr. Jamie Flynn (PhD)
+>University of Newcastle
+>Hunter Medical Research Institute
+>Room 3613 level 3 east
+>1 Kookaburra Circuit, New Lambton Heights
+>NSW 2305, Australia.
+>pH: +612 40423613 
+>Mobile: +61 416003787
+>Email: jamie.flynn at uon.edu.au
+>
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+
+From johannes.schindelin at gmx.de  Sun Sep  6 11:16:54 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Sun, 06 Sep 2015 18:16:54 +0200
+Subject: [OpenSPIM] Compatibility with Windows 8
+In-Reply-To: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+References: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+Message-ID: <d40c687b0393ab9466ba610171b22977@dscho.org>
+
+Hi Jamie,
+
+On 2015-09-06 03:39, Jamie Flynn wrote:
+
+> We've started to build a dual illumination OpenSPIM scope in
+> Newcastle, Australia and our parts are mostly here. Our workstation
+> has just arrived and it's come preinstalled with Windows 8. Before I
+> start putting the software and drivers on, has anyone had any
+> compatibility issues with the OpenSPIM software and this operating
+> system? Would it be wise to step back to Windows 7?
+
+The main issue with Windows version compatibility is when drivers are 
+not quite yet supported. Typically you will find all information 
+regarding that on this page:
+
+https://micro-manager.org/wiki/Device%20Support
+
+Ciao,
+Johannes
+
+
+From guillaume at damcb.com  Fri Sep 11 10:51:49 2015
+From: guillaume at damcb.com (Guillaume Gay)
+Date: Fri, 11 Sep 2015 17:51:49 +0200
+Subject: [OpenSPIM] ANN - [mu-spim] mu-spim v0.1 rubber release
+In-Reply-To: <55F2C8E8.5030204@mitotic-machine.org>
+References: <55F2C8E8.5030204@mitotic-machine.org>
+Message-ID: <55F2F895.4050608@damcb.com>
+
+
+Dear OpenSpim community members,
+
+I am proud to announce the version 0.1 ?rubber? release of the mu-spim 
+<http://mu-spim.xyz/mu_spim_rubber.html>.
+
+It is the first prototype of a light-sheet microscope for smartphones. 
+It is still very rough and DIY-ish, but implements the bases of 
+light-sheet microscopy.
+
+The design is largely inspired by the SPIM Corinne Lorenzo, Val?rie 
+Lobjois, Amina Maandhui and I developed in Toulouse in 2008 - 2010 (this 
+one 
+<http://www.cnrs.fr/insb/z-outils/images/site/recherche/publis/2010/article-ducommun.jpg>). 
+It benefits from the support and partnership of the IP3D team at ITAV 
+<http://www.itav-recherche.fr/index.php/fr/menu-itavequipeip3d>.
+
+This project seeks to:
+
+  *
+
+    Popularize microscopy and create vectors for scientists/public
+    exchanges, e.g. through the exchange of biologic samples to be
+    imaged (see the PrakashLab?s foldscope <http://foldscope.com>). The
+    reception so far with lay people is quite positive. I think there
+    are many educational opportunities opened, particularly in
+    inter-disciplinary settings.
+
+  *
+
+    Create a *compact, field ready, 3D microscope* (on those aspects,
+    I?d be happy to ear from tech companies).
+
+    It is for now a *fully open project* (CC-BY-SA-NC), and I am looking
+    for any kind of collaboration that could make it progress. This
+    early release is a way to find such collaborations.
+
+You can browse the project (openscad based) on github 
+<http://github.com/damCB/mu_spim> (getting a github account is painless 
+and not intrusive. It is also a very efficient collaboration platform).
+
+Feel free to pass this message along to anyone who might be interested.
+
+Best,
+
+Guillaume
+
+?
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150911/02d37df4/attachment.html>
+
+From pitrone at mpi-cbg.de  Fri Sep 11 11:05:07 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Fri, 11 Sep 2015 18:05:07 +0200 (CEST)
+Subject: [OpenSPIM] ANN - [mu-spim] mu-spim v0.1 rubber release
+In-Reply-To: <55F2F895.4050608@damcb.com>
+References: <55F2C8E8.5030204@mitotic-machine.org> <55F2F895.4050608@damcb.com>
+Message-ID: <818325347.11447126.1441987507782.JavaMail.zimbra@mpi-cbg.de>
+
+Hey Guillaume,
+
+That really cool!! Thanks for sharing...
+
+Regards,
+Pete
+
+----- Original Message -----
+From: "Guillaume Gay" <guillaume at damcb.com>
+To: openspim at openspim.org
+Sent: Friday, September 11, 2015 5:51:49 PM
+Subject: [OpenSPIM] ANN - [mu-spim] mu-spim v0.1 rubber release
+
+Dear OpenSpim community members, 
+
+
+I am proud to announce the version 0.1 ?rubber? release of the mu-spim . 
+
+It is the first prototype of a light-sheet microscope for smartphones. It is still very rough and DIY-ish, but implements the bases of light-sheet microscopy. 
+
+The design is largely inspired by the SPIM Corinne Lorenzo, Val?rie Lobjois, Amina Maandhui and I developed in Toulouse in 2008 - 2010 ( this one ). It benefits from the support and partnership of the IP3D team at ITAV . 
+
+This project seeks to: 
+
+    * 
+
+Popularize microscopy and create vectors for scientists/public exchanges, e.g. through the exchange of biologic samples to be imaged (see the PrakashLab?s foldscope ). The reception so far with lay people is quite positive. I think there are many educational opportunities opened, particularly in inter-disciplinary settings. 
+    * 
+
+Create a compact, field ready, 3D microscope (on those aspects, I?d be happy to ear from tech companies). 
+
+It is for now a fully open project (CC-BY-SA-NC), and I am looking for any kind of collaboration that could make it progress. This early release is a way to find such collaborations. 
+
+
+You can browse the project (openscad based) on github (getting a github account is painless and not intrusive. It is also a very efficient collaboration platform). 
+
+Feel free to pass this message along to anyone who might be interested. 
+Best, 
+
+Guillaume 
+ 
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From 709314090 at qq.com  Sun Sep 13 21:48:49 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 14 Sep 2015 10:48:49 +0800
+Subject: [OpenSPIM] Can you tell me the possible reasons for registration
+	failure
+Message-ID: <tencent_22914A8F797907F67337F920@qq.com>
+
+Hi, everyone,
+    Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+
+
+
+    Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+
+
+    Thank you very much!
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/14bb9248/attachment.html>
+
+From claire.lionnet at ens-lyon.fr  Mon Sep 14 04:48:15 2015
+From: claire.lionnet at ens-lyon.fr (Claire Lionnet)
+Date: Mon, 14 Sep 2015 11:48:15 +0200
+Subject: [OpenSPIM] pinhole location and diameter to clean up the laser beam
+Message-ID: <55F697DF.6000905@ens-lyon.fr>
+
+Hi everyone,
+
+We've got an openspim almost ready to work here in France. We are just 
+concerned by the not-very-circular laser beam. Did somebody used a 
+pinhole to clean up the beam ? What would be the best location for a 
+pinhole in this setup : in the first or the second telescope ? And what 
+should be its diameter ? (sorry for the basic questions, not an optical 
+engineer !).
+Thanks in advance for your help,
+
+Claire
+
+-- 
+Claire LIONNET
+PLATIM
+US8 / UMS3444 BioSciences Gerland - Lyon Sud
+http://www.sfr-biosciences.fr/plateformes/Phenotypage-cellulaire/PLATIM
+
+
+
+
+From tomancak at mpi-cbg.de  Mon Sep 14 05:15:43 2015
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Mon, 14 Sep 2015 12:15:43 +0200
+Subject: [OpenSPIM] Can you tell me the possible reasons for
+	registration failure
+In-Reply-To: <tencent_22914A8F797907F67337F920@qq.com>
+References: <tencent_22914A8F797907F67337F920@qq.com>
+Message-ID: <6E0A5FF3-F703-4CC9-AB45-21DA1BCA91E5@mpi-cbg.de>
+
+Dear Zheng,
+
+This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+
+I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration. 
+
+All the best
+
+PAvel
+
+[1] http://fiji.sc/SPIM_Registration_Method
+--------------------------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Research Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+Pfotenhauerstr. 108
+D-01307 Dresden							Tel.: +49 351 210 2670
+Germany									Fax: +49 351 210 2020
+
+tomancak at mpi-cbg.de
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+--------------------------------------------------------------------------------------------------
+
+
+On Sep 14, 2015, at 4:48 AM, ? <709314090 at qq.com> wrote:
+
+> Hi, everyone,
+>     Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+> spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+> spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+> 
+>     Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+> 
+>     Thank you very much!
+> 
+> All best!
+> ------------------
+> Zheng Huang
+> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+> Tel: 13120836853
+> E-mail: 709314090 at qq.com
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/cbebe1d0/attachment.html>
+
+From 709314090 at qq.com  Mon Sep 14 06:17:39 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 14 Sep 2015 19:17:39 +0800
+Subject: [OpenSPIM] =?gb18030?b?u9i4tKO6ICBDYW4geW91IHRlbGwgbWUgdGhlIHBv?=
+ =?gb18030?q?ssible_reasons_for_registration_failure?=
+Message-ID: <tencent_53DD5814090581814C2E1939@qq.com>
+
+Dear PAvel?
+    Thanks for your reply! I will go to read the documentation as you recommended.
+    The xy resolution is just as described in http://openspim.org/Pixel_Size_Calibration (I have done the calibration with rule mode), and the z resolution is just the number of z-step when acquire the data. Is that all right?
+    I have antoher question. As in the sample data, there are 0-4 angles for each time lapses. If I want to acquire multi-views for different angles, does only the rotional stage be moved when I change to another view?  The reason for I ask this question is that the detected part of sample would leave the view of CMOS when I just changed the angle stage, and I have to change the x or y stage to move it back. I don't know whether this process lead to the registration fail.
+
+
+   Thank you for your reply again!
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ ???? ------------------
+???: "Pavel Tomancak";<tomancak at mpi-cbg.de>;
+????: 2015?9?14?(???) ??6:15
+???: "?"<709314090 at qq.com>; 
+??: "openspim"<openspim at openspim.org>; 
+??: Re: [OpenSPIM] Can you tell me the possible reasons for registration failure
+
+
+
+Dear Zheng,
+
+This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+
+
+I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration. 
+
+
+All the best
+
+
+PAvel
+
+
+[1] http://fiji.sc/SPIM_Registration_Method
+ --------------------------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Research Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+Pfotenhauerstr. 108
+D-01307 Dresden							Tel.: +49 351 210 2670
+Germany									Fax: +49 351 210 2020
+
+tomancak at mpi-cbg.de
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+--------------------------------------------------------------------------------------------------
+
+ 
+ 
+On Sep 14, 2015, at 4:48 AM, ? <709314090 at qq.com> wrote:
+
+Hi, everyone,
+    Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+
+
+
+    Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+
+
+    Thank you very much!
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/83e2ff42/attachment-0001.html>
+
+From tomancak at mpi-cbg.de  Mon Sep 14 06:52:56 2015
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Mon, 14 Sep 2015 13:52:56 +0200
+Subject: [OpenSPIM]
+ =?utf-8?b?5Zue5aSN77yaICBDYW4geW91IHRlbGwgbWUgdGhlIHBv?=
+ =?utf-8?q?ssible_reasons_for_registration_failure?=
+In-Reply-To: <tencent_53DD5814090581814C2E1939@qq.com>
+References: <tencent_53DD5814090581814C2E1939@qq.com>
+Message-ID: <79F84AC6-A5BC-4803-8DE2-B9487E1E5B05@mpi-cbg.de>
+
+>     Thanks for your reply! I will go to read the documentation as you recommended.
+>     The xy resolution is just as described in http://openspim.org/Pixel_Size_Calibration (I have done the calibration with rule mode), and the z resolution is just the number of z-step when acquire the data. Is that all right?
+>     I have antoher question. As in the sample data, there are 0-4 angles for each time lapses. If I want to acquire multi-views for different angles, does only the rotional stage be moved when I change to another view?  The reason for I ask this question is that the detected part of sample would leave the view of CMOS when I just changed the angle stage, and I have to change the x or y stage to move it back. I don't know whether this process lead to the registration fail.
+
+Each view has to be fully defined by positioning the sample using the xyz motors and defining the first slice, step size and number of slices. The system will try re-visiting these exact locations. If you would just move the rotational stage the sample would most likely disappear from the field of view as it is not centred on the rotation axis and that axis is anyway undefined with our simple sample holder.
+
+All the best
+
+PAvel
+
+
+> 
+>    Thank you for your reply again!
+> 
+> 
+> 
+> ------------------
+> Zheng Huang
+> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+> Tel: 13120836853
+> E-mail: 709314090 at qq.com
+>  
+> 
+> 
+> ------------------ ???? ------------------
+> ???: "Pavel Tomancak";<tomancak at mpi-cbg.de>;
+> ????: 2015?9?14?(???) ??6:15
+> ???: "?"<709314090 at qq.com>;
+> ??: "openspim"<openspim at openspim.org>;
+> ??: Re: [OpenSPIM] Can you tell me the possible reasons for registration failure
+> 
+> Dear Zheng,
+> 
+> This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+> 
+> I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration.
+> 
+> All the best
+> 
+> PAvel
+> 
+> [1] http://fiji.sc/SPIM_Registration_Method
+> --------------------------------------------------------------------------------------------------
+> Pavel Tomancak, Ph.D.
+> 
+> Research Group Leader
+> Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+> Pfotenhauerstr. 108
+> D-01307 Dresden							Tel.: +49 351 210 2670
+> Germany									Fax: +49 351 210 2020
+> 
+> tomancak at mpi-cbg.de
+> http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+> twitter: @PavelTomancak
+> --------------------------------------------------------------------------------------------------
+> 
+> 
+> On Sep 14, 2015, at 4:48 AM, ? <709314090 at qq.com> wrote:
+> 
+>> Hi, everyone,
+>>     Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+>> spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+>> spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+>> 
+>>     Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+>> 
+>>     Thank you very much!
+>> 
+>> All best!
+>> ------------------
+>> Zheng Huang
+>> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+>> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China
+>> Tel: 13120836853
+>> E-mail: 709314090 at qq.com
+>>  
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/5ed1cd59/attachment.html>
+
+From tnf8 at pitt.edu  Tue Sep 22 10:34:56 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 22 Sep 2015 15:34:56 +0000
+Subject: [OpenSPIM] changing "objectives"
+Message-ID: <D226E795.59D9%tnf8@pitt.edu>
+
+Hi folks,
+
+Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.
+
+Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.
+
+Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.
+
+Thanks,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150922/101a91eb/attachment.html>
+
+From pitrone at mpi-cbg.de  Wed Sep 23 01:56:38 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 23 Sep 2015 08:56:38 +0200
+Subject: [OpenSPIM] changing "objectives"
+In-Reply-To: <D226E795.59D9%tnf8@pitt.edu>
+References: <D226E795.59D9%tnf8@pitt.edu>
+Message-ID: <2F2604FA-A3CA-44AD-AF5F-0D0821B647A9@mpi-cbg.de>
+
+Hello Timothy,
+
+We use the U-CA to much success... Aligning the light sheet for each mag is highly recommended. I've even use the 0.5x C-mount with it, but that doesn't work with large chip detectors. Another minor issue I have with it is it's range, it only doubles the mag over 4 slots (Empty, 1.25x, 1.6x, & 2.0x).
+
+Regards,
+Pete
+
+Peter Gabriel Pitrone DipRMS
+Microscopy and Imaging specialist
+in the Dr. Pavel Tomancak group at
+the Max Planck Institute of Molecular
+Cell Biology and Genetics, Dresden
+Pfotenhauerstrasse 108
+01307 Dresden
+Germany
+
+> On Sep 22, 2015, at 5:34 PM, Feinstein, Timothy N <tnf8 at pitt.edu> wrote:
+> 
+> Hi folks, 
+> 
+> Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.  
+> 
+> Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.  
+> 
+> Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.  
+> 
+> Thanks, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From fredrik.ek at med.lu.se  Wed Sep 23 03:34:04 2015
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Wed, 23 Sep 2015 08:34:04 +0000
+Subject: [OpenSPIM] changing "objectives"
+In-Reply-To: <D226E795.59D9%tnf8@pitt.edu>
+References: <D226E795.59D9%tnf8@pitt.edu>
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE0118669739@UWMBX04.uw.lu.se>
+
+Hi,
+
+We are using a Olympus magnifier 1x,2x and 4x with c-mount together with a Flash4.0 v2 and it works very well with the SPIM setup (20x 0.5 objective).
+
+Best,
+
+Fredrik
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+
+
+
+Fr?n: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] F?r Feinstein, Timothy N
+Skickat: den 22 september 2015 17:35
+Till: openspim
+?mne: [OpenSPIM] changing "objectives"
+
+Hi folks,
+
+Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.
+
+Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.
+
+Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.
+
+Thanks,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150923/8c0bb3bd/attachment.html>
+
+From tnf8 at pitt.edu  Wed Sep 23 10:20:18 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 23 Sep 2015 15:20:18 +0000
+Subject: [OpenSPIM] changing "objectives"
+Message-ID: <D22838AF.5B50%tnf8@pitt.edu>
+
+Thank you Fredrik and Peter!  Right now I am looking at either an Olympus U-AEC 1x/2x magnification changer or else the DE20BXC 2x magnifying camera adapter from SPOT Imaging.
+
+I checked the Nyquist sampling frequency for deconvolution at www.svi.nl/NyquistCalculator, and it looks like magnification is a good idea.  The optimal sampling frequency for widefield with a 0.5 NA water lens is 0.26 um per px.  I am imaging at 0.33 um/px with a 1x camera adapter.  Therefore I have a little resolution to gain, though a 2x adapter at 0.16 um/px will be grossly oversampling.  It might be a good idea to use a 1.5x adapter instead, as 0.22 um/px is pretty close to the theoretical limit.  As I understand it SPIM improves the axial resolution of images but does not change lateral resolution relative to widefield.  Is this correct?
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>>
+Date: Wednesday, September 23, 2015 at 4:34 AM
+To: Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>, openspim <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: SV: changing "objectives"
+
+Hi,
+
+We are using a Olympus magnifier 1x,2x and 4x with c-mount together with a Flash4.0 v2 and it works very well with the SPIM setup (20x 0.5 objective).
+
+Best,
+
+Fredrik
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+
+
+
+Fr?n: openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org] F?r Feinstein, Timothy N
+Skickat: den 22 september 2015 17:35
+Till: openspim
+?mne: [OpenSPIM] changing "objectives"
+
+Hi folks,
+
+Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.
+
+Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.
+
+Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.
+
+Thanks,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150923/99a5ecfc/attachment-0001.html>
+
+From pitrone at mpi-cbg.de  Wed Sep 23 10:27:39 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 23 Sep 2015 17:27:39 +0200
+Subject: [OpenSPIM] changing "objectives"
+In-Reply-To: <D22838AF.5B50%tnf8@pitt.edu>
+References: <D22838AF.5B50%tnf8@pitt.edu>
+Message-ID: <147B040A-7815-4E79-8BBC-91DC2BE2F93B@mpi-cbg.de>
+
+No worries,
+
+"As I understand it SPIM improves the axial resolution of images but does not change lateral resolution relative to widefield.  Is this correct?? Correct. It is in essence a widefield microscope system with optical sectioning in the axial direction. 
+
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra?e 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who." Rudyard Kipling - The Elephant's Child
+
+
+
+> On Sep 23, 2015, at 5:20 PM, Feinstein, Timothy N <tnf8 at pitt.edu> wrote:
+> 
+> Thank you Fredrik and Peter!  Right now I am looking at either an Olympus U-AEC 1x/2x magnification changer or else the DE20BXC 2x magnifying camera adapter from SPOT Imaging.  
+> 
+> I checked the Nyquist sampling frequency for deconvolution at www.svi.nl/NyquistCalculator <http://www.svi.nl/NyquistCalculator>, and it looks like magnification is a good idea.  The optimal sampling frequency for widefield with a 0.5 NA water lens is 0.26 um per px.  I am imaging at 0.33 um/px with a 1x camera adapter.  Therefore I have a little resolution to gain, though a 2x adapter at 0.16 um/px will be grossly oversampling.  It might be a good idea to use a 1.5x adapter instead, as 0.22 um/px is pretty close to the theoretical limit.  As I understand it SPIM improves the axial resolution of images but does not change lateral resolution relative to widefield.  Is this correct?  
+> 
+> All the best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> From: Fredrik Ek <fredrik.ek at med.lu.se <mailto:fredrik.ek at med.lu.se>>
+> Date: Wednesday, September 23, 2015 at 4:34 AM
+> To: Timothy Feinstein <tnf8 at pitt.edu <mailto:tnf8 at pitt.edu>>, openspim <openspim at openspim.org <mailto:openspim at openspim.org>>
+> Subject: SV: changing "objectives"
+> 
+> Hi,
+>  
+> We are using a Olympus magnifier 1x,2x and 4x with c-mount together with a Flash4.0 v2 and it works very well with the SPIM setup (20x 0.5 objective).
+>  
+> Best,
+>  
+> Fredrik
+>  
+> Fredrik Ek, PhD,
+> Researcher, Chemical Biology & Therapeutics 
+> Department of Experimental Medical Science 
+> Lund University, BMC D10 
+> S-221 84 Lund, SWEDEN 
+> ------------------------ 
+> Fredrik.Ek at med.lu.se <mailto:Fredrik.Ek at med.lu.se>
+> Phone: +46-727 17 22 05
+>  
+>  
+>  
+> Fr?n: openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org>] F?r Feinstein, Timothy N
+> Skickat: den 22 september 2015 17:35
+> Till: openspim
+> ?mne: [OpenSPIM] changing "objectives"
+>  
+> Hi folks, 
+>  
+> Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.  
+>  
+> Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.  
+>  
+> Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.  
+>  
+> Thanks, 
+>  
+>  
+> Tim
+>  
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+>  
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150923/61b64759/attachment-0001.html>
+
+From m.pawlowska at nencki.gov.pl  Mon Sep 28 03:31:13 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 28 Sep 2015 10:31:13 +0200
+Subject: [OpenSPIM] pinhole location and diameter to clean up the laser
+ beam
+In-Reply-To: <55F697DF.6000905@ens-lyon.fr>
+References: <55F697DF.6000905@ens-lyon.fr>
+Message-ID: <op.x5nzablcahhlbl@pc507-99ff.ibd>
+
+I currently use a low-budget laser diode with terrible beam profile, so  
+I'm forced to use a pinhole, but in fact I have a third telescope for  
+that, before the entire setup. But I suppose you can try the first  
+telescope. In the second telescope, which is after the cylindrical lens,  
+the beam has the shape of a line, not a point, so that won't work. The  
+size should be calculated dependent on your laser. Describing how to do it  
+is slightly too long for an email, but by googling "beam cleaning pinhole  
+size" I found for instance this:
+http://www.academia.edu/5558409/Laser_beam_cleaning_Spatial_filtering_of_laser_beam_
+
+However, if you do this you'll have a circular beam in the middle and  
+diffraction rings around it, like here:
+https://en.wikipedia.org/wiki/Airy_disk
+so you get rid of one problem and introduce another. I suppose you'd have  
+to characterize the light-sheet with and without the pinhole to see if it  
+helps.
+
+This is from me, maybe somebody has more to add or correct me if I'm wrong.
+
+Regards,
+Monika
+
+
+W dniu .09.2015 o 11:48 Claire Lionnet <claire.lionnet at ens-lyon.fr> pisze:
+
+> Hi everyone,
+>
+> We've got an openspim almost ready to work here in France. We are just  
+> concerned by the not-very-circular laser beam. Did somebody used a  
+> pinhole to clean up the beam ? What would be the best location for a  
+> pinhole in this setup : in the first or the second telescope ? And what  
+> should be its diameter ? (sorry for the basic questions, not an optical  
+> engineer !).
+> Thanks in advance for your help,
+>
+> Claire
+>
+
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From nantho2 at emory.edu  Tue Sep 29 19:34:29 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 30 Sep 2015 00:34:29 +0000
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <621727A3-3E0C-4428-9E68-BBFCD2AEC0A8@mpi-cbg.de>
+References: <D1E7926B.4A95%tnf8@pitt.edu>
+	<621727A3-3E0C-4428-9E68-BBFCD2AEC0A8@mpi-cbg.de>
+Message-ID: <CO2PR05MB6814181484912DC075930B2EC4D0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Jan, I hope the science is treating you well.
+
+Could I ask about the gimbal vs. the 3-axis adjuster.  How much work is it to remove the tilt using the 3-axis version?  I assume you can achieve a pseudo-gimbal by adjusting a little on two screws at a time...?
+
+Or maybe, to come at the question from another direction, which would you choose from the two following options?
+
+-           Polaris mounts all around, but no gimbal (FYI the room temp variation I see is <2?C most days)
+
+-           Standard mirror mounts but a gimbal at that conjugate plane
+
+Thanks in advance for your time.
+Neil
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Jan Huisken
+Sent: Wednesday, August 05, 2015 10:56 AM
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] ID'ing a part
+
+Hi Tim
+
+Correct. This must be a gimbal mirror mount. Sitting in the conjugate plane to the back focal plane you use this mirror to move the light sheet into the focal plane of your detection system (panel C below). If you used a regular (3-screw) mount you would not only translate the sheet but also introduce a tilt (panel D).
+
+This is also illustrated in Fig. 2 of [Huisken, Jan, and Didier Y R Stainier. 2007. "Even Fluorescence Excitation by Multidirectional Selective Plane Illumination Microscopy (mSPIM)." Optics Letters 32 (17): 2608-10.]
+
+Best
+Jan Huisken
+
+
+Figure from Weber, Michael, Michaela Mickoleit, and Jan Huisken. 2014. "Light Sheet Microscopy." Methods in Cell Biology 123: 193-215. doi:10.1016/B978-0-12-420138-5.00011-2.
+
+[cid:image001.png at 01D0FAF5.7C16E0B0]
+
+
+
+
+
+On Aug 5, 2015, at 4:22 PM, Feinstein, Timothy N <tnf8 at PITT.EDU<mailto:tnf8 at PITT.EDU>> wrote:
+
+Thanks folks, I got it.  It's a GM100 ?1" gimbal mirror mount, for adjusting the mirror without changing the axis of rotation.  I can see how a POLARIS in that position can be a little like adjusting cantilever brakes on a bike - lots of axes of adjustment and changing one effects all the others.  Having something there that adjusts like 'V' brakes do (independent axes, less frustration) seems like a good idea.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>
+Date: Wednesday, August 5, 2015 at 9:07 AM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] ID'ing a part
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org<http://openspim.org> the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150930/0df8fb88/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image001.png
+Type: image/png
+Size: 50758 bytes
+Desc: image001.png
+URL: <http://openspim.org/pipermail/openspim/attachments/20150930/0df8fb88/attachment-0001.png>
+
+From johannes.schindelin at gmx.de  Tue Sep  1 01:39:01 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 01 Sep 2015 08:39:01 +0200
+Subject: [OpenSPIM] =?utf-8?q?Fwd=3A_Discount_extended_for_=C2=B5Manager_U?=
+ =?utf-8?q?ser_Service_Program?=
+In-Reply-To: <127807c7306171ababea968c891db95b688.20150831224320@mail182.wdc02.mcdlv.net>
+References: <127807c7306171ababea968c891db95b688.20150831224320@mail182.wdc02.mcdlv.net>
+Message-ID: <38637109a0490282e9913044a48c93a8@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: Discount extended for µManager User Service Program
+Date: 2015-09-01 00:43
+ From: Mark Tsuchida (Open Imaging) <mark at open-imaging.com>
+To: Johannes Schindelin <johannes.schindelin at gmx.de>
+
+Sign up now for the µManager User Service Program
+
+View this email in your browser 
+(http://us11.campaign-archive1.com/?u=127807c7306171ababea968c8&id=1678c98058&e=91db95b688)
+
+http://open-imaging.us11.list-manage1.com/track/click?u=127807c7306171ababea968c8&id=c8bf01e8da&e=91db95b688
+
+
+** Sign up now for the µManager User Service Program
+------------------------------------------------------------
+
+
+** Ensure uninterrupted support as µManager moves to Open Imaging
+------------------------------------------------------------
+
+Dear Johannes,
+
+Open Imaging's µManager User Service Program 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=b9a275e987&e=91db95b688) 
+  is the best way to make sure you can get µManager technical support 
+when you need it — and your subscription will help us make sure µManager 
+continues to be the successful open source program it is today.
+
+We've extended our 10% first-year discount on the User Service Program 
+through September 15, so make sure you request a quote today 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=fe181b43e4&e=91db95b688) 
+! Service will begin on October 1, 2015.
+
+Yours sincerely,
+Mark Tsuchida
+CEO & Co-CTO
+Open Imaging, Inc.
+
+============================================================
+Copyright © 2015 Open Imaging, Inc., All rights reserved.
+  You are receiving this email because you opted in at our website 
+(https://open-imaging.com) or asked us to notify you about our User 
+Service Program.
+
+Our mailing address is:
+Open Imaging, Inc.
+1030 El Monte Ave #12
+Mountain View, CA 94040-2350
+USA
+** unsubscribe from this list 
+(http://open-imaging.us11.list-manage.com/unsubscribe?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688&c=1678c98058)
+** update subscription preferences 
+(http://open-imaging.us11.list-manage.com/profile?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688)
+  Email Marketing Powered by MailChimp
+http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=127807c7306171ababea968c8&afl=1
+
+
+
+From tnf8 at pitt.edu  Wed Sep  2 07:28:48 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 2 Sep 2015 12:28:48 +0000
+Subject: [OpenSPIM] transmitted light
+Message-ID: <D20C63BF.53A7%tnf8@pitt.edu>
+
+Hello all,
+
+Has anyone found a convenient solution for transmitted light illumination that can be controlled Micro-Manager? On the one hand you can use a handheld flashlight (torch), which works but is not something you can program.  On the other hand you have collimated light sources from e.g. Thorlabs.  Those do the job but they seem excessively powerful and expensive for what should be a pretty basic task.  I went searching for cheap USB-powered lamps that can be controlled through a software interface rather than a physical switch but those seem strangely hard to find.  As it stands I might put a DIY LED bulb in a cheap 'collimator' like the one below and link it to uManager through an arduino.
+
+http://www.mouser.com/ds/2/38/V02-1702EN-107315.pdf
+
+Even so I feel like I must have missed a simpler option.  Any thoughts appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150902/9cbaf813/attachment-0002.html>
+
+From 709314090 at qq.com  Wed Sep  2 09:00:40 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Wed, 2 Sep 2015 22:00:40 +0800
+Subject: [OpenSPIM] Data Registration Failure
+Message-ID: <tencent_5648661F582935EA7FBA45F4@qq.com>
+
+Hi, ALL!
+  I bulit my OpenSPIM last week, and I began to require data of zebrafish. But the data was registration failed.  The log of fiji was at the last of this mail. I try to change the threshold and nothing went well. 
+  I wonder it's maybe something worry with my require processing,  so I descirbe my require processing below. 
+  First, I selected a view, then set the Stack-Z = 400, and the step=7.5um, angle=-55.8.
+  Second, I wanted to select another view, so I changed the angle to -19.8. But at the same time, I had to change the x-value to keep the the zebrafish in the view of camera. Of cause, the range of Stack-z was also changed. Was this step wrong? I should not change the x-value?
+   Third, I repeated the second step to choose another three views and began to require data.
+   I hope to get your help！
+
+
+   By the way, I found the OpenSPIM.app(20150427) can not do data processing. When I did registration, the program alerted that missing 3D Viewer. I try to download the 3D Viewer, and it could work in this compter. Then I copyed the app folder to another computer, it couldn't work again. Was the 3D Viewer not installed in the app folder?  PS. The computer in lab can not access to Internet.
+    Thank you！
+
+
+Best ALL！
+
+
+***************************************************
+r1 = 1.0
+r2 = 2.0
+threshold = 0.015172152779996395
+....
+(Wed Sep 02 20:59:13 CST 2015): Subpixel localization using quadratic n-dimensional fit
+Found peaks (possible beads): 6160 in view spim_TL01_Angle4.tif
+Opening files took: 0 sec (17 %)
+Computation took: 4 sec (83 %)
+(Wed Sep 02 20:59:13 CST 2015): Finished Bead Extraction
+(Wed Sep 02 20:59:13 CST 2015): Starting Registration
+spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+spim_TL01_Angle1.tif<->spim_TL01_Angle3.tif: Not enough correspondences found 7, should be at least 12
+
+
+
+......
+spim_TL01_Angle0.tif (id = 0) has 0 correspondences in 0 other views.
+spim_TL01_Angle1.tif (id = 1) has 0 correspondences in 0 other views.
+
+.....
+The total number of detections was: 32007
+The total number of correspondence candidates was: 126
+The total number of true correspondences is: 0
+
+Successfully optimized configuration of 0 tiles after 202 iterations:
+  average displacement: ?px
+  minimal displacement: 179,769,313,486,231,570,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000.000px
+  maximal displacement: 0.000px
+Optimizer Matrices
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle0.tif (id = 0) is not part of the structure of my view spim_TL01_Angle0.tif (id = 0)
+spim_TL01_Angle0.tif (id = 0): is not connected to any other tile!
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle1.tif (id = 1) is not part of the structure of my view spim_TL01_Angle1.tif (id = 1)
+spim_TL01_Angle1.tif (id = 1): is not connected to any other tile!
+
+
+
+.....
+*****************************************************
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150902/483aea30/attachment-0002.html>
+
+From winfrees at iu.edu  Wed Sep  2 10:14:34 2015
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Wed, 2 Sep 2015 15:14:34 +0000
+Subject: [OpenSPIM] transmitted light
+In-Reply-To: <D20C63BF.53A7%tnf8@pitt.edu>
+References: <D20C63BF.53A7%tnf8@pitt.edu>
+Message-ID: <4c886332df8c491a896a4c93e247e2e0@bl-cci-exch04.ads.iu.edu>
+
+My response isn't really simple but...
+
+I set up oblique illumination and a camera to aid in sample position after occluding the views of the sample chamber with heating and perfusion lines-and a sore neck from constantly checking the chamber during positioning.  It has worked great for positioning zebrafish to organoids.  Right now the illumination is from an old RGB LED board I designed being driven with PWM from a TLC5940 on an Arduino.  The Arduino is also driving an RGB screen for control.  The firmware for the Arduino could be adapted to use a customized version of the Arduino  micromanager driver-haven't gotten to it yet.  For that matter, I'd like the camera feed to be fed to micromanager too.  That's all too much development for me right now though.  I do have an extra RGB board that is populated and could probably dig up a version of the TLC5940 board that is unpopulated(I might have the parts squirreled away) if you're interested-firmwares too of course.
+
+Seth
+
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Wednesday, September 02, 2015 8:29 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] transmitted light
+
+Hello all,
+
+Has anyone found a convenient solution for transmitted light illumination that can be controlled Micro-Manager? On the one hand you can use a handheld flashlight (torch), which works but is not something you can program.  On the other hand you have collimated light sources from e.g. Thorlabs.  Those do the job but they seem excessively powerful and expensive for what should be a pretty basic task.  I went searching for cheap USB-powered lamps that can be controlled through a software interface rather than a physical switch but those seem strangely hard to find.  As it stands I might put a DIY LED bulb in a cheap 'collimator' like the one below and link it to uManager through an arduino.
+
+http://www.mouser.com/ds/2/38/V02-1702EN-107315.pdf
+
+Even so I feel like I must have missed a simpler option.  Any thoughts appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150902/9de7d0ef/attachment-0002.html>
+
+From veli-pekka.ronkainen at oulu.fi  Thu Sep  3 07:20:11 2015
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Thu, 3 Sep 2015 12:20:11 +0000
+Subject: [OpenSPIM] transmitted light
+In-Reply-To: <D20C63BF.53A7%tnf8@pitt.edu>
+References: <D20C63BF.53A7%tnf8@pitt.edu>
+Message-ID: <bde5aa7556b64bb4b46d8683087addde@nippu11.univ.yo.oulu.fi>
+
+Hi Tim and others,
+
+We use ScopeLED G180 Series RGB LED light source, a fiber light guide and a basic collimator for transmitted light illumination. It is a convenient solution, but not very cheap. The light source can be controlled directly by µManager (color, intensity and shutter), and if you use µManager multidimensional acquisition (MDA) and channels tools, the bright field imaging can be automatically integrated to time lapse, z-stacking etc. fluorescence experiments. However, on-off cycling and intensity modulation responses seem to have some delay when the device is controlled via USB. Typically it doesn't matter, but it can be a problem if BF and fluorescence channels have to be imaged in a rapid sequence, e.g. in fast time lapse experiments.
+
+RGB color modulation is a nice "extra" feature, since a user can select an appropriate BF illumination color depending on the band pass wavelength of the used emission filter, and use a very little amount of narrow bandwidth light for TL imaging.
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: 2. syyskuuta 2015 15:29
+To: openspim at openspim.org
+Subject: [OpenSPIM] transmitted light
+
+Hello all,
+
+Has anyone found a convenient solution for transmitted light illumination that can be controlled Micro-Manager? On the one hand you can use a handheld flashlight (torch), which works but is not something you can program.  On the other hand you have collimated light sources from e.g. Thorlabs.  Those do the job but they seem excessively powerful and expensive for what should be a pretty basic task.  I went searching for cheap USB-powered lamps that can be controlled through a software interface rather than a physical switch but those seem strangely hard to find.  As it stands I might put a DIY LED bulb in a cheap 'collimator' like the one below and link it to uManager through an arduino.
+
+http://www.mouser.com/ds/2/38/V02-1702EN-107315.pdf
+
+Even so I feel like I must have missed a simpler option.  Any thoughts appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150903/73ccc23d/attachment-0002.html>
+
+From Jamie.Flynn at uon.edu.au  Sat Sep  5 20:39:15 2015
+From: Jamie.Flynn at uon.edu.au (Jamie Flynn)
+Date: Sun, 6 Sep 2015 01:39:15 +0000
+Subject: [OpenSPIM] Compatibility with Windows 8
+Message-ID: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+
+Hi everyone,
+
+We've started to build a dual illumination OpenSPIM scope in Newcastle, Australia and our parts are mostly here. Our workstation has just arrived and it's come preinstalled with Windows 8. Before I start putting the software and drivers on, has anyone had any compatibility issues with the OpenSPIM software and this operating system? Would it be wise to step back to Windows 7?
+
+Thanks in advance for your advice.
+
+All the best
+--------------------
+Dr. Jamie Flynn (PhD)
+University of Newcastle
+Hunter Medical Research Institute
+Room 3613 level 3 east
+1 Kookaburra Circuit, New Lambton Heights
+NSW 2305, Australia.
+pH: +612 40423613
+Mobile: +61 416003787
+Email: jamie.flynn at uon.edu.au
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150906/c8286627/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Sun Sep  6 03:26:54 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Sun, 6 Sep 2015 10:26:54 +0200 (CEST)
+Subject: [OpenSPIM] Compatibility with Windows 8
+In-Reply-To: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+References: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+Message-ID: <700068453.9623655.1441528014501.JavaMail.zimbra@mpi-cbg.de>
+
+Hello Jamie,
+
+I would personally revert back to 7, due to the fact that it is more thoroughly tested... tried and true.
+
+Regards,
+Pete 
+
+----- Original Message -----
+From: "Jamie Flynn" <Jamie.Flynn at uon.edu.au>
+To: openspim at openspim.org
+Sent: Sunday, September 6, 2015 3:39:15 AM
+Subject: [OpenSPIM] Compatibility with Windows 8
+
+Hi everyone, 
+
+We’ve started to build a dual illumination OpenSPIM scope in Newcastle, Australia and our parts are mostly here. Our workstation has just arrived and it’s come preinstalled with Windows 8. Before I start putting the software and drivers on, has anyone had any compatibility issues with the OpenSPIM software and this operating system? Would it be wise to step back to Windows 7? 
+
+Thanks in advance for your advice. 
+
+All the best 
+-------------------- 
+Dr. Jamie Flynn (PhD) 
+University of Newcastle 
+Hunter Medical Research Institute 
+Room 3613 level 3 east 
+1 Kookaburra Circuit, New Lambton Heights 
+NSW 2305, Australia. 
+pH: +612 40423613 
+Mobile: +61 416003787 
+Email: jamie.flynn at uon.edu.au 
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From Jamie.Flynn at uon.edu.au  Sun Sep  6 07:49:32 2015
+From: Jamie.Flynn at uon.edu.au (Jamie Flynn)
+Date: Sun, 6 Sep 2015 12:49:32 +0000
+Subject: [OpenSPIM] Compatibility with Windows 8
+In-Reply-To: <700068453.9623655.1441528014501.JavaMail.zimbra@mpi-cbg.de>
+References: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+	<700068453.9623655.1441528014501.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <D2126D20.C19E%jamie.flynn@uon.edu.au>
+
+Hi Pete,
+
+Yep I figured that¹d be the safe bet. Thanks for the response!
+
+Cheers
+Jamie
+
+
+
+On 6/09/2015 6:26 pm, "Peter Gabriel Pitrone" <pitrone at mpi-cbg.de> wrote:
+
+>Hello Jamie,
+>
+>I would personally revert back to 7, due to the fact that it is more
+>thoroughly tested... tried and true.
+>
+>Regards,
+>Pete 
+>
+>----- Original Message -----
+>From: "Jamie Flynn" <Jamie.Flynn at uon.edu.au>
+>To: openspim at openspim.org
+>Sent: Sunday, September 6, 2015 3:39:15 AM
+>Subject: [OpenSPIM] Compatibility with Windows 8
+>
+>Hi everyone, 
+>
+>We¹ve started to build a dual illumination OpenSPIM scope in Newcastle,
+>Australia and our parts are mostly here. Our workstation has just arrived
+>and it¹s come preinstalled with Windows 8. Before I start putting the
+>software and drivers on, has anyone had any compatibility issues with the
+>OpenSPIM software and this operating system? Would it be wise to step
+>back to Windows 7?
+>
+>Thanks in advance for your advice.
+>
+>All the best 
+>--------------------
+>Dr. Jamie Flynn (PhD)
+>University of Newcastle
+>Hunter Medical Research Institute
+>Room 3613 level 3 east
+>1 Kookaburra Circuit, New Lambton Heights
+>NSW 2305, Australia.
+>pH: +612 40423613 
+>Mobile: +61 416003787
+>Email: jamie.flynn at uon.edu.au
+>
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+
+
+From johannes.schindelin at gmx.de  Sun Sep  6 11:16:54 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Sun, 06 Sep 2015 18:16:54 +0200
+Subject: [OpenSPIM] Compatibility with Windows 8
+In-Reply-To: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+References: <D211D65D.C16A%jamie.flynn@uon.edu.au>
+Message-ID: <d40c687b0393ab9466ba610171b22977@dscho.org>
+
+Hi Jamie,
+
+On 2015-09-06 03:39, Jamie Flynn wrote:
+
+> We've started to build a dual illumination OpenSPIM scope in
+> Newcastle, Australia and our parts are mostly here. Our workstation
+> has just arrived and it's come preinstalled with Windows 8. Before I
+> start putting the software and drivers on, has anyone had any
+> compatibility issues with the OpenSPIM software and this operating
+> system? Would it be wise to step back to Windows 7?
+
+The main issue with Windows version compatibility is when drivers are 
+not quite yet supported. Typically you will find all information 
+regarding that on this page:
+
+https://micro-manager.org/wiki/Device%20Support
+
+Ciao,
+Johannes
+
+
+
+From guillaume at damcb.com  Fri Sep 11 10:51:49 2015
+From: guillaume at damcb.com (Guillaume Gay)
+Date: Fri, 11 Sep 2015 17:51:49 +0200
+Subject: [OpenSPIM] ANN - [mu-spim] mu-spim v0.1 rubber release
+In-Reply-To: <55F2C8E8.5030204@mitotic-machine.org>
+References: <55F2C8E8.5030204@mitotic-machine.org>
+Message-ID: <55F2F895.4050608@damcb.com>
+
+
+Dear OpenSpim community members,
+
+I am proud to announce the version 0.1 “rubber” release of the mu-spim 
+<http://mu-spim.xyz/mu_spim_rubber.html>.
+
+It is the first prototype of a light-sheet microscope for smartphones. 
+It is still very rough and DIY-ish, but implements the bases of 
+light-sheet microscopy.
+
+The design is largely inspired by the SPIM Corinne Lorenzo, Valérie 
+Lobjois, Amina Maandhui and I developed in Toulouse in 2008 - 2010 (this 
+one 
+<http://www.cnrs.fr/insb/z-outils/images/site/recherche/publis/2010/article-ducommun.jpg>). 
+It benefits from the support and partnership of the IP3D team at ITAV 
+<http://www.itav-recherche.fr/index.php/fr/menu-itavequipeip3d>.
+
+This project seeks to:
+
+  *
+
+    Popularize microscopy and create vectors for scientists/public
+    exchanges, e.g. through the exchange of biologic samples to be
+    imaged (see the PrakashLab’s foldscope <http://foldscope.com>). The
+    reception so far with lay people is quite positive. I think there
+    are many educational opportunities opened, particularly in
+    inter-disciplinary settings.
+
+  *
+
+    Create a *compact, field ready, 3D microscope* (on those aspects,
+    I’d be happy to ear from tech companies).
+
+    It is for now a *fully open project* (CC-BY-SA-NC), and I am looking
+    for any kind of collaboration that could make it progress. This
+    early release is a way to find such collaborations.
+
+You can browse the project (openscad based) on github 
+<http://github.com/damCB/mu_spim> (getting a github account is painless 
+and not intrusive. It is also a very efficient collaboration platform).
+
+Feel free to pass this message along to anyone who might be interested.
+
+Best,
+
+Guillaume
+
+​
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150911/02d37df4/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Fri Sep 11 11:05:07 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Fri, 11 Sep 2015 18:05:07 +0200 (CEST)
+Subject: [OpenSPIM] ANN - [mu-spim] mu-spim v0.1 rubber release
+In-Reply-To: <55F2F895.4050608@damcb.com>
+References: <55F2C8E8.5030204@mitotic-machine.org> <55F2F895.4050608@damcb.com>
+Message-ID: <818325347.11447126.1441987507782.JavaMail.zimbra@mpi-cbg.de>
+
+Hey Guillaume,
+
+That really cool!! Thanks for sharing...
+
+Regards,
+Pete
+
+----- Original Message -----
+From: "Guillaume Gay" <guillaume at damcb.com>
+To: openspim at openspim.org
+Sent: Friday, September 11, 2015 5:51:49 PM
+Subject: [OpenSPIM] ANN - [mu-spim] mu-spim v0.1 rubber release
+
+Dear OpenSpim community members, 
+
+
+I am proud to announce the version 0.1 “rubber” release of the mu-spim . 
+
+It is the first prototype of a light-sheet microscope for smartphones. It is still very rough and DIY-ish, but implements the bases of light-sheet microscopy. 
+
+The design is largely inspired by the SPIM Corinne Lorenzo, Valérie Lobjois, Amina Maandhui and I developed in Toulouse in 2008 - 2010 ( this one ). It benefits from the support and partnership of the IP3D team at ITAV . 
+
+This project seeks to: 
+
+    * 
+
+Popularize microscopy and create vectors for scientists/public exchanges, e.g. through the exchange of biologic samples to be imaged (see the PrakashLab’s foldscope ). The reception so far with lay people is quite positive. I think there are many educational opportunities opened, particularly in inter-disciplinary settings. 
+    * 
+
+Create a compact, field ready, 3D microscope (on those aspects, I’d be happy to ear from tech companies). 
+
+It is for now a fully open project (CC-BY-SA-NC), and I am looking for any kind of collaboration that could make it progress. This early release is a way to find such collaborations. 
+
+
+You can browse the project (openscad based) on github (getting a github account is painless and not intrusive. It is also a very efficient collaboration platform). 
+
+Feel free to pass this message along to anyone who might be interested. 
+Best, 
+
+Guillaume 
+ 
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From 709314090 at qq.com  Sun Sep 13 21:48:49 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 14 Sep 2015 10:48:49 +0800
+Subject: [OpenSPIM] Can you tell me the possible reasons for registration
+	failure
+Message-ID: <tencent_22914A8F797907F67337F920@qq.com>
+
+Hi, everyone,
+    Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+
+
+
+    Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+
+
+    Thank you very much!
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/14bb9248/attachment-0002.html>
+
+From claire.lionnet at ens-lyon.fr  Mon Sep 14 04:48:15 2015
+From: claire.lionnet at ens-lyon.fr (Claire Lionnet)
+Date: Mon, 14 Sep 2015 11:48:15 +0200
+Subject: [OpenSPIM] pinhole location and diameter to clean up the laser beam
+Message-ID: <55F697DF.6000905@ens-lyon.fr>
+
+Hi everyone,
+
+We've got an openspim almost ready to work here in France. We are just 
+concerned by the not-very-circular laser beam. Did somebody used a 
+pinhole to clean up the beam ? What would be the best location for a 
+pinhole in this setup : in the first or the second telescope ? And what 
+should be its diameter ? (sorry for the basic questions, not an optical 
+engineer !).
+Thanks in advance for your help,
+
+Claire
+
+-- 
+Claire LIONNET
+PLATIM
+US8 / UMS3444 BioSciences Gerland - Lyon Sud
+http://www.sfr-biosciences.fr/plateformes/Phenotypage-cellulaire/PLATIM
+
+
+
+
+
+From tomancak at mpi-cbg.de  Mon Sep 14 05:15:43 2015
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Mon, 14 Sep 2015 12:15:43 +0200
+Subject: [OpenSPIM] Can you tell me the possible reasons for
+	registration failure
+In-Reply-To: <tencent_22914A8F797907F67337F920@qq.com>
+References: <tencent_22914A8F797907F67337F920@qq.com>
+Message-ID: <6E0A5FF3-F703-4CC9-AB45-21DA1BCA91E5@mpi-cbg.de>
+
+Dear Zheng,
+
+This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+
+I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration. 
+
+All the best
+
+PAvel
+
+[1] http://fiji.sc/SPIM_Registration_Method
+--------------------------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Research Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+Pfotenhauerstr. 108
+D-01307 Dresden							Tel.: +49 351 210 2670
+Germany									Fax: +49 351 210 2020
+
+tomancak at mpi-cbg.de
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+--------------------------------------------------------------------------------------------------
+
+
+On Sep 14, 2015, at 4:48 AM, 政 <709314090 at qq.com> wrote:
+
+> Hi, everyone,
+>     Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+> spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+> spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+> 
+>     Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+> 
+>     Thank you very much!
+> 
+> All best!
+> ------------------
+> Zheng Huang
+> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+> Tel: 13120836853
+> E-mail: 709314090 at qq.com
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/cbebe1d0/attachment-0002.html>
+
+From 709314090 at qq.com  Mon Sep 14 06:17:39 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 14 Sep 2015 19:17:39 +0800
+Subject: [OpenSPIM] =?gb18030?b?u9i4tKO6ICBDYW4geW91IHRlbGwgbWUgdGhlIHBv?=
+ =?gb18030?q?ssible_reasons_for_registration_failure?=
+Message-ID: <tencent_53DD5814090581814C2E1939@qq.com>
+
+Dear PAvel，
+    Thanks for your reply! I will go to read the documentation as you recommended.
+    The xy resolution is just as described in http://openspim.org/Pixel_Size_Calibration (I have done the calibration with rule mode), and the z resolution is just the number of z-step when acquire the data. Is that all right?
+    I have antoher question. As in the sample data, there are 0-4 angles for each time lapses. If I want to acquire multi-views for different angles, does only the rotional stage be moved when I change to another view?  The reason for I ask this question is that the detected part of sample would leave the view of CMOS when I just changed the angle stage, and I have to change the x or y stage to move it back. I don't know whether this process lead to the registration fail.
+
+
+   Thank you for your reply again!
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ 原始邮件 ------------------
+发件人: "Pavel Tomancak";<tomancak at mpi-cbg.de>;
+发送时间: 2015年9月14日(星期一) 晚上6:15
+收件人: "政"<709314090 at qq.com>; 
+抄送: "openspim"<openspim at openspim.org>; 
+主题: Re: [OpenSPIM] Can you tell me the possible reasons for registration failure
+
+
+
+Dear Zheng,
+
+This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+
+
+I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration. 
+
+
+All the best
+
+
+PAvel
+
+
+[1] http://fiji.sc/SPIM_Registration_Method
+ --------------------------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Research Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+Pfotenhauerstr. 108
+D-01307 Dresden							Tel.: +49 351 210 2670
+Germany									Fax: +49 351 210 2020
+
+tomancak at mpi-cbg.de
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+--------------------------------------------------------------------------------------------------
+
+ 
+ 
+On Sep 14, 2015, at 4:48 AM, 政 <709314090 at qq.com> wrote:
+
+Hi, everyone,
+    Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+
+
+
+    Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+
+
+    Thank you very much!
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/83e2ff42/attachment-0002.html>
+
+From tomancak at mpi-cbg.de  Mon Sep 14 06:52:56 2015
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Mon, 14 Sep 2015 13:52:56 +0200
+Subject: [OpenSPIM]
+ =?utf-8?b?5Zue5aSN77yaICBDYW4geW91IHRlbGwgbWUgdGhlIHBv?=
+ =?utf-8?q?ssible_reasons_for_registration_failure?=
+In-Reply-To: <tencent_53DD5814090581814C2E1939@qq.com>
+References: <tencent_53DD5814090581814C2E1939@qq.com>
+Message-ID: <79F84AC6-A5BC-4803-8DE2-B9487E1E5B05@mpi-cbg.de>
+
+>     Thanks for your reply! I will go to read the documentation as you recommended.
+>     The xy resolution is just as described in http://openspim.org/Pixel_Size_Calibration (I have done the calibration with rule mode), and the z resolution is just the number of z-step when acquire the data. Is that all right?
+>     I have antoher question. As in the sample data, there are 0-4 angles for each time lapses. If I want to acquire multi-views for different angles, does only the rotional stage be moved when I change to another view?  The reason for I ask this question is that the detected part of sample would leave the view of CMOS when I just changed the angle stage, and I have to change the x or y stage to move it back. I don't know whether this process lead to the registration fail.
+
+Each view has to be fully defined by positioning the sample using the xyz motors and defining the first slice, step size and number of slices. The system will try re-visiting these exact locations. If you would just move the rotational stage the sample would most likely disappear from the field of view as it is not centred on the rotation axis and that axis is anyway undefined with our simple sample holder.
+
+All the best
+
+PAvel
+
+
+> 
+>    Thank you for your reply again!
+> 
+> 
+> 
+> ------------------
+> Zheng Huang
+> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+> Tel: 13120836853
+> E-mail: 709314090 at qq.com
+>  
+> 
+> 
+> ------------------ 原始邮件 ------------------
+> 发件人: "Pavel Tomancak";<tomancak at mpi-cbg.de>;
+> 发送时间: 2015年9月14日(星期一) 晚上6:15
+> 收件人: "政"<709314090 at qq.com>;
+> 抄送: "openspim"<openspim at openspim.org>;
+> 主题: Re: [OpenSPIM] Can you tell me the possible reasons for registration failure
+> 
+> Dear Zheng,
+> 
+> This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+> 
+> I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration.
+> 
+> All the best
+> 
+> PAvel
+> 
+> [1] http://fiji.sc/SPIM_Registration_Method
+> --------------------------------------------------------------------------------------------------
+> Pavel Tomancak, Ph.D.
+> 
+> Research Group Leader
+> Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+> Pfotenhauerstr. 108
+> D-01307 Dresden							Tel.: +49 351 210 2670
+> Germany									Fax: +49 351 210 2020
+> 
+> tomancak at mpi-cbg.de
+> http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+> twitter: @PavelTomancak
+> --------------------------------------------------------------------------------------------------
+> 
+> 
+> On Sep 14, 2015, at 4:48 AM, 政 <709314090 at qq.com> wrote:
+> 
+>> Hi, everyone,
+>>     Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+>> spim_TL01_Angle2.tif<->spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+>> spim_TL01_Angle2.tif<->spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+>> 
+>>     Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+>> 
+>>     Thank you very much!
+>> 
+>> All best!
+>> ------------------
+>> Zheng Huang
+>> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+>> Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China
+>> Tel: 13120836853
+>> E-mail: 709314090 at qq.com
+>>  
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150914/5ed1cd59/attachment-0002.html>
+
+From tnf8 at pitt.edu  Tue Sep 22 10:34:56 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 22 Sep 2015 15:34:56 +0000
+Subject: [OpenSPIM] changing "objectives"
+Message-ID: <D226E795.59D9%tnf8@pitt.edu>
+
+Hi folks,
+
+Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.
+
+Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.
+
+Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.
+
+Thanks,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150922/101a91eb/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Wed Sep 23 01:56:38 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 23 Sep 2015 08:56:38 +0200
+Subject: [OpenSPIM] changing "objectives"
+In-Reply-To: <D226E795.59D9%tnf8@pitt.edu>
+References: <D226E795.59D9%tnf8@pitt.edu>
+Message-ID: <2F2604FA-A3CA-44AD-AF5F-0D0821B647A9@mpi-cbg.de>
+
+Hello Timothy,
+
+We use the U-CA to much success... Aligning the light sheet for each mag is highly recommended. I've even use the 0.5x C-mount with it, but that doesn't work with large chip detectors. Another minor issue I have with it is it's range, it only doubles the mag over 4 slots (Empty, 1.25x, 1.6x, & 2.0x).
+
+Regards,
+Pete
+
+Peter Gabriel Pitrone DipRMS
+Microscopy and Imaging specialist
+in the Dr. Pavel Tomancak group at
+the Max Planck Institute of Molecular
+Cell Biology and Genetics, Dresden
+Pfotenhauerstrasse 108
+01307 Dresden
+Germany
+
+> On Sep 22, 2015, at 5:34 PM, Feinstein, Timothy N <tnf8 at pitt.edu> wrote:
+> 
+> Hi folks, 
+> 
+> Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.  
+> 
+> Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.  
+> 
+> Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.  
+> 
+> Thanks, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From fredrik.ek at med.lu.se  Wed Sep 23 03:34:04 2015
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Wed, 23 Sep 2015 08:34:04 +0000
+Subject: [OpenSPIM] changing "objectives"
+In-Reply-To: <D226E795.59D9%tnf8@pitt.edu>
+References: <D226E795.59D9%tnf8@pitt.edu>
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE0118669739@UWMBX04.uw.lu.se>
+
+Hi,
+
+We are using a Olympus magnifier 1x,2x and 4x with c-mount together with a Flash4.0 v2 and it works very well with the SPIM setup (20x 0.5 objective).
+
+Best,
+
+Fredrik
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+
+
+
+Från: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] För Feinstein, Timothy N
+Skickat: den 22 september 2015 17:35
+Till: openspim
+Ämne: [OpenSPIM] changing "objectives"
+
+Hi folks,
+
+Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.
+
+Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.
+
+Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.
+
+Thanks,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150923/8c0bb3bd/attachment-0002.html>
+
+From tnf8 at pitt.edu  Wed Sep 23 10:20:18 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 23 Sep 2015 15:20:18 +0000
+Subject: [OpenSPIM] changing "objectives"
+Message-ID: <D22838AF.5B50%tnf8@pitt.edu>
+
+Thank you Fredrik and Peter!  Right now I am looking at either an Olympus U-AEC 1x/2x magnification changer or else the DE20BXC 2x magnifying camera adapter from SPOT Imaging.
+
+I checked the Nyquist sampling frequency for deconvolution at www.svi.nl/NyquistCalculator, and it looks like magnification is a good idea.  The optimal sampling frequency for widefield with a 0.5 NA water lens is 0.26 um per px.  I am imaging at 0.33 um/px with a 1x camera adapter.  Therefore I have a little resolution to gain, though a 2x adapter at 0.16 um/px will be grossly oversampling.  It might be a good idea to use a 1.5x adapter instead, as 0.22 um/px is pretty close to the theoretical limit.  As I understand it SPIM improves the axial resolution of images but does not change lateral resolution relative to widefield.  Is this correct?
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>>
+Date: Wednesday, September 23, 2015 at 4:34 AM
+To: Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>, openspim <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: SV: changing "objectives"
+
+Hi,
+
+We are using a Olympus magnifier 1x,2x and 4x with c-mount together with a Flash4.0 v2 and it works very well with the SPIM setup (20x 0.5 objective).
+
+Best,
+
+Fredrik
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+
+
+
+Från: openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org] För Feinstein, Timothy N
+Skickat: den 22 september 2015 17:35
+Till: openspim
+Ämne: [OpenSPIM] changing "objectives"
+
+Hi folks,
+
+Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.
+
+Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.
+
+Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.
+
+Thanks,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150923/99a5ecfc/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Wed Sep 23 10:27:39 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 23 Sep 2015 17:27:39 +0200
+Subject: [OpenSPIM] changing "objectives"
+In-Reply-To: <D22838AF.5B50%tnf8@pitt.edu>
+References: <D22838AF.5B50%tnf8@pitt.edu>
+Message-ID: <147B040A-7815-4E79-8BBC-91DC2BE2F93B@mpi-cbg.de>
+
+No worries,
+
+"As I understand it SPIM improves the axial resolution of images but does not change lateral resolution relative to widefield.  Is this correct?” Correct. It is in essence a widefield microscope system with optical sectioning in the axial direction. 
+
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who." Rudyard Kipling - The Elephant's Child
+
+
+
+> On Sep 23, 2015, at 5:20 PM, Feinstein, Timothy N <tnf8 at pitt.edu> wrote:
+> 
+> Thank you Fredrik and Peter!  Right now I am looking at either an Olympus U-AEC 1x/2x magnification changer or else the DE20BXC 2x magnifying camera adapter from SPOT Imaging.  
+> 
+> I checked the Nyquist sampling frequency for deconvolution at www.svi.nl/NyquistCalculator <http://www.svi.nl/NyquistCalculator>, and it looks like magnification is a good idea.  The optimal sampling frequency for widefield with a 0.5 NA water lens is 0.26 um per px.  I am imaging at 0.33 um/px with a 1x camera adapter.  Therefore I have a little resolution to gain, though a 2x adapter at 0.16 um/px will be grossly oversampling.  It might be a good idea to use a 1.5x adapter instead, as 0.22 um/px is pretty close to the theoretical limit.  As I understand it SPIM improves the axial resolution of images but does not change lateral resolution relative to widefield.  Is this correct?  
+> 
+> All the best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> From: Fredrik Ek <fredrik.ek at med.lu.se <mailto:fredrik.ek at med.lu.se>>
+> Date: Wednesday, September 23, 2015 at 4:34 AM
+> To: Timothy Feinstein <tnf8 at pitt.edu <mailto:tnf8 at pitt.edu>>, openspim <openspim at openspim.org <mailto:openspim at openspim.org>>
+> Subject: SV: changing "objectives"
+> 
+> Hi,
+>  
+> We are using a Olympus magnifier 1x,2x and 4x with c-mount together with a Flash4.0 v2 and it works very well with the SPIM setup (20x 0.5 objective).
+>  
+> Best,
+>  
+> Fredrik
+>  
+> Fredrik Ek, PhD,
+> Researcher, Chemical Biology & Therapeutics 
+> Department of Experimental Medical Science 
+> Lund University, BMC D10 
+> S-221 84 Lund, SWEDEN 
+> ------------------------ 
+> Fredrik.Ek at med.lu.se <mailto:Fredrik.Ek at med.lu.se>
+> Phone: +46-727 17 22 05
+>  
+>  
+>  
+> Från: openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org>] För Feinstein, Timothy N
+> Skickat: den 22 september 2015 17:35
+> Till: openspim
+> Ämne: [OpenSPIM] changing "objectives"
+>  
+> Hi folks, 
+>  
+> Thanks to the indispensable help of many users here, our SPIM is up and working.  You are all the best.  
+>  
+> Since a SPIM makes it quite hard to change objectives, I bought 1x and a 0.5x C-mount camera adapters to get the equivalent of a 20x and a 10x objective.  It seems to work quite well.  Now I wonder whether anyone has tried a magnifying tube lens like the Olympus U-CA or U-ECA to get a higher power image.  It all depends on whether a 'vanilla' openSPIM design is already imaging near the Nyquist limit.  We get 0.33 um/px using the Olympus 20x/0.5 and a Hamamatsu Flash4.0 v2, and even with deconvolution it may be pointless to magnify the image any further.  Any thoughts appreciated.  
+>  
+> Alternatively, has anyone tried keeping a second sample chamber with a higher power objective to swap in as needed?  It seems like a pain but less cumbersome than building a second instrument.  
+>  
+> Thanks, 
+>  
+>  
+> Tim
+>  
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+>  
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150923/61b64759/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Mon Sep 28 03:31:13 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 28 Sep 2015 10:31:13 +0200
+Subject: [OpenSPIM] pinhole location and diameter to clean up the laser
+ beam
+In-Reply-To: <55F697DF.6000905@ens-lyon.fr>
+References: <55F697DF.6000905@ens-lyon.fr>
+Message-ID: <op.x5nzablcahhlbl@pc507-99ff.ibd>
+
+I currently use a low-budget laser diode with terrible beam profile, so  
+I'm forced to use a pinhole, but in fact I have a third telescope for  
+that, before the entire setup. But I suppose you can try the first  
+telescope. In the second telescope, which is after the cylindrical lens,  
+the beam has the shape of a line, not a point, so that won't work. The  
+size should be calculated dependent on your laser. Describing how to do it  
+is slightly too long for an email, but by googling "beam cleaning pinhole  
+size" I found for instance this:
+http://www.academia.edu/5558409/Laser_beam_cleaning_Spatial_filtering_of_laser_beam_
+
+However, if you do this you'll have a circular beam in the middle and  
+diffraction rings around it, like here:
+https://en.wikipedia.org/wiki/Airy_disk
+so you get rid of one problem and introduce another. I suppose you'd have  
+to characterize the light-sheet with and without the pinhole to see if it  
+helps.
+
+This is from me, maybe somebody has more to add or correct me if I'm wrong.
+
+Regards,
+Monika
+
+
+W dniu .09.2015 o 11:48 Claire Lionnet <claire.lionnet at ens-lyon.fr> pisze:
+
+> Hi everyone,
+>
+> We've got an openspim almost ready to work here in France. We are just  
+> concerned by the not-very-circular laser beam. Did somebody used a  
+> pinhole to clean up the beam ? What would be the best location for a  
+> pinhole in this setup : in the first or the second telescope ? And what  
+> should be its diameter ? (sorry for the basic questions, not an optical  
+> engineer !).
+> Thanks in advance for your help,
+>
+> Claire
+>
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+
+From nantho2 at emory.edu  Tue Sep 29 19:34:29 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 30 Sep 2015 00:34:29 +0000
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <621727A3-3E0C-4428-9E68-BBFCD2AEC0A8@mpi-cbg.de>
+References: <D1E7926B.4A95%tnf8@pitt.edu>
+	<621727A3-3E0C-4428-9E68-BBFCD2AEC0A8@mpi-cbg.de>
+Message-ID: <CO2PR05MB6814181484912DC075930B2EC4D0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Jan, I hope the science is treating you well.
+
+Could I ask about the gimbal vs. the 3-axis adjuster.  How much work is it to remove the tilt using the 3-axis version?  I assume you can achieve a pseudo-gimbal by adjusting a little on two screws at a time...?
+
+Or maybe, to come at the question from another direction, which would you choose from the two following options?
+
+-           Polaris mounts all around, but no gimbal (FYI the room temp variation I see is <2°C most days)
+
+-           Standard mirror mounts but a gimbal at that conjugate plane
+
+Thanks in advance for your time.
+Neil
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Jan Huisken
+Sent: Wednesday, August 05, 2015 10:56 AM
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] ID'ing a part
+
+Hi Tim
+
+Correct. This must be a gimbal mirror mount. Sitting in the conjugate plane to the back focal plane you use this mirror to move the light sheet into the focal plane of your detection system (panel C below). If you used a regular (3-screw) mount you would not only translate the sheet but also introduce a tilt (panel D).
+
+This is also illustrated in Fig. 2 of [Huisken, Jan, and Didier Y R Stainier. 2007. "Even Fluorescence Excitation by Multidirectional Selective Plane Illumination Microscopy (mSPIM)." Optics Letters 32 (17): 2608-10.]
+
+Best
+Jan Huisken
+
+
+Figure from Weber, Michael, Michaela Mickoleit, and Jan Huisken. 2014. "Light Sheet Microscopy." Methods in Cell Biology 123: 193-215. doi:10.1016/B978-0-12-420138-5.00011-2.
+
+[cid:image001.png at 01D0FAF5.7C16E0B0]
+
+
+
+
+
+On Aug 5, 2015, at 4:22 PM, Feinstein, Timothy N <tnf8 at PITT.EDU<mailto:tnf8 at PITT.EDU>> wrote:
+
+Thanks folks, I got it.  It's a GM100 Ø1" gimbal mirror mount, for adjusting the mirror without changing the axis of rotation.  I can see how a POLARIS in that position can be a little like adjusting cantilever brakes on a bike - lots of axes of adjustment and changing one effects all the others.  Having something there that adjusts like 'V' brakes do (independent axes, less frustration) seems like a good idea.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>
+Date: Wednesday, August 5, 2015 at 9:07 AM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] ID'ing a part
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org<http://openspim.org> the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150930/0df8fb88/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image001.png
+Type: image/png
+Size: 50758 bytes
+Desc: image001.png
+URL: <http://openspim.org/pipermail/openspim/attachments/20150930/0df8fb88/attachment-0002.png>
+

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Software hangs during stack capture
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Software%20hangs%20during%20stack%20capture&In-Reply-To=%3C24140450-E3E7-4F2F-8163-7ACFCDED68D2%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001083.html">
+   <LINK REL="Next"  HREF="001084.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Software hangs during stack capture</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Software%20hangs%20during%20stack%20capture&In-Reply-To=%3C24140450-E3E7-4F2F-8163-7ACFCDED68D2%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] Software hangs during stack capture">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Wed Jul 31 02:38:30 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001083.html">[OpenSPIM] Software hangs during stack capture
+</A></li>
+        <LI>Next message: <A HREF="001084.html">[OpenSPIM] Software hangs during stack capture
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1087">[ date ]</a>
+              <a href="thread.html#1087">[ thread ]</a>
+              <a href="subject.html#1087">[ subject ]</a>
+              <a href="author.html#1087">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes &amp; Luke,
+&gt;&gt;<i> I noticed that upon acquisition of a stack  written to disk, OpenSPIM
+</I>&gt;&gt;<i> occasionally pauses in the middle of the acquisition for  some seconds
+</I>&gt;&gt;<i> to several minutes. I have only observed this when the stack is written
+</I>&gt;&gt;<i> to disk, not when the same stack is left in RAM and opened immediately.
+</I>&gt;&gt;<i> I tried to turn ON/OFF the asynchronous writing option but that did not
+</I>&gt;&gt;<i> change anything. 
+</I>&gt;<i> 
+</I>&gt;<i> Are you running an anti-virus software that could be at fault?
+</I>
+Not that I am aware of, but there might be a lot of crap (updates, power manager, blabla…) that could interfere. I will see at cleaning this mess a bit.
+However, I did not notice anything happening @ the GUI level and correlating with these hangs.
+
+&gt;<i> I've been getting some weird hangings as each slice is written out (affecting the entire operating system, not just the SPIM software), but typically they were lasting no more than a half-second, and never on the order of minutes. They're recent, and I've been doing some timing tests to try and determine the cause to greater accuracy than 'when writing'.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I take it the disk is local to the computer?
+</I>
+Yep, internal HD. 
+
+&gt;&gt;<i> Also I have noticed that I can not increase the memory allocated to Fiji
+</I>&gt;&gt;<i> beyond 1024M as it causes the HamamatsuHam driver to not load properly. 
+</I>&gt;<i> 
+</I>&gt;<i> Yes, that is unfortunately not something we can fix until we switch to a
+</I>&gt;<i> 64-bit version (which should be doable soon, given the hardware).
+</I>
+Let's wait then.
+
+With my best regards,
+
+Alexis
+
+&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001083.html">[OpenSPIM] Software hangs during stack capture
+</A></li>
+	<LI>Next message: <A HREF="001084.html">[OpenSPIM] Software hangs during stack capture
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1087">[ date ]</a>
+              <a href="thread.html#1087">[ thread ]</a>
+              <a href="subject.html#1087">[ subject ]</a>
+              <a href="author.html#1087">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

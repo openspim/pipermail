@@ -1,0 +1,388 @@
+From j.van.krugten at vu.nl  Thu Mar  9 02:48:04 2017
+From: j.van.krugten at vu.nl (Jaap van Krugten)
+Date: Thu, 9 Mar 2017 09:48:04 +0100
+Subject: [OpenSPIM] sharp widefield image, but out of focus FP emmission
+Message-ID: <CAL-PicK9NO1jJATpr5E-4i30VKRgQ9zByF6GXzxXT61N3N+ouQ@mail.gmail.com>
+
+Dear OpenSPIMers,
+
+
+We are building an openSPIM with a 100x detection objective as only major
+adaptation. Our light sheet is nicely shaped and thin, and if we look at
+our sample using a white light LED opposite of the detection objective, it
+is in focus. However, if we turn on the laser, we can not get the GFP
+emission light in focus. This seems odd, as our wide field image *is* in
+focus.
+
+We are quite certain the laser is properly aligned, and we did try moving
+the light sheet through our sample. Any ideas what else we can try?
+
+
+Thanks in advance,
+
+Jaap van Krugten
+
+
+
+Jaap van Krugten, MSc | PhD candidate | *in vivo*
+single-molecule fluorescence microscopy
+Physics of Living Systems, Department of Physics and Astronomy | *Vrije*
+ Universiteit Amsterdam
+
++31 (0)20 59 87904 *|* room U-030, W&N
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170309/17b9c3f9/attachment.html>
+
+From Michael_Weber at hms.harvard.edu  Thu Mar  9 09:30:39 2017
+From: Michael_Weber at hms.harvard.edu (Weber, Michael)
+Date: Thu, 9 Mar 2017 15:30:39 +0000
+Subject: [OpenSPIM] sharp widefield image, but out of focus FP emmission
+In-Reply-To: <CAL-PicK9NO1jJATpr5E-4i30VKRgQ9zByF6GXzxXT61N3N+ouQ@mail.gmail.com>
+References: <CAL-PicK9NO1jJATpr5E-4i30VKRgQ9zByF6GXzxXT61N3N+ouQ@mail.gmail.com>
+Message-ID: <BLUPR0701MB17457C29F5242AD800687206DD210@BLUPR0701MB1745.namprd07.prod.outlook.com>
+
+Hey Jaap,
+
+This does sound like light sheet alignment to me. It will be a lot more difficult with a 100x lens than it is with a 10-20x. When looking into your chamber from top, do you see a nicely focused beam close to the focal plane of your detection objective?
+Next, just use water, remove cylindrical lens and emission filter and try to bring the focus of your laser beam into the field of view. Keep in mind that the vertical position of your laser (y in your FOV) might be off as well.
+
+Best,
+Michael
+
+From: Jaap van Krugten<mailto:j.van.krugten at vu.nl>
+Sent: Thursday, March 9, 2017 3:48 AM
+To: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: [OpenSPIM] sharp widefield image, but out of focus FP emmission
+
+
+Dear OpenSPIMers,
+
+
+We are building an openSPIM with a 100x detection objective as only major adaptation. Our light sheet is nicely shaped and thin, and if we look at our sample using a white light LED opposite of the detection objective, it is in focus. However, if we turn on the laser, we can not get the GFP emission light in focus. This seems odd, as our wide field image is in focus.
+
+We are quite certain the laser is properly aligned, and we did try moving the light sheet through our sample. Any ideas what else we can try?
+
+
+Thanks in advance,
+
+Jaap van Krugten
+
+
+
+
+Jaap van Krugten, MSc | PhD candidate | in vivo single-molecule fluorescence microscopy
+Physics of Living Systems, Department of Physics and Astronomy | Vrije Universiteit Amsterdam
+
++31 (0)20 59 87904 | room U-030, W&N
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170309/1e05fc31/attachment.html>
+
+From kevjon at umich.edu  Mon Mar 13 17:04:21 2017
+From: kevjon at umich.edu (Kevin Jones)
+Date: Mon, 13 Mar 2017 18:04:21 -0400
+Subject: [OpenSPIM] Besides firewire,
+	is there any reason to use a MacBook to SPIM?
+Message-ID: <CAOsEyeL_cYo3qK9catG4G+PvmRNvG29ct3cwVi1cfMzN6t4SCg@mail.gmail.com>
+
+Hello Everyone,
+
+We have decided to build a SPIM using almost the exact specs that are
+published in the wiki.
+The example from the wiki used a MacBook Pro laptop running windows so that
+the firewire port could be utilized.  It seems that most new cameras use
+USB ports with an option of some proprietary connector like cameralink for
+faster acquisition.  in fact, none of the cameras we are considering use
+firewire.
+Isn't it more straightforward to just use a PC laptop and run the camera
+through USB?
+
+Thanks for your time!
+Kevin
+
+-- 
+Kevin S. Jones, Ph.D.
+Assistant Professor
+Department of Pharmacology
+University of Michigan
+Medical Sciences Bldg I
+(734) 763-8826
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170313/1d7f3bef/attachment.html>
+
+From guenther at mpi-cbg.de  Tue Mar 14 06:12:08 2017
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 14 Mar 2017 12:12:08 +0100
+Subject: [OpenSPIM] Besides firewire,
+	is there any reason to use a MacBook to SPIM?
+In-Reply-To: <CAOsEyeL_cYo3qK9catG4G+PvmRNvG29ct3cwVi1cfMzN6t4SCg@mail.gmail.com>
+References: <CAOsEyeL_cYo3qK9catG4G+PvmRNvG29ct3cwVi1cfMzN6t4SCg@mail.gmail.com>
+Message-ID: <9ADFF04F-F487-405A-BA46-FFCB336D6ADA@mpi-cbg.de>
+
+Hello Kevin,
+
+
+back when the original version was written, the MacBook Pro was a good choice, due to it’s FireWire connector. 
+
+
+Nowadays, if you are not in other ways committed to the Mac ecosystem, I would very much recommend _not_ to use a Mac as an acquisition machine at all, as the Mac hardware at the moment is pretty overpriced — you get much better specs with a “normal” notebook. If you are not aiming for a transportable system, I would even recommend against a notebook at all, as the money would be better invested in having faster/more disk/SSD storage, or a better graphics card for postprocessing.
+
+
+I hope this was helpful! Let me know if you have more questions :-)
+
+
+ulrik
+
+
+  —
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+
+> On Mar 13, 2017, at 11:04 PM, Kevin Jones <kevjon at umich.edu> wrote:
+> 
+> 
+> Hello Everyone, 
+> 
+> We have decided to build a SPIM using almost the exact specs that are published in the wiki.
+> The example from the wiki used a MacBook Pro laptop running windows so that the firewire port could be utilized.  It seems that most new cameras use USB ports with an option of some proprietary connector like cameralink for faster acquisition.  in fact, none of the cameras we are considering use firewire. 
+> Isn't it more straightforward to just use a PC laptop and run the camera through USB? 
+> 
+> 
+> Thanks for your time!
+> Kevin 
+> 
+> 
+> -- 
+> Kevin S. Jones, Ph.D.Assistant Professor
+> Department of Pharmacology
+> University of Michigan
+> Medical Sciences Bldg I
+> (734) 763-8826
+> 
+> 
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170314/3061f075/attachment.html>
+
+From guenther at mpi-cbg.de  Tue Mar 14 12:10:04 2017
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 14 Mar 2017 18:10:04 +0100
+Subject: [OpenSPIM] Besides firewire,
+	is there any reason to use a MacBook to SPIM?
+In-Reply-To: <CAOsEyeKH0f9=XEzD1QViXdZhYiFpMN8cL8hXaZS6koZiPMZWnw@mail.gmail.com>
+References: <CAOsEyeL_cYo3qK9catG4G+PvmRNvG29ct3cwVi1cfMzN6t4SCg@mail.gmail.com>
+ <9ADFF04F-F487-405A-BA46-FFCB336D6ADA@mpi-cbg.de>
+ <CAOsEyeKH0f9=XEzD1QViXdZhYiFpMN8cL8hXaZS6koZiPMZWnw@mail.gmail.com>
+Message-ID: <7662C72C-C7C9-446B-A667-96E4F9727912@mpi-cbg.de>
+
+Hi Kevin,
+
+
+> On Mar 14, 2017, at 5:21 PM, Kevin Jones <kevjon at umich.edu> wrote:
+> > Thanks for getting back to me so quickly. I figured the macBook recommendation was a bit dated. We will use a desktop system with a high-end graphics card and fast SSDs for post processing, I am considering something like: Core i7-6700 ; 32GB RAM, (2-4) 500 GB SSDs; Nvidia GeForce GTX 1080. 
+> 
+> However, we also want to make a transportable version so that the scope can be shared with other groups. Having said that, do you have any recommended specs for a laptop? 
+> 
+> 
+> 
+> 
+> 
+
+The specs for the workstation look good. NVMe SSDs offer lower latencies and higher transfer rates, as they connect directly to the PCIe bus instead of SATA, I’d take these — especially as they are not as expensive anymore as they used to be. If you can get 64 GB of RAM, do it. You are not going to regret having more memory available when processing your data, especially if you acquire multiview data.
+
+
+Regarding the notebook for a transportable solution, it depends on how powerful you want it to be. For the Suitcase OpenSPIM we use for demo purposes, we still use the “original” MacBook sometimes, it is sufficient for simple tasks, such as demoing the microscope at outreach events.
+ 
+But if you want to put a USB3.0 sCMOS camera in the mobile version, I’d aim for a mobile workstation-type notebook, like these: http://www.dell.com/us/business/p/precision-m7710-workstation/pd
+
+
+Instead, if you only want to use a lower data-rate camera, like the Thorlabs DCC3000 series USB3 cams, a regular consumer notebook with about 8GB of RAM, and an SSD is sufficient.
+
+
+What cameras do you plan to use on the systems?
+
+
+Hope this helped!
+
+
+cheers,
+
+
+ulrik
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170314/67555817/attachment.html>
+
+From kevjon at umich.edu  Wed Mar 15 16:39:39 2017
+From: kevjon at umich.edu (Kevin Jones)
+Date: Wed, 15 Mar 2017 17:39:39 -0400
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 44, Issue 3
+In-Reply-To: <mailman.1.1489597202.54883.openspim@openspim.org>
+References: <mailman.1.1489597202.54883.openspim@openspim.org>
+Message-ID: <CAOsEyeL-R=bPr7WkU9TDBhgu9X123xodGODvmP0RW++sDciBeg@mail.gmail.com>
+
+Hi Ulrik,
+
+We haven't decided on a camera, yet. We are going to demo the hammamatsu
+Orca 4, the Andor Xylan and maybe the Prime 95b. Do you have any
+suggestions/recommendations?
+
+Thanks,
+Kevin
+
+On Wed, Mar 15, 2017 at 1:00 PM, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Re: Besides firewire,     is there any reason to use a MacBook to
+>       SPIM? (Ulrik Günther)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: 14 Mar 2017 18:10:04 +0100
+> From: Ulrik Günther <guenther at mpi-cbg.de>
+> To: Kevin Jones <kevjon at umich.edu>
+> Cc: <openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Besides firewire,       is there any reason to use
+> a
+>         MacBook to SPIM?
+> Message-ID: <7662C72C-C7C9-446B-A667-96E4F9727912 at mpi-cbg.de>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Hi Kevin,
+>
+>
+> > On Mar 14, 2017, at 5:21 PM, Kevin Jones <kevjon at umich.edu> wrote:
+> > > Thanks for getting back to me so quickly. I figured the macBook
+> recommendation was a bit dated. We will use a desktop system with a
+> high-end graphics card and fast SSDs for post processing, I am considering
+> something like: Core i7-6700 ; 32GB RAM, (2-4) 500 GB SSDs; Nvidia GeForce
+> GTX 1080.
+> >
+> > However, we also want to make a transportable version so that the scope
+> can be shared with other groups. Having said that, do you have any
+> recommended specs for a laptop?
+> >
+> >
+> >
+> >
+> >
+>
+> The specs for the workstation look good. NVMe SSDs offer lower latencies
+> and higher transfer rates, as they connect directly to the PCIe bus instead
+> of SATA, I’d take these — especially as they are not as expensive anymore
+> as they used to be. If you can get 64 GB of RAM, do it. You are not going
+> to regret having more memory available when processing your data,
+> especially if you acquire multiview data.
+>
+>
+> Regarding the notebook for a transportable solution, it depends on how
+> powerful you want it to be. For the Suitcase OpenSPIM we use for demo
+> purposes, we still use the “original” MacBook sometimes, it is sufficient
+> for simple tasks, such as demoing the microscope at outreach events.
+>
+> But if you want to put a USB3.0 sCMOS camera in the mobile version, I’d
+> aim for a mobile workstation-type notebook, like these:
+> http://www.dell.com/us/business/p/precision-m7710-workstation/pd
+>
+>
+> Instead, if you only want to use a lower data-rate camera, like the
+> Thorlabs DCC3000 series USB3 cams, a regular consumer notebook with about
+> 8GB of RAM, and an SSD is sufficient.
+>
+>
+> What cameras do you plan to use on the systems?
+>
+>
+> Hope this helped!
+>
+>
+> cheers,
+>
+>
+> ulrik
+>
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20170314/67555817/attachment-0001.html>
+>
+> ------------------------------
+>
+> Subject: Digest Footer
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> ------------------------------
+>
+> End of OpenSPIM Digest, Vol 44, Issue 3
+> ***************************************
+>
+
+
+
+-- 
+Kevin S. Jones, Ph.D.
+Assistant Professor
+Department of Pharmacology
+University of Michigan
+Medical Sciences Bldg I
+(734) 763-8826
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170315/74cc4352/attachment.html>
+
+From alonyan at g.ucla.edu  Fri Mar 17 14:32:28 2017
+From: alonyan at g.ucla.edu (ALON OYLER YANIV)
+Date: Fri, 17 Mar 2017 12:32:28 -0700
+Subject: [OpenSPIM] sample chamber for Nikon 16X objective
+Message-ID: <ACB4A8A0-FCA9-4C46-B550-73425FC345F6@g.ucla.edu>
+
+Hi All,
+
+We're in the process of building an OpenSPIM. 
+
+We’ll be using the standard Olympus 10x objective for illumination, and the 16X Nikon CFI 0.8NA for detection in an L configuration.
+
+Does anybody happen to have modified designs for the sample chamber, chamber holder, and objective holder ring that will fit this objective?
+
+Thanks a lot for any help!
+Alon
+

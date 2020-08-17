@@ -1,0 +1,2582 @@
+From Johannes.Schindelin at gmx.de  Wed Jan  8 11:07:39 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 8 Jan 2014 18:07:39 +0100 (CET)
+Subject: [OpenSPIM] Great OpenSPIM setup!
+Message-ID: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+
+Hi Friedrich,
+
+thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+setup!
+
+I hope you do not mind that I added some whitespace so it does not look as
+if your setup was Dresden's (whose photo may be added this week, or next).
+
+Ciao,
+Johannes
+
+
+From S.Hoehn at damtp.cam.ac.uk  Thu Jan  9 13:21:58 2014
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 09 Jan 2014 19:21:58 +0000
+Subject: [OpenSPIM] unwanted extra files auto-saved
+Message-ID: <6f2c17308f1cb25a42c2a0e16ff83731@cam.ac.uk>
+
+dear open spim users,
+
+i am using the spim at cambridge university and am facing a problem with 
+my time-lapse experiments.
+since i last updated the software, an extra folder is automatically 
+saved in addition to the wanted z-scans. the folder is called "diffs" 
+and contains subfolders named e.g. 
+"XYZ4366.50x1479.00x588.00_Theta0.00". the subfolders contain 3dimages 
+as tiff-files. since this happens, the time-lapse is regularly abborted 
+and i get an error message saying "device timed out".
+does anyone know how to disable the autosaving of these extra files? i 
+couldn't find it anywhere.
+
+thanks a lot and best wishes,
+
+stephanie
+
+
+From nantho2 at emory.edu  Fri Jan 10 09:45:42 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Fri, 10 Jan 2014 10:45:42 -0500
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+Message-ID: <52D015A6.8060209@emory.edu>
+
+That looks great!
+Would you mind sharing the details of your modifications?  Would that be 
+something that can be added to the wiki?
+
+Thanks
+Neil
+
+On 1/8/2014 12:07 PM, Johannes Schindelin wrote:
+> Hi Friedrich,
+>
+> thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+> setup!
+>
+> I hope you do not mind that I added some whitespace so it does not look as
+> if your setup was Dresden's (whose photo may be added this week, or next).
+>
+> Ciao,
+> Johannes
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 10 15:48:07 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 10 Jan 2014 22:48:07 +0100 (CET)
+Subject: [OpenSPIM] unwanted extra files auto-saved
+In-Reply-To: <6f2c17308f1cb25a42c2a0e16ff83731@cam.ac.uk>
+References: <6f2c17308f1cb25a42c2a0e16ff83731@cam.ac.uk>
+Message-ID: <alpine.DEB.1.00.1401102246390.20365@s15462909.onlinehome-server.info>
+
+Dear Stephanie,
+
+On Thu, 9 Jan 2014, Dr S. Hoehn wrote:
+
+> i am using the spim at cambridge university and am facing a problem with my
+> time-lapse experiments.
+> since i last updated the software, an extra folder is automatically saved in
+> addition to the wanted z-scans. the folder is called "diffs" and contains
+> subfolders named e.g. "XYZ4366.50x1479.00x588.00_Theta0.00". the subfolders
+> contain 3dimages as tiff-files. since this happens, the time-lapse is
+> regularly abborted and i get an error message saying "device timed out".
+> does anyone know how to disable the autosaving of these extra files? i
+> couldn't find it anywhere.
+
+Sorry, that must be a version with debugging stuff in it that has slipped
+through. The major problem with that is that our principal software
+engineer is currently traveling (working on OpenSPIM) and will only have
+time to address this issue in about a week.
+
+Sorry again!
+Johannes
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 10 15:56:45 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 10 Jan 2014 22:56:45 +0100 (CET)
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52D015A6.8060209@emory.edu>
+References: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+	<52D015A6.8060209@emory.edu>
+Message-ID: <alpine.DEB.1.00.1401102255220.20365@s15462909.onlinehome-server.info>
+
+Hi Neil,
+
+On Fri, 10 Jan 2014, Neil Anthony wrote:
+
+> On 1/8/2014 12:07 PM, Johannes Schindelin wrote:
+> >
+> > thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+> > setup!
+> >
+> > I hope you do not mind that I added some whitespace so it does not look as
+> > if your setup was Dresden's (whose photo may be added this week, or next).
+>
+> That looks great!
+> Would you mind sharing the details of your modifications?
+
+Do you mean my changes to the OpenSPIM Wiki page? They are documented here:
+
+	http://openspim.org/index.php?title=Who_has_an_OpenSPIM%3F&diff=2835&oldid=2834
+
+Ciao,
+Johannes
+
+
+From stuyvenberg at wisc.edu  Fri Jan 10 17:13:45 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Sat, 11 Jan 2014 00:13:45 +0100
+Subject: [OpenSPIM] Fwd: Re:  unwanted extra files auto-saved
+In-Reply-To: <75f0a730127c81.52cfbead@wiscmail.wisc.edu>
+References: <75f0a730127c81.52cfbead@wiscmail.wisc.edu>
+Message-ID: <52D07EA9.9060106@wisc.edu>
+
+
+Sorry, forgot to reply to the list as well!
+
+Luke
+
+-------- Original Message --------
+Subject: 	Re: [OpenSPIM] unwanted extra files auto-saved
+Date: 	Fri, 10 Jan 2014 09:34:37 +0100
+From: 	Luke Stuyvenberg <stuyvenberg at wisc.edu>
+To: 	Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk>
+
+
+
+Stephanie,
+
+The files you refer to are saved by the anti-drift feature to give system operators some idea of the sample's drift over time. Unless saving to a slow hard drive or over a network, their creation really shouldn't cause a timeout; this may not be the cause of your errors. Still, I agree that the saving of these images should be optional; I'll add a ticket to our bugtracker and attend to it as soon as I have time.
+
+
+Device timeouts usually occur with either low stage velocities (1-3) or deep stacks (500+ um?): the stage motors spend too long moving from one location to another, and Micro-Manager assumes they've stopped working. Please try enabling the "Override Timeout" feature. The checkbox is located on the bottom of the Acquisition tab; check the box, then enter a new device timeout in milliseconds. The default is 5000ms; try increasing this to 15000 or so. (I often use this feature when imaging as insurance against these errors.)
+
+
+Hope this is helpful!
+
+
+Luke
+
+On 01/09/14, "Dr S. Hoehn"  wrote:
+> dear open spim users,
+>
+> i am using the spim at cambridge university and am facing a problem with my time-lapse experiments.
+> since i last updated the software, an extra folder is automatically saved in addition to the wanted z-scans. the folder is called "diffs" and contains subfolders named e.g. "XYZ4366.50x1479.00x588.00_Theta0.00". the subfolders contain 3dimages as tiff-files. since this happens, the time-lapse is regularly abborted and i get an error message saying "device timed out".
+> does anyone know how to disable the autosaving of these extra files? i couldn't find it anywhere.
+>
+> thanks a lot and best wishes,
+>
+> stephanie
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140111/4e44658f/attachment.html>
+
+From eliceiri at wisc.edu  Tue Jan 14 13:23:37 2014
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Tue, 14 Jan 2014 13:23:37 -0600
+Subject: [OpenSPIM] lasers for openspim
+Message-ID: <77409eaa130da7.52d53a59@wiscmail.wisc.edu>
+
+Hi All,
+
+Any preference between?Cube 488-50C and Stradus 488-50 in control, beam output etc? How about red options? Any recommendations?
+
+
+best
+kevin
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From nantho2 at emory.edu  Wed Jan 15 08:03:22 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Wed, 15 Jan 2014 09:03:22 -0500
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <alpine.DEB.1.00.1401102255220.20365@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+	<52D015A6.8060209@emory.edu>
+	<alpine.DEB.1.00.1401102255220.20365@s15462909.onlinehome-server.info>
+Message-ID: <52D6952A.109@emory.edu>
+
+Hi Johannes,
+
+I'm sorry, I was actually refering to the changes you made to the 
+standard OpenSPIM setup.  I'm curious to know what parts you changed, 
+why, and how it worked out.  Maybe you could share the part numbers and 
+CAD files you used to make it easier for others to adapt their SPIM 
+build to suit their needs?
+
+I was then thinking that there could be a link on the wiki for people to 
+access those details.
+
+Thanks
+Neil
+
+On 1/10/2014 4:56 PM, Johannes Schindelin wrote:
+> Hi Neil,
+>
+> On Fri, 10 Jan 2014, Neil Anthony wrote:
+>
+>> On 1/8/2014 12:07 PM, Johannes Schindelin wrote:
+>>> thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+>>> setup!
+>>>
+>>> I hope you do not mind that I added some whitespace so it does not look as
+>>> if your setup was Dresden's (whose photo may be added this week, or next).
+>> That looks great!
+>> Would you mind sharing the details of your modifications?
+> Do you mean my changes to the OpenSPIM Wiki page? They are documented here:
+>
+> 	http://openspim.org/index.php?title=Who_has_an_OpenSPIM%3F&diff=2835&oldid=2834
+>
+> Ciao,
+> Johannes
+>
+
+
+
+From huisken at mpi-cbg.de  Tue Jan 21 01:53:47 2014
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Tue, 21 Jan 2014 08:53:47 +0100
+Subject: [OpenSPIM] Going "open" with Mesoscopy: a new dimension on
+	multi-view imaging
+Message-ID: <F65F126A-C952-49EC-AC90-A749CF11CB31@mpi-cbg.de>
+
+I just came across this book chapter: Going "open" with Mesoscopy: a new dimension on multi-view imaging
+
+
+
+Jh
+
+Dr. Jan Huisken
+Center for Systems Biology Dresden
+MPI of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, 01307 Dresden, Germany
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140121/344dac03/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: art%3A10.1007%2Fs00709-013-0599-3.pdf
+Type: application/pdf
+Size: 653415 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140121/344dac03/attachment-0001.pdf>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140121/344dac03/attachment-0003.html>
+
+From stuyvenberg at wisc.edu  Mon Jan 27 15:51:25 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 27 Jan 2014 15:51:25 -0600
+Subject: [OpenSPIM] lasers for openspim
+In-Reply-To: <77409eaa130da7.52d53a59@wiscmail.wisc.edu>
+References: <77409eaa130da7.52d53a59@wiscmail.wisc.edu>
+Message-ID: <7730da9c76b3.52e6807d@wiscmail.wisc.edu>
+
+Hey everyone,
+
+Kevin and I were just talking -- has anyone else tried the Stradus laser?
+
+
+Luke
+
+On 01/14/14, Kevin W Eliceiri  wrote:
+> Hi All,
+> 
+> Any preference between?Cube 488-50C and Stradus 488-50 in control, beam output etc? How about red options? Any recommendations?
+> 
+> 
+> best
+> kevin
+> 
+> --
+> Kevin W. Eliceiri
+> Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+> Departments Cell and Molecular Biology and Biomedical Engineering
+> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+> Phone: 608-263-6288
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Wed Jan 29 06:09:34 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Wed, 29 Jan 2014 13:09:34 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+Message-ID: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+
+Hi Neil,
+
+About the changes made to our OpenSPIM setup at Fraunhofer IPT, there are 
+two main changes:
+
+*The redesign of the sample arm of the 4D Stage so that a timing belt and 
+timing pulleys can be used instead
+of the round belt and pulleys included with the 4D Stage. This was done 
+because a slip between the belt
+and pulleys was identified causing inaccuracies when rotating the sample. 
+I don't know if someone else had this issue, 
+
+*The redesign of the sample chamber so that the temperature of the medium 
+can be controlled. For doing that a 
+PT100 special for liquids, TO220 resistors and a PID controller were 
+employed. The sample chamber had to
+be built out of stainless steel so that  corrosive effects due to the 
+sample medium can be avoided.
+
+I can provide you the drawings and the CAD files, also the part number and 
+manufacturer of the components that
+were used,  just let me organize the information accordingly.
+
+I think that would make sense to make this information available through 
+the OpenSPIM wiki so that eveyone can use it if interested. 
+At the same time I could have a feedback about the changes I made and 
+further improvements can be done to the design. What is 
+the opinion of all?
+
+Best regards,
+Edgar
+
+
+
+__________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT
+Edgar Escobar Nieto 
+
+Steinbachstra?e 17
+52074 Aachen
+
+edgar.escobar.nieto at ipt.fraunhofer.de
+http://www.ipt.fraunhofer.de
+__________________________________________
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/2c2a7952/attachment.html>
+
+From eliceiri at wisc.edu  Wed Jan 29 07:57:40 2014
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Wed, 29 Jan 2014 07:57:40 -0600
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <779098df101cd.52e908c6@wiscmail.wisc.edu>
+References: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<75c0f4c515470.52e9084b@wiscmail.wisc.edu>
+	<7670bc2316990.52e90888@wiscmail.wisc.edu>
+	<779098df101cd.52e908c6@wiscmail.wisc.edu>
+Message-ID: <7670cead12e46.52e8b474@wiscmail.wisc.edu>
+
+Hi Edgar,
+
+This is great, and would be very useful to put all this information on the OpenSPIM page. Could you send details on all when you have? I'm also interested in more information on your modifications to the sample arm. We would be interested in this. Did you discuss this with Jean Depatie from Picard? Be good to make sure any issues are addressed for new systems they ship.
+
+
+best
+kevin
+
+On 01/29/14, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+> Hi Neil, 
+> 
+> About the changes made to our OpenSPIM setup at Fraunhofer IPT, there are two main changes: 
+> 
+> *The redesign of the sample arm of the 4D Stage so that a timing belt and timing pulleys can be used instead 
+> of the round belt and pulleys included with the 4D Stage. This was done because a slip between the belt 
+> and pulleys was identified causing inaccuracies when rotating the sample. I don't know if someone else had this issue, 
+> 
+> *The redesign of the sample chamber so that the temperature of the medium can be controlled. For doing that a 
+> PT100 special for liquids, TO220 resistors and a PID controller were employed. The sample chamber had to 
+> be built out of stainless steel so that corrosive effects due to the sample medium can be avoided. 
+> 
+> I can provide you the drawings and the CAD files, also the part number and manufacturer of the components that 
+> were used, just let me organize the information accordingly. 
+> 
+> I think that would make sense to make this information available through the OpenSPIM wiki so that eveyone can use it if interested. 
+> At the same time I could have a feedback about the changes I made and further improvements can be done to the design. What is 
+> the opinion of all? 
+> 
+> Best regards, 
+> Edgar 
+> 
+> 
+> 
+> __________________________________________
+> 
+> Fraunhofer-Institut f?r Produktionstechnologie IPT
+> Edgar Escobar Nieto 
+> 
+> Steinbachstra?e 17 
+> 52074 Aachen 
+> 
+> edgar.escobar.nieto at ipt.fraunhofer.de 
+> http://www.ipt.fraunhofer.de 
+> __________________________________________
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From stuyvenberg at wisc.edu  Wed Jan 29 08:01:22 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 29 Jan 2014 08:01:22 -0600
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+References: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+Message-ID: <52E909B2.70800@wisc.edu>
+
+Hi Edgar,
+
+On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+> *The redesign of the sample arm of the 4D Stage so that a timing belt 
+> and timing pulleys can be used instead
+> of the round belt and pulleys included with the 4D Stage. This was 
+> done because a slip between the belt
+> and pulleys was identified causing inaccuracies when rotating the 
+> sample. I don't know if someone else had this issue,
+I haven't noticed any trouble with belt slippage, but it's good to know 
+this may be a problem (and moreover that there is an excellent solution 
+available.)
+
+> *The redesign of the sample chamber so that the temperature of the 
+> medium can be controlled. For doing that a
+> PT100 special for liquids, TO220 resistors and a PID controller were 
+> employed. The sample chamber had to
+> be built out of stainless steel so that  corrosive effects due to the 
+> sample medium can be avoided.
+This is great stuff. Do you know off-hand if these devices are stable 
+over time? i.e. four hours, eight, twenty-four? I suspect good 
+temperature control may improve time-lapse recording somewhat...
+
+> I can provide you the drawings and the CAD files, also the part number 
+> and manufacturer of the components that
+> were used,  just let me organize the information accordingly.
+>
+> I think that would make sense to make this information available 
+> through the OpenSPIM wiki so that eveyone can use it if interested.
+> At the same time I could have a feedback about the changes I made and 
+> further improvements can be done to the design. What is
+> the opinion of all?
+By all means! That's what the wiki is there for, after all.
+
+Thanks for sharing!
+Luke
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/35bf83ba/attachment.html>
+
+From nantho2 at emory.edu  Wed Jan 29 09:54:01 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Wed, 29 Jan 2014 10:54:01 -0500
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52E909B2.70800@wisc.edu>
+References: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<52E909B2.70800@wisc.edu>
+Message-ID: <52E92419.7080907@emory.edu>
+
+Hi Edgar, thanks for the details and thanks for sharing.  I'll look 
+forward to seeing the details/files on the wiki.
+Great stuff!
+
+Neil
+
+On 1/29/2014 9:01 AM, Luke Stuyvenberg wrote:
+> Hi Edgar,
+>
+> On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+>> *The redesign of the sample arm of the 4D Stage so that a timing belt 
+>> and timing pulleys can be used instead
+>> of the round belt and pulleys included with the 4D Stage. This was 
+>> done because a slip between the belt
+>> and pulleys was identified causing inaccuracies when rotating the 
+>> sample. I don't know if someone else had this issue,
+> I haven't noticed any trouble with belt slippage, but it's good to 
+> know this may be a problem (and moreover that there is an excellent 
+> solution available.)
+>
+>> *The redesign of the sample chamber so that the temperature of the 
+>> medium can be controlled. For doing that a
+>> PT100 special for liquids, TO220 resistors and a PID controller were 
+>> employed. The sample chamber had to
+>> be built out of stainless steel so that  corrosive effects due to the 
+>> sample medium can be avoided.
+> This is great stuff. Do you know off-hand if these devices are stable 
+> over time? i.e. four hours, eight, twenty-four? I suspect good 
+> temperature control may improve time-lapse recording somewhat...
+>
+>> I can provide you the drawings and the CAD files, also the part 
+>> number and manufacturer of the components that
+>> were used,  just let me organize the information accordingly.
+>>
+>> I think that would make sense to make this information available 
+>> through the OpenSPIM wiki so that eveyone can use it if interested.
+>> At the same time I could have a feedback about the changes I made and 
+>> further improvements can be done to the design. What is
+>> the opinion of all?
+> By all means! That's what the wiki is there for, after all.
+>
+> Thanks for sharing!
+> Luke
+
+-- 
+*Neil Anthony, PhD*  | Research Imaging Specialist
+Health Sciences Research Building (HSRB), Room EG21
+1760 Haygood Drive, Atlanta, GA 30322 	
+
+neil.anthony at emory.edu <mailto:neil.anthony at emory.edu>
+ici.emory.edu <http://ici.emory.edu/>
+404 969-CORE
+
+<http://ici.emory.edu/> 	<https://www.facebook.com/ICIEmory> 
+<http://www.linkedin.com/pub/neil-anthony/35/a0b/126> 
+<https://www.researchgate.net/profile/Neil_Anthony/>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: EU_ICI_SmlLogo.png
+Type: image/png
+Size: 11461 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0004.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: facebook_logo.png
+Type: image/png
+Size: 3826 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0005.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: linkedin_logo.png
+Type: image/png
+Size: 4053 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0006.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: researchgate_logo.png
+Type: image/png
+Size: 4345 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0007.png>
+
+From nikul at ee.columbia.edu  Fri Jan 31 01:24:21 2014
+From: nikul at ee.columbia.edu (Nikul Ukani)
+Date: Fri, 31 Jan 2014 02:24:21 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+Message-ID: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+
+Hi everyone,
+
+I am currently trying to compile OpenSPIM on a 64 bit machine running  
+Windows 7. While I was able to get it to compile by modifying some of  
+the build scripts; upon trying to open it from Fiji, I get the  
+following error
+
+Error: Failed to open libMMCoreJ_wrap.jnilib
+mmcorej.MMCoreJJNI.swig_module_init()V
+
+Anyone has any idea where the above error could be originating from?
+
+I would like to mention a couple of things that I did in case they  
+could be relevant to the above error
+1) I combined the compiled files with a manually downloaded 64-bit Fiji.
+2) I had to add a reference to commons-math3-3.2.jar in many ant  
+buildfiles in order to get it to compile.
+
+Thanks,
+Nikul
+
+
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Fri Jan 31 10:18:02 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Fri, 31 Jan 2014 17:18:02 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <7670cead12e46.52e8b474@wiscmail.wisc.edu>
+References: <7670cead12e46.52e8b474@wiscmail.wisc.edu>,
+	<OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<75c0f4c515470.52e9084b@wiscmail.wisc.edu>
+	<7670bc2316990.52e90888@wiscmail.wisc.edu>
+	<779098df101cd.52e908c6@wiscmail.wisc.edu>
+Message-ID: <OF8888A260.AC1144A5-ONC1257C71.00598ACE-C1257C71.00598AE9@ipt.rwth-aachen.de>
+
+Hi Kevin,
+
+Is great to know that the modifications I made will be helpful not only to me. I already talk to Jean Depaties from Picard Industries adressing the problem I experienced with the rotational movement.
+He offered me to solve the issue (image attached), but of course would imply more costs and time, so I decided to find a way to use a timing belt or a chain to tramsmit the rotational movement. 
+I already tested the rotational movement and works pretty fine.
+
+I will let know Jean Depatie about my modification, and that it worked pretty good. Maybe he agree to change the sample arm for the new systems that Picard Industries ship.
+
+Attached to this mail is a zip file containing some description of my modifications (sample arm and SPIM chamber) and all the information necessary to reproduce them.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Kevin W Eliceiri <eliceiri at wisc.edu> schrieb: -----
+An: edgar.escobar.nieto at ipt.fraunhofer.de, nantho2 at emory.edu
+Von: Kevin W Eliceiri <eliceiri at wisc.edu>
+Datum: 29.01.2014 14:58
+Kopie: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Great OpenSPIM setup!
+
+Hi Edgar,
+
+This is great, and would be very useful to put all this information on the OpenSPIM page. Could you send details on all when you have? I'm also interested in more information on your modifications to the sample arm. We would be interested in this. Did you discuss this with Jean Depatie from Picard? Be good to make sure any issues are addressed for new systems they ship.
+
+
+best
+kevin
+
+On 01/29/14, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+> Hi Neil, 
+> 
+> About the changes made to our OpenSPIM setup at Fraunhofer IPT, there are two main changes: 
+> 
+> *The redesign of the sample arm of the 4D Stage so that a timing belt and timing pulleys can be used instead 
+> of the round belt and pulleys included with the 4D Stage. This was done because a slip between the belt 
+> and pulleys was identified causing inaccuracies when rotating the sample. I don't know if someone else had this issue, 
+> 
+> *The redesign of the sample chamber so that the temperature of the medium can be controlled. For doing that a 
+> PT100 special for liquids, TO220 resistors and a PID controller were employed. The sample chamber had to 
+> be built out of stainless steel so that corrosive effects due to the sample medium can be avoided. 
+> 
+> I can provide you the drawings and the CAD files, also the part number and manufacturer of the components that 
+> were used, just let me organize the information accordingly. 
+> 
+> I think that would make sense to make this information available through the OpenSPIM wiki so that eveyone can use it if interested. 
+> At the same time I could have a feedback about the changes I made and further improvements can be done to the design. What is 
+> the opinion of all? 
+> 
+> Best regards, 
+> Edgar 
+> 
+> 
+> 
+> __________________________________________
+> 
+> Fraunhofer-Institut f?r Produktionstechnologie IPT
+> Edgar Escobar Nieto 
+> 
+> Steinbachstra?e 17 
+> 52074 Aachen 
+> 
+> edgar.escobar.nieto at ipt.fraunhofer.de 
+> http://www.ipt.fraunhofer.de?
+> __________________________________________
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/f24d8c42/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Hi-Res 4D-Stage Rotation Concept.JPG
+Type: image/jpeg
+Size: 70241 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/f24d8c42/attachment-0001.jpe>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM improvements.zip
+Type: application/zip
+Size: 1815169 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/f24d8c42/attachment-0001.zip>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Fri Jan 31 10:22:48 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Fri, 31 Jan 2014 17:22:48 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52E909B2.70800@wisc.edu>
+References: <52E909B2.70800@wisc.edu>,
+	<OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+Message-ID: <OF87311444.0CA2A3CA-ONC1257C71.0059FA9B-C1257C71.0059FAA0@ipt.rwth-aachen.de>
+
+Hi Luke,
+
+I have not tested yet the temperature-controlled SPIM chamber for long periods of time, but of course, the idea of this modification is to improve the conditions of
+the sample during long-term experiments.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Luke Stuyvenberg <stuyvenberg at wisc.edu> schrieb: -----
+An: edgar.escobar.nieto at ipt.fraunhofer.de
+Von: Luke Stuyvenberg <stuyvenberg at wisc.edu>
+Datum: 29.01.2014 15:01
+Kopie: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Great OpenSPIM setup!
+
+                   
+Hi Edgar,
+       
+       On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+          *The redesign of the         sample arm of the         4D Stage so that a timing belt and timing pulleys can be used         instead       
+       of the round belt and pulleys         included         with the 4D Stage. This was done because a slip between the belt       
+       and pulleys was identified         causing inaccuracies         when rotating the sample. I don't know if someone else had this         issue,              
+          I haven't noticed any trouble with belt slippage, but it's good to     know this may be a problem (and moreover that there is an excellent     solution available.)
+     
+     *The redesign of the         sample chamber         so that the temperature of the medium can be controlled. For         doing that         a        
+       PT100 special for liquids, TO220         resistors         and a PID controller were employed. The sample chamber had to       
+       be built out of stainless steel         so that         ?corrosive effects due to the sample medium can be avoided.       
+          This is great stuff. Do you know off-hand if these devices are     stable over time? i.e. four hours, eight, twenty-four? I suspect     good temperature control may improve time-lapse recording     somewhat...
+     
+     I can provide you the         drawings and the         CAD files, also the part number and manufacturer of the         components that       
+       were used, ?just let me organize         the information accordingly.       
+       
+       I think that would make sense to         make         this information available through the OpenSPIM wiki so that         eveyone can         use it if interested.        
+       At the same time I could have a         feedback         about the changes I made and further improvements can be done to         the design.         What is        
+       the opinion of all?     By all means! That's what the wiki is there for, after all.
+     
+     Thanks for sharing!
+     Luke
+     
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/25cf8c77/attachment.html>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Fri Jan 31 10:31:08 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Fri, 31 Jan 2014 17:31:08 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52E92419.7080907@emory.edu>
+References: <52E92419.7080907@emory.edu>,
+	<OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<52E909B2.70800@wisc.edu>
+Message-ID: <OF7ECE8ADB.3FCE49F8-ONC1257C71.005ABDD3-C1257C71.005ABDE7@ipt.rwth-aachen.de>
+
+ Hi Neil,
+
+I attach to this mail a zip file containing all the information regarding the modifications I made to the OpenSPIM. If you have some questions
+just let me know. 
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Neil Anthony <nantho2 at emory.edu> schrieb: -----
+An: Luke Stuyvenberg <stuyvenberg at wisc.edu>, <edgar.escobar.nieto at ipt.fraunhofer.de>
+Von: Neil Anthony <nantho2 at emory.edu>
+Datum: 29.01.2014 16:55
+Kopie: <openspim at openspim.org>
+Betreff: Re: [OpenSPIM] Great OpenSPIM setup!
+
+                   Hi Edgar, thanks for the details and thanks for sharing.? I'll look     forward to seeing the details/files on the wiki.
+     Great stuff!
+     
+     Neil
+     
+     
+On 1/29/2014 9:01 AM, Luke Stuyvenberg       wrote:
+                        
+Hi Edgar,
+         
+         On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de         wrote:
+              *The redesign of           the sample arm of the 4D Stage so that a timing belt and           timing pulleys can be used instead 
+         of the round belt and pulleys           included with the 4D Stage. This was done because a slip           between the belt 
+         and pulleys was identified           causing inaccuracies when rotating the sample. I don't know if           someone else had this issue,  
+              I haven't noticed any trouble with belt slippage, but it's good to       know this may be a problem (and moreover that there is an       excellent solution available.)
+       
+       *The redesign of           the sample chamber so that the temperature of the medium can           be controlled. For doing that a  
+         PT100 special for liquids,           TO220 resistors and a PID controller were employed. The sample           chamber had to 
+         be built out of stainless steel           so that ?corrosive effects due to the sample medium can be           avoided. 
+              This is great stuff. Do you know off-hand if these devices are       stable over time? i.e. four hours, eight, twenty-four? I suspect       good temperature control may improve time-lapse recording       somewhat...
+       
+       I can provide you           the drawings and the CAD files, also the part number and           manufacturer of the components that 
+         were used, ?just let me           organize the information accordingly. 
+         
+         I think that would make sense           to make this information available through the OpenSPIM wiki           so that eveyone can use it if interested.  
+         At the same time I could have a           feedback about the changes I made and further improvements can           be done to the design. What is  
+         the opinion of all?       By all means! That's what the wiki is there for, after all.
+       
+       Thanks for sharing!
+       Luke
+          
+     
+-- 
+                                                                                   Neil Anthony, PhD??|?Research?Imaging                 Specialist
+                 Health Sciences Research Building                 (HSRB), Room EG21
+                 1760 Haygood Drive, Atlanta, GA 30322                                neil.anthony at emory.edu
+                   ici.emory.edu
+                 404 969-CORE 
+                                                                                                                                                                                                                                                    
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part4.01040904.01010809 at emory.edu.png
+Type: image/png
+Size: 11461 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0004.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part6.07040700.01070504 at emory.edu.png
+Type: image/png
+Size: 3826 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0005.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part8.04040300.03050201 at emory.edu.png
+Type: image/png
+Size: 4053 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0006.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part10.01090505.06090508 at emory.edu.png
+Type: image/png
+Size: 4345 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0007.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM improvements.zip
+Type: application/zip
+Size: 1815169 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0001.zip>
+
+From nico.stuurman at ucsf.edu  Fri Jan 31 00:02:44 2014
+From: nico.stuurman at ucsf.edu (Nico Stuurman)
+Date: Thu, 30 Jan 2014 22:02:44 -0800
+Subject: [OpenSPIM] Crash on startup
+Message-ID: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+
+Trying to have a look at the OpenSPIM application in action.  Downloaded the zip and updated as directed.  Ran the 32 bit version as well as 64 bit (which appeared after running the Fiji updater).  In both cases, starting Micro-Manager from the Fiji plugin menu throws an error stating that libMMCoreJ_wrap is not found.  
+
+Any ideas how to run the software?
+
+Thanks!
+
+Nico
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 31 13:21:14 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 Jan 2014 20:21:14 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+Message-ID: <alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Fri, 31 Jan 2014, Nikul Ukani wrote:
+
+> I am currently trying to compile OpenSPIM on a 64 bit machine running
+> Windows 7. While I was able to get it to compile by modifying some of
+> the build scripts; upon trying to open it from Fiji, I get the following
+> error
+> 
+> Error: Failed to open libMMCoreJ_wrap.jnilib
+> mmcorej.MMCoreJJNI.swig_module_init()V
+
+My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+library. Possible?
+
+Ciao,
+Johannes
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 31 13:27:57 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 Jan 2014 20:27:57 +0100 (CET)
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+Message-ID: <alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+
+Hi Nico,
+
+On Thu, 30 Jan 2014, Nico Stuurman wrote:
+
+> Trying to have a look at the OpenSPIM application in action.  Downloaded
+> the zip and updated as directed.  Ran the 32 bit version as well as 64
+> bit (which appeared after running the Fiji updater).  In both cases,
+> starting Micro-Manager from the Fiji plugin menu throws an error stating
+> that libMMCoreJ_wrap is not found.  
+
+Thanks for trying! Did you do that on a MacOSX computer? So far, we only
+support 32-bit Windows, but 64-bit Windows is on the list...
+
+Ciao,
+Johannes
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 31 15:04:55 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 Jan 2014 22:04:55 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+Message-ID: <alpine.DEB.1.00.1401312201360.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Fri, 31 Jan 2014, Nikul Ukani wrote:
+
+> That's possible as all I did was to change the platform to x64 in the
+> build script. Can you point me to which project does that library
+> correspond to so I can investigate whether the correct flag is being
+> passed while compiling it?
+
+The primary documentation how to build Micro-Manager on Windows is here:
+http://micro-manager.org/wiki/Building_MM_on_Windows
+
+I have not found any more information how to build 64-bit Micro-Manager,
+but I have a strong feeling that inspecting the file Micro-Manager tries
+to load (which should be listed in the log Micro-Manager writes). Either
+it is the wrong architecture, or it is in the wrong place, that's my
+guess.
+
+Ciao,
+Johannes
+
+
+From nhu2001 at columbia.edu  Fri Jan 31 14:32:45 2014
+From: nhu2001 at columbia.edu (Nikul Ukani)
+Date: Fri, 31 Jan 2014 15:32:45 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+Message-ID: <67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+
+Hi Johannes,
+
+That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+
+Thanks,
+Nikul
+
+> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+> 
+> Hi Nikul,
+> 
+>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>> 
+>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>> Windows 7. While I was able to get it to compile by modifying some of
+>> the build scripts; upon trying to open it from Fiji, I get the following
+>> error
+>> 
+>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>> mmcorej.MMCoreJJNI.swig_module_init()V
+> 
+> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+> library. Possible?
+> 
+> Ciao,
+> Johannes
+> 
+
+
+
+From stuyvenberg at wisc.edu  Fri Jan 31 15:29:37 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Fri, 31 Jan 2014 15:29:37 -0600
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+Message-ID: <7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+
+Hi Nikul,
+
+--x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+
+
+Hope this helps,
+Luke
+
+On 01/31/14, Nikul Ukani  wrote:
+> Hi Johannes,
+> 
+> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+> 
+> Thanks,
+> Nikul
+> 
+> > On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+> > 
+> > Hi Nikul,
+> > 
+> >> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+> >> 
+> >> I am currently trying to compile OpenSPIM on a 64 bit machine running
+> >> Windows 7. While I was able to get it to compile by modifying some of
+> >> the build scripts; upon trying to open it from Fiji, I get the following
+> >> error
+> >> 
+> >> Error: Failed to open libMMCoreJ_wrap.jnilib
+> >> mmcorej.MMCoreJJNI.swig_module_init()V
+> > 
+> > My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+> > library. Possible?
+> > 
+> > Ciao,
+> > Johannes
+> > 
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From stuyvenberg at wisc.edu  Fri Jan 31 15:34:00 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Fri, 31 Jan 2014 15:34:00 -0600
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <75b0f72929e2d.52ec16ba@wiscmail.wisc.edu>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+	<7580ea0e29c62.52ec1642@wiscmail.wisc.edu>
+	<7710a6452a0ba.52ec167e@wiscmail.wisc.edu>
+	<75b0f72929e2d.52ec16ba@wiscmail.wisc.edu>
+Message-ID: <7740f934299ed.52ebc268@wiscmail.wisc.edu>
+
+Hey Nico,
+
+I haven't tested the set-up process on anything other than WinXP 32-bit. It sounds like Fiji (intelligently) attempted to replace the 32-bit version with a 64-bit version (as it's running in a 64-bit environment).
+
+
+It might help to check the advanced updater panel, and look at "Only files from the 'OpenSPIM' update site", to make sure that MMCoreJ_wrap.dll is up-to-date.
+
+
+Let me know if this helps,
+Luke?
+
+On 01/31/14, Nico Stuurman  wrote:
+> Trying to have a look at the OpenSPIM application in action. Downloaded the zip and updated as directed. Ran the 32 bit version as well as 64 bit (which appeared after running the Fiji updater). In both cases, starting Micro-Manager from the Fiji plugin menu throws an error stating that libMMCoreJ_wrap is not found. 
+> 
+> Any ideas how to run the software?
+> 
+> Thanks!
+> 
+> Nico
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From nikul at ee.columbia.edu  Fri Jan 31 15:42:27 2014
+From: nikul at ee.columbia.edu (Nikul)
+Date: Fri, 31 Jan 2014 16:42:27 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+Message-ID: <3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+
+I'll look into it and get back. If it works, it will be great to have some resource
+on the OpenSPIM website for compiling it in 64-bit.
+
+Thanks,
+---
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+
+> Hi Nikul,
+> 
+> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+> 
+> 
+> Hope this helps,
+> Luke
+> 
+> On 01/31/14, Nikul Ukani  wrote:
+>> Hi Johannes,
+>> 
+>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>> 
+>> Thanks,
+>> Nikul
+>> 
+>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>> 
+>>> Hi Nikul,
+>>> 
+>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>> 
+>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>> error
+>>>> 
+>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>> 
+>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>> library. Possible?
+>>> 
+>>> Ciao,
+>>> Johannes
+>>> 
+>> 
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/9e483377/attachment-0001.html>
+
+From nico.stuurman at ucsf.edu  Fri Jan 31 15:56:37 2014
+From: nico.stuurman at ucsf.edu (Nico Stuurman)
+Date: Fri, 31 Jan 2014 13:56:37 -0800
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+	<alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+Message-ID: <0064F14F-24DF-4A40-91E1-5DE43E9E55D6@ucsf.edu>
+
+HI Johannes,
+
+>> Trying to have a look at the OpenSPIM application in action.  Downloaded
+>> the zip and updated as directed.  Ran the 32 bit version as well as 64
+>> bit (which appeared after running the Fiji updater).  In both cases,
+>> starting Micro-Manager from the Fiji plugin menu throws an error stating
+>> that libMMCoreJ_wrap is not found.  
+> 
+> Thanks for trying! Did you do that on a MacOSX computer? So far, we only
+> support 32-bit Windows, but 64-bit Windows is on the list...
+
+Ona Windows 7, 64-bit machine, but running the 32-bit version of the executable.  
+
+Best,
+
+Nico
+
+
+
+
+From Johannes.Schindelin at gmx.de  Wed Jan  8 11:07:39 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 8 Jan 2014 18:07:39 +0100 (CET)
+Subject: [OpenSPIM] Great OpenSPIM setup!
+Message-ID: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+
+Hi Friedrich,
+
+thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+setup!
+
+I hope you do not mind that I added some whitespace so it does not look as
+if your setup was Dresden's (whose photo may be added this week, or next).
+
+Ciao,
+Johannes
+
+
+
+From S.Hoehn at damtp.cam.ac.uk  Thu Jan  9 13:21:58 2014
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 09 Jan 2014 19:21:58 +0000
+Subject: [OpenSPIM] unwanted extra files auto-saved
+Message-ID: <6f2c17308f1cb25a42c2a0e16ff83731@cam.ac.uk>
+
+dear open spim users,
+
+i am using the spim at cambridge university and am facing a problem with 
+my time-lapse experiments.
+since i last updated the software, an extra folder is automatically 
+saved in addition to the wanted z-scans. the folder is called "diffs" 
+and contains subfolders named e.g. 
+"XYZ4366.50x1479.00x588.00_Theta0.00". the subfolders contain 3dimages 
+as tiff-files. since this happens, the time-lapse is regularly abborted 
+and i get an error message saying "device timed out".
+does anyone know how to disable the autosaving of these extra files? i 
+couldn't find it anywhere.
+
+thanks a lot and best wishes,
+
+stephanie
+
+
+
+From nantho2 at emory.edu  Fri Jan 10 09:45:42 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Fri, 10 Jan 2014 10:45:42 -0500
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+Message-ID: <52D015A6.8060209@emory.edu>
+
+That looks great!
+Would you mind sharing the details of your modifications?  Would that be 
+something that can be added to the wiki?
+
+Thanks
+Neil
+
+On 1/8/2014 12:07 PM, Johannes Schindelin wrote:
+> Hi Friedrich,
+>
+> thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+> setup!
+>
+> I hope you do not mind that I added some whitespace so it does not look as
+> if your setup was Dresden's (whose photo may be added this week, or next).
+>
+> Ciao,
+> Johannes
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+
+
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 10 15:48:07 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 10 Jan 2014 22:48:07 +0100 (CET)
+Subject: [OpenSPIM] unwanted extra files auto-saved
+In-Reply-To: <6f2c17308f1cb25a42c2a0e16ff83731@cam.ac.uk>
+References: <6f2c17308f1cb25a42c2a0e16ff83731@cam.ac.uk>
+Message-ID: <alpine.DEB.1.00.1401102246390.20365@s15462909.onlinehome-server.info>
+
+Dear Stephanie,
+
+On Thu, 9 Jan 2014, Dr S. Hoehn wrote:
+
+> i am using the spim at cambridge university and am facing a problem with my
+> time-lapse experiments.
+> since i last updated the software, an extra folder is automatically saved in
+> addition to the wanted z-scans. the folder is called "diffs" and contains
+> subfolders named e.g. "XYZ4366.50x1479.00x588.00_Theta0.00". the subfolders
+> contain 3dimages as tiff-files. since this happens, the time-lapse is
+> regularly abborted and i get an error message saying "device timed out".
+> does anyone know how to disable the autosaving of these extra files? i
+> couldn't find it anywhere.
+
+Sorry, that must be a version with debugging stuff in it that has slipped
+through. The major problem with that is that our principal software
+engineer is currently traveling (working on OpenSPIM) and will only have
+time to address this issue in about a week.
+
+Sorry again!
+Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 10 15:56:45 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 10 Jan 2014 22:56:45 +0100 (CET)
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52D015A6.8060209@emory.edu>
+References: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+	<52D015A6.8060209@emory.edu>
+Message-ID: <alpine.DEB.1.00.1401102255220.20365@s15462909.onlinehome-server.info>
+
+Hi Neil,
+
+On Fri, 10 Jan 2014, Neil Anthony wrote:
+
+> On 1/8/2014 12:07 PM, Johannes Schindelin wrote:
+> >
+> > thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+> > setup!
+> >
+> > I hope you do not mind that I added some whitespace so it does not look as
+> > if your setup was Dresden's (whose photo may be added this week, or next).
+>
+> That looks great!
+> Would you mind sharing the details of your modifications?
+
+Do you mean my changes to the OpenSPIM Wiki page? They are documented here:
+
+	http://openspim.org/index.php?title=Who_has_an_OpenSPIM%3F&diff=2835&oldid=2834
+
+Ciao,
+Johannes
+
+
+
+From stuyvenberg at wisc.edu  Fri Jan 10 17:13:45 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Sat, 11 Jan 2014 00:13:45 +0100
+Subject: [OpenSPIM] Fwd: Re:  unwanted extra files auto-saved
+In-Reply-To: <75f0a730127c81.52cfbead@wiscmail.wisc.edu>
+References: <75f0a730127c81.52cfbead@wiscmail.wisc.edu>
+Message-ID: <52D07EA9.9060106@wisc.edu>
+
+
+Sorry, forgot to reply to the list as well!
+
+Luke
+
+-------- Original Message --------
+Subject: 	Re: [OpenSPIM] unwanted extra files auto-saved
+Date: 	Fri, 10 Jan 2014 09:34:37 +0100
+From: 	Luke Stuyvenberg <stuyvenberg at wisc.edu>
+To: 	Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk>
+
+
+
+Stephanie,
+
+The files you refer to are saved by the anti-drift feature to give system operators some idea of the sample's drift over time. Unless saving to a slow hard drive or over a network, their creation really shouldn't cause a timeout; this may not be the cause of your errors. Still, I agree that the saving of these images should be optional; I'll add a ticket to our bugtracker and attend to it as soon as I have time.
+
+
+Device timeouts usually occur with either low stage velocities (1-3) or deep stacks (500+ um?): the stage motors spend too long moving from one location to another, and Micro-Manager assumes they've stopped working. Please try enabling the "Override Timeout" feature. The checkbox is located on the bottom of the Acquisition tab; check the box, then enter a new device timeout in milliseconds. The default is 5000ms; try increasing this to 15000 or so. (I often use this feature when imaging as insurance against these errors.)
+
+
+Hope this is helpful!
+
+
+Luke
+
+On 01/09/14, "Dr S. Hoehn"  wrote:
+> dear open spim users,
+>
+> i am using the spim at cambridge university and am facing a problem with my time-lapse experiments.
+> since i last updated the software, an extra folder is automatically saved in addition to the wanted z-scans. the folder is called "diffs" and contains subfolders named e.g. "XYZ4366.50x1479.00x588.00_Theta0.00". the subfolders contain 3dimages as tiff-files. since this happens, the time-lapse is regularly abborted and i get an error message saying "device timed out".
+> does anyone know how to disable the autosaving of these extra files? i couldn't find it anywhere.
+>
+> thanks a lot and best wishes,
+>
+> stephanie
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140111/4e44658f/attachment-0002.html>
+
+From eliceiri at wisc.edu  Tue Jan 14 13:23:37 2014
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Tue, 14 Jan 2014 13:23:37 -0600
+Subject: [OpenSPIM] lasers for openspim
+Message-ID: <77409eaa130da7.52d53a59@wiscmail.wisc.edu>
+
+Hi All,
+
+Any preference between Cube 488-50C and Stradus 488-50 in control, beam output etc? How about red options? Any recommendations?
+
+
+best
+kevin
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From nantho2 at emory.edu  Wed Jan 15 08:03:22 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Wed, 15 Jan 2014 09:03:22 -0500
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <alpine.DEB.1.00.1401102255220.20365@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1401081712480.20365@s15462909.onlinehome-server.info>
+	<52D015A6.8060209@emory.edu>
+	<alpine.DEB.1.00.1401102255220.20365@s15462909.onlinehome-server.info>
+Message-ID: <52D6952A.109@emory.edu>
+
+Hi Johannes,
+
+I'm sorry, I was actually refering to the changes you made to the 
+standard OpenSPIM setup.  I'm curious to know what parts you changed, 
+why, and how it worked out.  Maybe you could share the part numbers and 
+CAD files you used to make it easier for others to adapt their SPIM 
+build to suit their needs?
+
+I was then thinking that there could be a link on the wiki for people to 
+access those details.
+
+Thanks
+Neil
+
+On 1/10/2014 4:56 PM, Johannes Schindelin wrote:
+> Hi Neil,
+>
+> On Fri, 10 Jan 2014, Neil Anthony wrote:
+>
+>> On 1/8/2014 12:07 PM, Johannes Schindelin wrote:
+>>> thanks for improving http://openspim.org/Who_has_an_OpenSPIM%3F with your
+>>> setup!
+>>>
+>>> I hope you do not mind that I added some whitespace so it does not look as
+>>> if your setup was Dresden's (whose photo may be added this week, or next).
+>> That looks great!
+>> Would you mind sharing the details of your modifications?
+> Do you mean my changes to the OpenSPIM Wiki page? They are documented here:
+>
+> 	http://openspim.org/index.php?title=Who_has_an_OpenSPIM%3F&diff=2835&oldid=2834
+>
+> Ciao,
+> Johannes
+>
+
+
+
+
+From huisken at mpi-cbg.de  Tue Jan 21 01:53:47 2014
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Tue, 21 Jan 2014 08:53:47 +0100
+Subject: [OpenSPIM] Going "open" with Mesoscopy: a new dimension on
+	multi-view imaging
+Message-ID: <F65F126A-C952-49EC-AC90-A749CF11CB31@mpi-cbg.de>
+
+I just came across this book chapter: Going "open" with Mesoscopy: a new dimension on multi-view imaging
+
+
+
+Jh
+
+Dr. Jan Huisken
+Center for Systems Biology Dresden
+MPI of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, 01307 Dresden, Germany
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140121/344dac03/attachment-0004.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: art%3A10.1007%2Fs00709-013-0599-3.pdf
+Type: application/pdf
+Size: 653415 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140121/344dac03/attachment-0002.pdf>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140121/344dac03/attachment-0005.html>
+
+From stuyvenberg at wisc.edu  Mon Jan 27 15:51:25 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 27 Jan 2014 15:51:25 -0600
+Subject: [OpenSPIM] lasers for openspim
+In-Reply-To: <77409eaa130da7.52d53a59@wiscmail.wisc.edu>
+References: <77409eaa130da7.52d53a59@wiscmail.wisc.edu>
+Message-ID: <7730da9c76b3.52e6807d@wiscmail.wisc.edu>
+
+Hey everyone,
+
+Kevin and I were just talking -- has anyone else tried the Stradus laser?
+
+
+Luke
+
+On 01/14/14, Kevin W Eliceiri  wrote:
+> Hi All,
+> 
+> Any preference between Cube 488-50C and Stradus 488-50 in control, beam output etc? How about red options? Any recommendations?
+> 
+> 
+> best
+> kevin
+> 
+> --
+> Kevin W. Eliceiri
+> Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> Departments Cell and Molecular Biology and Biomedical Engineering
+> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> Phone: 608-263-6288
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Wed Jan 29 06:09:34 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Wed, 29 Jan 2014 13:09:34 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+Message-ID: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+
+Hi Neil,
+
+About the changes made to our OpenSPIM setup at Fraunhofer IPT, there are 
+two main changes:
+
+*The redesign of the sample arm of the 4D Stage so that a timing belt and 
+timing pulleys can be used instead
+of the round belt and pulleys included with the 4D Stage. This was done 
+because a slip between the belt
+and pulleys was identified causing inaccuracies when rotating the sample. 
+I don't know if someone else had this issue, 
+
+*The redesign of the sample chamber so that the temperature of the medium 
+can be controlled. For doing that a 
+PT100 special for liquids, TO220 resistors and a PID controller were 
+employed. The sample chamber had to
+be built out of stainless steel so that  corrosive effects due to the 
+sample medium can be avoided.
+
+I can provide you the drawings and the CAD files, also the part number and 
+manufacturer of the components that
+were used,  just let me organize the information accordingly.
+
+I think that would make sense to make this information available through 
+the OpenSPIM wiki so that eveyone can use it if interested. 
+At the same time I could have a feedback about the changes I made and 
+further improvements can be done to the design. What is 
+the opinion of all?
+
+Best regards,
+Edgar
+
+
+
+__________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT
+Edgar Escobar Nieto 
+
+Steinbachstraße 17
+52074 Aachen
+
+edgar.escobar.nieto at ipt.fraunhofer.de
+http://www.ipt.fraunhofer.de
+__________________________________________
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/2c2a7952/attachment-0002.html>
+
+From eliceiri at wisc.edu  Wed Jan 29 07:57:40 2014
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Wed, 29 Jan 2014 07:57:40 -0600
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <779098df101cd.52e908c6@wiscmail.wisc.edu>
+References: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<75c0f4c515470.52e9084b@wiscmail.wisc.edu>
+	<7670bc2316990.52e90888@wiscmail.wisc.edu>
+	<779098df101cd.52e908c6@wiscmail.wisc.edu>
+Message-ID: <7670cead12e46.52e8b474@wiscmail.wisc.edu>
+
+Hi Edgar,
+
+This is great, and would be very useful to put all this information on the OpenSPIM page. Could you send details on all when you have? I'm also interested in more information on your modifications to the sample arm. We would be interested in this. Did you discuss this with Jean Depatie from Picard? Be good to make sure any issues are addressed for new systems they ship.
+
+
+best
+kevin
+
+On 01/29/14, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+> Hi Neil, 
+> 
+> About the changes made to our OpenSPIM setup at Fraunhofer IPT, there are two main changes: 
+> 
+> *The redesign of the sample arm of the 4D Stage so that a timing belt and timing pulleys can be used instead 
+> of the round belt and pulleys included with the 4D Stage. This was done because a slip between the belt 
+> and pulleys was identified causing inaccuracies when rotating the sample. I don't know if someone else had this issue, 
+> 
+> *The redesign of the sample chamber so that the temperature of the medium can be controlled. For doing that a 
+> PT100 special for liquids, TO220 resistors and a PID controller were employed. The sample chamber had to 
+> be built out of stainless steel so that corrosive effects due to the sample medium can be avoided. 
+> 
+> I can provide you the drawings and the CAD files, also the part number and manufacturer of the components that 
+> were used, just let me organize the information accordingly. 
+> 
+> I think that would make sense to make this information available through the OpenSPIM wiki so that eveyone can use it if interested. 
+> At the same time I could have a feedback about the changes I made and further improvements can be done to the design. What is 
+> the opinion of all? 
+> 
+> Best regards, 
+> Edgar 
+> 
+> 
+> 
+> __________________________________________
+> 
+> Fraunhofer-Institut für Produktionstechnologie IPT
+> Edgar Escobar Nieto 
+> 
+> Steinbachstraße 17 
+> 52074 Aachen 
+> 
+> edgar.escobar.nieto at ipt.fraunhofer.de 
+> http://www.ipt.fraunhofer.de 
+> __________________________________________
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+
+
+
+From stuyvenberg at wisc.edu  Wed Jan 29 08:01:22 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 29 Jan 2014 08:01:22 -0600
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+References: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+Message-ID: <52E909B2.70800@wisc.edu>
+
+Hi Edgar,
+
+On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+> *The redesign of the sample arm of the 4D Stage so that a timing belt 
+> and timing pulleys can be used instead
+> of the round belt and pulleys included with the 4D Stage. This was 
+> done because a slip between the belt
+> and pulleys was identified causing inaccuracies when rotating the 
+> sample. I don't know if someone else had this issue,
+I haven't noticed any trouble with belt slippage, but it's good to know 
+this may be a problem (and moreover that there is an excellent solution 
+available.)
+
+> *The redesign of the sample chamber so that the temperature of the 
+> medium can be controlled. For doing that a
+> PT100 special for liquids, TO220 resistors and a PID controller were 
+> employed. The sample chamber had to
+> be built out of stainless steel so that  corrosive effects due to the 
+> sample medium can be avoided.
+This is great stuff. Do you know off-hand if these devices are stable 
+over time? i.e. four hours, eight, twenty-four? I suspect good 
+temperature control may improve time-lapse recording somewhat...
+
+> I can provide you the drawings and the CAD files, also the part number 
+> and manufacturer of the components that
+> were used,  just let me organize the information accordingly.
+>
+> I think that would make sense to make this information available 
+> through the OpenSPIM wiki so that eveyone can use it if interested.
+> At the same time I could have a feedback about the changes I made and 
+> further improvements can be done to the design. What is
+> the opinion of all?
+By all means! That's what the wiki is there for, after all.
+
+Thanks for sharing!
+Luke
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/35bf83ba/attachment-0002.html>
+
+From nantho2 at emory.edu  Wed Jan 29 09:54:01 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Wed, 29 Jan 2014 10:54:01 -0500
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52E909B2.70800@wisc.edu>
+References: <OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<52E909B2.70800@wisc.edu>
+Message-ID: <52E92419.7080907@emory.edu>
+
+Hi Edgar, thanks for the details and thanks for sharing.  I'll look 
+forward to seeing the details/files on the wiki.
+Great stuff!
+
+Neil
+
+On 1/29/2014 9:01 AM, Luke Stuyvenberg wrote:
+> Hi Edgar,
+>
+> On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+>> *The redesign of the sample arm of the 4D Stage so that a timing belt 
+>> and timing pulleys can be used instead
+>> of the round belt and pulleys included with the 4D Stage. This was 
+>> done because a slip between the belt
+>> and pulleys was identified causing inaccuracies when rotating the 
+>> sample. I don't know if someone else had this issue,
+> I haven't noticed any trouble with belt slippage, but it's good to 
+> know this may be a problem (and moreover that there is an excellent 
+> solution available.)
+>
+>> *The redesign of the sample chamber so that the temperature of the 
+>> medium can be controlled. For doing that a
+>> PT100 special for liquids, TO220 resistors and a PID controller were 
+>> employed. The sample chamber had to
+>> be built out of stainless steel so that  corrosive effects due to the 
+>> sample medium can be avoided.
+> This is great stuff. Do you know off-hand if these devices are stable 
+> over time? i.e. four hours, eight, twenty-four? I suspect good 
+> temperature control may improve time-lapse recording somewhat...
+>
+>> I can provide you the drawings and the CAD files, also the part 
+>> number and manufacturer of the components that
+>> were used,  just let me organize the information accordingly.
+>>
+>> I think that would make sense to make this information available 
+>> through the OpenSPIM wiki so that eveyone can use it if interested.
+>> At the same time I could have a feedback about the changes I made and 
+>> further improvements can be done to the design. What is
+>> the opinion of all?
+> By all means! That's what the wiki is there for, after all.
+>
+> Thanks for sharing!
+> Luke
+
+-- 
+*Neil Anthony, PhD*  | Research Imaging Specialist
+Health Sciences Research Building (HSRB), Room EG21
+1760 Haygood Drive, Atlanta, GA 30322 	
+
+neil.anthony at emory.edu <mailto:neil.anthony at emory.edu>
+ici.emory.edu <http://ici.emory.edu/>
+404 969-CORE
+
+<http://ici.emory.edu/> 	<https://www.facebook.com/ICIEmory> 
+<http://www.linkedin.com/pub/neil-anthony/35/a0b/126> 
+<https://www.researchgate.net/profile/Neil_Anthony/>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: EU_ICI_SmlLogo.png
+Type: image/png
+Size: 11461 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0008.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: facebook_logo.png
+Type: image/png
+Size: 3826 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0009.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: linkedin_logo.png
+Type: image/png
+Size: 4053 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0010.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: researchgate_logo.png
+Type: image/png
+Size: 4345 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140129/e80445b6/attachment-0011.png>
+
+From nikul at ee.columbia.edu  Fri Jan 31 01:24:21 2014
+From: nikul at ee.columbia.edu (Nikul Ukani)
+Date: Fri, 31 Jan 2014 02:24:21 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+Message-ID: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+
+Hi everyone,
+
+I am currently trying to compile OpenSPIM on a 64 bit machine running  
+Windows 7. While I was able to get it to compile by modifying some of  
+the build scripts; upon trying to open it from Fiji, I get the  
+following error
+
+Error: Failed to open libMMCoreJ_wrap.jnilib
+mmcorej.MMCoreJJNI.swig_module_init()V
+
+Anyone has any idea where the above error could be originating from?
+
+I would like to mention a couple of things that I did in case they  
+could be relevant to the above error
+1) I combined the compiled files with a manually downloaded 64-bit Fiji.
+2) I had to add a reference to commons-math3-3.2.jar in many ant  
+buildfiles in order to get it to compile.
+
+Thanks,
+Nikul
+
+
+
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Fri Jan 31 10:18:02 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Fri, 31 Jan 2014 17:18:02 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <7670cead12e46.52e8b474@wiscmail.wisc.edu>
+References: <7670cead12e46.52e8b474@wiscmail.wisc.edu>,
+	<OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<75c0f4c515470.52e9084b@wiscmail.wisc.edu>
+	<7670bc2316990.52e90888@wiscmail.wisc.edu>
+	<779098df101cd.52e908c6@wiscmail.wisc.edu>
+Message-ID: <OF8888A260.AC1144A5-ONC1257C71.00598ACE-C1257C71.00598AE9@ipt.rwth-aachen.de>
+
+Hi Kevin,
+
+Is great to know that the modifications I made will be helpful not only to me. I already talk to Jean Depaties from Picard Industries adressing the problem I experienced with the rotational movement.
+He offered me to solve the issue (image attached), but of course would imply more costs and time, so I decided to find a way to use a timing belt or a chain to tramsmit the rotational movement. 
+I already tested the rotational movement and works pretty fine.
+
+I will let know Jean Depatie about my modification, and that it worked pretty good. Maybe he agree to change the sample arm for the new systems that Picard Industries ship.
+
+Attached to this mail is a zip file containing some description of my modifications (sample arm and SPIM chamber) and all the information necessary to reproduce them.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Kevin W Eliceiri <eliceiri at wisc.edu> schrieb: -----
+An: edgar.escobar.nieto at ipt.fraunhofer.de, nantho2 at emory.edu
+Von: Kevin W Eliceiri <eliceiri at wisc.edu>
+Datum: 29.01.2014 14:58
+Kopie: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Great OpenSPIM setup!
+
+Hi Edgar,
+
+This is great, and would be very useful to put all this information on the OpenSPIM page. Could you send details on all when you have? I'm also interested in more information on your modifications to the sample arm. We would be interested in this. Did you discuss this with Jean Depatie from Picard? Be good to make sure any issues are addressed for new systems they ship.
+
+
+best
+kevin
+
+On 01/29/14, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+> Hi Neil, 
+> 
+> About the changes made to our OpenSPIM setup at Fraunhofer IPT, there are two main changes: 
+> 
+> *The redesign of the sample arm of the 4D Stage so that a timing belt and timing pulleys can be used instead 
+> of the round belt and pulleys included with the 4D Stage. This was done because a slip between the belt 
+> and pulleys was identified causing inaccuracies when rotating the sample. I don't know if someone else had this issue, 
+> 
+> *The redesign of the sample chamber so that the temperature of the medium can be controlled. For doing that a 
+> PT100 special for liquids, TO220 resistors and a PID controller were employed. The sample chamber had to 
+> be built out of stainless steel so that corrosive effects due to the sample medium can be avoided. 
+> 
+> I can provide you the drawings and the CAD files, also the part number and manufacturer of the components that 
+> were used, just let me organize the information accordingly. 
+> 
+> I think that would make sense to make this information available through the OpenSPIM wiki so that eveyone can use it if interested. 
+> At the same time I could have a feedback about the changes I made and further improvements can be done to the design. What is 
+> the opinion of all? 
+> 
+> Best regards, 
+> Edgar 
+> 
+> 
+> 
+> __________________________________________
+> 
+> Fraunhofer-Institut für Produktionstechnologie IPT
+> Edgar Escobar Nieto 
+> 
+> Steinbachstraße 17 
+> 52074 Aachen 
+> 
+> edgar.escobar.nieto at ipt.fraunhofer.de 
+> http://www.ipt.fraunhofer.de 
+> __________________________________________
+
+--
+Kevin W. Eliceiri
+Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+Phone: 608-263-6288
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/f24d8c42/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Hi-Res 4D-Stage Rotation Concept.JPG
+Type: image/jpeg
+Size: 70241 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/f24d8c42/attachment-0002.jpe>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM improvements.zip
+Type: application/zip
+Size: 1815169 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/f24d8c42/attachment-0002.zip>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Fri Jan 31 10:22:48 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Fri, 31 Jan 2014 17:22:48 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52E909B2.70800@wisc.edu>
+References: <52E909B2.70800@wisc.edu>,
+	<OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+Message-ID: <OF87311444.0CA2A3CA-ONC1257C71.0059FA9B-C1257C71.0059FAA0@ipt.rwth-aachen.de>
+
+Hi Luke,
+
+I have not tested yet the temperature-controlled SPIM chamber for long periods of time, but of course, the idea of this modification is to improve the conditions of
+the sample during long-term experiments.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Luke Stuyvenberg <stuyvenberg at wisc.edu> schrieb: -----
+An: edgar.escobar.nieto at ipt.fraunhofer.de
+Von: Luke Stuyvenberg <stuyvenberg at wisc.edu>
+Datum: 29.01.2014 15:01
+Kopie: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Great OpenSPIM setup!
+
+                   
+Hi Edgar,
+       
+       On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+          *The redesign of the         sample arm of the         4D Stage so that a timing belt and timing pulleys can be used         instead       
+       of the round belt and pulleys         included         with the 4D Stage. This was done because a slip between the belt       
+       and pulleys was identified         causing inaccuracies         when rotating the sample. I don't know if someone else had this         issue,              
+          I haven't noticed any trouble with belt slippage, but it's good to     know this may be a problem (and moreover that there is an excellent     solution available.)
+     
+     *The redesign of the         sample chamber         so that the temperature of the medium can be controlled. For         doing that         a        
+       PT100 special for liquids, TO220         resistors         and a PID controller were employed. The sample chamber had to       
+       be built out of stainless steel         so that          corrosive effects due to the sample medium can be avoided.       
+          This is great stuff. Do you know off-hand if these devices are     stable over time? i.e. four hours, eight, twenty-four? I suspect     good temperature control may improve time-lapse recording     somewhat...
+     
+     I can provide you the         drawings and the         CAD files, also the part number and manufacturer of the         components that       
+       were used,  just let me organize         the information accordingly.       
+       
+       I think that would make sense to         make         this information available through the OpenSPIM wiki so that         eveyone can         use it if interested.        
+       At the same time I could have a         feedback         about the changes I made and further improvements can be done to         the design.         What is        
+       the opinion of all?     By all means! That's what the wiki is there for, after all.
+     
+     Thanks for sharing!
+     Luke
+     
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/25cf8c77/attachment-0002.html>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Fri Jan 31 10:31:08 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Fri, 31 Jan 2014 17:31:08 +0100
+Subject: [OpenSPIM] Great OpenSPIM setup!
+In-Reply-To: <52E92419.7080907@emory.edu>
+References: <52E92419.7080907@emory.edu>,
+	<OF76D404B0.44009DE8-ONC1257C6F.003EDB8F-C1257C6F.0042CB93@ipt.rwth-aachen.de>
+	<52E909B2.70800@wisc.edu>
+Message-ID: <OF7ECE8ADB.3FCE49F8-ONC1257C71.005ABDD3-C1257C71.005ABDE7@ipt.rwth-aachen.de>
+
+ Hi Neil,
+
+I attach to this mail a zip file containing all the information regarding the modifications I made to the OpenSPIM. If you have some questions
+just let me know. 
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Neil Anthony <nantho2 at emory.edu> schrieb: -----
+An: Luke Stuyvenberg <stuyvenberg at wisc.edu>, <edgar.escobar.nieto at ipt.fraunhofer.de>
+Von: Neil Anthony <nantho2 at emory.edu>
+Datum: 29.01.2014 16:55
+Kopie: <openspim at openspim.org>
+Betreff: Re: [OpenSPIM] Great OpenSPIM setup!
+
+                   Hi Edgar, thanks for the details and thanks for sharing.  I'll look     forward to seeing the details/files on the wiki.
+     Great stuff!
+     
+     Neil
+     
+     
+On 1/29/2014 9:01 AM, Luke Stuyvenberg       wrote:
+                        
+Hi Edgar,
+         
+         On 1/29/2014 6:09 AM, edgar.escobar.nieto at ipt.fraunhofer.de         wrote:
+              *The redesign of           the sample arm of the 4D Stage so that a timing belt and           timing pulleys can be used instead 
+         of the round belt and pulleys           included with the 4D Stage. This was done because a slip           between the belt 
+         and pulleys was identified           causing inaccuracies when rotating the sample. I don't know if           someone else had this issue,  
+              I haven't noticed any trouble with belt slippage, but it's good to       know this may be a problem (and moreover that there is an       excellent solution available.)
+       
+       *The redesign of           the sample chamber so that the temperature of the medium can           be controlled. For doing that a  
+         PT100 special for liquids,           TO220 resistors and a PID controller were employed. The sample           chamber had to 
+         be built out of stainless steel           so that  corrosive effects due to the sample medium can be           avoided. 
+              This is great stuff. Do you know off-hand if these devices are       stable over time? i.e. four hours, eight, twenty-four? I suspect       good temperature control may improve time-lapse recording       somewhat...
+       
+       I can provide you           the drawings and the CAD files, also the part number and           manufacturer of the components that 
+         were used,  just let me           organize the information accordingly. 
+         
+         I think that would make sense           to make this information available through the OpenSPIM wiki           so that eveyone can use it if interested.  
+         At the same time I could have a           feedback about the changes I made and further improvements can           be done to the design. What is  
+         the opinion of all?       By all means! That's what the wiki is there for, after all.
+       
+       Thanks for sharing!
+       Luke
+          
+     
+-- 
+                                                                                   Neil Anthony, PhD  | Research Imaging                 Specialist
+                 Health Sciences Research Building                 (HSRB), Room EG21
+                 1760 Haygood Drive, Atlanta, GA 30322                                neil.anthony at emory.edu
+                   ici.emory.edu
+                 404 969-CORE 
+                                                                                                                                                                                                                                                    
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part4.01040904.01010809 at emory.edu.png
+Type: image/png
+Size: 11461 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0008.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part6.07040700.01070504 at emory.edu.png
+Type: image/png
+Size: 3826 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0009.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part8.04040300.03050201 at emory.edu.png
+Type: image/png
+Size: 4053 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0010.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Image.part10.01090505.06090508 at emory.edu.png
+Type: image/png
+Size: 4345 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0011.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM improvements.zip
+Type: application/zip
+Size: 1815169 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/afb856da/attachment-0002.zip>
+
+From nico.stuurman at ucsf.edu  Fri Jan 31 00:02:44 2014
+From: nico.stuurman at ucsf.edu (Nico Stuurman)
+Date: Thu, 30 Jan 2014 22:02:44 -0800
+Subject: [OpenSPIM] Crash on startup
+Message-ID: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+
+Trying to have a look at the OpenSPIM application in action.  Downloaded the zip and updated as directed.  Ran the 32 bit version as well as 64 bit (which appeared after running the Fiji updater).  In both cases, starting Micro-Manager from the Fiji plugin menu throws an error stating that libMMCoreJ_wrap is not found.  
+
+Any ideas how to run the software?
+
+Thanks!
+
+Nico
+
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 31 13:21:14 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 Jan 2014 20:21:14 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+Message-ID: <alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Fri, 31 Jan 2014, Nikul Ukani wrote:
+
+> I am currently trying to compile OpenSPIM on a 64 bit machine running
+> Windows 7. While I was able to get it to compile by modifying some of
+> the build scripts; upon trying to open it from Fiji, I get the following
+> error
+> 
+> Error: Failed to open libMMCoreJ_wrap.jnilib
+> mmcorej.MMCoreJJNI.swig_module_init()V
+
+My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+library. Possible?
+
+Ciao,
+Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 31 13:27:57 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 Jan 2014 20:27:57 +0100 (CET)
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+Message-ID: <alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+
+Hi Nico,
+
+On Thu, 30 Jan 2014, Nico Stuurman wrote:
+
+> Trying to have a look at the OpenSPIM application in action.  Downloaded
+> the zip and updated as directed.  Ran the 32 bit version as well as 64
+> bit (which appeared after running the Fiji updater).  In both cases,
+> starting Micro-Manager from the Fiji plugin menu throws an error stating
+> that libMMCoreJ_wrap is not found.  
+
+Thanks for trying! Did you do that on a MacOSX computer? So far, we only
+support 32-bit Windows, but 64-bit Windows is on the list...
+
+Ciao,
+Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Fri Jan 31 15:04:55 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 31 Jan 2014 22:04:55 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+Message-ID: <alpine.DEB.1.00.1401312201360.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Fri, 31 Jan 2014, Nikul Ukani wrote:
+
+> That's possible as all I did was to change the platform to x64 in the
+> build script. Can you point me to which project does that library
+> correspond to so I can investigate whether the correct flag is being
+> passed while compiling it?
+
+The primary documentation how to build Micro-Manager on Windows is here:
+http://micro-manager.org/wiki/Building_MM_on_Windows
+
+I have not found any more information how to build 64-bit Micro-Manager,
+but I have a strong feeling that inspecting the file Micro-Manager tries
+to load (which should be listed in the log Micro-Manager writes). Either
+it is the wrong architecture, or it is in the wrong place, that's my
+guess.
+
+Ciao,
+Johannes
+
+
+
+From nhu2001 at columbia.edu  Fri Jan 31 14:32:45 2014
+From: nhu2001 at columbia.edu (Nikul Ukani)
+Date: Fri, 31 Jan 2014 15:32:45 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+Message-ID: <67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+
+Hi Johannes,
+
+That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+
+Thanks,
+Nikul
+
+> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+> 
+> Hi Nikul,
+> 
+>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>> 
+>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>> Windows 7. While I was able to get it to compile by modifying some of
+>> the build scripts; upon trying to open it from Fiji, I get the following
+>> error
+>> 
+>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>> mmcorej.MMCoreJJNI.swig_module_init()V
+> 
+> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+> library. Possible?
+> 
+> Ciao,
+> Johannes
+> 
+
+
+
+
+From stuyvenberg at wisc.edu  Fri Jan 31 15:29:37 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Fri, 31 Jan 2014 15:29:37 -0600
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+Message-ID: <7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+
+Hi Nikul,
+
+--x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+
+
+Hope this helps,
+Luke
+
+On 01/31/14, Nikul Ukani  wrote:
+> Hi Johannes,
+> 
+> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+> 
+> Thanks,
+> Nikul
+> 
+> > On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+> > 
+> > Hi Nikul,
+> > 
+> >> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+> >> 
+> >> I am currently trying to compile OpenSPIM on a 64 bit machine running
+> >> Windows 7. While I was able to get it to compile by modifying some of
+> >> the build scripts; upon trying to open it from Fiji, I get the following
+> >> error
+> >> 
+> >> Error: Failed to open libMMCoreJ_wrap.jnilib
+> >> mmcorej.MMCoreJJNI.swig_module_init()V
+> > 
+> > My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+> > library. Possible?
+> > 
+> > Ciao,
+> > Johannes
+> > 
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From stuyvenberg at wisc.edu  Fri Jan 31 15:34:00 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Fri, 31 Jan 2014 15:34:00 -0600
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <75b0f72929e2d.52ec16ba@wiscmail.wisc.edu>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+	<7580ea0e29c62.52ec1642@wiscmail.wisc.edu>
+	<7710a6452a0ba.52ec167e@wiscmail.wisc.edu>
+	<75b0f72929e2d.52ec16ba@wiscmail.wisc.edu>
+Message-ID: <7740f934299ed.52ebc268@wiscmail.wisc.edu>
+
+Hey Nico,
+
+I haven't tested the set-up process on anything other than WinXP 32-bit. It sounds like Fiji (intelligently) attempted to replace the 32-bit version with a 64-bit version (as it's running in a 64-bit environment).
+
+
+It might help to check the advanced updater panel, and look at "Only files from the 'OpenSPIM' update site", to make sure that MMCoreJ_wrap.dll is up-to-date.
+
+
+Let me know if this helps,
+Luke 
+
+On 01/31/14, Nico Stuurman  wrote:
+> Trying to have a look at the OpenSPIM application in action. Downloaded the zip and updated as directed. Ran the 32 bit version as well as 64 bit (which appeared after running the Fiji updater). In both cases, starting Micro-Manager from the Fiji plugin menu throws an error stating that libMMCoreJ_wrap is not found. 
+> 
+> Any ideas how to run the software?
+> 
+> Thanks!
+> 
+> Nico
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From nikul at ee.columbia.edu  Fri Jan 31 15:42:27 2014
+From: nikul at ee.columbia.edu (Nikul)
+Date: Fri, 31 Jan 2014 16:42:27 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+Message-ID: <3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+
+I'll look into it and get back. If it works, it will be great to have some resource
+on the OpenSPIM website for compiling it in 64-bit.
+
+Thanks,
+---
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+
+> Hi Nikul,
+> 
+> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+> 
+> 
+> Hope this helps,
+> Luke
+> 
+> On 01/31/14, Nikul Ukani  wrote:
+>> Hi Johannes,
+>> 
+>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>> 
+>> Thanks,
+>> Nikul
+>> 
+>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>> 
+>>> Hi Nikul,
+>>> 
+>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>> 
+>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>> error
+>>>> 
+>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>> 
+>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>> library. Possible?
+>>> 
+>>> Ciao,
+>>> Johannes
+>>> 
+>> 
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140131/9e483377/attachment-0002.html>
+
+From nico.stuurman at ucsf.edu  Fri Jan 31 15:56:37 2014
+From: nico.stuurman at ucsf.edu (Nico Stuurman)
+Date: Fri, 31 Jan 2014 13:56:37 -0800
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>
+	<alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+Message-ID: <0064F14F-24DF-4A40-91E1-5DE43E9E55D6@ucsf.edu>
+
+HI Johannes,
+
+>> Trying to have a look at the OpenSPIM application in action.  Downloaded
+>> the zip and updated as directed.  Ran the 32 bit version as well as 64
+>> bit (which appeared after running the Fiji updater).  In both cases,
+>> starting Micro-Manager from the Fiji plugin menu throws an error stating
+>> that libMMCoreJ_wrap is not found.  
+> 
+> Thanks for trying! Did you do that on a MacOSX computer? So far, we only
+> support 32-bit Windows, but 64-bit Windows is on the list...
+
+Ona Windows 7, 64-bit machine, but running the 32-bit version of the executable.  
+
+Best,
+
+Nico
+
+
+
+
+

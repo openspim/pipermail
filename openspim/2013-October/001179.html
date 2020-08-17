@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20All%20C%2B%2B%20developers%3A%20Transition%20to%20Visual%20Studio%202010&In-Reply-To=%3C524ECF47.4020904%40emory.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001178.html">
+   <LINK REL="Next"  HREF="001182.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] All C++ developers: Transition to Visual Studio 2010</H1>
+    <B>Neil Anthony</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20All%20C%2B%2B%20developers%3A%20Transition%20to%20Visual%20Studio%202010&In-Reply-To=%3C524ECF47.4020904%40emory.edu%3E"
+       TITLE="[OpenSPIM] All C++ developers: Transition to Visual Studio 2010">nantho2 at emory.edu
+       </A><BR>
+    <I>Fri Oct  4 09:23:03 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001178.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+        <LI>Next message: <A HREF="001182.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1179">[ date ]</a>
+              <a href="thread.html#1179">[ thread ]</a>
+              <a href="subject.html#1179">[ subject ]</a>
+              <a href="author.html#1179">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Cool, good info to know.
+Can you please tell me if I need Professional, Premium, etc. and/or if 
+the MSDN is needed?
+Also, would be worth going straight for 2012 if it's backward compatible?
+Thanks
+Neil
+
+
+On 10/3/2013 9:34 PM, Mark Tsuchida wrote:
+&gt;<i> Hi All,
+</I>&gt;<i>
+</I>&gt;<i> Micro-Manager's Windows build is soon to make a long overdue switch from Visual
+</I>&gt;<i> Studio 2008 SP1 to Visual Studio 2010 SP1.
+</I>&gt;<i>
+</I>&gt;<i> This should not affect most users (but help with testing will be much
+</I>&gt;<i> appreciated).
+</I>&gt;<i>
+</I>&gt;<i> If you are a device adapter developer on Windows, or otherwise build
+</I>&gt;<i> Micro-Manager from source on Windows, you will need to switch to VS2010 SP1
+</I>&gt;<i> (referred to simply as VS2010 below) at the time when the switch to VS2010 is
+</I>&gt;<i> committed to teh SVN repository.
+</I>&gt;<i>
+</I>&gt;<i> Currently, I have a private branch of MM building with VS2010. The VS2010
+</I>&gt;<i> branch is maintained so that it is based off a recent head of the SVN trunk.
+</I>&gt;<i> I plan to merge this branch with the trunk, if nothing goes wrong, on
+</I>&gt;<i>
+</I>&gt;<i>    Thursday, October 10.
+</I>&gt;<i>
+</I>&gt;<i> The nightly builds will also switch to using VS2010 at that time.
+</I>&gt;<i>
+</I>&gt;<i> The consequence of the merge will be that all VS2008 project files (.vcproj)
+</I>&gt;<i> will be removed and corresponding VS2010 project files (.vcxproj) will be
+</I>&gt;<i> added. In addition, various changes will be made to allow MM to build with
+</I>&gt;<i> VS2010.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> What you need to do
+</I>&gt;<i> ===================
+</I>&gt;<i>
+</I>&gt;<i> ## All developers building C++ components
+</I>&gt;<i>
+</I>&gt;<i> You will need to set up VS2010. Here are the instructions (if you are using the
+</I>&gt;<i> free Express edition):
+</I>&gt;<i>
+</I>&gt;<i> 1. Install Microsoft Windows SDK 7.1:
+</I>&gt;<i> <A HREF="http://www.microsoft.com/en-us/download/details.aspx?id=8279">http://www.microsoft.com/en-us/download/details.aspx?id=8279</A>
+</I>&gt;<i> (If the installer fails, go to Control Panels &gt; Programs and Features,
+</I>&gt;<i> uninstall everything with &quot;Microsoft Visual ... 2010&quot; in its name, and try
+</I>&gt;<i> again. An incomplete installation can seem to work but later cause subtle build
+</I>&gt;<i> issues.)
+</I>&gt;<i>
+</I>&gt;<i> 2. Install Visual C++ 2010 Express from
+</I>&gt;<i> <A HREF="http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express">http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express</A>
+</I>&gt;<i> (Refuse the invitation to choose Visual Studio 2012.)
+</I>&gt;<i>
+</I>&gt;<i> 3. Upgrade to Visual Studio 2010 (Express) SP1:
+</I>&gt;<i> <A HREF="http://www.microsoft.com/en-us/download/details.aspx?id=23691">http://www.microsoft.com/en-us/download/details.aspx?id=23691</A>
+</I>&gt;<i>
+</I>&gt;<i> 4. Install this package to repair VS2010 SP1:
+</I>&gt;<i> <A HREF="http://www.microsoft.com/en-us/download/details.aspx?id=4422">http://www.microsoft.com/en-us/download/details.aspx?id=4422</A>
+</I>&gt;<i>
+</I>&gt;<i> VS2010 can coexist with VS2008 on the same computer.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ## Authors and maintainers of device adapters in the SVN repository
+</I>&gt;<i>
+</I>&gt;<i> - I have ensured that all device adapters compile properly. Since I am unable
+</I>&gt;<i>    to test most of the hardware, there remains the possibility of library
+</I>&gt;<i>    incompatibilities at runtime, for device adapters that link to external
+</I>&gt;<i>    libraries.
+</I>&gt;<i>
+</I>&gt;<i> - Before the switch date, please download the VS2010 branch build (see below
+</I>&gt;<i>    for a link to the installers) and test if your device adapter functions
+</I>&gt;<i>    correctly.
+</I>&gt;<i>
+</I>&gt;<i> - If fixes are necessary, please do not commit them to SVN before I merge the
+</I>&gt;<i>    VS2010 branch (unless they are source code fixes that are also compatible
+</I>&gt;<i>    with VS2008). Instead, please let me know by email.
+</I>&gt;<i>
+</I>&gt;<i> - When I merge the VS2010 branch, there will be some changes to the project
+</I>&gt;<i>    files in addition to simply converting from VS2008 to VS2010. Most of those
+</I>&gt;<i>    changes have to do with centralizing project settings using Visual Studio
+</I>&gt;<i>    property sheets (.props files). Please be aware of this (details are outlined
+</I>&gt;<i>    in the next section). Further changes to make the build more maintainable
+</I>&gt;<i>    will likely be made following the switch to VS2010 on the trunk, so please
+</I>&gt;<i>    remember to run 'svn update' frequently.
+</I>&gt;<i>
+</I>&gt;<i> - After I merge the VS2010 branch, please be careful not to commit VS2008
+</I>&gt;<i>    project files to the repository.
+</I>&gt;<i>
+</I>&gt;<i> If you keep your own version of the project file, please also see the next
+</I>&gt;<i> section (but it would be best if you start over with the version in the VS2010
+</I>&gt;<i> branch, and reapply any necessary local settings, such as library paths).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ## Authors of device adapters _not_ in the SVN repository
+</I>&gt;<i>
+</I>&gt;<i> To continue to build your adapter using the SVN trunk source code after the
+</I>&gt;<i> VS2010 changes are merged, you will need to:
+</I>&gt;<i>
+</I>&gt;<i> - Open your .vcproj file in VS2010 and click through the wizard to convert it
+</I>&gt;<i>    to a .vcxproj file.
+</I>&gt;<i>
+</I>&gt;<i> - In Project Properties &gt; General, set 'Platform Toolset' to 'Windows7.1SDK'
+</I>&gt;<i>    (make sure to set this for all Configurations and all Platforms).
+</I>&gt;<i>
+</I>&gt;<i> - In Project Properties &gt; Linker &gt; General, reset 'Output File' to '&lt;inherit
+</I>&gt;<i>    from parent or project defaults&gt;' (for all Configurations and Platforms).
+</I>&gt;<i>
+</I>&gt;<i> - In Tools &gt; Settings, choose 'Export Settings'.
+</I>&gt;<i>
+</I>&gt;<i> - Open View &gt; Property Manager. For each Configuration/Platform, right-click
+</I>&gt;<i>    and choose 'Add Existing Property Sheet...'. Choose the
+</I>&gt;<i>    buildscripts/VisualStudio/MMCommon.props file in the MM source (only
+</I>&gt;<i>    available in the VS2010 branch).
+</I>&gt;<i>
+</I>&gt;<i> - Repeat the previous step, this time to add
+</I>&gt;<i>    buildscripts/VisualStudio/MMDeviceAdapter.props. When you're done, make sure
+</I>&gt;<i>    that MMDeviceAdapter is displayed above MMCommon, at the top the list.
+</I>&gt;<i>
+</I>&gt;<i> - Go back to View &gt; Solution Explorer and once again open the project
+</I>&gt;<i>    properties. Reset all of the following properties to '&lt;inherit from parent or
+</I>&gt;<i>    project defaults&gt;' (make sure to first select all Configurations and all
+</I>&gt;<i>    Platforms):
+</I>&gt;<i>
+</I>&gt;<i>    - General &gt; Output Directory
+</I>&gt;<i>    - General &gt; Intermediate Directory
+</I>&gt;<i>    - General &gt; Target Name
+</I>&gt;<i>    - C/C++ &gt; General &gt; Warning Level
+</I>&gt;<i>    - Linker &gt; Debugging &gt; Generate Debug Info
+</I>&gt;<i>    - Linker &gt; Advanced &gt; Randomized Base Address
+</I>&gt;<i>    - Everything under Build Events (there is no longer a need to have a copy
+</I>&gt;<i>      command here), unless you have special requirements.
+</I>&gt;<i>
+</I>&gt;<i>    These settings are now set in the common property sheets so that they don't
+</I>&gt;<i>    have to be set for each device adapter. (We will likely move more settings to
+</I>&gt;<i>    the property sheets in the future.)
+</I>&gt;<i>
+</I>&gt;<i> If you prefer, you can test your VS2010 project file ahead of time using the
+</I>&gt;<i> source code from my private VS2010 branch (see below for downloading).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ## Developers who perform full or partial builds of Micro-Manager on Windows
+</I>&gt;<i>
+</I>&gt;<i> Previously, there were a few Visual Studio solution (.sln) files scattered
+</I>&gt;<i> around the source tree, and MMCoreJ_wrap/MMCoreJ_wrap.sln contained all device
+</I>&gt;<i> adapters in addition to the Core and MMCoreJ. Built binaries were placed in
+</I>&gt;<i> the directories bin_Win32/ and bin_x64/.
+</I>&gt;<i>
+</I>&gt;<i> With the update to VS2010, there is a single solution file (micromanager.sln at
+</I>&gt;<i> the source root) that is used to build all C++ components (Core, MMCoreJ,
+</I>&gt;<i> MMCorePy, device adapters, and the not-very-well-maintained test projects).
+</I>&gt;<i> Built binaries are placed in build/Release/Win32/ (or the corresponding
+</I>&gt;<i> directory for the selected configuration and platform).
+</I>&gt;<i>
+</I>&gt;<i> The fastest way to build several projects (e.g. the Core, MMCoreJ, and a
+</I>&gt;<i> handful of device adapters) is to open micromanager.sln, right click each
+</I>&gt;<i> project, and choose 'Build'.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Downloading the VS2010 branch
+</I>&gt;<i> =============================
+</I>&gt;<i>
+</I>&gt;<i> The source code, patch set, and binary installers for the VS2010 branch are
+</I>&gt;<i> available here:
+</I>&gt;<i> <A HREF="http://valelab.ucsf.edu/~mtsuchida/ephemeral/expires-20131031/vs2010/">http://valelab.ucsf.edu/~mtsuchida/ephemeral/expires-20131031/vs2010/</A>
+</I>&gt;<i>
+</I>&gt;<i> Once the VS2010 branch is merged into the SVN trunk (currently sceduled for Oct
+</I>&gt;<i> 10), this page will be removed.
+</I>&gt;<i>
+</I>&gt;<i> Maintainers of closed-source device adapters can contact me directly to get a
+</I>&gt;<i> copy of the patched source code (the installers include closed-source device
+</I>&gt;<i> adapters).
+</I>&gt;<i>
+</I>&gt;<i> I will periodically update the VS2010 branch to incorporate changes to the SVN
+</I>&gt;<i> trunk.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Q &amp; A
+</I>&gt;<i> =====
+</I>&gt;<i>
+</I>&gt;<i> Q: I tested a device adapter from the installer linked above, and it doesn't
+</I>&gt;<i>     work. How sould I report this?
+</I>&gt;<i> A: Please first make sure it is working with the VS2008 build (i.e. the current
+</I>&gt;<i>     nightly build). If it is, please post to this mailing list and include the
+</I>&gt;<i>     symptoms you observe when you try to add the device in the Hardware
+</I>&gt;<i>     Configuration Wizard. Please also include the relevant contents of the
+</I>&gt;<i>     CoreLog (with debug logging enabled). I will work with you to fix the issues.
+</I>&gt;<i>
+</I>&gt;<i> Q: How do I build MMCoreJ.jar on the VS2010 branch?
+</I>&gt;<i> A: One additional change has been made to MMCoreJ: the generated Java code is
+</I>&gt;<i>     compiled by the Ant scripts (i.e. the same way all the other Java components
+</I>&gt;<i>     are built), instead of invoking the Java compiler from Visual Studio. If you
+</I>&gt;<i>     want to build just MMCoreJ.jar, after building MMCoreJ_wrap from VS2010, run
+</I>&gt;<i>     the following command from the command prompt, in the MM source root (Apache
+</I>&gt;<i>     Ant is required):
+</I>&gt;<i>     ant -f MMCoreJ_wrap\build.xml
+</I>&gt;<i>
+</I>&gt;<i> Q: How do I build LibraryTest?
+</I>&gt;<i> A: Open micromanager.sln, select the Platform, and right-click LibraryTest, and
+</I>&gt;<i>     choose 'Build'. The output can be found at e.g.
+</I>&gt;<i>     build/Release/Win32/LibraryTest.exe
+</I>&gt;<i>
+</I>&gt;<i> Q: Why not keep both .vcproj and .vcxproj in the SVN trunk, so that either
+</I>&gt;<i>     VS2008 or VS2010 can be used?
+</I>&gt;<i> A: I'm sorry, but that would be too much of a maintainance nightmare....
+</I>&gt;<i>
+</I>&gt;<i> Q: Why not switch to VS2012?
+</I>&gt;<i> A: We hope to do so eventually, and the switch from VS2010 should be relatively
+</I>&gt;<i>     easy (compared to VS2008 -&gt; VS2010). Just want to take things one step at a
+</I>&gt;<i>     time. Also, I think it will be relatively easy to build with VS2012 using
+</I>&gt;<i>     VS2010 project files, as the changes are not as drastic as between VS2008
+</I>&gt;<i>     and VS2010.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thanks for bearing with all that.
+</I>&gt;<i> Please let me know if you have any questions or concerns!
+</I>&gt;<i>
+</I>&gt;<i> Best,
+</I>&gt;<i> Mark
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001178.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+	<LI>Next message: <A HREF="001182.html">[OpenSPIM] All C++ developers: Transition to Visual Studio 2010
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1179">[ date ]</a>
+              <a href="thread.html#1179">[ thread ]</a>
+              <a href="subject.html#1179">[ subject ]</a>
+              <a href="author.html#1179">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

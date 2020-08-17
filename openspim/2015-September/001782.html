@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] 回复：  Can you tell me the possible reasons for registration failure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Fgb18030%3Fb%3Fu9i4tKO6ICBDYW4geW91IHRlbGwgbWUgdGhlIHBv%3F%3D%0A%20%3D%3Fgb18030%3Fq%3Fssible_reasons_for_registration_failure%3F%3D&In-Reply-To=%3Ctencent_53DD5814090581814C2E1939%40qq.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001789.html">
+   <LINK REL="Next"  HREF="001783.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] 回复：  Can you tell me the possible reasons for registration failure</H1>
+    <B>政</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Fgb18030%3Fb%3Fu9i4tKO6ICBDYW4geW91IHRlbGwgbWUgdGhlIHBv%3F%3D%0A%20%3D%3Fgb18030%3Fq%3Fssible_reasons_for_registration_failure%3F%3D&In-Reply-To=%3Ctencent_53DD5814090581814C2E1939%40qq.com%3E"
+       TITLE="[OpenSPIM] 回复：  Can you tell me the possible reasons for registration failure">709314090 at qq.com
+       </A><BR>
+    <I>Mon Sep 14 06:17:39 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001789.html">[OpenSPIM] pinhole location and diameter to clean up the laser beam
+</A></li>
+        <LI>Next message: <A HREF="001783.html">[OpenSPIM] 回复：  Can you tell me the possible reasons for registration failure
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1782">[ date ]</a>
+              <a href="thread.html#1782">[ thread ]</a>
+              <a href="subject.html#1782">[ subject ]</a>
+              <a href="author.html#1782">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear PAvel，
+    Thanks for your reply! I will go to read the documentation as you recommended.
+    The xy resolution is just as described in <A HREF="http://openspim.org/Pixel_Size_Calibration">http://openspim.org/Pixel_Size_Calibration</A> (I have done the calibration with rule mode), and the z resolution is just the number of z-step when acquire the data. Is that all right?
+    I have antoher question. As in the sample data, there are 0-4 angles for each time lapses. If I want to acquire multi-views for different angles, does only the rotional stage be moved when I change to another view?  The reason for I ask this question is that the detected part of sample would leave the view of CMOS when I just changed the angle stage, and I have to change the x or y stage to move it back. I don't know whether this process lead to the registration fail.
+
+
+   Thank you for your reply again!
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+
+
+ 
+
+
+
+
+------------------ 原始邮件 ------------------
+发件人: &quot;Pavel Tomancak&quot;;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt;;
+发送时间: 2015年9月14日(星期一) 晚上6:15
+收件人: &quot;政&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt;; 
+抄送: &quot;openspim&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;; 
+主题: Re: [OpenSPIM] Can you tell me the possible reasons for registration failure
+
+
+
+Dear Zheng,
+
+This could mean several things, for example that you do not have enough beads around the sample, do not segment them properly or that your views overlap only minimally and thus do not share enough beads. Another reason might be that you did not enter correct calibration, i.e. the ratio between xy and z dimensions. If that is the case the registration cannot work.
+
+
+I recommend to read the paper about bead based registration and the documentation on the Fiji wiki [1] to understand what the algorithm is doing and what these reported numbers mean. These are not error messages, they are meant to help you understand where lies the problem in your registration. 
+
+
+All the best
+
+
+PAvel
+
+
+[1] <A HREF="http://fiji.sc/SPIM_Registration_Method">http://fiji.sc/SPIM_Registration_Method</A>
+ --------------------------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Research Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+Pfotenhauerstr. 108
+D-01307 Dresden							Tel.: +49 351 210 2670
+Germany									Fax: +49 351 210 2020
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>
+twitter: @PavelTomancak
+--------------------------------------------------------------------------------------------------
+
+ 
+ 
+On Sep 14, 2015, at 4:48 AM, 政 &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt; wrote:
+
+Hi, everyone,
+    Sorry to disturb you again. I try my best to do the registration work, but it didn't work. It still alerts something follow
+spim_TL01_Angle2.tif&lt;-&gt;spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif&lt;-&gt;spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+
+
+
+    Can someone tell me some possible reasons whick would lead to these errors? Both in the data process and experiment.
+
+
+    Thank you very much!
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+
+
+ 
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150914/83e2ff42/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150914/83e2ff42/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001789.html">[OpenSPIM] pinhole location and diameter to clean up the laser beam
+</A></li>
+	<LI>Next message: <A HREF="001783.html">[OpenSPIM] 回复：  Can you tell me the possible reasons for registration failure
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1782">[ date ]</a>
+              <a href="thread.html#1782">[ thread ]</a>
+              <a href="subject.html#1782">[ subject ]</a>
+              <a href="author.html#1782">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

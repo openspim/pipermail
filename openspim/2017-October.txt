@@ -1,0 +1,259 @@
+From huyan1020 at sjtu.edu.cn  Wed Oct 11 02:40:03 2017
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Wed, 11 Oct 2017 15:40:03 +0800 (CST)
+Subject: [OpenSPIM] some bright thing in Fluorescent beads images
+Message-ID: <177139809.4139044.1507707603244.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, everyone.
+
+This is Yan.
+I used our openSPIM to take Fluorescent beads images as shown in the attachment, named figure-original.tif.
+and I found there are some bright thing along with the beads, as marked by red circles in figure-part.tif.
+
+I put the beads in water and water in chamber, then took images, there is no such bright thing in images.
+But I put the beads in RMIS (RI=1.457), and the same in chamber, then there are such bright thing in images.
+
+Is there anyone who knows possible reason for this bright thing in image? 
+What can I do to delete such thing?
+
+Thank you very much.
+Yan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: figure-original.tif
+Type: image/tiff
+Size: 4196104 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171011/a11348e6/attachment-0002.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: figure-part.tif
+Type: image/tiff
+Size: 957938 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171011/a11348e6/attachment-0003.tif>
+
+From emmanuel.reynaud at ucd.ie  Wed Oct 11 02:57:04 2017
+From: emmanuel.reynaud at ucd.ie (Emmanuel Reynaud)
+Date: Wed, 11 Oct 2017 08:57:04 +0100
+Subject: [OpenSPIM] some bright thing in Fluorescent beads images
+In-Reply-To: <177139809.4139044.1507707603244.JavaMail.zimbra@sjtu.edu.cn>
+References: <177139809.4139044.1507707603244.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <CADdnFiq9PCB=g99=gHOcjmTr=njVce6yV+DvrvYjnXFbcRRj6g@mail.gmail.com>
+
+Dear Yan,
+
+Those "things" seems to be all beyond the beads opposite from the light
+sheet illumination? If so they maybe illumination artefacts due to the
+combination of orthogonal laser light and your RMSI. You could easily
+reduce exposure time by half and/or reduce laser power.
+And to be sure check that your RMSI is clean...
+
+On Wednesday, 11 October 2017, 胡衍 <huyan1020 at sjtu.edu.cn> wrote:
+> Hello, everyone.
+>
+> This is Yan.
+> I used our openSPIM to take Fluorescent beads images as shown in the
+attachment, named figure-original.tif.
+> and I found there are some bright thing along with the beads, as marked
+by red circles in figure-part.tif.
+>
+> I put the beads in water and water in chamber, then took images, there is
+no such bright thing in images.
+> But I put the beads in RMIS (RI=1.457), and the same in chamber, then
+there are such bright thing in images.
+>
+> Is there anyone who knows possible reason for this bright thing in image?
+> What can I do to delete such thing?
+>
+> Thank you very much.
+> Yan
+>
+
+-- 
+*Dr Emmanuel G. Reynaud*
+Principal Investigator, Integrative Biology
+Conway Institute of Biomolecular and Biomedical Science
+UCD Centre for Biomedical Engineering (
+http://www.ucd.ie/biomedicalengineering/)
+
+e-mail: emmanuel.reynaud at ucd.ie <matthias.wilm at ucd.ie>
+Website:http://cellbiology.ucd.ie/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171011/b885ab71/attachment.html>
+
+From nikita.vladimirov at mdc-berlin.de  Wed Oct 11 05:10:41 2017
+From: nikita.vladimirov at mdc-berlin.de (Nikita Vladimirov)
+Date: Wed, 11 Oct 2017 12:10:41 +0200
+Subject: [OpenSPIM] some bright thing in Fluorescent beads images
+In-Reply-To: <CADdnFiq9PCB=g99=gHOcjmTr=njVce6yV+DvrvYjnXFbcRRj6g@mail.gmail.com>
+References: <177139809.4139044.1507707603244.JavaMail.zimbra@sjtu.edu.cn>
+ <CADdnFiq9PCB=g99=gHOcjmTr=njVce6yV+DvrvYjnXFbcRRj6g@mail.gmail.com>
+Message-ID: <fb516c22-7127-5ce8-66c5-e87b3fc5a195@mdc-berlin.de>
+
+Hi, Yan,
+
+There might be something off with alignment of your system - the 
+artefacts are stronger in the left part of the field.
+Also, are you using a water-dipping objective with RMSI (RI = 1.457)? If 
+the objective is not designed for this refractive index, PSFs will have 
+aberrations.
+I hope this helps,
+Nikita
+
+
+On 11/10/2017 09:57, Emmanuel Reynaud wrote:
+> Dear Yan,
+>
+> Those "things" seems to be all beyond the beads opposite from the 
+> light sheet illumination? If so they maybe illumination artefacts due 
+> to the combination of orthogonal laser light and your RMSI. You could 
+> easily reduce exposure time by half and/or reduce laser power.
+> And to be sure check that your RMSI is clean...
+>
+> On Wednesday, 11 October 2017, 胡衍 <huyan1020 at sjtu.edu.cn 
+> <mailto:huyan1020 at sjtu.edu.cn>> wrote:
+> > Hello, everyone.
+> >
+> > This is Yan.
+> > I used our openSPIM to take Fluorescent beads images as shown in the 
+> attachment, named figure-original.tif.
+> > and I found there are some bright thing along with the beads, as 
+> marked by red circles in figure-part.tif.
+> >
+> > I put the beads in water and water in chamber, then took images, 
+> there is no such bright thing in images.
+> > But I put the beads in RMIS (RI=1.457), and the same in chamber, 
+> then there are such bright thing in images.
+> >
+> > Is there anyone who knows possible reason for this bright thing in 
+> image?
+> > What can I do to delete such thing?
+> >
+> > Thank you very much.
+> > Yan
+> >
+>
+> -- 
+> *Dr Emmanuel G. Reynaud*
+> Principal Investigator, Integrative Biology
+> Conway Institute of Biomolecular and Biomedical Science
+> UCD Centre for Biomedical Engineering 
+> (http://www.ucd.ie/biomedicalengineering/)
+>
+> e-mail: emmanuel.reynaud at ucd.ie <mailto:matthias.wilm at ucd.ie>
+> Website:http://cellbiology.ucd.ie/
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Nikita Vladimirov, PhD
+
+Preibisch Lab
+Max-Delbrück-Centrum
+Building 89
+Robert-Rössle-Str. 10
+13125 Berlin
+twitter.com/nvladimus
+github.com/nvladimus
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171011/c24f73a9/attachment.html>
+
+From chens18 at rpi.edu  Thu Oct 12 11:18:01 2017
+From: chens18 at rpi.edu (Kathleen Chen)
+Date: Thu, 12 Oct 2017 12:18:01 -0400
+Subject: [OpenSPIM] Calibration using the target grid and mirror?
+Message-ID: <CAGv7iOgjLjLOtJp+oudosP+1w=0Wdc5rxqJ=P+FB5UjH9owCww@mail.gmail.com>
+
+Hello everyone,
+
+>From the wiki there is a method for calibration of the light sheet using a
+grid (from a micrometer slide) and mirror attached to a syringe. We have
+been having some trouble with calibration  in our prototype OpenSPIM system
+and we have a few questions.
+
+1. How did others extract the small grid from the calibration slide? How
+was it attached to the calibration sample holder (syringe)?
+2. Is the system calibrated every time before use or is it calibrated less
+frequently? If it is calibrated often, how do you ensure that the grid is
+stable for each position and it doesn't move ("wobble around") in the
+chamber during the calibration?
+
+Would anyone have any advice about this?
+
+Thank you,
+Kathleen
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171012/09a4b517/attachment.html>
+
+From emmanuel.reynaud at ucd.ie  Thu Oct 12 11:32:47 2017
+From: emmanuel.reynaud at ucd.ie (Emmanuel Reynaud)
+Date: Thu, 12 Oct 2017 17:32:47 +0100
+Subject: [OpenSPIM] Calibration using the target grid and mirror?
+In-Reply-To: <CAGv7iOgjLjLOtJp+oudosP+1w=0Wdc5rxqJ=P+FB5UjH9owCww@mail.gmail.com>
+References: <CAGv7iOgjLjLOtJp+oudosP+1w=0Wdc5rxqJ=P+FB5UjH9owCww@mail.gmail.com>
+Message-ID: <CADdnFirg63vtEUSQ8Fba-g8Gp31GE05+mKtHFMkr7y-8BpKffA@mail.gmail.com>
+
+Kathleen,
+
+Well, it depends on your micrometer slide... if it is an engraved coverslip
+like the eppendorf system then you can glue it on a capillary that fits the
+tip of the syringe (uncut) and mount it like that.
+Basically, you take a syringe, insert a capillary in the tip, glue it, then
+glue the grid/mirror on top of the capillary
+Stability of the system is very variable. some system well isolated with no
+moving parts and other motor vibrating around can be calibrated once before
+the set of experiments and of you go and just check at the end for
+security. Just a bit of try and error will tell you the best.
+
+
+
+*Dr Emmanuel G. Reynaud*
+Principal Investigator, Integrative Biology
+Conway Institute of Biomolecular and Biomedical Science
+UCD Centre for Biomedical Engineering (
+http://www.ucd.ie/biomedicalengineering/)
+
+e-mail: emmanuel.reynaud at ucd.ie <matthias.wilm at ucd.ie>
+Website:http://cellbiology.ucd.ie/
+
+On 12 October 2017 at 17:18, Kathleen Chen <chens18 at rpi.edu> wrote:
+
+> Hello everyone,
+>
+> From the wiki there is a method for calibration of the light sheet using a
+> grid (from a micrometer slide) and mirror attached to a syringe. We have
+> been having some trouble with calibration  in our prototype OpenSPIM system
+> and we have a few questions.
+>
+> 1. How did others extract the small grid from the calibration slide? How
+> was it attached to the calibration sample holder (syringe)?
+> 2. Is the system calibrated every time before use or is it calibrated less
+> frequently? If it is calibrated often, how do you ensure that the grid is
+> stable for each position and it doesn't move ("wobble around") in the
+> chamber during the calibration?
+>
+> Would anyone have any advice about this?
+>
+> Thank you,
+> Kathleen
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171012/f22cd6ba/attachment.html>
+

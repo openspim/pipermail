@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] obis laser
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20obis%20laser&In-Reply-To=%3C53806.10.1.150.46.1403881974.squirrel%40webmail.mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001422.html">
+   <LINK REL="Next"  HREF="001394.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] obis laser</H1>
+    <B>Peter Gabriel Pitrone</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20obis%20laser&In-Reply-To=%3C53806.10.1.150.46.1403881974.squirrel%40webmail.mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] obis laser">pitrone at mpi-cbg.de
+       </A><BR>
+    <I>Fri Jun 27 10:12:54 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001422.html">[OpenSPIM] obis laser
+</A></li>
+        <LI>Next message: <A HREF="001394.html">[OpenSPIM] search for 4D-stage dll
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1424">[ date ]</a>
+              <a href="thread.html#1424">[ thread ]</a>
+              <a href="subject.html#1424">[ subject ]</a>
+              <a href="author.html#1424">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello Niel,
+
+The 488ish nm model emits a unmeasurable (with a meeter) amount of green
+light that can still be seen due to our eye's spectral response... Use an
+emission filter to block the laser and see what comes out of the other
+side.
+
+Pete
+
+-- 
+Peter Gabriel Pitrone - FRMS TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &amp;
+<A HREF="http://www.openspim.org">http://www.openspim.org</A>
+
+&quot;If a straight line fit is required, obtain only two data points.&quot; - Anon.
+
+
+On Fri, June 27, 2014 16:48, Neil Anthony wrote:
+&lt;|&gt; Hi Guys,
+&lt;|&gt;
+&lt;|&gt; might I ask what the issue is with the OBIS that requires a clean up?  I
+&lt;|&gt; guess I'm wrong in thinking that a diode laser would only emit one
+&lt;|&gt; wavelength (or very small spectral bandwidth)?
+&lt;|&gt;
+&lt;|&gt; Thanks
+&lt;|&gt; Neil
+&lt;|&gt;
+&lt;|&gt; On 6/12/2014 3:58 AM, pitrone wrote:
+&lt;|&gt;&gt; Hello Michael,
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; We did use OBIS for a few months due to a defective CUBE, and it
+&lt;|&gt;&gt; worked very well... But at the time we did not have it integrated into
+&lt;|&gt;&gt; the plugin, so unless the driver can be merged into it then I cannot
+&lt;|&gt;&gt; make any statement for or against getting one. Otherwise when this
+&lt;|&gt;&gt; merger is accomplished I would say go for it, with the caveat of
+&lt;|&gt;&gt; getting a clean up filter (eGFP excitation of 490/10 or 490/15 ±400
+&lt;|&gt;&gt; USD/GBP/EUR) along side it.
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; My $0.02,
+&lt;|&gt;&gt; Pete
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; Peter Gabriel Pitrone FRMS TechRMS
+&lt;|&gt;&gt; Microscopist &amp; Imaging Specialist
+&lt;|&gt;&gt; Dr. Pavel Tomancak's group
+&lt;|&gt;&gt; Max Planck Institute for Molecular
+&lt;|&gt;&gt; Cell Biology and Genetics (MPI-CBG)
+&lt;|&gt;&gt; Pfotenhauerstrasse 108
+&lt;|&gt;&gt; 01307, Dresden
+&lt;|&gt;&gt; Germany
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; +49 (0) 351 210 2687
+&lt;|&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>&gt;
+&lt;|&gt;&gt; <A HREF="http://www.openspim.org">http://www.openspim.org</A>
+&lt;|&gt;&gt;
+&lt;|&gt;&gt;
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; On Jun 11, 2014, at 7:37 PM, Kevin W Eliceiri wrote:
+&lt;|&gt;&gt;
+&lt;|&gt;&gt;&gt; Hi Michael,
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; I know our colleagues in Germany have used both and been pleased.
+&lt;|&gt;&gt;&gt; Only issue was need cleanup filter in both cases. There are now
+&lt;|&gt;&gt;&gt; drivers on github for micromanger control of obis
+&lt;|&gt;&gt;&gt; but we have not to my knowledge tried this. See
+&lt;|&gt;&gt;&gt; <A HREF="https://github.com/hc5/CoherentOBIS">https://github.com/hc5/CoherentOBIS</A>
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; best
+&lt;|&gt;&gt;&gt; kevin
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; On 06/11/14, Michael Redd  wrote:
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt; Coherent is replacing their Cube laser with their Obis line. The
+&lt;|&gt;&gt;&gt;&gt; Obis is USB connectable and is much cheaper than the Cube. Has
+&lt;|&gt;&gt;&gt;&gt; anyone used an Obis laser with OpenSPIM or micromanager?
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt; Cheers
+&lt;|&gt;&gt;&gt;&gt; mike
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; --
+&lt;|&gt;&gt;&gt; Kevin W. Eliceiri
+&lt;|&gt;&gt;&gt; Director, Laboratory for Optical and Computational Instrumentation
+&lt;|&gt;&gt;&gt; (LOCI)
+&lt;|&gt;&gt;&gt; Departments Cell and Molecular Biology and Biomedical Engineering
+&lt;|&gt;&gt;&gt; Affiliate Principal Investigator, Morgridge Institute for Research
+&lt;|&gt;&gt;&gt; (MIR)
+&lt;|&gt;&gt;&gt; Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+&lt;|&gt;&gt;&gt; Phone: 608-263-6288
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; _______________________________________________
+&lt;|&gt;&gt;&gt; OpenSPIM mailing list
+&lt;|&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+&lt;|&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+&lt;|&gt;&gt;
+&lt;|&gt;
+&lt;|&gt; _______________________________________________
+&lt;|&gt; OpenSPIM mailing list
+&lt;|&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+&lt;|&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+&lt;|&gt;
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001422.html">[OpenSPIM] obis laser
+</A></li>
+	<LI>Next message: <A HREF="001394.html">[OpenSPIM] search for 4D-stage dll
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1424">[ date ]</a>
+              <a href="thread.html#1424">[ thread ]</a>
+              <a href="subject.html#1424">[ subject ]</a>
+              <a href="author.html#1424">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

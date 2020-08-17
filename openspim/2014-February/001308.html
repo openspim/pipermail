@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C55233.10.1.191.65.1391464779.squirrel%40webmail.mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001307.html">
+   <LINK REL="Next"  HREF="001309.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Peter Gabriel Pitrone</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3C55233.10.1.191.65.1391464779.squirrel%40webmail.mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">pitrone at mpi-cbg.de
+       </A><BR>
+    <I>Mon Feb  3 15:59:39 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001307.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="001309.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1308">[ date ]</a>
+              <a href="thread.html#1308">[ thread ]</a>
+              <a href="subject.html#1308">[ subject ]</a>
+              <a href="author.html#1308">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Howdy Nikul,
+
+I would love to see this work, and agree with Pavel that this is great!!
+May I ask how you plan to handle the data once it is acquired at this
+rate?! This is no small feat... I'm also interested in what you will
+image.
+
+Have a great evening!
+Pete
+
+
+
+-- 
+Peter Gabriel Pitrone - FRMS TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+&quot;If a straight line fit is required, obtain only two data points.&quot; - Anon.
+
+
+On Mon, February 3, 2014 21:41, Pavel Tomancak wrote:
+&lt;|&gt; Hi Nikul,
+&lt;|&gt;
+&lt;|&gt; I see, you are really pushing the performance of OpenSPIM to the limit.
+&lt;|&gt; That's great!
+&lt;|&gt;
+&lt;|&gt; When you a re ready, please describe your set-up on the wiki. Are you
+&lt;|&gt; working with Brian McCabe? If yes, say hi to him.
+&lt;|&gt;
+&lt;|&gt; All the best
+&lt;|&gt;
+&lt;|&gt; PAvel
+&lt;|&gt;
+&lt;|&gt;
+-----------------------------------------------------------------------------------
+&lt;|&gt; Pavel Tomancak, Ph.D.
+&lt;|&gt;
+&lt;|&gt; Group Leader
+&lt;|&gt; Max Planck Institute of Molecular Cell Biology and Genetics
+&lt;|&gt; Pfotenhauerstr. 108
+&lt;|&gt; D-01307 Dresden				Tel.: +49 351 210 2670
+&lt;|&gt; Germany						Fax: +49 351 210 2020
+&lt;|&gt; email: <A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+&lt;|&gt; homepage:
+&lt;|&gt; <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>
+&lt;|&gt; twitter: @PavelTomancak
+&lt;|&gt;
+-----------------------------------------------------------------------------------
+&lt;|&gt;
+&lt;|&gt;
+&lt;|&gt;
+&lt;|&gt;
+&lt;|&gt;
+&lt;|&gt; On Feb 3, 2014, at 5:19 PM, Nikul &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nikul at ee.columbia.edu</A>&gt; wrote:
+&lt;|&gt;
+&lt;|&gt;&gt; Hi Luke and Johannes,
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; I was able to figure out what the problem was. MMCoreJJNI.java lists
+&lt;|&gt;&gt; the root directory and mm/Win64 as the search directories for a 64-bit
+&lt;|&gt;&gt; build while openspim.build.xml was staging the files to mm/x64.
+&lt;|&gt;&gt; Changing
+&lt;|&gt;&gt; the staging directory in  openspim.build.xml solved the problem!
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; On another note, I am trying to interface a 100 fps 5.5mp camera with
+&lt;|&gt;&gt; OpenSPIM
+&lt;|&gt;&gt; and am using a RAID0 array of four ssd drives. The write speed I get
+&lt;|&gt;&gt; through
+&lt;|&gt;&gt; OpenSPIM (or micromanager) is at the moment only able to handle about
+&lt;|&gt;&gt; 50 fps. Before I dig into the code to see if there is something I can
+&lt;|&gt;&gt; optimize for
+&lt;|&gt;&gt; the particular setup, I wanted to check if anyone has any tips to
+&lt;|&gt;&gt; achieve write speeds
+&lt;|&gt;&gt; to get full frame rate capture from the camera.
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; Thanks,
+&lt;|&gt;&gt; ---
+&lt;|&gt;&gt; Nikul Ukani
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; Doctoral Candidate,
+&lt;|&gt;&gt; Dept. of Electrical Engineering,
+&lt;|&gt;&gt; Columbia University.
+&lt;|&gt;&gt; <A HREF="http://www.bionet.ee.columbia.edu/">http://www.bionet.ee.columbia.edu/</A>
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; On Jan 31, 2014, at 4:42 PM, Nikul &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nikul at ee.columbia.edu</A>&gt; wrote:
+&lt;|&gt;&gt;
+&lt;|&gt;&gt;&gt; I'll look into it and get back. If it works, it will be great to have
+&lt;|&gt;&gt;&gt; some resource
+&lt;|&gt;&gt;&gt; on the OpenSPIM website for compiling it in 64-bit.
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; Thanks,
+&lt;|&gt;&gt;&gt; ---
+&lt;|&gt;&gt;&gt; Nikul Ukani
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; Doctoral Candidate,
+&lt;|&gt;&gt;&gt; Dept. of Electrical Engineering,
+&lt;|&gt;&gt;&gt; Columbia University.
+&lt;|&gt;&gt;&gt; <A HREF="http://www.bionet.ee.columbia.edu/">http://www.bionet.ee.columbia.edu/</A>
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt; On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+&lt;|&gt;&gt;&gt; wrote:
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt; Hi Nikul,
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt; --x64 is supposed to change &quot;mm.architecture&quot; to &quot;x64&quot; before calling
+&lt;|&gt;&gt;&gt;&gt; Micro-Manager's build scripts; this should build MM in 64-bit.
+&lt;|&gt;&gt;&gt;&gt; However, it's entirely probable that &quot;build.sh&quot; and/or
+&lt;|&gt;&gt;&gt;&gt; &quot;openspim.build.xml&quot; do not copy the 64-bit files -- I would check
+&lt;|&gt;&gt;&gt;&gt; first to see if the relevant binaries exist in &quot;stage&quot; or &quot;build&quot;
+&lt;|&gt;&gt;&gt;&gt; subdirectories. If so, you'll have to look through the build system
+&lt;|&gt;&gt;&gt;&gt; to see where we stage this files (I believe the relevant target is
+&lt;|&gt;&gt;&gt;&gt; near the end of &quot;openspim.build.xml&quot;) and make sure the correct
+&lt;|&gt;&gt;&gt;&gt; architecture is copied from.
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt; Hope this helps,
+&lt;|&gt;&gt;&gt;&gt; Luke
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt; On 01/31/14, Nikul Ukani  wrote:
+&lt;|&gt;&gt;&gt;&gt;&gt; Hi Johannes,
+&lt;|&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt; That's possible as all I did was to change the platform to x64 in
+&lt;|&gt;&gt;&gt;&gt;&gt; the build script. Can you point me to which project does that
+&lt;|&gt;&gt;&gt;&gt;&gt; library correspond to so I can investigate whether the correct flag
+&lt;|&gt;&gt;&gt;&gt;&gt; is being passed while compiling it?
+&lt;|&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt; Thanks,
+&lt;|&gt;&gt;&gt;&gt;&gt; Nikul
+&lt;|&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; On Jan 31, 2014, at 2:21 PM, Johannes Schindelin
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; wrote:
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; Hi Nikul,
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; On Fri, 31 Jan 2014, Nikul Ukani wrote:
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; I am currently trying to compile OpenSPIM on a 64 bit machine
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; running
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; Windows 7. While I was able to get it to compile by modifying some
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; of
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; the build scripts; upon trying to open it from Fiji, I get the
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; following
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; error
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; Error: Failed to open libMMCoreJ_wrap.jnilib
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt; mmcorej.MMCoreJJNI.swig_module_init()V
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; library. Possible?
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; Ciao,
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt; Johannes
+&lt;|&gt;&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;&gt;&gt; _______________________________________________
+&lt;|&gt;&gt;&gt;&gt;&gt; OpenSPIM mailing list
+&lt;|&gt;&gt;&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+&lt;|&gt;&gt;&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+&lt;|&gt;&gt;&gt;&gt;
+&lt;|&gt;&gt;&gt;
+&lt;|&gt;&gt;
+&lt;|&gt;&gt; _______________________________________________
+&lt;|&gt;&gt; OpenSPIM mailing list
+&lt;|&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+&lt;|&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+&lt;|&gt;
+&lt;|&gt; _______________________________________________
+&lt;|&gt; OpenSPIM mailing list
+&lt;|&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+&lt;|&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+&lt;|&gt;
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001307.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="001309.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1308">[ date ]</a>
+              <a href="thread.html#1308">[ thread ]</a>
+              <a href="subject.html#1308">[ subject ]</a>
+              <a href="author.html#1308">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

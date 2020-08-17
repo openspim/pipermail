@@ -1,0 +1,1582 @@
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): -------->>
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): Core session started on 2013-10-10T18:40:53.114087 by Administrator on IPT-N-0180
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): Debug logging disabled
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): Debug logging disabled
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): > MMCore version 2.3.2
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): > Device API version 53, Module API version 7
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T18:40:53.114087, 5044, 002729A8:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > #uManager plugins: 118
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.util.Comparator
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.551587, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.lang.Iterable
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: java.util.EventListener
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:40:53.567212, 5044, 002A4370:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T18:41:15.192212, 5044, 002729A8:): All devices unloaded.
+LOG(2013-10-10T18:41:15.192212, 5044, 002729A8:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T18:41:15.457837, 5044, 002729A8:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:41:15.457837, 5044, 002729A8:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:41:17.426587, 5044, 002729A8:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:41:17.426587, 5044, 002729A8:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:41:17.426587, 5044, 002729A8:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:41:17.426587, 5044, 002729A8:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:41:17.598462, 5044, 002729A8:): Starting initialization sequence for 4 devices...
+LOG(2013-10-10T18:41:18.254712, 5044, 002729A8:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:41:18.270337, 5044, 002729A8:): Device Picard Twister initialized.
+LOG(2013-10-10T18:41:18.332837, 5044, 002729A8:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): Camera device set to TIS_DCAM
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): Focus device set to Picard Z Stage
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): Auto shutter ON.
+LOG(2013-10-10T18:41:18.442212, 5044, 002729A8:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T18:41:18.520337, 5044, 002729A8:): System state cache updated.
+LOG(2013-10-10T18:41:18.645337, 5044, 002729A8:): System state cache updated.
+LOG(2013-10-10T18:41:18.707837, 5044, 002729A8:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T18:42:15.957837, 5832, 002A4900:): -------->>
+LOG(2013-10-10T18:42:15.957837, 5832, 002A4900:): Core session started on 2013-10-10T18:42:15.957837 by Administrator on IPT-N-0180
+LOG(2013-10-10T18:42:15.957837, 5832, 002A4900:): Debug logging disabled
+LOG(2013-10-10T18:42:15.957837, 5832, 002A4900:): Debug logging disabled
+LOG(2013-10-10T18:42:15.957837, 5832, 002A4900:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T18:42:15.973462, 5832, 002A4900:): > MMCore version 2.3.2
+LOG(2013-10-10T18:42:15.973462, 5832, 002A4900:): > Device API version 53, Module API version 7
+LOG(2013-10-10T18:42:15.973462, 5832, 002A4900:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T18:42:15.973462, 5832, 002A4900:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > #uManager plugins: 118
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.util.Comparator
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.lang.Iterable
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: java.util.EventListener
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:42:16.223462, 5832, 002A4AF0:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T18:42:22.957837, 5832, 002A4900:): All devices unloaded.
+LOG(2013-10-10T18:42:22.957837, 5832, 002A4900:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T18:42:23.145337, 5832, 002A4900:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:42:23.145337, 5832, 002A4900:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:42:25.239087, 5832, 002A4900:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:42:25.239087, 5832, 002A4900:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:42:25.239087, 5832, 002A4900:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:42:25.239087, 5832, 002A4900:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:42:25.395337, 5832, 002A4900:): Starting initialization sequence for 4 devices...
+LOG(2013-10-10T18:42:25.926587, 5832, 002A4900:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:42:25.942212, 5832, 002A4900:): Device Picard Twister initialized.
+LOG(2013-10-10T18:42:26.004712, 5832, 002A4900:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): Camera device set to TIS_DCAM
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): Focus device set to Picard Z Stage
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): Auto shutter ON.
+LOG(2013-10-10T18:42:26.098462, 5832, 002A4900:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T18:42:26.129712, 5832, 002A4900:): System state cache updated.
+LOG(2013-10-10T18:42:26.192212, 5832, 002A4900:): System state cache updated.
+LOG(2013-10-10T18:42:26.254712, 5832, 002A4900:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T18:42:31.395337, 5832, 002A4900:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T18:42:34.723462, 5832, 002A4900:): Resolution ID Uncalibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T18:42:34.723462, 5832, 002A4900:): Pixel size 1.000000 um set for resolution ID: Uncalibrated
+LOG(2013-10-10T18:42:34.723462, 5832, 002A4900:): Starting initialization sequence for 4 devices...
+LOG(2013-10-10T18:42:34.723462, 5832, 002A4900:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:42:34.785962, 5832, 002A4900:): Device Picard Twister initialized.
+LOG(2013-10-10T18:42:34.832837, 5832, 002A4900:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:42:34.926587, 5832, 002A4900:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:42:34.926587, 5832, 002A4900:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:42:34.926587, 5832, 002A4900:): > Defined uncalibrated pixel size (1:1).
+LOG(2013-10-10T18:42:35.332837, 5832, 002A4900:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T18:42:35.332837, 5832, 002A4900:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T18:43:07.254712, 5832, 002E1D80:): > 
+org.micromanager.utils.MMScriptException: MMScript error: Undefined acquisition name: Snap/Live Window in Thread[Display thread,6,main]
+  at org.micromanager.acquisition.AcquisitionManager.getAcquisition(AcquisitionManager.java:110)
+  at org.micromanager.MMStudioMainFrame.addImage(MMStudioMainFrame.java:4283)
+  at org.micromanager.acquisition.LiveModeTimer$1.show(LiveModeTimer.java:79)
+  at org.micromanager.MMStudioMainFrame$9.run(MMStudioMainFrame.java:683)
+
+
+LOG(2013-10-10T18:43:13.707837, 5832, 002E16C0:): All devices unloaded.
+LOG(2013-10-10T18:43:13.707837, 5832, 002E16C0:): System reset at 2013-10-10T18:43:13.707837.
+LOG(2013-10-10T18:43:14.020337, 5832, 002E16C0:): > CoherentCube
+LOG(2013-10-10T18:43:14.348462, 5832, 002E16C0:): >    CoherentCube, CoherentCube Laser
+LOG(2013-10-10T18:43:14.348462, 5832, 002E16C0:): > DemoCamera
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DCam, Demo camera
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DWheel, Demo filter wheel
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DStateDevice, Demo State Device
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DObjective, Demo objective turret
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DStage, Demo stage
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DXYStage, Demo XY stage
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DLightPath, Demo light path
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DAutoFocus, Demo auto focus
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DShutter, Demo shutter
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    D-DA, Demo DA
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DOptovar, Demo Optovar
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    TransposeProcessor, TransposeProcessor
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    ImageFlipX, ImageFlipX
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    ImageFlipY, ImageFlipY
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    MedianFilter, MedianFilter
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): >    DHub, DHub
+LOG(2013-10-10T18:43:14.629712, 5832, 002E16C0:): > Hamamatsu
+LOG(2013-10-10T18:43:14.785962, 5832, 002E16C0:): > Error: Unable to load Hamamatsu library.
+LOG(2013-10-10T18:43:14.785962, 5832, 002E16C0:): > HamamatsuHam
+LOG(2013-10-10T18:43:14.879712, 5832, 002E16C0:): > Error: Unable to load HamamatsuHam library.
+LOG(2013-10-10T18:43:14.879712, 5832, 002E16C0:): > PicardStage
+LOG(2013-10-10T18:43:14.879712, 5832, 002E16C0:): >    Picard Twister, Twister
+LOG(2013-10-10T18:43:14.879712, 5832, 002E16C0:): >    Picard Z Stage, Z stage
+LOG(2013-10-10T18:43:14.879712, 5832, 002E16C0:): >    Picard XY Stage, XY stage
+LOG(2013-10-10T18:43:14.879712, 5832, 002E16C0:): > QCam
+LOG(2013-10-10T18:43:15.676587, 5832, 002E16C0:): >    QCamera, QImaging universal camera adapter
+LOG(2013-10-10T18:43:15.676587, 5832, 002E16C0:): > SerialManager
+LOG(2013-10-10T18:43:15.832837, 5832, 002E16C0:): >    COM4, Serial communication port
+LOG(2013-10-10T18:43:15.832837, 5832, 002E16C0:): >    COM5, Serial communication port
+LOG(2013-10-10T18:43:15.832837, 5832, 002E16C0:): > TIScam
+LOG(2013-10-10T18:43:15.832837, 5832, 002E16C0:): >    TIS_DCAM, The Imaging Source
+LOG(2013-10-10T18:43:22.864087, 5832, 002E16C0:): Device COM4 loaded from SerialManager and labeled as COM4
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device COM5 loaded from SerialManager and labeled as COM5
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:43:22.879712, 5832, 002E16C0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): -------->>
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): Core session started on 2013-10-10T18:44:09.645337 by Administrator on IPT-N-0180
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): Debug logging disabled
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): Debug logging disabled
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): > MMCore version 2.3.2
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): > Device API version 53, Module API version 7
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T18:44:09.645337, 5100, 002766C0:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > #uManager plugins: 118
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.util.Comparator
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.lang.Iterable
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: java.util.EventListener
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:44:09.926587, 5100, 002A0BF8:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T18:44:14.301587, 5100, 002766C0:): All devices unloaded.
+LOG(2013-10-10T18:44:14.301587, 5100, 002766C0:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T18:44:15.176587, 5100, 002766C0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:44:15.176587, 5100, 002766C0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:44:17.582837, 5100, 002766C0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:44:17.582837, 5100, 002766C0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:44:17.582837, 5100, 002766C0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:44:17.582837, 5100, 002766C0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:44:17.707837, 5100, 002766C0:): Starting initialization sequence for 4 devices...
+LOG(2013-10-10T18:44:19.785962, 5100, 002766C0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:44:19.801587, 5100, 002766C0:): Device Picard Twister initialized.
+LOG(2013-10-10T18:44:19.864087, 5100, 002766C0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): Camera device set to TIS_DCAM
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): Focus device set to Picard Z Stage
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): Auto shutter ON.
+LOG(2013-10-10T18:44:19.910962, 5100, 002766C0:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T18:44:19.989087, 5100, 002766C0:): System state cache updated.
+LOG(2013-10-10T18:44:20.051587, 5100, 002766C0:): System state cache updated.
+LOG(2013-10-10T18:44:20.114087, 5100, 002766C0:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T18:44:27.160962, 5100, 002766C0:): All devices unloaded.
+LOG(2013-10-10T18:44:27.160962, 5100, 002766C0:): System reset at 2013-10-10T18:44:27.160962.
+LOG(2013-10-10T18:44:27.239087, 5100, 002766C0:): > CoherentCube
+LOG(2013-10-10T18:44:27.332837, 5100, 002766C0:): >    CoherentCube, CoherentCube Laser
+LOG(2013-10-10T18:44:27.332837, 5100, 002766C0:): > DemoCamera
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DCam, Demo camera
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DWheel, Demo filter wheel
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DStateDevice, Demo State Device
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DObjective, Demo objective turret
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DStage, Demo stage
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DXYStage, Demo XY stage
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DLightPath, Demo light path
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DAutoFocus, Demo auto focus
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DShutter, Demo shutter
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    D-DA, Demo DA
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DOptovar, Demo Optovar
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    TransposeProcessor, TransposeProcessor
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    ImageFlipX, ImageFlipX
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    ImageFlipY, ImageFlipY
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    MedianFilter, MedianFilter
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): >    DHub, DHub
+LOG(2013-10-10T18:44:27.426587, 5100, 002766C0:): > Hamamatsu
+LOG(2013-10-10T18:44:27.535962, 5100, 002766C0:): > Error: Unable to load Hamamatsu library.
+LOG(2013-10-10T18:44:27.535962, 5100, 002766C0:): > HamamatsuHam
+LOG(2013-10-10T18:44:27.614087, 5100, 002766C0:): > Error: Unable to load HamamatsuHam library.
+LOG(2013-10-10T18:44:27.614087, 5100, 002766C0:): > PicardStage
+LOG(2013-10-10T18:44:27.614087, 5100, 002766C0:): >    Picard Twister, Twister
+LOG(2013-10-10T18:44:27.614087, 5100, 002766C0:): >    Picard Z Stage, Z stage
+LOG(2013-10-10T18:44:27.614087, 5100, 002766C0:): >    Picard XY Stage, XY stage
+LOG(2013-10-10T18:44:27.614087, 5100, 002766C0:): > QCam
+LOG(2013-10-10T18:44:28.192212, 5100, 002766C0:): >    QCamera, QImaging universal camera adapter
+LOG(2013-10-10T18:44:28.192212, 5100, 002766C0:): > SerialManager
+LOG(2013-10-10T18:44:28.301587, 5100, 002766C0:): >    COM4, Serial communication port
+LOG(2013-10-10T18:44:28.301587, 5100, 002766C0:): >    COM5, Serial communication port
+LOG(2013-10-10T18:44:28.301587, 5100, 002766C0:): > TIScam
+LOG(2013-10-10T18:44:28.301587, 5100, 002766C0:): >    TIS_DCAM, The Imaging Source
+LOG(2013-10-10T18:44:30.410962, 5100, 002766C0:): Device COM4 loaded from SerialManager and labeled as COM4
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device COM5 loaded from SerialManager and labeled as COM5
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:44:30.426587, 5100, 002766C0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:44:30.989087, 5100, 002766C0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:44:31.004712, 5100, 002766C0:): Device Picard Twister initialized.
+LOG(2013-10-10T18:44:31.051587, 5100, 002766C0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:44:31.145337, 5100, 002766C0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:45:30.410962, 5100, 002766C0:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T18:45:31.848462, 5100, 002766C0:): Device DHub initialized.
+LOG(2013-10-10T18:45:43.692212, 5100, 002766C0:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T18:45:43.692212, 5100, 002766C0:): Device DShutter set as default shutter.
+LOG(2013-10-10T18:45:43.692212, 5100, 002766C0:): Device DShutter initialized.
+LOG(2013-10-10T18:46:21.285962, 5100, 002766C0:): All devices unloaded.
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): All devices unloaded.
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T18:46:23.223462, 5100, 002766C0:): Device DShutter set as default shutter.
+LOG(2013-10-10T18:46:23.332837, 5100, 002766C0:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T18:46:24.645337, 5100, 002766C0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:46:24.660962, 5100, 002766C0:): Device Picard Twister initialized.
+LOG(2013-10-10T18:46:24.723462, 5100, 002766C0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): Device DHub initialized.
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): Device DShutter initialized.
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): Camera device set to TIS_DCAM
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): Focus device set to Picard Z Stage
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): Auto shutter ON.
+LOG(2013-10-10T18:46:24.848462, 5100, 002766C0:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T18:46:24.910962, 5100, 002766C0:): System state cache updated.
+LOG(2013-10-10T18:46:24.973462, 5100, 002766C0:): System state cache updated.
+LOG(2013-10-10T18:46:29.567212, 5100, 002766C0:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T18:46:29.614087, 5100, 002766C0:): Resolution ID Uncalibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T18:46:29.614087, 5100, 002766C0:): Pixel size 1.000000 um set for resolution ID: Uncalibrated
+LOG(2013-10-10T18:46:29.614087, 5100, 002766C0:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T18:46:29.614087, 5100, 002766C0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:46:29.660962, 5100, 002766C0:): Device Picard Twister initialized.
+LOG(2013-10-10T18:46:29.676587, 5100, 002766C0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:46:29.739087, 5100, 002766C0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:46:29.739087, 5100, 002766C0:): Device DHub initialized.
+LOG(2013-10-10T18:46:29.739087, 5100, 002766C0:): Device DShutter initialized.
+LOG(2013-10-10T18:46:29.739087, 5100, 002766C0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:46:29.739087, 5100, 002766C0:): > Defined uncalibrated pixel size (1:1).
+LOG(2013-10-10T18:46:30.020337, 5100, 002766C0:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T18:46:30.020337, 5100, 002766C0:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T18:47:03.942212, 5100, 00277E00:): > 
+java.lang.UnsupportedOperationException in Thread[AWT-EventQueue-0,6,main]
+  at spim.setup.Laser.setPower(Laser.java:90)
+  at spim.SPIMAcquisition$10.valueChanged(SPIMAcquisition.java:781)
+  at spim.SteppedSlider.setValue(SteppedSlider.java:163)
+  at spim.SteppedSlider.setValue(SteppedSlider.java:187)
+  at spim.SteppedSlider$1.valueChanged(SteppedSlider.java:71)
+  at spim.SteppedSlider$DoubleField.focusLost(SteppedSlider.java:332)
+  at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:213)
+  at java.awt.Component.processFocusEvent(Component.java:6181)
+  at java.awt.Component.processEvent(Component.java:6045)
+  at java.awt.Container.processEvent(Container.java:2041)
+  at java.awt.Component.dispatchEventImpl(Component.java:4652)
+  at java.awt.Container.dispatchEventImpl(Container.java:2099)
+  at java.awt.Component.dispatchEvent(Component.java:4482)
+  at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1850)
+  at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:910)
+  at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:568)
+  at java.awt.Component.dispatchEventImpl(Component.java:4524)
+  at java.awt.Container.dispatchEventImpl(Container.java:2099)
+  at java.awt.Component.dispatchEvent(Component.java:4482)
+  at java.awt.KeyboardFocusManager.dispatchAndCatchException(KeyboardFocusManager.java:2557)
+  at java.awt.KeyboardFocusManager.processCurrentLightweightRequests(KeyboardFocusManager.java:2643)
+  at java.awt.KeyboardFocusManager.retargetFocusEvent(KeyboardFocusManager.java:2905)
+  at java.awt.Component.dispatchEventImpl(Component.java:4517)
+  at java.awt.Container.dispatchEventImpl(Container.java:2099)
+  at java.awt.Component.dispatchEvent(Component.java:4482)
+  at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+  at java.awt.EventQueue.access$000(EventQueue.java:85)
+  at java.awt.EventQueue$1.run(EventQueue.java:603)
+  at java.awt.EventQueue$1.run(EventQueue.java:601)
+  at java.security.AccessController.doPrivileged(Native Method)
+  at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+  at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+  at java.awt.EventQueue$2.run(EventQueue.java:617)
+  at java.awt.EventQueue$2.run(EventQueue.java:615)
+  at java.security.AccessController.doPrivileged(Native Method)
+  at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+  at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+  at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+  at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+  at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+  at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): -------->>
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): Core session started on 2013-10-10T18:58:50.103125 by Administrator on IPT-N-0180
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): Debug logging disabled
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): Debug logging disabled
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): > MMCore version 2.3.2
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): > Device API version 53, Module API version 7
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T18:58:50.103125, 4048, 00270E90:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > #uManager plugins: 118
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.util.Comparator
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Runnable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.lang.Iterable
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: java.util.EventListener
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T18:58:50.395324, 4048, 0026F570:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T18:58:57.520469, 4048, 00270E90:): All devices unloaded.
+LOG(2013-10-10T18:58:57.520469, 4048, 00270E90:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T18:58:57.542946, 4048, 00270E90:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T18:58:57.542946, 4048, 00270E90:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T18:59:00.150255, 4048, 00270E90:): Device DShutter set as default shutter.
+LOG(2013-10-10T18:59:00.464930, 4048, 00270E90:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T18:59:01.049327, 4048, 00270E90:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:59:01.139234, 4048, 00270E90:): Device Picard Twister initialized.
+LOG(2013-10-10T18:59:01.206665, 4048, 00270E90:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): Device DHub initialized.
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): Device DShutter initialized.
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): Camera device set to TIS_DCAM
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): Focus device set to Picard Z Stage
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): Auto shutter ON.
+LOG(2013-10-10T18:59:01.386479, 4048, 00270E90:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T18:59:01.476386, 4048, 00270E90:): System state cache updated.
+LOG(2013-10-10T18:59:01.588770, 4048, 00270E90:): System state cache updated.
+LOG(2013-10-10T18:59:01.678677, 4048, 00270E90:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T18:59:15.501909, 4048, 00270E90:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T18:59:15.524386, 4048, 00270E90:): Resolution ID Uncalibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T18:59:15.524386, 4048, 00270E90:): Pixel size 1.000000 um set for resolution ID: Uncalibrated
+LOG(2013-10-10T18:59:15.546863, 4048, 00270E90:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T18:59:15.546863, 4048, 00270E90:): Device TIS_DCAM initialized.
+LOG(2013-10-10T18:59:15.591817, 4048, 00270E90:): Device Picard Twister initialized.
+LOG(2013-10-10T18:59:15.614293, 4048, 00270E90:): Device Picard Z Stage initialized.
+LOG(2013-10-10T18:59:15.794108, 4048, 00270E90:): Device Picard XY Stage initialized.
+LOG(2013-10-10T18:59:15.794108, 4048, 00270E90:): Device DHub initialized.
+LOG(2013-10-10T18:59:15.794108, 4048, 00270E90:): Device DShutter initialized.
+LOG(2013-10-10T18:59:15.794108, 4048, 00270E90:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T18:59:15.794108, 4048, 00270E90:): > Defined uncalibrated pixel size (1:1).
+LOG(2013-10-10T18:59:16.400981, 4048, 00270E90:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T18:59:16.400981, 4048, 00270E90:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): -------->>
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): Core session started on 2013-10-10T19:23:18.741327 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): Debug logging disabled
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): Debug logging disabled
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): > MMCore version 2.3.2
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:23:18.741327, 3912, 002A4BA0:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > #uManager plugins: 118
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:23:18.953492, 3912, 002A4EB8:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:23:20.802353, 3912, 002A4BA0:): All devices unloaded.
+LOG(2013-10-10T19:23:20.802353, 3912, 002A4BA0:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:23:20.817508, 3912, 002A4BA0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:23:20.817508, 3912, 002A4BA0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:23:22.469359, 3912, 002A4BA0:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:23:22.666369, 3912, 002A4BA0:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:23:23.060388, 3912, 002A4BA0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:23:23.105852, 3912, 002A4BA0:): Device Picard Twister initialized.
+LOG(2013-10-10T19:23:23.136161, 3912, 002A4BA0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): Device DHub initialized.
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): Device DShutter initialized.
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): Auto shutter ON.
+LOG(2013-10-10T19:23:23.227089, 3912, 002A4BA0:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:23:23.287707, 3912, 002A4BA0:): System state cache updated.
+LOG(2013-10-10T19:23:23.348326, 3912, 002A4BA0:): System state cache updated.
+LOG(2013-10-10T19:23:23.348326, 3912, 002A4BA0:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:23:25.379042, 3912, 002A4BA0:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:23:25.439661, 3912, 002A4BA0:): Resolution ID Uncalibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:23:25.439661, 3912, 002A4BA0:): Pixel size 1.000000 um set for resolution ID: Uncalibrated
+LOG(2013-10-10T19:23:25.439661, 3912, 002A4BA0:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:23:25.439661, 3912, 002A4BA0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:23:25.500279, 3912, 002A4BA0:): Device Picard Twister initialized.
+LOG(2013-10-10T19:23:25.560897, 3912, 002A4BA0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:23:25.682134, 3912, 002A4BA0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:23:25.682134, 3912, 002A4BA0:): Device DHub initialized.
+LOG(2013-10-10T19:23:25.682134, 3912, 002A4BA0:): Device DShutter initialized.
+LOG(2013-10-10T19:23:25.682134, 3912, 002A4BA0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:23:25.682134, 3912, 002A4BA0:): > Defined uncalibrated pixel size (1:1).
+LOG(2013-10-10T19:23:26.091308, 3912, 002A4BA0:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:23:26.091308, 3912, 002A4BA0:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): -------->>
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): Core session started on 2013-10-10T19:30:48.350522 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): Debug logging disabled
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): Debug logging disabled
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): > MMCore version 2.3.2
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:30:48.350522, 1868, 002A5DF0:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > #uManager plugins: 118
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:30:48.567126, 1868, 002A5FE0:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:30:59.892410, 1868, 002A5DF0:): All devices unloaded.
+LOG(2013-10-10T19:30:59.892410, 1868, 002A5DF0:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:30:59.938825, 1868, 002A5DF0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:30:59.938825, 1868, 002A5DF0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:31:01.671656, 1868, 002A5DF0:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:31:01.841845, 1868, 002A5DF0:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:31:02.259580, 1868, 002A5DF0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:31:02.321467, 1868, 002A5DF0:): Device Picard Twister initialized.
+LOG(2013-10-10T19:31:02.383354, 1868, 002A5DF0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): Device DHub initialized.
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): Device DShutter initialized.
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): Auto shutter ON.
+LOG(2013-10-10T19:31:02.507128, 1868, 002A5DF0:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:31:02.569014, 1868, 002A5DF0:): System state cache updated.
+LOG(2013-10-10T19:31:02.646373, 1868, 002A5DF0:): System state cache updated.
+LOG(2013-10-10T19:31:02.708260, 1868, 002A5DF0:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:31:18.860715, 1868, 002A5DF0:): > Error: A Pixel Size Calibration must be selected first.
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): -------->>
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): Core session started on 2013-10-10T19:37:07.450377 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): Debug logging disabled
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): Debug logging disabled
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): > MMCore version 2.3.2
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:37:07.450377, 4892, 002A4AE8:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > #uManager plugins: 118
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:37:07.652136, 4892, 002A4C48:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:37:19.325289, 4892, 002A4AE8:): All devices unloaded.
+LOG(2013-10-10T19:37:19.325289, 4892, 002A4AE8:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:37:19.339700, 4892, 002A4AE8:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:37:19.339700, 4892, 002A4AE8:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:37:20.896120, 4892, 002A4AE8:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:37:21.083467, 4892, 002A4AE8:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:37:21.472572, 4892, 002A4AE8:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:37:21.486984, 4892, 002A4AE8:): Device Picard Twister initialized.
+LOG(2013-10-10T19:37:21.530217, 4892, 002A4AE8:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): Device DHub initialized.
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): Device DShutter initialized.
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): Auto shutter ON.
+LOG(2013-10-10T19:37:21.616685, 4892, 002A4AE8:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:37:21.674330, 4892, 002A4AE8:): System state cache updated.
+LOG(2013-10-10T19:37:21.746387, 4892, 002A4AE8:): System state cache updated.
+LOG(2013-10-10T19:37:21.746387, 4892, 002A4AE8:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:37:25.003341, 4892, 002A4AE8:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:37:25.017752, 4892, 002A4AE8:): Resolution ID Uncalibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:37:25.017752, 4892, 002A4AE8:): Pixel size 1.000000 um set for resolution ID: Uncalibrated
+LOG(2013-10-10T19:37:25.017752, 4892, 002A4AE8:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:37:25.017752, 4892, 002A4AE8:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:37:25.089809, 4892, 002A4AE8:): Device Picard Twister initialized.
+LOG(2013-10-10T19:37:25.133042, 4892, 002A4AE8:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:37:25.248333, 4892, 002A4AE8:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:37:25.248333, 4892, 002A4AE8:): Device DHub initialized.
+LOG(2013-10-10T19:37:25.248333, 4892, 002A4AE8:): Device DShutter initialized.
+LOG(2013-10-10T19:37:25.248333, 4892, 002A4AE8:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:37:25.248333, 4892, 002A4AE8:): > Defined uncalibrated pixel size (1:1).
+LOG(2013-10-10T19:37:25.623027, 4892, 002A4AE8:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:37:25.623027, 4892, 002A4AE8:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:37:53.840352, 4892, 00273C50:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:37:53.840352, 4892, 00273C50:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:37:53.883586, 4892, 00273C50:): Device Picard Twister initialized.
+LOG(2013-10-10T19:37:53.941231, 4892, 00273C50:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:37:53.998876, 4892, 00273C50:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:37:53.998876, 4892, 00273C50:): Device DHub initialized.
+LOG(2013-10-10T19:37:53.998876, 4892, 00273C50:): Device DShutter initialized.
+LOG(2013-10-10T19:37:53.998876, 4892, 00273C50:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:38:05.124400, 4892, 00273C50:): Pixel Size Configuration Pixel size/Uncalibrated deleted.
+LOG(2013-10-10T19:38:05.124400, 4892, 00273C50:): Resolution ID Calibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:38:05.138811, 4892, 00273C50:): Pixel size 0.417188 um set for resolution ID: Calibrated
+LOG(2013-10-10T19:38:05.182045, 4892, 00273C50:): System state cache updated.
+LOG(2013-10-10T19:38:21.034475, 4892, 00273C50:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:38:21.106532, 4892, 00273C50:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:38:21.106532, 4892, 00273C50:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): -------->>
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): Core session started on 2013-10-10T19:42:09.093377 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): Debug logging disabled
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): Debug logging disabled
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): > MMCore version 2.3.2
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:42:09.093377, 4652, 00270D08:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > #uManager plugins: 118
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:09.320824, 4652, 00270F30:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:42:13.293556, 4652, 00270D08:): All devices unloaded.
+LOG(2013-10-10T19:42:13.293556, 4652, 00270D08:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:42:13.308719, 4652, 00270D08:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:42:13.308719, 4652, 00270D08:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:42:14.946334, 4652, 00270D08:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:42:15.097965, 4652, 00270D08:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:42:15.477042, 4652, 00270D08:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:42:15.522532, 4652, 00270D08:): Device Picard Twister initialized.
+LOG(2013-10-10T19:42:15.537695, 4652, 00270D08:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Device DHub initialized.
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Device DShutter initialized.
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Auto shutter ON.
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Resolution ID Calibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:42:15.659000, 4652, 00270D08:): Pixel size 0.417188 um set for resolution ID: Calibrated
+LOG(2013-10-10T19:42:15.719652, 4652, 00270D08:): System state cache updated.
+LOG(2013-10-10T19:42:15.795468, 4652, 00270D08:): System state cache updated.
+LOG(2013-10-10T19:42:15.856120, 4652, 00270D08:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:42:17.615040, 4652, 00270D08:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:42:18.054769, 4652, 00270D08:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:42:18.054769, 4652, 00270D08:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): -------->>
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): Core session started on 2013-10-10T19:42:46.182320 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): Debug logging disabled
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): Debug logging disabled
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): > MMCore version 2.3.2
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:42:46.182320, 3088, 002A4C08:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > #uManager plugins: 118
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:42:46.394603, 3088, 002A4E08:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:42:49.184614, 3088, 002A4C08:): All devices unloaded.
+LOG(2013-10-10T19:42:49.184614, 3088, 002A4C08:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:42:49.199777, 3088, 002A4C08:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:42:49.199777, 3088, 002A4C08:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:42:50.822229, 3088, 002A4C08:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:42:50.943533, 3088, 002A4C08:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:42:51.322611, 3088, 002A4C08:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:42:51.352937, 3088, 002A4C08:): Device Picard Twister initialized.
+LOG(2013-10-10T19:42:51.413589, 3088, 002A4C08:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Device DHub initialized.
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Device DShutter initialized.
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Auto shutter ON.
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Resolution ID Calibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:42:51.504568, 3088, 002A4C08:): Pixel size 0.417188 um set for resolution ID: Calibrated
+LOG(2013-10-10T19:42:51.565220, 3088, 002A4C08:): System state cache updated.
+LOG(2013-10-10T19:42:51.625873, 3088, 002A4C08:): System state cache updated.
+LOG(2013-10-10T19:42:51.625873, 3088, 002A4C08:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:42:55.219528, 3088, 002A4C08:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:42:55.689584, 3088, 002A4C08:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:42:55.689584, 3088, 002A4C08:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): -------->>
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): Core session started on 2013-10-10T19:45:00.735566 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): Debug logging disabled
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): Debug logging disabled
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): > MMCore version 2.3.2
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:45:00.735566, 5244, 002A5D28:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > #uManager plugins: 118
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:45:00.951639, 5244, 002A5A68:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:45:03.251275, 5244, 002A5D28:): All devices unloaded.
+LOG(2013-10-10T19:45:03.251275, 5244, 002A5D28:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:45:03.266709, 5244, 002A5D28:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:45:03.266709, 5244, 002A5D28:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:45:04.964427, 5244, 002A5D28:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:45:05.057030, 5244, 002A5D28:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:45:05.458309, 5244, 002A5D28:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:45:05.504610, 5244, 002A5D28:): Device Picard Twister initialized.
+LOG(2013-10-10T19:45:05.535478, 5244, 002A5D28:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Device DHub initialized.
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Device DShutter initialized.
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Auto shutter ON.
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Resolution ID Calibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:45:05.628081, 5244, 002A5D28:): Pixel size 0.417188 um set for resolution ID: Calibrated
+LOG(2013-10-10T19:45:05.689816, 5244, 002A5D28:): System state cache updated.
+LOG(2013-10-10T19:45:05.751551, 5244, 002A5D28:): System state cache updated.
+LOG(2013-10-10T19:45:05.766985, 5244, 002A5D28:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:45:20.583433, 5244, 002A5D28:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:45:20.892109, 5244, 002A5D28:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:45:20.892109, 5244, 002A5D28:): Device TIS_DCAM message: Acquisition thread started
+LOG(2013-10-10T19:45:45.478152, 5244, 002A5D28:): > 
+java.lang.UnsupportedOperationException in Thread[AWT-EventQueue-0,6,main]
+  at spim.setup.Laser.setPower(Laser.java:90)
+  at spim.SPIMAcquisition$10.valueChanged(SPIMAcquisition.java:781)
+  at spim.SteppedSlider.setValue(SteppedSlider.java:163)
+  at spim.SteppedSlider.setValue(SteppedSlider.java:187)
+  at spim.SteppedSlider$1.valueChanged(SteppedSlider.java:71)
+  at spim.SteppedSlider$DoubleField.focusLost(SteppedSlider.java:332)
+  at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:213)
+  at java.awt.Component.processFocusEvent(Component.java:6181)
+  at java.awt.Component.processEvent(Component.java:6045)
+  at java.awt.Container.processEvent(Container.java:2041)
+  at java.awt.Component.dispatchEventImpl(Component.java:4652)
+  at java.awt.Container.dispatchEventImpl(Container.java:2099)
+  at java.awt.Component.dispatchEvent(Component.java:4482)
+  at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1850)
+  at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:910)
+  at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:568)
+  at java.awt.Component.dispatchEventImpl(Component.java:4524)
+  at java.awt.Container.dispatchEventImpl(Container.java:2099)
+  at java.awt.Component.dispatchEvent(Component.java:4482)
+  at java.awt.KeyboardFocusManager.dispatchAndCatchException(KeyboardFocusManager.java:2557)
+  at java.awt.KeyboardFocusManager.processCurrentLightweightRequests(KeyboardFocusManager.java:2643)
+  at java.awt.KeyboardFocusManager.retargetFocusEvent(KeyboardFocusManager.java:2905)
+  at java.awt.Component.dispatchEventImpl(Component.java:4517)
+  at java.awt.Container.dispatchEventImpl(Container.java:2099)
+  at java.awt.Component.dispatchEvent(Component.java:4482)
+  at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+  at java.awt.EventQueue.access$000(EventQueue.java:85)
+  at java.awt.EventQueue$1.run(EventQueue.java:603)
+  at java.awt.EventQueue$1.run(EventQueue.java:601)
+  at java.security.AccessController.doPrivileged(Native Method)
+  at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+  at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+  at java.awt.EventQueue$2.run(EventQueue.java:617)
+  at java.awt.EventQueue$2.run(EventQueue.java:615)
+  at java.security.AccessController.doPrivileged(Native Method)
+  at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+  at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+  at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+  at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+  at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+  at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+LOG(2013-10-10T19:45:56.497885, 5244, 002964A8:): Auto shutter OFF.
+LOG(2013-10-10T19:45:59.939623, 5244, 002964A8:): Auto shutter ON.
+LOG(2013-10-10T19:46:07.702824, 5244, 002739F8:): Auto shutter OFF.
+LOG(2013-10-10T19:46:07.996066, 5244, 002739F8:): Auto shutter ON.
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): -------->>
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): Core session started on 2013-10-10T19:46:35.715171 by Administrator on IPT-N-0180
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): Debug logging disabled
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): Debug logging disabled
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): > MM Studio version: 1.4.x dev
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): > MMCore version 2.3.2
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): > Device API version 53, Module API version 7
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): > Operating System: Windows XP 5.1
+LOG(2013-10-10T19:46:35.715171, 4508, 002703C0:): > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > #uManager plugins: 118
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.util.Comparator
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.io.FilenameFilter
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.SPIMCalibrator
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.MouseListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.WindowListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.FocusListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ActionListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Runnable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: javax.swing.event.ChangeListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.KeyListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.lang.Iterable
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.awt.event.ItemListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: java.util.EventListener
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > interface found: spim.setup.Device$Factory
+LOG(2013-10-10T19:46:35.915811, 4508, 00270598:): > Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-10T19:46:49.559290, 4508, 002703C0:): All devices unloaded.
+LOG(2013-10-10T19:46:49.559290, 4508, 002703C0:): > Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-10T19:46:49.574724, 4508, 002703C0:): Device TIS_DCAM loaded from TIScam and labeled as TIS_DCAM
+LOG(2013-10-10T19:46:49.574724, 4508, 002703C0:): Device TIS_DCAM set as default camera.
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device DHub loaded from DemoCamera and labeled as DHub
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device DShutter loaded from DemoCamera and labeled as DShutter
+LOG(2013-10-10T19:46:51.287875, 4508, 002703C0:): Device DShutter set as default shutter.
+LOG(2013-10-10T19:46:51.442213, 4508, 002703C0:): Starting initialization sequence for 6 devices...
+LOG(2013-10-10T19:46:51.735456, 4508, 002703C0:): Device TIS_DCAM initialized.
+LOG(2013-10-10T19:46:51.750889, 4508, 002703C0:): Device Picard Twister initialized.
+LOG(2013-10-10T19:46:51.797191, 4508, 002703C0:): Device Picard Z Stage initialized.
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Device Picard XY Stage initialized.
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Device DHub initialized.
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Device DShutter initialized.
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): > Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Camera device set to TIS_DCAM
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): > Notification for Device: Core Property: Camera changed to value: TIS_DCAM
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): > Notification for Device: Core Property: Shutter changed to value: DShutter
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Focus device set to Picard Z Stage
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Auto shutter ON.
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): > Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Resolution ID Calibrated: for device Core defined as Initialize=1
+LOG(2013-10-10T19:46:51.889794, 4508, 002703C0:): Pixel size 0.417188 um set for resolution ID: Calibrated
+LOG(2013-10-10T19:46:51.951529, 4508, 002703C0:): System state cache updated.
+LOG(2013-10-10T19:46:52.028698, 4508, 002703C0:): System state cache updated.
+LOG(2013-10-10T19:46:52.090433, 4508, 002703C0:): > Startup script file (C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-10T19:46:54.190033, 4508, 002703C0:): > Plugin command: Acquire SPIM image
+LOG(2013-10-10T19:46:54.669727, 4508, 002703C0:): Device TIS_DCAM message: Started sequence acquisition: 2147483647 at 0 ms
+
+LOG(2013-10-10T19:46:54.685201, 4508, 002703C0:): Device TIS_DCAM message: Acquisition thread started

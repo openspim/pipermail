@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Software hangs during stack capture
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Software%20hangs%20during%20stack%20capture&In-Reply-To=%3C942DA4AF-230A-43B7-8196-D8B269D08B06%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001093.html">
+   <LINK REL="Next"  HREF="001096.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Software hangs during stack capture</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Software%20hangs%20during%20stack%20capture&In-Reply-To=%3C942DA4AF-230A-43B7-8196-D8B269D08B06%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] Software hangs during stack capture">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Tue Aug 13 13:02:55 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001093.html">[OpenSPIM] About the calibration of the lightsheet
+</A></li>
+        <LI>Next message: <A HREF="001096.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1095">[ date ]</a>
+              <a href="thread.html#1095">[ thread ]</a>
+              <a href="subject.html#1095">[ subject ]</a>
+              <a href="author.html#1095">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Answering my own post…
+well after a few more days and more recordings, it seems that the problem did not appear again. No more hangs during acquisition.
+I keep an eye open.
+
+Alexis
+ 
+On 31 Jul 2013, at 09:38, Alexis Maizel &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Alexis.Maizel at cos.uni-heidelberg.de</A>&gt; wrote:
+
+&gt;<i> Hi Johannes &amp; Luke,
+</I>&gt;&gt;&gt;<i> I noticed that upon acquisition of a stack  written to disk, OpenSPIM
+</I>&gt;&gt;&gt;<i> occasionally pauses in the middle of the acquisition for  some seconds
+</I>&gt;&gt;&gt;<i> to several minutes. I have only observed this when the stack is written
+</I>&gt;&gt;&gt;<i> to disk, not when the same stack is left in RAM and opened immediately.
+</I>&gt;&gt;&gt;<i> I tried to turn ON/OFF the asynchronous writing option but that did not
+</I>&gt;&gt;&gt;<i> change anything. 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Are you running an anti-virus software that could be at fault?
+</I>&gt;<i> 
+</I>&gt;<i> Not that I am aware of, but there might be a lot of crap (updates, power manager, blabla…) that could interfere. I will see at cleaning this mess a bit.
+</I>&gt;<i> However, I did not notice anything happening @ the GUI level and correlating with these hangs.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I've been getting some weird hangings as each slice is written out (affecting the entire operating system, not just the SPIM software), but typically they were lasting no more than a half-second, and never on the order of minutes. They're recent, and I've been doing some timing tests to try and determine the cause to greater accuracy than 'when writing'.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I take it the disk is local to the computer?
+</I>&gt;<i> 
+</I>&gt;<i> Yep, internal HD. 
+</I>&gt;<i> 
+</I>&gt;&gt;&gt;<i> Also I have noticed that I can not increase the memory allocated to Fiji
+</I>&gt;&gt;&gt;<i> beyond 1024M as it causes the HamamatsuHam driver to not load properly. 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Yes, that is unfortunately not something we can fix until we switch to a
+</I>&gt;&gt;<i> 64-bit version (which should be doable soon, given the hardware).
+</I>&gt;<i> 
+</I>&gt;<i> Let's wait then.
+</I>&gt;<i> 
+</I>&gt;<i> With my best regards,
+</I>&gt;<i> 
+</I>&gt;<i> Alexis
+</I>&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Ciao,
+</I>&gt;&gt;<i> Johannes
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130813/dd5a56b7/attachment.sig">http://openspim.org/pipermail/openspim/attachments/20130813/dd5a56b7/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001093.html">[OpenSPIM] About the calibration of the lightsheet
+</A></li>
+	<LI>Next message: <A HREF="001096.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1095">[ date ]</a>
+              <a href="thread.html#1095">[ thread ]</a>
+              <a href="subject.html#1095">[ subject ]</a>
+              <a href="author.html#1095">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

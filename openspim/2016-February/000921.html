@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Stradus Versalase for OpemSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Stradus%20Versalase%20for%20OpemSPIM&In-Reply-To=%3CAMXPR05MB0224FD1CFA726D5E71A6721EBA40%40AMXPR05MB022.eurprd05.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000920.html">
+   <LINK REL="Next"  HREF="000923.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Stradus Versalase for OpemSPIM</H1>
+    <B>PEARSON Matthew</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Stradus%20Versalase%20for%20OpemSPIM&In-Reply-To=%3CAMXPR05MB0224FD1CFA726D5E71A6721EBA40%40AMXPR05MB022.eurprd05.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] Stradus Versalase for OpemSPIM">matthew.pearson at igmm.ed.ac.uk
+       </A><BR>
+    <I>Tue Feb 23 10:22:23 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000920.html">[OpenSPIM] Stradus Versalase for OpemSPIM
+</A></li>
+        <LI>Next message: <A HREF="000923.html">[OpenSPIM] The update error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#921">[ date ]</a>
+              <a href="thread.html#921">[ thread ]</a>
+              <a href="subject.html#921">[ subject ]</a>
+              <a href="author.html#921">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Tim,
+
+Thanks for the info, yes Johannes has been in tooch so i will follow hisand your instructions.
+
+Thanks again,
+
+Matt
+
+________________________________________
+From: Feinstein, Timothy N &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at pitt.edu</A>&gt;
+Sent: 23 February 2016 15:54
+To: PEARSON Matthew
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: [OpenSPIM] Stradus Versalase for OpemSPIM
+
+Hi Matt,
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager:
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 2/23/16, 5:05 AM, &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> on behalf of PEARSON
+Matthew&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> on behalf of
+<A HREF="http://openspim.org/mailman/listinfo/openspim">matthew.pearson at igmm.ed.ac.uk</A>&gt; wrote:
+
+&gt;<i>Hi all,
+</I>&gt;<i>
+</I>&gt;<i>I was wondering if anyone is using a Stradus Versalase with OpenSPIM and
+</I>&gt;<i>if so i'm interested in knowing what properties of the laser are required
+</I>&gt;<i>and included in the micro-manager config group/preset.  So far i have
+</I>&gt;<i>created a Micro-Manager config file that contains all the required SPIM
+</I>&gt;<i>devices.
+</I>&gt;<i>
+</I>&gt;<i>Thanks,
+</I>&gt;<i>
+</I>&gt;<i>Matt
+</I>&gt;<i>
+</I>&gt;<i>--
+</I>&gt;<i>Matt Pearson
+</I>&gt;<i>Microscopy Facility
+</I>&gt;<i>MRC Human Genetics Unit
+</I>&gt;<i>IGMM
+</I>&gt;<i>University of Edinburgh
+</I>&gt;<i>Crewe Road
+</I>&gt;<i>EH4 2XU
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>--
+</I>&gt;<i>The University of Edinburgh is a charitable body, registered in
+</I>&gt;<i>Scotland, with registration number SC005336.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>_______________________________________________
+</I>&gt;<i>OpenSPIM mailing list
+</I>&gt;<i><A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i><A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000920.html">[OpenSPIM] Stradus Versalase for OpemSPIM
+</A></li>
+	<LI>Next message: <A HREF="000923.html">[OpenSPIM] The update error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#921">[ date ]</a>
+              <a href="thread.html#921">[ thread ]</a>
+              <a href="subject.html#921">[ subject ]</a>
+              <a href="author.html#921">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

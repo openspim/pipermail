@@ -1,0 +1,1202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3CCAHAw%2B8bokXwhZR3_i-A3Bdr13zGnd677CLUoB1L4TcT%3DoKSh8w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001442.html">
+   <LINK REL="Next"  HREF="001445.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3CCAHAw%2B8bokXwhZR3_i-A3Bdr13zGnd677CLUoB1L4TcT%3DoKSh8w%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20">aureliaomega at gmail.com
+       </A><BR>
+    <I>Tue Jul  1 12:14:51 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001442.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+        <LI>Next message: <A HREF="001445.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1444">[ date ]</a>
+              <a href="thread.html#1444">[ thread ]</a>
+              <a href="subject.html#1444">[ subject ]</a>
+              <a href="author.html#1444">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi again,
+
+Yep, the COM3 messages stop when I get rid of the extra line in the
+configuration file. Oh! This is exciting!  After I start up and load the
+configuration file without the extra COM3 line, I can start the plugin, and
+move the stage! However, when I try to start live view, I then get a
+Micro-Manager error: &quot;Error in device Camera-1: The device cannot set this
+property at the moment.&quot;  Trying to use Snap gives &quot;Error Acquiring: null.&quot;
+Well, it was exciting for me anyhow. Another corelog is attached.
+
+Aurelia
+
+
+
+On Tue, Jul 1, 2014 at 5:32 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+wrote:
+
+&gt;<i> Hi Aurelia,
+</I>&gt;<i>
+</I>&gt;<i> &gt; Thanks! I&#39;ve replaced rsyntaxtextarea.jar. I can now configure all 3
+</I>&gt;<i> components, although I still get the COM3 error messages. The shutter and
+</I>&gt;<i> camera then seem to function, but I can&#39;t start the SPIM plugin to see
+</I>&gt;<i> if the stage is working. I don&#39;t get an error message that says my
+</I>&gt;<i> setup is invalid, the plugin just fails to start. I attach the
+</I>&gt;<i> configuration file that I have just made, and a corelog showing an attempt
+</I>&gt;<i> to start the plugin.
+</I>&gt;<i>
+</I>&gt;<i> The COM3 error message is happening because of the duplicate line in the
+</I>&gt;<i> configuration file -- though, if the configurator is generating this file
+</I>&gt;<i> each time, there is probably an underlying issue that requires
+</I>&gt;<i> investigation. (Unfortunately, it isn't obvious to me why this might
+</I>&gt;<i> happen; finding this out could take time.) A quick fix would be to edit the
+</I>&gt;<i> config file in a text editor and remove line 7 or 8
+</I>&gt;<i> (&quot;Device,COM3,SerialManager,COM3&quot;).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The SPIM plugin won't start because the stage configuration is confusing
+</I>&gt;<i> it. Two possibilities: Either the COM3 error is leaving the stages only
+</I>&gt;<i> partially initialized, so the stage position is invalid (out of the stage's
+</I>&gt;<i> range, according to its properties), or a stage (usually the twister) was
+</I>&gt;<i> left in a position outside its accepted range. Given the PVCAM exception
+</I>&gt;<i> earlier in the CoreLog, I would assume the former -- but to be sure, before
+</I>&gt;<i> starting the system, please try using the Picard software to home the three
+</I>&gt;<i> linear stages and zero the rotational stage, leaving them all inside the
+</I>&gt;<i> usual position range.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 07/01/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; My system info is:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --------------- S Y S T E M ---------------
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; OS: Windows 7 Build 7601 Service Pack 1
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 45
+</I>&gt;<i> stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2,
+</I>&gt;<i> popcnt, ht
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Memory: 4k page, physical 66506940k(61696496k free), swap
+</I>&gt;<i> 133012024k(127977948k free)
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE
+</I>&gt;<i> (1.6.0_24-b07), built on Feb 2 2011 17:44:41 by &quot;java_re&quot; with MS VC++ 7.1
+</I>&gt;<i> (VS2003)
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Is that the system information you need?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Yes, thank you! It doesn't reveal much about the problem, but at the very
+</I>&gt;<i> least it confirms that the system should be working...
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Just to keep track of what we've done so far (so I know what to change in
+</I>&gt;<i> the next update):
+</I>&gt;<i> - Updated mmgr_dal_SerialManager.dll and all system DALs to the latest
+</I>&gt;<i> versions.
+</I>&gt;<i> - Replaced rsyntaxtextarea.jar with Micro-Manager's preferred version.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Nearly there, I think!
+</I>&gt;<i> Luke
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 07/01/14, Aurelia Honerkamp-Smith  wrote:
+</I>&gt;<i> &gt; Hi again,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thanks! I&#39;ve replaced rsyntaxtextarea.jar. I can now configure all 3
+</I>&gt;<i> components, although I still get the COM3 error messages. The shutter and
+</I>&gt;<i> camera then seem to function, but I can&#39;t start the SPIM plugin to see
+</I>&gt;<i> if the stage is working. I don&#39;t get an error message that says my
+</I>&gt;<i> setup is invalid, the plugin just fails to start. I attach the
+</I>&gt;<i> configuration file that I have just made, and a corelog showing an attempt
+</I>&gt;<i> to start the plugin. My system info is:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --------------- S Y S T E M ---------------
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; OS: Windows 7 Build 7601 Service Pack 1
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 45
+</I>&gt;<i> stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2,
+</I>&gt;<i> popcnt, ht
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Memory: 4k page, physical 66506940k(61696496k free), swap
+</I>&gt;<i> 133012024k(127977948k free)
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE
+</I>&gt;<i> (1.6.0_24-b07), built on Feb 2 2011 17:44:41 by &quot;java_re&quot; with MS VC++ 7.1
+</I>&gt;<i> (VS2003)
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Is that the system information you need?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On Mon, Jun 30, 2014 at 7:37 PM, Luke Stuyvenberg &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>')&quot; target=&quot;1&quot;&gt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; &gt; Hi,
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; One further thought -- the Java error at the top of the log file comes
+</I>&gt;<i> from a conflict in rsyntaxtextarea.jar (some e-mails on the MM mailing list
+</I>&gt;<i> discuss this issue, and we&#39;re working on porting Fiji/IJ2 to a newer
+</I>&gt;<i> version of the jar) -- I expected that having these in conflict would only
+</I>&gt;<i> disable the Micro-Manager script editor, but some testing suggests it might
+</I>&gt;<i> be more disruptive than that. Another fix you can try without waiting on
+</I>&gt;<i> me: From vanilla MM, copy: &quot;plugins/Micro-Manager/rsyntaxtextarea.jar&quot; -&gt;
+</I>&gt;<i> (in OpenSPIM.app) &quot;jars/rsyntaxtextarea.jar&quot;; then, move, rename, or delete
+</I>&gt;<i> &quot;jars/rsyntaxtextarea-2.0.4.1.jar&quot;.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Thanks again,
+</I>&gt;<i> &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; On 06/30/14, Luke Stuyvenberg wrote:
+</I>&gt;<i> &gt; &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Could you attach your configuration file, and report your system
+</I>&gt;<i> specs (OS version/architecture) as well? The core log certainly seems to
+</I>&gt;<i> suggest it is attempting to load COM3 multiple times (it also seems to
+</I>&gt;<i> reset the serial port properties with each stage loaded from PicardStage),
+</I>&gt;<i> but short of that, I&#39;m still not entirely certain what&#39;s going on.
+</I>&gt;<i> If the 24 June device adapters weren&#39;t correct, they probably
+</I>&gt;<i> wouldn&#39;t load at all, so presumably you&#39;ve already copied all the
+</I>&gt;<i> right DLLs. (SerialManager and ThorlabsSC10 are self-contained, so just
+</I>&gt;<i> those files should be enough to run those devices; PVCAM has an external
+</I>&gt;<i> DLL, but your core log suggests the camera initializes without a problem.)
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; Sorry, I meant to also say that I can&#39;t load individual
+</I>&gt;<i> components, I get the same error messages about COM3. The only
+</I>&gt;<i> configuration I can actually complete is the shutter on its own, but it
+</I>&gt;<i> doesn&#39;t function.
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; On Mon, Jun 30, 2014 at 6:55 PM, Aurelia Honerkamp-Smith &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&amp;#39;new(java_script:main.compose(&amp;#39;new(http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&amp;#39;new(java_script:main.compose(&amp;#39;new">http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&#39;new(java_script:main.compose(&#39;new(http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&#39;new(java_script:main.compose(&#39;new</A>)&amp;#39(javascript:main.compose('new',
+</I>&gt;<i> 't=<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt;(java_script:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Hi!,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; With the SerialManager dll from June 24, I get the same error
+</I>&gt;<i> messages but entire system doesn&#39;t crash, it seems to be an
+</I>&gt;<i> improvement! New core log is attached again.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Thanks again!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Aurelia
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; On Mon, Jun 30, 2014 at 6:01 PM, Luke Stuyvenberg &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;(java_script:main.compose()&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thank you! I am still having a problem, probably because
+</I>&gt;<i> I&#39;m using a nonstandard setup. There seems to be a conflict in loading
+</I>&gt;<i> my camera (a PVCam one) and the shutter I use to block the laser (Thorlabs
+</I>&gt;<i> SC10); when I try to configure, I get a message &quot;the specified label COM3
+</I>&gt;<i> is already in use&quot; before anything has been configured, and then several
+</I>&gt;<i> times after I load both, one that says &quot;Line8: device, COM3, serialmanager,
+</I>&gt;<i> COM3.&quot; The shutter should be on COM3 but not the camera, and I don&#39;t
+</I>&gt;<i> run into this conflict when I load both shutter and camera in the vanilla
+</I>&gt;<i> MM from 24 June. I attach a core log showing an attempt to load shutter and
+</I>&gt;<i> camera.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Do the devices work individually in OpenSPIM? i.e. if only one
+</I>&gt;<i> is loaded, do you ever get that message? It sounds like a problem with the
+</I>&gt;<i> SerialManager, a device adapter which I hadn&#39;t updated -- you might try
+</I>&gt;<i> pulling mmgr_dal_SerialManager.dll from the 24 June nightly build. I&#39;ll
+</I>&gt;<i> also be looking into this.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; The Picard stage now appears in the list of available
+</I>&gt;<i> hardware, but when I try to load all three the computer bluescreens.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Load all three devices (camera, shutter, stage), or load all
+</I>&gt;<i> three stages? Does it bluescreen reliably? (I&#39;ve not seen/heard of this
+</I>&gt;<i> happening before...)
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; I&#39;ll let you know what I work out. Thanks again!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hi Luke,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thank you! I am still having a problem, probably because
+</I>&gt;<i> I&#39;m using a nonstandard setup. There seems to be a conflict in loading
+</I>&gt;<i> my camera (a PVCam one) and the shutter I use to block the laser (Thorlabs
+</I>&gt;<i> SC10); when I try to configure, I get a message &quot;the specified label COM3
+</I>&gt;<i> is already in use&quot; before anything has been configured, and then several
+</I>&gt;<i> times after I load both, one that says &quot;Line8: device, COM3, serialmanager,
+</I>&gt;<i> COM3.&quot; The shutter should be on COM3 but not the camera, and I don&#39;t
+</I>&gt;<i> run into this conflict when I load both shutter and camera in the vanilla
+</I>&gt;<i> MM from 24 June. I attach a core log showing an attempt to load shutter and
+</I>&gt;<i> camera. The Picard stage now appears in the list of available hardware, but
+</I>&gt;<i> when I try to load all three the computer bluescreens.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thanks again,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Aurelia
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; On Mon, Jun 30, 2014 at 3:03 PM, Luke Stuyvenberg &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;(java_script:main.compose() &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;(java_script:main.compose()&#39;)&quot;
+</I>&gt;<i> target=&quot;1&quot;&gt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;(java_script:main.compose()&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Sorry about that; it seems a lot more had changed than I
+</I>&gt;<i> had expected. I&#39;ve updated the update site again, with a number of
+</I>&gt;<i> changes (new MMCore, new versions of the device adapters). It tested okay
+</I>&gt;<i> on my virtual machine, but if there&#39;s still a problem, please let me
+</I>&gt;<i> know. If you run into other device adapter problems (i.e. not with
+</I>&gt;<i> PicardStage), try getting updated device adapter versions from the nightly
+</I>&gt;<i> build as of 24 June or so.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thanks!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; On 06/29/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hello,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; I am afraid that after updating to the newest
+</I>&gt;<i> PicardStage dll, my previous configuration is unable to load the stage. I
+</I>&gt;<i> get an error message:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 8: Device,Picard Twister,PicardStage,Picard Twister
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 9: Device,Picard Z Stage,PicardStage,Picard Z Stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 10: Device,Picard XY Stage,PicardStage,Picard XY
+</I>&gt;<i> Stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 22: Property,Picard Twister,Serial Number,60
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard Twister&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 23: Property,Picard Z Stage,Serial Number,181
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard Z Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 24: Property,Picard XY Stage,Serial Number (X),182
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 25: Property,Picard XY Stage,Serial Number (Y),180
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 26: Property,Picard XY Stage,X-Max,8000
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 27: Property,Picard XY Stage,X-Min,1
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 28: Property,Picard XY Stage,Y-Max,8000
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 29: Property,Picard XY Stage,Y-Min,1
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 44: Property,Core,Focus,Picard Z Stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Cannot set Core property Focus to invalid value &quot;Picard
+</I>&gt;<i> Z Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; I can still load the camera and my shutter. The Picard
+</I>&gt;<i> Stage now appears unavailable in the hardware configuration wizard. I am
+</I>&gt;<i> also using 32-bit Fiji on a 64-bit machine, but haven&#39;t had trouble
+</I>&gt;<i> loading the stage before (it appeared to work normally, with the exception
+</I>&gt;<i> of the occasional communication delay that I mentioned earlier). I attach a
+</I>&gt;<i> core log.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; On Sat, Jun 28, 2014 at 6:00 PM, &lt;&gt;
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140701/15c711f0/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20140701/15c711f0/attachment-0002.html</A>&gt;
+-------------- next part --------------
+2014-07-01T18:06:57.599269 tid6872 [IFO,LogManager] Enabled primary log file C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\CoreLogs\CoreLog20140701T180657_pid2352.txt
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] User: ah659
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] Host: invert
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] MM Studio version: 1.4.x dev
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] MMCore version 3.0.0
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] Device API version 60, Module API version 10
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] Operating System: Windows 7 (x86) 6.1
+2014-07-01T18:06:57.599269 tid6872 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.6.0_24, 32-bit
+2014-07-01T18:06:57.721281 tid4964 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+2014-07-01T18:06:57.737282 tid4964 [IFO,App] Attempting to install autofocus plugin Autofocus
+2014-07-01T18:06:57.739283 tid4964 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2014-07-01T18:06:57.740283 tid4964 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2014-07-01T18:06:57.741283 tid4964 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2014-07-01T18:07:06.688177 tid6872 [IFO,Core] All devices unloaded.
+2014-07-01T18:07:06.691178 tid6872 [IFO,Core] Device COM3 loaded from SerialManager and labeled as COM3
+2014-07-01T18:07:06.693178 tid6872 [IFO,Core] Device Camera-1 loaded from PVCAM and labeled as Camera-1
+2014-07-01T18:07:06.694178 tid6872 [IFO,Core] Device SC10 loaded from ThorlabsSC10 and labeled as SC10
+2014-07-01T18:07:06.697178 tid6872 [IFO,Core] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-07-01T18:07:06.697178 tid6872 [IFO,Core] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-07-01T18:07:06.697178 tid6872 [IFO,Core] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-07-01T18:07:06.772186 tid6872 [IFO,Core] Starting initialization sequence for 6 devices...
+2014-07-01T18:07:06.780187 tid6872 [IFO,Core] Device COM3 initialized.
+2014-07-01T18:07:06.782187 tid6872 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 1
+2014-07-01T18:07:06.810190 tid6872 [IFO,dev:Camera-1] Building Speed Table
+2014-07-01T18:07:06.929202 tid6872 [IFO,dev:Camera-1] Initializing Static Camera Properties
+2014-07-01T18:07:06.941203 tid6872 [IFO,dev:Camera-1] Initializing Dynamic Camera Properties
+2014-07-01T18:07:06.982207 tid6872 [IFO,dev:Camera-1] This Camera does not have EM Gain
+2014-07-01T18:07:06.982207 tid6872 [IFO,dev:Camera-1] Frame Transfer mode not available
+2014-07-01T18:07:07.031212 tid6872 [IFO,dev:Camera-1] Using PVCAM callbacks for frame acquisition
+2014-07-01T18:07:07.031212 tid6872 [IFO,Core] Device Camera-1 set as default camera.
+2014-07-01T18:07:07.031212 tid6872 [IFO,Core] Device Camera-1 initialized.
+2014-07-01T18:07:07.082217 tid6872 [IFO,dev:SC10] THORLABS SC10 VERSION 1.07
+2014-07-01T18:07:07.097218 tid6872 [IFO,Core] Device SC10 set as default shutter.
+2014-07-01T18:07:07.097218 tid6872 [IFO,Core] Device SC10 initialized.
+2014-07-01T18:07:07.120221 tid6872 [IFO,Core] Device Picard Twister initialized.
+2014-07-01T18:07:07.144223 tid6872 [IFO,Core] Device Picard Z Stage initialized.
+2014-07-01T18:07:07.156224 tid6872 [IFO,Core] Device Picard XY Stage set as default xyStage.
+2014-07-01T18:07:07.156224 tid6872 [IFO,Core] Device Picard XY Stage initialized.
+2014-07-01T18:07:07.156224 tid6872 [IFO,Core] Camera device set to Camera-1
+2014-07-01T18:07:07.156224 tid6872 [IFO,Core] Focus device set to Picard Z Stage
+2014-07-01T18:07:07.220231 tid6872 [IFO,Core] System state cache updated.
+2014-07-01T18:07:07.273236 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:07:07.284237 tid6872 [IFO,Core] System state cache updated.
+2014-07-01T18:07:07.317240 tid6872 [IFO,App] Startup script file (C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\MMStartup.bsh) not present.
+2014-07-01T18:07:11.265635 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:07:11.300639 tid6872 [IFO,dev:Camera-1] Started sequence on Camera-1, at 457553231 300639, with 2147483647 and 0 ms
+2014-07-01T18:07:13.170826 tid6872 [IFO,App] Stop called in LivemodeTimer, true
+2014-07-01T18:07:13.279837 tid6872 [IFO,dev:SC10] 1
+2014-07-01T18:07:15.244033 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:07:15.738082 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:07:16.058114 tid6872 [IFO,dev:SC10] 1
+2014-07-01T18:07:18.981407 tid6872 [IFO,App] Plugin command: Acquire SPIM image
+2014-07-01T18:07:18.997408 tid6872 [IFO,Core] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-07-01T18:07:18.997408 tid6872 [IFO,Core] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-07-01T18:07:18.997408 tid6872 [IFO,Core] Starting initialization sequence for 6 devices...
+2014-07-01T18:07:18.997408 tid6872 [IFO,Core] Device COM3 initialized.
+2014-07-01T18:07:18.997408 tid6872 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 1
+2014-07-01T18:07:18.997408 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera&quot;, code: 14
+                                   [                ] In file: PVCAMUniversal.cpp, line: 325, pl_cam_open
+2014-07-01T18:07:18.997408 tid6872 [IFO,Core] Error occurred. Device Camera-1. Error in device Camera-1: C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera. 
+2014-07-01T18:07:18.997408 tid6872 [IFO,Core] Error occurred. Device setPixelSizeConfig. Device error encountered.
+2014-07-01T18:07:18.998408 tid6872 [IFO,App] Couldn't define uncalibrated pixel size: 
+2014-07-01T18:07:18.998408 tid6872 [IFO,App] java.lang.Exception: Error in device Camera-1: C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:777)
+                                   [       ] 	at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:263)
+                                   [       ] 	at spim.SPIMAcquisition.show(SPIMAcquisition.java:220)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2755)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame.access$5800(MMStudioMainFrame.java:157)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2720)
+                                   [       ] 	at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ] 	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ] 	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ] 	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ] 	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                   [       ] 	at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+                                   [       ] 	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+                                   [       ] 	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+                                   [       ] 	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ] 	at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ] 	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ] 	at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ] 	at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ] 	at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ] 	at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ] 	at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ] 	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ] 	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ] 	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ] 	at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ] 	at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ] 	at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ] 	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ] 	at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ] 	at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ] 	at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ] 	at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ] 	at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ] 	at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ] 	at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ] 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ] 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-07-01T18:07:29.535462 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 125, pl_get_param ATTR_CURRENT
+2014-07-01T18:07:29.535462 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 160, pl_set_param
+2014-07-01T18:07:29.535462 tid6872 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: The device can not set this property at this moment.  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_startContinuousSequenceAcquisition(Native Method)
+                                   [       ]   at mmcorej.CMMCore.startContinuousSequenceAcquisition(CMMCore.java:909)
+                                   [       ]   at org.micromanager.acquisition.LiveModeTimer.begin(LiveModeTimer.java:162)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.enableLiveMode(MMStudioMainFrame.java:3881)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$10.run(MMStudioMainFrame.java:1018)
+                                   [       ]   at org.micromanager.utils.GUIUtils$4.actionPerformed(GUIUtils.java:404)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ]   at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:291)
+                                   [       ]   at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-07-01T18:07:31.320640 tid6872 [IFO,App] Stop called in LivemodeTimer, true
+2014-07-01T18:08:30.515559 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 125, pl_get_param ATTR_CURRENT
+2014-07-01T18:08:30.515559 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 160, pl_set_param
+2014-07-01T18:08:30.516559 tid6872 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: The device can not set this property at this moment.  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_startContinuousSequenceAcquisition(Native Method)
+                                   [       ]   at mmcorej.CMMCore.startContinuousSequenceAcquisition(CMMCore.java:909)
+                                   [       ]   at org.micromanager.acquisition.LiveModeTimer.begin(LiveModeTimer.java:162)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.enableLiveMode(MMStudioMainFrame.java:3881)
+                                   [       ]   at spim.SPIMAcquisition$12.itemStateChanged(SPIMAcquisition.java:825)
+                                   [       ]   at javax.swing.AbstractButton.fireItemStateChanged(AbstractButton.java:2023)
+                                   [       ]   at javax.swing.AbstractButton$Handler.itemStateChanged(AbstractButton.java:2325)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireItemStateChanged(DefaultButtonModel.java:440)
+                                   [       ]   at javax.swing.JToggleButton$ToggleButtonModel.setSelected(JToggleButton.java:255)
+                                   [       ]   at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:272)
+                                   [       ]   at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-07-01T18:08:31.692677 tid6872 [IFO,App] Stop called in LivemodeTimer, true
+2014-07-01T18:08:34.956003 tid7120 [IFO,dev:SC10] 0
+2014-07-01T18:08:34.972005 tid7120 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1594, 
+2014-07-01T18:08:34.972005 tid7120 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1596, 
+2014-07-01T18:08:34.972005 tid7120 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 125, pl_get_param ATTR_CURRENT
+2014-07-01T18:08:34.972005 tid7120 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 160, pl_set_param
+2014-07-01T18:08:34.972005 tid7120 [IFO,dev:Camera-1] Error code 32: The device can not set this property at this moment
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1604, 
+2014-07-01T18:08:34.972005 tid7120 [IFO,Core] Error occurred. Device CMMCore::snapImage. Error in device Camera-1: The device can not set this property at this moment. 
+2014-07-01T18:08:34.972005 tid7120 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: The device can not set this property at this moment.  in Thread[Thread-25,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_snapImage(Native Method)
+                                   [       ]   at mmcorej.CMMCore.snapImage(CMMCore.java:825)
+                                   [       ]   at spim.setup.Camera.snapImage(Camera.java:27)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.snapImage(ProgrammaticAcquisitor.java:242)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:435)
+                                   [       ]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:08:34.988007 tid7120 [IFO,dev:SC10] 1
+2014-07-01T18:08:36.433151 tid7120 [IFO,App] Thread 62 (Thread-25) terminated with uncaught exception
+2014-07-01T18:08:36.433151 tid7120 [IFO,App] java.lang.Error: Error acquiring!
+2014-07-01T18:08:36.433151 tid7120 [IFO,App]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1784)
+2014-07-01T18:08:36.433151 tid7120 [IFO,App] Caused by exception:
+2014-07-01T18:08:36.433151 tid7120 [IFO,App] java.lang.NullPointerException
+2014-07-01T18:08:36.433151 tid7120 [IFO,App]   at org.micromanager.utils.ImageUtils.makeProcessor(ImageUtils.java:98)
+2014-07-01T18:08:36.433151 tid7120 [IFO,App]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:443)
+2014-07-01T18:08:36.433151 tid7120 [IFO,App]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:08:38.868395 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 125, pl_get_param ATTR_CURRENT
+2014-07-01T18:08:38.868395 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 160, pl_set_param
+2014-07-01T18:08:38.868395 tid6872 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: The device can not set this property at this moment.  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_startContinuousSequenceAcquisition(Native Method)
+                                   [       ]   at mmcorej.CMMCore.startContinuousSequenceAcquisition(CMMCore.java:909)
+                                   [       ]   at org.micromanager.acquisition.LiveModeTimer.begin(LiveModeTimer.java:162)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.enableLiveMode(MMStudioMainFrame.java:3881)
+                                   [       ]   at spim.SPIMAcquisition$12.itemStateChanged(SPIMAcquisition.java:825)
+                                   [       ]   at javax.swing.AbstractButton.fireItemStateChanged(AbstractButton.java:2023)
+                                   [       ]   at javax.swing.AbstractButton$Handler.itemStateChanged(AbstractButton.java:2325)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireItemStateChanged(DefaultButtonModel.java:440)
+                                   [       ]   at javax.swing.JToggleButton$ToggleButtonModel.setSelected(JToggleButton.java:255)
+                                   [       ]   at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:272)
+                                   [       ]   at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-07-01T18:10:22.809788 tid6872 [IFO,App] Stop called in LivemodeTimer, true
+2014-07-01T18:11:22.320738 tid6660 [IFO,dev:SC10] 0
+2014-07-01T18:11:22.336740 tid6660 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1594, 
+2014-07-01T18:11:22.336740 tid6660 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1596, 
+2014-07-01T18:11:22.336740 tid6660 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 125, pl_get_param ATTR_CURRENT
+2014-07-01T18:11:22.336740 tid6660 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 160, pl_set_param
+2014-07-01T18:11:22.336740 tid6660 [IFO,dev:Camera-1] Error code 32: The device can not set this property at this moment
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1604, 
+2014-07-01T18:11:22.336740 tid6660 [IFO,Core] Error occurred. Device CMMCore::snapImage. Error in device Camera-1: The device can not set this property at this moment. 
+2014-07-01T18:11:22.337740 tid6660 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: The device can not set this property at this moment.  in Thread[Thread-27,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_snapImage(Native Method)
+                                   [       ]   at mmcorej.CMMCore.snapImage(CMMCore.java:825)
+                                   [       ]   at spim.setup.Camera.snapImage(Camera.java:27)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.snapImage(ProgrammaticAcquisitor.java:242)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:435)
+                                   [       ]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:11:22.351741 tid6660 [IFO,dev:SC10] 1
+2014-07-01T18:12:19.938499 tid6660 [IFO,App] Thread 64 (Thread-27) terminated with uncaught exception
+2014-07-01T18:12:19.938499 tid6660 [IFO,App] java.lang.Error: Error acquiring!
+2014-07-01T18:12:19.938499 tid6660 [IFO,App]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1784)
+2014-07-01T18:12:19.938499 tid6660 [IFO,App] Caused by exception:
+2014-07-01T18:12:19.938499 tid6660 [IFO,App] java.lang.NullPointerException
+2014-07-01T18:12:19.938499 tid6660 [IFO,App]   at org.micromanager.utils.ImageUtils.makeProcessor(ImageUtils.java:98)
+2014-07-01T18:12:19.938499 tid6660 [IFO,App]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:443)
+2014-07-01T18:12:19.938499 tid6660 [IFO,App]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:12:30.603566 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 654, pl_cam_close
+2014-07-01T18:12:30.666572 tid6232 [IFO,Core] Error occurred. Device Picard XY Stage. Error in device Picard XY Stage: Unknown error in the device. 
+2014-07-01T18:12:30.666572 tid6232 [IFO,App] Couldn't get X position on Picard XY Stage
+2014-07-01T18:12:30.666572 tid6232 [IFO,App] java.lang.Exception: Error in device Picard XY Stage: Unknown error in the device. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_getXPosition(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.getXPosition(CMMCore.java:1137)
+                                   [       ] 	at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:76)
+                                   [       ] 	at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1243)
+                                   [       ] 	at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:94)
+                                   [       ] 	at spim.SPIMAcquisition$18.run(SPIMAcquisition.java:1021)
+                                   [       ] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+                                   [       ] 	at java.util.TimerThread.run(Timer.java:462)
+2014-07-01T18:12:30.666572 tid6232 [IFO,Core] Error occurred. Device Picard XY Stage. Error in device Picard XY Stage: Unknown error in the device. 
+2014-07-01T18:12:30.666572 tid6232 [IFO,App] Couldn't get Y position on Picard XY Stage
+2014-07-01T18:12:30.666572 tid6232 [IFO,App] java.lang.Exception: Error in device Picard XY Stage: Unknown error in the device. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_getYPosition(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.getYPosition(CMMCore.java:1141)
+                                   [       ] 	at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                   [       ] 	at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1246)
+                                   [       ] 	at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:94)
+                                   [       ] 	at spim.SPIMAcquisition$18.run(SPIMAcquisition.java:1021)
+                                   [       ] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+                                   [       ] 	at java.util.TimerThread.run(Timer.java:462)
+2014-07-01T18:12:30.666572 tid6232 [IFO,Core] Error occurred. Device Picard Z Stage. Error in device Picard Z Stage: Unable to communicate with the device.. 
+2014-07-01T18:12:30.666572 tid6232 [IFO,App] Couldn't get stage position for Picard Z Stage
+2014-07-01T18:12:30.666572 tid6232 [IFO,App] java.lang.Exception: Error in device Picard Z Stage: Unable to communicate with the device.. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_getPosition(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.getPosition(CMMCore.java:1109)
+                                   [       ] 	at spim.setup.Stage.getPosition(Stage.java:34)
+                                   [       ] 	at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1249)
+                                   [       ] 	at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:94)
+                                   [       ] 	at spim.SPIMAcquisition$18.run(SPIMAcquisition.java:1021)
+                                   [       ] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+                                   [       ] 	at java.util.TimerThread.run(Timer.java:462)
+2014-07-01T18:12:30.666572 tid6232 [IFO,Core] Error occurred. Device Picard Twister. Error in device Picard Twister: Unable to communicate with the device.. 
+2014-07-01T18:12:30.667572 tid6232 [IFO,App] Couldn't get stage position for Picard Twister
+2014-07-01T18:12:30.667572 tid6232 [IFO,App] java.lang.Exception: Error in device Picard Twister: Unable to communicate with the device.. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_getPosition(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.getPosition(CMMCore.java:1109)
+                                   [       ] 	at spim.setup.Stage.getPosition(Stage.java:34)
+                                   [       ] 	at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                   [       ] 	at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                   [       ] 	at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1252)
+                                   [       ] 	at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:94)
+                                   [       ] 	at spim.SPIMAcquisition$18.run(SPIMAcquisition.java:1021)
+                                   [       ] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+                                   [       ] 	at java.util.TimerThread.run(Timer.java:462)
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] All devices unloaded.
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] Device COM3 loaded from SerialManager and labeled as COM3
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] Device Camera-1 loaded from PVCAM and labeled as Camera-1
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] Device SC10 loaded from ThorlabsSC10 and labeled as SC10
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-07-01T18:12:30.806586 tid6872 [IFO,Core] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-07-01T18:12:30.882594 tid6872 [IFO,Core] Starting initialization sequence for 6 devices...
+2014-07-01T18:12:30.890594 tid6872 [IFO,Core] Device COM3 initialized.
+2014-07-01T18:12:30.892595 tid6872 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 1
+2014-07-01T18:12:30.928598 tid6872 [IFO,dev:Camera-1] Building Speed Table
+2014-07-01T18:12:31.047610 tid6872 [IFO,dev:Camera-1] Initializing Static Camera Properties
+2014-07-01T18:12:31.059611 tid6872 [IFO,dev:Camera-1] Initializing Dynamic Camera Properties
+2014-07-01T18:12:31.100615 tid6872 [IFO,dev:Camera-1] This Camera does not have EM Gain
+2014-07-01T18:12:31.100615 tid6872 [IFO,dev:Camera-1] Frame Transfer mode not available
+2014-07-01T18:12:31.149620 tid6872 [IFO,dev:Camera-1] Using PVCAM callbacks for frame acquisition
+2014-07-01T18:12:31.149620 tid6872 [IFO,Core] Device Camera-1 set as default camera.
+2014-07-01T18:12:31.149620 tid6872 [IFO,Core] Device Camera-1 initialized.
+2014-07-01T18:12:31.190624 tid6872 [IFO,dev:SC10] THORLABS SC10 VERSION 1.07
+2014-07-01T18:12:31.207626 tid6872 [IFO,Core] Device SC10 set as default shutter.
+2014-07-01T18:12:31.207626 tid6872 [IFO,Core] Device SC10 initialized.
+2014-07-01T18:12:31.230628 tid6872 [IFO,Core] Device Picard Twister initialized.
+2014-07-01T18:12:31.254631 tid6872 [IFO,Core] Device Picard Z Stage initialized.
+2014-07-01T18:12:31.266632 tid6872 [IFO,Core] Device Picard XY Stage set as default xyStage.
+2014-07-01T18:12:31.266632 tid6872 [IFO,Core] Device Picard XY Stage initialized.
+2014-07-01T18:12:31.266632 tid6872 [IFO,Core] Camera device set to Camera-1
+2014-07-01T18:12:31.266632 tid6872 [IFO,Core] Focus device set to Picard Z Stage
+2014-07-01T18:12:31.330638 tid6872 [IFO,Core] System state cache updated.
+2014-07-01T18:12:31.415647 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:12:31.426648 tid6872 [IFO,Core] System state cache updated.
+2014-07-01T18:12:31.542660 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:12:31.554661 tid6872 [IFO,Core] System state cache updated.
+2014-07-01T18:12:34.305936 tid6872 [IFO,dev:SC10] 0
+2014-07-01T18:12:34.340939 tid6872 [IFO,dev:Camera-1] Started sequence on Camera-1, at 457553554 340939, with 2147483647 and 0 ms
+2014-07-01T18:12:38.763382 tid6872 [IFO,App] Plugin command: Acquire SPIM image
+2014-07-01T18:12:38.763382 tid6872 [IFO,Core] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-07-01T18:12:38.763382 tid6872 [IFO,Core] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-07-01T18:12:38.763382 tid6872 [IFO,Core] Starting initialization sequence for 6 devices...
+2014-07-01T18:12:38.763382 tid6872 [IFO,Core] Device COM3 initialized.
+2014-07-01T18:12:38.763382 tid6872 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 1
+2014-07-01T18:12:38.763382 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera&quot;, code: 14
+                                   [                ] In file: PVCAMUniversal.cpp, line: 325, pl_cam_open
+2014-07-01T18:12:38.763382 tid6872 [IFO,Core] Error occurred. Device Camera-1. Error in device Camera-1: C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera. 
+2014-07-01T18:12:38.763382 tid6872 [IFO,Core] Error occurred. Device setPixelSizeConfig. Device error encountered.
+2014-07-01T18:12:38.764382 tid6872 [IFO,App] Couldn't define uncalibrated pixel size: 
+2014-07-01T18:12:38.764382 tid6872 [IFO,App] java.lang.Exception: Error in device Camera-1: C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:777)
+                                   [       ] 	at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:263)
+                                   [       ] 	at spim.SPIMAcquisition.show(SPIMAcquisition.java:220)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2755)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame.access$5800(MMStudioMainFrame.java:157)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2720)
+                                   [       ] 	at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ] 	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ] 	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ] 	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ] 	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                   [       ] 	at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+                                   [       ] 	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+                                   [       ] 	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+                                   [       ] 	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ] 	at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ] 	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ] 	at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ] 	at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ] 	at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ] 	at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ] 	at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ] 	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ] 	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ] 	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ] 	at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ] 	at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ] 	at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ] 	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ] 	at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ] 	at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ] 	at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ] 	at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ] 	at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ] 	at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ] 	at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ] 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ] 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-07-01T18:12:38.793385 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:39.069412 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:39.345440 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:39.621467 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:39.897495 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:40.172523 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:40.448550 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:40.724578 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:41.000605 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:41.276633 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:41.552661 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:41.828688 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:42.103716 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:42.379743 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:42.655771 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:42.931798 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:43.207826 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:43.483854 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:43.759881 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:44.034909 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:44.310936 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:44.586964 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:44.862992 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:45.139019 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:45.415047 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:45.690074 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:45.966102 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:46.242129 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:46.518157 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:46.794185 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:47.070212 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:47.346240 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:47.621267 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:47.897295 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:48.173323 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:48.449350 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:48.725378 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:49.001405 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:49.277433 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:49.552460 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:49.828488 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:50.104516 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:50.380543 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:50.656571 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:50.932598 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:51.208626 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:51.483654 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:51.759681 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:52.035709 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:52.311736 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:52.587764 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:52.863792 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:53.139819 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:53.414847 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:53.690874 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:53.966902 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:54.242929 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:54.518957 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:54.794985 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:55.071012 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:55.346040 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:55.622067 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:55.898095 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:56.174123 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:56.450150 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:56.726178 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:57.002205 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:57.277233 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:57.553260 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:57.829288 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:58.105316 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:58.381343 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:58.657371 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:58.932398 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:59.208426 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:59.484454 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:12:59.760481 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:00.036509 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:00.312536 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:00.588564 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:00.863591 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:01.139619 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:01.415647 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:01.691674 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:01.967702 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:02.243729 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:02.519757 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:02.794785 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:03.070812 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:03.346840 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:03.622867 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:03.898895 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:04.174923 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:04.450950 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:04.725978 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:05.002005 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:05.278033 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:05.554060 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:05.830088 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:06.106116 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:06.382143 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:06.657171 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:06.933198 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:07.209226 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:07.485254 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:07.761281 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:08.037309 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:08.313336 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:08.588364 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:08.864391 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:09.140419 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:09.416447 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:09.692474 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:09.968502 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:10.244529 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:10.519557 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:10.795585 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:11.008606 tid1928 [IFO,App] Stop called in LivemodeTimer, true
+2014-07-01T18:13:11.008606 tid1928 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2386, pl_exp_stop_cont failed
+2014-07-01T18:13:11.035609 tid1928 [IFO,dev:SC10] 1
+2014-07-01T18:13:11.071612 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:11.101615 tid1928 [IFO,Core] Error occurred. Device PMUSBCam00. Error in device Camera-1: Unknown error in the device. 
+2014-07-01T18:13:11.101615 tid1928 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: Unknown error in the device.  in Thread[Thread-56,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_stopSequenceAcquisition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.stopSequenceAcquisition(CMMCore.java:913)
+                                   [       ]   at org.micromanager.acquisition.LiveModeTimer.stop(LiveModeTimer.java:221)
+                                   [       ]   at org.micromanager.acquisition.LiveModeTimer.stop(LiveModeTimer.java:199)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.enableLiveMode(MMStudioMainFrame.java:3891)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:286)
+                                   [       ]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:13:11.347640 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:11.623667 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:11.899695 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:12.175723 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:12.450750 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:12.726778 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:13.002805 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:13.278833 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:13.496855 tid1928 [IFO,dev:SC10] 0
+2014-07-01T18:13:13.512856 tid1928 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1594, 
+2014-07-01T18:13:13.512856 tid1928 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1596, 
+2014-07-01T18:13:13.512856 tid1928 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 125, pl_get_param ATTR_CURRENT
+2014-07-01T18:13:13.512856 tid1928 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 160, pl_set_param
+2014-07-01T18:13:13.512856 tid1928 [IFO,dev:Camera-1] Error code 32: The device can not set this property at this moment
+                                   [                ] In file: PVCAMUniversal.cpp, line: 1604, 
+2014-07-01T18:13:13.512856 tid1928 [IFO,Core] Error occurred. Device CMMCore::snapImage. Error in device Camera-1: The device can not set this property at this moment. 
+2014-07-01T18:13:13.512856 tid1928 [IFO,App] 
+                                   [       ] java.lang.Exception: Error in device Camera-1: The device can not set this property at this moment.  in Thread[Thread-56,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_snapImage(Native Method)
+                                   [       ]   at mmcorej.CMMCore.snapImage(CMMCore.java:825)
+                                   [       ]   at spim.setup.Camera.snapImage(Camera.java:27)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.snapImage(ProgrammaticAcquisitor.java:242)
+                                   [       ]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:435)
+                                   [       ]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:13:13.528858 tid1928 [IFO,dev:SC10] 1
+2014-07-01T18:13:13.554860 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:13.830888 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:14.106916 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:14.157921 tid2840 [IFO,App] Stop called in LivemodeTimer, false
+2014-07-01T18:13:14.381943 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:14.657971 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:14.756981 tid1928 [IFO,App] Thread 103 (Thread-56) terminated with uncaught exception
+2014-07-01T18:13:14.756981 tid1928 [IFO,App] java.lang.Error: Error acquiring!
+2014-07-01T18:13:14.756981 tid1928 [IFO,App]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1784)
+2014-07-01T18:13:14.756981 tid1928 [IFO,App] Caused by exception:
+2014-07-01T18:13:14.756981 tid1928 [IFO,App] java.lang.NullPointerException
+2014-07-01T18:13:14.756981 tid1928 [IFO,App]   at org.micromanager.utils.ImageUtils.makeProcessor(ImageUtils.java:98)
+2014-07-01T18:13:14.756981 tid1928 [IFO,App]   at spim.progacq.ProgrammaticAcquisitor.performAcquisition(ProgrammaticAcquisitor.java:443)
+2014-07-01T18:13:14.756981 tid1928 [IFO,App]   at spim.SPIMAcquisition$25.run(SPIMAcquisition.java:1776)
+2014-07-01T18:13:14.933998 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:15.210026 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:15.486054 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:15.762081 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:16.037109 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:16.313136 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:16.589164 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:16.865191 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:17.141219 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:17.417247 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:17.693274 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:17.968302 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:18.244329 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:18.520357 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:18.642369 tid6872 [IFO,App] Stop called in LivemodeTimer, true
+2014-07-01T18:13:18.796385 tid1988 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 2475, pl_exp_get_latest_frame_ex
+2014-07-01T18:13:18.853390 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 654, pl_cam_close
+2014-07-01T18:13:19.062411 tid6872 [IFO,Core] All devices unloaded.
+2014-07-01T18:13:19.062411 tid6872 [IFO,Core] System reset.
+2014-07-01T18:13:19.062411 tid6872 [IFO,Core] Core session ended
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001442.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+	<LI>Next message: <A HREF="001445.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1444">[ date ]</a>
+              <a href="thread.html#1444">[ thread ]</a>
+              <a href="subject.html#1444">[ subject ]</a>
+              <a href="author.html#1444">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

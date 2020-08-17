@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Problems with OpenSPIM system
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20OpenSPIM%20system&In-Reply-To=%3C20140626185738.GM14312%40dhcp-169-230-22-250.compbio.ucsf.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000447.html">
+   <LINK REL="Next"  HREF="000449.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Problems with OpenSPIM system</H1>
+    <B>Mark Tsuchida</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20OpenSPIM%20system&In-Reply-To=%3C20140626185738.GM14312%40dhcp-169-230-22-250.compbio.ucsf.edu%3E"
+       TITLE="[OpenSPIM] Problems with OpenSPIM system">marktsuchida at gmail.com
+       </A><BR>
+    <I>Thu Jun 26 13:57:38 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000447.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+        <LI>Next message: <A HREF="000449.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#448">[ date ]</a>
+              <a href="thread.html#448">[ thread ]</a>
+              <a href="subject.html#448">[ subject ]</a>
+              <a href="author.html#448">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ke,
+
+On Wed, Jun 25, 2014 at 10:27:54PM -0400, Ke Li wrote:
+&gt;<i> I'm Ke, the graduate student asked you questions related to the USB 4D
+</I>&gt;<i> stage of Picard Industry about three weeks ago. Thanks for answering my
+</I>&gt;<i> questions before. Now I encounter some problems.
+</I>&gt;<i> 
+</I>&gt;<i> 1. I still can't add the Z stage when I create the hardware configuration.
+</I>&gt;<i> I tried both 64-bit and 32-bit Windows system, neither can work. Since the
+</I>&gt;<i> problem report doesn't give much info, I'm not sure whether there are other
+</I>&gt;<i> ways to solve this problem? And what possible reasons can cause the
+</I>&gt;<i> problem?
+</I>
+Are you sure you have the correct serial number for the Z stage (as
+Johannes suggested)? In the problem report you sent us, it looked like
+you had not set the serial number when adding the Z stage in the
+Hardware Configuration Wizard. This causes the device adapter to use the
+serial number &quot;-1&quot;, which always results in an error.
+
+Do you see a field to enter the serial number for the Z stage? If you cannot
+get it to work even when entering the correct serial number, could you try
+sending another Problem Report?
+
+Here is the relevant section of the log you sent:
+2014-06-25T12:01:05.715866 p:5756 t:3840 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-06-25T12:01:05.715866 p:5756 t:3840 [LOG] Device Picard Twister message: Pinging motors...
+2014-06-25T12:01:06.191893 p:5756 t:3840 [LOG] Device Picard Twister message: Found 0 motors and 1 twisters.
+2014-06-25T12:01:31.622348 p:5756 t:3840 [dbg] Will set property: &quot;Picard Twister&quot;-&quot;Max&quot; = &quot;58980&quot;
+2014-06-25T12:01:31.622348 p:5756 t:3840 [dbg] Did set property: &quot;Picard Twister&quot;-&quot;Max&quot; = &quot;58980&quot;
+2014-06-25T12:01:31.622348 p:5756 t:3840 [dbg] Will set property: &quot;Picard Twister&quot;-&quot;Min&quot; = &quot;-58980&quot;
+2014-06-25T12:01:31.622348 p:5756 t:3840 [dbg] Did set property: &quot;Picard Twister&quot;-&quot;Min&quot; = &quot;-58980&quot;
+2014-06-25T12:01:31.622348 p:5756 t:3840 [dbg] Will set property: &quot;Picard Twister&quot;-&quot;Serial Number&quot; = &quot;095&quot;
+2014-06-25T12:01:31.651350 p:5756 t:3840 [dbg] Did set property: &quot;Picard Twister&quot;-&quot;Serial Number&quot; = &quot;095&quot;
+2014-06-25T12:01:31.651350 p:5756 t:3840 [dbg] Will set property: &quot;Picard Twister&quot;-&quot;StepSize&quot; = &quot;1.8000&quot;
+2014-06-25T12:01:31.651350 p:5756 t:3840 [dbg] Did set property: &quot;Picard Twister&quot;-&quot;StepSize&quot; = &quot;1.8000&quot;
+2014-06-25T12:01:31.683351 p:5756 t:3840 [LOG] Device Picard Twister initialized.
+2014-06-25T12:01:35.499570 p:5756 t:3840 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-06-25T12:01:35.502570 p:5756 t:3840 [LOG] Device Picard Z Stage message: Could not initialize motor -1 (PiUsb error code 1)
+2014-06-25T12:01:40.667865 p:5756 t:3840 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-06-25T12:01:51.324475 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (X)&quot; = &quot;274&quot;
+2014-06-25T12:01:51.327475 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (X)&quot; = &quot;274&quot;
+2014-06-25T12:01:51.327475 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (Y)&quot; = &quot;2751&quot;
+2014-06-25T12:01:51.361477 p:5756 t:3840 [LOG] Device Picard XY Stage message: Could not initialize motor 2751 (PiUsb error code 1)
+2014-06-25T12:01:51.361477 p:5756 t:3840 [LOG] Error occurred. Device Picard XY Stage. Error in device Picard XY Stage: Unable to communicate with the device.. (Error code: 35)
+2014-06-25T12:01:53.600605 p:5756 t:3840 [LOG] default xyStage unloaded.
+2014-06-25T12:01:53.600605 p:5756 t:3840 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-06-25T12:01:57.468826 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (X)&quot; = &quot;274&quot;
+2014-06-25T12:01:57.471826 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (X)&quot; = &quot;274&quot;
+2014-06-25T12:01:57.471826 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (Y)&quot; = &quot;275&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;Serial Number (Y)&quot; = &quot;275&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;X-Max&quot; = &quot;7800&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;X-Max&quot; = &quot;7800&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;X-Min&quot; = &quot;0&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;X-Min&quot; = &quot;0&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;X-StepSize&quot; = &quot;1.5000&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;X-StepSize&quot; = &quot;1.5000&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Y-Max&quot; = &quot;7800&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;Y-Max&quot; = &quot;7800&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Y-Min&quot; = &quot;0&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;Y-Min&quot; = &quot;0&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Will set property: &quot;Picard XY Stage&quot;-&quot;Y-StepSize&quot; = &quot;1.5000&quot;
+2014-06-25T12:01:57.531830 p:5756 t:3840 [dbg] Did set property: &quot;Picard XY Stage&quot;-&quot;Y-StepSize&quot; = &quot;1.5000&quot;
+2014-06-25T12:01:57.595834 p:5756 t:3840 [LOG] Device Picard XY Stage initialized.
+
+&gt;<i> 2. As for the steps of installing the OpenSPIM/Fiji package, I can't find
+</I>&gt;<i> the *Micro-Manager* or *Micro-Manager studio* when I click the plugins in
+</I>&gt;<i> the Micro-Manager (*Plugins-&gt;Micro-Manager-&gt;Micro-Manager Studio)* I'm
+</I>&gt;<i> using in my windows 7 64-bit system, which is the newest version.
+</I>&gt;<i> [image: Inline image 1]
+</I>&gt;<i> 
+</I>&gt;<i> 3. And is the windows 7 64-bit system a potential problem for hardware
+</I>&gt;<i> control since Window XP 32-bit is the required system? Can the Windows 7
+</I>&gt;<i> 64-bit system be the reason that I can't add the Z stage (But the XY stage
+</I>&gt;<i> works well and I tried to add the stage in the 32-bit XP system, the Z
+</I>&gt;<i> stage still can't be added)?
+</I>
+I'll let the OpenSPIM folks address these questions. For the Picard
+stage specifically, there is no theoretical reason why it shouldn't work
+on Windows 7 64 bit, but we have not tested the stage here.
+
+Best,
+Mark
+
+-- 
+Mark Tsuchida
+Micro-Manager Team (UCSF Vale Lab)
+
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000447.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+	<LI>Next message: <A HREF="000449.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#448">[ date ]</a>
+              <a href="thread.html#448">[ thread ]</a>
+              <a href="subject.html#448">[ subject ]</a>
+              <a href="author.html#448">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

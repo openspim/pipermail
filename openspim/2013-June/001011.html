@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3Calpine.DEB.1.00.1306061823420.28957%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001008.html">
+   <LINK REL="Next"  HREF="001022.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3Calpine.DEB.1.00.1306061823420.28957%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Thu Jun  6 11:41:14 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001008.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001022.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1011">[ date ]</a>
+              <a href="thread.html#1011">[ thread ]</a>
+              <a href="subject.html#1011">[ subject ]</a>
+              <a href="author.html#1011">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+On Thu, 6 Jun 2013, Alexis Maizel wrote:
+
+&gt;<i> &gt; When it hangs, do you mean it gives you the missing VC Express error?
+</I>&gt;<i> &gt; Or does it actually, physically stop doing anything?
+</I>&gt;<i>
+</I>&gt;<i> Here is the sequence of event: 
+</I>&gt;<i> 	- I double click the OpenSPIM-dev-env-XXXX.exe 
+</I>&gt;<i> 	- I pick the folder where to install
+</I>&gt;<i> 	- The 7z unarchiver unpacks the ~200Mb of files. (see screenshot
+</I>&gt;<i> 	  for the content of the folder where things are extracted) 
+</I>&gt;<i> 	- The Command prompt requesting for VCExpress installation appears
+</I>&gt;<i> 	  (other screenshot).
+</I>&gt;<i> 	- I close the terminal window. Nothing else happens.
+</I>
+Ah, so it is not a &quot;hang&quot; but more like: it does not do anything else than
+wait for your user input.
+
+&gt;<i>From your second screenshot, it looks as if the error is:
+</I>
+	bash: reg: command not found
+
+And the culprit is of course:
+
+	<A HREF="https://github.com/openspim/micromanager/blob/openspim/openspim.sh#L12">https://github.com/openspim/micromanager/blob/openspim/openspim.sh#L12</A>
+
+Seems that the &quot;reg&quot; tool is not as universally present as we originally
+thought!
+
+So can you please do the following:
+
+- overwrite the file openspim.sh in your OpenSPIM-Dev-Env's etc/profile.d/
+  subdirectory with this:
+
+	<A HREF="https://raw.github.com/openspim/micromanager/for-alexis/openspim.sh">https://raw.github.com/openspim/micromanager/for-alexis/openspim.sh</A>
+
+- start the &quot;git-bash&quot; Batch file in your OpenSPIM-Dev-Env
+
+It should now do many, many more things than just complain about the
+absence of Visual C++...
+
+Once you report that it is working, I will make this part of the 'master'
+branch and make a new dev-env installer.
+
+Thanks!
+Dscho
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001008.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001022.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1011">[ date ]</a>
+              <a href="thread.html#1011">[ thread ]</a>
+              <a href="subject.html#1011">[ subject ]</a>
+              <a href="author.html#1011">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

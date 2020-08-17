@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Problems adding a new Z drive to &quot;Aquire SPIM Image&quot; plugin
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20adding%20a%20new%20Z%20drive%20to%20%22Aquire%20SPIM%20Image%22%0A%20plugin&In-Reply-To=%3CB0B71D39-1E89-4EEE-826D-994197AE41C7%40mrc-lmb.cam.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002080.html">
+   <LINK REL="Next"  HREF="002077.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Problems adding a new Z drive to &quot;Aquire SPIM Image&quot; plugin</H1>
+    <B>Ben Sutcliffe</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20adding%20a%20new%20Z%20drive%20to%20%22Aquire%20SPIM%20Image%22%0A%20plugin&In-Reply-To=%3CB0B71D39-1E89-4EEE-826D-994197AE41C7%40mrc-lmb.cam.ac.uk%3E"
+       TITLE="[OpenSPIM] Problems adding a new Z drive to &quot;Aquire SPIM Image&quot; plugin">sutcliff at mrc-lmb.cam.ac.uk
+       </A><BR>
+    <I>Thu Apr 12 07:49:46 CDT 2018</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002080.html">[OpenSPIM] ThorlabsAPTStage 64bit issues
+</A></li>
+        <LI>Next message (by thread): <A HREF="002077.html">[OpenSPIM] holographic diffusers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2083">[ date ]</a>
+              <a href="thread.html#2083">[ thread ]</a>
+              <a href="subject.html#2083">[ subject ]</a>
+              <a href="author.html#2083">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I am trying to upgrade the Z stepper motor on my OpenSPIM setup to achieve improved Z resolution. I am currently using a Thorlabs PT3 stage with the Picard stepper motors and twister to get a 4D stage. The new motor is a Thorlabs DRV001 connected via a Thorlabs BSC201 controller. 
+
+I set up a new hardware configuration and added the new DRV001 stepper motor to my existing config (naming it Thorlabs Z Stage) so that I could test the system before physically replacing the Picard Z stepper motor on the setup.
+
+The DRV001 is controlled nicely by the 64bit ThorlabsAPTStage Device Adapter (<A HREF="https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip">https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip</A> &lt;<A HREF="https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip">https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip</A>&gt;) and can be controlled using the Stage Control plugin under Device Control with no problem.
+
+When I try to use the “Acquire SPIM Image” plugin I get the error message: “Your setup appears to be invalid. Please make sure you have a camera and 4D stage set up. You may need to restart Micro-Manager for the OpenSPIM plugin to detect the correct setup”. A restart of Micro-Manager does not fix this.
+
+What I would like to do is simply change the Z Stage stepper motor under the “Manage Devices” options of “Acquire SPIM Image” from the Picard Z Stage to my new Thorlabs Z Stage (i.e. the DRV001).
+
+I would be happy to try and modify the “Acquire SPIM Image” plugin if someone could give me some assistance in get started doing so?
+
+I look forward to hearing any suggestions.
+
+Kind regards, 
+Ben
+
+--
+Dr Ben Sutcliffe
+Cell Biology Division / Light Microscopy
+MRC Laboratory of Molecular Biology
+Francis Crick Avenue
+Cambridge Biomedical Campus
+Cambridge CB2 0QH, UK
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20180412/cd47edb9/attachment.html">http://openspim.org/pipermail/openspim/attachments/20180412/cd47edb9/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002080.html">[OpenSPIM] ThorlabsAPTStage 64bit issues
+</A></li>
+	<LI>Next message (by thread): <A HREF="002077.html">[OpenSPIM] holographic diffusers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2083">[ date ]</a>
+              <a href="thread.html#2083">[ thread ]</a>
+              <a href="subject.html#2083">[ subject ]</a>
+              <a href="author.html#2083">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

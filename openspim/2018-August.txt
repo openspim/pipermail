@@ -1,0 +1,38 @@
+From ctrueden at wisc.edu  Mon Aug  6 15:44:42 2018
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Mon, 6 Aug 2018 15:44:42 -0500
+Subject: [OpenSPIM] OpenSPIM mailing list transition to forum.image.sc
+Message-ID: <CADN69y=sNjbP1Vjdm74c71dO32DacQ0Ls0v2x4G0_UyC0AvnFg@mail.gmail.com>
+
+Hello subscribers to the OpenSPIM mailing list!
+
+The new Image.sc Forum has finally launched [1], and the OpenSPIM project
+has signed on as a software partner.
+
+As such, this openspim at openspim.org mailman list is being retired. From now
+on, please post questions about OpenSPIM on the Image.sc Forum at
+https://forum.image.sc using the openspim tag.
+
+The forum.image.sc site is a unified and more visible discussion forum with
+many experts in topics heavily overlapping with OpenSPIM's hardware and
+software concerns.
+
+The archives for the old list will continue to remain accessible at:
+
+https://openspim.org/pipermail/openspim/
+
+See you all on the forum!
+
+Regards,
+Curtis
+
+[1]
+https://forum.image.sc/t/the-scientific-community-image-forum-is-here/18738
+
+--
+Curtis Rueden
+LOCI software architect - https://loci.wisc.edu/software
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180806/a6213e3d/attachment.html>
+

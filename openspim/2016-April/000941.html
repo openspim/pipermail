@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Out of focus signal and optics questions
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Out%20of%20focus%20signal%20and%20optics%20questions&In-Reply-To=%3Cop.yfrc7mjaahhlbl%40pc507-99ff.ibd%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000938.html">
+   <LINK REL="Next"  HREF="000943.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Out of focus signal and optics questions</H1>
+    <B>Monika Paw&#322;owska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Out%20of%20focus%20signal%20and%20optics%20questions&In-Reply-To=%3Cop.yfrc7mjaahhlbl%40pc507-99ff.ibd%3E"
+       TITLE="[OpenSPIM] Out of focus signal and optics questions">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Mon Apr 11 09:00:48 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000938.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+        <LI>Next message: <A HREF="000943.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#941">[ date ]</a>
+              <a href="thread.html#941">[ thread ]</a>
+              <a href="subject.html#941">[ subject ]</a>
+              <a href="author.html#941">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I think it would be easier for us to guess the reason of the problem if we  
+had an example image of the &quot;out of focus light&quot;. :)
+
+But: there is a trick to find the BFP even when you have no idea where it  
+is (I didn't  :P ). Start with a collimated beam after the 1st telescope ,  
+mount the second telescope so that the beam is collimated again, and then  
+take out first lens of second telescope and put the objective in. This  
+way, second lens should focus and objective recollimate the beam.
+
+Afterwards, when everything is in place, rotating cyl. lens 90 degrees  
+lets you see (without fluorescence filter) whether the light sheet is in  
+the centre of FOV (this is similar to Pete's hint, but you don't have to  
+take the cyl. lens out).
+
+Monika
+
+W dniu .04.2016 o 23:03 Anthony, Neil &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt; pisze:
+
+&gt;<i> Hi all,  I'm pleased to say that I have my two colour light sheet setup  
+</I>&gt;<i> up and running :)
+</I>&gt;<i>
+</I>&gt;<i> Alas, I have a few teething problems, one of which is that I'm seeing a  
+</I>&gt;<i> lot of out of focus light during my z-stacks.  I expect to see some out  
+</I>&gt;<i> of focus blur, but with the selective illumination I thought it would be  
+</I>&gt;<i> less.  I think things are pretty well aligned, with everything in the  
+</I>&gt;<i> right place, and wondered if you could help me think about a couple of  
+</I>&gt;<i> things.  The main two I'm thinking about are the function of the slit  
+</I>&gt;<i> and the position of the final lens before the illumination objective,  
+</I>&gt;<i> and how this is affecting my sheet.
+</I>&gt;<i>
+</I>&gt;<i> I have the first telescope in exactly the correct position, following  
+</I>&gt;<i> the drawings on the Thorlabs page, with the lens back-to-back such that  
+</I>&gt;<i> infinity of their design is pointing out at both ends (see below link to  
+</I>&gt;<i> Thorlabs page; I'm referring to the threaded side as the back).  This  
+</I>&gt;<i> gives me a really consistent expanded spot size across the room.  The  
+</I>&gt;<i> slit, cylindrical lens, gimbal corner mirror and first lens of the  
+</I>&gt;<i> second telescope are all pretty much exactly 50mm spaced.  The  
+</I>&gt;<i> horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+</I>&gt;<i>
+</I>&gt;<i> The second telescope is where I get confused as we have two focusing  
+</I>&gt;<i> paths in one.  Viewed from above it's the same as the expanding  
+</I>&gt;<i> telescope before the slit, but in reverse to reduce the beam, so it  
+</I>&gt;<i> would be nicer to have the Thorlabs optics back-to-back.  For the side  
+</I>&gt;<i> view the beam path goes through the telescope in infinity space so we'd  
+</I>&gt;<i> like the lens to be front-to-front, so to speak.  The preference for  
+</I>&gt;<i> back-to-back or front-to-front is just for accurately locating the  
+</I>&gt;<i> optics, and I'm guessing the focus in the opposite direction would be  
+</I>&gt;<i> just as good, but difficult to know where to measure the focal distance  
+</I>&gt;<i> from.
+</I>&gt;<i>
+</I>&gt;<i> In my setup I have both lens pointing the same direction with the front  
+</I>&gt;<i> towards the illumination lens.  I have a picture of my SPIM below (low  
+</I>&gt;<i> res; I'll get a better one for the website soon).  My confusion comes  
+</I>&gt;<i> when I look at the back-focal-plane (BFP) of the objective lens, which  
+</I>&gt;<i> lies 19mm above the flange, just before the yellow line (see image sent  
+</I>&gt;<i> from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip  
+</I>&gt;<i> from their system resources).  I have my second lens of the second  
+</I>&gt;<i> telescope pair (25mm) right up against the objective to reach the BFP.   
+</I>&gt;<i> This is not how it looks in the website assembly and pictures, but as  
+</I>&gt;<i> far as I know, is where the optical setup dictates it should be.
+</I>&gt;<i>
+</I>&gt;<i> My next question is the function of the slit.  Following the ray path  
+</I>&gt;<i> diagrams the width of the slit changes the width of the horizontal beam  
+</I>&gt;<i> focused on the BFP of the objective.  A wider beam would lead to a  
+</I>&gt;<i> higher NA focused sheet, with the corresponding thinner focus and  
+</I>&gt;<i> shorter depth of focus.  When I reduce the width of the slit I appear to  
+</I>&gt;<i> get a thinner and thinner sheet, which doesn't make sense.  I should see  
+</I>&gt;<i> a thinner beam with a wider beam, right?
+</I>&gt;<i>
+</I>&gt;<i> I've checked the alignment by removing the cylindrical lens and creating  
+</I>&gt;<i> the sharpest thinnest beam of light in a dense sample of tiny beads.  On  
+</I>&gt;<i> inserting the cylindrical lens again it shifts a little, but I can get  
+</I>&gt;<i> the sheet in focus with a small adjustment.
+</I>&gt;<i>
+</I>&gt;<i> In writing this email and composing my thoughts I think I have my sheet  
+</I>&gt;<i> focused either before or after the collection lens axis, such that the  
+</I>&gt;<i> decrease in sheet thickness is likely coming from the reduced width of  
+</I>&gt;<i> the triangle of light and not from the tighter focus.
+</I>&gt;<i>
+</I>&gt;<i> Thanks for taking the time to read this long email.  I hope you have  
+</I>&gt;<i> some thoughts that might lead me in the right direction.  I'm not sure  
+</I>&gt;<i> why the original design has such a large gap from the objective given  
+</I>&gt;<i> the details of the BFP?  Is there a different plane on the back of the  
+</I>&gt;<i> objective that should be focused on instead?  If not, what would the ray  
+</I>&gt;<i> diagram look like for the focus prior to the BFP?
+</I>&gt;<i>
+</I>&gt;<i> The last caveat to my setup is that I opted to make it on the imperial  
+</I>&gt;<i> spaced table, and as such I've mounted the chamber holder on the same  
+</I>&gt;<i> rail as that last telescope setup (I thought it might also allow me to  
+</I>&gt;<i> slide things if I ever change lenses).   I have two cameras that are  
+</I>&gt;<i> free standing and have been aligned to a mm or so accuracy to be on the  
+</I>&gt;<i> centre of the axis as needed.  I include this for completeness and feel  
+</I>&gt;<i> it's not likely to play a roll, as moving things around lets me find the  
+</I>&gt;<i> edges of my field of view from the detection objective but I don't  
+</I>&gt;<i> really see much change in the thickness of my sheet in the different  
+</I>&gt;<i> translations.
+</I>&gt;<i>
+</I>&gt;<i> Please let me know if you need further details, images, etc.
+</I>&gt;<i>
+</I>&gt;<i> Neil
+</I>&gt;<i>
+</I>&gt;<i> Thorlabs lens ray drawing:
+</I>&gt;<i> <A HREF="https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif">https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif</A>
+</I>&gt;<i>
+</I>&gt;<i> Second telescope optics image:
+</I>&gt;<i> <A HREF="https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing">https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing</A>
+</I>&gt;<i>
+</I>&gt;<i> BFP location image from Olympus:
+</I>&gt;<i> <A HREF="https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing">https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ________________________________
+</I>&gt;<i>
+</I>&gt;<i> This e-mail message (including any attachments) is for the sole use of
+</I>&gt;<i> the intended recipient(s) and may contain confidential and privileged
+</I>&gt;<i> information. If the reader of this message is not the intended
+</I>&gt;<i> recipient, you are hereby notified that any dissemination, distribution
+</I>&gt;<i> or copying of this message (including any attachments) is strictly
+</I>&gt;<i> prohibited.
+</I>&gt;<i>
+</I>&gt;<i> If you have received this message in error, please contact
+</I>&gt;<i> the sender by reply e-mail message and destroy all copies of the
+</I>&gt;<i> original message (including attachments).
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+-- 
+Dr Monika Paw&#322;owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000938.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+	<LI>Next message: <A HREF="000943.html">[OpenSPIM] Out of focus signal and optics questions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#941">[ date ]</a>
+              <a href="thread.html#941">[ thread ]</a>
+              <a href="subject.html#941">[ subject ]</a>
+              <a href="author.html#941">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

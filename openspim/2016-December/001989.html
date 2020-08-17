@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fwd: Standa Multi-Axis Precision Motion - Custom	Solutions
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%0A%20%3D%3Futf-8%3Fq%3FFwd%3D3A_Standa_Multi-Axis_Precision_Motion_-_%3F%3D%0A%20%3D%3Futf-8%3Fq%3FCustom%3D09Solutions%3F%3D&In-Reply-To=%3C376f4e90006a7b9c2602c0a1d0084676%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001988.html">
+   <LINK REL="Next"  HREF="001990.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fwd: Standa Multi-Axis Precision Motion - Custom	Solutions</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%0A%20%3D%3Futf-8%3Fq%3FFwd%3D3A_Standa_Multi-Axis_Precision_Motion_-_%3F%3D%0A%20%3D%3Futf-8%3Fq%3FCustom%3D09Solutions%3F%3D&In-Reply-To=%3C376f4e90006a7b9c2602c0a1d0084676%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] Fwd: Standa Multi-Axis Precision Motion - Custom	Solutions">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Tue Dec 20 08:34:00 CST 2016</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="001988.html">[OpenSPIM] Fwd: Standa Multi-Axis Precision Motion -	Custom	Solutions
+</A></li>
+        <LI>Next message (by thread): <A HREF="001990.html">[OpenSPIM] Fwd: Standa Multi-Axis Precision Motion -	Custom	Solutions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1989">[ date ]</a>
+              <a href="thread.html#1989">[ thread ]</a>
+              <a href="subject.html#1989">[ subject ]</a>
+              <a href="author.html#1989">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ulrik,
+
+my Standa stages work with micro-manager. I can use them with Multi-D. 
+Acq. However, I am not managing to start the OpenSPIM plugin. See 
+Corelog attached. This is the crucial part:
+
+2016-12-20T15:22:50.467402 tid5404 [IFO,App] Plugin command: Acquire 
+SPIM image
+2016-12-20T15:22:50.469402 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:50.470402 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:50.477403 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:50.478403 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:50.478403 tid5404 [IFO,App] Thread 16 
+(AWT-EventQueue-0) terminated with uncaught exception
+2016-12-20T15:22:50.478403 tid5404 [IFO,App] 
+java.lang.IllegalArgumentException: invalid range properties
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+javax.swing.DefaultBoundedRangeModel.&lt;init&gt;(DefaultBoundedRangeModel.java:102)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+javax.swing.JSlider.&lt;init&gt;(JSlider.java:274)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+javax.swing.JSlider.&lt;init&gt;(JSlider.java:241)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+spim.gui.component.SteppedSlider.&lt;init&gt;(SteppedSlider.java:65)
+
+so basically the function that asks stage positions in order to create 
+the sliders in the plugin crashes.
+
+Regards,
+Monika
+
+
+
+W dniu 2016-12-20 12:40, Ulrik Günther napisał(a):
+&gt;<i> Hi Monica,
+</I>&gt;<i> 
+</I>&gt;<i> the controllers Standa makes are apparently supported by MicroManager
+</I>&gt;<i> (see <A HREF="https://micro-manager.org/wiki/Standa">https://micro-manager.org/wiki/Standa</A> and
+</I>&gt;<i> <A HREF="https://www.micro-manager.org/wiki/Standa8SMC4">https://www.micro-manager.org/wiki/Standa8SMC4</A>), so actually no code
+</I>&gt;<i> changes should be needed from our side. If you’re willing to try
+</I>&gt;<i> these, I’d love to hear about your experience and would also help,
+</I>&gt;<i> should any integration issues arise.
+</I>&gt;<i> 
+</I>&gt;<i> cheers!
+</I>&gt;<i> 
+</I>&gt;<i> ulrik
+</I>&gt;<i> 
+</I>&gt;<i> —
+</I>&gt;<i> 
+</I>&gt;<i> Ulrik Günther, Dipl.-Phys.
+</I>&gt;<i> PhD Student
+</I>&gt;<i> MOSAIC Group &amp; Tomancak Lab, Center of Systems Biology Dresden
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+</I>&gt;<i> 
+</I>&gt;&gt;<i> On Dec 13, 2016, at 12:47 PM, Monika Pawłowska
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt; wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The question of alternatives to Picard appears sometimes on this
+</I>&gt;&gt;<i> list, so I thought I'd forward this. Mechanically it looks good to
+</I>&gt;&gt;<i> me, but I suppose some additional methods for the plugin would have
+</I>&gt;&gt;<i> to be added?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Best,
+</I>&gt;&gt;<i> Monika
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> ------- Treść oryginalnej wiadomości -------
+</I>&gt;&gt;<i> Od: &quot;Standa Ltd.&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">info at standa.lt</A>&gt;
+</I>&gt;&gt;<i> Do: &quot;m.pawlowska&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt;
+</I>&gt;&gt;<i> Kopia dla:
+</I>&gt;&gt;<i> Temat: Multi-Axis Precision Motion - Custom Solutions
+</I>&gt;&gt;<i> Data: wtorek, .12.2016,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Dear Monika Pawlowska ,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> We are pleased to present to you examples of STANDA`s unlimited
+</I>&gt;&gt;<i> capabilities in building multi-axis automated systems and
+</I>&gt;&gt;<i> implementation of OEM solutions, which combines wide range of our
+</I>&gt;&gt;<i> standard precision motorized positioners [1] with custom designed
+</I>&gt;&gt;<i> components.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The capabilities are expanded by STANDA's series of motion
+</I>&gt;&gt;<i> controllers such as 8SMC4 Series and Industrial EtherCat Servo
+</I>&gt;&gt;<i> Controllers [2], which have great choice of programming options and
+</I>&gt;&gt;<i> examples compatible with Windows, OS X and Linux.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Looking forward of getting your tasks. www.standa.lt [3]
+</I>&gt;&gt;<i> www.standaphotonics.com [4]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> MULTI-AXIS MOTION SYSTEMS COMBINED OF STANDARD POSITIONERS
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [5]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> XYZ Positioning with Rotation Motion:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> *
+</I>&gt;&gt;<i> 102x102x100mm linear + 360° rotation
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [6]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> More Information...
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> XZ Linear+Rotation+Goniometer Stages:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> *
+</I>&gt;&gt;<i> Precision 2-axis goniometric motion with multi-axis linear
+</I>&gt;&gt;<i> positioning capabilities
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [7]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> More Information... &lt;embedded image&gt; [8]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [9]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> XYZ+Rotation Precision Motion Platform:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> *
+</I>&gt;&gt;<i> Optical breadboard with flat top surface motion within several
+</I>&gt;&gt;<i> degrees of freedom
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [10]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> More Information...
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [11]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> For any inquiries, sales related questions or need of additional
+</I>&gt;&gt;<i> information please contact us directly at <A HREF="http://openspim.org/mailman/listinfo/openspim">sales at standa.lt</A>, or
+</I>&gt;&gt;<i> contact your local Standa distributor. [12]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Yours Sincerely,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> STANDA team
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt; [13]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> STANDA P.O. BOX 377 , 03012 Vilnius, Lithuania
+</I>&gt;&gt;<i> Phone +370 5 2651474, Fax +370 5 2651483
+</I>&gt;&gt;<i> E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">sales at standa.LT</A>
+</I>&gt;&gt;<i> Website: www.standa.LT [3], www.standaphotonics.com [4]
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;embedded image&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> subscribe on Youtube [14] | friend on Facebook [15] | Unsubscribe
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> Dr Monika Pawłowska
+</I>&gt;&gt;<i> Nencki Institute
+</I>&gt;&gt;<i> 02-093 Warsaw
+</I>&gt;&gt;<i> Pasteura 3
+</I>&gt;&gt;<i> Poland
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Links:
+</I>&gt;<i> ------
+</I>&gt;<i> [1] <A HREF="http://www.standa.lt/products/catalog/motorised_positioners">http://www.standa.lt/products/catalog/motorised_positioners</A>
+</I>&gt;<i> [2] 
+</I>&gt;<i> <A HREF="http://www.standa.lt/products/catalog/motorised_positioners#controller">http://www.standa.lt/products/catalog/motorised_positioners#controller</A>
+</I>&gt;<i> [3] <A HREF="http://www.standa.lt">http://www.standa.lt</A>
+</I>&gt;<i> [4] <A HREF="http://www.standaphotonics.com">http://www.standaphotonics.com</A>
+</I>&gt;<i> [5] <A HREF="http://www.standa.lt/products/catalog/custom_engineering?item=645">http://www.standa.lt/products/catalog/custom_engineering?item=645</A>
+</I>&gt;<i> [6] <A HREF="https://youtu.be/WhjVMv9-yeA">https://youtu.be/WhjVMv9-yeA</A>
+</I>&gt;<i> [7] <A HREF="https://youtu.be/oeyCDxKE-EU">https://youtu.be/oeyCDxKE-EU</A>
+</I>&gt;<i> [8] <A HREF="http://www.standa.lt/products/catalog/custom_engineering?item=640">http://www.standa.lt/products/catalog/custom_engineering?item=640</A>
+</I>&gt;<i> [9] <A HREF="http://www.standa.lt/products/catalog/custom_engineering?item=627">http://www.standa.lt/products/catalog/custom_engineering?item=627</A>
+</I>&gt;<i> [10] <A HREF="https://youtu.be/DQCu3NOahk4">https://youtu.be/DQCu3NOahk4</A>
+</I>&gt;<i> [11] <A HREF="http://www.standa.lt/products/catalog/custom_engineering">http://www.standa.lt/products/catalog/custom_engineering</A>
+</I>&gt;<i> [12] <A HREF="http://www.standa.lt/contacts/worldwide">http://www.standa.lt/contacts/worldwide</A>
+</I>&gt;<i> [13] <A HREF="http://webmail.nencki.gov.pl/www.standa.lt">http://webmail.nencki.gov.pl/www.standa.lt</A>
+</I>&gt;<i> [14] <A HREF="http://www.youtube.com/user/StandaLTD/videos">http://www.youtube.com/user/StandaLTD/videos</A>
+</I>&gt;<i> [15] <A HREF="http://www.facebook.com/Standa.ltd">http://www.facebook.com/Standa.ltd</A>
+</I>-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20161220T152233_pid2024.txt
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20161220/e33a0a0f/attachment-0001.txt">http://openspim.org/pipermail/openspim/attachments/20161220/e33a0a0f/attachment-0001.txt</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="001988.html">[OpenSPIM] Fwd: Standa Multi-Axis Precision Motion -	Custom	Solutions
+</A></li>
+	<LI>Next message (by thread): <A HREF="001990.html">[OpenSPIM] Fwd: Standa Multi-Axis Precision Motion -	Custom	Solutions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1989">[ date ]</a>
+              <a href="thread.html#1989">[ thread ]</a>
+              <a href="subject.html#1989">[ subject ]</a>
+              <a href="author.html#1989">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

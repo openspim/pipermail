@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] perfusion and multiple lasers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20perfusion%20and%20multiple%20lasers&In-Reply-To=%3C2CF5E684-37D1-4B19-B677-60C4CB40F241%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000744.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] perfusion and multiple lasers</H1>
+    <B>Pavel Tomancak</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20perfusion%20and%20multiple%20lasers&In-Reply-To=%3C2CF5E684-37D1-4B19-B677-60C4CB40F241%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] perfusion and multiple lasers">tomancak at mpi-cbg.de
+       </A><BR>
+    <I>Tue May 26 13:29:26 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000744.html">[OpenSPIM] perfusion and multiple lasers
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#745">[ date ]</a>
+              <a href="thread.html#745">[ thread ]</a>
+              <a href="subject.html#745">[ subject ]</a>
+              <a href="author.html#745">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+
+&gt;<i> SPIMers,
+</I>&gt;<i> 
+</I>&gt;<i> We have completed a multichannel AOTF modulated 4 line L-SPIM.  We took an AOTF and three retired lasers(442,488,514,568,647) from our spinning disk and designed a DAC based on the Arduino DAC supported by micromanager (the 442 is not quite integrated optically).  We&#8217;ve also incorporated an emission filter wheel and excitation wheel for beam characterizing (the former is integrated in our branch of the SPIMAcquisition plugin).  I plan to have the optics/hardware/software design and example datasets up on the OpenSPIM site in the coming weeks-grant taking precedent.  I&#8217;m working with Johannes to get our branch of SPIMAcquisition merged with the release version-waiting on me really.
+</I>&gt;<i>  
+</I>&gt;<i> On the perfusion and environmental control side, we have a summer student that is working on these aspects for our system.  The perfusion is going to be fairly rudimentary.  We will be relying on peristaltic pumps because the volume of our sample chamber is so large (7 ml).  The perfusion system will be setup to work as a recirculating loop as well to deliver dissolved gases CO2 etc as required-via a simple bubbler.  If I can find a CO2 sensor I like(cost to performance) this might be integrated into the bubbler unit.
+</I>&gt;<i>  
+</I>&gt;<i> I&#8217;m not crazy about directly heating the chamber with amped up resistors, so we&#8217;re starting with a &#8220;closed-loop&#8221; heated reservoir, re-circulator and heat-exchanger-if it works well we may also strap a Peltier based heat pump to the reservoir as well to give us cooling.
+</I>&gt;<i>  
+</I>&gt;<i> In toto there will be a handful of peristaltic pumps, controllers (Arduino as PIDs), media bubblers and heated reservoirs.  As time permits we&#8217;ll be writing a plugin for micromanager to wrangle all this functionality and add graphs etc-everything you might want out of a comparable Peco or Okolabs solution. 
+</I>&gt;<i>  
+</I>&gt;<i> As we make progress I&#8217;ll update our  to-be-completed OpenSPIM page.
+</I>
+Dear Seth,
+
+All of the above sounds fantastic. I am very much looking forward to see your wiki page.
+
+All the best
+
+PAvel
+
+&gt;<i>  
+</I>&gt;<i> Happy SPIMing!
+</I>&gt;<i>  
+</I>&gt;<i> Seth
+</I>&gt;<i>  
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Johannes Schindelin
+</I>&gt;<i> Sent: Thursday, May 21, 2015 5:35 AM
+</I>&gt;<i> To: Feinstein, Timothy N
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] perfusion and multiple lasers
+</I>&gt;<i> 
+</I>&gt;<i> Hi Tim,
+</I>&gt;<i> 
+</I>&gt;<i> On 2015-05-21 03:28, Feinstein, Timothy N wrote:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Separately, If anyone is using openSPIM with two lasers or more I 
+</I>&gt;<i> would be grateful to talk off-list about how you implemented it.
+</I>&gt;<i> 
+</I>&gt;<i> I would like to encourage a more open discussion. This is the OpenSPIM project, after all, and it seems pretty obvious to me that the project would benefit more from a discussion *on* this list than from a discussion in private.
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150526/f6f140fd/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150526/f6f140fd/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000744.html">[OpenSPIM] perfusion and multiple lasers
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#745">[ date ]</a>
+              <a href="thread.html#745">[ thread ]</a>
+              <a href="subject.html#745">[ subject ]</a>
+              <a href="author.html#745">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

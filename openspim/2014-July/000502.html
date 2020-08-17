@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Anti-drift update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift%20update&In-Reply-To=%3CCAHAw%2B8Zy2fTh6pRuEq3NVC%3DBeyzTPp1nOp%2BuRC0tFFry4%2BxoMQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000501.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Anti-drift update</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift%20update&In-Reply-To=%3CCAHAw%2B8Zy2fTh6pRuEq3NVC%3DBeyzTPp1nOp%2BuRC0tFFry4%2BxoMQ%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Anti-drift update">aureliaomega at gmail.com
+       </A><BR>
+    <I>Thu Jul 31 11:21:33 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000501.html">[OpenSPIM] Anti-drift
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#502">[ date ]</a>
+              <a href="thread.html#502">[ thread ]</a>
+              <a href="subject.html#502">[ subject ]</a>
+              <a href="author.html#502">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+I'm still having trouble with the anti-drift function, and I'm not sure how
+to proceed.  To explain the trouble, I made the following test: I set up a
+5-time point acquisition with only one view, turned on the anti-drift, and
+made a manual correction to first one, then made no more adjustments after
+that.  The frames are 100 seconds apart, so no significant actual drift
+should be occurring.
+If I make a correction to Y or Z, I get the result I expect; the image
+moves the right distance, in the right direction, and then doesn't move
+again in the last 3 frames. But if I make a correction in X, the stage
+moves to the correct position, but then on the following frame moves 2x the
+previous distance, and then next time moves 2x the previous one again,
+until it leaves the field of view.  The attached image shows z-projections
+of subsequent frames, with red being the first one, green the second, and
+blue is third frame.  If I correct to the left instead of right, the embryo
+continues off to the left instead.  Setting the stage or the camera to
+&quot;transpose mirror X&quot; in the tools/property browser changes whether the live
+view mouse control behaves correctly, but doesn't alter this behavior.
+A sample log file showing the anti-drift corrections:
+TP 0 view 0: Offset: {8.6508; 0; 0}  (this x correction is the one I have
+put in)
+TP 0 view 0: Offset: {16.46055; -0.2493; 0}
+TP 0 view 0: Offset: {34.48305; 0.2403; 0}
+TP 0 view 0: Offset: {69.08625; -1.08135; 0}
+
+It seems like there is a sign error of some kind, but I can't figure out a
+way to change my configuration to correct it.  I have already switched the
+X and Y serial numbers in my configuration file, which improved things a
+little (previously this test resulted in the embryo traveling in circles).
+Any ideas?
+Thanks,
+Aurelia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140731/65d6fe10/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20140731/65d6fe10/attachment-0001.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: CompositeX5_NoMirror.tif
+Type: image/tiff
+Size: 8497414 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140731/65d6fe10/attachment-0001.tif">http://openspim.org/pipermail/openspim/attachments/20140731/65d6fe10/attachment-0001.tif</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000501.html">[OpenSPIM] Anti-drift
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#502">[ date ]</a>
+              <a href="thread.html#502">[ thread ]</a>
+              <a href="subject.html#502">[ subject ]</a>
+              <a href="author.html#502">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

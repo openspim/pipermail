@@ -1,0 +1,299 @@
+SPIMSetup.java:222)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1269)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:54.928706 tid7184 [ERR,Core] Error occurred in device Picard XY
+ Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-06T10:35:54.928706 tid7184 [IFO,App] Couldn't get X position on Picard X
+Y Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+XPosition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getXPosition(C
+MMCore.java:1182)
+                                   [       ]   at spim.setup.GenericXYStage$SubS
+tage.getPosition(GenericXYStage.java:76)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1260)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:55.428735 tid7184 [ERR,Core] Error occurred in device Picard XY
+ Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-06T10:35:55.428735 tid7184 [IFO,App] Couldn't get Y position on Picard X
+Y Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+YPosition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getYPosition(C
+MMCore.java:1186)
+                                   [       ]   at spim.setup.GenericXYStage$SubS
+tage.getPosition(GenericXYStage.java:78)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1263)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:55.428735 tid7184 [ERR,Core] Error occurred in device Picard Z
+Stage: Error in device "Picard Z Stage": Unable to communicate with the device.
+(35)
+2015-05-06T10:35:55.428735 tid7184 [IFO,App] Couldn't get stage position for Pic
+ard Z Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-
+0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+Position__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getPosition(CM
+MCore.java:1106)
+                                   [       ]   at spim.setup.Stage.getPosition(S
+tage.java:35)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1266)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:55.928763 tid7184 [ERR,Core] Error occurred in device Picard Tw
+ister: Error in device "Picard Twister": Unable to communicate with the device.
+(35)
+2015-05-06T10:35:55.928763 tid7184 [IFO,App] Couldn't get stage position for Pic
+ard Twister
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-
+0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+Position__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getPosition(CM
+MCore.java:1106)
+                                   [       ]   at spim.setup.Stage.getPosition(S
+tage.java:35)
+                                   [       ]   at spim.setup.PicardTwister.getPo
+sition(PicardTwister.java:27)
+                                   [       ]   at spim.setup.SPIMSetup.getAngle(
+SPIMSetup.java:222)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1269)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:56.432792 tid7184 [ERR,Core] Error occurred in device Picard XY
+ Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-06T10:35:56.432792 tid7184 [IFO,App] Couldn't get X position on Picard X
+Y Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+XPosition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getXPosition(C
+MMCore.java:1182)
+                                   [       ]   at spim.setup.GenericXYStage$SubS
+tage.getPosition(GenericXYStage.java:76)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1260)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:56.932821 tid7184 [ERR,Core] Error occurred in device Picard XY
+ Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-06T10:35:56.932821 tid7184 [IFO,App] Couldn't get Y position on Picard X
+Y Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+YPosition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getYPosition(C
+MMCore.java:1186)
+                                   [       ]   at spim.setup.GenericXYStage$SubS
+tage.getPosition(GenericXYStage.java:78)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1263)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:56.932821 tid7184 [ERR,Core] Error occurred in device Picard Z
+Stage: Error in device "Picard Z Stage": Unable to communicate with the device.
+(35)
+2015-05-06T10:35:56.932821 tid7184 [IFO,App] Couldn't get stage position for Pic
+ard Z Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-
+0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+Position__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getPosition(CM
+MCore.java:1106)
+                                   [       ]   at spim.setup.Stage.getPosition(S
+tage.java:35)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1266)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:57.432849 tid7184 [ERR,Core] Error occurred in device Picard Tw
+ister: Error in device "Picard Twister": Unable to communicate with the device.
+(35)
+2015-05-06T10:35:57.432849 tid7184 [IFO,App] Couldn't get stage position for Pic
+ard Twister
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-
+0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+Position__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getPosition(CM
+MCore.java:1106)
+                                   [       ]   at spim.setup.Stage.getPosition(S
+tage.java:35)
+                                   [       ]   at spim.setup.PicardTwister.getPo
+sition(PicardTwister.java:27)
+                                   [       ]   at spim.setup.SPIMSetup.getAngle(
+SPIMSetup.java:222)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1269)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:57.937878 tid7184 [ERR,Core] Error occurred in device Picard XY
+ Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-06T10:35:57.937878 tid7184 [IFO,App] Couldn't get X position on Picard X
+Y Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+XPosition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getXPosition(C
+MMCore.java:1182)
+                                   [       ]   at spim.setup.GenericXYStage$SubS
+tage.getPosition(GenericXYStage.java:76)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1260)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:58.437907 tid7184 [ERR,Core] Error occurred in device Picard XY
+ Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-06T10:35:58.437907 tid7184 [IFO,App] Couldn't get Y position on Picard X
+Y Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+YPosition__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getYPosition(C
+MMCore.java:1186)
+                                   [       ]   at spim.setup.GenericXYStage$SubS
+tage.getPosition(GenericXYStage.java:78)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1263)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:58.437907 tid7184 [ERR,Core] Error occurred in device Picard Z
+Stage: Error in device "Picard Z Stage": Unable to communicate with the device.
+(35)
+2015-05-06T10:35:58.437907 tid7184 [IFO,App] Couldn't get stage position for Pic
+ard Z Stage
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-
+0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+Position__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getPosition(CM
+MCore.java:1106)
+                                   [       ]   at spim.setup.Stage.getPosition(S
+tage.java:35)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1266)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)
+2015-05-06T10:35:58.937935 tid7184 [ERR,Core] Error occurred in device Picard Tw
+ister: Error in device "Picard Twister": Unable to communicate with the device.
+(35)
+2015-05-06T10:35:58.937935 tid7184 [IFO,App] Couldn't get stage position for Pic
+ard Twister
+                                   [       ] java.lang.Exception: Error in devic
+e "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-
+0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_get
+Position__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getPosition(CM
+MCore.java:1106)
+                                   [       ]   at spim.setup.Stage.getPosition(S
+tage.java:35)
+                                   [       ]   at spim.setup.PicardTwister.getPo
+sition(PicardTwister.java:27)
+                                   [       ]   at spim.setup.SPIMSetup.getAngle(
+SPIMSetup.java:222)
+                                   [       ]   at spim.SPIMAcquisition.updateMot
+orPositions(SPIMAcquisition.java:1269)
+                                   [       ]   at spim.SPIMAcquisition.access$60
+0(SPIMAcquisition.java:91)
+                                   [       ]   at spim.SPIMAcquisition$19.run(SP
+IMAcquisition.java:1038)
+                                   [       ]   at java.util.TimerThread.mainLoop
+(Timer.java:512)
+                                   [       ]   at java.util.TimerThread.run(Time
+r.java:462)

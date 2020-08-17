@@ -1,0 +1,3305 @@
+From john.lim at imb.a-star.edu.sg  Sun Dec  1 23:56:54 2013
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Mon, 2 Dec 2013 13:56:54 +0800
+Subject: [OpenSPIM] "Acquire SPIM image" option missing in dropdown menu
+ after Fiji Update
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B3042B4E08AFEF@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Dear All,
+
+Have anyone encounter this problem that the "Acquire SPIM image" option disappear after running Fiji updates today?
+
+The "Acquire SPIM image" option is missing in the dropdown menu in Micro-Manager after I ran Fiji update today. When I clicked on "Plugins" in the Micro-Manager's menu, the "Acquire SPIM image" option does not appear.
+
+I had also re-downloaded the OpenSPIM/Fiji package as of October 25th, 2013. The "Acquire SPIM image" option appears normally in the Micro-Manager Plugins' menu, but it disappear after the Fiji update/restart. Sadly, I am not able to use the October 25th version as there is a camera error which is solved after the Fiji update but the "Acquire SPIM image" option disappear after today's Fiji update. 
+
+Best Regards,
+John
+
+From nantho2 at emory.edu  Mon Dec  2 07:31:20 2013
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Mon, 2 Dec 2013 08:31:20 -0500
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <61986.10.1.199.25.1385630685.squirrel@webmail.mpi-cbg.de>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+	<51A5B615.2020305@bii.a-star.edu.sg>
+	<7780b3d06c461.51a67521@wiscmail.wisc.edu>
+	<7660d08a71dac.51a634b1@wiscmail.wisc.edu>
+	<5288DD5A.1030906@bii.a-star.edu.sg>
+	<72d0f56575e54.528a84da@wiscmail.wisc.edu>
+	<7740f0b0739e5.528a8518@wiscmail.wisc.edu>
+	<7390acf87214a.528a8557@wiscmail.wisc.edu>
+	<73b098c276c53.528a8594@wiscmail.wisc.edu>
+	<7320dbd970faa.528a85d3@wiscmail.wisc.edu>
+	<7780813d77083.528a8610@wiscmail.wisc.edu>
+	<72f0f27c729e3.528a864d@wiscmail.wisc.edu>
+	<7340e81475634.528a868c@wiscmail.wisc.edu>
+	<7340a3be765ae.528a86c9@wiscmail.wisc.edu>
+	<7730f5b076cc6.528a8707@wiscmail.wisc.edu>
+	<7300f01277861.528a32d8@wiscmail.wisc.edu>
+	<528B0098.10007@bii.a-star.edu.sg> <5296382E.1070700@emory.edu>
+	<61986.10.1.199.25.1385630685.squirrel@webmail.mpi-cbg.de>
+Message-ID: <529C8BA8.2050506@emory.edu>
+
+Hi Pete, no apologies needed; thanks for posting the links.
+
+I'll keep you posted on how they work and what progresses from there.
+
+Thanks
+Neil
+
+
+On 11/28/2013 4:24 AM, Peter Gabriel Pitrone wrote:
+> Neil,
+>
+> Sorry about that, I should have done what I said I would then and there.
+>
+> If you have access to SolidWorks, you can use this Pack-n-go .ZIP file:
+> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.zip
+>
+> If you do not, then you can download this:
+> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.STEP .STEP is what
+> we had discussed to be the most widely used format across platforms. The
+> problem with this though is that there are rebuild errors on the pars
+> from Picard and Thorlabs.
+>
+> I hope that this helps,
+> Pete
+>
+
+
+
+From pitrone at mpi-cbg.de  Mon Dec  2 10:58:13 2013
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Mon, 2 Dec 2013 17:58:13 +0100 (CET)
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <alpine.DEB.1.00.1311291523030.1191@s15462909.onlinehome-server.info>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+	<51A5B615.2020305@bii.a-star.edu.sg>
+	<7780b3d06c461.51a67521@wiscmail.wisc.edu>
+	<7660d08a71dac.51a634b1@wiscmail.wisc.edu>
+	<5288DD5A.1030906@bii.a-star.edu.sg>
+	<72d0f56575e54.528a84da@wiscmail.wisc.edu>
+	<7740f0b0739e5.528a8518@wiscmail.wisc.edu>
+	<7390acf87214a.528a8557@wiscmail.wisc.edu>
+	<73b098c276c53.528a8594@wiscmail.wisc.edu>
+	<7320dbd970faa.528a85d3@wiscmail.wisc.edu>
+	<7780813d77083.528a8610@wiscmail.wisc.edu>
+	<72f0f27c729e3.528a864d@wiscmail.wisc.edu>
+	<7340e81475634.528a868c@wiscmail.wisc.edu>
+	<7340a3be765ae.528a86c9@wiscmail.wisc.edu>
+	<7730f5b076cc6.528a8707@wiscmail.wisc.edu>
+	<7300f01277861.528a32d8@wiscmail.wisc.edu>
+	<528B0098.10007@bii.a-star.edu.sg> <5296382E.1070700@emory.edu>
+	<61986.10.1.199.25.1385630685.squirrel@webmail.mpi-cbg.de>
+	<alpine.DEB.1.00.1311291523030.1191@s15462909.onlinehome-server.info>
+Message-ID: <49601.79.240.242.81.1386003493.squirrel@webmail.mpi-cbg.de>
+
+
+Hey Johannes,
+
+I just tried that, but couldn't do it due to the wiki thinking my .STEP
+(uppercase) file is empty and the wiki unable to upload .zip files...
+
+Take a look at the screenshot attached to this message, especially to the
+'Upload warning' and the 'permitted file types'.
+
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Fri, November 29, 2013 3:24 pm, Johannes Schindelin wrote:
+<|> Hi Peter,
+<|>
+<|> On Thu, 28 Nov 2013, Peter Gabriel Pitrone wrote:
+<|>
+<|>> If you have access to SolidWorks, you can use this Pack-n-go .ZIP file:
+<|>> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.zip
+<|>>
+<|>> If you do not, then you can download this:
+<|>> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.STEP .STEP is
+<|>> what
+<|>> we had discussed to be the most widely used format across platforms.
+<|>> The
+<|>> problem with this though is that there are rebuild errors on the pars
+<|>> from Picard and Thorlabs.
+<|>
+<|> Hmm, out of curiosity: why put this on DropBox when we have a fine
+server
+<|> with an even finer address?
+<|>
+<|> :-)
+<|>
+<|> Ciao,
+<|> Dscho
+<|>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screen Shot 2013-12-02 at 17.53.18.png
+Type: image/png
+Size: 243814 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131202/bc27a89c/attachment-0001.png>
+
+From stuyvenberg at wisc.edu  Mon Dec  2 18:38:20 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 02 Dec 2013 18:38:20 -0600
+Subject: [OpenSPIM] [micro-manager-general] Error in using HAMAMATSU
+ flash 4.0 with umanager in winxp
+In-Reply-To: <7780ef34a8c06.529d27d3@wiscmail.wisc.edu>
+References: <1385524971945-7581608.post@n2.nabble.com>
+	<70b0ce20af35a.529d25ea@wiscmail.wisc.edu>
+	<7640ff89a995a.529d2627@wiscmail.wisc.edu>
+	<7330ad24a8095.529d2665@wiscmail.wisc.edu>
+	<7680c73daf6e0.529d26a3@wiscmail.wisc.edu>
+	<7620a0c2aa491.529d271e@wiscmail.wisc.edu>
+	<76208790a994b.529d275a@wiscmail.wisc.edu>
+	<7780decfab56d.529d2796@wiscmail.wisc.edu>
+	<7780ef34a8c06.529d27d3@wiscmail.wisc.edu>
+Message-ID: <75a0d977a84bc.529cd39c@wiscmail.wisc.edu>
+
+Hello WIKIZONG,
+
+I'm one of the software developers on the OpenSPIM project; the good news is that the Orca Flash4 is successfully being used for the OpenSPIM project, in Heidelberg -- see?http://openspim.org/Who_has_an_OpenSPIM%3F?.
+
+
+We have also encountered this error message with Hamamatsu cameras before, usually because Fiji is taking up too much of the system's memory. Please try limiting Fiji's memory (Edit > Options > Memory & Threads...) to 1 GB or so. Additionally, this error message sometimes appears only on the first startup of Micro-Manager after booting the computer -- please try restarting Micro-Manager and see if the error message still appears.
+
+
+Hope this helps,
+Luke Stuyvenberg
+
+
+P.S. The OpenSPIM project has a mailing list -- openspim at openspim.org -- please feel free to contact me there if you have any more trouble! :-) Additionally, the Heidelberg lab is subscribed to that mailing list, so they might be able to provide more direct and useful advice if the Flash4 is still problematic for you.
+
+On 11/26/13, WIKIZONG  wrote:
+> Dear all:
+> Recently I am trying to use a Hamamatsu flash 4.0 carema with umanager in
+> window XP system (somehow I have to use this system for the requirements of
+> some devices). I think I have installed the right driver for the camera
+> because I can sanp in DCAM-API ExCAP.But when I try to add the device to the
+> umanager hardware configration wizard, an error came out 
+> <http://micro-manager.3463995.n2.nabble.com/file/n7581608/error_flash_4.bmp>
+> . And I could never add it to the software. I wonder if anyone else has met
+> the same problem and can help me with it. My umanager is the newest version
+> (1.1.15) and my DCAM-API is the June 2013 version.
+> PS: I am trying to use this camera and umanager to build a lightsheet
+> microscope. So I also used a FIGI plugin type umianager and its mmplkugin
+> "spimacquisition" sited in http://openspim.org/ .Has anyone ever used suchi
+> thing with Flash 4? Need yoour succussful experiments! Thank you!
+> 
+> 
+> 
+> --
+> View this message in context: http://micro-manager.3463995.n2.nabble.com/Error-in-using-HAMAMATSU-flash-4-0-with-umanager-in-winxp-tp7581608.html
+> Sent from the Micro-Manager mailing list archive at Nabble.com.
+> 
+> ------------------------------------------------------------------------------
+> Rapidly troubleshoot problems before they affect your business. Most IT 
+> organizations don't have a clear picture of how application performance 
+> affects their revenue. With AppDynamics, you get 100% visibility into your 
+> Java,.NET, & PHP application. Start your 15-day FREE TRIAL of AppDynamics Pro!
+> http://pubads.g.doubleclick.net/gampad/clk?id=84349351&iu=/4140/ostg.clktrk
+> _______________________________________________
+> micro-manager-general mailing list
+> micro-manager-general at lists.sourceforge.net
+> https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+
+From zongweijianzwj at 163.com  Mon Dec  2 18:54:36 2013
+From: zongweijianzwj at 163.com (zongweijianzwj)
+Date: Tue, 3 Dec 2013 08:54:36 +0800
+Subject: [OpenSPIM] =?utf-8?b?5Zue5aSNOiAgUmU6IFttaWNyby1tYW5hZ2VyLWdlbmVy?=
+	=?utf-8?q?al=5D_Error_in_using_HAMAMATSU_flash_4=2E0_with_umanager?=
+	=?utf-8?q?_in_winxp?=
+In-Reply-To: <75a0d977a84bc.529cd39c@wiscmail.wisc.edu>
+References: <1385524971945-7581608.post@n2.nabble.com>
+	<70b0ce20af35a.529d25ea@wiscmail.wisc.edu>
+	<7640ff89a995a.529d2627@wiscmail.wisc.edu>
+	<7330ad24a8095.529d2665@wiscmail.wisc.edu>
+	<7680c73daf6e0.529d26a3@wiscmail.wisc.edu>
+	<7620a0c2aa491.529d271e@wiscmail.wisc.edu>
+	<76208790a994b.529d275a@wiscmail.wisc.edu>
+	<7780decfab56d.529d2796@wiscmail.wisc.edu>
+	<7780ef34a8c06.529d27d3@wiscmail.wisc.edu><75a0d977a84bc.529cd39c@wiscmail.wisc.edu>
+Message-ID: <2ffb733d.78d.142b5f34552.Coremail.zongweijianzwj@163.com>
+
+Hello Luke Stuyvenberg :
+  Thanks a lot for your reply. I believe you are right cos I could use mmanager to control the flash 4 in Win7 with no trouble. But I havent try what you propose to do in XP because I think using orca Flash4.0 in WinXP is a really bad choice. That is bacause XP does not supply for USB3.0. So I have to use the firebird board to control the Flash 4.0. Somehow that discourage the whole system to be partible and portable! Right now I have successful controlled the Flash 4 and installed the acquisitonSPIM plugin with mmanager 64bit in Win7. I am waiting for the 4d-stage to assemble the whole system. I will make you informed as soon as my project make any progress!
+Best,
+Zong
+2013-12-03
+
+
+
+Zong, Weijian
+Laboratory of Cell Secretion & Metabolism 
+Institute of Molecular Medicine 
+Peking University 
+Beijing, China, 100871 
+E-mail: zongweijianzwj at 163.com ;
+
+
+
+????Luke Stuyvenberg <stuyvenberg at wisc.edu>
+?????2013-12-03 08:38
+???Re: [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp
+????"zongweijianzwj"<zongweijianzwj at 163.com>
+???"micro-manager-general"<micro-manager-general at lists.sourceforge.net>,"openspim"<openspim at openspim.org>
+
+Hello WIKIZONG, 
+
+I'm one of the software developers on the OpenSPIM project; the good news is that the Orca Flash4 is successfully being used for the OpenSPIM project, in Heidelberg -- see http://openspim.org/Who_has_an_OpenSPIM%3F . 
+
+
+We have also encountered this error message with Hamamatsu cameras before, usually because Fiji is taking up too much of the system's memory. Please try limiting Fiji's memory (Edit > Options > Memory & Threads...) to 1 GB or so. Additionally, this error message sometimes appears only on the first startup of Micro-Manager after booting the computer -- please try restarting Micro-Manager and see if the error message still appears. 
+
+
+Hope this helps, 
+Luke Stuyvenberg 
+
+
+P.S. The OpenSPIM project has a mailing list -- openspim at openspim.org -- please feel free to contact me there if you have any more trouble! :-) Additionally, the Heidelberg lab is subscribed to that mailing list, so they might be able to provide more direct and useful advice if the Flash4 is still problematic for you. 
+
+On 11/26/13, WIKIZONG  wrote: 
+> Dear all: 
+> Recently I am trying to use a Hamamatsu flash 4.0 carema with umanager in 
+> window XP system (somehow I have to use this system for the requirements of 
+> some devices). I think I have installed the right driver for the camera 
+> because I can sanp in DCAM-API ExCAP.But when I try to add the device to the 
+> umanager hardware configration wizard, an error came out  
+> <http://micro-manager.3463995.n2.nabble.com/file/n7581608/error_flash_4.bmp> 
+> . And I could never add it to the software. I wonder if anyone else has met 
+> the same problem and can help me with it. My umanager is the newest version 
+> (1.1.15) and my DCAM-API is the June 2013 version. 
+> PS: I am trying to use this camera and umanager to build a lightsheet 
+> microscope. So I also used a FIGI plugin type umianager and its mmplkugin 
+> "spimacquisition" sited in http://openspim.org/ .Has anyone ever used suchi 
+> thing with Flash 4? Need yoour succussful experiments! Thank you! 
+>  
+>  
+>  
+> -- 
+> View this message in context: http://micro-manager.3463995.n2.nabble.com/Error-in-using-HAMAMATSU-flash-4-0-with-umanager-in-winxp-tp7581608.html 
+> Sent from the Micro-Manager mailing list archive at Nabble.com. 
+>  
+> ------------------------------------------------------------------------------ 
+> Rapidly troubleshoot problems before they affect your business. Most IT  
+> organizations don't have a clear picture of how application performance  
+> affects their revenue. With AppDynamics, you get 100% visibility into your  
+> Java,.NET, & PHP application. Start your 15-day FREE TRIAL of AppDynamics Pro! 
+> http://pubads.g.doubleclick.net/gampad/clk?id=84349351&iu=/4140/ostg.clktrk 
+> _______________________________________________ 
+> micro-manager-general mailing list 
+> micro-manager-general at lists.sourceforge.net 
+> https://lists.sourceforge.net/lists/listinfo/micro-manager-general 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131203/efcb90fc/attachment.html>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Wed Dec  4 08:18:34 2013
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Wed, 4 Dec 2013 15:18:34 +0100
+Subject: [OpenSPIM] About the lightsheet
+Message-ID: <OFB1EBBD2F.6D101400-ONC1257C37.004E9A94-C1257C37.004E9AAE@ipt.rwth-aachen.de>
+
+ Hi dear all,
+
+I have made some tests about the lightsheet. I made some pictures of the lightsheet using the telescope and without using it. To be able of imaging the lightsheet I used a small mirror at 45? mounted in a sample holder to direct the lightsheet onto the CCD.
+
+I found that the lightsheet looks narrower without using the telescope. I know that the telescope is used for alignig the lightsheet with the focal plane of the detection objective in
+an easier way (adjusting the knob of the last mirror causes the lightsheet to move parallel to the plane of the detection objective without being tilted). 
+
+I found out that also is possible to align the lightsheet without using the telescope. Then, I aligned the lightsheet rotating the knob of the mirror but also translating it (I have mounted the mirror in a rail as in this picture http://openspim.org/File:1I_1D_OpenSPIM_03.jpg ). To be sure that the lightsheet was perpendicular to the detection axis throughout the complete FOV I made some pictures of the lightsheet moving the mirror mounted in the sample holder in the X direction.
+
+I attach the pictures to this mail. In the pictures can be observed that the lightsheet is directed to the part of the mirror mounted in the sample holder that is in focus. Even if I translate the mirror mounted in the sample holder in the X direction, the lightsheet remains on the focused part. This is the way I check that the lightsheet is perpendicular throughout the complete FOV. When the lightsheet was not completely perpendicular I observed that the lightsheet was not reflected exactly on the part in focus when moving the mirror in the X direction.
+
+>From the pictures without using the telescope, it can be observed that the lightsheet widens in the borders of the FOV (because of the gaussian nature of the lightsheet), but in the pictures where I use the telescope, the lightsheet seems to be the same thickness along the complete FOV. 
+
+I would like to know if what I have done is right and why does the lightsheet does not seem to change its thickness in the borders of the FOV when I use the telescope.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0006.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet_lef.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0007.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet_right.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0008.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet without telescope.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0009.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet without telescope_left.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0010.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet without telescope_right.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0011.obj>
+
+From stuyvenberg at wisc.edu  Wed Dec  4 15:27:09 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 04 Dec 2013 15:27:09 -0600
+Subject: [OpenSPIM] New plugin update,
+ was Re: "Acquire SPIM image" option missing in dropdown menu after
+ Fiji Update
+In-Reply-To: <7030e5c5b3be5.529f9e00@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B3042B4E08AFEF@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<7030e5c5b3be5.529f9e00@wiscmail.wisc.edu>
+Message-ID: <7190ac9eb216c.529f49cd@wiscmail.wisc.edu>
+
+Hi John (and all),
+
+You're quite right. A recent update to Fiji upgraded Apache Commons Math to version 3.2, which the plugin (and, in fact, Micromanager) was unprepared to use.
+
+
+I've corrected the code and uploaded a new version of the plugin and associated Micro-Manager JAR files. Please update Fiji again; the problem should be resolved.
+
+
+Let me know if you have any further troubles, and thank you for reporting this!
+
+
+Luke
+
+On 12/01/13, "LIM Soon Yew John (IMB)"  wrote:
+> Dear All,
+> 
+> Have anyone encounter this problem that the "Acquire SPIM image" option disappear after running Fiji updates today?
+> 
+> The "Acquire SPIM image" option is missing in the dropdown menu in Micro-Manager after I ran Fiji update today. When I clicked on "Plugins" in the Micro-Manager's menu, the "Acquire SPIM image" option does not appear.
+> 
+> I had also re-downloaded the OpenSPIM/Fiji package as of October 25th, 2013. The "Acquire SPIM image" option appears normally in the Micro-Manager Plugins' menu, but it disappear after the Fiji update/restart. Sadly, I am not able to use the October 25th version as there is a camera error which is solved after the Fiji update but the "Acquire SPIM image" option disappear after today's Fiji update. 
+> 
+> Best Regards,
+> John
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From john.lim at imb.a-star.edu.sg  Wed Dec  4 21:57:58 2013
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Thu, 5 Dec 2013 11:57:58 +0800
+Subject: [OpenSPIM] New plugin update,
+ was Re: "Acquire SPIM image" option missing in dropdown menu after
+ Fiji Update
+In-Reply-To: <7190ac9eb216c.529f49cd@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B3042B4E08AFEF@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<7030e5c5b3be5.529f9e00@wiscmail.wisc.edu>,
+	<7190ac9eb216c.529f49cd@wiscmail.wisc.edu>
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B3043A51629FCB@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Hi Luke,
+
+After the Fiji update, the "Acuire SPIM image" option now appear normally in the Micro-Manager's "Plugin" dropdown menu.
+
+Thank You.
+
+Best Regards,
+John
+________________________________________
+From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+Sent: Thursday, December 05, 2013 5:27 AM
+To: LIM Soon Yew John (IMB); openspim at openspim.org
+Subject: New plugin update, was Re: "Acquire SPIM image" option missing in dropdown menu after Fiji Update
+
+Hi John (and all),
+
+You're quite right. A recent update to Fiji upgraded Apache Commons Math to version 3.2, which the plugin (and, in fact, Micromanager) was unprepared to use.
+
+
+I've corrected the code and uploaded a new version of the plugin and associated Micro-Manager JAR files. Please update Fiji again; the problem should be resolved.
+
+
+Let me know if you have any further troubles, and thank you for reporting this!
+
+
+Luke
+
+On 12/01/13, "LIM Soon Yew John (IMB)"  wrote:
+> Dear All,
+>
+> Have anyone encounter this problem that the "Acquire SPIM image" option disappear after running Fiji updates today?
+>
+> The "Acquire SPIM image" option is missing in the dropdown menu in Micro-Manager after I ran Fiji update today. When I clicked on "Plugins" in the Micro-Manager's menu, the "Acquire SPIM image" option does not appear.
+>
+> I had also re-downloaded the OpenSPIM/Fiji package as of October 25th, 2013. The "Acquire SPIM image" option appears normally in the Micro-Manager Plugins' menu, but it disappear after the Fiji update/restart. Sadly, I am not able to use the October 25th version as there is a camera error which is solved after the Fiji update but the "Acquire SPIM image" option disappear after today's Fiji update.
+>
+> Best Regards,
+> John
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Thu Dec  5 09:30:44 2013
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Thu, 5 Dec 2013 16:30:44 +0100
+Subject: [OpenSPIM] WG: Re:  About the lightsheet
+Message-ID: <OFFF770C21.BDAFF466-ONC1257C38.00553610-C1257C38.00553629@ipt.rwth-aachen.de>
+
+ Hi Jan,
+
+I changed the order of the lens in the telescope so that it expands the beam and I got a thinner lightsheet, but when I move the mirror mounted on the sample holder in the X direction
+the lightsheet expands too much. I attach some images.
+
+Do you know if I can adjust the relationship between the thickness of the lightsheet in the center and in the borders of the FOV using the vertical slit?
+
+Kind regards,
+Edgar
+
+
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Weitergeleitet von Edgar Escobar Nieto/Fraunhofer IPT am 05.12.2013 15:53 -----
+An: Jan Krieger <j.krieger at dkfz-heidelberg.de>
+Von: Edgar Escobar Nieto/Fraunhofer IPT
+Datum: 04.12.2013 17:37
+Betreff: Re: [OpenSPIM] About the lightsheet
+
+ Hi Jan,
+
+Yes, I am talking about the telescope between the corner mirror and the objective.
+
+Ohh, I have thought that this telescope instead of expanding the beam, it was reducing it.
+In the instructions of how to install the telescope from the OpenSPIM wiki, the 50 mm focal length lens goes first and then
+the 25 mm, (the opposite order in comparisson to the beam expander). So, it looks like all this time I have been using the
+wrong lens configuration. 
+
+Concerning the pictures, I am always using the illumination objective, in some using the telescope (between the corner mirror and the objective), in others without using it.
+
+That explain everything. I will change the order of the lenses of the last telescope in order to expand the beam and not to reduce it. Thanks a lot for your answer.
+I will let you know if I suceed.
+
+Kind regards,
+Edgar
+
+
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Jan Krieger <j.krieger at dkfz-heidelberg.de> schrieb: -----
+An: "edgar.escobar.nieto at ipt.fraunhofer.de" <edgar.escobar.nieto at ipt.fraunhofer.de>
+Von: Jan Krieger <j.krieger at dkfz-heidelberg.de>
+Datum: 04.12.2013 15:39
+Betreff: Re: [OpenSPIM] About the lightsheet
+
+Hi!
+
+hhmmm ... I pressume you're talking about the telescope between the 
+corner mirror and the objective, right?
+
+As far as I know the openSPIM, this telescope should lead to an 
+additional 2-fold expansion of the beam. This means that the light fills 
+more of the projection objective and should thus also create a thinner 
+focus (we "use more" of the available NA of the objective ... ) ... So 
+your finding of with and without the objective looks strange to me ... 
+Can you measure the width of the lightsheet with your different 
+configurations? It should slightly expand, if you move the 45?-mirror 
+along the lightsheet axis ... How did you find the right position of the 
+projection objective? We usually find a sharp line on the mirror and 
+position it in the center of the FOV, then adjust the lightsheet to 
+overlay with this line, using the corner mirror and finally adjust the 
+projection obvjective (along the lightsheet axis) until we have the 
+thinnest possible lightsheet which should then also have it's thinnest 
+position in the center of the FOV.
+
+Best,
+JAN
+
+
+
+Am 04.12.2013 15:18, schrieb edgar.escobar.nieto at ipt.fraunhofer.de:
+> Hi dear all,
+>
+> I have made some tests about the lightsheet. I made some pictures of the
+> lightsheet using the telescope and without using it. To be able of
+> imaging the lightsheet I used a small mirror at 45? mounted in a sample
+> holder to direct the lightsheet onto the CCD.
+>
+> I found that the lightsheet looks narrower without using the telescope.
+> I know that the telescope is used for alignig the lightsheet with the
+> focal plane of the detection objective in
+> an easier way (adjusting the knob of the last mirror causes the
+> lightsheet to move parallel to the plane of the detection objective
+> without being tilted).
+>
+> I found out that also is possible to align the lightsheet without using
+> the telescope. Then, I aligned the lightsheet rotating the knob of the
+> mirror but also translating it (I have mounted the mirror in a rail as
+> in this picture http://openspim.org/File:1I_1D_OpenSPIM_03.jpg?). To be
+> sure that the lightsheet was perpendicular to the detection axis
+> throughout the complete FOV I made some pictures of the lightsheet
+> moving the mirror mounted in the sample holder in the X direction.
+>
+> I attach the pictures to this mail. In the pictures can be observed that
+> the lightsheet is directed to the part of the mirror mounted in the
+> sample holder that is in focus. Even if I translate the mirror mounted
+> in the sample holder in the X direction, the lightsheet remains on the
+> focused part. This is the way I check that the lightsheet is
+> perpendicular throughout the complete FOV. When the lightsheet was not
+> completely perpendicular I observed that the lightsheet was not
+> reflected exactly on the part in focus when moving the mirror in the X
+> direction.
+>
+> ?From the pictures without using the telescope, it can be observed that
+> the lightsheet widens in the borders of the FOV (because of the gaussian
+> nature of the lightsheet), but in the pictures where I use the
+> telescope, the lightsheet seems to be the same thickness along the
+> complete FOV.
+>
+> I would like to know if what I have done is right and why does the
+> lightsheet does not seem to change its thickness in the borders of the
+> FOV when I use the telescope.
+>
+> Kind regards,
+> Edgar
+> _________________________________________________________________________
+>
+> Fraunhofer-Institut f?r Produktionstechnologie IPT
+> Edgar Escobar Nieto
+>
+>
+>
+>
+> Steinbachstra?e 17
+> 52074 Aachen
+>
+> edgar.escobar.nieto at ipt.fraunhofer.de _
+> __http://www.ipt.fraunhofer.de_ <http://www.ipt.fraunhofer.de/>
+> _________________________________________________________________________
+>
+> 	
+> 	
+>
+
+
+
+[Anhang 'j_krieger.vcf' entfernt von Edgar Escobar Nieto/Fraunhofer IPT]
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet center.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0003.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet left.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0004.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet right.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0005.obj>
+
+From weber at mpi-cbg.de  Thu Dec 12 03:48:44 2013
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Thu, 12 Dec 2013 10:48:44 +0100
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+Message-ID: <B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC. 
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen <veli-pekka.ronkainen at oulu.fi> wrote:
+
+> Hi Michael!
+>  
+> I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!  
+>  
+> We are planning the set-up now, and it we?d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I?d appreciate if you had time to answer couple of my questions? I?ve browsed through the mailing list archives (and ?Manager discussions too), but have not find clear answers yet. So we?d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. ?Manager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We?d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer ?related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just ?cropping? the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+>  
+> Best Regards,
+> Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131212/dfa9b58f/attachment.html>
+
+From veli-pekka.ronkainen at oulu.fi  Fri Dec 13 03:30:08 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Fri, 13 Dec 2013 09:30:08 +0000
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+	<B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+
+Thanks Michael for the answers and cc?ing!
+
+Our initial plan is to build up a SPIM with a dual side simultaneous excitation by one laser wavelength at the time, and image colors sequentially. Laser (either 488nm or 561nm) is divided into two identical illumination pathways to reduce shading and the need of rotation. So at least in the first version we have to replace the laser head between the channels. Maybe later we?ll try to modify it so that we could use two lasers installed at the same time and control the excitation wavelength with ?Manager, if that appears to be possible. Do you think it is generally worth building a two sided illumination set-up compared to single sided illumination, or can we assume some unexpected problems arising from reflections or difficulties in aligning overlapping lightsheets etc.?
+
+So anyone please, do you have any further information about controlling Coherent OBIS lasers with OpenSpim ?Manager? I haven?t got any answers from Coherent. Would you like to share your experiences with sCMOS cameras as well?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+From: Michael Weber [mailto:weber at mpi-cbg.de]
+Sent: 12. joulukuuta 2013 11:49
+To: Veli-Pekka Ronkainen
+Cc: openspim at openspim.org
+Subject: Re: OpenSPIM-related stuff
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC.
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen <veli-pekka.ronkainen at oulu.fi<mailto:veli-pekka.ronkainen at oulu.fi>> wrote:
+
+
+Hi Michael!
+
+I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!
+
+We are planning the set-up now, and it we?d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I?d appreciate if you had time to answer couple of my questions? I?ve browsed through the mailing list archives (and ?Manager discussions too), but have not find clear answers yet. So we?d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. ?Manager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We?d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer ?related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just ?cropping? the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+
+Best Regards,
+Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131213/27d618ab/attachment.html>
+
+From schindelin at wisc.edu  Fri Dec 13 16:24:02 2013
+From: schindelin at wisc.edu (Johannes Schindelin)
+Date: Fri, 13 Dec 2013 23:24:02 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM Acquisition Parameters
+In-Reply-To: <52A9F9CB.6080000@emory.edu>
+References: <52A9F9CB.6080000@emory.edu>
+Message-ID: <alpine.DEB.1.00.1312132322270.1191@s15462909.onlinehome-server.info>
+
+Hi Neil,
+
+On Thu, 12 Dec 2013, Neil Anthony wrote:
+
+> I was wondering if it might be possible to get further information
+> regarding the experimental and acquisition parameters of the data sets
+> in the OpenSPIM gallery page.
+
+The best place to ask is the OpenSPIM mailing list (Cc:ed). What
+information are you interested in, exactly? I am sure that your questions
+will be answered to your satisfaction here.
+
+Ciao,
+Johannes
+
+
+
+From veli-pekka.ronkainen at oulu.fi  Thu Dec 19 04:17:39 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Thu, 19 Dec 2013 10:17:39 +0000
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+
+Hi all,
+
+Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice selection of lasers with different wavelengths and output powers listed on their catalogue. Moreover, micro-manager seems to have device support for Cobolts (Cobolt Laser Controller by name). We'd be interested especially in Cobolt Dual Combiner, which allows a permanently aligned combination of any 2 wavelengths to one single output. That would be very handy in multi-color imaging. So, can anyone comment on the Cobolts and the functionality in OpenSPIM?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, Finland
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131219/3dc59017/attachment.html>
+
+From j.krieger at dkfz-heidelberg.de  Thu Dec 19 06:11:13 2013
+From: j.krieger at dkfz-heidelberg.de (Jan Krieger)
+Date: Thu, 19 Dec 2013 13:11:13 +0100
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+Message-ID: <52B2E261.3000405@dkfz-heidelberg.de>
+
+Hi!
+
+we are using Cobolt DPSS lasers in a dual-color SPIM setup (not an 
+openSPIM, but a comparable design: 
+http://www.dkfz.de/Macromol/research/spim.html and a new publication to 
+appear in a few days/weeks: Krieger, Singh etal. (2013): "Dual-Color 
+Fluorescence Cross-Correlation Spectroscopy on a Single Plane 
+Illumination Microscope (SPIM-FCCS)", OPtics Express, accepted). The 
+lasers are generally good, but you should care for a few things:
+
+1. As most DPSS lasers they are stable at the specified output power, 
+but might get instable if you go below 10% of that power (our 25mW 
+lasers typically show a TEM20 or TEM10 mode, when driven at 1mW output 
+power instead of 25mW, where they have a nice TEM00) ... but thats 
+generally true for all DPSS lasers, so in oder to reduce the laser 
+power, you should use neutral-density filters or waveplate+ polarizer cube.
+
+2. The Cobolt 491nm laser is good, but has a little green light coming 
+out of the cavity (a few microwatt @ ~530nm), so I would strongly advice 
+a cleanup-filter. On the 561nm laser I haven't noticed anything yet.
+
+3. A general thing on two-color illumination on a SPIM: We had some 
+problems, when combining the two beams immediately behind the lasers. 
+The focal points of the lasers were not overlapping (distance ~10?m), 
+but then we have a very thin lightsheet (~1.5?m FWHM, i.e. NA0.3 
+overilluminated) and accordingly small depth of focus. Depending on your 
+application that may not be that much of a problem. Anyways we're using 
+two beam expanders and combine the expanded beams. This also allows us 
+to independently move the focal points along the lightsheet axis. I'm 
+attatching a sketch of the setup (5x-beam expanders, 100mm/300mm relais 
+telescope, 100mm cylindrical lens, 10x/NA0.3 Nikon air objective).
+
+4. As we just replaced a ArKr laser by two DPSS lasers, I talked to a 
+lot of different companies ... all the DPSS lasers are more or less 
+comparable. Some are maybe spectrally a bit cleaner or slightly more 
+stable, but Cobolt offers good value for the price and we are very happy 
+with those guys ;-)
+
+5. About the beam-combiner I would also have second thoughts: On the one 
+hand see point 3 above and the other problem is that you can realign the 
+beamcombiner (it's glued internally, so if it's missaligned at some 
+point, you cannot do much), so I would simply buy a dichroic and a 
+second mirror. Then you can use these two to fully align the second 
+laser beam:
+
++---------+                \
+| LASER 2 |-----------------\ mirror
++---------+                 |\
+                             |
+                             |
++---------+                \| dichroic
+| LASER 1 |-----------------\==============> SPIM
++---------+                  \
+
+Here you can align the SPIM first with laser 1 and then use the mirror 
+and dichroic (both on kinematic mirror mounts) to align the second laser.
+
+Hope that helps,
+JAN
+
+
+
+Am 19.12.2013 11:17, schrieb Veli-Pekka Ronkainen:
+> Hi all,
+>
+> Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice
+> selection of lasers with different wavelengths and output powers listed
+> on their catalogue. Moreover, micro-manager seems to have device support
+> for Cobolts (Cobolt Laser Controller by name). We?d be interested
+> especially in Cobolt Dual Combiner, which allows a permanently aligned
+> combination of any 2 wavelengths to one single output. That would be
+> very handy in multi-color imaging. So, can anyone comment on the Cobolts
+> and the functionality in OpenSPIM?
+>
+> Regards,
+>
+> Veli-Pekka Ronkainen
+>
+> Biocenter Oulu, Finland
+>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: spim_schematic.pdf
+Type: application/pdf
+Size: 177011 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0001.pdf>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 408 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0001.vcf>
+
+From fredrik.ek at med.lu.se  Thu Dec 19 15:23:40 2013
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Thu, 19 Dec 2013 21:23:40 +0000
+Subject: [OpenSPIM] Lasers for SPIM
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+
+Hi,
+
+we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+
+1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+
+2. Fiberconnected or open beam. Your opinions.
+
+3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+
+4. AOTF module or not?
+
+Your input is highly appreciated. 
+
+Thanks!
+
+
+Fredrik Ek, 
+Researcher, Lund University Sweden
+
+From veli-pekka.ronkainen at oulu.fi  Fri Dec 20 03:10:02 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Fri, 20 Dec 2013 09:10:02 +0000
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+In-Reply-To: <52B2E261.3000405@dkfz-heidelberg.de>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+	<52B2E261.3000405@dkfz-heidelberg.de>
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AFEC9C@nippu1.univ.yo.oulu.fi>
+
+Thanks Jan for your comprehensive reply!
+
+This helps a lot and gives many aspects to think about. What is the operating software you are using? ?Manager or something else, and how well these lasers integrate with the software? 
+
+Regards,
+Veli-Pekka 
+
+-----Original Message-----
+From: Jan Krieger [mailto:j.krieger at dkfz-heidelberg.de] 
+Sent: 19. joulukuuta 2013 14:11
+To: Veli-Pekka Ronkainen; openspim at openspim.org
+Subject: Re: [OpenSPIM] Cobolt lasers in OpenSPIM?
+
+Hi!
+
+we are using Cobolt DPSS lasers in a dual-color SPIM setup (not an openSPIM, but a comparable design: 
+http://www.dkfz.de/Macromol/research/spim.html and a new publication to appear in a few days/weeks: Krieger, Singh etal. (2013): "Dual-Color Fluorescence Cross-Correlation Spectroscopy on a Single Plane Illumination Microscope (SPIM-FCCS)", OPtics Express, accepted). The lasers are generally good, but you should care for a few things:
+
+1. As most DPSS lasers they are stable at the specified output power, but might get instable if you go below 10% of that power (our 25mW lasers typically show a TEM20 or TEM10 mode, when driven at 1mW output power instead of 25mW, where they have a nice TEM00) ... but thats generally true for all DPSS lasers, so in oder to reduce the laser power, you should use neutral-density filters or waveplate+ polarizer cube.
+
+2. The Cobolt 491nm laser is good, but has a little green light coming out of the cavity (a few microwatt @ ~530nm), so I would strongly advice a cleanup-filter. On the 561nm laser I haven't noticed anything yet.
+
+3. A general thing on two-color illumination on a SPIM: We had some problems, when combining the two beams immediately behind the lasers. 
+The focal points of the lasers were not overlapping (distance ~10?m), but then we have a very thin lightsheet (~1.5?m FWHM, i.e. NA0.3
+overilluminated) and accordingly small depth of focus. Depending on your application that may not be that much of a problem. Anyways we're using two beam expanders and combine the expanded beams. This also allows us to independently move the focal points along the lightsheet axis. I'm attatching a sketch of the setup (5x-beam expanders, 100mm/300mm relais telescope, 100mm cylindrical lens, 10x/NA0.3 Nikon air objective).
+
+4. As we just replaced a ArKr laser by two DPSS lasers, I talked to a lot of different companies ... all the DPSS lasers are more or less comparable. Some are maybe spectrally a bit cleaner or slightly more stable, but Cobolt offers good value for the price and we are very happy with those guys ;-)
+
+5. About the beam-combiner I would also have second thoughts: On the one hand see point 3 above and the other problem is that you can realign the beamcombiner (it's glued internally, so if it's missaligned at some point, you cannot do much), so I would simply buy a dichroic and a second mirror. Then you can use these two to fully align the second laser beam:
+
++---------+                \
+| LASER 2 |-----------------\ mirror
++---------+                 |\
+                             |
+                             |
++---------+                \| dichroic
+| LASER 1 |-----------------\==============> SPIM
++---------+                  \
+
+Here you can align the SPIM first with laser 1 and then use the mirror and dichroic (both on kinematic mirror mounts) to align the second laser.
+
+Hope that helps,
+JAN
+
+
+
+Am 19.12.2013 11:17, schrieb Veli-Pekka Ronkainen:
+> Hi all,
+>
+> Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice 
+> selection of lasers with different wavelengths and output powers 
+> listed on their catalogue. Moreover, micro-manager seems to have 
+> device support for Cobolts (Cobolt Laser Controller by name). We?d be 
+> interested especially in Cobolt Dual Combiner, which allows a 
+> permanently aligned combination of any 2 wavelengths to one single 
+> output. That would be very handy in multi-color imaging. So, can 
+> anyone comment on the Cobolts and the functionality in OpenSPIM?
+>
+> Regards,
+>
+> Veli-Pekka Ronkainen
+>
+> Biocenter Oulu, Finland
+>
+
+
+
+From veli-pekka.ronkainen at oulu.fi  Fri Dec 20 03:14:17 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Fri, 20 Dec 2013 09:14:17 +0000
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+	<B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6@nippu1.univ.yo.oulu.fi>
+
+Hi all,
+
+FYI, I just got an email from Coherent: ?Unfortunately the Obis cannot be controlled  with the MicroManager up to now. There are plans to make it work but this will be out at least 6 more months.?
+
+Regards,
+Veli-Pekka
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Veli-Pekka Ronkainen
+Sent: 13. joulukuuta 2013 11:30
+To: Michael Weber
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] OpenSPIM-related stuff
+
+Thanks Michael for the answers and cc?ing!
+
+Our initial plan is to build up a SPIM with a dual side simultaneous excitation by one laser wavelength at the time, and image colors sequentially. Laser (either 488nm or 561nm) is divided into two identical illumination pathways to reduce shading and the need of rotation. So at least in the first version we have to replace the laser head between the channels. Maybe later we?ll try to modify it so that we could use two lasers installed at the same time and control the excitation wavelength with ?Manager, if that appears to be possible. Do you think it is generally worth building a two sided illumination set-up compared to single sided illumination, or can we assume some unexpected problems arising from reflections or difficulties in aligning overlapping lightsheets etc.?
+
+So anyone please, do you have any further information about controlling Coherent OBIS lasers with OpenSpim ?Manager? I haven?t got any answers from Coherent. Would you like to share your experiences with sCMOS cameras as well?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+From: Michael Weber [mailto:weber at mpi-cbg.de]
+Sent: 12. joulukuuta 2013 11:49
+To: Veli-Pekka Ronkainen
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: OpenSPIM-related stuff
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC.
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen <veli-pekka.ronkainen at oulu.fi<mailto:veli-pekka.ronkainen at oulu.fi>> wrote:
+
+Hi Michael!
+
+I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!
+
+We are planning the set-up now, and it we?d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I?d appreciate if you had time to answer couple of my questions? I?ve browsed through the mailing list archives (and ?Manager discussions too), but have not find clear answers yet. So we?d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. ?Manager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We?d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer ?related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just ?cropping? the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+
+Best Regards,
+Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/74c008d4/attachment-0001.html>
+
+From pitrone at mpi-cbg.de  Fri Dec 20 03:32:17 2013
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Fri, 20 Dec 2013 10:32:17 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6@nippu1.univ.yo.oulu.fi>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+	<B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6@nippu1.univ.yo.oulu.fi>
+Message-ID: <49861.10.1.150.46.1387531937.squirrel@webmail.mpi-cbg.de>
+
+
+Hey Veli-Pekka,
+
+This sucks!! They have a good selection of wavelengths too... I wonder if
+there is anything we can do.
+
+Have a nice weekend and a Merry Christmas/Happy New Year!!
+
+Best Regards!
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Fri, December 20, 2013 10:14 am, Veli-Pekka Ronkainen wrote:
+<|> Hi all,
+<|>
+<|> FYI, I just got an email from Coherent: ?Unfortunately the Obis
+cannot be
+<|> controlled  with the MicroManager up to now. There are plans to make it
+<|> work but this will be out at least 6 more months.?
+<|>
+<|> Regards,
+<|> Veli-Pekka
+<|>
+<|> From: openspim-bounces at openspim.org
+<|> [mailto:openspim-bounces at openspim.org] On Behalf Of Veli-Pekka Ronkainen
+<|> Sent: 13. joulukuuta 2013 11:30
+<|> To: Michael Weber
+<|> Cc: openspim at openspim.org
+<|> Subject: Re: [OpenSPIM] OpenSPIM-related stuff
+<|>
+<|> Thanks Michael for the answers and cc?ing!
+<|>
+<|> Our initial plan is to build up a SPIM with a dual side simultaneous
+<|> excitation by one laser wavelength at the time, and image colors
+<|> sequentially. Laser (either 488nm or 561nm) is divided into two
+identical
+<|> illumination pathways to reduce shading and the need of rotation. So at
+<|> least in the first version we have to replace the laser head between the
+<|> channels. Maybe later we?ll try to modify it so that we could use two
+<|> lasers installed at the same time and control the excitation wavelength
+<|> with ?Manager, if that appears to be possible. Do you think it is
+<|> generally worth building a two sided illumination set-up compared to
+<|> single sided illumination, or can we assume some unexpected problems
+<|> arising from reflections or difficulties in aligning overlapping
+<|> lightsheets etc.?
+<|>
+<|> So anyone please, do you have any further information about controlling
+<|> Coherent OBIS lasers with OpenSpim ?Manager? I haven?t got any answers
+<|> from Coherent. Would you like to share your experiences with sCMOS
+<|> cameras as well?
+<|>
+<|> Regards,
+<|> Veli-Pekka Ronkainen
+<|> Biocenter Oulu, University of Oulu
+<|> Finland
+<|>
+<|> From: Michael Weber [mailto:weber at mpi-cbg.de]
+<|> Sent: 12. joulukuuta 2013 11:49
+<|> To: Veli-Pekka Ronkainen
+<|> Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+<|> Subject: Re: OpenSPIM-related stuff
+<|>
+<|> Dear Veli-Pekka,
+<|>
+<|> it was my pleasure to give the lecture in Oulu and I enjoyed my time in
+<|> Finland! It's great to hear that you are moving into the SPIM field as
+<|> well and I am happy to answer part of your questions. However, when it
+<|> comes to software integration, I rather leave that to the guys on the
+<|> mailing list, which is why I also put them on CC.
+<|>
+<|> So if I get it right you want to build a two-color setup with
+<|> double-sided illumination? Do you want to detect both colors
+<|> simultaneously or sequentially? And how do you plan to use the
+<|> double-sided illumination, also simultaneously or sequentially?
+<|>
+<|> Using a camera with a bigger sensor like sCMOS is possible and should
+not
+<|> be limited by the microscope objective or the emission filter, so no
+<|> optical redesign is necessary here. However, additional components could
+<|> be problematic and block light from reaching the edges of your chip.
+<|> Those components are namely camera adapters with additional
+<|> (de)magnification or image splitter. On the other hand, an image
+splitter
+<|> is a neat way to capture two colors simultaneously, especially on a big
+<|> camera chip which has plenty of pixels to share. Some companies are now
+<|> also modifying their splitters for sCMOS chips.
+<|> Compared to a camera with a smaller chip, you lower your effective
+<|> magnification (or in other words, you increase your field of view) if
+you
+<|> use the entire chip of an sCMOS camera. If there are components which
+<|> limit the field of view (adapters, splitters), you end up with smaller
+<|> useable area. But maybe that does not matter and you simply crop to the
+<|> center of the chip, which would also increase your maximum frame
+rate. It
+<|> really depends on what you want to image and which spatial and temporal
+<|> resolution you wish to get.
+<|>
+<|> Regarding the integration of camera and laser into the software, as I
+<|> said, I am not up to date. But probably someone else from the mailing
+<|> list can help here?!
+<|>
+<|> Best regards,
+<|> Michael
+<|>
+<|>
+<|> On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen
+<|> <veli-pekka.ronkainen at oulu.fi<mailto:veli-pekka.ronkainen at oulu.fi>>
+<|> wrote:
+<|>
+<|> Hi Michael!
+<|>
+<|> I still want to thank you for your visit here in Oulu in June. Your
+<|> lecture was confirming our researchers that we need SPIM here as well,
+<|> and happily we just got nice funding for the build-up costs of OpenSPIM!
+<|>
+<|> We are planning the set-up now, and it we?d like to have some laser and
+<|> camera modifications to the dual side illumination version of OpenSPIM.
+<|> Our plan is mainly clear with a few unsolved issues and I?d
+appreciate if
+<|> you had time to answer couple of my questions? I?ve browsed through the
+<|> mailing list archives (and ?Manager discussions too), but have not find
+<|> clear answers yet. So we?d like to use Coherent OBIS-series lasers
+<|> instead of CUBE (to get the 561 nm laser as well), and in one mailing
+<|> list thread you and Peter Pitrone discussed that OBIS and other series
+<|> have been used successfully in OpenSPIM. ?Manager has drivers for CUBE,
+<|> but not a clear support for OBIS, so do you know how replacing the
+lasers
+<|> should work? Another question is related on the camera. We?d like to use
+<|> Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the
+<|> camera-drivers-computer ?related things, but do you know how people have
+<|> fitted this larger sensor type camera to the detection pathway? Do we
+<|> need some optical redesign to fill the whole sensor area, or is that
+<|> smaller sensor size Orca-ER just ?cropping? the signal and the original
+<|> pathway design would fill the larger chip as well? Of course I could
+<|> reform and write these questions to the mailing list if you prefer?
+<|>
+<|> Best Regards,
+<|> Veli-Pekka
+<|>
+<|> _____________
+<|>
+<|> Michael Weber
+<|> PhD Student, Huisken lab
+<|> Max Planck Institute of Molecular Cell Biology and Genetics
+<|> Pfotenhauerstrasse 108, 01307 Dresden
+<|> Tel. 0049 351/2102837
+<|>
+<|> http://www.mpi-cbg.de/huisken
+<|>
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+From weber at mpi-cbg.de  Fri Dec 20 07:06:25 2013
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Fri, 20 Dec 2013 14:06:25 +0100
+Subject: [OpenSPIM] Lasers for SPIM
+In-Reply-To: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+References: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+Message-ID: <7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>
+
+Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to "quickly" swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek <fredrik.ek at med.lu.se> wrote:
+
+> Hi,
+> 
+> we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+> 
+> 1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+> 
+> 2. Fiberconnected or open beam. Your opinions.
+> 
+> 3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+> 
+> 4. AOTF module or not?
+> 
+> Your input is highly appreciated. 
+> 
+> Thanks!
+> 
+> 
+> Fredrik Ek, 
+> Researcher, Lund University Sweden
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/494652fd/attachment.html>
+
+From j.krieger at dkfz-heidelberg.de  Fri Dec 20 07:14:43 2013
+From: j.krieger at dkfz-heidelberg.de (Jan Krieger)
+Date: Fri, 20 Dec 2013 14:14:43 +0100
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AFEC9C@nippu1.univ.yo.oulu.fi>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+	<52B2E261.3000405@dkfz-heidelberg.de>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AFEC9C@nippu1.univ.yo.oulu.fi>
+Message-ID: <52B442C3.8050203@dkfz-heidelberg.de>
+
+Hi!
+
+ > This helps a lot and gives many aspects to think about. What is the
+ > operating software you are using? ?Manager or something else, and how
+ > well these lasers integrate with the software?
+
+We use our own software QuickFit 3 
+(http://www.dkfz.de/Macromol/quickfit/), which is kind of optimized for 
+our setup and application (SPIM-FCS). There are drivers for the CObolt 
+lasers, and Andor EMCCD cameras (NOT for the sCMOS, as they use the SDK 
+3), but new drivers can always be written in C++. The whole application 
+is multi-platform, i.e. we run our instrument on Linux and the data eval 
+typically on windows. It's written in C++ and uses Qt 4.8 for the GUI.
+
+But I think that using ?Manager may probably be easier for you ... also 
+the community is larger ;-)
+
+One more thing on the beam expanders: As first beam expanders, we use 
+commercial units (one is a zoom expander 1x-8x from sill optics, the 
+other one is a fixed 5x from Qioptic/Linos), which are both NOT 
+achromatically corrected. So this might be part of our problem ... but 
+then having the possibility to tune both lasers independently might be 
+worth thinking about. At least for our application (single-cell imaging 
+with a thin lightsheet) it helps a lot!
+
+Best,
+JAN
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 408 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/eaa09422/attachment.vcf>
+
+From fredrik.ek at med.lu.se  Fri Dec 20 10:12:42 2013
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Fri, 20 Dec 2013 16:12:42 +0000
+Subject: [OpenSPIM] Lasers for SPIM
+In-Reply-To: <7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>
+References: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+	<7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE98FF7298@UWMBX04.uw.lu.se>
+
+Hi all,
+
+Great inputs to my questions. Thanks a lot!
+
+Have a nice Christmas holiday and a Happy New Year
+
+Best,
+
+Fredrik
+
+
+Fr?n: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] F?r Michael Weber
+Skickat: den 20 december 2013 14:06
+Till: openspim at openspim.org
+?mne: Re: [OpenSPIM] Lasers for SPIM
+
+Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to "quickly" swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>> wrote:
+
+
+Hi,
+
+we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+
+1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+
+2. Fiberconnected or open beam. Your opinions.
+
+3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+
+4. AOTF module or not?
+
+Your input is highly appreciated.
+
+Thanks!
+
+
+Fredrik Ek,
+Researcher, Lund University Sweden
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/7247c0b4/attachment-0001.html>
+
+From j.krieger at Dkfz-Heidelberg.de  Fri Dec 20 15:57:47 2013
+From: j.krieger at Dkfz-Heidelberg.de (Krieger, Jan)
+Date: Fri, 20 Dec 2013 22:57:47 +0100
+Subject: [OpenSPIM] Lasers for SPIM
+In-Reply-To: <11FEABF97C42FE47AA23C843A13D49EE98FF7298@UWMBX04.uw.lu.se>
+References: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+	<7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>,
+	<11FEABF97C42FE47AA23C843A13D49EE98FF7298@UWMBX04.uw.lu.se>
+Message-ID: <4F91222C659D5B4E8C89CE4D710BB08EFFD57C6930@DKFZEX01.ad.dkfz-heidelberg.de>
+
+Hi all!
+
+tlking bout shutters ... there are several possibilities to build cheap laser shutters with different speed grades:
+
+1. We use small servos controlled by an Arduino ... they are small, reliable and move a relatively long distance ... but they are slow
+2. http://george.ph.utexas.edu/~meyrath/informal/shutter.pdf
+3. ftp://ftp.artov.rm.cnr.it/incoming/ifa.rm.cnr.it/Maurizio.Viterbini/Public/chopper/RevSciInstrum_75_3077.pdf
+4. http://www.instructables.com/id/DIY-Laser-Shutter/all/?lang=zh
+5. This paper gives a good overview: http://scitation.aip.org/content/aip/journal/rsi/82/4/10.1063/1.3574224
+
+Best,
+JAN
+
+
+
+Dipl.-Phys. Jan Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski)
+Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: j.krieger at dkfz.de
+www: http://www.dkfz.de/Macromol/
+________________________________________
+Von: openspim-bounces at openspim.org [openspim-bounces at openspim.org] im Auftrag von Fredrik Ek [fredrik.ek at med.lu.se]
+Gesendet: Freitag, 20. Dezember 2013 17:12
+An: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Lasers for SPIM
+
+Hi all,
+
+Great inputs to my questions. Thanks a lot!
+
+Have a nice Christmas holiday and a Happy New Year
+
+Best,
+
+Fredrik
+
+
+Fr?n: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] F?r Michael Weber
+Skickat: den 20 december 2013 14:06
+Till: openspim at openspim.org
+?mne: Re: [OpenSPIM] Lasers for SPIM
+
+Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to "quickly" swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>> wrote:
+
+
+Hi,
+
+we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+
+1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+
+2. Fiberconnected or open beam. Your opinions.
+
+3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+
+4. AOTF module or not?
+
+Your input is highly appreciated.
+
+Thanks!
+
+
+Fredrik Ek,
+Researcher, Lund University Sweden
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+
+
+From egatzogi at princeton.edu  Mon Dec 30 13:05:40 2013
+From: egatzogi at princeton.edu (Evangelos Gatzogiannis)
+Date: Mon, 30 Dec 2013 14:05:40 -0500
+Subject: [OpenSPIM] Excellent Work
+Message-ID: <52C1C404.1050404@princeton.edu>
+
+
+Thank you for this excellent resource.
+As a matter of convenience, do you have .pdfs of the design for a 
+chamber with dual light-sheet illumination and a detection objective as 
+I don't have a good drawing software package yet.
+
+Thanks for your support.
+
+Best,
+Evangelos
+
+
+From john.lim at imb.a-star.edu.sg  Sun Dec  1 23:56:54 2013
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Mon, 2 Dec 2013 13:56:54 +0800
+Subject: [OpenSPIM] "Acquire SPIM image" option missing in dropdown menu
+ after Fiji Update
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B3042B4E08AFEF@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Dear All,
+
+Have anyone encounter this problem that the "Acquire SPIM image" option disappear after running Fiji updates today?
+
+The "Acquire SPIM image" option is missing in the dropdown menu in Micro-Manager after I ran Fiji update today. When I clicked on "Plugins" in the Micro-Manager's menu, the "Acquire SPIM image" option does not appear.
+
+I had also re-downloaded the OpenSPIM/Fiji package as of October 25th, 2013. The "Acquire SPIM image" option appears normally in the Micro-Manager Plugins' menu, but it disappear after the Fiji update/restart. Sadly, I am not able to use the October 25th version as there is a camera error which is solved after the Fiji update but the "Acquire SPIM image" option disappear after today's Fiji update. 
+
+Best Regards,
+John
+
+
+From nantho2 at emory.edu  Mon Dec  2 07:31:20 2013
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Mon, 2 Dec 2013 08:31:20 -0500
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <61986.10.1.199.25.1385630685.squirrel@webmail.mpi-cbg.de>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<7670d9c9f5f1a.51a51f63@wiscmail.wisc.edu>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+	<51A5B615.2020305@bii.a-star.edu.sg>
+	<7780b3d06c461.51a67521@wiscmail.wisc.edu>
+	<7660d08a71dac.51a634b1@wiscmail.wisc.edu>
+	<5288DD5A.1030906@bii.a-star.edu.sg>
+	<72d0f56575e54.528a84da@wiscmail.wisc.edu>
+	<7740f0b0739e5.528a8518@wiscmail.wisc.edu>
+	<7390acf87214a.528a8557@wiscmail.wisc.edu>
+	<73b098c276c53.528a8594@wiscmail.wisc.edu>
+	<7320dbd970faa.528a85d3@wiscmail.wisc.edu>
+	<7780813d77083.528a8610@wiscmail.wisc.edu>
+	<72f0f27c729e3.528a864d@wiscmail.wisc.edu>
+	<7340e81475634.528a868c@wiscmail.wisc.edu>
+	<7340a3be765ae.528a86c9@wiscmail.wisc.edu>
+	<7730f5b076cc6.528a8707@wiscmail.wisc.edu>
+	<7300f01277861.528a32d8@wiscmail.wisc.edu>
+	<528B0098.10007@bii.a-star.edu.sg> <5296382E.1070700@emory.edu>
+	<61986.10.1.199.25.1385630685.squirrel@webmail.mpi-cbg.de>
+Message-ID: <529C8BA8.2050506@emory.edu>
+
+Hi Pete, no apologies needed; thanks for posting the links.
+
+I'll keep you posted on how they work and what progresses from there.
+
+Thanks
+Neil
+
+
+On 11/28/2013 4:24 AM, Peter Gabriel Pitrone wrote:
+> Neil,
+>
+> Sorry about that, I should have done what I said I would then and there.
+>
+> If you have access to SolidWorks, you can use this Pack-n-go .ZIP file:
+> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.zip
+>
+> If you do not, then you can download this:
+> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.STEP .STEP is what
+> we had discussed to be the most widely used format across platforms. The
+> problem with this though is that there are rebuild errors on the pars
+> from Picard and Thorlabs.
+>
+> I hope that this helps,
+> Pete
+>
+
+
+
+
+From pitrone at mpi-cbg.de  Mon Dec  2 10:58:13 2013
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Mon, 2 Dec 2013 17:58:13 +0100 (CET)
+Subject: [OpenSPIM] [openspim] OpenSPIM
+In-Reply-To: <alpine.DEB.1.00.1311291523030.1191@s15462909.onlinehome-server.info>
+References: <517DFDCD.8030401@bii.a-star.edu.sg>
+	<76e0d753f0564.51a51fa0@wiscmail.wisc.edu>
+	<76d0ef14f3754.51a4d952@wiscmail.wisc.edu>
+	<51A5B615.2020305@bii.a-star.edu.sg>
+	<7780b3d06c461.51a67521@wiscmail.wisc.edu>
+	<7660d08a71dac.51a634b1@wiscmail.wisc.edu>
+	<5288DD5A.1030906@bii.a-star.edu.sg>
+	<72d0f56575e54.528a84da@wiscmail.wisc.edu>
+	<7740f0b0739e5.528a8518@wiscmail.wisc.edu>
+	<7390acf87214a.528a8557@wiscmail.wisc.edu>
+	<73b098c276c53.528a8594@wiscmail.wisc.edu>
+	<7320dbd970faa.528a85d3@wiscmail.wisc.edu>
+	<7780813d77083.528a8610@wiscmail.wisc.edu>
+	<72f0f27c729e3.528a864d@wiscmail.wisc.edu>
+	<7340e81475634.528a868c@wiscmail.wisc.edu>
+	<7340a3be765ae.528a86c9@wiscmail.wisc.edu>
+	<7730f5b076cc6.528a8707@wiscmail.wisc.edu>
+	<7300f01277861.528a32d8@wiscmail.wisc.edu>
+	<528B0098.10007@bii.a-star.edu.sg> <5296382E.1070700@emory.edu>
+	<61986.10.1.199.25.1385630685.squirrel@webmail.mpi-cbg.de>
+	<alpine.DEB.1.00.1311291523030.1191@s15462909.onlinehome-server.info>
+Message-ID: <49601.79.240.242.81.1386003493.squirrel@webmail.mpi-cbg.de>
+
+
+Hey Johannes,
+
+I just tried that, but couldn't do it due to the wiki thinking my .STEP
+(uppercase) file is empty and the wiki unable to upload .zip files...
+
+Take a look at the screenshot attached to this message, especially to the
+'Upload warning' and the 'permitted file types'.
+
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Fri, November 29, 2013 3:24 pm, Johannes Schindelin wrote:
+<|> Hi Peter,
+<|>
+<|> On Thu, 28 Nov 2013, Peter Gabriel Pitrone wrote:
+<|>
+<|>> If you have access to SolidWorks, you can use this Pack-n-go .ZIP file:
+<|>> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.zip
+<|>>
+<|>> If you do not, then you can download this:
+<|>> https://dl.dropboxusercontent.com/u/39391799/OpenSPIM.STEP .STEP is
+<|>> what
+<|>> we had discussed to be the most widely used format across platforms.
+<|>> The
+<|>> problem with this though is that there are rebuild errors on the pars
+<|>> from Picard and Thorlabs.
+<|>
+<|> Hmm, out of curiosity: why put this on DropBox when we have a fine
+server
+<|> with an even finer address?
+<|>
+<|> :-)
+<|>
+<|> Ciao,
+<|> Dscho
+<|>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screen Shot 2013-12-02 at 17.53.18.png
+Type: image/png
+Size: 243814 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131202/bc27a89c/attachment-0002.png>
+
+From stuyvenberg at wisc.edu  Mon Dec  2 18:38:20 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 02 Dec 2013 18:38:20 -0600
+Subject: [OpenSPIM] [micro-manager-general] Error in using HAMAMATSU
+ flash 4.0 with umanager in winxp
+In-Reply-To: <7780ef34a8c06.529d27d3@wiscmail.wisc.edu>
+References: <1385524971945-7581608.post@n2.nabble.com>
+	<70b0ce20af35a.529d25ea@wiscmail.wisc.edu>
+	<7640ff89a995a.529d2627@wiscmail.wisc.edu>
+	<7330ad24a8095.529d2665@wiscmail.wisc.edu>
+	<7680c73daf6e0.529d26a3@wiscmail.wisc.edu>
+	<7620a0c2aa491.529d271e@wiscmail.wisc.edu>
+	<76208790a994b.529d275a@wiscmail.wisc.edu>
+	<7780decfab56d.529d2796@wiscmail.wisc.edu>
+	<7780ef34a8c06.529d27d3@wiscmail.wisc.edu>
+Message-ID: <75a0d977a84bc.529cd39c@wiscmail.wisc.edu>
+
+Hello WIKIZONG,
+
+I'm one of the software developers on the OpenSPIM project; the good news is that the Orca Flash4 is successfully being used for the OpenSPIM project, in Heidelberg -- see http://openspim.org/Who_has_an_OpenSPIM%3F .
+
+
+We have also encountered this error message with Hamamatsu cameras before, usually because Fiji is taking up too much of the system's memory. Please try limiting Fiji's memory (Edit > Options > Memory & Threads...) to 1 GB or so. Additionally, this error message sometimes appears only on the first startup of Micro-Manager after booting the computer -- please try restarting Micro-Manager and see if the error message still appears.
+
+
+Hope this helps,
+Luke Stuyvenberg
+
+
+P.S. The OpenSPIM project has a mailing list -- openspim at openspim.org -- please feel free to contact me there if you have any more trouble! :-) Additionally, the Heidelberg lab is subscribed to that mailing list, so they might be able to provide more direct and useful advice if the Flash4 is still problematic for you.
+
+On 11/26/13, WIKIZONG  wrote:
+> Dear all:
+> Recently I am trying to use a Hamamatsu flash 4.0 carema with umanager in
+> window XP system (somehow I have to use this system for the requirements of
+> some devices). I think I have installed the right driver for the camera
+> because I can sanp in DCAM-API ExCAP.But when I try to add the device to the
+> umanager hardware configration wizard, an error came out 
+> <http://micro-manager.3463995.n2.nabble.com/file/n7581608/error_flash_4.bmp>
+> . And I could never add it to the software. I wonder if anyone else has met
+> the same problem and can help me with it. My umanager is the newest version
+> (1.1.15) and my DCAM-API is the June 2013 version.
+> PS: I am trying to use this camera and umanager to build a lightsheet
+> microscope. So I also used a FIGI plugin type umianager and its mmplkugin
+> "spimacquisition" sited in http://openspim.org/ .Has anyone ever used suchi
+> thing with Flash 4? Need yoour succussful experiments! Thank you!
+> 
+> 
+> 
+> --
+> View this message in context: http://micro-manager.3463995.n2.nabble.com/Error-in-using-HAMAMATSU-flash-4-0-with-umanager-in-winxp-tp7581608.html
+> Sent from the Micro-Manager mailing list archive at Nabble.com.
+> 
+> ------------------------------------------------------------------------------
+> Rapidly troubleshoot problems before they affect your business. Most IT 
+> organizations don't have a clear picture of how application performance 
+> affects their revenue. With AppDynamics, you get 100% visibility into your 
+> Java,.NET, & PHP application. Start your 15-day FREE TRIAL of AppDynamics Pro!
+> http://pubads.g.doubleclick.net/gampad/clk?id=84349351&iu=/4140/ostg.clktrk
+> _______________________________________________
+> micro-manager-general mailing list
+> micro-manager-general at lists.sourceforge.net
+> https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+
+
+From zongweijianzwj at 163.com  Mon Dec  2 18:54:36 2013
+From: zongweijianzwj at 163.com (zongweijianzwj)
+Date: Tue, 3 Dec 2013 08:54:36 +0800
+Subject: [OpenSPIM] =?utf-8?b?5Zue5aSNOiAgUmU6IFttaWNyby1tYW5hZ2VyLWdlbmVy?=
+	=?utf-8?q?al=5D_Error_in_using_HAMAMATSU_flash_4=2E0_with_umanager?=
+	=?utf-8?q?_in_winxp?=
+In-Reply-To: <75a0d977a84bc.529cd39c@wiscmail.wisc.edu>
+References: <1385524971945-7581608.post@n2.nabble.com>
+	<70b0ce20af35a.529d25ea@wiscmail.wisc.edu>
+	<7640ff89a995a.529d2627@wiscmail.wisc.edu>
+	<7330ad24a8095.529d2665@wiscmail.wisc.edu>
+	<7680c73daf6e0.529d26a3@wiscmail.wisc.edu>
+	<7620a0c2aa491.529d271e@wiscmail.wisc.edu>
+	<76208790a994b.529d275a@wiscmail.wisc.edu>
+	<7780decfab56d.529d2796@wiscmail.wisc.edu>
+	<7780ef34a8c06.529d27d3@wiscmail.wisc.edu><75a0d977a84bc.529cd39c@wiscmail.wisc.edu>
+Message-ID: <2ffb733d.78d.142b5f34552.Coremail.zongweijianzwj@163.com>
+
+Hello Luke Stuyvenberg :
+  Thanks a lot for your reply. I believe you are right cos I could use mmanager to control the flash 4 in Win7 with no trouble. But I havent try what you propose to do in XP because I think using orca Flash4.0 in WinXP is a really bad choice. That is bacause XP does not supply for USB3.0. So I have to use the firebird board to control the Flash 4.0. Somehow that discourage the whole system to be partible and portable! Right now I have successful controlled the Flash 4 and installed the acquisitonSPIM plugin with mmanager 64bit in Win7. I am waiting for the 4d-stage to assemble the whole system. I will make you informed as soon as my project make any progress!
+Best,
+Zong
+2013-12-03
+
+
+
+Zong, Weijian
+Laboratory of Cell Secretion & Metabolism 
+Institute of Molecular Medicine 
+Peking University 
+Beijing, China, 100871 
+E-mail: zongweijianzwj at 163.com ;
+
+
+
+发件人：Luke Stuyvenberg <stuyvenberg at wisc.edu>
+发送时间：2013-12-03 08:38
+主题：Re: [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp
+收件人："zongweijianzwj"<zongweijianzwj at 163.com>
+抄送："micro-manager-general"<micro-manager-general at lists.sourceforge.net>,"openspim"<openspim at openspim.org>
+
+Hello WIKIZONG, 
+
+I'm one of the software developers on the OpenSPIM project; the good news is that the Orca Flash4 is successfully being used for the OpenSPIM project, in Heidelberg -- see http://openspim.org/Who_has_an_OpenSPIM%3F . 
+
+
+We have also encountered this error message with Hamamatsu cameras before, usually because Fiji is taking up too much of the system's memory. Please try limiting Fiji's memory (Edit > Options > Memory & Threads...) to 1 GB or so. Additionally, this error message sometimes appears only on the first startup of Micro-Manager after booting the computer -- please try restarting Micro-Manager and see if the error message still appears. 
+
+
+Hope this helps, 
+Luke Stuyvenberg 
+
+
+P.S. The OpenSPIM project has a mailing list -- openspim at openspim.org -- please feel free to contact me there if you have any more trouble! :-) Additionally, the Heidelberg lab is subscribed to that mailing list, so they might be able to provide more direct and useful advice if the Flash4 is still problematic for you. 
+
+On 11/26/13, WIKIZONG  wrote: 
+> Dear all: 
+> Recently I am trying to use a Hamamatsu flash 4.0 carema with umanager in 
+> window XP system (somehow I have to use this system for the requirements of 
+> some devices). I think I have installed the right driver for the camera 
+> because I can sanp in DCAM-API ExCAP.But when I try to add the device to the 
+> umanager hardware configration wizard, an error came out  
+> <http://micro-manager.3463995.n2.nabble.com/file/n7581608/error_flash_4.bmp> 
+> . And I could never add it to the software. I wonder if anyone else has met 
+> the same problem and can help me with it. My umanager is the newest version 
+> (1.1.15) and my DCAM-API is the June 2013 version. 
+> PS: I am trying to use this camera and umanager to build a lightsheet 
+> microscope. So I also used a FIGI plugin type umianager and its mmplkugin 
+> "spimacquisition" sited in http://openspim.org/ .Has anyone ever used suchi 
+> thing with Flash 4? Need yoour succussful experiments! Thank you! 
+>  
+>  
+>  
+> -- 
+> View this message in context: http://micro-manager.3463995.n2.nabble.com/Error-in-using-HAMAMATSU-flash-4-0-with-umanager-in-winxp-tp7581608.html 
+> Sent from the Micro-Manager mailing list archive at Nabble.com. 
+>  
+> ------------------------------------------------------------------------------ 
+> Rapidly troubleshoot problems before they affect your business. Most IT  
+> organizations don't have a clear picture of how application performance  
+> affects their revenue. With AppDynamics, you get 100% visibility into your  
+> Java,.NET, & PHP application. Start your 15-day FREE TRIAL of AppDynamics Pro! 
+> http://pubads.g.doubleclick.net/gampad/clk?id=84349351&iu=/4140/ostg.clktrk 
+> _______________________________________________ 
+> micro-manager-general mailing list 
+> micro-manager-general at lists.sourceforge.net 
+> https://lists.sourceforge.net/lists/listinfo/micro-manager-general 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131203/efcb90fc/attachment-0002.html>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Wed Dec  4 08:18:34 2013
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Wed, 4 Dec 2013 15:18:34 +0100
+Subject: [OpenSPIM] About the lightsheet
+Message-ID: <OFB1EBBD2F.6D101400-ONC1257C37.004E9A94-C1257C37.004E9AAE@ipt.rwth-aachen.de>
+
+ Hi dear all,
+
+I have made some tests about the lightsheet. I made some pictures of the lightsheet using the telescope and without using it. To be able of imaging the lightsheet I used a small mirror at 45° mounted in a sample holder to direct the lightsheet onto the CCD.
+
+I found that the lightsheet looks narrower without using the telescope. I know that the telescope is used for alignig the lightsheet with the focal plane of the detection objective in
+an easier way (adjusting the knob of the last mirror causes the lightsheet to move parallel to the plane of the detection objective without being tilted). 
+
+I found out that also is possible to align the lightsheet without using the telescope. Then, I aligned the lightsheet rotating the knob of the mirror but also translating it (I have mounted the mirror in a rail as in this picture http://openspim.org/File:1I_1D_OpenSPIM_03.jpg ). To be sure that the lightsheet was perpendicular to the detection axis throughout the complete FOV I made some pictures of the lightsheet moving the mirror mounted in the sample holder in the X direction.
+
+I attach the pictures to this mail. In the pictures can be observed that the lightsheet is directed to the part of the mirror mounted in the sample holder that is in focus. Even if I translate the mirror mounted in the sample holder in the X direction, the lightsheet remains on the focused part. This is the way I check that the lightsheet is perpendicular throughout the complete FOV. When the lightsheet was not completely perpendicular I observed that the lightsheet was not reflected exactly on the part in focus when moving the mirror in the X direction.
+
+>From the pictures without using the telescope, it can be observed that the lightsheet widens in the borders of the FOV (because of the gaussian nature of the lightsheet), but in the pictures where I use the telescope, the lightsheet seems to be the same thickness along the complete FOV. 
+
+I would like to know if what I have done is right and why does the lightsheet does not seem to change its thickness in the borders of the FOV when I use the telescope.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0012.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet_lef.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0013.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet_right.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0014.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet without telescope.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0015.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet without telescope_left.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0016.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet without telescope_right.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131204/63561ba4/attachment-0017.obj>
+
+From stuyvenberg at wisc.edu  Wed Dec  4 15:27:09 2013
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 04 Dec 2013 15:27:09 -0600
+Subject: [OpenSPIM] New plugin update,
+ was Re: "Acquire SPIM image" option missing in dropdown menu after
+ Fiji Update
+In-Reply-To: <7030e5c5b3be5.529f9e00@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B3042B4E08AFEF@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<7030e5c5b3be5.529f9e00@wiscmail.wisc.edu>
+Message-ID: <7190ac9eb216c.529f49cd@wiscmail.wisc.edu>
+
+Hi John (and all),
+
+You're quite right. A recent update to Fiji upgraded Apache Commons Math to version 3.2, which the plugin (and, in fact, Micromanager) was unprepared to use.
+
+
+I've corrected the code and uploaded a new version of the plugin and associated Micro-Manager JAR files. Please update Fiji again; the problem should be resolved.
+
+
+Let me know if you have any further troubles, and thank you for reporting this!
+
+
+Luke
+
+On 12/01/13, "LIM Soon Yew John (IMB)"  wrote:
+> Dear All,
+> 
+> Have anyone encounter this problem that the "Acquire SPIM image" option disappear after running Fiji updates today?
+> 
+> The "Acquire SPIM image" option is missing in the dropdown menu in Micro-Manager after I ran Fiji update today. When I clicked on "Plugins" in the Micro-Manager's menu, the "Acquire SPIM image" option does not appear.
+> 
+> I had also re-downloaded the OpenSPIM/Fiji package as of October 25th, 2013. The "Acquire SPIM image" option appears normally in the Micro-Manager Plugins' menu, but it disappear after the Fiji update/restart. Sadly, I am not able to use the October 25th version as there is a camera error which is solved after the Fiji update but the "Acquire SPIM image" option disappear after today's Fiji update. 
+> 
+> Best Regards,
+> John
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From john.lim at imb.a-star.edu.sg  Wed Dec  4 21:57:58 2013
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Thu, 5 Dec 2013 11:57:58 +0800
+Subject: [OpenSPIM] New plugin update,
+ was Re: "Acquire SPIM image" option missing in dropdown menu after
+ Fiji Update
+In-Reply-To: <7190ac9eb216c.529f49cd@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B3042B4E08AFEF@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<7030e5c5b3be5.529f9e00@wiscmail.wisc.edu>,
+	<7190ac9eb216c.529f49cd@wiscmail.wisc.edu>
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B3043A51629FCB@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Hi Luke,
+
+After the Fiji update, the "Acuire SPIM image" option now appear normally in the Micro-Manager's "Plugin" dropdown menu.
+
+Thank You.
+
+Best Regards,
+John
+________________________________________
+From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+Sent: Thursday, December 05, 2013 5:27 AM
+To: LIM Soon Yew John (IMB); openspim at openspim.org
+Subject: New plugin update, was Re: "Acquire SPIM image" option missing in dropdown menu after Fiji Update
+
+Hi John (and all),
+
+You're quite right. A recent update to Fiji upgraded Apache Commons Math to version 3.2, which the plugin (and, in fact, Micromanager) was unprepared to use.
+
+
+I've corrected the code and uploaded a new version of the plugin and associated Micro-Manager JAR files. Please update Fiji again; the problem should be resolved.
+
+
+Let me know if you have any further troubles, and thank you for reporting this!
+
+
+Luke
+
+On 12/01/13, "LIM Soon Yew John (IMB)"  wrote:
+> Dear All,
+>
+> Have anyone encounter this problem that the "Acquire SPIM image" option disappear after running Fiji updates today?
+>
+> The "Acquire SPIM image" option is missing in the dropdown menu in Micro-Manager after I ran Fiji update today. When I clicked on "Plugins" in the Micro-Manager's menu, the "Acquire SPIM image" option does not appear.
+>
+> I had also re-downloaded the OpenSPIM/Fiji package as of October 25th, 2013. The "Acquire SPIM image" option appears normally in the Micro-Manager Plugins' menu, but it disappear after the Fiji update/restart. Sadly, I am not able to use the October 25th version as there is a camera error which is solved after the Fiji update but the "Acquire SPIM image" option disappear after today's Fiji update.
+>
+> Best Regards,
+> John
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Thu Dec  5 09:30:44 2013
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Thu, 5 Dec 2013 16:30:44 +0100
+Subject: [OpenSPIM] WG: Re:  About the lightsheet
+Message-ID: <OFFF770C21.BDAFF466-ONC1257C38.00553610-C1257C38.00553629@ipt.rwth-aachen.de>
+
+ Hi Jan,
+
+I changed the order of the lens in the telescope so that it expands the beam and I got a thinner lightsheet, but when I move the mirror mounted on the sample holder in the X direction
+the lightsheet expands too much. I attach some images.
+
+Do you know if I can adjust the relationship between the thickness of the lightsheet in the center and in the borders of the FOV using the vertical slit?
+
+Kind regards,
+Edgar
+
+
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Weitergeleitet von Edgar Escobar Nieto/Fraunhofer IPT am 05.12.2013 15:53 -----
+An: Jan Krieger <j.krieger at dkfz-heidelberg.de>
+Von: Edgar Escobar Nieto/Fraunhofer IPT
+Datum: 04.12.2013 17:37
+Betreff: Re: [OpenSPIM] About the lightsheet
+
+ Hi Jan,
+
+Yes, I am talking about the telescope between the corner mirror and the objective.
+
+Ohh, I have thought that this telescope instead of expanding the beam, it was reducing it.
+In the instructions of how to install the telescope from the OpenSPIM wiki, the 50 mm focal length lens goes first and then
+the 25 mm, (the opposite order in comparisson to the beam expander). So, it looks like all this time I have been using the
+wrong lens configuration. 
+
+Concerning the pictures, I am always using the illumination objective, in some using the telescope (between the corner mirror and the objective), in others without using it.
+
+That explain everything. I will change the order of the lenses of the last telescope in order to expand the beam and not to reduce it. Thanks a lot for your answer.
+I will let you know if I suceed.
+
+Kind regards,
+Edgar
+
+
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Jan Krieger <j.krieger at dkfz-heidelberg.de> schrieb: -----
+An: "edgar.escobar.nieto at ipt.fraunhofer.de" <edgar.escobar.nieto at ipt.fraunhofer.de>
+Von: Jan Krieger <j.krieger at dkfz-heidelberg.de>
+Datum: 04.12.2013 15:39
+Betreff: Re: [OpenSPIM] About the lightsheet
+
+Hi!
+
+hhmmm ... I pressume you're talking about the telescope between the 
+corner mirror and the objective, right?
+
+As far as I know the openSPIM, this telescope should lead to an 
+additional 2-fold expansion of the beam. This means that the light fills 
+more of the projection objective and should thus also create a thinner 
+focus (we "use more" of the available NA of the objective ... ) ... So 
+your finding of with and without the objective looks strange to me ... 
+Can you measure the width of the lightsheet with your different 
+configurations? It should slightly expand, if you move the 45°-mirror 
+along the lightsheet axis ... How did you find the right position of the 
+projection objective? We usually find a sharp line on the mirror and 
+position it in the center of the FOV, then adjust the lightsheet to 
+overlay with this line, using the corner mirror and finally adjust the 
+projection obvjective (along the lightsheet axis) until we have the 
+thinnest possible lightsheet which should then also have it's thinnest 
+position in the center of the FOV.
+
+Best,
+JAN
+
+
+
+Am 04.12.2013 15:18, schrieb edgar.escobar.nieto at ipt.fraunhofer.de:
+> Hi dear all,
+>
+> I have made some tests about the lightsheet. I made some pictures of the
+> lightsheet using the telescope and without using it. To be able of
+> imaging the lightsheet I used a small mirror at 45° mounted in a sample
+> holder to direct the lightsheet onto the CCD.
+>
+> I found that the lightsheet looks narrower without using the telescope.
+> I know that the telescope is used for alignig the lightsheet with the
+> focal plane of the detection objective in
+> an easier way (adjusting the knob of the last mirror causes the
+> lightsheet to move parallel to the plane of the detection objective
+> without being tilted).
+>
+> I found out that also is possible to align the lightsheet without using
+> the telescope. Then, I aligned the lightsheet rotating the knob of the
+> mirror but also translating it (I have mounted the mirror in a rail as
+> in this picture http://openspim.org/File:1I_1D_OpenSPIM_03.jpg ). To be
+> sure that the lightsheet was perpendicular to the detection axis
+> throughout the complete FOV I made some pictures of the lightsheet
+> moving the mirror mounted in the sample holder in the X direction.
+>
+> I attach the pictures to this mail. In the pictures can be observed that
+> the lightsheet is directed to the part of the mirror mounted in the
+> sample holder that is in focus. Even if I translate the mirror mounted
+> in the sample holder in the X direction, the lightsheet remains on the
+> focused part. This is the way I check that the lightsheet is
+> perpendicular throughout the complete FOV. When the lightsheet was not
+> completely perpendicular I observed that the lightsheet was not
+> reflected exactly on the part in focus when moving the mirror in the X
+> direction.
+>
+>  From the pictures without using the telescope, it can be observed that
+> the lightsheet widens in the borders of the FOV (because of the gaussian
+> nature of the lightsheet), but in the pictures where I use the
+> telescope, the lightsheet seems to be the same thickness along the
+> complete FOV.
+>
+> I would like to know if what I have done is right and why does the
+> lightsheet does not seem to change its thickness in the borders of the
+> FOV when I use the telescope.
+>
+> Kind regards,
+> Edgar
+> _________________________________________________________________________
+>
+> Fraunhofer-Institut fr Produktionstechnologie IPT
+> Edgar Escobar Nieto
+>
+>
+>
+>
+> Steinbachstraáe 17
+> 52074 Aachen
+>
+> edgar.escobar.nieto at ipt.fraunhofer.de _
+> __http://www.ipt.fraunhofer.de_ <http://www.ipt.fraunhofer.de/>
+> _________________________________________________________________________
+>
+> 	
+> 	
+>
+
+
+
+[Anhang 'j_krieger.vcf' entfernt von Edgar Escobar Nieto/Fraunhofer IPT]
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet center.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0006.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet left.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0007.obj>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: lightsheet right.bmp
+Type: application/octet-stream
+Size: 1229878 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131205/06ab8116/attachment-0008.obj>
+
+From weber at mpi-cbg.de  Thu Dec 12 03:48:44 2013
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Thu, 12 Dec 2013 10:48:44 +0100
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+Message-ID: <B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC. 
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen <veli-pekka.ronkainen at oulu.fi> wrote:
+
+> Hi Michael!
+>  
+> I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!  
+>  
+> We are planning the set-up now, and it we’d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I’d appreciate if you had time to answer couple of my questions? I’ve browsed through the mailing list archives (and µManager discussions too), but have not find clear answers yet. So we’d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. µManager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We’d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer –related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just “cropping” the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+>  
+> Best Regards,
+> Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131212/dfa9b58f/attachment-0002.html>
+
+From veli-pekka.ronkainen at oulu.fi  Fri Dec 13 03:30:08 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Fri, 13 Dec 2013 09:30:08 +0000
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+	<B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+
+Thanks Michael for the answers and cc’ing!
+
+Our initial plan is to build up a SPIM with a dual side simultaneous excitation by one laser wavelength at the time, and image colors sequentially. Laser (either 488nm or 561nm) is divided into two identical illumination pathways to reduce shading and the need of rotation. So at least in the first version we have to replace the laser head between the channels. Maybe later we’ll try to modify it so that we could use two lasers installed at the same time and control the excitation wavelength with µManager, if that appears to be possible. Do you think it is generally worth building a two sided illumination set-up compared to single sided illumination, or can we assume some unexpected problems arising from reflections or difficulties in aligning overlapping lightsheets etc.?
+
+So anyone please, do you have any further information about controlling Coherent OBIS lasers with OpenSpim µManager? I haven’t got any answers from Coherent. Would you like to share your experiences with sCMOS cameras as well?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+From: Michael Weber [mailto:weber at mpi-cbg.de]
+Sent: 12. joulukuuta 2013 11:49
+To: Veli-Pekka Ronkainen
+Cc: openspim at openspim.org
+Subject: Re: OpenSPIM-related stuff
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC.
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen <veli-pekka.ronkainen at oulu.fi<mailto:veli-pekka.ronkainen at oulu.fi>> wrote:
+
+
+Hi Michael!
+
+I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!
+
+We are planning the set-up now, and it we’d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I’d appreciate if you had time to answer couple of my questions? I’ve browsed through the mailing list archives (and µManager discussions too), but have not find clear answers yet. So we’d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. µManager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We’d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer –related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just “cropping” the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+
+Best Regards,
+Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131213/27d618ab/attachment-0002.html>
+
+From schindelin at wisc.edu  Fri Dec 13 16:24:02 2013
+From: schindelin at wisc.edu (Johannes Schindelin)
+Date: Fri, 13 Dec 2013 23:24:02 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM Acquisition Parameters
+In-Reply-To: <52A9F9CB.6080000@emory.edu>
+References: <52A9F9CB.6080000@emory.edu>
+Message-ID: <alpine.DEB.1.00.1312132322270.1191@s15462909.onlinehome-server.info>
+
+Hi Neil,
+
+On Thu, 12 Dec 2013, Neil Anthony wrote:
+
+> I was wondering if it might be possible to get further information
+> regarding the experimental and acquisition parameters of the data sets
+> in the OpenSPIM gallery page.
+
+The best place to ask is the OpenSPIM mailing list (Cc:ed). What
+information are you interested in, exactly? I am sure that your questions
+will be answered to your satisfaction here.
+
+Ciao,
+Johannes
+
+
+
+
+From veli-pekka.ronkainen at oulu.fi  Thu Dec 19 04:17:39 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Thu, 19 Dec 2013 10:17:39 +0000
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+
+Hi all,
+
+Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice selection of lasers with different wavelengths and output powers listed on their catalogue. Moreover, micro-manager seems to have device support for Cobolts (Cobolt Laser Controller by name). We'd be interested especially in Cobolt Dual Combiner, which allows a permanently aligned combination of any 2 wavelengths to one single output. That would be very handy in multi-color imaging. So, can anyone comment on the Cobolts and the functionality in OpenSPIM?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, Finland
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131219/3dc59017/attachment-0002.html>
+
+From j.krieger at dkfz-heidelberg.de  Thu Dec 19 06:11:13 2013
+From: j.krieger at dkfz-heidelberg.de (Jan Krieger)
+Date: Thu, 19 Dec 2013 13:11:13 +0100
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+Message-ID: <52B2E261.3000405@dkfz-heidelberg.de>
+
+Hi!
+
+we are using Cobolt DPSS lasers in a dual-color SPIM setup (not an 
+openSPIM, but a comparable design: 
+http://www.dkfz.de/Macromol/research/spim.html and a new publication to 
+appear in a few days/weeks: Krieger, Singh etal. (2013): "Dual-Color 
+Fluorescence Cross-Correlation Spectroscopy on a Single Plane 
+Illumination Microscope (SPIM-FCCS)", OPtics Express, accepted). The 
+lasers are generally good, but you should care for a few things:
+
+1. As most DPSS lasers they are stable at the specified output power, 
+but might get instable if you go below 10% of that power (our 25mW 
+lasers typically show a TEM20 or TEM10 mode, when driven at 1mW output 
+power instead of 25mW, where they have a nice TEM00) ... but thats 
+generally true for all DPSS lasers, so in oder to reduce the laser 
+power, you should use neutral-density filters or waveplate+ polarizer cube.
+
+2. The Cobolt 491nm laser is good, but has a little green light coming 
+out of the cavity (a few microwatt @ ~530nm), so I would strongly advice 
+a cleanup-filter. On the 561nm laser I haven't noticed anything yet.
+
+3. A general thing on two-color illumination on a SPIM: We had some 
+problems, when combining the two beams immediately behind the lasers. 
+The focal points of the lasers were not overlapping (distance ~10µm), 
+but then we have a very thin lightsheet (~1.5µm FWHM, i.e. NA0.3 
+overilluminated) and accordingly small depth of focus. Depending on your 
+application that may not be that much of a problem. Anyways we're using 
+two beam expanders and combine the expanded beams. This also allows us 
+to independently move the focal points along the lightsheet axis. I'm 
+attatching a sketch of the setup (5x-beam expanders, 100mm/300mm relais 
+telescope, 100mm cylindrical lens, 10x/NA0.3 Nikon air objective).
+
+4. As we just replaced a ArKr laser by two DPSS lasers, I talked to a 
+lot of different companies ... all the DPSS lasers are more or less 
+comparable. Some are maybe spectrally a bit cleaner or slightly more 
+stable, but Cobolt offers good value for the price and we are very happy 
+with those guys ;-)
+
+5. About the beam-combiner I would also have second thoughts: On the one 
+hand see point 3 above and the other problem is that you can realign the 
+beamcombiner (it's glued internally, so if it's missaligned at some 
+point, you cannot do much), so I would simply buy a dichroic and a 
+second mirror. Then you can use these two to fully align the second 
+laser beam:
+
++---------+                \
+| LASER 2 |-----------------\ mirror
++---------+                 |\
+                             |
+                             |
++---------+                \| dichroic
+| LASER 1 |-----------------\==============> SPIM
++---------+                  \
+
+Here you can align the SPIM first with laser 1 and then use the mirror 
+and dichroic (both on kinematic mirror mounts) to align the second laser.
+
+Hope that helps,
+JAN
+
+
+
+Am 19.12.2013 11:17, schrieb Veli-Pekka Ronkainen:
+> Hi all,
+>
+> Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice
+> selection of lasers with different wavelengths and output powers listed
+> on their catalogue. Moreover, micro-manager seems to have device support
+> for Cobolts (Cobolt Laser Controller by name). We’d be interested
+> especially in Cobolt Dual Combiner, which allows a permanently aligned
+> combination of any 2 wavelengths to one single output. That would be
+> very handy in multi-color imaging. So, can anyone comment on the Cobolts
+> and the functionality in OpenSPIM?
+>
+> Regards,
+>
+> Veli-Pekka Ronkainen
+>
+> Biocenter Oulu, Finland
+>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: spim_schematic.pdf
+Type: application/pdf
+Size: 177011 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0002.pdf>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 408 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0002.vcf>
+
+From fredrik.ek at med.lu.se  Thu Dec 19 15:23:40 2013
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Thu, 19 Dec 2013 21:23:40 +0000
+Subject: [OpenSPIM] Lasers for SPIM
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+
+Hi,
+
+we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+
+1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+
+2. Fiberconnected or open beam. Your opinions.
+
+3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+
+4. AOTF module or not?
+
+Your input is highly appreciated. 
+
+Thanks!
+
+
+Fredrik Ek, 
+Researcher, Lund University Sweden
+
+
+From veli-pekka.ronkainen at oulu.fi  Fri Dec 20 03:10:02 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Fri, 20 Dec 2013 09:10:02 +0000
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+In-Reply-To: <52B2E261.3000405@dkfz-heidelberg.de>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+	<52B2E261.3000405@dkfz-heidelberg.de>
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AFEC9C@nippu1.univ.yo.oulu.fi>
+
+Thanks Jan for your comprehensive reply!
+
+This helps a lot and gives many aspects to think about. What is the operating software you are using? µManager or something else, and how well these lasers integrate with the software? 
+
+Regards,
+Veli-Pekka 
+
+-----Original Message-----
+From: Jan Krieger [mailto:j.krieger at dkfz-heidelberg.de] 
+Sent: 19. joulukuuta 2013 14:11
+To: Veli-Pekka Ronkainen; openspim at openspim.org
+Subject: Re: [OpenSPIM] Cobolt lasers in OpenSPIM?
+
+Hi!
+
+we are using Cobolt DPSS lasers in a dual-color SPIM setup (not an openSPIM, but a comparable design: 
+http://www.dkfz.de/Macromol/research/spim.html and a new publication to appear in a few days/weeks: Krieger, Singh etal. (2013): "Dual-Color Fluorescence Cross-Correlation Spectroscopy on a Single Plane Illumination Microscope (SPIM-FCCS)", OPtics Express, accepted). The lasers are generally good, but you should care for a few things:
+
+1. As most DPSS lasers they are stable at the specified output power, but might get instable if you go below 10% of that power (our 25mW lasers typically show a TEM20 or TEM10 mode, when driven at 1mW output power instead of 25mW, where they have a nice TEM00) ... but thats generally true for all DPSS lasers, so in oder to reduce the laser power, you should use neutral-density filters or waveplate+ polarizer cube.
+
+2. The Cobolt 491nm laser is good, but has a little green light coming out of the cavity (a few microwatt @ ~530nm), so I would strongly advice a cleanup-filter. On the 561nm laser I haven't noticed anything yet.
+
+3. A general thing on two-color illumination on a SPIM: We had some problems, when combining the two beams immediately behind the lasers. 
+The focal points of the lasers were not overlapping (distance ~10µm), but then we have a very thin lightsheet (~1.5µm FWHM, i.e. NA0.3
+overilluminated) and accordingly small depth of focus. Depending on your application that may not be that much of a problem. Anyways we're using two beam expanders and combine the expanded beams. This also allows us to independently move the focal points along the lightsheet axis. I'm attatching a sketch of the setup (5x-beam expanders, 100mm/300mm relais telescope, 100mm cylindrical lens, 10x/NA0.3 Nikon air objective).
+
+4. As we just replaced a ArKr laser by two DPSS lasers, I talked to a lot of different companies ... all the DPSS lasers are more or less comparable. Some are maybe spectrally a bit cleaner or slightly more stable, but Cobolt offers good value for the price and we are very happy with those guys ;-)
+
+5. About the beam-combiner I would also have second thoughts: On the one hand see point 3 above and the other problem is that you can realign the beamcombiner (it's glued internally, so if it's missaligned at some point, you cannot do much), so I would simply buy a dichroic and a second mirror. Then you can use these two to fully align the second laser beam:
+
++---------+                \
+| LASER 2 |-----------------\ mirror
++---------+                 |\
+                             |
+                             |
++---------+                \| dichroic
+| LASER 1 |-----------------\==============> SPIM
++---------+                  \
+
+Here you can align the SPIM first with laser 1 and then use the mirror and dichroic (both on kinematic mirror mounts) to align the second laser.
+
+Hope that helps,
+JAN
+
+
+
+Am 19.12.2013 11:17, schrieb Veli-Pekka Ronkainen:
+> Hi all,
+>
+> Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice 
+> selection of lasers with different wavelengths and output powers 
+> listed on their catalogue. Moreover, micro-manager seems to have 
+> device support for Cobolts (Cobolt Laser Controller by name). We’d be 
+> interested especially in Cobolt Dual Combiner, which allows a 
+> permanently aligned combination of any 2 wavelengths to one single 
+> output. That would be very handy in multi-color imaging. So, can 
+> anyone comment on the Cobolts and the functionality in OpenSPIM?
+>
+> Regards,
+>
+> Veli-Pekka Ronkainen
+>
+> Biocenter Oulu, Finland
+>
+
+
+
+
+From veli-pekka.ronkainen at oulu.fi  Fri Dec 20 03:14:17 2013
+From: veli-pekka.ronkainen at oulu.fi (Veli-Pekka Ronkainen)
+Date: Fri, 20 Dec 2013 09:14:17 +0000
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+	<B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+Message-ID: <742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6@nippu1.univ.yo.oulu.fi>
+
+Hi all,
+
+FYI, I just got an email from Coherent: “Unfortunately the Obis cannot be controlled  with the MicroManager up to now. There are plans to make it work but this will be out at least 6 more months.”
+
+Regards,
+Veli-Pekka
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Veli-Pekka Ronkainen
+Sent: 13. joulukuuta 2013 11:30
+To: Michael Weber
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] OpenSPIM-related stuff
+
+Thanks Michael for the answers and cc’ing!
+
+Our initial plan is to build up a SPIM with a dual side simultaneous excitation by one laser wavelength at the time, and image colors sequentially. Laser (either 488nm or 561nm) is divided into two identical illumination pathways to reduce shading and the need of rotation. So at least in the first version we have to replace the laser head between the channels. Maybe later we’ll try to modify it so that we could use two lasers installed at the same time and control the excitation wavelength with µManager, if that appears to be possible. Do you think it is generally worth building a two sided illumination set-up compared to single sided illumination, or can we assume some unexpected problems arising from reflections or difficulties in aligning overlapping lightsheets etc.?
+
+So anyone please, do you have any further information about controlling Coherent OBIS lasers with OpenSpim µManager? I haven’t got any answers from Coherent. Would you like to share your experiences with sCMOS cameras as well?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+From: Michael Weber [mailto:weber at mpi-cbg.de]
+Sent: 12. joulukuuta 2013 11:49
+To: Veli-Pekka Ronkainen
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: OpenSPIM-related stuff
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC.
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen <veli-pekka.ronkainen at oulu.fi<mailto:veli-pekka.ronkainen at oulu.fi>> wrote:
+
+Hi Michael!
+
+I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!
+
+We are planning the set-up now, and it we’d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I’d appreciate if you had time to answer couple of my questions? I’ve browsed through the mailing list archives (and µManager discussions too), but have not find clear answers yet. So we’d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. µManager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We’d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer –related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just “cropping” the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+
+Best Regards,
+Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/74c008d4/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Fri Dec 20 03:32:17 2013
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Fri, 20 Dec 2013 10:32:17 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM-related stuff
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6@nippu1.univ.yo.oulu.fi>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AF3B76@nippu2>
+	<B316669D-C63B-474C-A171-EDB452D266E6@mpi-cbg.de>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AF7DB9@nippu2>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6@nippu1.univ.yo.oulu.fi>
+Message-ID: <49861.10.1.150.46.1387531937.squirrel@webmail.mpi-cbg.de>
+
+
+Hey Veli-Pekka,
+
+This sucks!! They have a good selection of wavelengths too... I wonder if
+there is anything we can do.
+
+Have a nice weekend and a Merry Christmas/Happy New Year!!
+
+Best Regards!
+Pete
+
+-- 
+Peter Gabriel Pitrone - TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Fri, December 20, 2013 10:14 am, Veli-Pekka Ronkainen wrote:
+<|> Hi all,
+<|>
+<|> FYI, I just got an email from Coherent: Unfortunately the Obis
+cannot be
+<|> controlled  with the MicroManager up to now. There are plans to make it
+<|> work but this will be out at least 6 more months.
+<|>
+<|> Regards,
+<|> Veli-Pekka
+<|>
+<|> From: openspim-bounces at openspim.org
+<|> [mailto:openspim-bounces at openspim.org] On Behalf Of Veli-Pekka Ronkainen
+<|> Sent: 13. joulukuuta 2013 11:30
+<|> To: Michael Weber
+<|> Cc: openspim at openspim.org
+<|> Subject: Re: [OpenSPIM] OpenSPIM-related stuff
+<|>
+<|> Thanks Michael for the answers and ccing!
+<|>
+<|> Our initial plan is to build up a SPIM with a dual side simultaneous
+<|> excitation by one laser wavelength at the time, and image colors
+<|> sequentially. Laser (either 488nm or 561nm) is divided into two
+identical
+<|> illumination pathways to reduce shading and the need of rotation. So at
+<|> least in the first version we have to replace the laser head between the
+<|> channels. Maybe later well try to modify it so that we could use two
+<|> lasers installed at the same time and control the excitation wavelength
+<|> with µManager, if that appears to be possible. Do you think it is
+<|> generally worth building a two sided illumination set-up compared to
+<|> single sided illumination, or can we assume some unexpected problems
+<|> arising from reflections or difficulties in aligning overlapping
+<|> lightsheets etc.?
+<|>
+<|> So anyone please, do you have any further information about controlling
+<|> Coherent OBIS lasers with OpenSpim µManager? I havent got any answers
+<|> from Coherent. Would you like to share your experiences with sCMOS
+<|> cameras as well?
+<|>
+<|> Regards,
+<|> Veli-Pekka Ronkainen
+<|> Biocenter Oulu, University of Oulu
+<|> Finland
+<|>
+<|> From: Michael Weber [mailto:weber at mpi-cbg.de]
+<|> Sent: 12. joulukuuta 2013 11:49
+<|> To: Veli-Pekka Ronkainen
+<|> Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+<|> Subject: Re: OpenSPIM-related stuff
+<|>
+<|> Dear Veli-Pekka,
+<|>
+<|> it was my pleasure to give the lecture in Oulu and I enjoyed my time in
+<|> Finland! It's great to hear that you are moving into the SPIM field as
+<|> well and I am happy to answer part of your questions. However, when it
+<|> comes to software integration, I rather leave that to the guys on the
+<|> mailing list, which is why I also put them on CC.
+<|>
+<|> So if I get it right you want to build a two-color setup with
+<|> double-sided illumination? Do you want to detect both colors
+<|> simultaneously or sequentially? And how do you plan to use the
+<|> double-sided illumination, also simultaneously or sequentially?
+<|>
+<|> Using a camera with a bigger sensor like sCMOS is possible and should
+not
+<|> be limited by the microscope objective or the emission filter, so no
+<|> optical redesign is necessary here. However, additional components could
+<|> be problematic and block light from reaching the edges of your chip.
+<|> Those components are namely camera adapters with additional
+<|> (de)magnification or image splitter. On the other hand, an image
+splitter
+<|> is a neat way to capture two colors simultaneously, especially on a big
+<|> camera chip which has plenty of pixels to share. Some companies are now
+<|> also modifying their splitters for sCMOS chips.
+<|> Compared to a camera with a smaller chip, you lower your effective
+<|> magnification (or in other words, you increase your field of view) if
+you
+<|> use the entire chip of an sCMOS camera. If there are components which
+<|> limit the field of view (adapters, splitters), you end up with smaller
+<|> useable area. But maybe that does not matter and you simply crop to the
+<|> center of the chip, which would also increase your maximum frame
+rate. It
+<|> really depends on what you want to image and which spatial and temporal
+<|> resolution you wish to get.
+<|>
+<|> Regarding the integration of camera and laser into the software, as I
+<|> said, I am not up to date. But probably someone else from the mailing
+<|> list can help here?!
+<|>
+<|> Best regards,
+<|> Michael
+<|>
+<|>
+<|> On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen
+<|> <veli-pekka.ronkainen at oulu.fi<mailto:veli-pekka.ronkainen at oulu.fi>>
+<|> wrote:
+<|>
+<|> Hi Michael!
+<|>
+<|> I still want to thank you for your visit here in Oulu in June. Your
+<|> lecture was confirming our researchers that we need SPIM here as well,
+<|> and happily we just got nice funding for the build-up costs of OpenSPIM!
+<|>
+<|> We are planning the set-up now, and it wed like to have some laser and
+<|> camera modifications to the dual side illumination version of OpenSPIM.
+<|> Our plan is mainly clear with a few unsolved issues and Id
+appreciate if
+<|> you had time to answer couple of my questions? Ive browsed through the
+<|> mailing list archives (and µManager discussions too), but have not find
+<|> clear answers yet. So wed like to use Coherent OBIS-series lasers
+<|> instead of CUBE (to get the 561 nm laser as well), and in one mailing
+<|> list thread you and Peter Pitrone discussed that OBIS and other series
+<|> have been used successfully in OpenSPIM. µManager has drivers for CUBE,
+<|> but not a clear support for OBIS, so do you know how replacing the
+lasers
+<|> should work? Another question is related on the camera. Wed like to use
+<|> Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the
+<|> camera-drivers-computer related things, but do you know how people have
+<|> fitted this larger sensor type camera to the detection pathway? Do we
+<|> need some optical redesign to fill the whole sensor area, or is that
+<|> smaller sensor size Orca-ER just cropping the signal and the original
+<|> pathway design would fill the larger chip as well? Of course I could
+<|> reform and write these questions to the mailing list if you prefer?
+<|>
+<|> Best Regards,
+<|> Veli-Pekka
+<|>
+<|> _____________
+<|>
+<|> Michael Weber
+<|> PhD Student, Huisken lab
+<|> Max Planck Institute of Molecular Cell Biology and Genetics
+<|> Pfotenhauerstrasse 108, 01307 Dresden
+<|> Tel. 0049 351/2102837
+<|>
+<|> http://www.mpi-cbg.de/huisken
+<|>
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+
+From weber at mpi-cbg.de  Fri Dec 20 07:06:25 2013
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Fri, 20 Dec 2013 14:06:25 +0100
+Subject: [OpenSPIM] Lasers for SPIM
+In-Reply-To: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+References: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+Message-ID: <7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>
+
+Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to "quickly" swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek <fredrik.ek at med.lu.se> wrote:
+
+> Hi,
+> 
+> we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+> 
+> 1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+> 
+> 2. Fiberconnected or open beam. Your opinions.
+> 
+> 3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+> 
+> 4. AOTF module or not?
+> 
+> Your input is highly appreciated. 
+> 
+> Thanks!
+> 
+> 
+> Fredrik Ek, 
+> Researcher, Lund University Sweden
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/494652fd/attachment-0002.html>
+
+From j.krieger at dkfz-heidelberg.de  Fri Dec 20 07:14:43 2013
+From: j.krieger at dkfz-heidelberg.de (Jan Krieger)
+Date: Fri, 20 Dec 2013 14:14:43 +0100
+Subject: [OpenSPIM] Cobolt lasers in OpenSPIM?
+In-Reply-To: <742E1E88D2F8D44AAA2E700C6BB4FA98AFEC9C@nippu1.univ.yo.oulu.fi>
+References: <742E1E88D2F8D44AAA2E700C6BB4FA98AFE96C@nippu1.univ.yo.oulu.fi>
+	<52B2E261.3000405@dkfz-heidelberg.de>
+	<742E1E88D2F8D44AAA2E700C6BB4FA98AFEC9C@nippu1.univ.yo.oulu.fi>
+Message-ID: <52B442C3.8050203@dkfz-heidelberg.de>
+
+Hi!
+
+ > This helps a lot and gives many aspects to think about. What is the
+ > operating software you are using? µManager or something else, and how
+ > well these lasers integrate with the software?
+
+We use our own software QuickFit 3 
+(http://www.dkfz.de/Macromol/quickfit/), which is kind of optimized for 
+our setup and application (SPIM-FCS). There are drivers for the CObolt 
+lasers, and Andor EMCCD cameras (NOT for the sCMOS, as they use the SDK 
+3), but new drivers can always be written in C++. The whole application 
+is multi-platform, i.e. we run our instrument on Linux and the data eval 
+typically on windows. It's written in C++ and uses Qt 4.8 for the GUI.
+
+But I think that using µManager may probably be easier for you ... also 
+the community is larger ;-)
+
+One more thing on the beam expanders: As first beam expanders, we use 
+commercial units (one is a zoom expander 1x-8x from sill optics, the 
+other one is a fixed 5x from Qioptic/Linos), which are both NOT 
+achromatically corrected. So this might be part of our problem ... but 
+then having the possibility to tune both lasers independently might be 
+worth thinking about. At least for our application (single-cell imaging 
+with a thin lightsheet) it helps a lot!
+
+Best,
+JAN
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 408 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/eaa09422/attachment-0002.vcf>
+
+From fredrik.ek at med.lu.se  Fri Dec 20 10:12:42 2013
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Fri, 20 Dec 2013 16:12:42 +0000
+Subject: [OpenSPIM] Lasers for SPIM
+In-Reply-To: <7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>
+References: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+	<7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE98FF7298@UWMBX04.uw.lu.se>
+
+Hi all,
+
+Great inputs to my questions. Thanks a lot!
+
+Have a nice Christmas holiday and a Happy New Year
+
+Best,
+
+Fredrik
+
+
+Från: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] För Michael Weber
+Skickat: den 20 december 2013 14:06
+Till: openspim at openspim.org
+Ämne: Re: [OpenSPIM] Lasers for SPIM
+
+Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to "quickly" swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>> wrote:
+
+
+Hi,
+
+we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+
+1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+
+2. Fiberconnected or open beam. Your opinions.
+
+3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+
+4. AOTF module or not?
+
+Your input is highly appreciated.
+
+Thanks!
+
+
+Fredrik Ek,
+Researcher, Lund University Sweden
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20131220/7247c0b4/attachment-0002.html>
+
+From j.krieger at Dkfz-Heidelberg.de  Fri Dec 20 15:57:47 2013
+From: j.krieger at Dkfz-Heidelberg.de (Krieger, Jan)
+Date: Fri, 20 Dec 2013 22:57:47 +0100
+Subject: [OpenSPIM] Lasers for SPIM
+In-Reply-To: <11FEABF97C42FE47AA23C843A13D49EE98FF7298@UWMBX04.uw.lu.se>
+References: <11FEABF97C42FE47AA23C843A13D49EE98FF7109@UWMBX04.uw.lu.se>
+	<7949EDDA-4B00-4523-A534-934FA95C3F55@mpi-cbg.de>,
+	<11FEABF97C42FE47AA23C843A13D49EE98FF7298@UWMBX04.uw.lu.se>
+Message-ID: <4F91222C659D5B4E8C89CE4D710BB08EFFD57C6930@DKFZEX01.ad.dkfz-heidelberg.de>
+
+Hi all!
+
+tlking bout shutters ... there are several possibilities to build cheap laser shutters with different speed grades:
+
+1. We use small servos controlled by an Arduino ... they are small, reliable and move a relatively long distance ... but they are slow
+2. http://george.ph.utexas.edu/~meyrath/informal/shutter.pdf
+3. ftp://ftp.artov.rm.cnr.it/incoming/ifa.rm.cnr.it/Maurizio.Viterbini/Public/chopper/RevSciInstrum_75_3077.pdf
+4. http://www.instructables.com/id/DIY-Laser-Shutter/all/?lang=zh
+5. This paper gives a good overview: http://scitation.aip.org/content/aip/journal/rsi/82/4/10.1063/1.3574224
+
+Best,
+JAN
+
+
+
+Dipl.-Phys. Jan Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski)
+Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: j.krieger at dkfz.de
+www: http://www.dkfz.de/Macromol/
+________________________________________
+Von: openspim-bounces at openspim.org [openspim-bounces at openspim.org] im Auftrag von Fredrik Ek [fredrik.ek at med.lu.se]
+Gesendet: Freitag, 20. Dezember 2013 17:12
+An: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Lasers for SPIM
+
+Hi all,
+
+Great inputs to my questions. Thanks a lot!
+
+Have a nice Christmas holiday and a Happy New Year
+
+Best,
+
+Fredrik
+
+
+Från: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] För Michael Weber
+Skickat: den 20 december 2013 14:06
+Till: openspim at openspim.org
+Ämne: Re: [OpenSPIM] Lasers for SPIM
+
+Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to "quickly" swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>> wrote:
+
+
+Hi,
+
+we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+
+1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+
+2. Fiberconnected or open beam. Your opinions.
+
+3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+
+4. AOTF module or not?
+
+Your input is highly appreciated.
+
+Thanks!
+
+
+Fredrik Ek,
+Researcher, Lund University Sweden
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+
+
+
+From egatzogi at princeton.edu  Mon Dec 30 13:05:40 2013
+From: egatzogi at princeton.edu (Evangelos Gatzogiannis)
+Date: Mon, 30 Dec 2013 14:05:40 -0500
+Subject: [OpenSPIM] Excellent Work
+Message-ID: <52C1C404.1050404@princeton.edu>
+
+
+Thank you for this excellent resource.
+As a matter of convenience, do you have .pdfs of the design for a 
+chamber with dual light-sheet illumination and a detection objective as 
+I don't have a good drawing software package yet.
+
+Thanks for your support.
+
+Best,
+Evangelos
+
+
+

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SCAPE and SPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE%20and%20SPIM&In-Reply-To=%3C0d2afa3c93b0c39744d8af536aa8298b%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000588.html">
+   <LINK REL="Next"  HREF="000591.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SCAPE and SPIM</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE%20and%20SPIM&In-Reply-To=%3C0d2afa3c93b0c39744d8af536aa8298b%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] SCAPE and SPIM">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Tue Jan 20 01:50:20 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000588.html">[OpenSPIM] SCAPE and SPIM
+</A></li>
+        <LI>Next message: <A HREF="000591.html">[OpenSPIM] OpenSPIM Digest, Vol 21, Issue 9
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#589">[ date ]</a>
+              <a href="thread.html#589">[ thread ]</a>
+              <a href="subject.html#589">[ subject ]</a>
+              <a href="author.html#589">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Balki,
+
+On 2015-01-20 05:57, Balki K wrote:
+
+&gt;<i> I am a new entrant into SPIM as well this forum.
+</I>
+Welcome! ;-)
+
+&gt;<i> I have been asked to explore building a mSPIM system for our institute. 
+</I>&gt;<i> But
+</I>&gt;<i> yesterday there was an update on a new type of system called SCAPE.
+</I>&gt;<i> 
+</I>&gt;<i> Please have a look at the online version of the publication in Nature
+</I>&gt;<i> Photonics from Hillman's group in Columbia University, NY.
+</I>
+We are all busy, so it is a good practice to include a link if you 
+already have one handy. I looked it up and I *think* you refer to this 
+one?
+
+<A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/full/nphoton.2014.323.html">http://www.nature.com/nphoton/journal/vaop/ncurrent/full/nphoton.2014.323.html</A>
+
+Unfortunately, I am not at a computer which can access the full text 
+(and even more unfortunate: the authors did not upload preprints to 
+arxiv nor bioRxiv) and you will understand that $32 is a bit much just 
+to be able to analyze the technique for you ;-)
+
+&gt;<i> I have a clear understanding of SPIM system. But SCAPE is new to me. Is
+</I>&gt;<i> there someone who is familiar with the two different systems that can
+</I>&gt;<i> explain the pros &amp; cons o SCAPE system?
+</I>
+Please keep in mind that I bring the software engineering expertise to 
+the OpenSPIM project in our lab, not the optics expertise (you probably 
+have much more knowledge of optics, given that you are tasked to build a 
+microscope). And please keep in mind that I form the following 
+understanding only from reading the abstract of the article, supported 
+only by the figure at 
+<A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/nphoton.2014.323_F1.html.">http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/nphoton.2014.323_F1.html.</A>
+
+With those caveats in mind, my interpretation is that their microscope 
+uses a scanning mirror (or cantilever) to move the light sheet through 
+the specimen, and that the light sheet is not perpendicular to the 
+acquisition axis but at an oblique angle.
+
+The OpenSPIM setup we published uses a stage to move the specimen 
+instead of the light sheet (which means that the optical sections are 
+parallel, unlike the sections obtained by rotating the light sheet with 
+a cantilever &#8211; even if they are *almost* parallel in practice). Further, 
+in the OpenSPIM setup, the images have uniform pixel spacings because 
+the light sheet is perpendicular to the acquisition axis, while the 
+pixel spacings in images acquired by the SCAPE microscope differ not 
+only depending on the current angle of the light sheet but also on the 
+exact coordinate on the image plane.
+
+The major difference, therefore, appears that the SCAPE microscope can 
+be much faster (because it moves the light sheet much faster), at the 
+expense of requiring a sophisticated reconstruction algorithm because of 
+the non-uniform pixel spacings (read: point spread functions).
+
+It would be really cool if you could adapt the OpenSPIM setup to support 
+SCAPE microscopy; You should make sure that you have access to a gifted 
+mathematician with intermediate programming skills to implement the 
+image reconstruction (read: the all-too-common half-hearted Matlab 
+snippet won't do at all).
+
+Looking forward to your progress!
+Johannes
+
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000588.html">[OpenSPIM] SCAPE and SPIM
+</A></li>
+	<LI>Next message: <A HREF="000591.html">[OpenSPIM] OpenSPIM Digest, Vol 21, Issue 9
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#589">[ date ]</a>
+              <a href="thread.html#589">[ thread ]</a>
+              <a href="subject.html#589">[ subject ]</a>
+              <a href="author.html#589">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

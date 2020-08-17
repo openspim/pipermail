@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM in 64bit system?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20in%2064bit%20system%3F&In-Reply-To=%3C7490acf3314e0.53bcf313%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001458.html">
+   <LINK REL="Next"  HREF="001462.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM in 64bit system?</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20in%2064bit%20system%3F&In-Reply-To=%3C7490acf3314e0.53bcf313%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM in 64bit system?">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Jul  9 07:45:23 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001458.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+        <LI>Next message: <A HREF="001462.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1460">[ date ]</a>
+              <a href="thread.html#1460">[ thread ]</a>
+              <a href="subject.html#1460">[ subject ]</a>
+              <a href="author.html#1460">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Kieran and Ke,
+
+I just tested a fresh, completely up-to-date installation of OpenSPIM (*only* OpenSPIM-20140207.zip) on a 64-bit computer. On my machine, the software had the error Ke refers to: &quot;Failed to load the MMCoreJ_wrap native library.&quot; The problem seems to happen when OpenSPIM uses a 64-bit JRE to load a 32-bit DLL. Please make sure you install a 32-bit JRE from <A HREF="http://www.java.com">http://www.java.com</A> .
+
+
+If you already have a 32-bit JRE installed on your computer, either of these additional steps should help:
+
+
+This solution may change how other Java applications run:
+- Click Start -&gt; Right click &quot;My Computer&quot; -&gt; Properties.
+- On the left, click &quot;Advanced System Settings&quot;.
+- Click &quot;Environment Variables...&quot;.
+- Under System Variables, click &quot;New...&quot;
+- In Variable name, enter &quot;JAVA_HOME&quot;. In Variable value, put the full path to the 32-bit JRE (for example, &quot;C:\Program Files (x86)\Java\jre7&quot;).
+
+
+This solution may use some extra hard-drive space, but will only affect OpenSPIM:
+- Download and Extract OpenSPIM-20140207.zip. In OpenSPIM.app, make a new folder called &quot;java&quot;.
+- Copy all files from the Java JRE directory (i.e. &quot;C:\Program Files (x86)\Java\jre7&quot;) into this new folder.
+
+
+Now OpenSPIM will use the 32-bit JRE to run, which should resolve the problem.
+
+
+Please let me know if this helps!
+Luke
+
+
+On 07/08/14, Kieran Short  wrote:
+&gt;<i> 
+</I>&gt;<i> This is not what I did. Just use the openspim.org(<A HREF="http://openspim.org">http://openspim.org</A>) distribution. It comes with *everything pre installed*. Dont do anything else, you shouldn&#39;t need to download the fiji installer. Just open the OpenSpim distribution in compatibility mode. Micromanager will be in the plugins waiting for you. 
+</I>&gt;<i> 
+</I>&gt;<i> Fwiw I haven&#39;t updated either. But if you download from the openspim.org(<A HREF="http://openspim.org">http://openspim.org</A>) website it should be relatively fresh and up to date. 
+</I>&gt;<i> 
+</I>&gt;<i> Cheers Kieran
+</I>&gt;<i> On 09/07/2014 8:04 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; For base installation, you mean install the OpenSPIM/Fiji package here:<A HREF="http://openspim.org/Downloads">http://openspim.org/Downloads</A> again? 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I followed the troubleshooting instructions in the compatibility tab and the result is &quot;its an incompatible application&quot;. 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I did the following steps to open the uManager studio: 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 1. Download the Fiji package of the continuous release version for Windows 7(64bit) from : <A HREF="http://fiji.sc/Fiji">http://fiji.sc/Fiji</A>
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 2. Download the OpenSPIM package (OpenSPIM-20140207.zip) from :<A HREF="http://openspim.org/Downloads">http://openspim.org/Downloads</A>
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 3. Launch Fiji: in the Fiji.app/folder, open ImageJ-win64.exe 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 4. Update Fiji (and OpenSPIM and uManager): Help-&gt;Update Fiji 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 5. Run Micromanager Studio: In the OpenSPIM.app folder, open ImageJ-win32.exe, then plugins-&gt;Micro-manager-&gt;Micro-manager studio (Before this step, I have followed your steps and set the compatibility mode of the ImageJ-win32.exe as Windows XP (Service Pack 3)) 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; After Step 5, an error shows as follows: 
+</I>&gt;<i> &gt; Error:Failed to load the MMCoreJ_wrap native library mmcorej.MMCoreJJNI.swig_module_init()V
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; To solve this error, I copied the file MMCoreJ_wrap.dll in the mm folder of the OpenSPIM.app folder into the same directory of the ImageJ-win32.exe. Then when I reloaded the uManager studio from the ImageJ (32bit), the error was as follows: 
+</I>&gt;<i> &gt; Error:Failed to load the MMcoreJ_wrap native library 
+</I>&gt;<i> &gt; C:\Users\Kuolab\Downloads\SPIM\OpenSPIM-20140207\OpenSPIM.app\MMCoreJ_wrap.dll: Can&#39;t load IA 32-bit. dll on a AMD 64-bit platform. 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I tried to open the uManager studio from ImageJ-win32.exe and ImageJ-win64.exe, while the second error above happened all the time in the two cases. 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; The camera driver has been installed correctly before based on the test image results. 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Is there any step I misconducted? (Maybe copying the MMCoreJ_warp.dll into the same directory of the ImageJ-win32.exe is not correct?) 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Thanks,
+</I>&gt;<i> &gt; Ke
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Ke LiResearch Assistant 
+</I>&gt;<i> &gt; Biomedical Engineering
+</I>&gt;<i> &gt; Johns Hopkins University
+</I>&gt;<i> &gt; Phone: 410-934-9802(tel:410-934-9802)
+</I>&gt;<i> &gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>(javascript:main.compose()
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On Tue, Jul 8, 2014 at 5:16 PM, Kieran Short &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>(javascript:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; This is strange. I&#39;m not sure what OpenSPIM fiji build we are running but it works here.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Have you tried going back to a base installation? 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; It sounds odd that uManager can even detect your pc as a &quot;amd64&quot; system as compatibility mode should mask that as 32bit.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; What says &quot;its an incompatible application&quot;?
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Of course, mm *should* be able to load a 32bit dll on 64bit architecture. I don&#39;t understand why that should be a problem for mm in the first place. The whole x86 instruction set is encapsulated within the x64 set. To Johannes/Mark is this directly related to the available jre?
+</I>&gt;<i> &gt; &gt; On 09/07/2014 5:18 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>(javascript:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Hi Kieran,
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; I followed your suggestion. While the problem still existed. When I tried to launch the uManager studio from the ImageJ(ImageJ-win32.exe) in the OpenSPIM.app folder, an error: Failed to load the MMCoreJ_wrap native library (Can&#39;t load IA 32-bit.dll on a AMD 64-bit platform) showed every time. I did the troubleshooting and the result showed that it&#39;s a incompatible application. 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Is there any other way to solve this problem? 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; Ke 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Ke LiResearch Assistant 
+</I>&gt;<i> &gt; &gt; &gt; Biomedical Engineering
+</I>&gt;<i> &gt; &gt; &gt; Johns Hopkins University
+</I>&gt;<i> &gt; &gt; &gt; Phone: 410-934-9802(tel:410-934-9802)
+</I>&gt;<i> &gt; &gt; &gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>(javascript:main.compose()
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; On Mon, Jul 7, 2014 at 9:03 PM, Ke Li &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>(javascript:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Hi Kieran,
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Thanks so much for your solution. I&#39;ll try it tomorrow.
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Best,
+</I>&gt;<i> &gt; &gt; &gt; &gt; Ke
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Kieran Short &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>(javascript:main.compose()&gt;于2014年7月7日星期一写道： 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Run it in compatibility mode. 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; To do this, do the following. 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Right click imagej/fiji.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Select properties.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Go to the Compatibility tab.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Check the &quot;run this program in compatibility mode for:&quot; box.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Select Windows XP (Service Pack 3).
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Click Apply.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Click OK.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Then try and run it.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; When I can work out how to include plugins during compilation I will try to compile.a win64 version. At such q time i&#39;d happily provide binaries. Im only a part time python progammer though and therefore have little experience with debugging compilation issues. Since Compatibility Mode &#39;just works&#39; for us, it isn&#39;t a high priority for me. 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Cheers Kieran
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; On 08/07/2014 10:32 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Hi Mark &amp; Luke,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; I&#39;m writing to ask whether there is a solution for running the openSPIM software in the 64bit system? (The uManager studio can&#39;t be loaded normally in my 64 bit system) Can I get access to the source code for modification? 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Ke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Ke LiResearch Assistant 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Biomedical Engineering
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Johns Hopkins University
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Phone: 410-934-9802(tel:410-934-9802)
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; -- 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Ke LiResearch Assistant 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Biomedical Engineering
+</I>&gt;<i> &gt; &gt; &gt; &gt; Johns Hopkins University
+</I>&gt;<i> &gt; &gt; &gt; &gt; Phone: 410-934-9802(tel:410-934-9802)
+</I>&gt;<i> &gt; &gt; &gt; &gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>(javascript:main.compose()
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001458.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+	<LI>Next message: <A HREF="001462.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1460">[ date ]</a>
+              <a href="thread.html#1460">[ thread ]</a>
+              <a href="subject.html#1460">[ subject ]</a>
+              <a href="author.html#1460">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

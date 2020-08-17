@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Missing PageNumber in TIFFs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Missing%20PageNumber%20in%20TIFFs&In-Reply-To=%3CCADN69ynypbOFkM46ogatAe4a1j%2BDOQzRUnaMwExpO8_-opetKw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001959.html">
+   <LINK REL="Next"  HREF="001962.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Missing PageNumber in TIFFs</H1>
+    <B>Curtis Rueden</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Missing%20PageNumber%20in%20TIFFs&In-Reply-To=%3CCADN69ynypbOFkM46ogatAe4a1j%2BDOQzRUnaMwExpO8_-opetKw%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Missing PageNumber in TIFFs">ctrueden at wisc.edu
+       </A><BR>
+    <I>Wed Sep  7 10:43:33 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="001959.html">[OpenSPIM] Missing PageNumber in TIFFs
+</A></li>
+        <LI>Next message (by thread): <A HREF="001962.html">[OpenSPIM] improving the wiki
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1961">[ date ]</a>
+              <a href="thread.html#1961">[ thread ]</a>
+              <a href="subject.html#1961">[ subject ]</a>
+              <a href="author.html#1961">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Bill,
+
+PageNumber is not a required field for TIFFs. It is only intended for use
+for documents produced by scanners. If you have software complaining about
+this field being missing, then it is likely a bug in that software.
+
+It would be helpful if you could provide a specific, minimal example,
+including steps to reproduce, as well as a sample non-working file. See:
+<A HREF="http://imagej.net/Bug_reporting_best_practices">http://imagej.net/Bug_reporting_best_practices</A>
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - <A HREF="http://loci.wisc.edu/software">http://loci.wisc.edu/software</A>
+ImageJ2 lead, Fiji maintainer - <A HREF="http://imagej.net/User:Rueden">http://imagej.net/User:Rueden</A>
+Did you know ImageJ has a forum? <A HREF="http://forum.imagej.net/">http://forum.imagej.net/</A>
+
+
+On Tue, Sep 6, 2016 at 11:42 PM, Bill Pascoe &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">bill.pascoe at newcastle.edu.au</A>&gt;
+wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> We are getting warning and error messages about 'pagenumber not found' in
+</I>&gt;<i> tiff files output from OpenSPIM. If we open them in MatLab or run Java
+</I>&gt;<i> apps, like Fiji plugins, we get messages like: &quot;unable to determine
+</I>&gt;<i> 'TIFFTAG_PAGENUMBER'&quot;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> It's as if this is an expected bit of metadata to be found inside the tiff
+</I>&gt;<i> file, but is missing. I couldn't see an option in MicroManager to 'include
+</I>&gt;<i> pagenumber in tiff files'. Has anyone else had this problem, or could give
+</I>&gt;<i> a clue to fix it?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> *Dr Bill Pascoe*
+</I>&gt;<i> *eResearch Consultant*
+</I>&gt;<i> *Virtual BioBank Project, HMRI*
+</I>&gt;<i> *and*
+</I>&gt;<i>
+</I>&gt;<i> * Digital Humanities Lab hri.newcastle.edu.au
+</I>&gt;<i> &lt;<A HREF="http://hri.newcastle.edu.au/">http://hri.newcastle.edu.au/</A>&gt; Centre for 21st Century Humanities
+</I>&gt;<i> &lt;<A HREF="http://www.newcastle.edu.au/research-and-innovation/centre/centre-for-21st-century-humanities/about-us">http://www.newcastle.edu.au/research-and-innovation/centre/centre-for-21st-century-humanities/about-us</A>&gt;
+</I>&gt;<i> *
+</I>&gt;<i>
+</I>&gt;<i> T: 0435 374 677
+</I>&gt;<i> E: <A HREF="http://openspim.org/mailman/listinfo/openspim">bill.pascoe at newcastle.edu.au</A>
+</I>&gt;<i>
+</I>&gt;<i> *The University of Newcastle (UON)*
+</I>&gt;<i> University Drive
+</I>&gt;<i> Callaghan NSW 2308
+</I>&gt;<i> Australia
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160907/5680a049/attachment.html">http://openspim.org/pipermail/openspim/attachments/20160907/5680a049/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="001959.html">[OpenSPIM] Missing PageNumber in TIFFs
+</A></li>
+	<LI>Next message (by thread): <A HREF="001962.html">[OpenSPIM] improving the wiki
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1961">[ date ]</a>
+              <a href="thread.html#1961">[ thread ]</a>
+              <a href="subject.html#1961">[ subject ]</a>
+              <a href="author.html#1961">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

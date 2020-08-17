@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3Calpine.DEB.1.00.1402051755400.14982%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000344.html">
+   <LINK REL="Next"  HREF="000346.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3Calpine.DEB.1.00.1402051755400.14982%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Wed Feb  5 11:02:41 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000344.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="000346.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#345">[ date ]</a>
+              <a href="thread.html#345">[ thread ]</a>
+              <a href="subject.html#345">[ subject ]</a>
+              <a href="author.html#345">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Nikul,
+
+On Wed, 5 Feb 2014, Nikul wrote:
+
+&gt;<i> The write speed to the RAID array through openspim is really bad at this
+</I>&gt;<i> point(2-3 fps). I suspect this is due to the use of the BioFormats
+</I>&gt;<i> writer.
+</I>
+And you would be correct. We identified quite a few bottlenecks in
+BioFormats (actually on the reader side, but some of them extend to the
+writer, too) and the improvements are hopefully coming with a future
+BioFormats version.
+
+In the concrete case of writing data to a RAID as fast as possible, I
+would suggest writing *raw* data, though. You can always stitch back the
+metadata. The only metadata you have to store at the same time as the
+frames you are writing out are the metadata that *do* change with the
+frame, i.e. z position and time. All the other metadata can be written out
+at a much, much slower pace, some of them actually need to be written only
+once per experiment.
+
+That should save a *ton* of time.
+
+Ciao,
+Johannes
+
+P.S.: It might make sense to experiment with a low-impact compression
+scheme such as LZO (e.g. via <A HREF="https://github.com/Karmasphere/lzo-java">https://github.com/Karmasphere/lzo-java</A>)
+because it can reduce a large chunk of the redundancies at the cost of CPU
+but at the benefit of the network or processor bus. If you find time to
+experiment with this, I would be very much interested in hearing how you
+fared!
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000344.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="000346.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#345">[ date ]</a>
+              <a href="thread.html#345">[ thread ]</a>
+              <a href="subject.html#345">[ subject ]</a>
+              <a href="author.html#345">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,348 @@
+From nantho2 at emory.edu  Fri Sep  2 11:50:43 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 2 Sep 2016 16:50:43 +0000
+Subject: [OpenSPIM] Multiview Reconstruction- optimizing settings?
+In-Reply-To: <3216EBAC-2CD8-4C45-BC93-CDB05FB34755@uni-koeln.de>
+References: <3216EBAC-2CD8-4C45-BC93-CDB05FB34755@uni-koeln.de>
+Message-ID: <CO2PR05MB252072D200DAFF98AFF8CD66ECE50@CO2PR05MB2520.namprd05.prod.outlook.com>
+
+Hi Maarten, I hope the science treats you well.
+
+When I get a registration result that works I feel the overlap in the BDV looks good, although this is a little subjective.  Can I ask what kind or errors you get in the log during the registration?  I've found that I can get it down to less than a pixel and it looks ok.*, **
+
+I find that the allowed pixel error helps (I use 1 px), and the significance is less sensitive, but I've found 10-15 appears better.  Following that the lambda value is better when higher as far as I can tell.  I started to look into the literature, but these things are not so accessible on just skimming the papers.
+
+I don't know how much the transformation model and model to regularize with affects things as I haven't played with those much.  Also, I don't know how the sigma values and thresholds of the bead detection affect the registration, if at all.
+
+Thanks
+Neil
+
+* I have a camera that is not properly sampling. I've opted to get a larger area and sacrifice resolution on the old ORCA's we're using. I have a pixel spacing of 0.64 um, which is approximately the resolution with the 20XW lens.  Can I ask if anybody knows how my resolution is affected?  I assumed that doubling the field of view in this way would leave me with a resolution ~ 1um...?
+** My calibration samples, registrations, and MVdecons are looking pretty nice, but I'm struggling with the real world samples for some reason...  I topic for another post once I've tried a few things.
+
+
+
+From: OpenSPIM [mailto:openspim-bounces at openspim.org] On Behalf Of Maarten Hilbrant
+Sent: Monday, August 22, 2016 9:26 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Multiview Reconstruction- optimizing settings?
+
+Dear all,
+
+nice to see some questions on the mailing list lately regarding Stephan Preibisch' multview plugin. After attending the EMBO workshop in Dresden in 2014,  I've been using the plugin for two years now and it is an essential part of our light sheet workflow. In a nutshell, we image insect embryos, embedded in agarose containing sub-resolution beads, using single-sided illumination with 8 or 16 angles per time point. In order to infer the biological relevance of RNAi phenotypes, we tend to look at many different specimens for few time points, rather than collecting time-lapse data for a small number of specimens. In practice, this means a lot of reconstructing and adjusting settings, although I find that, for most of our datasets, default settings work nicely for bead detection, registration and deconvolution ("Nicely" in this case meaning a significant increase in local contrast). Sometimes, however, registration is sub-optimal (and who knows, maybe it is also for the analyses that I normally quality as "nice''-). In these cases, as a first hint, inspection with the BigDataViewer reveals that the psf's of the different angles don't overlap properly.
+
+- Does this sound familiar to other users of the plugin?
+- What reconstruction parameters do you generally tinker with first?
+- for example: do you spend a lot of time on bead detection (and subsequent exclusion)?
+- Do you sometimes reject datasets for multi view reconstruction and if so, on what grounds? For example, I like to image "a lot" of agarose surrounding the embryo in order to have a large set of beads for reconstruction, but am not always very systematic about this. Is this crucial in your data acquisition?
+
+any ideas appreciated, basically to make better use of this great tool.
+
+cheers,
+Maarten
+
+******************************
+Dr. Maarten Hilbrant
+Postdoctoral Researcher
+Zoological Institute
+University of Cologne
+Cologne Biocenter
+Zülpicher Str. 47b
+50674 Cologne
+Germany
++49(0)221-4703238
+m.hilbrant at uni-koeln.de<mailto:m.hilbrant at uni-koeln.de>
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160902/125cbcb4/attachment.html>
+
+From bill.pascoe at newcastle.edu.au  Tue Sep  6 23:42:25 2016
+From: bill.pascoe at newcastle.edu.au (Bill Pascoe)
+Date: Wed, 7 Sep 2016 04:42:25 +0000
+Subject: [OpenSPIM] Missing PageNumber in TIFFs
+Message-ID: <PS1PR0401MB1580EB7513D19E92BD291404C4F80@PS1PR0401MB1580.apcprd04.prod.outlook.com>
+
+Hi,
+
+
+We are getting warning and error messages about 'pagenumber not found' in tiff files output from OpenSPIM. If we open them in MatLab or run Java apps, like Fiji plugins, we get messages like: "unable to determine 'TIFFTAG_PAGENUMBER'"
+
+
+It's as if this is an expected bit of metadata to be found inside the tiff file, but is missing. I couldn't see an option in MicroManager to 'include pagenumber in tiff files'. Has anyone else had this problem, or could give a clue to fix it?
+
+
+Kind regards,
+
+Dr Bill Pascoe
+eResearch Consultant
+Virtual BioBank Project, HMRI
+and
+Digital Humanities Lab
+hri.newcastle.edu.au<http://hri.newcastle.edu.au/>
+Centre for 21st Century Humanities<http://www.newcastle.edu.au/research-and-innovation/centre/centre-for-21st-century-humanities/about-us>
+
+T: 0435 374 677
+E: bill.pascoe at newcastle.edu.au
+
+The University of Newcastle (UON)
+University Drive
+Callaghan NSW 2308
+Australia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160907/42e1aff0/attachment.html>
+
+From m.hilbrant at uni-koeln.de  Wed Sep  7 05:27:13 2016
+From: m.hilbrant at uni-koeln.de (Maarten Hilbrant)
+Date: Wed, 7 Sep 2016 12:27:13 +0200
+Subject: [OpenSPIM] Multiview Reconstruction- optimizing settings?
+In-Reply-To: <CO2PR05MB252072D200DAFF98AFF8CD66ECE50@CO2PR05MB2520.namprd05.prod.outlook.com>
+References: <3216EBAC-2CD8-4C45-BC93-CDB05FB34755@uni-koeln.de>
+ <CO2PR05MB252072D200DAFF98AFF8CD66ECE50@CO2PR05MB2520.namprd05.prod.outlook.com>
+Message-ID: <EEADBFC3-ABB3-4D5C-84A5-7632742F8E7A@uni-koeln.de>
+
+Hi Neil, thanks for your thoughts!
+
+I thought I’d give you some answers now, although I’m still working on trying to understand what’s going on with the particular dataset that gave me the incentive to write my original question.
+
+-as for judging the overlap in the BDV, I think that one can get a pretty accurate idea of the registration by zooming in on single beads. Subjective, yes, bit if a registration is clearly off that’s normally easy to tell. What I find very difficult to understand is why some angles sometimes register better than others, and why this seems to vary if you look at different parts of the registered volume.
+
+-I don’t get any errors during the registration, apart from the occasional “not enough correspondences found”. I normally solve this by slightly relaxing the allowed RANSAC error, and maybe this is part of the problem.
+
+- the literature can be hard indeed. I just found last month’s recording or Stephan’s talk at the 2016 EMBO light sheet course, where he explains some of the parameters in simple terms. Thanks, Stephan!
+https://photolab.mpi-cbg.de/external/LISH2016/23-Preibisch_Stephan.mov
+
+- With a better understanding of the parameters, I’ll continue to try and crack my current data. It is quite clear that I need to optimise the feature based registration, but I’m not there yet. I suspect that perhaps this is also your problem when you say you “struggle with real world samples”?
+
+- I don’t fully get your camera question. What’s the NA of the 20x objective you’re using?
+
+cheers,
+Maarten
+
+
+
+> On 2 Sep 2016, at 18:50, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi Maarten, I hope the science treats you well.
+>  
+> When I get a registration result that works I feel the overlap in the BDV looks good, although this is a little subjective.  Can I ask what kind or errors you get in the log during the registration?  I’ve found that I can get it down to less than a pixel and it looks ok.*, **
+>  
+> I find that the allowed pixel error helps (I use 1 px), and the significance is less sensitive, but I’ve found 10-15 appears better.  Following that the lambda value is better when higher as far as I can tell.  I started to look into the literature, but these things are not so accessible on just skimming the papers.
+>  
+> I don’t know how much the transformation model and model to regularize with affects things as I haven’t played with those much.  Also, I don’t know how the sigma values and thresholds of the bead detection affect the registration, if at all.
+>  
+> Thanks
+> Neil
+>  
+> * I have a camera that is not properly sampling. I’ve opted to get a larger area and sacrifice resolution on the old ORCA’s we’re using. I have a pixel spacing of 0.64 um, which is approximately the resolution with the 20XW lens.  Can I ask if anybody knows how my resolution is affected?  I assumed that doubling the field of view in this way would leave me with a resolution ~ 1um…?
+> ** My calibration samples, registrations, and MVdecons are looking pretty nice, but I’m struggling with the real world samples for some reason…  I topic for another post once I’ve tried a few things.
+>  
+>  
+>  
+> From: OpenSPIM [mailto:openspim-bounces at openspim.org] On Behalf Of Maarten Hilbrant
+> Sent: Monday, August 22, 2016 9:26 AM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Multiview Reconstruction- optimizing settings?
+>  
+> Dear all,
+>  
+> nice to see some questions on the mailing list lately regarding Stephan Preibisch' multview plugin. After attending the EMBO workshop in Dresden in 2014,  I've been using the plugin for two years now and it is an essential part of our light sheet workflow. In a nutshell, we image insect embryos, embedded in agarose containing sub-resolution beads, using single-sided illumination with 8 or 16 angles per time point. In order to infer the biological relevance of RNAi phenotypes, we tend to look at many different specimens for few time points, rather than collecting time-lapse data for a small number of specimens. In practice, this means a lot of reconstructing and adjusting settings, although I find that, for most of our datasets, default settings work nicely for bead detection, registration and deconvolution ("Nicely" in this case meaning a significant increase in local contrast). Sometimes, however, registration is sub-optimal (and who knows, maybe it is also for the analyses that I normally quality as "nice''-). In these cases, as a first hint, inspection with the BigDataViewer reveals that the psf's of the different angles don't overlap properly.
+>  
+> - Does this sound familiar to other users of the plugin?
+> - What reconstruction parameters do you generally tinker with first?
+> - for example: do you spend a lot of time on bead detection (and subsequent exclusion)?
+> - Do you sometimes reject datasets for multi view reconstruction and if so, on what grounds? For example, I like to image "a lot" of agarose surrounding the embryo in order to have a large set of beads for reconstruction, but am not always very systematic about this. Is this crucial in your data acquisition?
+>  
+> any ideas appreciated, basically to make better use of this great tool.
+>  
+> cheers,
+> Maarten
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160907/e162eb83/attachment-0001.html>
+
+From ctrueden at wisc.edu  Wed Sep  7 10:43:33 2016
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Wed, 7 Sep 2016 10:43:33 -0500
+Subject: [OpenSPIM] Missing PageNumber in TIFFs
+In-Reply-To: <PS1PR0401MB1580EB7513D19E92BD291404C4F80@PS1PR0401MB1580.apcprd04.prod.outlook.com>
+References: <PS1PR0401MB1580EB7513D19E92BD291404C4F80@PS1PR0401MB1580.apcprd04.prod.outlook.com>
+Message-ID: <CADN69ynypbOFkM46ogatAe4a1j+DOQzRUnaMwExpO8_-opetKw@mail.gmail.com>
+
+Hi Bill,
+
+PageNumber is not a required field for TIFFs. It is only intended for use
+for documents produced by scanners. If you have software complaining about
+this field being missing, then it is likely a bug in that software.
+
+It would be helpful if you could provide a specific, minimal example,
+including steps to reproduce, as well as a sample non-working file. See:
+http://imagej.net/Bug_reporting_best_practices
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - http://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+
+
+On Tue, Sep 6, 2016 at 11:42 PM, Bill Pascoe <bill.pascoe at newcastle.edu.au>
+wrote:
+
+> Hi,
+>
+>
+> We are getting warning and error messages about 'pagenumber not found' in
+> tiff files output from OpenSPIM. If we open them in MatLab or run Java
+> apps, like Fiji plugins, we get messages like: "unable to determine
+> 'TIFFTAG_PAGENUMBER'"
+>
+>
+> It's as if this is an expected bit of metadata to be found inside the tiff
+> file, but is missing. I couldn't see an option in MicroManager to 'include
+> pagenumber in tiff files'. Has anyone else had this problem, or could give
+> a clue to fix it?
+>
+>
+> Kind regards,
+> *Dr Bill Pascoe*
+> *eResearch Consultant*
+> *Virtual BioBank Project, HMRI*
+> *and*
+>
+> * Digital Humanities Lab hri.newcastle.edu.au
+> <http://hri.newcastle.edu.au/> Centre for 21st Century Humanities
+> <http://www.newcastle.edu.au/research-and-innovation/centre/centre-for-21st-century-humanities/about-us>
+> *
+>
+> T: 0435 374 677
+> E: bill.pascoe at newcastle.edu.au
+>
+> *The University of Newcastle (UON)*
+> University Drive
+> Callaghan NSW 2308
+> Australia
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160907/5680a049/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Thu Sep  8 04:55:00 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Thu, 08 Sep 2016 11:55:00 +0200
+Subject: [OpenSPIM] improving the wiki
+Message-ID: <op.yngttyomahhlbl@pc507-99ff.ibd>
+
+Dear OpenSPIM builders,
+
+I added a new section in Wiki:  
+http://openspim.org/Setup_Extensions_and_Modifications
+
+So far I only linked there the bright-field thing and the links for a  
+shutter that I got from Jamie Flynn and Lloyd Handyside (thanks guys! I  
+haven't made it yet but I have a student on it now). Mainly I want to add  
+a description how I converted the OpenSPIM for big, cleared-tissue samples.
+
+So, if you have anything to add that could save somebody else hours of  
+deliberating and googling (this is me when I have to do anything remotely  
+electronic), please do! During the LSFM2016 conference I saw that I'm not  
+the only one treating OpenSPIM as a starting point instead of finished  
+project, so I'm sure many of you have something to add.
+
+Regards,
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From djgrigor at ph.ed.ac.uk  Fri Sep  9 05:53:30 2016
+From: djgrigor at ph.ed.ac.uk (Donald Grigor)
+Date: Fri, 9 Sep 2016 11:53:30 +0100 (BST)
+Subject: [OpenSPIM] graphics card specs
+Message-ID: <alpine.LRH.2.20.1609091142300.21353@harryo.ph.ed.ac.uk>
+
+Hello,
+
+I'm trying to spec up a new hardware platform for a research group in UoE 
+Physics that have just invested in OpenSPIM. The sample specification I 
+provided them with seems to broadly meet their requirements. They are not 
+very sure about the significance of the graphics card though. Apart from 
+being cuda compatable what particular specifications should I be looking 
+for to select the best graphics card for OpenSPIM?
+
+Thanks in advance.
+
+Regards,
+
+
+
+Donald
+
+
+Donald Grigor
+Computing Officer
+Infrastructure Team
+School of Physics and Astronomy
+
+
+~ Help? - please mail sopa-helpdesk at ed.ac.uk in the first instance to
+record your call and guarantee a response.
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+
+From m.pawlowska at nencki.gov.pl  Fri Sep  9 07:53:42 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 09 Sep 2016 14:53:42 +0200
+Subject: [OpenSPIM] another wiki addition
+Message-ID: <op.yniwrso3ahhlbl@pc507-99ff.ibd>
+
+Together with Jamie Flynn, we wrote about our experiences with cleared  
+tissue: http://openspim.org/Imaging_cleared_tissue
+
+This is intended as a quick start page. If you can add something about  
+sample mounting, immersion liquids suitable for SPIM, etc., please do!  
+I'll be happy to learn better ways to do things ;)
+
+Regards,
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+

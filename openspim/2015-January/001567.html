@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Best practices for using a different camera?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Best%20practices%20for%20using%20a%20different%20camera%3F&In-Reply-To=%3CB44E34BA-D879-4A6A-8B77-60DECD587B99%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001566.html">
+   <LINK REL="Next"  HREF="001569.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Best practices for using a different camera?</H1>
+    <B>Ulrik Günther</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Best%20practices%20for%20using%20a%20different%20camera%3F&In-Reply-To=%3CB44E34BA-D879-4A6A-8B77-60DECD587B99%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Best practices for using a different camera?">guenther at mpi-cbg.de
+       </A><BR>
+    <I>Thu Jan 22 07:35:51 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001566.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+        <LI>Next message: <A HREF="001569.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1567">[ date ]</a>
+              <a href="thread.html#1567">[ thread ]</a>
+              <a href="subject.html#1567">[ subject ]</a>
+              <a href="author.html#1567">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>  I forgot the actual screenshot, here it is… sorry…
+
+
+
+
+—
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group &amp; Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+
+
+
+
+&gt;<i> On Jan 22, 2015, at 2:35 PM, Ulrik Günther &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Hi Johannes,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> see the attached screenshot - 64bit Java 8 Fiji with MicroManager dev channel running the OpenSPIM plugin 8-)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I have the following suggestions/ideas:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> * I fork the official plugin repo and PR my changes (I have some unpublished stuff in my repo so I can’t use this directly…). With that, the async leak would be fixed, µM’s demo hardware is usable for testing and the other Coherent laser we had at the EMBO course (I forgot the name…) works.
+</I>&gt;<i> * can we use Travis CI or something to check whether the plugin builds/works with µM and Fiji nightlies? You also had some CI infrastructure up and running for Fiji, right?
+</I>&gt;<i> * I’d also integrate support for the high precision stage Monika is using (see her other mail on the list)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> We should probably also talk at some point about refactoring the UI code…
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> cheers,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ulrik
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> —
+</I>&gt;<i> Ulrik Günther, Dipl.-Phys.
+</I>&gt;<i> PhD Student
+</I>&gt;<i> MOSAIC Group &amp; Tomancak Lab, Center of Systems Biology Dresden
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> E-Mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> On Jan 22, 2015, at 10:58 AM, Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt; wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Hi Ulrik,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> On 2015-01-22 10:44, Ulrik Günther wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> I have added a wiki page detailing the steps for installing the
+</I>&gt;&gt;&gt;<i> nightly build, also with Andor cams - find it
+</I>&gt;&gt;&gt;<i> at <A HREF="http://openspim.org/64bit_OpenSPIM">http://openspim.org/64bit_OpenSPIM</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Thank you, that page looks pretty neat.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I am wondering whether you can make it work with the &quot;Micro-Manager dev&quot; 
+</I>&gt;&gt;<i> update site (Site URL: <A HREF="http://sites.imagej.net/Micro-Manager-dev/">http://sites.imagej.net/Micro-Manager-dev/</A>)?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> If that works (and it should), we should switch the OpenSPIM update site 
+</I>&gt;&gt;<i> to serve only the OpenSPIM plugin and rely on the Micro-Manager dev 
+</I>&gt;&gt;<i> update site for the rest.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Ciao,
+</I>&gt;&gt;<i> Johannes
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150122/1442fcf7/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150122/1442fcf7/attachment-0002.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screen Shot 2015-01-22 at 14.29.20.png
+Type: image/png
+Size: 839201 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150122/1442fcf7/attachment-0002.png">http://openspim.org/pipermail/openspim/attachments/20150122/1442fcf7/attachment-0002.png</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001566.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+	<LI>Next message: <A HREF="001569.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1567">[ date ]</a>
+              <a href="thread.html#1567">[ thread ]</a>
+              <a href="subject.html#1567">[ subject ]</a>
+              <a href="author.html#1567">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

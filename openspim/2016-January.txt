@@ -1,0 +1,2241 @@
+From whitnewn at clarkson.edu  Tue Jan 12 12:03:40 2016
+From: whitnewn at clarkson.edu (Bill Whitney)
+Date: Tue, 12 Jan 2016 13:03:40 -0500
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+	packages?
+Message-ID: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D
+acquisition, the TIFF file generated differs from what I get if I image the
+Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+   - MM's Multi-D acquisition uses a micro-manager package,
+   namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which
+   implements the interface org.micromanager.api.TaggedImageStorage
+   - OpenSPIM uses packages from OME (Open Microscopy Environment),
+   including loci.formats.IFormatWriter,  loci.formats.ImageWriter,
+    loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+   - The two packages write metadata to the TIFF file differently. The main
+   difference that is impacting me right now is the metadata for the physical
+   space separation between Z slices. Both packages arguably write "CORRECT"
+   metadata to the TIFF file, but in different ways. When I read the file  in
+   later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info
+   is read correctly for the MM Multi-D file. However, when I try to read in a
+   file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1
+   cm (when typically it is 3-5 micrometers).
+   - The two packages also behave differently for LARGE files. The
+   definition of the TIFF file format limits files to no more than 4GB. When
+   MM's Multi-D code encounters a file that would be over the 4GB limit, it
+   breaks it up into multiple files, each less than 4GB. SPIMAcquisition does
+   not do anything different for files over the 4GB limit, which results in an
+   error from the OME package. The OME package does support large files via
+   switching from TIFF format to BIGTIFF format, but the calling code has to
+    specify that. I was able to customize the SPIM code to do this, but the
+   resulting BIGTIFF file proved to be unusable in ImageJ.
+
+In both of these cases, the MM Multi-D behavior matches my needs, whereas
+the SPIMAcquisition behavior is causing me problems that I have to fix, or
+workaround in some way. I have been using the SPIM because we have a SPIM
+microscope, and we need support for a stage that can rotate in Theta, as
+well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue
+involves interfaces between several groups: SPIM, Micro-manager, OME,
+ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME
+package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use
+the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to
+the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to
+move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the
+OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it
+is still listing a download dated 4/26/2015, so that must be the one we
+used.
+
+Thanks,
+Bill Whitney
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160112/9fb4d819/attachment.html>
+
+From tnf8 at pitt.edu  Tue Jan 12 12:29:34 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 12 Jan 2016 18:29:34 +0000
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+Message-ID: <D2BAB006.7AFC%tnf8@pitt.edu>
+
+Hi Bill,
+
+Is that necessary?  We use Multi-D Acquisition because our SPIM has two lasers, and in my experience the mult-stage position mode handles sample rotation well.  Maybe I am missing something in your plan.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Bill Whitney <whitnewn at clarkson.edu<mailto:whitnewn at clarkson.edu>>
+Date: Tuesday, January 12, 2016 at 1:03 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+  *   MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+  *   OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+  *   The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers).
+  *   The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ.
+
+In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used.
+
+Thanks,
+Bill Whitney
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160112/d7c33973/attachment.html>
+
+From moon at mpi-cbg.de  Wed Jan 13 05:18:55 2016
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Wed, 13 Jan 2016 12:18:55 +0100
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+	packages?
+In-Reply-To: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+Message-ID: <B511E8CE-7FF8-45EF-AEE7-745F5A70F032@mpi-cbg.de>
+
+Hi Bill,
+
+I think SPIMAcquistion was intended to be compatible with Fiji seamlessly. That is why it uses OME TIFF package.
+Recently, we have updated SPIMAcquisition before Christmas in order to support HDF5 export and fix Anti-Drift.
+The update contains the fix for ?over 4GB tiffs? too.
+Please, update and give it a try.
+
+For the z-space, you can specify z-space and click ?stack at this Z plus:?.
+Each stack contains the z-space based on what you enter.
+The pixel calibration is also crucial for having the correct Metadata which will be read by image readers in Fiji.
+
+
+
+
+Thank you for your comments.
+Please, let us know if you have any feature request and/or feedback.
+
+Cheers,
+HongKee
+
+
+> On Jan 12, 2016, at 7:03 PM, Bill Whitney <whitnewn at clarkson.edu> wrote:
+> 
+> I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+> 
+> Here is what I have discovered so far:
+> MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+> OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+> The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers). 
+> The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ. 
+> In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z. 
+> 
+> I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+> 
+> I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+> Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+> 
+> I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+> I also appreciate any other suggestions people have about better ways to move forward.
+> 
+> I am using the following versions at the moment:
+>  - Micro-Manager: 1.4.23 20151021
+>  - ImageJ: 1.50b
+>  - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used. 
+> 
+> Thanks,
+> Bill Whitney
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM.png
+Type: image/png
+Size: 25136 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0001.png>
+
+From nantho2 at emory.edu  Wed Jan 13 15:04:35 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 13 Jan 2016 21:04:35 +0000
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <D2BAB006.7AFC%tnf8@pitt.edu>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+	<D2BAB006.7AFC%tnf8@pitt.edu>
+Message-ID: <DM2PR05MB6857CBA2C1A63380A5A436AECCB0@DM2PR05MB685.namprd05.prod.outlook.com>
+
+Hi Tim,
+
+Could I ask you to elaborate on your usage of the multi-stage position in MM Multi-D?  I'm setting up a 2-color SPIM, and wondered how you take your data.
+
+In looking at the Multi-D I see that I can set different 'z' positions of the Twister stage.  I assume you just setup a few positions with different offsets?
+
+Also, I'm confused by the acquisition order...  I'm used to seeing channel then z-position then xy location and then time lapse (for example).  Is the logic reversed in the options in MM?
+
+If it's easier, and you ok with it, maybe you could send a copy of your acquisition settings for me to take a look at?
+
+Thanks in advance for your time.
+
+Neil
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Tuesday, January 12, 2016 1:30 PM
+To: Bill Whitney; openspim at openspim.org
+Subject: Re: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+Hi Bill,
+
+Is that necessary?  We use Multi-D Acquisition because our SPIM has two lasers, and in my experience the mult-stage position mode handles sample rotation well.  Maybe I am missing something in your plan.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Bill Whitney <whitnewn at clarkson.edu<mailto:whitnewn at clarkson.edu>>
+Date: Tuesday, January 12, 2016 at 1:03 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+  *   MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+  *   OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+  *   The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers).
+  *   The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ.
+In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used.
+
+Thanks,
+Bill Whitney
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/13d04f81/attachment.html>
+
+From tnf8 at pitt.edu  Wed Jan 13 15:46:30 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 13 Jan 2016 21:46:30 +0000
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <DM2PR05MB6857CBA2C1A63380A5A436AECCB0@DM2PR05MB685.namprd05.prod.outlook.com>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+	<D2BAB006.7AFC%tnf8@pitt.edu>
+	<DM2PR05MB6857CBA2C1A63380A5A436AECCB0@DM2PR05MB685.namprd05.prod.outlook.com>
+Message-ID: <D2BC2DA1.7C1B%tnf8@pitt.edu>
+
+Hi Neil,
+
+Our process is pretty simple.  Micro-Manager seems to recognize the Picard stage with no problem, including theta.  So we use the Acquire SPIM Image? plugin to move the stage around and then we click 'Mark' in the Stage Position dialog window that pops up when you activate Multiple Position (XY) in Multi-D Acquisition.  You could accomplish the same thing by moving the stage using the custom software from Picard; we just find the controls in openSPIM a little easier.  We use 'Relative Z mode' in the Z-stack dialog to capture a volume of desired depth and step size centered on each pre-set X/Y/Z/theta position.
+
+We tried Stephan Priebisch's Multi-View Reconstruction, but without much luck so far.  I have got to the point where it recognizes a few congruencies but not enough to properly align the images.  Mostly I attribute our problem to my not-quite-vertical home-made sample holder.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: "Anthony, Neil" <nantho2 at emory.edu<mailto:nantho2 at emory.edu>>
+Date: Wednesday, January 13, 2016 at 4:04 PM
+To: Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>, "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: RE: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+Hi Tim,
+
+Could I ask you to elaborate on your usage of the multi-stage position in MM Multi-D?  I?m setting up a 2-color SPIM, and wondered how you take your data.
+
+In looking at the Multi-D I see that I can set different ?z? positions of the Twister stage.  I assume you just setup a few positions with different offsets?
+
+Also, I?m confused by the acquisition order?  I?m used to seeing channel then z-position then xy location and then time lapse (for example).  Is the logic reversed in the options in MM?
+
+If it?s easier, and you ok with it, maybe you could send a copy of your acquisition settings for me to take a look at?
+
+Thanks in advance for your time.
+
+Neil
+
+From: openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Tuesday, January 12, 2016 1:30 PM
+To: Bill Whitney; openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+Hi Bill,
+
+Is that necessary?  We use Multi-D Acquisition because our SPIM has two lasers, and in my experience the mult-stage position mode handles sample rotation well.  Maybe I am missing something in your plan.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Bill Whitney <whitnewn at clarkson.edu<mailto:whitnewn at clarkson.edu>>
+Date: Tuesday, January 12, 2016 at 1:03 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+  *   MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+  *   OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+  *   The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers).
+  *   The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ.
+In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used.
+
+Thanks,
+Bill Whitney
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/7e2b8ed5/attachment-0001.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Jan 15 07:23:20 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 15 Jan 2016 14:23:20 +0100
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <B511E8CE-7FF8-45EF-AEE7-745F5A70F032@mpi-cbg.de>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+	<B511E8CE-7FF8-45EF-AEE7-745F5A70F032@mpi-cbg.de>
+Message-ID: <op.ya97g6ddahhlbl@pc507-99ff.ibd>
+
+Indeed it looks like the updated OpenSPIM writes files bigger than 4GB,  
+the metadata also looks correct for me.
+
+Regards,
+Monika
+
+W dniu .01.2016 o 12:18 HongKee Moon <moon at mpi-cbg.de> pisze:
+
+> Hi Bill,
+>
+> I think SPIMAcquistion was intended to be compatible with Fiji  
+> seamlessly. That is why it uses OME TIFF package.
+> Recently, we have updated SPIMAcquisition before Christmas in order to  
+> support HDF5 export and fix Anti-Drift.
+> The update contains the fix for ?over 4GB tiffs? too.
+> Please, update and give it a try.
+>
+> For the z-space, you can specify z-space and click ?stack at this Z  
+> plus:?.
+> Each stack contains the z-space based on what you enter.
+> The pixel calibration is also crucial for having the correct Metadata  
+> which will be read by image readers in Fiji.
+>
+>
+>
+>
+> Thank you for your comments.
+> Please, let us know if you have any feature request and/or feedback.
+>
+> Cheers,
+> HongKee
+>
+>
+>> On Jan 12, 2016, at 7:03 PM, Bill Whitney <whitnewn at clarkson.edu> wrote:
+>>
+>> I have discovered that if I image a Z-stack using Micro-Manager's  
+>> multi-D acquisition, the TIFF file generated differs from what I get if  
+>> >>I image the Z-stack using SPIMAcquisition.
+>>
+>> Here is what I have discovered so far:
+>> MM's Multi-D acquisition uses a micro-manager package, >>namely  
+>> org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which  
+>> implements the >>interface org.micromanager.api.TaggedImageStorage
+>> OpenSPIM uses packages from OME (Open Microscopy Environment),  
+>> including loci.formats.IFormatWriter, >> loci.formats.ImageWriter,   
+>> loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+>> The two packages write metadata to the TIFF file differently. The main  
+>> difference that is impacting me right now is the metadata >>for the  
+>> physical space separation between Z slices. Both packages arguably  
+>> write "CORRECT" metadata to the TIFF file, but in >>different ways.  
+>> When I read the file  in later using ImageJ, or the ImageJ plugin  
+>> BigDataViewer, the z-spacing info is read >>correctly for the MM  
+>> Multi-D file. However, when I try to read in a file created using  
+>> SPIMAcquisition, ImageJ always thinks >>the z-spacing is 1 cm (when  
+>> typically it is 3-5 micrometers).The two packages also behave  
+>> differently for LARGE files. The definition of the TIFF file format  
+>> limits files to no more than >>4GB. When MM's Multi-D code encounters a  
+>> file that would be over the 4GB limit, it breaks it up into multiple  
+>> files, each less >>than 4GB. SPIMAcquisition does not do anything  
+>> different for files over the 4GB limit, which results in an error from  
+>> the OME >>package. The OME package does support large files via  
+>> switching from TIFF format to BIGTIFF format, but the calling code has  
+>> >>to  specify that. I was able to customize the SPIM code to do this,  
+>> but the resulting BIGTIFF file proved to be unusable in >>ImageJ.In  
+>> both of these cases, the MM Multi-D behavior matches my needs, whereas  
+>> the SPIMAcquisition behavior is causing me problems >>that I have to  
+>> fix, or workaround in some way. I have been using the SPIM because we  
+>> have a SPIM microscope, and we need support >>for a stage that can  
+>> rotate in Theta, as well as move in X, Y, and Z.
+>> I am posting this first to the SPIM group, although I know this issue  
+>> involves interfaces between several groups: SPIM, Micro->>manager, OME,  
+>> ImageJ, etc.
+>>
+>> I would like to ask the SPIM people if there was a reason for using the  
+>> OME package for writing TIFF files rather than the MM >>package?
+>> Because -- I am thinking of customizing my version of the SPIM code to  
+>> use the MM package instead.
+>>
+>> I appreciate thoughts on the reasonableness of doing this customization  
+>> to the TIFF writing code in SPIM.
+>> I also appreciate any other suggestions people have about better ways  
+>> to move forward.
+>>
+>> I am using the following versions at the moment:
+>> - Micro-Manager: 1.4.23 20151021
+>> - ImageJ: 1.50b
+>> - OpenSPIM: Not sure how to determine this. We originally downloaded  
+>> the OpenSPIM/Fiji package. I just checked the OpenSPIM >>downloads  
+>> page, and it is still listing a download dated 4/26/2015, so that must  
+>> be the one we used.
+>> Thanks,
+>> Bill Whitney
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>
+>>>>>
+>> --
+> HongKee Moon
+> Software Engineer
+> Scientific Computing Facility
+>
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108
+> 01307 Dresden
+> Germany
+>
+> fon: +49 351 210 2740
+> fax: +49 351 210 1689
+> www.mpi-cbg.de
+>
+
+
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160115/01bdbecd/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: image/png
+Size: 25136 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160115/01bdbecd/attachment-0001.png>
+
+From thomas.pujol at crg.eu  Tue Jan 26 11:04:54 2016
+From: thomas.pujol at crg.eu (Thomas Pujol)
+Date: Tue, 26 Jan 2016 18:04:54 +0100
+Subject: [OpenSPIM] computer configuration
+Message-ID: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+
+Hello dear light sheet enthousiaste.
+
+An email to fish advices regarding computer configuration.
+
+I convince my boss that we need a super duper computer to process the spim
+data that we are producing and I want to know if the configuration advice
+by the open spim website is up to date(description below) or if I
+should/could aim for even bigger machine. Online, I also found the HP Z840
+that can accomodate a tremendous amount of ram, any recommandation?
+
+We have to choose between buying a work station with massive a amount ram
+or our private node on the institute cluster, does anyone has advice or
+feedback on previous expererience ?
+
+thank you and may the light sheet be with you
+
+cheers
+
+thomas pujol
+
+Processor : *Two Intel Xeon Processor E5-2630* (*Six Core, 2.30GHz
+Turbo*, 15MB, 7.2 GT/s)
+Memory : *128GB* (16x8GB) 1600MHz DDR3 ECC RDIMM
+Hard Drive : *4x2TB* 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+Graphics : *Dual 2 GB NVIDIA Quadro 4000* (2cards w/ 2DP & 1DVI-I
+each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+Network : Intel X520-T2 Dual Port *10GbE Network Interface Card*
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160126/b10a6e85/attachment.html>
+
+From fredrik.ek at med.lu.se  Wed Jan 27 07:51:41 2016
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Wed, 27 Jan 2016 13:51:41 +0000
+Subject: [OpenSPIM] survival FEP Tubes
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+
+Hi all,
+
+
+
+we have experienced some problems with survival of the larvae when mounted in the FEP tubes. They seems to suffocate after 1-2 h in the tube. Using the same agarose solution but keeping the larvae covered on a glass slide they stay alive and healthy. We are following the protocol for long time imaging from JOVE (Weber et al 2014) but has also tested 0.5% and 1% low melting agarose solutions for embedding. It would be much appreciated to get some input how to solve this issue.
+
+
+
+Thanks!
+
+
+
+Fredrik
+
+
+
+Fredrik Ek, PhD,
+
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/b0eddf43/attachment.html>
+
+From weber at mpi-cbg.de  Wed Jan 27 08:43:34 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Wed, 27 Jan 2016 15:43:34 +0100
+Subject: [OpenSPIM] survival FEP Tubes
+In-Reply-To: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+References: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+Message-ID: <03863B5A-1182-41DD-8BFF-44A52B2A5C7C@mpi-cbg.de>
+
+Hey Fredrik,
+
+thanks for watching our JoVE publication :). How old are the larvae you're trying to image? In our hands, FEP works great up to around 3 dpf. With older larvae we also see oxygen deficiency, because the tubes are gas-proof. Currently, those developmental stages are not so interesting for us, so we did not spend much time on optimizing it. We have ideas though, e.g. putting holes in the tube to allow for oxygen diffusion.
+
+Best,
+Michael
+
+
+On Jan 27, 2016, at 2:51 PM, Fredrik Ek <fredrik.ek at med.lu.se> wrote:
+
+> Hi all,
+>  
+> we have experienced some problems with survival of the larvae when mounted in the FEP tubes. They seems to suffocate after 1-2 h in the tube. Using the same agarose solution but keeping the larvae covered on a glass slide they stay alive and healthy. We are following the protocol for long time imaging from JOVE (Weber et al 2014) but has also tested 0.5% and 1% low melting agarose solutions for embedding. It would be much appreciated to get some input how to solve this issue.
+>  
+> Thanks!
+>  
+> Fredrik
+>  
+> Fredrik Ek, PhD, 
+> Researcher, Chemical Biology & Therapeutics
+> Department of Experimental Medical Science 
+> Lund University, BMC D10 
+> S-221 84 Lund, SWEDEN 
+> ------------------------ 
+> Fredrik.Ek at med.lu.se 
+> Phone: +46-727 17 22 05 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/90ee4a71/attachment.html>
+
+From weber at mpi-cbg.de  Wed Jan 27 08:50:42 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Wed, 27 Jan 2016 15:50:42 +0100
+Subject: [OpenSPIM] computer configuration
+In-Reply-To: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+References: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+Message-ID: <5FDBA09B-564E-4314-B9B1-A2B0175A7FDE@mpi-cbg.de>
+
+Hey Thomas,
+
+computer requirements depend a lot on the amount of data you record and process. I would say that having a powerful workstation is important, especially if you are just starting with light sheet microscopy. You are typically dealing with a lot of data that has to be moved around and loaded into software. Only once you have your imaging and processing pipelines set up, it can be transferred to a cluster. You could save some money on the processor, and you also don't need the fastest graphics card (CUDA is nice, though). Aim for enough RAM for your data plus fast hard drive / SSD space for moving data around.
+
+Best,
+Michael
+
+
+On Jan 26, 2016, at 6:04 PM, Thomas Pujol <thomas.pujol at crg.eu> wrote:
+
+> Hello dear light sheet enthousiaste.
+> 
+> An email to fish advices regarding computer configuration.
+> 
+> I convince my boss that we need a super duper computer to process the spim data that we are producing and I want to know if the configuration advice by the open spim website is up to date(description below) or if I should/could aim for even bigger machine. Online, I also found the HP Z840 that can accomodate a tremendous amount of ram, any recommandation?
+> 
+> We have to choose between buying a work station with massive a amount ram or our private node on the institute cluster, does anyone has advice or feedback on previous expererience ?
+> 
+> thank you and may the light sheet be with you
+> 
+> cheers
+> 
+> thomas pujol
+> 
+> Processor : Two Intel Xeon Processor E5-2630 (Six Core, 2.30GHz Turbo, 15MB, 7.2 GT/s) 
+> Memory : 128GB (16x8GB) 1600MHz DDR3 ECC RDIMM
+> Hard Drive : 4x2TB 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+> HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+> HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+> Graphics : Dual 2 GB NVIDIA Quadro 4000 (2cards w/ 2DP & 1DVI-I each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+> Network : Intel X520-T2 Dual Port 10GbE Network Interface Card
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/fa638b46/attachment.html>
+
+From guenther at mpi-cbg.de  Wed Jan 27 10:28:52 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 27 Jan 2016 17:28:52 +0100
+Subject: [OpenSPIM] computer configuration
+In-Reply-To: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+References: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+Message-ID: <D991F899-4996-428A-905B-CCD5258E24A5@mpi-cbg.de>
+
+Hey Thomas,
+
+
+in addition to Michael?s remarks, I?d like to add that the graphics cards in your listing are quite dated, but anyway still expensive ? I found them for around 1000EUR online.
+
+
+If you plan on running things like Multiview Deconvolution (http://fiji.sc/Multi-View_Deconvolution) on the GPU, you?d probably be better off getting a more recent card, like a GeForce Titan X with 12 GB RAM, instead. That card also costs around 1000EUR.
+
+
+The main difference (apart from the Titan X having a much more recent architecture) between the two is the double precision calculation speed: The consumer (read non-Quadro) cards are artificially capped at 1/8th of the single precision processing speed. For most image processing tasks however, double precision is not necessary, but more RAM on the GPU helps tremendously.
+
+
+Hope that helped :)
+
+
+cheers!
+
+
+ulrik
+
+
+?
+Ulrik G?nther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab,?Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail:?guenther at mpi-cbg.de
+
+
+
+
+> On Jan 26, 2016, at 6:04 PM, Thomas Pujol <thomas.pujol at crg.eu> wrote:
+> 
+> 
+> Hello dear light sheet enthousiaste.
+> 
+> An email to fish advices regarding computer configuration.
+> 
+> 
+> I convince my boss that we need a super duper computer to process the spim data that we are producing and I want to know if the configuration advice by the open spim website is up to date(description below) or if I should/could aim for even bigger machine. Online, I also found the HP Z840 that can accomodate a tremendous amount of ram, any recommandation?
+> 
+> 
+> We have to choose between buying a work station with massive a amount ram or our private node on the institute cluster, does anyone has advice or feedback on previous expererience ?
+> 
+> 
+> thank you and may the light sheet be with you
+> 
+> 
+> 
+> cheers
+> 
+> 
+> thomas pujol
+> 
+> 
+> Processor?: Two Intel Xeon Processor E5-2630 (Six Core, 2.30GHz Turbo, 15MB, 7.2 GT/s) 
+> Memory?: 128GB (16x8GB) 1600MHz DDR3 ECC RDIMM
+> Hard Drive?: 4x2TB 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+> HDD Controller?: PERC H310 SATA/SAS Controller for Dell Precision
+> HDD Configuration?: C1 SATA 3.5inch, 1-4 Hard Drives
+> Graphics?: Dual 2 GB NVIDIA Quadro 4000 (2cards w/ 2DP & 1DVI-I each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+> Network?: Intel X520-T2 Dual Port 10GbE Network Interface Card
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/a10933be/attachment-0001.html>
+
+From ly2 at llnl.gov  Wed Jan 27 12:52:24 2016
+From: ly2 at llnl.gov (Ly, Sonny S.)
+Date: Wed, 27 Jan 2016 18:52:24 +0000
+Subject: [OpenSPIM] general questions for OpenSpim
+Message-ID: <66E5F468BF29B242B73DDBEF2A35B47850B964D6@PRDEXMBX-06.the-lab.llnl.gov>
+
+Hi OpenSpim Community,
+
+We at LLNL am interested in developing light sheet microscopy for host-pathogen interactions.
+We would like to do cellular imaging and not so much tissue or embryonic imaging.
+Would the OpenSpim setup be suitable for this?  In addition, we have some other questions:
+
+1.       What is the highest N.A. objective we can use?
+2.       Can we incorporate Bessel beam, or even lattice light sheet like Eric Betzig's group?
+3.       Are there an advantages of using stepper motors for scanning, and not galvo-mirrors?  Can galvos be used instead?
+
+Thank you.
+
+
+Sonny Ly
+Staff Scientist
+Lawrence Livermore National Laboratory
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/d5118b73/attachment.html>
+
+From thomas.pujol at crg.eu  Thu Jan 28 07:36:19 2016
+From: thomas.pujol at crg.eu (Thomas Pujol)
+Date: Thu, 28 Jan 2016 14:36:19 +0100
+Subject: [OpenSPIM] computer configuration
+In-Reply-To: <D991F899-4996-428A-905B-CCD5258E24A5@mpi-cbg.de>
+References: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+	<D991F899-4996-428A-905B-CCD5258E24A5@mpi-cbg.de>
+Message-ID: <CAN7f6o_MO+XZ8R8WDNyhY-SNPDB31q1uVZT=QY3okxykZT8a6Q@mail.gmail.com>
+
+Thanks guys,
+
+so I already have a pipeline working on the cluster but our problem is that
+the priority rules for the jobs have been establish many years ago without
+taking into account the needs of image analyst (lot of ram for a short
+time) which lead to unexpected and unpleasant delays in the processing
+(wait 2 weeks for a 2h job is a bit excessive). Two solutions make a
+smarter pipeline or buy a big computer, I would rather go for option number
+two.
+
+I the end I will push for a workstation more than a private node on the
+cluster because you can do the maintenance yourself  and even thought we
+don't use GPU calculation at the moment it would be nice to keep this door
+open.
+
+I will ask for a quote to HP for the configuration below if someone is
+interested.
+
+Small question, linux kind of have a repulsive effect on brave biologist
+exploring biophysics, is there any downside to use windows 8.1 instead of
+linux ?
+
+thanks
+
+thomas
+
+
+*OS *: Windows 8.1 Pro 64 or Ubuntu Linux 64
+
+*Processor :* Intel? Xeon? E5-2680 v3 (2.5 GHz, 30 MB cache, 12 cores,
+Intel? vPro?)
+
+*Graphic card :* NVIDIA? Quadro? K6000 (12 GB) High Performance GPU
+Computing: NVIDIA? Tesla? K40
+
+*RAM :* 128 GB DDR4-2133 ECC
+
+*Main storage :* 1 TB SATA SSHD11 (may be less)
+
+*Storage :* mucho To at 7200 rpm or more
+
+
+
+2016-01-27 17:28 GMT+01:00 Ulrik G?nther <guenther at mpi-cbg.de>:
+
+> Hey Thomas,
+>
+> in addition to Michael?s remarks, I?d like to add that the graphics cards
+> in your listing are quite dated, but anyway still expensive ? I found them
+> for around 1000EUR online.
+>
+> If you plan on running things like Multiview Deconvolution (
+> http://fiji.sc/Multi-View_Deconvolution) on the GPU, you?d probably be
+> better off getting a more recent card, like a GeForce Titan X with 12 GB
+> RAM, instead. That card also costs around 1000EUR.
+>
+> The main difference (apart from the Titan X having a much more recent
+> architecture) between the two is the double precision calculation speed:
+> The consumer (read non-Quadro) cards are artificially capped at 1/8th of
+> the single precision processing speed. For most image processing tasks
+> however, double precision is not necessary, but more RAM on the GPU helps
+> tremendously.
+>
+> Hope that helped :)
+>
+> cheers!
+>
+> ulrik
+>
+> ?
+> Ulrik G?nther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+> E-Mail: guenther at mpi-cbg.de
+>
+> On Jan 26, 2016, at 6:04 PM, Thomas Pujol <thomas.pujol at crg.eu> wrote:
+>
+> Hello dear light sheet enthousiaste.
+>
+> An email to fish advices regarding computer configuration.
+>
+> I convince my boss that we need a super duper computer to process the spim
+> data that we are producing and I want to know if the configuration advice
+> by the open spim website is up to date(description below) or if I
+> should/could aim for even bigger machine. Online, I also found the HP Z840
+> that can accomodate a tremendous amount of ram, any recommandation?
+>
+> We have to choose between buying a work station with massive a amount ram
+> or our private node on the institute cluster, does anyone has advice or
+> feedback on previous expererience ?
+>
+> thank you and may the light sheet be with you
+>
+> cheers
+>
+> thomas pujol
+>
+> Processor : *Two Intel Xeon Processor E5-2630* (*Six Core, 2.30GHz Turbo*, 15MB, 7.2 GT/s)
+> Memory : *128GB* (16x8GB) 1600MHz DDR3 ECC RDIMM
+> Hard Drive : *4x2TB* 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+> HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+> HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+> Graphics : *Dual 2 GB NVIDIA Quadro 4000* (2cards w/ 2DP & 1DVI-I each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+> Network : Intel X520-T2 Dual Port *10GbE Network Interface Card*
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160128/e8eaf387/attachment.html>
+
+From jon at asiimaging.com  Thu Jan 28 15:08:48 2016
+From: jon at asiimaging.com (Jon)
+Date: Thu, 28 Jan 2016 13:08:48 -0800
+Subject: [OpenSPIM] general questions for OpenSpim ** COMMERCIAL REPLY **
+In-Reply-To: <SVdGRldSRCU/OntWJCtSMTExMTg5MjM1Mg@Jonio>
+References: <SVdGRldSRCU/OntWJCtSMTExMTg5MjM1Mg@Jonio>
+Message-ID: <56AA8360.2070803@asiimaging.com>
+
+Hi Sonny,
+
+I suspect the key challenge will be mounting your cells in the OpenSPIM 
+geometry.  But there are light sheet microscopes built around a 
+horizontal sample mount, including diSPIM, lattice light sheet, and 
+Leica's confocal add-on.
+
+For the diSPIM (http://dispim.org/) it is possible to use a NA 1.0 or 
+1.1 objective if the usual 0.8 NA isn't enough.  It's also possible to 
+incorporate Bessel beam, etc.  I'm happy to answer further questions but 
+we should move off this mailing list.
+
+Jon
+
+------------------------------------------
+Jon Daniels
+Applied Scientific Instrumentation
+29391 West Enid Rd, Eugene, OR 97402
+Phone: (541) 461-8181 x118
+------------------------------------------
+
+
+> Hi OpenSpim Community,
+>
+> We at LLNL am interested in developing light sheet microscopy for
+> host-pathogen interactions.
+>
+> We would like to do cellular imaging and not so much tissue or embryonic
+> imaging.
+>
+> Would the OpenSpim setup be suitable for this?  In addition, we have
+> some other questions:
+>
+> 1.       What is the highest N.A. objective we can use?
+>
+> 2.       Can we incorporate Bessel beam, or even lattice light sheet
+> like Eric Betzig?s group?
+>
+> 3.       Are there an advantages of using stepper motors for scanning,
+> and not galvo-mirrors?  Can galvos be used instead?
+>
+> Thank you.
+>
+> Sonny Ly
+>
+> Staff Scientist
+>
+> Lawrence Livermore National Laboratory
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim
+>
+
+
+From fredrik.ek at med.lu.se  Fri Jan 29 05:14:30 2016
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Fri, 29 Jan 2016 11:14:30 +0000
+Subject: [OpenSPIM] survival FEP Tubes
+In-Reply-To: <03863B5A-1182-41DD-8BFF-44A52B2A5C7C@mpi-cbg.de>
+References: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+	<03863B5A-1182-41DD-8BFF-44A52B2A5C7C@mpi-cbg.de>
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE012B44A00A@UWMBX04.uw.lu.se>
+
+Hi Michael,
+
+Thanks for your reply and confirmation of the problem with hypoxia. We evaluate larvae from day 7 to 10 since we like to correlate imaging analysis with behavioral response. Please keep me updated if you do solve the issue.
+
+Best,
+
+Fredrik
+
+Fr?n: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] F?r Michael Weber
+Skickat: den 27 januari 2016 15:44
+Till: openspim at openspim.org
+?mne: Re: [OpenSPIM] survival FEP Tubes
+
+Hey Fredrik,
+
+thanks for watching our JoVE publication :). How old are the larvae you're trying to image? In our hands, FEP works great up to around 3 dpf. With older larvae we also see oxygen deficiency, because the tubes are gas-proof. Currently, those developmental stages are not so interesting for us, so we did not spend much time on optimizing it. We have ideas though, e.g. putting holes in the tube to allow for oxygen diffusion.
+
+Best,
+Michael
+
+
+On Jan 27, 2016, at 2:51 PM, Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>> wrote:
+
+
+Hi all,
+
+
+we have experienced some problems with survival of the larvae when mounted in the FEP tubes. They seems to suffocate after 1-2 h in the tube. Using the same agarose solution but keeping the larvae covered on a glass slide they stay alive and healthy. We are following the protocol for long time imaging from JOVE (Weber et al 2014) but has also tested 0.5% and 1% low melting agarose solutions for embedding. It would be much appreciated to get some input how to solve this issue.
+
+
+Thanks!
+
+
+Fredrik
+
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160129/bf210daa/attachment.html>
+
+From whitnewn at clarkson.edu  Tue Jan 12 12:03:40 2016
+From: whitnewn at clarkson.edu (Bill Whitney)
+Date: Tue, 12 Jan 2016 13:03:40 -0500
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+	packages?
+Message-ID: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D
+acquisition, the TIFF file generated differs from what I get if I image the
+Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+   - MM's Multi-D acquisition uses a micro-manager package,
+   namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which
+   implements the interface org.micromanager.api.TaggedImageStorage
+   - OpenSPIM uses packages from OME (Open Microscopy Environment),
+   including loci.formats.IFormatWriter,  loci.formats.ImageWriter,
+    loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+   - The two packages write metadata to the TIFF file differently. The main
+   difference that is impacting me right now is the metadata for the physical
+   space separation between Z slices. Both packages arguably write "CORRECT"
+   metadata to the TIFF file, but in different ways. When I read the file  in
+   later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info
+   is read correctly for the MM Multi-D file. However, when I try to read in a
+   file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1
+   cm (when typically it is 3-5 micrometers).
+   - The two packages also behave differently for LARGE files. The
+   definition of the TIFF file format limits files to no more than 4GB. When
+   MM's Multi-D code encounters a file that would be over the 4GB limit, it
+   breaks it up into multiple files, each less than 4GB. SPIMAcquisition does
+   not do anything different for files over the 4GB limit, which results in an
+   error from the OME package. The OME package does support large files via
+   switching from TIFF format to BIGTIFF format, but the calling code has to
+    specify that. I was able to customize the SPIM code to do this, but the
+   resulting BIGTIFF file proved to be unusable in ImageJ.
+
+In both of these cases, the MM Multi-D behavior matches my needs, whereas
+the SPIMAcquisition behavior is causing me problems that I have to fix, or
+workaround in some way. I have been using the SPIM because we have a SPIM
+microscope, and we need support for a stage that can rotate in Theta, as
+well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue
+involves interfaces between several groups: SPIM, Micro-manager, OME,
+ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME
+package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use
+the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to
+the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to
+move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the
+OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it
+is still listing a download dated 4/26/2015, so that must be the one we
+used.
+
+Thanks,
+Bill Whitney
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160112/9fb4d819/attachment-0002.html>
+
+From tnf8 at pitt.edu  Tue Jan 12 12:29:34 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 12 Jan 2016 18:29:34 +0000
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+Message-ID: <D2BAB006.7AFC%tnf8@pitt.edu>
+
+Hi Bill,
+
+Is that necessary?  We use Multi-D Acquisition because our SPIM has two lasers, and in my experience the mult-stage position mode handles sample rotation well.  Maybe I am missing something in your plan.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Bill Whitney <whitnewn at clarkson.edu<mailto:whitnewn at clarkson.edu>>
+Date: Tuesday, January 12, 2016 at 1:03 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+  *   MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+  *   OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+  *   The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers).
+  *   The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ.
+
+In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used.
+
+Thanks,
+Bill Whitney
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160112/d7c33973/attachment-0002.html>
+
+From moon at mpi-cbg.de  Wed Jan 13 05:18:55 2016
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Wed, 13 Jan 2016 12:18:55 +0100
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+	packages?
+In-Reply-To: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+Message-ID: <B511E8CE-7FF8-45EF-AEE7-745F5A70F032@mpi-cbg.de>
+
+Hi Bill,
+
+I think SPIMAcquistion was intended to be compatible with Fiji seamlessly. That is why it uses OME TIFF package.
+Recently, we have updated SPIMAcquisition before Christmas in order to support HDF5 export and fix Anti-Drift.
+The update contains the fix for “over 4GB tiffs” too.
+Please, update and give it a try.
+
+For the z-space, you can specify z-space and click “stack at this Z plus:”.
+Each stack contains the z-space based on what you enter.
+The pixel calibration is also crucial for having the correct Metadata which will be read by image readers in Fiji.
+
+
+
+
+Thank you for your comments.
+Please, let us know if you have any feature request and/or feedback.
+
+Cheers,
+HongKee
+
+
+> On Jan 12, 2016, at 7:03 PM, Bill Whitney <whitnewn at clarkson.edu> wrote:
+> 
+> I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+> 
+> Here is what I have discovered so far:
+> MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+> OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+> The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers). 
+> The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ. 
+> In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z. 
+> 
+> I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+> 
+> I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+> Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+> 
+> I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+> I also appreciate any other suggestions people have about better ways to move forward.
+> 
+> I am using the following versions at the moment:
+>  - Micro-Manager: 1.4.23 20151021
+>  - ImageJ: 1.50b
+>  - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used. 
+> 
+> Thanks,
+> Bill Whitney
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenSPIM.png
+Type: image/png
+Size: 25136 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/571e0cf8/attachment-0002.png>
+
+From nantho2 at emory.edu  Wed Jan 13 15:04:35 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 13 Jan 2016 21:04:35 +0000
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <D2BAB006.7AFC%tnf8@pitt.edu>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+	<D2BAB006.7AFC%tnf8@pitt.edu>
+Message-ID: <DM2PR05MB6857CBA2C1A63380A5A436AECCB0@DM2PR05MB685.namprd05.prod.outlook.com>
+
+Hi Tim,
+
+Could I ask you to elaborate on your usage of the multi-stage position in MM Multi-D?  I'm setting up a 2-color SPIM, and wondered how you take your data.
+
+In looking at the Multi-D I see that I can set different 'z' positions of the Twister stage.  I assume you just setup a few positions with different offsets?
+
+Also, I'm confused by the acquisition order...  I'm used to seeing channel then z-position then xy location and then time lapse (for example).  Is the logic reversed in the options in MM?
+
+If it's easier, and you ok with it, maybe you could send a copy of your acquisition settings for me to take a look at?
+
+Thanks in advance for your time.
+
+Neil
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Tuesday, January 12, 2016 1:30 PM
+To: Bill Whitney; openspim at openspim.org
+Subject: Re: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+Hi Bill,
+
+Is that necessary?  We use Multi-D Acquisition because our SPIM has two lasers, and in my experience the mult-stage position mode handles sample rotation well.  Maybe I am missing something in your plan.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Bill Whitney <whitnewn at clarkson.edu<mailto:whitnewn at clarkson.edu>>
+Date: Tuesday, January 12, 2016 at 1:03 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+  *   MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+  *   OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+  *   The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers).
+  *   The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ.
+In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used.
+
+Thanks,
+Bill Whitney
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/13d04f81/attachment-0002.html>
+
+From tnf8 at pitt.edu  Wed Jan 13 15:46:30 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 13 Jan 2016 21:46:30 +0000
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <DM2PR05MB6857CBA2C1A63380A5A436AECCB0@DM2PR05MB685.namprd05.prod.outlook.com>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+	<D2BAB006.7AFC%tnf8@pitt.edu>
+	<DM2PR05MB6857CBA2C1A63380A5A436AECCB0@DM2PR05MB685.namprd05.prod.outlook.com>
+Message-ID: <D2BC2DA1.7C1B%tnf8@pitt.edu>
+
+Hi Neil,
+
+Our process is pretty simple.  Micro-Manager seems to recognize the Picard stage with no problem, including theta.  So we use the Acquire SPIM Image… plugin to move the stage around and then we click 'Mark' in the Stage Position dialog window that pops up when you activate Multiple Position (XY) in Multi-D Acquisition.  You could accomplish the same thing by moving the stage using the custom software from Picard; we just find the controls in openSPIM a little easier.  We use 'Relative Z mode' in the Z-stack dialog to capture a volume of desired depth and step size centered on each pre-set X/Y/Z/theta position.
+
+We tried Stephan Priebisch's Multi-View Reconstruction, but without much luck so far.  I have got to the point where it recognizes a few congruencies but not enough to properly align the images.  Mostly I attribute our problem to my not-quite-vertical home-made sample holder.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: "Anthony, Neil" <nantho2 at emory.edu<mailto:nantho2 at emory.edu>>
+Date: Wednesday, January 13, 2016 at 4:04 PM
+To: Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>, "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: RE: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+Hi Tim,
+
+Could I ask you to elaborate on your usage of the multi-stage position in MM Multi-D?  I’m setting up a 2-color SPIM, and wondered how you take your data.
+
+In looking at the Multi-D I see that I can set different ‘z’ positions of the Twister stage.  I assume you just setup a few positions with different offsets?
+
+Also, I’m confused by the acquisition order…  I’m used to seeing channel then z-position then xy location and then time lapse (for example).  Is the logic reversed in the options in MM?
+
+If it’s easier, and you ok with it, maybe you could send a copy of your acquisition settings for me to take a look at?
+
+Thanks in advance for your time.
+
+Neil
+
+From: openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Tuesday, January 12, 2016 1:30 PM
+To: Bill Whitney; openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+Hi Bill,
+
+Is that necessary?  We use Multi-D Acquisition because our SPIM has two lasers, and in my experience the mult-stage position mode handles sample rotation well.  Maybe I am missing something in your plan.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Bill Whitney <whitnewn at clarkson.edu<mailto:whitnewn at clarkson.edu>>
+Date: Tuesday, January 12, 2016 at 1:03 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF packages?
+
+I have discovered that if I image a Z-stack using Micro-Manager's multi-D acquisition, the TIFF file generated differs from what I get if I image the Z-stack using SPIMAcquisition.
+
+Here is what I have discovered so far:
+
+  *   MM's Multi-D acquisition uses a micro-manager package, namely org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which implements the interface org.micromanager.api.TaggedImageStorage
+  *   OpenSPIM uses packages from OME (Open Microscopy Environment), including loci.formats.IFormatWriter,  loci.formats.ImageWriter,  loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+  *   The two packages write metadata to the TIFF file differently. The main difference that is impacting me right now is the metadata for the physical space separation between Z slices. Both packages arguably write "CORRECT" metadata to the TIFF file, but in different ways. When I read the file  in later using ImageJ, or the ImageJ plugin BigDataViewer, the z-spacing info is read correctly for the MM Multi-D file. However, when I try to read in a file created using SPIMAcquisition, ImageJ always thinks the z-spacing is 1 cm (when typically it is 3-5 micrometers).
+  *   The two packages also behave differently for LARGE files. The definition of the TIFF file format limits files to no more than 4GB. When MM's Multi-D code encounters a file that would be over the 4GB limit, it breaks it up into multiple files, each less than 4GB. SPIMAcquisition does not do anything different for files over the 4GB limit, which results in an error from the OME package. The OME package does support large files via switching from TIFF format to BIGTIFF format, but the calling code has to  specify that. I was able to customize the SPIM code to do this, but the resulting BIGTIFF file proved to be unusable in ImageJ.
+In both of these cases, the MM Multi-D behavior matches my needs, whereas the SPIMAcquisition behavior is causing me problems that I have to fix, or workaround in some way. I have been using the SPIM because we have a SPIM microscope, and we need support for a stage that can rotate in Theta, as well as move in X, Y, and Z.
+
+I am posting this first to the SPIM group, although I know this issue involves interfaces between several groups: SPIM, Micro-manager, OME, ImageJ, etc.
+
+I would like to ask the SPIM people if there was a reason for using the OME package for writing TIFF files rather than the MM package?
+Because -- I am thinking of customizing my version of the SPIM code to use the MM package instead.
+
+I appreciate thoughts on the reasonableness of doing this customization to the TIFF writing code in SPIM.
+I also appreciate any other suggestions people have about better ways to move forward.
+
+I am using the following versions at the moment:
+ - Micro-Manager: 1.4.23 20151021
+ - ImageJ: 1.50b
+ - OpenSPIM: Not sure how to determine this. We originally downloaded the OpenSPIM/Fiji package. I just checked the OpenSPIM downloads page, and it is still listing a download dated 4/26/2015, so that must be the one we used.
+
+Thanks,
+Bill Whitney
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160113/7e2b8ed5/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Jan 15 07:23:20 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 15 Jan 2016 14:23:20 +0100
+Subject: [OpenSPIM] Why do SPIM and Micro-Manager use different TIFF
+ packages?
+In-Reply-To: <B511E8CE-7FF8-45EF-AEE7-745F5A70F032@mpi-cbg.de>
+References: <CAD9Sw22PK6vwsS3mvPQg=aYLJV_wCZCHy-mvW1TdPN1Fkk+1cQ@mail.gmail.com>
+	<B511E8CE-7FF8-45EF-AEE7-745F5A70F032@mpi-cbg.de>
+Message-ID: <op.ya97g6ddahhlbl@pc507-99ff.ibd>
+
+Indeed it looks like the updated OpenSPIM writes files bigger than 4GB,  
+the metadata also looks correct for me.
+
+Regards,
+Monika
+
+W dniu .01.2016 o 12:18 HongKee Moon <moon at mpi-cbg.de> pisze:
+
+> Hi Bill,
+>
+> I think SPIMAcquistion was intended to be compatible with Fiji  
+> seamlessly. That is why it uses OME TIFF package.
+> Recently, we have updated SPIMAcquisition before Christmas in order to  
+> support HDF5 export and fix Anti-Drift.
+> The update contains the fix for “over 4GB tiffs” too.
+> Please, update and give it a try.
+>
+> For the z-space, you can specify z-space and click “stack at this Z  
+> plus:”.
+> Each stack contains the z-space based on what you enter.
+> The pixel calibration is also crucial for having the correct Metadata  
+> which will be read by image readers in Fiji.
+>
+>
+>
+>
+> Thank you for your comments.
+> Please, let us know if you have any feature request and/or feedback.
+>
+> Cheers,
+> HongKee
+>
+>
+>> On Jan 12, 2016, at 7:03 PM, Bill Whitney <whitnewn at clarkson.edu> wrote:
+>>
+>> I have discovered that if I image a Z-stack using Micro-Manager's  
+>> multi-D acquisition, the TIFF file generated differs from what I get if  
+>> >>I image the Z-stack using SPIMAcquisition.
+>>
+>> Here is what I have discovered so far:
+>> MM's Multi-D acquisition uses a micro-manager package, >>namely  
+>> org.micromanager.acquisition.TaggedImageStorageMultipageTiff, which  
+>> implements the >>interface org.micromanager.api.TaggedImageStorage
+>> OpenSPIM uses packages from OME (Open Microscopy Environment),  
+>> including loci.formats.IFormatWriter, >> loci.formats.ImageWriter,   
+>> loci.common.services.ServiceFactory,  loci.formats.MetadataTools,  etc.
+>> The two packages write metadata to the TIFF file differently. The main  
+>> difference that is impacting me right now is the metadata >>for the  
+>> physical space separation between Z slices. Both packages arguably  
+>> write "CORRECT" metadata to the TIFF file, but in >>different ways.  
+>> When I read the file  in later using ImageJ, or the ImageJ plugin  
+>> BigDataViewer, the z-spacing info is read >>correctly for the MM  
+>> Multi-D file. However, when I try to read in a file created using  
+>> SPIMAcquisition, ImageJ always thinks >>the z-spacing is 1 cm (when  
+>> typically it is 3-5 micrometers).The two packages also behave  
+>> differently for LARGE files. The definition of the TIFF file format  
+>> limits files to no more than >>4GB. When MM's Multi-D code encounters a  
+>> file that would be over the 4GB limit, it breaks it up into multiple  
+>> files, each less >>than 4GB. SPIMAcquisition does not do anything  
+>> different for files over the 4GB limit, which results in an error from  
+>> the OME >>package. The OME package does support large files via  
+>> switching from TIFF format to BIGTIFF format, but the calling code has  
+>> >>to  specify that. I was able to customize the SPIM code to do this,  
+>> but the resulting BIGTIFF file proved to be unusable in >>ImageJ.In  
+>> both of these cases, the MM Multi-D behavior matches my needs, whereas  
+>> the SPIMAcquisition behavior is causing me problems >>that I have to  
+>> fix, or workaround in some way. I have been using the SPIM because we  
+>> have a SPIM microscope, and we need support >>for a stage that can  
+>> rotate in Theta, as well as move in X, Y, and Z.
+>> I am posting this first to the SPIM group, although I know this issue  
+>> involves interfaces between several groups: SPIM, Micro->>manager, OME,  
+>> ImageJ, etc.
+>>
+>> I would like to ask the SPIM people if there was a reason for using the  
+>> OME package for writing TIFF files rather than the MM >>package?
+>> Because -- I am thinking of customizing my version of the SPIM code to  
+>> use the MM package instead.
+>>
+>> I appreciate thoughts on the reasonableness of doing this customization  
+>> to the TIFF writing code in SPIM.
+>> I also appreciate any other suggestions people have about better ways  
+>> to move forward.
+>>
+>> I am using the following versions at the moment:
+>> - Micro-Manager: 1.4.23 20151021
+>> - ImageJ: 1.50b
+>> - OpenSPIM: Not sure how to determine this. We originally downloaded  
+>> the OpenSPIM/Fiji package. I just checked the OpenSPIM >>downloads  
+>> page, and it is still listing a download dated 4/26/2015, so that must  
+>> be the one we used.
+>> Thanks,
+>> Bill Whitney
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>
+>>>>>
+>> --
+> HongKee Moon
+> Software Engineer
+> Scientific Computing Facility
+>
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108
+> 01307 Dresden
+> Germany
+>
+> fon: +49 351 210 2740
+> fax: +49 351 210 1689
+> www.mpi-cbg.de
+>
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160115/01bdbecd/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: image/png
+Size: 25136 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160115/01bdbecd/attachment-0002.png>
+
+From thomas.pujol at crg.eu  Tue Jan 26 11:04:54 2016
+From: thomas.pujol at crg.eu (Thomas Pujol)
+Date: Tue, 26 Jan 2016 18:04:54 +0100
+Subject: [OpenSPIM] computer configuration
+Message-ID: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+
+Hello dear light sheet enthousiaste.
+
+An email to fish advices regarding computer configuration.
+
+I convince my boss that we need a super duper computer to process the spim
+data that we are producing and I want to know if the configuration advice
+by the open spim website is up to date(description below) or if I
+should/could aim for even bigger machine. Online, I also found the HP Z840
+that can accomodate a tremendous amount of ram, any recommandation?
+
+We have to choose between buying a work station with massive a amount ram
+or our private node on the institute cluster, does anyone has advice or
+feedback on previous expererience ?
+
+thank you and may the light sheet be with you
+
+cheers
+
+thomas pujol
+
+Processor : *Two Intel Xeon Processor E5-2630* (*Six Core, 2.30GHz
+Turbo*, 15MB, 7.2 GT/s)
+Memory : *128GB* (16x8GB) 1600MHz DDR3 ECC RDIMM
+Hard Drive : *4x2TB* 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+Graphics : *Dual 2 GB NVIDIA Quadro 4000* (2cards w/ 2DP & 1DVI-I
+each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+Network : Intel X520-T2 Dual Port *10GbE Network Interface Card*
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160126/b10a6e85/attachment-0002.html>
+
+From fredrik.ek at med.lu.se  Wed Jan 27 07:51:41 2016
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Wed, 27 Jan 2016 13:51:41 +0000
+Subject: [OpenSPIM] survival FEP Tubes
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+
+Hi all,
+
+
+
+we have experienced some problems with survival of the larvae when mounted in the FEP tubes. They seems to suffocate after 1-2 h in the tube. Using the same agarose solution but keeping the larvae covered on a glass slide they stay alive and healthy. We are following the protocol for long time imaging from JOVE (Weber et al 2014) but has also tested 0.5% and 1% low melting agarose solutions for embedding. It would be much appreciated to get some input how to solve this issue.
+
+
+
+Thanks!
+
+
+
+Fredrik
+
+
+
+Fredrik Ek, PhD,
+
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/b0eddf43/attachment-0002.html>
+
+From weber at mpi-cbg.de  Wed Jan 27 08:43:34 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Wed, 27 Jan 2016 15:43:34 +0100
+Subject: [OpenSPIM] survival FEP Tubes
+In-Reply-To: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+References: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+Message-ID: <03863B5A-1182-41DD-8BFF-44A52B2A5C7C@mpi-cbg.de>
+
+Hey Fredrik,
+
+thanks for watching our JoVE publication :). How old are the larvae you're trying to image? In our hands, FEP works great up to around 3 dpf. With older larvae we also see oxygen deficiency, because the tubes are gas-proof. Currently, those developmental stages are not so interesting for us, so we did not spend much time on optimizing it. We have ideas though, e.g. putting holes in the tube to allow for oxygen diffusion.
+
+Best,
+Michael
+
+
+On Jan 27, 2016, at 2:51 PM, Fredrik Ek <fredrik.ek at med.lu.se> wrote:
+
+> Hi all,
+>  
+> we have experienced some problems with survival of the larvae when mounted in the FEP tubes. They seems to suffocate after 1-2 h in the tube. Using the same agarose solution but keeping the larvae covered on a glass slide they stay alive and healthy. We are following the protocol for long time imaging from JOVE (Weber et al 2014) but has also tested 0.5% and 1% low melting agarose solutions for embedding. It would be much appreciated to get some input how to solve this issue.
+>  
+> Thanks!
+>  
+> Fredrik
+>  
+> Fredrik Ek, PhD, 
+> Researcher, Chemical Biology & Therapeutics
+> Department of Experimental Medical Science 
+> Lund University, BMC D10 
+> S-221 84 Lund, SWEDEN 
+> ------------------------ 
+> Fredrik.Ek at med.lu.se 
+> Phone: +46-727 17 22 05 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/90ee4a71/attachment-0002.html>
+
+From weber at mpi-cbg.de  Wed Jan 27 08:50:42 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Wed, 27 Jan 2016 15:50:42 +0100
+Subject: [OpenSPIM] computer configuration
+In-Reply-To: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+References: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+Message-ID: <5FDBA09B-564E-4314-B9B1-A2B0175A7FDE@mpi-cbg.de>
+
+Hey Thomas,
+
+computer requirements depend a lot on the amount of data you record and process. I would say that having a powerful workstation is important, especially if you are just starting with light sheet microscopy. You are typically dealing with a lot of data that has to be moved around and loaded into software. Only once you have your imaging and processing pipelines set up, it can be transferred to a cluster. You could save some money on the processor, and you also don't need the fastest graphics card (CUDA is nice, though). Aim for enough RAM for your data plus fast hard drive / SSD space for moving data around.
+
+Best,
+Michael
+
+
+On Jan 26, 2016, at 6:04 PM, Thomas Pujol <thomas.pujol at crg.eu> wrote:
+
+> Hello dear light sheet enthousiaste.
+> 
+> An email to fish advices regarding computer configuration.
+> 
+> I convince my boss that we need a super duper computer to process the spim data that we are producing and I want to know if the configuration advice by the open spim website is up to date(description below) or if I should/could aim for even bigger machine. Online, I also found the HP Z840 that can accomodate a tremendous amount of ram, any recommandation?
+> 
+> We have to choose between buying a work station with massive a amount ram or our private node on the institute cluster, does anyone has advice or feedback on previous expererience ?
+> 
+> thank you and may the light sheet be with you
+> 
+> cheers
+> 
+> thomas pujol
+> 
+> Processor : Two Intel Xeon Processor E5-2630 (Six Core, 2.30GHz Turbo, 15MB, 7.2 GT/s) 
+> Memory : 128GB (16x8GB) 1600MHz DDR3 ECC RDIMM
+> Hard Drive : 4x2TB 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+> HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+> HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+> Graphics : Dual 2 GB NVIDIA Quadro 4000 (2cards w/ 2DP & 1DVI-I each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+> Network : Intel X520-T2 Dual Port 10GbE Network Interface Card
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/fa638b46/attachment-0002.html>
+
+From guenther at mpi-cbg.de  Wed Jan 27 10:28:52 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 27 Jan 2016 17:28:52 +0100
+Subject: [OpenSPIM] computer configuration
+In-Reply-To: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+References: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+Message-ID: <D991F899-4996-428A-905B-CCD5258E24A5@mpi-cbg.de>
+
+Hey Thomas,
+
+
+in addition to Michael’s remarks, I’d like to add that the graphics cards in your listing are quite dated, but anyway still expensive — I found them for around 1000EUR online.
+
+
+If you plan on running things like Multiview Deconvolution (http://fiji.sc/Multi-View_Deconvolution) on the GPU, you’d probably be better off getting a more recent card, like a GeForce Titan X with 12 GB RAM, instead. That card also costs around 1000EUR.
+
+
+The main difference (apart from the Titan X having a much more recent architecture) between the two is the double precision calculation speed: The consumer (read non-Quadro) cards are artificially capped at 1/8th of the single precision processing speed. For most image processing tasks however, double precision is not necessary, but more RAM on the GPU helps tremendously.
+
+
+Hope that helped :)
+
+
+cheers!
+
+
+ulrik
+
+
+—
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail: guenther at mpi-cbg.de
+
+
+
+
+> On Jan 26, 2016, at 6:04 PM, Thomas Pujol <thomas.pujol at crg.eu> wrote:
+> 
+> 
+> Hello dear light sheet enthousiaste.
+> 
+> An email to fish advices regarding computer configuration.
+> 
+> 
+> I convince my boss that we need a super duper computer to process the spim data that we are producing and I want to know if the configuration advice by the open spim website is up to date(description below) or if I should/could aim for even bigger machine. Online, I also found the HP Z840 that can accomodate a tremendous amount of ram, any recommandation?
+> 
+> 
+> We have to choose between buying a work station with massive a amount ram or our private node on the institute cluster, does anyone has advice or feedback on previous expererience ?
+> 
+> 
+> thank you and may the light sheet be with you
+> 
+> 
+> 
+> cheers
+> 
+> 
+> thomas pujol
+> 
+> 
+> Processor : Two Intel Xeon Processor E5-2630 (Six Core, 2.30GHz Turbo, 15MB, 7.2 GT/s) 
+> Memory : 128GB (16x8GB) 1600MHz DDR3 ECC RDIMM
+> Hard Drive : 4x2TB 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+> HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+> HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+> Graphics : Dual 2 GB NVIDIA Quadro 4000 (2cards w/ 2DP & 1DVI-I each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+> Network : Intel X520-T2 Dual Port 10GbE Network Interface Card
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/a10933be/attachment-0002.html>
+
+From ly2 at llnl.gov  Wed Jan 27 12:52:24 2016
+From: ly2 at llnl.gov (Ly, Sonny S.)
+Date: Wed, 27 Jan 2016 18:52:24 +0000
+Subject: [OpenSPIM] general questions for OpenSpim
+Message-ID: <66E5F468BF29B242B73DDBEF2A35B47850B964D6@PRDEXMBX-06.the-lab.llnl.gov>
+
+Hi OpenSpim Community,
+
+We at LLNL am interested in developing light sheet microscopy for host-pathogen interactions.
+We would like to do cellular imaging and not so much tissue or embryonic imaging.
+Would the OpenSpim setup be suitable for this?  In addition, we have some other questions:
+
+1.       What is the highest N.A. objective we can use?
+2.       Can we incorporate Bessel beam, or even lattice light sheet like Eric Betzig's group?
+3.       Are there an advantages of using stepper motors for scanning, and not galvo-mirrors?  Can galvos be used instead?
+
+Thank you.
+
+
+Sonny Ly
+Staff Scientist
+Lawrence Livermore National Laboratory
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160127/d5118b73/attachment-0002.html>
+
+From thomas.pujol at crg.eu  Thu Jan 28 07:36:19 2016
+From: thomas.pujol at crg.eu (Thomas Pujol)
+Date: Thu, 28 Jan 2016 14:36:19 +0100
+Subject: [OpenSPIM] computer configuration
+In-Reply-To: <D991F899-4996-428A-905B-CCD5258E24A5@mpi-cbg.de>
+References: <CAN7f6o-7ZHj1r9FyCyifwytU3RKfJ_tM3XU5XcHsrSEfby9j-g@mail.gmail.com>
+	<D991F899-4996-428A-905B-CCD5258E24A5@mpi-cbg.de>
+Message-ID: <CAN7f6o_MO+XZ8R8WDNyhY-SNPDB31q1uVZT=QY3okxykZT8a6Q@mail.gmail.com>
+
+Thanks guys,
+
+so I already have a pipeline working on the cluster but our problem is that
+the priority rules for the jobs have been establish many years ago without
+taking into account the needs of image analyst (lot of ram for a short
+time) which lead to unexpected and unpleasant delays in the processing
+(wait 2 weeks for a 2h job is a bit excessive). Two solutions make a
+smarter pipeline or buy a big computer, I would rather go for option number
+two.
+
+I the end I will push for a workstation more than a private node on the
+cluster because you can do the maintenance yourself  and even thought we
+don't use GPU calculation at the moment it would be nice to keep this door
+open.
+
+I will ask for a quote to HP for the configuration below if someone is
+interested.
+
+Small question, linux kind of have a repulsive effect on brave biologist
+exploring biophysics, is there any downside to use windows 8.1 instead of
+linux ?
+
+thanks
+
+thomas
+
+
+*OS *: Windows 8.1 Pro 64 or Ubuntu Linux 64
+
+*Processor :* Intel® Xeon® E5-2680 v3 (2.5 GHz, 30 MB cache, 12 cores,
+Intel® vPro™)
+
+*Graphic card :* NVIDIA® Quadro® K6000 (12 GB) High Performance GPU
+Computing: NVIDIA® Tesla® K40
+
+*RAM :* 128 GB DDR4-2133 ECC
+
+*Main storage :* 1 TB SATA SSHD11 (may be less)
+
+*Storage :* mucho To at 7200 rpm or more
+
+
+
+2016-01-27 17:28 GMT+01:00 Ulrik Günther <guenther at mpi-cbg.de>:
+
+> Hey Thomas,
+>
+> in addition to Michael’s remarks, I’d like to add that the graphics cards
+> in your listing are quite dated, but anyway still expensive — I found them
+> for around 1000EUR online.
+>
+> If you plan on running things like Multiview Deconvolution (
+> http://fiji.sc/Multi-View_Deconvolution) on the GPU, you’d probably be
+> better off getting a more recent card, like a GeForce Titan X with 12 GB
+> RAM, instead. That card also costs around 1000EUR.
+>
+> The main difference (apart from the Titan X having a much more recent
+> architecture) between the two is the double precision calculation speed:
+> The consumer (read non-Quadro) cards are artificially capped at 1/8th of
+> the single precision processing speed. For most image processing tasks
+> however, double precision is not necessary, but more RAM on the GPU helps
+> tremendously.
+>
+> Hope that helped :)
+>
+> cheers!
+>
+> ulrik
+>
+> —
+> Ulrik Günther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+> E-Mail: guenther at mpi-cbg.de
+>
+> On Jan 26, 2016, at 6:04 PM, Thomas Pujol <thomas.pujol at crg.eu> wrote:
+>
+> Hello dear light sheet enthousiaste.
+>
+> An email to fish advices regarding computer configuration.
+>
+> I convince my boss that we need a super duper computer to process the spim
+> data that we are producing and I want to know if the configuration advice
+> by the open spim website is up to date(description below) or if I
+> should/could aim for even bigger machine. Online, I also found the HP Z840
+> that can accomodate a tremendous amount of ram, any recommandation?
+>
+> We have to choose between buying a work station with massive a amount ram
+> or our private node on the institute cluster, does anyone has advice or
+> feedback on previous expererience ?
+>
+> thank you and may the light sheet be with you
+>
+> cheers
+>
+> thomas pujol
+>
+> Processor : *Two Intel Xeon Processor E5-2630* (*Six Core, 2.30GHz Turbo*, 15MB, 7.2 GT/s)
+> Memory : *128GB* (16x8GB) 1600MHz DDR3 ECC RDIMM
+> Hard Drive : *4x2TB* 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+> HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+> HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+> Graphics : *Dual 2 GB NVIDIA Quadro 4000* (2cards w/ 2DP & 1DVI-I each) (2DP-DVI & 2DVI-VGA adapter) (MRGA17H)
+> Network : Intel X520-T2 Dual Port *10GbE Network Interface Card*
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160128/e8eaf387/attachment-0002.html>
+
+From jon at asiimaging.com  Thu Jan 28 15:08:48 2016
+From: jon at asiimaging.com (Jon)
+Date: Thu, 28 Jan 2016 13:08:48 -0800
+Subject: [OpenSPIM] general questions for OpenSpim ** COMMERCIAL REPLY **
+In-Reply-To: <SVdGRldSRCU/OntWJCtSMTExMTg5MjM1Mg@Jonio>
+References: <SVdGRldSRCU/OntWJCtSMTExMTg5MjM1Mg@Jonio>
+Message-ID: <56AA8360.2070803@asiimaging.com>
+
+Hi Sonny,
+
+I suspect the key challenge will be mounting your cells in the OpenSPIM 
+geometry.  But there are light sheet microscopes built around a 
+horizontal sample mount, including diSPIM, lattice light sheet, and 
+Leica's confocal add-on.
+
+For the diSPIM (http://dispim.org/) it is possible to use a NA 1.0 or 
+1.1 objective if the usual 0.8 NA isn't enough.  It's also possible to 
+incorporate Bessel beam, etc.  I'm happy to answer further questions but 
+we should move off this mailing list.
+
+Jon
+
+------------------------------------------
+Jon Daniels
+Applied Scientific Instrumentation
+29391 West Enid Rd, Eugene, OR 97402
+Phone: (541) 461-8181 x118
+------------------------------------------
+
+
+> Hi OpenSpim Community,
+>
+> We at LLNL am interested in developing light sheet microscopy for
+> host-pathogen interactions.
+>
+> We would like to do cellular imaging and not so much tissue or embryonic
+> imaging.
+>
+> Would the OpenSpim setup be suitable for this?  In addition, we have
+> some other questions:
+>
+> 1.       What is the highest N.A. objective we can use?
+>
+> 2.       Can we incorporate Bessel beam, or even lattice light sheet
+> like Eric Betzig’s group?
+>
+> 3.       Are there an advantages of using stepper motors for scanning,
+> and not galvo-mirrors?  Can galvos be used instead?
+>
+> Thank you.
+>
+> Sonny Ly
+>
+> Staff Scientist
+>
+> Lawrence Livermore National Laboratory
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim
+>
+
+
+
+From fredrik.ek at med.lu.se  Fri Jan 29 05:14:30 2016
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Fri, 29 Jan 2016 11:14:30 +0000
+Subject: [OpenSPIM] survival FEP Tubes
+In-Reply-To: <03863B5A-1182-41DD-8BFF-44A52B2A5C7C@mpi-cbg.de>
+References: <11FEABF97C42FE47AA23C843A13D49EE012B449C8E@UWMBX04.uw.lu.se>
+	<03863B5A-1182-41DD-8BFF-44A52B2A5C7C@mpi-cbg.de>
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EE012B44A00A@UWMBX04.uw.lu.se>
+
+Hi Michael,
+
+Thanks for your reply and confirmation of the problem with hypoxia. We evaluate larvae from day 7 to 10 since we like to correlate imaging analysis with behavioral response. Please keep me updated if you do solve the issue.
+
+Best,
+
+Fredrik
+
+Från: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] För Michael Weber
+Skickat: den 27 januari 2016 15:44
+Till: openspim at openspim.org
+Ämne: Re: [OpenSPIM] survival FEP Tubes
+
+Hey Fredrik,
+
+thanks for watching our JoVE publication :). How old are the larvae you're trying to image? In our hands, FEP works great up to around 3 dpf. With older larvae we also see oxygen deficiency, because the tubes are gas-proof. Currently, those developmental stages are not so interesting for us, so we did not spend much time on optimizing it. We have ideas though, e.g. putting holes in the tube to allow for oxygen diffusion.
+
+Best,
+Michael
+
+
+On Jan 27, 2016, at 2:51 PM, Fredrik Ek <fredrik.ek at med.lu.se<mailto:fredrik.ek at med.lu.se>> wrote:
+
+
+Hi all,
+
+
+we have experienced some problems with survival of the larvae when mounted in the FEP tubes. They seems to suffocate after 1-2 h in the tube. Using the same agarose solution but keeping the larvae covered on a glass slide they stay alive and healthy. We are following the protocol for long time imaging from JOVE (Weber et al 2014) but has also tested 0.5% and 1% low melting agarose solutions for embedding. It would be much appreciated to get some input how to solve this issue.
+
+
+Thanks!
+
+
+Fredrik
+
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160129/bf210daa/attachment-0002.html>
+

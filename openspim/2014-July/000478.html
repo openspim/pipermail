@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3C7590c10c210ad.53b2b3ad%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000479.html">
+   <LINK REL="Next"  HREF="000480.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3C7590c10c210ad.53b2b3ad%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Tue Jul  1 13:12:13 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000479.html">[OpenSPIM] Citing OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="000480.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#478">[ date ]</a>
+              <a href="thread.html#478">[ thread ]</a>
+              <a href="subject.html#478">[ subject ]</a>
+              <a href="author.html#478">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>There certainly seems to be something odd about the camera adapter right now. Specifically,
+
+2014-07-01T18:07:18.997408 tid6872 [IFO,dev:Camera-1] PVCAM API error: &quot;C0_CAM_NAME_NOT_FOUND This is not a valid name for opening the camera&quot;, code: 14
+
+Do you get this error opening only the live view, without starting the SPIM Acquisition plugin? The core log seems to suggest that the camera works fine until the plugin is launched. Most likely, when the plugin defines an automatic pixel size, some sort of reset occurs in the core, but the camera adapter doesn't tolerate it well (I feel like I've encountered this issue before with a different camera adapter... I'll have to look into this; it might be a report for the MM team to look at.). As a short-term workaround, you can define a pixel size before launching the software, using Tools -&gt; Pixel Size Calibration. (If a pixel size is predefined, the SPIM plugin won't try to add one.) After defining a pixel size, save the configuration (Tools -&gt; Save Configuration Settings As...) so you won't need to re-make the pixel size definition each time.
+
+
+Please try that workaround and let me know if you still have issues; I'll add the immediate fixes on the update sites and see what I can do about tracking down this bug.
+
+
+Thanks!
+Luke
+
+On 07/01/14, Aurelia Honerkamp-Smith  wrote:
+&gt;<i> Hi again, 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Yep, the COM3 messages stop when I get rid of the extra line in the configuration file. Oh! This is exciting! After I start up and load the configuration file without the extra COM3 line, I can start the plugin, and move the stage! However, when I try to start live view, I then get a Micro-Manager error: &quot;Error in device Camera-1: The device cannot set this property at the moment.&quot; Trying to use Snap gives &quot;Error Acquiring: null.&quot; 
+</I>&gt;<i> 
+</I>&gt;<i> Well, it was exciting for me anyhow. Another corelog is attached. 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Aurelia
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Tue, Jul 1, 2014 at 5:32 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>')&quot; target=&quot;1&quot;&gt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; Hi Aurelia,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; Thanks! I&#39;ve replaced rsyntaxtextarea.jar. I can now configure all 3 components, although I still get the COM3 error messages. The shutter and camera then seem to function, but I can&#39;t start the SPIM plugin to see if the stage is working. I don&#39;t get an error message that says my setup is invalid, the plugin just fails to start. I attach the configuration file that I have just made, and a corelog showing an attempt to start the plugin.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; The COM3 error message is happening because of the duplicate line in the configuration file -- though, if the configurator is generating this file each time, there is probably an underlying issue that requires investigation. (Unfortunately, it isn&#39;t obvious to me why this might happen; finding this out could take time.) A quick fix would be to edit the config file in a text editor and remove line 7 or 8 (&quot;Device,COM3,SerialManager,COM3&quot;).
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; The SPIM plugin won&#39;t start because the stage configuration is confusing it. Two possibilities: Either the COM3 error is leaving the stages only partially initialized, so the stage position is invalid (out of the stage&#39;s range, according to its properties), or a stage (usually the twister) was left in a position outside its accepted range. Given the PVCAM exception earlier in the CoreLog, I would assume the former -- but to be sure, before starting the system, please try using the Picard software to home the three linear stages and zero the rotational stage, leaving them all inside the usual position range.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 07/01/14, Aurelia Honerkamp-Smith&#160;wrote:
+</I>&gt;<i> &gt; &gt; My system info is:
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt; --------------- S Y S T E M ---------------
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt; OS: Windows 7 Build 7601 Service Pack 1
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt; CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt; Memory: 4k page, physical 66506940k(61696496k free), swap 133012024k(127977948k free)
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt; vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE (1.6.0_24-b07), built on Feb 2 2011 17:44:41 by &quot;java_re&quot; with MS VC++ 7.1 (VS2003)
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt;&#160;
+</I>&gt;<i> &gt; &gt; Is that the system information you need?&#160;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Yes, thank you! It doesn&#39;t reveal much about the problem, but at the very least it confirms that the system should be working...
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Just to keep track of what we&#39;ve done so far (so I know what to change in the next update):
+</I>&gt;<i> &gt; - Updated mmgr_dal_SerialManager.dll and all system DALs to the latest versions.
+</I>&gt;<i> &gt; - Replaced rsyntaxtextarea.jar with Micro-Manager&#39;s preferred version.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Nearly there, I think!
+</I>&gt;<i> &gt; Luke
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 07/01/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; Hi again,
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Thanks! I&#39;ve replaced rsyntaxtextarea.jar. I can now configure all 3 components, although I still get the COM3 error messages. The shutter and camera then seem to function, but I can&#39;t start the SPIM plugin to see if the stage is working. I don&#39;t get an error message that says my setup is invalid, the plugin just fails to start. I attach the configuration file that I have just made, and a corelog showing an attempt to start the plugin. My system info is:
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; --------------- S Y S T E M ---------------
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; OS: Windows 7 Build 7601 Service Pack 1
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Memory: 4k page, physical 66506940k(61696496k free), swap 133012024k(127977948k free)
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE (1.6.0_24-b07), built on Feb 2 2011 17:44:41 by &quot;java_re&quot; with MS VC++ 7.1 (VS2003)
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Is that the system information you need?
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; On Mon, Jun 30, 2014 at 7:37 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&amp;#39;new(java_script:main.compose(&amp;#39;new(http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&amp;#39;new(java_script:main.compose(&amp;#39;new">http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&#39;new(java_script:main.compose(&#39;new(http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&#39;new(java_script:main.compose(&#39;new</A>)&amp;#39(java_script:main.compose(&#39;new(javascript:main.compose('new', 't=<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&#39;)&quot; target=&quot;1&quot;&gt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt; wrote:
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Hi,
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; &gt; One further thought -- the Java error at the top of the log file comes from a conflict in rsyntaxtextarea.jar (some e-mails on the MM mailing list discuss this issue, and we&#39;re working on porting Fiji/IJ2 to a newer version of the jar) -- I expected that having these in conflict would only disable the Micro-Manager script editor, but some testing suggests it might be more disruptive than that. Another fix you can try without waiting on me: From vanilla MM, copy: &quot;plugins/Micro-Manager/rsyntaxtextarea.jar&quot; -&gt; (in OpenSPIM.app) &quot;jars/rsyntaxtextarea.jar&quot;; then, move, rename, or delete &quot;jars/rsyntaxtextarea-2.0.4.1.jar&quot;.
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Thanks again,
+</I>&gt;<i> &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; On 06/30/14, Luke Stuyvenberg wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; Could you attach your configuration file, and report your system specs (OS version/architecture) as well? The core log certainly seems to suggest it is attempting to load COM3 multiple times (it also seems to reset the serial port properties with each stage loaded from PicardStage), but short of that, I&#39;m still not entirely certain what&#39;s going on. If the 24 June device adapters weren&#39;t correct, they probably wouldn&#39;t load at all, so presumably you&#39;ve already copied all the right DLLs. (SerialManager and ThorlabsSC10 are self-contained, so just those files should be enough to run those devices; PVCAM has an external DLL, but your core log suggests the camera initializes without a problem.)
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Sorry, I meant to also say that I can&#39;t load individual components, I get the same error messages about COM3. The only configuration I can actually complete is the shutter on its own, but it doesn&#39;t function.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; On Mon, Jun 30, 2014 at 6:55 PM, Aurelia Honerkamp-Smith &lt;&gt; &gt; &gt; &gt; &gt; On Mon, Jun 30, 2014 at 6:01 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt;(java_script:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith&#160;wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thank you! I am still having a problem, probably because I&#39;m using a nonstandard setup. There seems to be a conflict in loading my camera (a PVCam one) and the shutter I use to block the laser (Thorlabs SC10); when I try to configure, I get a message &quot;the specified label COM3 is already in use&quot; before anything has been configured, and then several times after I load both, one that says &quot;Line8: device, COM3, serialmanager, COM3.&quot; The shutter should be on COM3 but not the camera, and I don&#39;t run into this conflict when I load both shutter and camera in the vanilla MM from 24 June. I attach a core log showing an attempt to load shutter and camera.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Do the devices work individually in OpenSPIM? i.e. if only one is loaded, do you ever get that message? It sounds like a problem with the SerialManager, a device adapter which I hadn&#39;t updated -- you might try pulling mmgr_dal_SerialManager.dll from the 24 June nightly build. I&#39;ll also be looking into this.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith&#160;wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; The Picard stage now appears in the list of available hardware, but when I try to load all three the computer bluescreens.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Load all three devices (camera, shutter, stage), or load all three stages? Does it bluescreen reliably? (I&#39;ve not seen/heard of this happening before...)
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; I&#39;ll let you know what I work out. Thanks again!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hi Luke,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thank you! I am still having a problem, probably because I&#39;m using a nonstandard setup. There seems to be a conflict in loading my camera (a PVCam one) and the shutter I use to block the laser (Thorlabs SC10); when I try to configure, I get a message &quot;the specified label COM3 is already in use&quot; before anything has been configured, and then several times after I load both, one that says &quot;Line8: device, COM3, serialmanager, COM3.&quot; The shutter should be on COM3 but not the camera, and I don&#39;t run into this conflict when I load both shutter and camera in the vanilla MM from 24 June. I attach a core log showing an attempt to load shutter and camera. The Picard stage now appears in the list of available hardware, but when I try to load all three the computer bluescreens.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thanks again,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Aurelia
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; On Mon, Jun 30, 2014 at 3:03 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&gt;(java_script:main.compose() &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt;(java_script:main.compose()&#39;)&quot; target=&quot;1&quot;&gt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt;(java_script:main.compose()&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Sorry about that; it seems a lot more had changed than I had expected. I&#39;ve updated the update site again, with a number of changes (new MMCore, new versions of the device adapters). It tested okay on my virtual machine, but if there&#39;s still a problem, please let me know. If you run into other device adapter problems (i.e. not with PicardStage), try getting updated device adapter versions from the nightly build as of 24 June or so.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Thanks!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; On 06/29/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Hello,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; I am afraid that after updating to the newest PicardStage dll, my previous configuration is unable to load the stage. I get an error message:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 8: Device,Picard Twister,PicardStage,Picard Twister
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 9: Device,Picard Z Stage,PicardStage,Picard Z Stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 10: Device,Picard XY Stage,PicardStage,Picard XY Stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 22: Property,Picard Twister,Serial Number,60
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard Twister&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 23: Property,Picard Z Stage,Serial Number,181
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard Z Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 24: Property,Picard XY Stage,Serial Number (X),182
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 25: Property,Picard XY Stage,Serial Number (Y),180
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 26: Property,Picard XY Stage,X-Max,8000
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 27: Property,Picard XY Stage,X-Min,1
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 28: Property,Picard XY Stage,Y-Max,8000
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 29: Property,Picard XY Stage,Y-Min,1
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Line 44: Property,Core,Focus,Picard Z Stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; Cannot set Core property Focus to invalid value &quot;Picard Z Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; I can still load the camera and my shutter. The Picard Stage now appears unavailable in the hardware configuration wizard. I am also using 32-bit Fiji on a 64-bit machine, but haven&#39;t had trouble loading the stage before (it appeared to work normally, with the exception of the occasional communication delay that I mentioned earlier). I attach a core log.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; On Sat, Jun 28, 2014 at 6:00 PM, &lt;&gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt;
+</I>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000479.html">[OpenSPIM] Citing OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="000480.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#478">[ date ]</a>
+              <a href="thread.html#478">[ thread ]</a>
+              <a href="subject.html#478">[ subject ]</a>
+              <a href="author.html#478">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

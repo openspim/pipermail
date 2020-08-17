@@ -1,0 +1,3087 @@
+From stuyvenberg at wisc.edu  Mon Mar 10 15:14:46 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 10 Mar 2014 15:14:46 -0500
+Subject: [OpenSPIM] Registration plugin software torture-test
+In-Reply-To: <7680bd46f432f.531e1d06@wiscmail.wisc.edu>
+References: <7750c369f2782.531e184d@wiscmail.wisc.edu>
+	<76809a59f56f6.531e188b@wiscmail.wisc.edu>
+	<76c09858f2963.531e18c7@wiscmail.wisc.edu>
+	<7750f4adf2665.531e1903@wiscmail.wisc.edu>
+	<76d097a8f6572.531e1940@wiscmail.wisc.edu>
+	<76c0fe67f6383.531e197c@wiscmail.wisc.edu>
+	<771088dbf0cb5.531e19b8@wiscmail.wisc.edu>
+	<7700f93cf075e.531e19f5@wiscmail.wisc.edu>
+	<76c0ddf2f552a.531e1a32@wiscmail.wisc.edu>
+	<77008142f3343.531e1ae6@wiscmail.wisc.edu>
+	<769099c9f1153.531e1b22@wiscmail.wisc.edu>
+	<76c0e8acf650e.531e1b5f@wiscmail.wisc.edu>
+	<7750eeb5f5409.531e1b9b@wiscmail.wisc.edu>
+	<7710ee85f2bdc.531e1bd8@wiscmail.wisc.edu>
+	<76f0da49f20df.531e1c14@wiscmail.wisc.edu>
+	<76d084a2f0afb.531e1c50@wiscmail.wisc.edu>
+	<76f0b8c1f24aa.531e1c8d@wiscmail.wisc.edu>
+	<76d0995af3198.531e1cc9@wiscmail.wisc.edu>
+	<7680bd46f432f.531e1d06@wiscmail.wisc.edu>
+Message-ID: <7520993cf4a83.531dd6e6@wiscmail.wisc.edu>
+
+Hey everyone,
+
+To try to get a feel for which parts of the reconstruction process were holding us up, I ran a registration torture test on some data acquired while I was in Dresden at the MPI.
+
+
+The data was taken on an OpenSPIM 1.0. The sample was a zebrafish embryo infected with a fungus that fluoresced. Nine views, in 20-degree increments, each consisting of a stack ranging from 300 - 450 um (at 3 um steps) were recorded. The Cube laser was set to 3 mW, and the Orca ER camera was set to 100ms exposure time.
+
+
+I ran the registration plugin in both modes (Difference of Gaussians and Difference of Mean), and with threshold values ranging from 0.004 to 0.018 in steps of 0.002. The bead radii (sigma) values passed to the plugin were 1 and 2. Each combination of these settings was run 100 times, and scored as follows: Each time the RANSAC algorithm deduced a model, denoted in the logs by "Remaining inliers after RANSAC:", the percentage of remaining inliers was included in a running average.
+
+
+The results are as follows:
+
+
+Difference-of-Mean (Integral image based):
+ Average score for threshold 0.004: 89.19%
+ Average score for threshold 0.006: 91.72%
+ Average score for threshold 0.008: 86.44%
+ Average score for threshold 0.010: 69.39%
+ Average score for threshold 0.012: 25.00%
+ Average score for threshold 0.014: 7.39%
+ Average score for threshold 0.016: 0.00%
+ Average score for threshold 0.018: 0.00%
+
+
+Difference-of-Gaussian:
+ Average score for threshold 0.004: 93.94%
+ Average score for threshold 0.006: 93.53%
+ Average score for threshold 0.008: 92.75%
+ Average score for threshold 0.010: 48.25%
+ Average score for threshold 0.012: 12.31%
+ Average score for threshold 0.014: 2.42%
+ Average score for threshold 0.016: 0.00%
+ Average score for threshold 0.018: 0.00%
+
+
+
+I have two notes to make:
+- First, any score above ~ 50% might have been able to be fused into a final image, though whether or not the reconstruction is correct would be a different matter.
+- Second, despite the nature of the RANSAC algorithm, the results were largely deterministic -- for a given threshold and mode, each view combination seemed to end up with the same number of remaining inliers.
+
+
+
+Given the results of this test, I have a few suggestions for problematic registrations:
+- First, and above all else, no amount of software processing can make up for noisy data or a low number of beads. When recording, it might help to make stacks overlong, to get more beads before and after the sample in the recorded volume. Play around with bead concentrations -- make bead-only samples at varying concentrations and see if they look too dense or sparse. Keep in mind that it's difficult to get beads close to the sample.
+- Second, choose the threshold carefully. Although the data above seem to indicate that lower is better, this is only true so far. For OpenSPIM data with settings similar to these (3 mW, 100 ms), I'd suggest starting with 0.008 (If I recall correctly, this is the default threshold for the Difference-of-Gaussians method). If you're having trouble, try experimenting with the radii as well -- 1/2 should work for subresolution beads, but if your system is slightly misaligned, 2/3 might work better. (If you can't seem to find the right setting, try recording a macro and putting it in a loop to test different values.)
+- Third, if your processing computer can handle it, Difference of Gaussians might produce better results -- it's a more complex calculation and (I believe) requires more memory than the alternative, but it seems to produce more consistent results.
+
+
+Sorry for the long e-mail!
+Luke Stuyvenberg
+
+
+From john.lim at imb.a-star.edu.sg  Mon Mar 10 23:08:07 2014
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Tue, 11 Mar 2014 12:08:07 +0800
+Subject: [OpenSPIM] Off Center Rotation & Calibration Tools in Open SPIM
+	Software
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B304466A10AC45@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Dear All,
+
+I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+
+Any help will be greatly appreciated,
+John
+________________________________________
+
+From stuyvenberg at wisc.edu  Wed Mar 12 23:39:06 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 12 Mar 2014 23:39:06 -0500
+Subject: [OpenSPIM] Fwd: Re: Off Center Rotation & Calibration Tools in Open
+ SPIM Software
+In-Reply-To: <53200793.4010504@wisc.edu>
+References: <53200793.4010504@wisc.edu>
+Message-ID: <5321366A.7030800@wisc.edu>
+
+(Forgot to CC the list, sorry!)
+
+
+-------- Original Message --------
+Subject: 	Re: [OpenSPIM] Off Center Rotation & Calibration Tools in Open 
+SPIM Software
+Date: 	Wed, 12 Mar 2014 02:06:59 -0500
+From: 	Luke Stuyvenberg <stuyvenberg at wisc.edu>
+To: 	LIM Soon Yew John (IMB) <john.lim at imb.a-star.edu.sg>
+
+
+
+Hi John,
+
+Solving this problem is precisely the goal of the automatic rotational
+axis calibration tool (opened by clicking 'Calibrate' on the stage
+control tab).
+
+I'm afraid it's poorly documented at the moment -- a failure on my part.
+I believe we have a ticket out to provide more documentation (or if we
+don't, we soon will).
+
+Here's a rough guide that should get you started:
+- Set the rotation stage to a low value -- -90 degrees or so.
+- Find a nice, bright bead in the live view, then open the calibrator.
+- Use FIJI's rectangle ROI tool to select a region around that bead. The
+region should be as large as possible without including other/brighter
+beads.
+- Click 'Obtain Next' to begin the axis detection. (This button will
+change to 'Interrupt' while the software is processing.) The system will
+scan through Z to localize the bead, then rotate the stage by one step
+and repeat, building a list of bead positions.
+- After about 90 degrees (though, the more locations it has, the
+better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+determine the rotation axis location and direction.
+
+This is an optimistic guide, however; in my experience, the calibrator
+sometimes has trouble tracking a bead -- or a bead that looked bright
+quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+button opens an advanced panel for controlling the tracking process:
+first/second delta control the Z scan size, X/Y determination is for
+localizing in the image plane, and so on. In particular, changing X/Y
+determination to 'Max Intens.' often produces better results than
+'Gaussian (Beads)'.
+
+Once the axis is detected, the calibration window can be closed or
+minimized. At this point, rotations with the mouse (i.e. holding Alt and
+dragging the mouse back and forth) will attempt to rotate around the
+detected axis. (I should note that the rotation slider does *not*
+implement this calculation at the moment! Only the mouse controls are
+properly affected.)
+
+I'm sorry I can't be more helpful presently; I'll check on that
+documentation ticket/create it if necessary, to make sure this feature
+is documented more thoroughly.
+
+Luke
+
+On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+> Dear All,
+>
+> I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+>
+> Any help will be greatly appreciated,
+> John
+> ________________________________________
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140312/871d7f17/attachment.html>
+
+From stuyvenberg at wisc.edu  Thu Mar 13 17:22:34 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Thu, 13 Mar 2014 17:22:34 -0500
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<75e0978ee324d.53222863@wiscmail.wisc.edu>
+	<7510da11e7812.532228a0@wiscmail.wisc.edu>
+	<7780813ae12d5.532228dc@wiscmail.wisc.edu>
+	<7740e1c2e7325.53222918@wiscmail.wisc.edu>
+	<7510949be6508.53222955@wiscmail.wisc.edu>
+	<75e0d0a5e6a44.53222991@wiscmail.wisc.edu>
+	<747084dfe1e42.532229ce@wiscmail.wisc.edu>
+	<7460ebace5e88.53222a0a@wiscmail.wisc.edu>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+Message-ID: <7700e199ec717.5321e95a@wiscmail.wisc.edu>
+
+Hi Dr. Hoehn,
+
+I'm afraid I lack some of the specialty knowledge to answer in great detail, but I'll offer my best guesses. My answers will be confined to my experience with the 3D viewer; I'm not acquainted with the BigDataViewer, but perhaps Johannes can offer insights on that point.
+
+On 03/11/14, "Dr S. Hoehn"?wrote:
+> ?	Is it possible to use the Fiji plugin 3D Viewer or the BigDataViewer or any other plugins to
+>?
+> o	produce 3D projections of the entire time-lapse data set over time (faster than with ?3D project?)?
+
+Possibly not faster, but there would be several advantages to using a true 3D viewer over the projection plugin. The first is that...
+
+
+> o	produce 3D projections (including one or more timepoints) that are freely rotatable (not ?just? around the x, y and z-axis)?
+
+
+...yes, if the 3D viewer can show you your image data in 3D, it is freely rotatable. There are a few caveats. First, it would require a lot of computer memory, in particular to show the data without any downsampling (scaling the data down). I don't know that the current 3D viewer supports time points, but if it does, including the time evolution will also require significant amounts of RAM. Second, it may take a considerable amount of time to load the data and create a model out of it -- judging by the quality of your data, it may be quite a long time.
+
+> o	produce cross sections in every possible angle by slicing?
+
+
+I don't think the 3D viewer has this capability -- there is an orthoslice function, but that amounts to axial-only slicing. There may be a combination of plugins, however, which can rotate the data to whatever angle you like, then pull out a particular slice.
+
+
+On 03/11/14, "Dr S. Hoehn"?wrote:
+> ?	If the above actions are possible with Fiji, would I have to use macros?
+
+
+
+If you intend to repeat any process for several different sets of samples, a macro would certainly be advisable. In the context of this task, though, its use might be limited: a macro would have a difficult time recognizing a midsagittal section, so you would probably still need to indicate where to slice -- and if that's the case, it might not be so worthwhile. The best advice I can offer is to automate what you can and learn to enjoy what you can't. ;-)
+
+
+(Please bear in mind that I am not intimately familiar with some of Fiji's more advanced capabilities. I suspect there is a way to train a 'midsagittal view recognizer' program to determine the correct angles at which to rotate and slice the sample, but it's entirely beyond my expertise to advise you on that. Johannes may be able to offer more details.)
+
+
+On 03/11/14, "Dr S. Hoehn"?wrote:
+> ?	Would it in your opinion save a lot of time to get a commercial software (e.g. Volocity) in addition to Fiji for 4D imaging and slicing?
+
+
+
+We sometimes use BitPlane Imaris for viewing the final, reconstructed data from our OpenSPIM system; it comes down in part to preference. (However, if I'm mistaken in my answer to the above question, and significant parts of your analysis process can be automated, it's worth noting that I still haven't encountered software with the automation functionality to match Fiji's scripting and macros. If you intend to analyze a lot of these samples, pursuing the above options could pay off huge in the long run.)
+
+
+On 03/11/14, "Dr S. Hoehn"?wrote:
+> Sorry if this is an impertinent question.
+
+
+Not at all! :-)
+
+
+I hope you've found this e-mail helpful!
+Luke Stuyvenberg
+
+
+On 03/11/14, "Dr S. Hoehn"  wrote:
+> 
+> Dear Johannes and Luke,
+> 
+> I have some questions on the following points under ?Data processing? on the OpenSPIM homepage:
+> ?	Browsing of OpenSPIM data with Fiji's BigDataViewer (coming soon).
+> ?	3D rendering of fused OpenSPIM data.
+> 
+> I am working with spherical algae containing several embryos that are all differently positioned. I would like to visualize and analyse the embryos? development. I am usually taking data for 20 to 40 hours in 2 to 3 min intervals, stacks ranging from 300-450 um at 4.5 um steps, from just one angle (data sets 100-200 GB).
+> 
+> I am looking for solutions to search the time-lapse for specific developmental stages, crop individual embryos, rotate and slice them, so I get midsagittal sections.
+> 
+> So far I am using Fiji to produce a 3D-projection from one angle (which takes at least 10 hours) of the time-lapse. That shows me, when each embryo is in the wanted developmental stage. Then I crop embryos with Fiji. But to get a midsagittal section (by just choosing the accordant slice in the stack), I just have to be lucky that the embryo was oriented beneficially. So far I am not taking data from different angles but that would not solve my problem as I have to rotate the embryos in more than one axis.
+> 
+> So these are my questions (I am pretty new to Fiji, so please excuse me if some are trivial):
+> 
+> ?	Is it possible to use the Fiji plugin 3D Viewer or the BigDataViewer or any other plugins to
+> 
+> o	produce 3D projections of the entire time-lapse data set over time (faster than with ?3D project?)?
+> o	produce 3D projections (including one or more timepoints) that are freely rotatable (not ?just? around the x, y and z-axis)?
+> o	produce cross sections in every possible angle by slicing?
+> 
+> ?	When will the BigDataViewer be available? What can it do?
+> 
+> ?	If the above actions are possible with Fiji, would I have to use macros?
+> 
+> ?	Would it in your opinion save a lot of time to get a commercial software (e.g. Volocity) in addition to Fiji for 4D imaging and slicing? Sorry if this is an impertinent question.
+> 
+> Thank you very much for your time and efforts!
+> 
+> Best wishes,
+> Stephanie
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140313/f8596e46/attachment.html>
+
+From Johannes.Schindelin at gmx.de  Fri Mar 14 09:04:03 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 14 Mar 2014 15:04:03 +0100 (CET)
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <7700e199ec717.5321e95a@wiscmail.wisc.edu>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<75e0d0a5e6a44.53222991@wiscmail.wisc.edu>
+	<747084dfe1e42.532229ce@wiscmail.wisc.edu>
+	<7460ebace5e88.53222a0a@wiscmail.wisc.edu>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+Message-ID: <alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+
+Hi Luke,
+
+On Thu, 13 Mar 2014, Luke Stuyvenberg wrote:
+
+> I'm not acquainted with the BigDataViewer, but perhaps Johannes can
+> offer insights on that point.
+
+Unfortunately, I am also not quite versed in things BigDataViewer myself.
+
+However, there is this fantastic project called Fiji where you can ask
+questions on the forum (http://imagej.1557.x6.nabble.com/). The advantage
+over mailing someone in private is that you can tap into a much larger
+pool of expertise. Well, that is actually only one advantage (another
+being that other scientists can learn from your exchange of knowledge; yet
+another one being that you are less likely to hit a week when the other
+person is absent; there are many, many more advantages to open
+communications).
+
+Ciao,
+Johannes
+
+
+From Johannes.Schindelin at gmx.de  Tue Mar 18 10:33:58 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 18 Mar 2014 16:33:58 +0100 (CET)
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+Message-ID: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a
+forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the
+conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM
+implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this
+field. specifically on SPIM modifications,fluorescent probes, sample
+carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar 
+
+
+From KUMARAVE001 at e.ntu.edu.sg  Tue Mar 18 10:49:44 2014
+From: KUMARAVE001 at e.ntu.edu.sg (#KUMARAVEL KANDASWAMY#)
+Date: Tue, 18 Mar 2014 15:49:44 +0000
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+In-Reply-To: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>
+Message-ID: <c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+
+Hi Johannes.
+
+Thanks for the note, I wasn't aware of this before.  Please move the post to the appropriate destination. 
+
+Just wanted to know if anyone has tried SPIM for studying developmental biology of bacteria. I would be pleased to know the SPIM modifications required for Imaging bacteria. Such a modifications in the sample chamber/carriers.
+
+Thank you,
+
+Best regards
+Kumar
+
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de] 
+Sent: Tuesday, 18 March 2014 11:34 PM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this field. specifically on SPIM modifications,fluorescent probes, sample carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar 
+
+
+From stuyvenberg at wisc.edu  Tue Mar 18 11:09:49 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Tue, 18 Mar 2014 11:09:49 -0500
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+Message-ID: <75a091d2b400c.5328297d@wiscmail.wisc.edu>
+
+Hi John,
+
+I'm not able to reproduce this error on our end, which means I'll need a little help from you to find out what's going on. If possible, could you attach a recent core log? These are files named "CoreLogYYYYMMDD.txt" in the OpenSPIM.app directory. With a little luck, the log might contain details on any issue.
+
+
+Additionally, it might help to be sure OpenSPIM itself is fully up to date: Launch the Fiji Updater, click on "Advanced Mode" in the bottom right, and from the "View Options" drop-down at the top, select "View files of the 'OpenSPIM' site". Make sure all files in the list below are marked as "Up-to-date".
+
+
+Thanks,
+Luke
+
+On 03/18/14, "LIM Soon Yew John (IMB)"  wrote:
+> Hi Luke,
+> 
+> I am unable to launch the Open SPIM GUI (Plugins > Acquire SPIM Image) from Micro-Manager after Fiji update. There was no response when I click on "Acquire SPIM Image" on the "Plugins" dropdown menu in Micro-Manager.
+> 
+> Can you please check if there is an issue with the software?
+> 
+> Thank You,
+> John
+> ________________________________________
+> From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+> Sent: Wednesday, March 12, 2014 3:06 PM
+> To: LIM Soon Yew John (IMB)
+> Subject: Re: [OpenSPIM] Off Center Rotation & Calibration Tools in Open SPIM Software
+> 
+> Hi John,
+> 
+> Solving this problem is precisely the goal of the automatic rotational
+> axis calibration tool (opened by clicking 'Calibrate' on the stage
+> control tab).
+> 
+> I'm afraid it's poorly documented at the moment -- a failure on my part.
+> I believe we have a ticket out to provide more documentation (or if we
+> don't, we soon will).
+> 
+> Here's a rough guide that should get you started:
+> - Set the rotation stage to a low value -- -90 degrees or so.
+> - Find a nice, bright bead in the live view, then open the calibrator.
+> - Use FIJI's rectangle ROI tool to select a region around that bead. The
+> region should be as large as possible without including other/brighter
+> beads.
+> - Click 'Obtain Next' to begin the axis detection. (This button will
+> change to 'Interrupt' while the software is processing.) The system will
+> scan through Z to localize the bead, then rotate the stage by one step
+> and repeat, building a list of bead positions.
+> - After about 90 degrees (though, the more locations it has, the
+> better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+> determine the rotation axis location and direction.
+> 
+> This is an optimistic guide, however; in my experience, the calibrator
+> sometimes has trouble tracking a bead -- or a bead that looked bright
+> quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+> button opens an advanced panel for controlling the tracking process:
+> first/second delta control the Z scan size, X/Y determination is for
+> localizing in the image plane, and so on. In particular, changing X/Y
+> determination to 'Max Intens.' often produces better results than
+> 'Gaussian (Beads)'.
+> 
+> Once the axis is detected, the calibration window can be closed or
+> minimized. At this point, rotations with the mouse (i.e. holding Alt and
+> dragging the mouse back and forth) will attempt to rotate around the
+> detected axis. (I should note that the rotation slider does *not*
+> implement this calculation at the moment! Only the mouse controls are
+> properly affected.)
+> 
+> I'm sorry I can't be more helpful presently; I'll check on that
+> documentation ticket/create it if necessary, to make sure this feature
+> is documented more thoroughly.
+> 
+> Luke
+> 
+> On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+> > Dear All,
+> >
+> > I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+> >
+> > Any help will be greatly appreciated,
+> > John
+> > ________________________________________
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+
+
+From j.krieger at Dkfz-Heidelberg.de  Tue Mar 18 11:45:25 2014
+From: j.krieger at Dkfz-Heidelberg.de (Krieger, Jan)
+Date: Tue, 18 Mar 2014 17:45:25 +0100
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+In-Reply-To: <c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+References: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>,
+	<c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+Message-ID: <4F91222C659D5B4E8C89CE4D710BB08EFFD98A3CE8@DKFZEX01.ad.dkfz-heidelberg.de>
+
+Hi Kumar!
+
+we are using a SPIM to image single mamallian cells, which is already close to applications in bacteria. We use imaging FCS inside the cells. For use the modification of the SPIM was not too hard: basically you need a thin lightsheet (~1-2?m), which sections the cell and you need to mount the cells. There are several ways of achieving the latter: Either you embed them in a gel, or if you have adherent cells, you can simply grow them on a piece of coverslip, which is then mounted in the sample chamber. Here are some refs, which might be interesting for you:
+http://www.nature.com/nbt/journal/v29/n9/full/nbt.1928.html
+http://www.opticsinfobase.org/abstract.cfm?URI=oe-22-3-2358
+http://mcb.asm.org/cgi/doi/10.1128/MCB.01097-13
+http://www.nature.com/nmeth/journal/v8/n5/full/nmeth.1586.html
+http://doi.wiley.com/10.1111/jmi.12051
+http://www.celldiv.com/content/6/1/22
+http://dx.doi.org/10.1186%2F1747-1028-6-22  
+http://www.nature.com/nmeth/journal/v10/n5/full/nmeth.2411.html?WT.ec_id=NMETH-201305
+http://dx.doi.org/10.1371%2Fjournal.pone.0050846
+
+I hope that helps ;-) ... BTW: As you are in Singapore, maybe talk to Anand Prataph Singh who did his PhD in the group of Thorsten Wohland at NUS.
+
+Best,
+JAN
+
+
+Dipl.-Phys. Jan Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski)
+Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: j.krieger at dkfz.de
+www: http://www.dkfz.de/Macromol/
+________________________________________
+Von: openspim-bounces at openspim.org [openspim-bounces at openspim.org] im Auftrag von #KUMARAVEL KANDASWAMY# [KUMARAVE001 at e.ntu.edu.sg]
+Gesendet: Dienstag, 18. M?rz 2014 16:49
+An: Johannes Schindelin
+Cc: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+
+Hi Johannes.
+
+Thanks for the note, I wasn't aware of this before.  Please move the post to the appropriate destination.
+
+Just wanted to know if anyone has tried SPIM for studying developmental biology of bacteria. I would be pleased to know the SPIM modifications required for Imaging bacteria. Such a modifications in the sample chamber/carriers.
+
+Thank you,
+
+Best regards
+Kumar
+
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de]
+Sent: Tuesday, 18 March 2014 11:34 PM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this field. specifically on SPIM modifications,fluorescent probes, sample carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From john.lim at imb.a-star.edu.sg  Tue Mar 18 20:53:07 2014
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Wed, 19 Mar 2014 09:53:07 +0800
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <75a091d2b400c.5328297d@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>,
+	<75a091d2b400c.5328297d@wiscmail.wisc.edu>
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Hi Luke,
+
+Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day. 
+
+Hopefully those log files will help you identify the issue I faced. Thanks.
+
+Best Regards,
+John 
+________________________________________
+From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+Sent: Wednesday, March 19, 2014 12:09 AM
+To: LIM Soon Yew John (IMB)
+Cc: openspim at openspim.org
+Subject: Re: Unable to launch Open SPIM GUI After Fiji Update
+
+Hi John,
+
+I'm not able to reproduce this error on our end, which means I'll need a little help from you to find out what's going on. If possible, could you attach a recent core log? These are files named "CoreLogYYYYMMDD.txt" in the OpenSPIM.app directory. With a little luck, the log might contain details on any issue.
+
+
+Additionally, it might help to be sure OpenSPIM itself is fully up to date: Launch the Fiji Updater, click on "Advanced Mode" in the bottom right, and from the "View Options" drop-down at the top, select "View files of the 'OpenSPIM' site". Make sure all files in the list below are marked as "Up-to-date".
+
+
+Thanks,
+Luke
+
+On 03/18/14, "LIM Soon Yew John (IMB)"  wrote:
+> Hi Luke,
+>
+> I am unable to launch the Open SPIM GUI (Plugins > Acquire SPIM Image) from Micro-Manager after Fiji update. There was no response when I click on "Acquire SPIM Image" on the "Plugins" dropdown menu in Micro-Manager.
+>
+> Can you please check if there is an issue with the software?
+>
+> Thank You,
+> John
+> ________________________________________
+> From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+> Sent: Wednesday, March 12, 2014 3:06 PM
+> To: LIM Soon Yew John (IMB)
+> Subject: Re: [OpenSPIM] Off Center Rotation & Calibration Tools in Open SPIM Software
+>
+> Hi John,
+>
+> Solving this problem is precisely the goal of the automatic rotational
+> axis calibration tool (opened by clicking 'Calibrate' on the stage
+> control tab).
+>
+> I'm afraid it's poorly documented at the moment -- a failure on my part.
+> I believe we have a ticket out to provide more documentation (or if we
+> don't, we soon will).
+>
+> Here's a rough guide that should get you started:
+> - Set the rotation stage to a low value -- -90 degrees or so.
+> - Find a nice, bright bead in the live view, then open the calibrator.
+> - Use FIJI's rectangle ROI tool to select a region around that bead. The
+> region should be as large as possible without including other/brighter
+> beads.
+> - Click 'Obtain Next' to begin the axis detection. (This button will
+> change to 'Interrupt' while the software is processing.) The system will
+> scan through Z to localize the bead, then rotate the stage by one step
+> and repeat, building a list of bead positions.
+> - After about 90 degrees (though, the more locations it has, the
+> better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+> determine the rotation axis location and direction.
+>
+> This is an optimistic guide, however; in my experience, the calibrator
+> sometimes has trouble tracking a bead -- or a bead that looked bright
+> quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+> button opens an advanced panel for controlling the tracking process:
+> first/second delta control the Z scan size, X/Y determination is for
+> localizing in the image plane, and so on. In particular, changing X/Y
+> determination to 'Max Intens.' often produces better results than
+> 'Gaussian (Beads)'.
+>
+> Once the axis is detected, the calibration window can be closed or
+> minimized. At this point, rotations with the mouse (i.e. holding Alt and
+> dragging the mouse back and forth) will attempt to rotate around the
+> detected axis. (I should note that the rotation slider does *not*
+> implement this calculation at the moment! Only the mouse controls are
+> properly affected.)
+>
+> I'm sorry I can't be more helpful presently; I'll check on that
+> documentation ticket/create it if necessary, to make sure this feature
+> is documented more thoroughly.
+>
+> Luke
+>
+> On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+> > Dear All,
+> >
+> > I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+> >
+> > Any help will be greatly appreciated,
+> > John
+> > ________________________________________
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20140319.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0003.txt>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20140318.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0004.txt>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20140311.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0005.txt>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot.jpg
+Type: image/jpeg
+Size: 591321 bytes
+Desc: Screenshot.jpg
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0001.jpg>
+
+From stuyvenberg at wisc.edu  Wed Mar 19 01:44:53 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 19 Mar 2014 01:44:53 -0500
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+	<75a091d2b400c.5328297d@wiscmail.wisc.edu>
+	<E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>
+Message-ID: <53293CE5.3090706@wisc.edu>
+
+Hi John,
+
+On 3/18/2014 8:53 PM, LIM Soon Yew John (IMB) wrote:
+> Hi Luke,
+>
+> Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day.
+>
+> Hopefully those log files will help you identify the issue I faced. Thanks.
+They do indeed help; I see the problem -- one of your stages has moved 
+out of its expected range (most likely the twister, as the others have a 
+physical limit to their movement). I can push a software fix for this 
+soon, but there are two immediate workarounds (either one should work):
+
+1. If you have the software for the Picard 4D stage, you can use that to 
+reset the position. (It can also be downloaded from the Picard 
+Industries website [1].) Launch the software, enter the appropriate 
+serial number, then click 'Home'.
+
+2. If you do not have that software and would rather not download it, it 
+should still be possible to reset the stage's position from Micro-Manager:
+- Launch Micro-Manager.
+- Click Tools -> Script Panel.
+- Type or copy/paste the following (If you did not use the default 
+twister name, be sure to replace the text in the line below with the 
+correct name.):
+
+mmc.setPosition("Picard Twister", 0);
+
+- Press enter.
+
+Please let me know if the trouble persists after this. I'll also soon 
+make change to the software to make sure this case doesn't stop the 
+software from loading in the future.
+
+Thanks again,
+Luke
+
+[1] There is a link to this software under 
+http://www.picard-industries.com/products.html#usb-4d-stage
+
+
+From john.lim at imb.a-star.edu.sg  Wed Mar 19 04:37:41 2014
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Wed, 19 Mar 2014 17:37:41 +0800
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <53293CE5.3090706@wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+	<75a091d2b400c.5328297d@wiscmail.wisc.edu>
+	<E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>,
+	<53293CE5.3090706@wisc.edu>
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F0905@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Hi Luke,
+
+Resetting the Picard stages back to zero positions as you advised solved the issue with the OPEN SPIM GUI not starting. 
+
+Thank you very much.
+
+Best Regards,
+John
+________________________________________
+From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+Sent: Wednesday, March 19, 2014 2:44 PM
+To: LIM Soon Yew John (IMB)
+Cc: openspim at openspim.org
+Subject: Re: Unable to launch Open SPIM GUI After Fiji Update
+
+Hi John,
+
+On 3/18/2014 8:53 PM, LIM Soon Yew John (IMB) wrote:
+> Hi Luke,
+>
+> Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day.
+>
+> Hopefully those log files will help you identify the issue I faced. Thanks.
+They do indeed help; I see the problem -- one of your stages has moved
+out of its expected range (most likely the twister, as the others have a
+physical limit to their movement). I can push a software fix for this
+soon, but there are two immediate workarounds (either one should work):
+
+1. If you have the software for the Picard 4D stage, you can use that to
+reset the position. (It can also be downloaded from the Picard
+Industries website [1].) Launch the software, enter the appropriate
+serial number, then click 'Home'.
+
+2. If you do not have that software and would rather not download it, it
+should still be possible to reset the stage's position from Micro-Manager:
+- Launch Micro-Manager.
+- Click Tools -> Script Panel.
+- Type or copy/paste the following (If you did not use the default
+twister name, be sure to replace the text in the line below with the
+correct name.):
+
+mmc.setPosition("Picard Twister", 0);
+
+- Press enter.
+
+Please let me know if the trouble persists after this. I'll also soon
+make change to the software to make sure this case doesn't stop the
+software from loading in the future.
+
+Thanks again,
+Luke
+
+[1] There is a link to this software under
+http://www.picard-industries.com/products.html#usb-4d-stage
+
+From KUMARAVE001 at e.ntu.edu.sg  Wed Mar 19 08:56:16 2014
+From: KUMARAVE001 at e.ntu.edu.sg (#KUMARAVEL KANDASWAMY#)
+Date: Wed, 19 Mar 2014 13:56:16 +0000
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+In-Reply-To: <4F91222C659D5B4E8C89CE4D710BB08EFFD98A3CE8@DKFZEX01.ad.dkfz-heidelberg.de>
+References: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>,
+	<c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+	<4F91222C659D5B4E8C89CE4D710BB08EFFD98A3CE8@DKFZEX01.ad.dkfz-heidelberg.de>
+Message-ID: <f3a6997e6c834756921590bf63a15555@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+
+Hi JAN
+
+Thanks a lot for the articles. It was indeed very helpful.
+
+Anand and I have been working together for almost a year now in figuring out the right SPIM components. I have been using Anand's system to optimize several parameters for FCS. Probably we will try embedding the cells in Gel also in coverslip, hopefully it should work. I will  keep you posted soon.
+
+So small world:) 
+
+Thanks again.
+
+Cheers
+Kumar
+
+
+-----Original Message-----
+From: Krieger, Jan [mailto:j.krieger at Dkfz-Heidelberg.de] 
+Sent: Wednesday, March 19, 2014 12:45 AM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: AW: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar!
+
+we are using a SPIM to image single mamallian cells, which is already close to applications in bacteria. We use imaging FCS inside the cells. For use the modification of the SPIM was not too hard: basically you need a thin lightsheet (~1-2?m), which sections the cell and you need to mount the cells. There are several ways of achieving the latter: Either you embed them in a gel, or if you have adherent cells, you can simply grow them on a piece of coverslip, which is then mounted in the sample chamber. Here are some refs, which might be interesting for you:
+http://www.nature.com/nbt/journal/v29/n9/full/nbt.1928.html
+http://www.opticsinfobase.org/abstract.cfm?URI=oe-22-3-2358
+http://mcb.asm.org/cgi/doi/10.1128/MCB.01097-13
+http://www.nature.com/nmeth/journal/v8/n5/full/nmeth.1586.html
+http://doi.wiley.com/10.1111/jmi.12051
+http://www.celldiv.com/content/6/1/22
+http://dx.doi.org/10.1186%2F1747-1028-6-22
+http://www.nature.com/nmeth/journal/v10/n5/full/nmeth.2411.html?WT.ec_id=NMETH-201305
+http://dx.doi.org/10.1371%2Fjournal.pone.0050846
+
+I hope that helps ;-) ... BTW: As you are in Singapore, maybe talk to Anand Prataph Singh who did his PhD in the group of Thorsten Wohland at NUS.
+
+Best,
+JAN
+
+
+Dipl.-Phys. Jan Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski) Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: j.krieger at dkfz.de
+www: http://www.dkfz.de/Macromol/
+________________________________________
+Von: openspim-bounces at openspim.org [openspim-bounces at openspim.org] im Auftrag von #KUMARAVEL KANDASWAMY# [KUMARAVE001 at e.ntu.edu.sg]
+Gesendet: Dienstag, 18. M?rz 2014 16:49
+An: Johannes Schindelin
+Cc: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+
+Hi Johannes.
+
+Thanks for the note, I wasn't aware of this before.  Please move the post to the appropriate destination.
+
+Just wanted to know if anyone has tried SPIM for studying developmental biology of bacteria. I would be pleased to know the SPIM modifications required for Imaging bacteria. Such a modifications in the sample chamber/carriers.
+
+Thank you,
+
+Best regards
+Kumar
+
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de]
+Sent: Tuesday, 18 March 2014 11:34 PM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this field. specifically on SPIM modifications,fluorescent probes, sample carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From kieran.short at gmail.com  Thu Mar 20 01:09:03 2014
+From: kieran.short at gmail.com (Kieran Short)
+Date: Thu, 20 Mar 2014 17:09:03 +1100
+Subject: [OpenSPIM] OpenSpim/MM and MailArchives Questions.
+Message-ID: <CANkVCd7PPWrsfB88yWfYodmxoxKT8v-xbJsXH2e4kTq=0YObQw@mail.gmail.com>
+
+Hi all,
+
+Firstly, I just wanted to say that OpenSPIM runs out of the box on Win7/64
+box when you run it in "compatibility mode". It didn't work without it -
+not sure if that's something useful for the wiki. FYI, we are using an
+Orca4 v2 camera with the Firebird cameralink, and are using the latest
+Hammamatsu DCAM driver.
+
+Secondly, I'm wondering if anybody is now at the stage where we can fairly
+easily build a 64bit version of Fiji/Micromanager/OpenSPIM from the
+OpenSPIM development environment installer? (or modifications of the
+installer)? I have all the sdks and libraries, and git is synchronised, I
+can build a 32bit version no sweat (albeit, the micromanager plugins for
+the camera are absent).
+
+Thirdly, how do you read the mailinglist archives? unpacking the .GZ
+archives produces unreadable text files for me I've used both 7-zip and
+gzip -d.
+
+We're still commissioning our OpenSPIM, but it's going fairly smoothly so
+far.
+
+best regards,
+Kieran
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/57456121/attachment.html>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Thu Mar 20 08:43:54 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Thu, 20 Mar 2014 14:43:54 +0100
+Subject: [OpenSPIM] TIScam problem
+Message-ID: <OFA44232D4.504B5F1B-ONC1257CA1.004B6E28-C1257CA1.004B6E30@ipt.rwth-aachen.de>
+
+ Hi Luke,
+
+It have been a couple of months since I have not touched the SPIM microscope. But now that I am working with it again
+I found problems related to the TIScam (The Imaging Source camera). I am working with the updated version of the 
+OpenSPIM software and I cannot load the TIScam, an error window is opened (I attach an image). I try to configure
+the TIScam using the latest version of Micromanager and the same error happened. The camera works well using
+its own software (also the latest version). It looks the the problem is again related to the DLLs of the camera.
+
+In the other hand I will start to write a program in LabVIEW for controlling the acquisition process of the OpenSPIM microscope
+because this software is already available in the institute and all the devices; camera, laser, and stage can be controlled using
+LabVIEW. I have an idea of how the acquisition process works, but it would be really nice if there is available a flux
+diagram or an algorithm explaining the acquisition process.
+
+Best regads,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut f?r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra?e 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/2c3d97a5/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: TIScam fail.PNG
+Type: application/octet-stream
+Size: 89356 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/2c3d97a5/attachment-0001.obj>
+
+From Johannes.Schindelin at gmx.de  Thu Mar 20 09:15:56 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 20 Mar 2014 15:15:56 +0100 (CET)
+Subject: [OpenSPIM] TIScam problem
+In-Reply-To: <OFA44232D4.504B5F1B-ONC1257CA1.004B6E28-C1257CA1.004B6E30@ipt.rwth-aachen.de>
+References: <OFA44232D4.504B5F1B-ONC1257CA1.004B6E28-C1257CA1.004B6E30@ipt.rwth-aachen.de>
+Message-ID: <alpine.DEB.1.00.1403201514390.14982@s15462909.onlinehome-server.info>
+
+Hi Edgar,
+
+On Thu, 20 Mar 2014, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+
+> I found problems related to the TIScam (The Imaging Source camera). I am
+> working with the updated version of the OpenSPIM software and I cannot
+> load the TIScam, an error window is opened (I attach an image). I try to
+> configure the TIScam using the latest version of Micromanager and the
+> same error happened.
+
+Hmm. I did not find any mention of this problem here:
+
+	http://micro-manager.3463995.n2.nabble.com/template/NamlServlet.jtp?macro=search_page&node=3463995&query=tis&days=180
+
+Maybe you want to report it? The Micro-Manager developers are typically
+very fast, and very helpful.
+
+Ciao,
+Johannes
+
+
+From S.Hoehn at damtp.cam.ac.uk  Thu Mar 20 10:04:41 2014
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 20 Mar 2014 15:04:41 +0000
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<75e0d0a5e6a44.53222991@wiscmail.wisc.edu>
+	<747084dfe1e42.532229ce@wiscmail.wisc.edu>
+	<7460ebace5e88.53222a0a@wiscmail.wisc.edu>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+	<alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+Message-ID: <c02117c6898640edd511153ae36d278f@cam.ac.uk>
+
+Hi Johannes,
+
+I am sorry that you where not the right person to address my questions 
+to. Of course forums can be helpful but after reading on the openspim 
+homepage:
+
+"Data processing
+Browsing of OpenSPIM data with Fiji's BigDataViewer (coming soon)."
+
+I simply thought that one of the programers associated with the openspim 
+platform is working on this new plugin, that is specifically designed 
+for spim data.
+Little misunderstanding there.
+
+Best wishes,
+Stephanie
+
+On 2014-03-14 14:04, Johannes Schindelin wrote:
+> Hi Luke,
+> 
+> On Thu, 13 Mar 2014, Luke Stuyvenberg wrote:
+> 
+>> I'm not acquainted with the BigDataViewer, but perhaps Johannes can
+>> offer insights on that point.
+> 
+> Unfortunately, I am also not quite versed in things BigDataViewer 
+> myself.
+> 
+> However, there is this fantastic project called Fiji where you can ask
+> questions on the forum (http://imagej.1557.x6.nabble.com/). The 
+> advantage
+> over mailing someone in private is that you can tap into a much larger
+> pool of expertise. Well, that is actually only one advantage (another
+> being that other scientists can learn from your exchange of knowledge; 
+> yet
+> another one being that you are less likely to hit a week when the other
+> person is absent; there are many, many more advantages to open
+> communications).
+> 
+> Ciao,
+> Johannes
+
+
+From Johannes.Schindelin at gmx.de  Thu Mar 20 12:52:40 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 20 Mar 2014 18:52:40 +0100 (CET)
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <c02117c6898640edd511153ae36d278f@cam.ac.uk>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+	<alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+	<c02117c6898640edd511153ae36d278f@cam.ac.uk>
+Message-ID: <alpine.DEB.1.00.1403201850480.14982@s15462909.onlinehome-server.info>
+
+Hi Stephanie,
+
+On Thu, 20 Mar 2014, Dr S. Hoehn wrote:
+
+> I am sorry that you where not the right person to address my questions to.
+
+No worries. The BigDataViewer was developed in the Tomancak lab, the same
+one which is responsible for the hardware part of "OpenSPIM 1.0".
+
+> I simply thought that one of the programers associated with the openspim
+> platform is working on this new plugin, that is specifically designed
+> for spim data.
+
+Tobias Pietzsch indeed designed it for SPIM data, but as far as I can
+tell, he is not on the OpenSPIM mailing list.
+
+Ciao,
+Johannes
+
+
+From tomancak at mpi-cbg.de  Thu Mar 20 14:29:38 2014
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Thu, 20 Mar 2014 20:29:38 +0100
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <alpine.DEB.1.00.1403201850480.14982@s15462909.onlinehome-server.info>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+	<alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+	<c02117c6898640edd511153ae36d278f@cam.ac.uk>
+	<alpine.DEB.1.00.1403201850480.14982@s15462
+	909.onlinehome-server.info>
+Message-ID: <F5AF719F-1FDE-440B-A77D-32B6648B7E34@mpi-cbg.de>
+
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: tomancak at mpi-cbg.de
+homepage: http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+Dear Stephanie,
+
+You can use the BigDataViewer right now. Simply launch the Fiji updater, go to advanced mode and select the update site called BigDataViewer. Restart Fiji and you should have a new item in the plugin menu.
+
+You need to save your stacks, SPIM or otherwise, in the HDF5 format. The Export plugins under the BigDataViewer should be self explanatory (for now, documentation is coming).
+
+Once you have your data saved as HDF5, open the newly created xml file (in the directory where your HDF5 database sits) using the OpenXML/HDF5 plugin in the BigDataViewer submenu.
+
+Once in the viewer press F1 or 'h' to get the help menu that explains the keyboard shortcuts.
+
+We know that the documentation is inadequate (a nice way of saying that there is no documentation). We are sorry about it and in fact Tobias is actively working on it and we hope to have it on the Fiji wiki soon.
+
+Hopefully this email will help you in the interim. Don't hesitate to ask if you encounter problems.
+
+And use the BigDataViewer. It is an awesome piece of software.
+
+All the best
+
+Pavel
+
+
+
+On Mar 20, 2014, at 6:52 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+
+> Hi Stephanie,
+> 
+> On Thu, 20 Mar 2014, Dr S. Hoehn wrote:
+> 
+>> I am sorry that you where not the right person to address my questions to.
+> 
+> No worries. The BigDataViewer was developed in the Tomancak lab, the same
+> one which is responsible for the hardware part of "OpenSPIM 1.0".
+> 
+>> I simply thought that one of the programers associated with the openspim
+>> platform is working on this new plugin, that is specifically designed
+>> for spim data.
+> 
+> Tobias Pietzsch indeed designed it for SPIM data, but as far as I can
+> tell, he is not on the OpenSPIM mailing list.
+> 
+> Ciao,
+> Johannes
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/68fef927/attachment.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Mon Mar 24 10:36:09 2014
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Mon, 24 Mar 2014 15:36:09 +0000
+Subject: [OpenSPIM] 4D imaging software
+Message-ID: <4eabe32ccca8e89d0bcc6c5eb6ae1232@cam.ac.uk>
+
+Dear all,
+Our group is thinking about purchasing a license for a commercial 4D 
+imaging software in addition to Fiji and its plugins.
+
+We are planning to mainly use it for reslicing our SPIM z-stacks in 
+arbitrary angles to achieve e.g. midsagital cross-sections. This would 
+be difficult (if possible at all) with Fiji, amongst others because our 
+samples rotate.
+
+We might also want to do measurements (distances, surface area, 
+volume,?) and track developing cells or swimming organisms over time.
+
+Therefore we wanted to ask, which software everybody else is using 
+(apart from Fiji) to visualize and process your SPIM data and what 
+experiences you made with it?
+
+We are currently trying demo versions for Volocity (Perkin Elmers), 
+Imaris (BitPlane) and Amira (FEI Visualization Sciences Group). They all 
+seem to have their advantages and disadvantages.
+
+So, we would be very grateful if you could tell us, if you have any 
+experiences with these or other 4D software solutions and what would be 
+your recommendations.
+
+I couldn?t find anything on that in the mailing list?s archive. Sorry, 
+if I simply overlooked it.
+
+Thank you very much in advance.
+
+Best wishes,
+
+Stephanie
+
+
+
+
+From stuyvenberg at wisc.edu  Wed Mar 26 18:39:34 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 26 Mar 2014 18:39:34 -0500
+Subject: [OpenSPIM] Post-meeting recap
+In-Reply-To: <75a0c98a116977.53336528@wiscmail.wisc.edu>
+References: <75b0fe29112652.53336126@wiscmail.wisc.edu>
+	<7690f06e1132c1.53336162@wiscmail.wisc.edu>
+	<7530fa461120d1.5333619e@wiscmail.wisc.edu>
+	<75a0c078112197.533361db@wiscmail.wisc.edu>
+	<74a087c8115296.53336217@wiscmail.wisc.edu>
+	<7480a5ba11756b.53336253@wiscmail.wisc.edu>
+	<7480eb73113021.53336290@wiscmail.wisc.edu>
+	<7330c1a2117318.533362cc@wiscmail.wisc.edu>
+	<75e0cd6e116002.53336309@wiscmail.wisc.edu>
+	<75a0f4ce1108f0.53336345@wiscmail.wisc.edu>
+	<75a0e8d011790b.53336381@wiscmail.wisc.edu>
+	<7530ba14114909.533363be@wiscmail.wisc.edu>
+	<7330de341160da.533363fa@wiscmail.wisc.edu>
+	<76e0f9ce115149.53336436@wiscmail.wisc.edu>
+	<75a0a276111c37.53336473@wiscmail.wisc.edu>
+	<75b0db461161a6.533364af@wiscmail.wisc.edu>
+	<7480bdd41112bb.533364eb@wiscmail.wisc.edu>
+	<75a0c98a116977.53336528@wiscmail.wisc.edu>
+Message-ID: <7460c017116d97.53331ee6@wiscmail.wisc.edu>
+
+Hey everyone,
+
+I've just finished meeting with Kevin, and we had quite a bit to discuss about the future of the project. Here's a quick recap:
+
+
+I'll be graduating in May, but I will be in Madison until approximately the end of July. Between finals and then, I'll be working more or less full-time. To take over for me, Kevin is looking at bringing on a new programmer soon -- hopefully while I and/or Johannes are around to provide a softer introduction to the code base.
+
+
+We're going to have an existing LOCI student begin work on building the second LOCI OpenSPIM, with the Andor camera in mind. In particular, one idea we had was to increase the height of the optical axis off the breadboard, with two ends in mind: first, to accommodate the Neo's larger camera head size, and two, to take advantage of ThorLabs' available spacers so it is possible to purchase the necessary components if 3D-printing is not available.
+
+
+We discussed the software priorities, which I believe for the moment boiled down to the Fiji vs. ImageJ, MicroManager vs. OpenSPIM conundrum. Kevin is planning to talk with Johannes to get his opinion on the resolution, but we're also hoping to work more directly with the MM team on either (a) porting MM to Fiji (even if it's a highly stripped-down version), or (b) making the OpenSPIM software vanilla-MM-compatible. Either solution will work to end our distribution of a separate version of Micro-Manager. We also talked about a possible hackathon to decide which combination of these will happen, deciding tentatively on a 3-day hackathon in mid-May.
+
+
+There were a few questions about the new data taken today; Kevin is curious whether the data could be regarded as 'good' -- and indeed just what 'good' data looks like. We'll talk more about this with Jayne and Julie during the next meeting (3:30 PM on Friday, 4 April) and decide.
+
+
+Hopefully Kevin can fill in any important details I missed!
+
+
+Thanks for reading,
+Luke Stuyvenberg
+
+
+From stuyvenberg at wisc.edu  Sun Mar 30 19:18:35 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Sun, 30 Mar 2014 19:18:35 -0500
+Subject: [OpenSPIM] A question about the Light Sheet software
+In-Reply-To: <FF8505D4-2024-4A49-BC6D-208A0828C7A2@gmail.com>
+References: <5F46D871-B4EA-4785-9BD7-44DDC7CF734D@gmail.com>
+	<143D0147-BAB0-4F35-A085-0289D6579697@cos.uni-heidelberg.de>
+	<E7662CD2-0CD7-4F04-B451-EF82A1D073C3@gmail.com>
+	<2AA78689-FECE-4F72-813C-D39FD80284B0@cos.uni-heidelberg.de>
+	<FF8505D4-2024-4A49-BC6D-208A0828C7A2@gmail.com>
+Message-ID: <5338B45B.10201@wisc.edu>
+
+Hello Cristian and Alexis,
+
+Please pardon the long delay in my reply!
+
+On 3/24/2014 3:15 PM, Cristian Undurraga wrote:
+> Thanks Dr. Alexis for the full answer. I`m tempted to updates the 
+> softwares, but I`ll wait for the correct version, :)
+>
+> We are using the MicroManager version "1.4.x dev", this is a version 
+> for "developers"?, it would be better if we use the "users" version?, 
+> i.e. 1.4.15 (this have a update for the Cobolt laser made by Dr. 
+> Maizel) or the 1.4.14. In these case, I`ll need to configure all the 
+> hardware from zero, as shown on the OpenSpim web page 
+> (http://openspim.org/How_to_install).
+> Best,
+>
+> Cristian
+>
+> El 21-03-2014, a las 429, Alexis Maizel escribi?:
+>
+>> Hi Cristian,
+>> sorry for the delay.
+>>
+>> First: do NOT upgrade anything. This will break the ability to 
+>> control the laser. (short explanation: to get the Cobolt laser to 
+>> work with OpenSPIM I had to essentially rewrite the code of the laser 
+>> driver; unfortunately, in between the nice folks at OpenSPIM have 
+>> decided to revamp the way OpenSPIM talks to the laser for the new 
+>> version of OpenSPIM; hence, if you update you loose the ability to 
+>> operate the laser?). I have to hack the code of the current Cobolt 
+>> driver to make it compatible with hte latest (and hopefully future) 
+>> versions of OpenSPIM. What I need is time...
+Alexis -- this is definitely something we should coordinate on; I feel 
+we might be missing each other in trying to simultaneously accommodate 
+each other. ;-) When it's convenient, feel free to contact me and the 
+OpenSPIM list to sort this out; we can set up a long-term solution.
+
+>>>>> We are using the "version 1.4.x dev" with the configuration file 
+>>>>> to startup "OpenSPIM01.app.cfg", and the problem is that when we 
+>>>>> specify an "Output directory" (in ex. a new folder in the 
+>>>>> desktop), the program don`t take the picture or don?t start the 
+>>>>> timelapse, but when left empty the "Output directory", we can take 
+>>>>> the picture or the TL begins. The default option (with an empty 
+>>>>> output directory) is limited for the memory allocated in Fiji 
+>>>>> (1024 in RAM), and therefore is limited the acquisition file to 
+>>>>> this memory amount.
+Christian -- I don't know exactly why this is happening... Could you 
+please try to start a time lapse with the output directory specified 
+again, then attach the most recent Micro-Manager core log (a file named 
+CoreLog########.txt, in the OpenSPIM.app directory)? This will help me 
+find the source of the problem so I can fix it. Thanks!
+
+Once again, I apologize for the delay!
+Luke Stuyvenberg
+
+
+
+From stuyvenberg at wisc.edu  Mon Mar 31 15:47:40 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 31 Mar 2014 15:47:40 -0500
+Subject: [OpenSPIM] A question about the Light Sheet software
+In-Reply-To: <7430d14f12b54d.5339d458@wiscmail.wisc.edu>
+References: <5F46D871-B4EA-4785-9BD7-44DDC7CF734D@gmail.com>
+	<143D0147-BAB0-4F35-A085-0289D6579697@cos.uni-heidelberg.de>
+	<E7662CD2-0CD7-4F04-B451-EF82A1D073C3@gmail.com>
+	<2AA78689-FECE-4F72-813C-D39FD80284B0@cos.uni-heidelberg.de>
+	<FF8505D4-2024-4A49-BC6D-208A0828C7A2@gmail.com>
+	<5338B45B.10201@wisc.edu>
+	<E20B9EE3-5691-4C57-9536-A61D61DC5E5F@gmail.com>
+	<75e0ea2612f6ac.5339d2ec@wiscmail.wisc.edu>
+	<7780e88412e956.5339d32a@wiscmail.wisc.edu>
+	<75f0ded712d2b7.5339d367@wiscmail.wisc.edu>
+	<7430884512e6d5.5339d3a3@wiscmail.wisc.edu>
+	<7690931712a34a.5339d3df@wiscmail.wisc.edu>
+	<7780ce4912cb61.5339d41c@wiscmail.wisc.edu>
+	<7430d14f12b54d.5339d458@wiscmail.wisc.edu>
+Message-ID: <7480b28512d4d8.53398e1c@wiscmail.wisc.edu>
+
+Hi Christian,
+
+On 03/31/14, Cristian Undurraga  wrote:
+> Hi Luke,
+> 
+> I`m sending the file that you asked after to try to start a time lapse, specified a new directory in the desktop (new folder named "1" in the desktop).Thank you very much. The file seems to indicate that a necessary JAR file is missing for OME-TIFF output -- the most likely candidate is OpenSPIM.app/jars/bio-formats/formats-api-5.0.0.jar (the latest version available through the Fiji Updater).
+
+
+Did you download the OpenSPIM package from our website? If you run the Fiji Updater (Help -> Update Fiji), it should give you a list of files that need to be updated. Most likely, you can accept the Updater's proposal by clicking "Accept changes" at the bottom; this should fix your issue.
+
+
+I should be clear that this is different from updating Micro-Manager. Our plugin does not currently come with Micro-Manager, so if you download Micro-Manager's latest version from their website, you won't be able to control an OpenSPIM. The Fiji updater, on the other hand, downloads newer versions of the files OpenSPIM relies on.
+
+
+If you have any questions, or if this doesn't resolve your issue, please don't hesitate to mail me and/or the list (openspim at openspim.org) again!
+Thanks,
+Luke
+
+
+From stuyvenberg at wisc.edu  Mon Mar 10 15:14:46 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 10 Mar 2014 15:14:46 -0500
+Subject: [OpenSPIM] Registration plugin software torture-test
+In-Reply-To: <7680bd46f432f.531e1d06@wiscmail.wisc.edu>
+References: <7750c369f2782.531e184d@wiscmail.wisc.edu>
+	<76809a59f56f6.531e188b@wiscmail.wisc.edu>
+	<76c09858f2963.531e18c7@wiscmail.wisc.edu>
+	<7750f4adf2665.531e1903@wiscmail.wisc.edu>
+	<76d097a8f6572.531e1940@wiscmail.wisc.edu>
+	<76c0fe67f6383.531e197c@wiscmail.wisc.edu>
+	<771088dbf0cb5.531e19b8@wiscmail.wisc.edu>
+	<7700f93cf075e.531e19f5@wiscmail.wisc.edu>
+	<76c0ddf2f552a.531e1a32@wiscmail.wisc.edu>
+	<77008142f3343.531e1ae6@wiscmail.wisc.edu>
+	<769099c9f1153.531e1b22@wiscmail.wisc.edu>
+	<76c0e8acf650e.531e1b5f@wiscmail.wisc.edu>
+	<7750eeb5f5409.531e1b9b@wiscmail.wisc.edu>
+	<7710ee85f2bdc.531e1bd8@wiscmail.wisc.edu>
+	<76f0da49f20df.531e1c14@wiscmail.wisc.edu>
+	<76d084a2f0afb.531e1c50@wiscmail.wisc.edu>
+	<76f0b8c1f24aa.531e1c8d@wiscmail.wisc.edu>
+	<76d0995af3198.531e1cc9@wiscmail.wisc.edu>
+	<7680bd46f432f.531e1d06@wiscmail.wisc.edu>
+Message-ID: <7520993cf4a83.531dd6e6@wiscmail.wisc.edu>
+
+Hey everyone,
+
+To try to get a feel for which parts of the reconstruction process were holding us up, I ran a registration torture test on some data acquired while I was in Dresden at the MPI.
+
+
+The data was taken on an OpenSPIM 1.0. The sample was a zebrafish embryo infected with a fungus that fluoresced. Nine views, in 20-degree increments, each consisting of a stack ranging from 300 - 450 um (at 3 um steps) were recorded. The Cube laser was set to 3 mW, and the Orca ER camera was set to 100ms exposure time.
+
+
+I ran the registration plugin in both modes (Difference of Gaussians and Difference of Mean), and with threshold values ranging from 0.004 to 0.018 in steps of 0.002. The bead radii (sigma) values passed to the plugin were 1 and 2. Each combination of these settings was run 100 times, and scored as follows: Each time the RANSAC algorithm deduced a model, denoted in the logs by "Remaining inliers after RANSAC:", the percentage of remaining inliers was included in a running average.
+
+
+The results are as follows:
+
+
+Difference-of-Mean (Integral image based):
+ Average score for threshold 0.004: 89.19%
+ Average score for threshold 0.006: 91.72%
+ Average score for threshold 0.008: 86.44%
+ Average score for threshold 0.010: 69.39%
+ Average score for threshold 0.012: 25.00%
+ Average score for threshold 0.014: 7.39%
+ Average score for threshold 0.016: 0.00%
+ Average score for threshold 0.018: 0.00%
+
+
+Difference-of-Gaussian:
+ Average score for threshold 0.004: 93.94%
+ Average score for threshold 0.006: 93.53%
+ Average score for threshold 0.008: 92.75%
+ Average score for threshold 0.010: 48.25%
+ Average score for threshold 0.012: 12.31%
+ Average score for threshold 0.014: 2.42%
+ Average score for threshold 0.016: 0.00%
+ Average score for threshold 0.018: 0.00%
+
+
+
+I have two notes to make:
+- First, any score above ~ 50% might have been able to be fused into a final image, though whether or not the reconstruction is correct would be a different matter.
+- Second, despite the nature of the RANSAC algorithm, the results were largely deterministic -- for a given threshold and mode, each view combination seemed to end up with the same number of remaining inliers.
+
+
+
+Given the results of this test, I have a few suggestions for problematic registrations:
+- First, and above all else, no amount of software processing can make up for noisy data or a low number of beads. When recording, it might help to make stacks overlong, to get more beads before and after the sample in the recorded volume. Play around with bead concentrations -- make bead-only samples at varying concentrations and see if they look too dense or sparse. Keep in mind that it's difficult to get beads close to the sample.
+- Second, choose the threshold carefully. Although the data above seem to indicate that lower is better, this is only true so far. For OpenSPIM data with settings similar to these (3 mW, 100 ms), I'd suggest starting with 0.008 (If I recall correctly, this is the default threshold for the Difference-of-Gaussians method). If you're having trouble, try experimenting with the radii as well -- 1/2 should work for subresolution beads, but if your system is slightly misaligned, 2/3 might work better. (If you can't seem to find the right setting, try recording a macro and putting it in a loop to test different values.)
+- Third, if your processing computer can handle it, Difference of Gaussians might produce better results -- it's a more complex calculation and (I believe) requires more memory than the alternative, but it seems to produce more consistent results.
+
+
+Sorry for the long e-mail!
+Luke Stuyvenberg
+
+
+
+From john.lim at imb.a-star.edu.sg  Mon Mar 10 23:08:07 2014
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Tue, 11 Mar 2014 12:08:07 +0800
+Subject: [OpenSPIM] Off Center Rotation & Calibration Tools in Open SPIM
+	Software
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B304466A10AC45@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Dear All,
+
+I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+
+Any help will be greatly appreciated,
+John
+________________________________________
+
+
+From stuyvenberg at wisc.edu  Wed Mar 12 23:39:06 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 12 Mar 2014 23:39:06 -0500
+Subject: [OpenSPIM] Fwd: Re: Off Center Rotation & Calibration Tools in Open
+ SPIM Software
+In-Reply-To: <53200793.4010504@wisc.edu>
+References: <53200793.4010504@wisc.edu>
+Message-ID: <5321366A.7030800@wisc.edu>
+
+(Forgot to CC the list, sorry!)
+
+
+-------- Original Message --------
+Subject: 	Re: [OpenSPIM] Off Center Rotation & Calibration Tools in Open 
+SPIM Software
+Date: 	Wed, 12 Mar 2014 02:06:59 -0500
+From: 	Luke Stuyvenberg <stuyvenberg at wisc.edu>
+To: 	LIM Soon Yew John (IMB) <john.lim at imb.a-star.edu.sg>
+
+
+
+Hi John,
+
+Solving this problem is precisely the goal of the automatic rotational
+axis calibration tool (opened by clicking 'Calibrate' on the stage
+control tab).
+
+I'm afraid it's poorly documented at the moment -- a failure on my part.
+I believe we have a ticket out to provide more documentation (or if we
+don't, we soon will).
+
+Here's a rough guide that should get you started:
+- Set the rotation stage to a low value -- -90 degrees or so.
+- Find a nice, bright bead in the live view, then open the calibrator.
+- Use FIJI's rectangle ROI tool to select a region around that bead. The
+region should be as large as possible without including other/brighter
+beads.
+- Click 'Obtain Next' to begin the axis detection. (This button will
+change to 'Interrupt' while the software is processing.) The system will
+scan through Z to localize the bead, then rotate the stage by one step
+and repeat, building a list of bead positions.
+- After about 90 degrees (though, the more locations it has, the
+better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+determine the rotation axis location and direction.
+
+This is an optimistic guide, however; in my experience, the calibrator
+sometimes has trouble tracking a bead -- or a bead that looked bright
+quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+button opens an advanced panel for controlling the tracking process:
+first/second delta control the Z scan size, X/Y determination is for
+localizing in the image plane, and so on. In particular, changing X/Y
+determination to 'Max Intens.' often produces better results than
+'Gaussian (Beads)'.
+
+Once the axis is detected, the calibration window can be closed or
+minimized. At this point, rotations with the mouse (i.e. holding Alt and
+dragging the mouse back and forth) will attempt to rotate around the
+detected axis. (I should note that the rotation slider does *not*
+implement this calculation at the moment! Only the mouse controls are
+properly affected.)
+
+I'm sorry I can't be more helpful presently; I'll check on that
+documentation ticket/create it if necessary, to make sure this feature
+is documented more thoroughly.
+
+Luke
+
+On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+> Dear All,
+>
+> I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+>
+> Any help will be greatly appreciated,
+> John
+> ________________________________________
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140312/871d7f17/attachment-0002.html>
+
+From stuyvenberg at wisc.edu  Thu Mar 13 17:22:34 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Thu, 13 Mar 2014 17:22:34 -0500
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<75e0978ee324d.53222863@wiscmail.wisc.edu>
+	<7510da11e7812.532228a0@wiscmail.wisc.edu>
+	<7780813ae12d5.532228dc@wiscmail.wisc.edu>
+	<7740e1c2e7325.53222918@wiscmail.wisc.edu>
+	<7510949be6508.53222955@wiscmail.wisc.edu>
+	<75e0d0a5e6a44.53222991@wiscmail.wisc.edu>
+	<747084dfe1e42.532229ce@wiscmail.wisc.edu>
+	<7460ebace5e88.53222a0a@wiscmail.wisc.edu>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+Message-ID: <7700e199ec717.5321e95a@wiscmail.wisc.edu>
+
+Hi Dr. Hoehn,
+
+I'm afraid I lack some of the specialty knowledge to answer in great detail, but I'll offer my best guesses. My answers will be confined to my experience with the 3D viewer; I'm not acquainted with the BigDataViewer, but perhaps Johannes can offer insights on that point.
+
+On 03/11/14, "Dr S. Hoehn" wrote:
+> •	Is it possible to use the Fiji plugin 3D Viewer or the BigDataViewer or any other plugins to
+> 
+> o	produce 3D projections of the entire time-lapse data set over time (faster than with ‘3D project’)?
+
+Possibly not faster, but there would be several advantages to using a true 3D viewer over the projection plugin. The first is that...
+
+
+> o	produce 3D projections (including one or more timepoints) that are freely rotatable (not ‘just’ around the x, y and z-axis)?
+
+
+...yes, if the 3D viewer can show you your image data in 3D, it is freely rotatable. There are a few caveats. First, it would require a lot of computer memory, in particular to show the data without any downsampling (scaling the data down). I don't know that the current 3D viewer supports time points, but if it does, including the time evolution will also require significant amounts of RAM. Second, it may take a considerable amount of time to load the data and create a model out of it -- judging by the quality of your data, it may be quite a long time.
+
+> o	produce cross sections in every possible angle by slicing?
+
+
+I don't think the 3D viewer has this capability -- there is an orthoslice function, but that amounts to axial-only slicing. There may be a combination of plugins, however, which can rotate the data to whatever angle you like, then pull out a particular slice.
+
+
+On 03/11/14, "Dr S. Hoehn" wrote:
+> •	If the above actions are possible with Fiji, would I have to use macros?
+
+
+
+If you intend to repeat any process for several different sets of samples, a macro would certainly be advisable. In the context of this task, though, its use might be limited: a macro would have a difficult time recognizing a midsagittal section, so you would probably still need to indicate where to slice -- and if that's the case, it might not be so worthwhile. The best advice I can offer is to automate what you can and learn to enjoy what you can't. ;-)
+
+
+(Please bear in mind that I am not intimately familiar with some of Fiji's more advanced capabilities. I suspect there is a way to train a 'midsagittal view recognizer' program to determine the correct angles at which to rotate and slice the sample, but it's entirely beyond my expertise to advise you on that. Johannes may be able to offer more details.)
+
+
+On 03/11/14, "Dr S. Hoehn" wrote:
+> •	Would it in your opinion save a lot of time to get a commercial software (e.g. Volocity) in addition to Fiji for 4D imaging and slicing?
+
+
+
+We sometimes use BitPlane Imaris for viewing the final, reconstructed data from our OpenSPIM system; it comes down in part to preference. (However, if I'm mistaken in my answer to the above question, and significant parts of your analysis process can be automated, it's worth noting that I still haven't encountered software with the automation functionality to match Fiji's scripting and macros. If you intend to analyze a lot of these samples, pursuing the above options could pay off huge in the long run.)
+
+
+On 03/11/14, "Dr S. Hoehn" wrote:
+> Sorry if this is an impertinent question.
+
+
+Not at all! :-)
+
+
+I hope you've found this e-mail helpful!
+Luke Stuyvenberg
+
+
+On 03/11/14, "Dr S. Hoehn"  wrote:
+> 
+> Dear Johannes and Luke,
+> 
+> I have some questions on the following points under ‘Data processing’ on the OpenSPIM homepage:
+> •	Browsing of OpenSPIM data with Fiji's BigDataViewer (coming soon).
+> •	3D rendering of fused OpenSPIM data.
+> 
+> I am working with spherical algae containing several embryos that are all differently positioned. I would like to visualize and analyse the embryos’ development. I am usually taking data for 20 to 40 hours in 2 to 3 min intervals, stacks ranging from 300-450 um at 4.5 um steps, from just one angle (data sets 100-200 GB).
+> 
+> I am looking for solutions to search the time-lapse for specific developmental stages, crop individual embryos, rotate and slice them, so I get midsagittal sections.
+> 
+> So far I am using Fiji to produce a 3D-projection from one angle (which takes at least 10 hours) of the time-lapse. That shows me, when each embryo is in the wanted developmental stage. Then I crop embryos with Fiji. But to get a midsagittal section (by just choosing the accordant slice in the stack), I just have to be lucky that the embryo was oriented beneficially. So far I am not taking data from different angles but that would not solve my problem as I have to rotate the embryos in more than one axis.
+> 
+> So these are my questions (I am pretty new to Fiji, so please excuse me if some are trivial):
+> 
+> •	Is it possible to use the Fiji plugin 3D Viewer or the BigDataViewer or any other plugins to
+> 
+> o	produce 3D projections of the entire time-lapse data set over time (faster than with ‘3D project’)?
+> o	produce 3D projections (including one or more timepoints) that are freely rotatable (not ‘just’ around the x, y and z-axis)?
+> o	produce cross sections in every possible angle by slicing?
+> 
+> •	When will the BigDataViewer be available? What can it do?
+> 
+> •	If the above actions are possible with Fiji, would I have to use macros?
+> 
+> •	Would it in your opinion save a lot of time to get a commercial software (e.g. Volocity) in addition to Fiji for 4D imaging and slicing? Sorry if this is an impertinent question.
+> 
+> Thank you very much for your time and efforts!
+> 
+> Best wishes,
+> Stephanie
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140313/f8596e46/attachment-0002.html>
+
+From Johannes.Schindelin at gmx.de  Fri Mar 14 09:04:03 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 14 Mar 2014 15:04:03 +0100 (CET)
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <7700e199ec717.5321e95a@wiscmail.wisc.edu>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<75e0d0a5e6a44.53222991@wiscmail.wisc.edu>
+	<747084dfe1e42.532229ce@wiscmail.wisc.edu>
+	<7460ebace5e88.53222a0a@wiscmail.wisc.edu>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+Message-ID: <alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+
+Hi Luke,
+
+On Thu, 13 Mar 2014, Luke Stuyvenberg wrote:
+
+> I'm not acquainted with the BigDataViewer, but perhaps Johannes can
+> offer insights on that point.
+
+Unfortunately, I am also not quite versed in things BigDataViewer myself.
+
+However, there is this fantastic project called Fiji where you can ask
+questions on the forum (http://imagej.1557.x6.nabble.com/). The advantage
+over mailing someone in private is that you can tap into a much larger
+pool of expertise. Well, that is actually only one advantage (another
+being that other scientists can learn from your exchange of knowledge; yet
+another one being that you are less likely to hit a week when the other
+person is absent; there are many, many more advantages to open
+communications).
+
+Ciao,
+Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Tue Mar 18 10:33:58 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 18 Mar 2014 16:33:58 +0100 (CET)
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+Message-ID: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a
+forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the
+conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM
+implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this
+field. specifically on SPIM modifications,fluorescent probes, sample
+carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar 
+
+
+
+From KUMARAVE001 at e.ntu.edu.sg  Tue Mar 18 10:49:44 2014
+From: KUMARAVE001 at e.ntu.edu.sg (#KUMARAVEL KANDASWAMY#)
+Date: Tue, 18 Mar 2014 15:49:44 +0000
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+In-Reply-To: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>
+References: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>
+Message-ID: <c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+
+Hi Johannes.
+
+Thanks for the note, I wasn't aware of this before.  Please move the post to the appropriate destination. 
+
+Just wanted to know if anyone has tried SPIM for studying developmental biology of bacteria. I would be pleased to know the SPIM modifications required for Imaging bacteria. Such a modifications in the sample chamber/carriers.
+
+Thank you,
+
+Best regards
+Kumar
+
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de] 
+Sent: Tuesday, 18 March 2014 11:34 PM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this field. specifically on SPIM modifications,fluorescent probes, sample carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar 
+
+
+
+From stuyvenberg at wisc.edu  Tue Mar 18 11:09:49 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Tue, 18 Mar 2014 11:09:49 -0500
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+Message-ID: <75a091d2b400c.5328297d@wiscmail.wisc.edu>
+
+Hi John,
+
+I'm not able to reproduce this error on our end, which means I'll need a little help from you to find out what's going on. If possible, could you attach a recent core log? These are files named "CoreLogYYYYMMDD.txt" in the OpenSPIM.app directory. With a little luck, the log might contain details on any issue.
+
+
+Additionally, it might help to be sure OpenSPIM itself is fully up to date: Launch the Fiji Updater, click on "Advanced Mode" in the bottom right, and from the "View Options" drop-down at the top, select "View files of the 'OpenSPIM' site". Make sure all files in the list below are marked as "Up-to-date".
+
+
+Thanks,
+Luke
+
+On 03/18/14, "LIM Soon Yew John (IMB)"  wrote:
+> Hi Luke,
+> 
+> I am unable to launch the Open SPIM GUI (Plugins > Acquire SPIM Image) from Micro-Manager after Fiji update. There was no response when I click on "Acquire SPIM Image" on the "Plugins" dropdown menu in Micro-Manager.
+> 
+> Can you please check if there is an issue with the software?
+> 
+> Thank You,
+> John
+> ________________________________________
+> From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+> Sent: Wednesday, March 12, 2014 3:06 PM
+> To: LIM Soon Yew John (IMB)
+> Subject: Re: [OpenSPIM] Off Center Rotation & Calibration Tools in Open SPIM Software
+> 
+> Hi John,
+> 
+> Solving this problem is precisely the goal of the automatic rotational
+> axis calibration tool (opened by clicking 'Calibrate' on the stage
+> control tab).
+> 
+> I'm afraid it's poorly documented at the moment -- a failure on my part.
+> I believe we have a ticket out to provide more documentation (or if we
+> don't, we soon will).
+> 
+> Here's a rough guide that should get you started:
+> - Set the rotation stage to a low value -- -90 degrees or so.
+> - Find a nice, bright bead in the live view, then open the calibrator.
+> - Use FIJI's rectangle ROI tool to select a region around that bead. The
+> region should be as large as possible without including other/brighter
+> beads.
+> - Click 'Obtain Next' to begin the axis detection. (This button will
+> change to 'Interrupt' while the software is processing.) The system will
+> scan through Z to localize the bead, then rotate the stage by one step
+> and repeat, building a list of bead positions.
+> - After about 90 degrees (though, the more locations it has, the
+> better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+> determine the rotation axis location and direction.
+> 
+> This is an optimistic guide, however; in my experience, the calibrator
+> sometimes has trouble tracking a bead -- or a bead that looked bright
+> quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+> button opens an advanced panel for controlling the tracking process:
+> first/second delta control the Z scan size, X/Y determination is for
+> localizing in the image plane, and so on. In particular, changing X/Y
+> determination to 'Max Intens.' often produces better results than
+> 'Gaussian (Beads)'.
+> 
+> Once the axis is detected, the calibration window can be closed or
+> minimized. At this point, rotations with the mouse (i.e. holding Alt and
+> dragging the mouse back and forth) will attempt to rotate around the
+> detected axis. (I should note that the rotation slider does *not*
+> implement this calculation at the moment! Only the mouse controls are
+> properly affected.)
+> 
+> I'm sorry I can't be more helpful presently; I'll check on that
+> documentation ticket/create it if necessary, to make sure this feature
+> is documented more thoroughly.
+> 
+> Luke
+> 
+> On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+> > Dear All,
+> >
+> > I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+> >
+> > Any help will be greatly appreciated,
+> > John
+> > ________________________________________
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+
+
+
+From j.krieger at Dkfz-Heidelberg.de  Tue Mar 18 11:45:25 2014
+From: j.krieger at Dkfz-Heidelberg.de (Krieger, Jan)
+Date: Tue, 18 Mar 2014 17:45:25 +0100
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+In-Reply-To: <c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+References: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>,
+	<c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+Message-ID: <4F91222C659D5B4E8C89CE4D710BB08EFFD98A3CE8@DKFZEX01.ad.dkfz-heidelberg.de>
+
+Hi Kumar!
+
+we are using a SPIM to image single mamallian cells, which is already close to applications in bacteria. We use imaging FCS inside the cells. For use the modification of the SPIM was not too hard: basically you need a thin lightsheet (~1-2µm), which sections the cell and you need to mount the cells. There are several ways of achieving the latter: Either you embed them in a gel, or if you have adherent cells, you can simply grow them on a piece of coverslip, which is then mounted in the sample chamber. Here are some refs, which might be interesting for you:
+http://www.nature.com/nbt/journal/v29/n9/full/nbt.1928.html
+http://www.opticsinfobase.org/abstract.cfm?URI=oe-22-3-2358
+http://mcb.asm.org/cgi/doi/10.1128/MCB.01097-13
+http://www.nature.com/nmeth/journal/v8/n5/full/nmeth.1586.html
+http://doi.wiley.com/10.1111/jmi.12051
+http://www.celldiv.com/content/6/1/22
+http://dx.doi.org/10.1186%2F1747-1028-6-22  
+http://www.nature.com/nmeth/journal/v10/n5/full/nmeth.2411.html?WT.ec_id=NMETH-201305
+http://dx.doi.org/10.1371%2Fjournal.pone.0050846
+
+I hope that helps ;-) ... BTW: As you are in Singapore, maybe talk to Anand Prataph Singh who did his PhD in the group of Thorsten Wohland at NUS.
+
+Best,
+JAN
+
+
+Dipl.-Phys. Jan Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski)
+Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: j.krieger at dkfz.de
+www: http://www.dkfz.de/Macromol/
+________________________________________
+Von: openspim-bounces at openspim.org [openspim-bounces at openspim.org] im Auftrag von #KUMARAVEL KANDASWAMY# [KUMARAVE001 at e.ntu.edu.sg]
+Gesendet: Dienstag, 18. März 2014 16:49
+An: Johannes Schindelin
+Cc: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+
+Hi Johannes.
+
+Thanks for the note, I wasn't aware of this before.  Please move the post to the appropriate destination.
+
+Just wanted to know if anyone has tried SPIM for studying developmental biology of bacteria. I would be pleased to know the SPIM modifications required for Imaging bacteria. Such a modifications in the sample chamber/carriers.
+
+Thank you,
+
+Best regards
+Kumar
+
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de]
+Sent: Tuesday, 18 March 2014 11:34 PM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this field. specifically on SPIM modifications,fluorescent probes, sample carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From john.lim at imb.a-star.edu.sg  Tue Mar 18 20:53:07 2014
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Wed, 19 Mar 2014 09:53:07 +0800
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <75a091d2b400c.5328297d@wiscmail.wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>,
+	<75a091d2b400c.5328297d@wiscmail.wisc.edu>
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Hi Luke,
+
+Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day. 
+
+Hopefully those log files will help you identify the issue I faced. Thanks.
+
+Best Regards,
+John 
+________________________________________
+From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+Sent: Wednesday, March 19, 2014 12:09 AM
+To: LIM Soon Yew John (IMB)
+Cc: openspim at openspim.org
+Subject: Re: Unable to launch Open SPIM GUI After Fiji Update
+
+Hi John,
+
+I'm not able to reproduce this error on our end, which means I'll need a little help from you to find out what's going on. If possible, could you attach a recent core log? These are files named "CoreLogYYYYMMDD.txt" in the OpenSPIM.app directory. With a little luck, the log might contain details on any issue.
+
+
+Additionally, it might help to be sure OpenSPIM itself is fully up to date: Launch the Fiji Updater, click on "Advanced Mode" in the bottom right, and from the "View Options" drop-down at the top, select "View files of the 'OpenSPIM' site". Make sure all files in the list below are marked as "Up-to-date".
+
+
+Thanks,
+Luke
+
+On 03/18/14, "LIM Soon Yew John (IMB)"  wrote:
+> Hi Luke,
+>
+> I am unable to launch the Open SPIM GUI (Plugins > Acquire SPIM Image) from Micro-Manager after Fiji update. There was no response when I click on "Acquire SPIM Image" on the "Plugins" dropdown menu in Micro-Manager.
+>
+> Can you please check if there is an issue with the software?
+>
+> Thank You,
+> John
+> ________________________________________
+> From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+> Sent: Wednesday, March 12, 2014 3:06 PM
+> To: LIM Soon Yew John (IMB)
+> Subject: Re: [OpenSPIM] Off Center Rotation & Calibration Tools in Open SPIM Software
+>
+> Hi John,
+>
+> Solving this problem is precisely the goal of the automatic rotational
+> axis calibration tool (opened by clicking 'Calibrate' on the stage
+> control tab).
+>
+> I'm afraid it's poorly documented at the moment -- a failure on my part.
+> I believe we have a ticket out to provide more documentation (or if we
+> don't, we soon will).
+>
+> Here's a rough guide that should get you started:
+> - Set the rotation stage to a low value -- -90 degrees or so.
+> - Find a nice, bright bead in the live view, then open the calibrator.
+> - Use FIJI's rectangle ROI tool to select a region around that bead. The
+> region should be as large as possible without including other/brighter
+> beads.
+> - Click 'Obtain Next' to begin the axis detection. (This button will
+> change to 'Interrupt' while the software is processing.) The system will
+> scan through Z to localize the bead, then rotate the stage by one step
+> and repeat, building a list of bead positions.
+> - After about 90 degrees (though, the more locations it has, the
+> better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+> determine the rotation axis location and direction.
+>
+> This is an optimistic guide, however; in my experience, the calibrator
+> sometimes has trouble tracking a bead -- or a bead that looked bright
+> quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+> button opens an advanced panel for controlling the tracking process:
+> first/second delta control the Z scan size, X/Y determination is for
+> localizing in the image plane, and so on. In particular, changing X/Y
+> determination to 'Max Intens.' often produces better results than
+> 'Gaussian (Beads)'.
+>
+> Once the axis is detected, the calibration window can be closed or
+> minimized. At this point, rotations with the mouse (i.e. holding Alt and
+> dragging the mouse back and forth) will attempt to rotate around the
+> detected axis. (I should note that the rotation slider does *not*
+> implement this calculation at the moment! Only the mouse controls are
+> properly affected.)
+>
+> I'm sorry I can't be more helpful presently; I'll check on that
+> documentation ticket/create it if necessary, to make sure this feature
+> is documented more thoroughly.
+>
+> Luke
+>
+> On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+> > Dear All,
+> >
+> > I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+> >
+> > Any help will be greatly appreciated,
+> > John
+> > ________________________________________
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20140319.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0006.txt>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20140318.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0007.txt>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20140311.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0008.txt>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot.jpg
+Type: image/jpeg
+Size: 591321 bytes
+Desc: Screenshot.jpg
+URL: <http://openspim.org/pipermail/openspim/attachments/20140319/5001b060/attachment-0002.jpg>
+
+From stuyvenberg at wisc.edu  Wed Mar 19 01:44:53 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 19 Mar 2014 01:44:53 -0500
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+	<75a091d2b400c.5328297d@wiscmail.wisc.edu>
+	<E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>
+Message-ID: <53293CE5.3090706@wisc.edu>
+
+Hi John,
+
+On 3/18/2014 8:53 PM, LIM Soon Yew John (IMB) wrote:
+> Hi Luke,
+>
+> Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day.
+>
+> Hopefully those log files will help you identify the issue I faced. Thanks.
+They do indeed help; I see the problem -- one of your stages has moved 
+out of its expected range (most likely the twister, as the others have a 
+physical limit to their movement). I can push a software fix for this 
+soon, but there are two immediate workarounds (either one should work):
+
+1. If you have the software for the Picard 4D stage, you can use that to 
+reset the position. (It can also be downloaded from the Picard 
+Industries website [1].) Launch the software, enter the appropriate 
+serial number, then click 'Home'.
+
+2. If you do not have that software and would rather not download it, it 
+should still be possible to reset the stage's position from Micro-Manager:
+- Launch Micro-Manager.
+- Click Tools -> Script Panel.
+- Type or copy/paste the following (If you did not use the default 
+twister name, be sure to replace the text in the line below with the 
+correct name.):
+
+mmc.setPosition("Picard Twister", 0);
+
+- Press enter.
+
+Please let me know if the trouble persists after this. I'll also soon 
+make change to the software to make sure this case doesn't stop the 
+software from loading in the future.
+
+Thanks again,
+Luke
+
+[1] There is a link to this software under 
+http://www.picard-industries.com/products.html#usb-4d-stage
+
+
+
+From john.lim at imb.a-star.edu.sg  Wed Mar 19 04:37:41 2014
+From: john.lim at imb.a-star.edu.sg (LIM Soon Yew John (IMB))
+Date: Wed, 19 Mar 2014 17:37:41 +0800
+Subject: [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+In-Reply-To: <53293CE5.3090706@wisc.edu>
+References: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FB@BMSIMBOX4.bmsi.a-star.edu.sg>
+	<76a0aa52b5ae5.53286f09@wiscmail.wisc.edu>
+	<76f0a229b1b78.53286f45@wiscmail.wisc.edu>
+	<76b0c824b3f20.53286f81@wiscmail.wisc.edu>
+	<75d0fb92b4e2f.53286fbe@wiscmail.wisc.edu>
+	<75a091d2b400c.5328297d@wiscmail.wisc.edu>
+	<E55B3C5CC061114E817EBD3B94D0B0B304466B6F08FE@BMSIMBOX4.bmsi.a-star.edu.sg>,
+	<53293CE5.3090706@wisc.edu>
+Message-ID: <E55B3C5CC061114E817EBD3B94D0B0B304466B6F0905@BMSIMBOX4.bmsi.a-star.edu.sg>
+
+Hi Luke,
+
+Resetting the Picard stages back to zero positions as you advised solved the issue with the OPEN SPIM GUI not starting. 
+
+Thank you very much.
+
+Best Regards,
+John
+________________________________________
+From: Luke Stuyvenberg [stuyvenberg at wisc.edu]
+Sent: Wednesday, March 19, 2014 2:44 PM
+To: LIM Soon Yew John (IMB)
+Cc: openspim at openspim.org
+Subject: Re: Unable to launch Open SPIM GUI After Fiji Update
+
+Hi John,
+
+On 3/18/2014 8:53 PM, LIM Soon Yew John (IMB) wrote:
+> Hi Luke,
+>
+> Thank you for helping me. Attached are the last three log files and a screenshot that shows that the OPEN SPIM files are up to date. I attached the log file for 11/03/2014 as it was working that day.
+>
+> Hopefully those log files will help you identify the issue I faced. Thanks.
+They do indeed help; I see the problem -- one of your stages has moved
+out of its expected range (most likely the twister, as the others have a
+physical limit to their movement). I can push a software fix for this
+soon, but there are two immediate workarounds (either one should work):
+
+1. If you have the software for the Picard 4D stage, you can use that to
+reset the position. (It can also be downloaded from the Picard
+Industries website [1].) Launch the software, enter the appropriate
+serial number, then click 'Home'.
+
+2. If you do not have that software and would rather not download it, it
+should still be possible to reset the stage's position from Micro-Manager:
+- Launch Micro-Manager.
+- Click Tools -> Script Panel.
+- Type or copy/paste the following (If you did not use the default
+twister name, be sure to replace the text in the line below with the
+correct name.):
+
+mmc.setPosition("Picard Twister", 0);
+
+- Press enter.
+
+Please let me know if the trouble persists after this. I'll also soon
+make change to the software to make sure this case doesn't stop the
+software from loading in the future.
+
+Thanks again,
+Luke
+
+[1] There is a link to this software under
+http://www.picard-industries.com/products.html#usb-4d-stage
+
+
+From KUMARAVE001 at e.ntu.edu.sg  Wed Mar 19 08:56:16 2014
+From: KUMARAVE001 at e.ntu.edu.sg (#KUMARAVEL KANDASWAMY#)
+Date: Wed, 19 Mar 2014 13:56:16 +0000
+Subject: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+In-Reply-To: <4F91222C659D5B4E8C89CE4D710BB08EFFD98A3CE8@DKFZEX01.ad.dkfz-heidelberg.de>
+References: <alpine.DEB.1.00.1403181632040.14982@s15462909.onlinehome-server.info>,
+	<c4a5a5cc0dce4f25a205e29876f6c956@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+	<4F91222C659D5B4E8C89CE4D710BB08EFFD98A3CE8@DKFZEX01.ad.dkfz-heidelberg.de>
+Message-ID: <f3a6997e6c834756921590bf63a15555@SIXPR01MB189.apcprd01.prod.exchangelabs.com>
+
+Hi JAN
+
+Thanks a lot for the articles. It was indeed very helpful.
+
+Anand and I have been working together for almost a year now in figuring out the right SPIM components. I have been using Anand's system to optimize several parameters for FCS. Probably we will try embedding the cells in Gel also in coverslip, hopefully it should work. I will  keep you posted soon.
+
+So small world:) 
+
+Thanks again.
+
+Cheers
+Kumar
+
+
+-----Original Message-----
+From: Krieger, Jan [mailto:j.krieger at Dkfz-Heidelberg.de] 
+Sent: Wednesday, March 19, 2014 12:45 AM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: AW: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar!
+
+we are using a SPIM to image single mamallian cells, which is already close to applications in bacteria. We use imaging FCS inside the cells. For use the modification of the SPIM was not too hard: basically you need a thin lightsheet (~1-2µm), which sections the cell and you need to mount the cells. There are several ways of achieving the latter: Either you embed them in a gel, or if you have adherent cells, you can simply grow them on a piece of coverslip, which is then mounted in the sample chamber. Here are some refs, which might be interesting for you:
+http://www.nature.com/nbt/journal/v29/n9/full/nbt.1928.html
+http://www.opticsinfobase.org/abstract.cfm?URI=oe-22-3-2358
+http://mcb.asm.org/cgi/doi/10.1128/MCB.01097-13
+http://www.nature.com/nmeth/journal/v8/n5/full/nmeth.1586.html
+http://doi.wiley.com/10.1111/jmi.12051
+http://www.celldiv.com/content/6/1/22
+http://dx.doi.org/10.1186%2F1747-1028-6-22
+http://www.nature.com/nmeth/journal/v10/n5/full/nmeth.2411.html?WT.ec_id=NMETH-201305
+http://dx.doi.org/10.1371%2Fjournal.pone.0050846
+
+I hope that helps ;-) ... BTW: As you are in Singapore, maybe talk to Anand Prataph Singh who did his PhD in the group of Thorsten Wohland at NUS.
+
+Best,
+JAN
+
+
+Dipl.-Phys. Jan Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski) Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: j.krieger at dkfz.de
+www: http://www.dkfz.de/Macromol/
+________________________________________
+Von: openspim-bounces at openspim.org [openspim-bounces at openspim.org] im Auftrag von #KUMARAVEL KANDASWAMY# [KUMARAVE001 at e.ntu.edu.sg]
+Gesendet: Dienstag, 18. März 2014 16:49
+An: Johannes Schindelin
+Cc: openspim at openspim.org
+Betreff: Re: [OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+
+Hi Johannes.
+
+Thanks for the note, I wasn't aware of this before.  Please move the post to the appropriate destination.
+
+Just wanted to know if anyone has tried SPIM for studying developmental biology of bacteria. I would be pleased to know the SPIM modifications required for Imaging bacteria. Such a modifications in the sample chamber/carriers.
+
+Thank you,
+
+Best regards
+Kumar
+
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de]
+Sent: Tuesday, 18 March 2014 11:34 PM
+To: #KUMARAVEL KANDASWAMY#
+Cc: openspim at openspim.org
+Subject: Welcome to the OpenSPIM community, Kumar!
+
+Hi Kumar,
+
+you posted a request on the OpenSPIM Wiki, but we do not use the Wiki as a forum. Instead, we use the OpenSPIM mailing list (Cc:ed). Let's move the conversation to the list?
+
+Ciao,
+Johannes
+
+-- Kumar's message --
+Articles for SPIM implementation for Biofilms
+
+Hi all
+
+I am Kumar from SCELSE(NTU) Singapore. I am here to follow the SPIM implementation for biofilms exclusively for bacterial communities.
+
+I would love to see more articles discussing on several advances in this field. specifically on SPIM modifications,fluorescent probes, sample carriers and image analysis for bacterial imaging.
+
+Here is one http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-10-2-145
+
+Happy reading
+
+Cheers
+
+Kumar
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From kieran.short at gmail.com  Thu Mar 20 01:09:03 2014
+From: kieran.short at gmail.com (Kieran Short)
+Date: Thu, 20 Mar 2014 17:09:03 +1100
+Subject: [OpenSPIM] OpenSpim/MM and MailArchives Questions.
+Message-ID: <CANkVCd7PPWrsfB88yWfYodmxoxKT8v-xbJsXH2e4kTq=0YObQw@mail.gmail.com>
+
+Hi all,
+
+Firstly, I just wanted to say that OpenSPIM runs out of the box on Win7/64
+box when you run it in "compatibility mode". It didn't work without it -
+not sure if that's something useful for the wiki. FYI, we are using an
+Orca4 v2 camera with the Firebird cameralink, and are using the latest
+Hammamatsu DCAM driver.
+
+Secondly, I'm wondering if anybody is now at the stage where we can fairly
+easily build a 64bit version of Fiji/Micromanager/OpenSPIM from the
+OpenSPIM development environment installer? (or modifications of the
+installer)? I have all the sdks and libraries, and git is synchronised, I
+can build a 32bit version no sweat (albeit, the micromanager plugins for
+the camera are absent).
+
+Thirdly, how do you read the mailinglist archives? unpacking the .GZ
+archives produces unreadable text files for me I've used both 7-zip and
+gzip -d.
+
+We're still commissioning our OpenSPIM, but it's going fairly smoothly so
+far.
+
+best regards,
+Kieran
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/57456121/attachment-0002.html>
+
+From edgar.escobar.nieto at ipt.fraunhofer.de  Thu Mar 20 08:43:54 2014
+From: edgar.escobar.nieto at ipt.fraunhofer.de (edgar.escobar.nieto at ipt.fraunhofer.de)
+Date: Thu, 20 Mar 2014 14:43:54 +0100
+Subject: [OpenSPIM] TIScam problem
+Message-ID: <OFA44232D4.504B5F1B-ONC1257CA1.004B6E28-C1257CA1.004B6E30@ipt.rwth-aachen.de>
+
+ Hi Luke,
+
+It have been a couple of months since I have not touched the SPIM microscope. But now that I am working with it again
+I found problems related to the TIScam (The Imaging Source camera). I am working with the updated version of the 
+OpenSPIM software and I cannot load the TIScam, an error window is opened (I attach an image). I try to configure
+the TIScam using the latest version of Micromanager and the same error happened. The camera works well using
+its own software (also the latest version). It looks the the problem is again related to the DLLs of the camera.
+
+In the other hand I will start to write a program in LabVIEW for controlling the acquisition process of the OpenSPIM microscope
+because this software is already available in the institute and all the devices; camera, laser, and stage can be controlled using
+LabVIEW. I have an idea of how the acquisition process works, but it would be really nice if there is available a flux
+diagram or an algorithm explaining the acquisition process.
+
+Best regads,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+edgar.escobar.nieto at ipt.fraunhofer.de 
+http://www.ipt.fraunhofer.de
+_________________________________________________________________________
+ 
+ 
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/2c3d97a5/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: TIScam fail.PNG
+Type: application/octet-stream
+Size: 89356 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/2c3d97a5/attachment-0002.obj>
+
+From Johannes.Schindelin at gmx.de  Thu Mar 20 09:15:56 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 20 Mar 2014 15:15:56 +0100 (CET)
+Subject: [OpenSPIM] TIScam problem
+In-Reply-To: <OFA44232D4.504B5F1B-ONC1257CA1.004B6E28-C1257CA1.004B6E30@ipt.rwth-aachen.de>
+References: <OFA44232D4.504B5F1B-ONC1257CA1.004B6E28-C1257CA1.004B6E30@ipt.rwth-aachen.de>
+Message-ID: <alpine.DEB.1.00.1403201514390.14982@s15462909.onlinehome-server.info>
+
+Hi Edgar,
+
+On Thu, 20 Mar 2014, edgar.escobar.nieto at ipt.fraunhofer.de wrote:
+
+> I found problems related to the TIScam (The Imaging Source camera). I am
+> working with the updated version of the OpenSPIM software and I cannot
+> load the TIScam, an error window is opened (I attach an image). I try to
+> configure the TIScam using the latest version of Micromanager and the
+> same error happened.
+
+Hmm. I did not find any mention of this problem here:
+
+	http://micro-manager.3463995.n2.nabble.com/template/NamlServlet.jtp?macro=search_page&node=3463995&query=tis&days=180
+
+Maybe you want to report it? The Micro-Manager developers are typically
+very fast, and very helpful.
+
+Ciao,
+Johannes
+
+
+
+From S.Hoehn at damtp.cam.ac.uk  Thu Mar 20 10:04:41 2014
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 20 Mar 2014 15:04:41 +0000
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<75e0d0a5e6a44.53222991@wiscmail.wisc.edu>
+	<747084dfe1e42.532229ce@wiscmail.wisc.edu>
+	<7460ebace5e88.53222a0a@wiscmail.wisc.edu>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+	<alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+Message-ID: <c02117c6898640edd511153ae36d278f@cam.ac.uk>
+
+Hi Johannes,
+
+I am sorry that you where not the right person to address my questions 
+to. Of course forums can be helpful but after reading on the openspim 
+homepage:
+
+"Data processing
+Browsing of OpenSPIM data with Fiji's BigDataViewer (coming soon)."
+
+I simply thought that one of the programers associated with the openspim 
+platform is working on this new plugin, that is specifically designed 
+for spim data.
+Little misunderstanding there.
+
+Best wishes,
+Stephanie
+
+On 2014-03-14 14:04, Johannes Schindelin wrote:
+> Hi Luke,
+> 
+> On Thu, 13 Mar 2014, Luke Stuyvenberg wrote:
+> 
+>> I'm not acquainted with the BigDataViewer, but perhaps Johannes can
+>> offer insights on that point.
+> 
+> Unfortunately, I am also not quite versed in things BigDataViewer 
+> myself.
+> 
+> However, there is this fantastic project called Fiji where you can ask
+> questions on the forum (http://imagej.1557.x6.nabble.com/). The 
+> advantage
+> over mailing someone in private is that you can tap into a much larger
+> pool of expertise. Well, that is actually only one advantage (another
+> being that other scientists can learn from your exchange of knowledge; 
+> yet
+> another one being that you are less likely to hit a week when the other
+> person is absent; there are many, many more advantages to open
+> communications).
+> 
+> Ciao,
+> Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Thu Mar 20 12:52:40 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 20 Mar 2014 18:52:40 +0100 (CET)
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <c02117c6898640edd511153ae36d278f@cam.ac.uk>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+	<alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+	<c02117c6898640edd511153ae36d278f@cam.ac.uk>
+Message-ID: <alpine.DEB.1.00.1403201850480.14982@s15462909.onlinehome-server.info>
+
+Hi Stephanie,
+
+On Thu, 20 Mar 2014, Dr S. Hoehn wrote:
+
+> I am sorry that you where not the right person to address my questions to.
+
+No worries. The BigDataViewer was developed in the Tomancak lab, the same
+one which is responsible for the hardware part of "OpenSPIM 1.0".
+
+> I simply thought that one of the programers associated with the openspim
+> platform is working on this new plugin, that is specifically designed
+> for spim data.
+
+Tobias Pietzsch indeed designed it for SPIM data, but as far as I can
+tell, he is not on the OpenSPIM mailing list.
+
+Ciao,
+Johannes
+
+
+
+From tomancak at mpi-cbg.de  Thu Mar 20 14:29:38 2014
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Thu, 20 Mar 2014 20:29:38 +0100
+Subject: [OpenSPIM] [OpenSpim] 4D imaging, slicing
+In-Reply-To: <alpine.DEB.1.00.1403201850480.14982@s15462909.onlinehome-server.info>
+References: <88a5cda96aac299a80a160b6a766c8b5@cam.ac.uk>
+	<7780b615e187c.53222a46@wiscmail.wisc.edu>
+	<7710fe39e6178.53222b38@wiscmail.wisc.edu>
+	<7480a36fe3480.53222b75@wiscmail.wisc.edu>
+	<7510e559e33fb.53222bb1@wiscmail.wisc.edu>
+	<7480d14ee01ff.53222bee@wiscmail.wisc.edu>
+	<7470ff50e78f1.53222c2a@wiscmail.wisc.edu>
+	<7700c641e1b9b.53222c67@wiscmail.wisc.edu>
+	<76f0dd28e3f1b.53222ca3@wiscmail.wisc.edu>
+	<7780e16be8324.53222d1e@wiscmail.wisc.edu>
+	<7460f557ec161.53222d5b@wiscmail.wisc.edu>
+	<74e0dc2eeacff.53222d97@wiscmail.wisc.edu>
+	<77809ae7ea028.53222dd4@wiscmail.wisc.edu>
+	<74e0d3d9e9ecb.53222e10@wiscmail.wisc.edu>
+	<74e09c98eb090.53222ec5@wiscmail.wisc.edu>
+	<7710ac39efad8.53222f01@wiscmail.wisc.edu>
+	<7480fc9bebffb.53222f3d@wiscmail.wisc.edu>
+	<7740ab82ec8ec.53222f7a@wiscmail.wisc.edu>
+	<7700e199ec717.5321e95a@wiscmail.wisc.edu>
+	<alpine.DEB.1.00.1403141459430.14982@s15462909.onlinehome-server.info>
+	<c02117c6898640edd511153ae36d278f@cam.ac.uk>
+	<alpine.DEB.1.00.1403201850480.14982@s15462
+	909.onlinehome-server.info>
+Message-ID: <F5AF719F-1FDE-440B-A77D-32B6648B7E34@mpi-cbg.de>
+
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: tomancak at mpi-cbg.de
+homepage: http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+Dear Stephanie,
+
+You can use the BigDataViewer right now. Simply launch the Fiji updater, go to advanced mode and select the update site called BigDataViewer. Restart Fiji and you should have a new item in the plugin menu.
+
+You need to save your stacks, SPIM or otherwise, in the HDF5 format. The Export plugins under the BigDataViewer should be self explanatory (for now, documentation is coming).
+
+Once you have your data saved as HDF5, open the newly created xml file (in the directory where your HDF5 database sits) using the OpenXML/HDF5 plugin in the BigDataViewer submenu.
+
+Once in the viewer press F1 or 'h' to get the help menu that explains the keyboard shortcuts.
+
+We know that the documentation is inadequate (a nice way of saying that there is no documentation). We are sorry about it and in fact Tobias is actively working on it and we hope to have it on the Fiji wiki soon.
+
+Hopefully this email will help you in the interim. Don't hesitate to ask if you encounter problems.
+
+And use the BigDataViewer. It is an awesome piece of software.
+
+All the best
+
+Pavel
+
+
+
+On Mar 20, 2014, at 6:52 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+
+> Hi Stephanie,
+> 
+> On Thu, 20 Mar 2014, Dr S. Hoehn wrote:
+> 
+>> I am sorry that you where not the right person to address my questions to.
+> 
+> No worries. The BigDataViewer was developed in the Tomancak lab, the same
+> one which is responsible for the hardware part of "OpenSPIM 1.0".
+> 
+>> I simply thought that one of the programers associated with the openspim
+>> platform is working on this new plugin, that is specifically designed
+>> for spim data.
+> 
+> Tobias Pietzsch indeed designed it for SPIM data, but as far as I can
+> tell, he is not on the OpenSPIM mailing list.
+> 
+> Ciao,
+> Johannes
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140320/68fef927/attachment-0002.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Mon Mar 24 10:36:09 2014
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Mon, 24 Mar 2014 15:36:09 +0000
+Subject: [OpenSPIM] 4D imaging software
+Message-ID: <4eabe32ccca8e89d0bcc6c5eb6ae1232@cam.ac.uk>
+
+Dear all,
+Our group is thinking about purchasing a license for a commercial 4D 
+imaging software in addition to Fiji and its plugins.
+
+We are planning to mainly use it for reslicing our SPIM z-stacks in 
+arbitrary angles to achieve e.g. midsagital cross-sections. This would 
+be difficult (if possible at all) with Fiji, amongst others because our 
+samples rotate.
+
+We might also want to do measurements (distances, surface area, 
+volume,…) and track developing cells or swimming organisms over time.
+
+Therefore we wanted to ask, which software everybody else is using 
+(apart from Fiji) to visualize and process your SPIM data and what 
+experiences you made with it?
+
+We are currently trying demo versions for Volocity (Perkin Elmers), 
+Imaris (BitPlane) and Amira (FEI Visualization Sciences Group). They all 
+seem to have their advantages and disadvantages.
+
+So, we would be very grateful if you could tell us, if you have any 
+experiences with these or other 4D software solutions and what would be 
+your recommendations.
+
+I couldn’t find anything on that in the mailing list’s archive. Sorry, 
+if I simply overlooked it.
+
+Thank you very much in advance.
+
+Best wishes,
+
+Stephanie
+
+
+
+
+
+From stuyvenberg at wisc.edu  Wed Mar 26 18:39:34 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 26 Mar 2014 18:39:34 -0500
+Subject: [OpenSPIM] Post-meeting recap
+In-Reply-To: <75a0c98a116977.53336528@wiscmail.wisc.edu>
+References: <75b0fe29112652.53336126@wiscmail.wisc.edu>
+	<7690f06e1132c1.53336162@wiscmail.wisc.edu>
+	<7530fa461120d1.5333619e@wiscmail.wisc.edu>
+	<75a0c078112197.533361db@wiscmail.wisc.edu>
+	<74a087c8115296.53336217@wiscmail.wisc.edu>
+	<7480a5ba11756b.53336253@wiscmail.wisc.edu>
+	<7480eb73113021.53336290@wiscmail.wisc.edu>
+	<7330c1a2117318.533362cc@wiscmail.wisc.edu>
+	<75e0cd6e116002.53336309@wiscmail.wisc.edu>
+	<75a0f4ce1108f0.53336345@wiscmail.wisc.edu>
+	<75a0e8d011790b.53336381@wiscmail.wisc.edu>
+	<7530ba14114909.533363be@wiscmail.wisc.edu>
+	<7330de341160da.533363fa@wiscmail.wisc.edu>
+	<76e0f9ce115149.53336436@wiscmail.wisc.edu>
+	<75a0a276111c37.53336473@wiscmail.wisc.edu>
+	<75b0db461161a6.533364af@wiscmail.wisc.edu>
+	<7480bdd41112bb.533364eb@wiscmail.wisc.edu>
+	<75a0c98a116977.53336528@wiscmail.wisc.edu>
+Message-ID: <7460c017116d97.53331ee6@wiscmail.wisc.edu>
+
+Hey everyone,
+
+I've just finished meeting with Kevin, and we had quite a bit to discuss about the future of the project. Here's a quick recap:
+
+
+I'll be graduating in May, but I will be in Madison until approximately the end of July. Between finals and then, I'll be working more or less full-time. To take over for me, Kevin is looking at bringing on a new programmer soon -- hopefully while I and/or Johannes are around to provide a softer introduction to the code base.
+
+
+We're going to have an existing LOCI student begin work on building the second LOCI OpenSPIM, with the Andor camera in mind. In particular, one idea we had was to increase the height of the optical axis off the breadboard, with two ends in mind: first, to accommodate the Neo's larger camera head size, and two, to take advantage of ThorLabs' available spacers so it is possible to purchase the necessary components if 3D-printing is not available.
+
+
+We discussed the software priorities, which I believe for the moment boiled down to the Fiji vs. ImageJ, MicroManager vs. OpenSPIM conundrum. Kevin is planning to talk with Johannes to get his opinion on the resolution, but we're also hoping to work more directly with the MM team on either (a) porting MM to Fiji (even if it's a highly stripped-down version), or (b) making the OpenSPIM software vanilla-MM-compatible. Either solution will work to end our distribution of a separate version of Micro-Manager. We also talked about a possible hackathon to decide which combination of these will happen, deciding tentatively on a 3-day hackathon in mid-May.
+
+
+There were a few questions about the new data taken today; Kevin is curious whether the data could be regarded as 'good' -- and indeed just what 'good' data looks like. We'll talk more about this with Jayne and Julie during the next meeting (3:30 PM on Friday, 4 April) and decide.
+
+
+Hopefully Kevin can fill in any important details I missed!
+
+
+Thanks for reading,
+Luke Stuyvenberg
+
+
+
+From stuyvenberg at wisc.edu  Sun Mar 30 19:18:35 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Sun, 30 Mar 2014 19:18:35 -0500
+Subject: [OpenSPIM] A question about the Light Sheet software
+In-Reply-To: <FF8505D4-2024-4A49-BC6D-208A0828C7A2@gmail.com>
+References: <5F46D871-B4EA-4785-9BD7-44DDC7CF734D@gmail.com>
+	<143D0147-BAB0-4F35-A085-0289D6579697@cos.uni-heidelberg.de>
+	<E7662CD2-0CD7-4F04-B451-EF82A1D073C3@gmail.com>
+	<2AA78689-FECE-4F72-813C-D39FD80284B0@cos.uni-heidelberg.de>
+	<FF8505D4-2024-4A49-BC6D-208A0828C7A2@gmail.com>
+Message-ID: <5338B45B.10201@wisc.edu>
+
+Hello Cristian and Alexis,
+
+Please pardon the long delay in my reply!
+
+On 3/24/2014 3:15 PM, Cristian Undurraga wrote:
+> Thanks Dr. Alexis for the full answer. I`m tempted to updates the 
+> softwares, but I`ll wait for the correct version, :)
+>
+> We are using the MicroManager version "1.4.x dev", this is a version 
+> for "developers"?, it would be better if we use the "users" version?, 
+> i.e. 1.4.15 (this have a update for the Cobolt laser made by Dr. 
+> Maizel) or the 1.4.14. In these case, I`ll need to configure all the 
+> hardware from zero, as shown on the OpenSpim web page 
+> (http://openspim.org/How_to_install).
+> Best,
+>
+> Cristian
+>
+> El 21-03-2014, a las 429, Alexis Maizel escribió:
+>
+>> Hi Cristian,
+>> sorry for the delay.
+>>
+>> First: do NOT upgrade anything. This will break the ability to 
+>> control the laser. (short explanation: to get the Cobolt laser to 
+>> work with OpenSPIM I had to essentially rewrite the code of the laser 
+>> driver; unfortunately, in between the nice folks at OpenSPIM have 
+>> decided to revamp the way OpenSPIM talks to the laser for the new 
+>> version of OpenSPIM; hence, if you update you loose the ability to 
+>> operate the laser…). I have to hack the code of the current Cobolt 
+>> driver to make it compatible with hte latest (and hopefully future) 
+>> versions of OpenSPIM. What I need is time...
+Alexis -- this is definitely something we should coordinate on; I feel 
+we might be missing each other in trying to simultaneously accommodate 
+each other. ;-) When it's convenient, feel free to contact me and the 
+OpenSPIM list to sort this out; we can set up a long-term solution.
+
+>>>>> We are using the "version 1.4.x dev" with the configuration file 
+>>>>> to startup "OpenSPIM01.app.cfg", and the problem is that when we 
+>>>>> specify an "Output directory" (in ex. a new folder in the 
+>>>>> desktop), the program don`t take the picture or don´t start the 
+>>>>> timelapse, but when left empty the "Output directory", we can take 
+>>>>> the picture or the TL begins. The default option (with an empty 
+>>>>> output directory) is limited for the memory allocated in Fiji 
+>>>>> (1024 in RAM), and therefore is limited the acquisition file to 
+>>>>> this memory amount.
+Christian -- I don't know exactly why this is happening... Could you 
+please try to start a time lapse with the output directory specified 
+again, then attach the most recent Micro-Manager core log (a file named 
+CoreLog########.txt, in the OpenSPIM.app directory)? This will help me 
+find the source of the problem so I can fix it. Thanks!
+
+Once again, I apologize for the delay!
+Luke Stuyvenberg
+
+
+
+
+From stuyvenberg at wisc.edu  Mon Mar 31 15:47:40 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 31 Mar 2014 15:47:40 -0500
+Subject: [OpenSPIM] A question about the Light Sheet software
+In-Reply-To: <7430d14f12b54d.5339d458@wiscmail.wisc.edu>
+References: <5F46D871-B4EA-4785-9BD7-44DDC7CF734D@gmail.com>
+	<143D0147-BAB0-4F35-A085-0289D6579697@cos.uni-heidelberg.de>
+	<E7662CD2-0CD7-4F04-B451-EF82A1D073C3@gmail.com>
+	<2AA78689-FECE-4F72-813C-D39FD80284B0@cos.uni-heidelberg.de>
+	<FF8505D4-2024-4A49-BC6D-208A0828C7A2@gmail.com>
+	<5338B45B.10201@wisc.edu>
+	<E20B9EE3-5691-4C57-9536-A61D61DC5E5F@gmail.com>
+	<75e0ea2612f6ac.5339d2ec@wiscmail.wisc.edu>
+	<7780e88412e956.5339d32a@wiscmail.wisc.edu>
+	<75f0ded712d2b7.5339d367@wiscmail.wisc.edu>
+	<7430884512e6d5.5339d3a3@wiscmail.wisc.edu>
+	<7690931712a34a.5339d3df@wiscmail.wisc.edu>
+	<7780ce4912cb61.5339d41c@wiscmail.wisc.edu>
+	<7430d14f12b54d.5339d458@wiscmail.wisc.edu>
+Message-ID: <7480b28512d4d8.53398e1c@wiscmail.wisc.edu>
+
+Hi Christian,
+
+On 03/31/14, Cristian Undurraga  wrote:
+> Hi Luke,
+> 
+> I`m sending the file that you asked after to try to start a time lapse, specified a new directory in the desktop (new folder named "1" in the desktop).Thank you very much. The file seems to indicate that a necessary JAR file is missing for OME-TIFF output -- the most likely candidate is OpenSPIM.app/jars/bio-formats/formats-api-5.0.0.jar (the latest version available through the Fiji Updater).
+
+
+Did you download the OpenSPIM package from our website? If you run the Fiji Updater (Help -> Update Fiji), it should give you a list of files that need to be updated. Most likely, you can accept the Updater's proposal by clicking "Accept changes" at the bottom; this should fix your issue.
+
+
+I should be clear that this is different from updating Micro-Manager. Our plugin does not currently come with Micro-Manager, so if you download Micro-Manager's latest version from their website, you won't be able to control an OpenSPIM. The Fiji updater, on the other hand, downloads newer versions of the files OpenSPIM relies on.
+
+
+If you have any questions, or if this doesn't resolve your issue, please don't hesitate to mail me and/or the list (openspim at openspim.org) again!
+Thanks,
+Luke
+
+
+

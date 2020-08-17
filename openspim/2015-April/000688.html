@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] open SPIM acquisition error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20open%20SPIM%20acquisition%20error&In-Reply-To=%3Cdc488e7b4294380c74197b0d07984614%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000686.html">
+   <LINK REL="Next"  HREF="000689.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] open SPIM acquisition error</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20open%20SPIM%20acquisition%20error&In-Reply-To=%3Cdc488e7b4294380c74197b0d07984614%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] open SPIM acquisition error">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Fri Apr 17 15:10:34 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000686.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+        <LI>Next message: <A HREF="000689.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#688">[ date ]</a>
+              <a href="thread.html#688">[ thread ]</a>
+              <a href="subject.html#688">[ subject ]</a>
+              <a href="author.html#688">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Aurelia,
+
+On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+
+&gt;<i> java.lang.NoSuchMethodError:
+</I>&gt;<i> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+</I>
+It would appear as if OMERO might have broken Bio-Formats' 
+backwards-compatibility once again... Exceptions like this one mean that 
+the method setPixelsPhysicalSizeX(PositiveFloat) was available at 
+compile time but is no longer available at runtime.
+
+And indeed, it looks as if IMetadata by virtue of extending 
+ome.xml.meta.MetadataStore defines only the following 
+setPixelsPhysicalSizeX() method:
+
+   public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length, 
+int);
+
+I fear that we will have to update the SPIMAcquisition plugin in a hurry 
+to conform with the new Bio-Formats version that was so overzealously 
+uploaded to the Fiji update site despite breaking backwards 
+compatibility in a rather blatant way.
+
+My calendar is densely packed, though, so I have no idea when I will get 
+around to fix it (hint: help appreciated).
+
+Ciao,
+Johannes
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000686.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+	<LI>Next message: <A HREF="000689.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#688">[ date ]</a>
+              <a href="thread.html#688">[ thread ]</a>
+              <a href="subject.html#688">[ subject ]</a>
+              <a href="author.html#688">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

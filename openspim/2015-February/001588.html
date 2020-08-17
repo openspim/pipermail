@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SPIMAcquisition plugin installation fails
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIMAcquisition%20plugin%20installation%20fails&In-Reply-To=%3C54D8D259.8060109%40rz.hu-berlin.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="001589.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SPIMAcquisition plugin installation fails</H1>
+    <B>Carsten Wolff</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIMAcquisition%20plugin%20installation%20fails&In-Reply-To=%3C54D8D259.8060109%40rz.hu-berlin.de%3E"
+       TITLE="[OpenSPIM] SPIMAcquisition plugin installation fails">carsten.wolff at rz.hu-berlin.de
+       </A><BR>
+    <I>Mon Feb  9 09:29:29 CST 2015</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="001589.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1588">[ date ]</a>
+              <a href="thread.html#1588">[ thread ]</a>
+              <a href="subject.html#1588">[ subject ]</a>
+              <a href="author.html#1588">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi everybody,
+
+I have a problem installing the SPIM acquisition plugin as decribed in 
+'<A HREF="https://github.com/openspim/SPIMAcquisition">https://github.com/openspim/SPIMAcquisition</A>' and I need help to 
+interpret the error messages. I am not experienced and just started with 
+doing such things like building plugins from a local repository. So far 
+not really successful...
+
+As described on github I used Maven for a local repository. The error 
+comes with the last builing command '|mvn -Dscijava.enforce.skip'; not 
+immediately but just after 8 minutes.
+
+here the error message:
+
+2 errors
+18 warnings
+[INFO] 
+------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] 
+------------------------------------------------------------------------
+[INFO] Total time: 08:18 min
+[INFO] Finished at: 2015-02-09T16:01:04+01:00
+[INFO] Final Memory: 34M/252M
+[INFO] 
+------------------------------------------------------------------------
+[ERROR] Failed to execute goal 
+org.apache.maven.plugins:maven-javadoc-plugin:2.9
+.1:jar (attach-javadocs) on project SPIMAcquisition: 
+MavenReportException: Error
+  while creating archive:
+[ERROR] Exit code: 1 - javadoc: warning - Error fetching URL: 
+<A HREF="http://jenkins.ima">http://jenkins.ima</A>
+gej.net/view/Fiji/job/Saalfeld-MPICBG-Maven/javadoc/
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\FitDisk.java:142: warning: no description for @return
+[ERROR] * @return
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\FitHypersphere.java:20: error: reference not found
+[ERROR] * The principle is described in {@link fiji.util.Circle_Fitter}.
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\SPIMAcquisition.java:235: warning: no @param for hook
+[ERROR] public void hookLiveControls(boolean hook) {
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\SPIMAcquisition.java:1375: warning: no @param for args
+[ERROR] public static void main(String[] args) {
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\AcqOutputHandler.java:13: warning: no 
+description f
+or @throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\AcqOutputHandler.java:21: warning: no 
+description f
+or @throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\AcqOutputHandler.java:35: warning: no 
+description f
+or @throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\AcqOutputHandler.java:43: warning: no 
+description f
+or @throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\AcqOutputHandler.java:53: warning: no 
+description f
+or @throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\IndividualImagesHandler.java:18: error: 
+@param name
+  not found
+[ERROR] * @param t      whether or not to include time in filename
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\IndividualImagesHandler.java:22: warning: 
+no @param
+  for xyztt
+[ERROR] public static String shortNamesToScheme(String header, boolean 
+xyztt[],
+String[] nameMap) {
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\ProgrammaticAcquisitor.java:139: warning: 
+no @param
+  for corei
+[ERROR] public static List&lt;String[]&gt; generateRowsFromRanges(CMMCore corei,
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\ProgrammaticAcquisitor.java:258: warning: 
+no descri
+ption for @param
+[ERROR] * @param params
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\ProgrammaticAcquisitor.java:259: warning: 
+no descri
+ption for @return
+[ERROR] * @return
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\progacq\ProgrammaticAcquisitor.java:260: warning: 
+no descri
+ption for @throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\setup\Device.java:54: warning: no @param for property
+[ERROR] public boolean hasProperty(String property) {
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\setup\Device.java:54: warning: no @return
+[ERROR] public boolean hasProperty(String property) {
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\setup\Laser.java:30: warning: no description for 
+@throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR] C:\Program 
+Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manage
+r\src\main\java\spim\setup\Laser.java:39: warning: no description for 
+@throws
+[ERROR] * @throws Exception
+[ERROR] ^
+[ERROR]
+[ERROR] Command line was: &quot;C:\Program 
+Files\Java\jdk1.8.0_31\jre\..\bin\javadoc.
+exe&quot; -J-Xmx1024m @options @packages
+[ERROR]
+[ERROR] Refer to the generated Javadoc files in 'C:\Program 
+Files\Micro-Manager-
+1.4.1.9_nightlybuild\plugins\Micro-Manager\target\apidocs' dir.
+[ERROR] -&gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the 
+-e swit
+ch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, 
+please rea
+d the following articles:
+[ERROR] [Help 1] 
+<A HREF="http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionE">http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionE</A>
+xception
+C:\Program Files\Micro-Manager-1.4.1.9_nightlybuild\plugins\Micro-Manager&gt;
+
+
+Any help or suggestion is highly appreciated.
+
+Best
+Carsten
+|<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150209/0598a36b/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150209/0598a36b/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="001589.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1588">[ date ]</a>
+              <a href="thread.html#1588">[ thread ]</a>
+              <a href="subject.html#1588">[ subject ]</a>
+              <a href="author.html#1588">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

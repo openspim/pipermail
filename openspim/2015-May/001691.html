@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] very slow acquisition speed
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20very%20slow%20acquisition%20speed&In-Reply-To=%3C5551F4F5.3050403%40ist.ac.at%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001686.html">
+   <LINK REL="Next"  HREF="001692.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] very slow acquisition speed</H1>
+    <B>Robert Hauschild</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20very%20slow%20acquisition%20speed&In-Reply-To=%3C5551F4F5.3050403%40ist.ac.at%3E"
+       TITLE="[OpenSPIM] very slow acquisition speed">robert.hauschild at ist.ac.at
+       </A><BR>
+    <I>Tue May 12 07:41:25 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001686.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+        <LI>Next message: <A HREF="001692.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1691">[ date ]</a>
+              <a href="thread.html#1691">[ thread ]</a>
+              <a href="subject.html#1691">[ subject ]</a>
+              <a href="author.html#1691">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Monika, All,
+
+thanks for testing! At least my system is not the only one that is so slow.
+
+Would be great if someone could tell me how to figure out what is going 
+on during the 75% of time that is unaccounted for in the profiler!
+
+thanks!
+
+Best regards,
+
+Robert
+
+On 07.05.2015 18:20, <A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A> wrote:
+&gt;<i> Dear Robert,
+</I>&gt;<i>
+</I>&gt;<i> since I also have Orca+Picard, I decided to repeat your experiment and 
+</I>&gt;<i> did 10 frames, 100 ms. I'm using the new 64-bit version, updated. I 
+</I>&gt;<i> got very similar results to yours (see below). Unfortunately I don't 
+</I>&gt;<i> know whether it used to be better, I never tried taking very fast 
+</I>&gt;<i> measurements.
+</I>&gt;<i>
+</I>&gt;<i> Maybe somebody who is able to get 10 frames/sec could send their 
+</I>&gt;<i> CoreLog for comparison...?
+</I>&gt;<i>
+</I>&gt;<i> Opened log file 
+</I>&gt;<i> D:\Dane\2015\2015_05\2015_05_07\02time_series_test\log.txt
+</I>&gt;<i> Profiler(&quot;performAcquisition&quot;)[4 children]: 6,0611s
+</I>&gt;<i> 6,3337%:    Profiler(&quot;Output&quot;)[0 children]: 0,3839s
+</I>&gt;<i> 0,0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0,0000s
+</I>&gt;<i> 29,7792%:    Profiler(&quot;Movement&quot;)[0 children]: 1,8049s
+</I>&gt;<i> 0,0005%:    Profiler(&quot;Setup&quot;)[0 children]: 0,0000s
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Monika
+</I>
+&gt;<i> Hi All and especially Pete,
+</I>&gt;<i>
+</I>&gt;<i> My setup is Orca R2, Coherent Cube, Picard stage.
+</I>&gt;<i> I tested a couple of things and it it still unclear to me where the 
+</I>&gt;<i> time is wasted.
+</I>&gt;<i>
+</I>&gt;<i> I attached the core log of a 10 frame long time series (100ms 
+</I>&gt;<i> exposure) recorded to memory with X/Y/Z Stage/Theta all unchecked and  
+</I>&gt;<i> without &quot;Update Live preview&quot;.
+</I>&gt;<i>
+</I>&gt;<i> I tried two configurations:
+</I>&gt;<i> 1. Orca  + Cube + Picard
+</I>&gt;<i> 2. Orca  + Picard
+</I>&gt;<i>
+</I>&gt;<i> &quot;1&quot; took 7.6 s of which (&quot;1&quot;- &quot;2&quot;) = 1.4 s are communication with 
+</I>&gt;<i> laser, which, while way too much, is not the source of the problem.
+</I>&gt;<i>
+</I>&gt;<i> Profiler(&quot;performAcquisition&quot;)[4 children]: 7.6113s
+</I>&gt;<i> 0.0017%:    Profiler(&quot;Output&quot;)[0 children]: 0.0001s
+</I>&gt;<i> 0.0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 24.0133%:    Profiler(&quot;Movement&quot;)[0 children]: 1.8277s
+</I>&gt;<i> 0.0013%:    Profiler(&quot;Setup&quot;)[0 children]: 0.0001s
+</I>&gt;<i>
+</I>&gt;<i> So most of the time the system is doing something that the Profiler is 
+</I>&gt;<i> not recording.
+</I>&gt;<i>
+</I>&gt;<i> Looking at the core log I am a bit puzzled why the laser power is 
+</I>&gt;<i> queried once  per slice and why the stage is told to move to the very 
+</I>&gt;<i> position it currently is even though none of the motors should move at 
+</I>&gt;<i> all since X/Y/Z/Theta are all unchecked in the acquisition dialog.
+</I>&gt;<i>
+</I>&gt;<i> I would really appreciate any hint/suggestion on how to get back to 
+</I>&gt;<i> reasonable acquisition speeds.
+</I>&gt;<i>
+</I>&gt;<i> Thanks again!
+</I>&gt;<i>
+</I>&gt;<i> Robert 
+</I>
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A – 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:<A HREF="http://openspim.org/mailman/listinfo/openspim">robert.hauschild at ist.ac.at</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001686.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+	<LI>Next message: <A HREF="001692.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1691">[ date ]</a>
+              <a href="thread.html#1691">[ thread ]</a>
+              <a href="subject.html#1691">[ subject ]</a>
+              <a href="author.html#1691">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SPIM with no laser control
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIM%20with%20no%20laser%20control&In-Reply-To=%3CCAHAw%2B8Y8ewXGEJ0_%2B1XcfOb9dOqib4%3DC1dabA641YV-srO1k-w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000206.html">
+   <LINK REL="Next"  HREF="000208.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SPIM with no laser control</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIM%20with%20no%20laser%20control&In-Reply-To=%3CCAHAw%2B8Y8ewXGEJ0_%2B1XcfOb9dOqib4%3DC1dabA641YV-srO1k-w%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] SPIM with no laser control">aureliaomega at gmail.com
+       </A><BR>
+    <I>Thu Oct  3 09:26:44 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000206.html">[OpenSPIM] SPIM with no laser control
+</A></li>
+        <LI>Next message: <A HREF="000208.html">[OpenSPIM] SPIM with no laser control
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#207">[ date ]</a>
+              <a href="thread.html#207">[ thread ]</a>
+              <a href="subject.html#207">[ subject ]</a>
+              <a href="author.html#207">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+Now that I have added the Thorlabs shutter to the configuration as the
+default shutter, I don't get the error message about the configuration
+being invalid, and the OpenSPIM window never opens at all.  A corelog is
+attached in case it's helpful.
+I had a problem with the development environment self-installer - it seems
+upset that I don't have Visual Studio 2008 (I have 2010; a screen grab of
+the error message is attached) but it looks as though all the source files
+ended up where they should be anyway, so I'll start having a look.
+Thank you again!
+Aurelia
+
+
+
+
+On Wed, Oct 2, 2013 at 10:48 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;wrote:
+
+&gt;<i> Aurelia,
+</I>&gt;<i>
+</I>&gt;<i> Is the ThorLabs shutter set as the default shutter for your setup? (i.e.
+</I>&gt;<i> does it respond to Micro-Manager's auto-shutter functionality?) This is
+</I>&gt;<i> specified during hardware configuration. If so, please attach a core log
+</I>&gt;<i> (any should do, as long as you got the 'setup is invalid' warning) -- the
+</I>&gt;<i> SPIM device manager should be trying to use it as a laser; if this isn't
+</I>&gt;<i> happening, an exception may be appearing in the core log. If the issue is
+</I>&gt;<i> as simple as this, I may be able to fix it with minimal work, which is
+</I>&gt;<i> arguably preferable to the alternative.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The alternative: Although the ThorLabs shutter *should* be supported as a
+</I>&gt;<i> 'generic laser', it is possible to specifically add support for the device,
+</I>&gt;<i> though it requires some Java programming. If you're already familiar with
+</I>&gt;<i> our development environment (see
+</I>&gt;<i> <A HREF="http://openspim.org/How_to_build_the_software">http://openspim.org/How_to_build_the_software</A> -- fair warning: setting up
+</I>&gt;<i> the development environment can take some time), the place to start is
+</I>&gt;<i> plugins/SPIMAcquisition/src/main/java/; in here are various files like
+</I>&gt;<i> PicardStage.java and CoherentCube.java. I recommend reading the top of
+</I>&gt;<i> PicardStage.java for an explanation of the block at the top of the class,
+</I>&gt;<i> then copying and renaming CoherentCube.java to i.e. ThorLabsShutter.java.
+</I>&gt;<i> Rename the contained class and change the string &quot;CoherentCube&quot; to the
+</I>&gt;<i> appropriate device name -- according to the device adapter source code in
+</I>&gt;<i> DeviceAdapters/ThorlabsSC10/, the right string is &quot;SC10&quot; -- and change the
+</I>&gt;<i> rest of the functions however you see fit.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Luke
+</I>&gt;<i>
+</I>&gt;<i> On 10/01/13, Aurelia Honerkamp-Smith  wrote:
+</I>&gt;<i> &gt; Hi everyone,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I guess now is a good time to mention that I built my SPIM using a laser
+</I>&gt;<i> line we already had instead of purchasing the Coherent Cube, by diverting
+</I>&gt;<i> the existing line to the SPIM with a flip mirror and a periscope. Laser
+</I>&gt;<i> power control is manual. The fact that I have no laser connected is causing
+</I>&gt;<i> a problem for SPIM acquisition, though. I get an error message that my
+</I>&gt;<i> setup is invalid when I first start the plugin; then, although acquisition
+</I>&gt;<i> through the Video tab works OK, I can&#39;t acquire a regular stack or
+</I>&gt;<i> timelapse: I get &quot;Error acquiring: null&quot; when I push the Oh Snap button. I
+</I>&gt;<i> need to change the plugin so that it ignores the laser power control, and
+</I>&gt;<i> uses a Thorlabs shutter for blinking instead of the laser. I realize this
+</I>&gt;<i> might be a tall order, so I&#39;m ready to start working on it myself, but
+</I>&gt;<i> I would appreciate being pointed in the right direction for how to do this
+</I>&gt;<i> most efficiently.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thanks again,
+</I>&gt;<i> &gt; Aurelia
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131003/4e636a06/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20131003/4e636a06/attachment-0001.html</A>&gt;
+-------------- next part --------------
+LOG(2013-10-03T12:33:57.752837, 2004, 00791590:): --------&gt;&gt;
+LOG(2013-10-03T12:33:57.752837, 2004, 00791590:): Core session started on 2013-10-03T12:33:57.752837 by ah659 on INVERT
+LOG(2013-10-03T12:33:57.752837, 2004, 00791590:): Debug logging disabled
+LOG(2013-10-03T12:33:57.752837, 2004, 00791590:): Debug logging disabled
+LOG(2013-10-03T12:33:57.752837, 2004, 00791590:): &gt; MM Studio version: 1.4.x dev
+LOG(2013-10-03T12:33:57.753837, 2004, 00791590:): &gt; MMCore version 2.3.2
+LOG(2013-10-03T12:33:57.753837, 2004, 00791590:): &gt; Device API version 53, Module API version 7
+LOG(2013-10-03T12:33:57.753837, 2004, 00791590:): &gt; Operating System: Windows 7 6.1
+LOG(2013-10-03T12:33:57.753837, 2004, 00791590:): &gt; JVM: Java HotSpot(TM) Client VM, version 1.6.0_24; 32 bit
+LOG(2013-10-03T12:33:57.936848, 2004, 00791A40:): &gt; #uManager plugins: 118
+LOG(2013-10-03T12:33:57.936848, 2004, 00791A40:): &gt; interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-03T12:33:57.936848, 2004, 00791A40:): &gt; interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-03T12:33:57.936848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: org.apache.commons.math.analysis.MultivariateRealFunction
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.MouseListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ItemListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ItemListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.util.Comparator
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.io.FilenameFilter
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: spim.progacq.AntiDrift$Factory
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: org.micromanager.api.MMPlugin
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ItemListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: spim.SPIMAutoCalibrator$RunnableWRet
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: spim.SPIMCalibrator
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.MouseListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.MouseMotionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: spim.SPIMCalibrator
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: spim.SPIMCalibrator
+LOG(2013-10-03T12:33:57.937848, 2004, 00791A40:): &gt; interface found: java.awt.event.MouseListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.WindowListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.KeyListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.FocusListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.ActionListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: javax.swing.event.ChangeListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Thread$UncaughtExceptionHandler
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.progacq.AcqOutputHandler
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Runnable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.progacq.AntiDrift$Callback
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.KeyListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: javax.swing.event.ChangeListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.KeyListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.lang.Iterable
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.awt.event.ItemListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: java.util.EventListener
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.938848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.939848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.939848, 2004, 00791A40:): &gt; interface found: spim.setup.Device$Factory
+LOG(2013-10-03T12:33:57.939848, 2004, 00791A40:): &gt; Attempting to install plugin spim.SPIMAcquisition
+LOG(2013-10-03T12:34:02.951135, 2004, 00791590:): All devices unloaded.
+LOG(2013-10-03T12:34:02.951135, 2004, 00791590:): &gt; Notification for Device: Core Property: Initialize changed to value: 0
+LOG(2013-10-03T12:34:02.999137, 2004, 00791590:): Device COM3 loaded from SerialManager and labeled as COM3
+LOG(2013-10-03T12:34:03.072142, 2004, 00791590:): Device Camera-1 loaded from PVCAM and labeled as CoolsnapMyo
+LOG(2013-10-03T12:34:03.072142, 2004, 00791590:): Device CoolsnapMyo set as default camera.
+LOG(2013-10-03T12:34:04.191206, 2004, 00791590:): Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+LOG(2013-10-03T12:34:04.191206, 2004, 00791590:): Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+LOG(2013-10-03T12:34:04.192206, 2004, 00791590:): Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+LOG(2013-10-03T12:34:04.192206, 2004, 00791590:): Device Picard XY Stage set as default xyStage.
+LOG(2013-10-03T12:34:04.249209, 2004, 00791590:): Device SC10 loaded from ThorlabsSC10 and labeled as SC10
+LOG(2013-10-03T12:34:04.249209, 2004, 00791590:): Device SC10 set as default shutter.
+LOG(2013-10-03T12:34:04.314213, 2004, 00791590:): Starting initialization sequence for 6 devices...
+LOG(2013-10-03T12:34:04.412218, 2004, 00791590:): Device COM3 initialized.
+LOG(2013-10-03T12:34:04.419219, 2004, 00791590:): Device CoolsnapMyo message: PVCAM VERSION: 2.9.5. Number of cameras detected: 1
+LOG(2013-10-03T12:34:04.471222, 2004, 00791590:): Device CoolsnapMyo message: Building Speed Table
+LOG(2013-10-03T12:34:04.588228, 2004, 00791590:): Device CoolsnapMyo message: Initializing Static Camera Properties
+LOG(2013-10-03T12:34:04.600229, 2004, 00791590:): Device CoolsnapMyo message: Initializing Dynamic Camera Properties
+LOG(2013-10-03T12:34:04.781239, 2004, 00791590:): Device CoolsnapMyo message: This Camera does not have EM Gain
+LOG(2013-10-03T12:34:04.781239, 2004, 00791590:): Device CoolsnapMyo message: Frame Transfer mode not available
+LOG(2013-10-03T12:34:04.825242, 2004, 00791590:): Device CoolsnapMyo message: Using PVCAM callbacks for frame acquisition
+LOG(2013-10-03T12:34:04.825242, 2004, 00791590:): Device CoolsnapMyo initialized.
+LOG(2013-10-03T12:34:04.830242, 2004, 00791590:): Device Picard Twister initialized.
+LOG(2013-10-03T12:34:04.854244, 2004, 00791590:): Device Picard Z Stage initialized.
+LOG(2013-10-03T12:34:04.890246, 2004, 00791590:): Device Picard XY Stage initialized.
+LOG(2013-10-03T12:34:04.945249, 2004, 00791590:): Device SC10 message: THORLABS SC10 VERSION 1.07
+
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): Device SC10 initialized.
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): &gt; Notification for Device: Core Property: Initialize changed to value: 1
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): Camera device set to CoolsnapMyo
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): &gt; Notification for Device: Core Property: Camera changed to value: CoolsnapMyo
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): &gt; Notification for Device: Core Property: Shutter changed to value: SC10
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): Focus device set to Picard Z Stage
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): &gt; Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): Auto shutter ON.
+LOG(2013-10-03T12:34:04.961250, 2004, 00791590:): &gt; Notification for Device: Core Property: AutoShutter changed to value: 1
+LOG(2013-10-03T12:34:04.986251, 2004, 00791590:): System state cache updated.
+LOG(2013-10-03T12:34:05.041254, 2004, 00791590:): Device SC10 message: 1
+
+LOG(2013-10-03T12:34:05.050255, 2004, 00791590:): System state cache updated.
+LOG(2013-10-03T12:34:05.085257, 2004, 00791590:): &gt; Startup script file (C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not present.
+LOG(2013-10-03T12:34:12.678691, 2004, 00791590:): &gt; Plugin command: Acquire SPIM image
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Resolution ID Uncalibrated: for device Core defined as Initialize=1
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Pixel size 1.000000 um set for resolution ID: Uncalibrated
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Starting initialization sequence for 6 devices...
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Device COM3 initialized.
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Device CoolsnapMyo message: PVCAM VERSION: 2.9.5. Number of cameras detected: 1
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Device CoolsnapMyo message: PVCAM API error: &quot;C0_CAM_ALREADY_OPEN       This user has already opened this camera&quot;, code: 117
+In file: .\PVCAMUniversal.cpp, line: 308, pl_cam_open
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Error occurred. Device CoolsnapMyo. Error in device CoolsnapMyo: C0_CAM_ALREADY_OPEN       This user has already opened this camera. 
+, file MMCore.cpp, line 873
+LOG(2013-10-03T12:34:12.706693, 2004, 00791590:): Error occurred. Device setPixelSizeConfig. Device error encountered.
+
+LOG(2013-10-03T12:34:12.707693, 2004, 00791590:): &gt; Couldn't define uncalibrated pixel size: 
+LOG(2013-10-03T12:34:12.707693, 2004, 00791590:): &gt; java.lang.Exception: Error in device CoolsnapMyo: C0_CAM_ALREADY_OPEN       This user has already opened this camera. 
+Device error encountered.
+
+	at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+
+	at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:707)
+
+	at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:261)
+
+	at spim.SPIMAcquisition.show(SPIMAcquisition.java:218)
+
+	at org.micromanager.MMStudioMainFrame$50.actionPerformed(MMStudioMainFrame.java:3316)
+
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+
+	at java.awt.Component.processMouseEvent(Component.java:6289)
+
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+
+	at java.awt.Component.processEvent(Component.java:6054)
+
+	at java.awt.Container.processEvent(Container.java:2041)
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4652)
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2099)
+
+	at java.awt.Component.dispatchEvent(Component.java:4482)
+
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2085)
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2478)
+
+	at java.awt.Component.dispatchEvent(Component.java:4482)
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+
+	at java.awt.EventQueue.access$000(EventQueue.java:85)
+
+	at java.awt.EventQueue$1.run(EventQueue.java:603)
+
+	at java.awt.EventQueue$1.run(EventQueue.java:601)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+
+	at java.awt.EventQueue$2.run(EventQueue.java:617)
+
+	at java.awt.EventQueue$2.run(EventQueue.java:615)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+LOG(2013-10-03T12:38:11.381344, 2004, 00775600:): &gt; Plugin command: Acquire SPIM image
+LOG(2013-10-03T12:38:19.855829, 2004, 00775600:): Device SC10 message: 1
+
+LOG(2013-10-03T12:38:19.930833, 2004, 00775600:): Device CoolsnapMyo message: Started sequence on CoolsnapMyo, at 434119099 930833, with 2147483647 and 0 ms
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: dev_env_installer_error.png
+Type: image/png
+Size: 102879 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131003/4e636a06/attachment-0001.png">http://openspim.org/pipermail/openspim/attachments/20131003/4e636a06/attachment-0001.png</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000206.html">[OpenSPIM] SPIM with no laser control
+</A></li>
+	<LI>Next message: <A HREF="000208.html">[OpenSPIM] SPIM with no laser control
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#207">[ date ]</a>
+              <a href="thread.html#207">[ thread ]</a>
+              <a href="subject.html#207">[ subject ]</a>
+              <a href="author.html#207">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

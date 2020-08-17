@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Multiview registration - no inliers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Multiview%20registration%20-%20no%20inliers&In-Reply-To=%3CCAC9TZAOKWuHVXQU8y976V0nU%2BMWqV%2BBxgzFtbAzdkB3sfXERdA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001955.html">
+   <LINK REL="Next"  HREF="001957.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Multiview registration - no inliers</H1>
+    <B>Tania Mendonca</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Multiview%20registration%20-%20no%20inliers&In-Reply-To=%3CCAC9TZAOKWuHVXQU8y976V0nU%2BMWqV%2BBxgzFtbAzdkB3sfXERdA%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Multiview registration - no inliers">tvmendonca1 at sheffield.ac.uk
+       </A><BR>
+    <I>Mon Aug 29 09:29:03 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="001955.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+        <LI>Next message (by thread): <A HREF="001957.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1956">[ date ]</a>
+              <a href="thread.html#1956">[ thread ]</a>
+              <a href="subject.html#1956">[ subject ]</a>
+              <a href="author.html#1956">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Neil and Stephan
+
+Thanks for the tips and all the help! I tried again with a higher
+concentration of the 1µm beads, got rid of the bright big beads and
+increased the z acquisition distance to increase the region of overlap and
+was finally successful!
+
+I hope to meet many of you OpenSPIMmers in Sheffield this week!
+
+Best wishes
+Tania
+
+On 25 August 2016 at 15:08, Anthony, Neil &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt; wrote:
+
+&gt;<i> Hi Tania,
+</I>&gt;<i>
+</I>&gt;<i> I'd agree with Stephan on the larger z stacks. I usually take &gt;300 um, but
+</I>&gt;<i> it kinda depends on the field of view of the camera, as at some point
+</I>&gt;<i> you're taking images in an area that will no longer overlap.
+</I>&gt;<i>
+</I>&gt;<i> 400 interest points would be sufficient if they all overlapped, but more
+</I>&gt;<i> are required in general. I believe Stephan's articles suggest 1000-2000 to
+</I>&gt;<i> get the best results. All depends on overlap percentage.
+</I>&gt;<i>
+</I>&gt;<i> When defining the beads I aim to use a sigma and threshold that picks out
+</I>&gt;<i> the peak of the bead if possible. Stephan, can I ask if it's detrimental
+</I>&gt;<i> when the threshold is too low and I'm identifying the same bead on many z
+</I>&gt;<i> planes? Also, I assume the sigma value determines the steepness of the
+</I>&gt;<i> point, but it still seems to pick up on larger aggregated beads etc, so I'm
+</I>&gt;<i> not too sure about that part.
+</I>&gt;<i>
+</I>&gt;<i> Neil
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> *From:* <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>
+</I>&gt;<i> *Sent:* Aug 25, 2016 3:41 AM
+</I>&gt;<i> *To:* Tania Mendonca
+</I>&gt;<i> *Cc:* Anthony, Neil; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> *Subject:* Re: [OpenSPIM] Multiview registration - no inliers
+</I>&gt;<i>
+</I>&gt;<i> Hi Tania,
+</I>&gt;<i>
+</I>&gt;<i> from looking at the data I agree with Anthony, there are some problems
+</I>&gt;<i> which make it hard. But trying different calibrations and not getting a
+</I>&gt;<i> result makes me believe that there is maybe no overlap in between the
+</I>&gt;<i> stacks. You have quite a few of these big blobs apparently, so is it
+</I>&gt;<i> possible that these are different blobs?
+</I>&gt;<i>
+</I>&gt;<i> If you run it again, make the stacks way bigger in z to make sure that
+</I>&gt;<i> there is overlap, increase the laser power, and maybe put some simple auto
+</I>&gt;<i> fluorescent sample in there so it is possible to judge if the calibration
+</I>&gt;<i> is right and if there is overlap.
+</I>&gt;<i>
+</I>&gt;<i> Good luck,
+</I>&gt;<i> Stephan
+</I>&gt;<i> ---
+</I>&gt;<i>
+</I>&gt;<i> Dr. Stephan Preibisch
+</I>&gt;<i> Group Leader
+</I>&gt;<i>
+</I>&gt;<i> Berlin Institute of Medical Systems Biology of the MDC
+</I>&gt;<i> Building 89, 1.08b
+</I>&gt;<i>
+</I>&gt;<i> email: <A HREF="http://openspim.org/mailman/listinfo/openspim">stephan.preibisch at mdc-berlin.de</A>
+</I>&gt;<i> web: <A HREF="http://www.preibisch.net/">http://www.preibisch.net/</A> &lt;<A HREF="http://fly.mpi-cbg.de/preibisch">http://fly.mpi-cbg.de/preibisch</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> On 24 Aug 2016, at 19:49, Tania Mendonca &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tvmendonca1 at sheffield.ac.uk</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi Neil
+</I>&gt;<i>
+</I>&gt;<i> Thanks for your email! The stacks should have the voxel size correctly set
+</I>&gt;<i> to 0.235 x 0.235 x 0.750. I'm assuming you've looked at the data on
+</I>&gt;<i> µManager as I'm unfamiliar with the ViewSetup tag that you mention. My
+</I>&gt;<i> system is not quite an OpenSPIM - I use LabView to control and don't have
+</I>&gt;<i> the Picard 4D stage (I use a Piezo for scanning instead).
+</I>&gt;<i>
+</I>&gt;<i> Your manual transform looks about right, the stacks are about 120º apart
+</I>&gt;<i> with the big bead somewhere near the middle. I have tried a few different
+</I>&gt;<i> µbeads and the ones in these stacks are 1µm green beads but as you say they
+</I>&gt;<i> are nowhere near as bright as the big beads. Perhaps I do need to dump the
+</I>&gt;<i> large beads and find something else to try and reconstruct. I've been
+</I>&gt;<i> finding about 400-ish interest points in my stacks- is there a magic number
+</I>&gt;<i> that works for you? I've been imaging to about 100µm depth, how much would
+</I>&gt;<i> you recommend? Don't the stacks start getting too large to handle?
+</I>&gt;<i>
+</I>&gt;<i> Thanks for the tip on the camera noise! I think I'll try again tomorrow
+</I>&gt;<i> with brighter beads, no big beads and larger volumes - I'll let you know
+</I>&gt;<i> how it goes!
+</I>&gt;<i>
+</I>&gt;<i> Best wishes
+</I>&gt;<i> Tania
+</I>&gt;<i>
+</I>&gt;<i> On 24 August 2016 at 17:55, Anthony, Neil &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Tania,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Can I please ask what the z voxel size is?  I see in the test.xml that
+</I>&gt;&gt;<i> you have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup
+</I>&gt;&gt;<i> tag.  When I create a xml from scratch here, setting xy to 0.235 and z to
+</I>&gt;&gt;<i> 1.5 (the smallest on the standard Picard 4D stage) I see each id in the xml
+</I>&gt;&gt;<i> has a size of “0.235 0.235 1.5”.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Stephan, I assume these are the voxel sizes used for the BDV.  Would I be
+</I>&gt;&gt;<i> correct in assuming some more and saying that if only one value is seen
+</I>&gt;&gt;<i> it’s used for xy and z?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> …  interlude …  etc. etc.  lalalalala …  coffee etc.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I now see what the problem is.  Well, what some of the problems might be.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I did a manual transform around the y axis and manually overlapped the
+</I>&gt;&gt;<i> big bead.  See attached.  Is this how is should look?  If I have it laid
+</I>&gt;&gt;<i> out correctly I think you have a combination of not enough beads, combined
+</I>&gt;&gt;<i> with not enough overlap of physical volumes given the low number of beads.
+</I>&gt;&gt;<i> On top of that I feel the small bead signal is so low that it’s approaching
+</I>&gt;&gt;<i> the camera noise*.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> It is difficult as the big beads are so bright, and you might want to
+</I>&gt;&gt;<i> find a better sample to test with.  I’ve done some testing on spheroids
+</I>&gt;&gt;<i> that are really bright, and I had to swap my 100nm tetra spec beads for
+</I>&gt;&gt;<i> some really bright 1um green beads to be able to get good signal on the
+</I>&gt;&gt;<i> beads and not saturate the sample of interest.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I started with just little beads to figure out the basics, and I take
+</I>&gt;&gt;<i> just sub-res bead data to get my PSF output from the decon too.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Neil
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> * inspect the data stacks with orthogonal view and you’ll see the
+</I>&gt;&gt;<i> vertical lines running down the stack.  For this kind of noise you can run
+</I>&gt;&gt;<i> a few line scans across your beads and noise to get an idea of the
+</I>&gt;&gt;<i> intensity difference and then use remove outliers
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> *From:* OpenSPIM [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] *On Behalf Of *Tania
+</I>&gt;&gt;<i> Mendonca
+</I>&gt;&gt;<i> *Sent:* Friday, August 19, 2016 3:31 PM
+</I>&gt;&gt;<i> *To:* <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>
+</I>&gt;&gt;<i> *Cc:* <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;&gt;<i> *Subject:* Re: [OpenSPIM] Multiview registration - no inliers
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Just tried it but it still doesn't work.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tania
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 19 August 2016 at 20:13, <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi, I just think that in the beginning when you define your dataset the
+</I>&gt;&gt;<i> pixel sizes were wrong which potentially corrupts the downstream workflow.
+</I>&gt;&gt;<i> Try to start from the very beginning, and define a new dataset and manually
+</I>&gt;&gt;<i> put in the correct calibration. This might just work ...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> All the best,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Stephan
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Sent from my iPhone
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Aug 19, 2016, at 21:00, Tania Mendonca &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tvmendonca1 at sheffield.ac.uk</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I've just checked to make sure but yes I have corrected the voxel size on
+</I>&gt;&gt;<i> the image stacks and there shouldn't be a mistake in that. However, your
+</I>&gt;&gt;<i> reply gave me an idea and I did a quick test. I duplicated one of the
+</I>&gt;&gt;<i> images and ran the multiview reconstruction plugin for the two duplicates.
+</I>&gt;&gt;<i> It worked, so it makes me think that there's nothing wrong with the files
+</I>&gt;&gt;<i> themselves and you might be right about the issue being with my voxel
+</I>&gt;&gt;<i> depth. I've referred to SVI's Nyquist calculator to workout my step size,
+</I>&gt;&gt;<i> is there a recommended step size that people use?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best wishes
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tania
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 19 August 2016 at 16:58, <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A> &lt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi, my first guess would be that your calibration (pixel size is x,y and
+</I>&gt;&gt;<i> z) is wrong ... Can you make sure this is correct when you define your
+</I>&gt;&gt;<i> dataset?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> All the best,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Stephan
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Aug 19, 2016, at 17:17, Tania Mendonca &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tvmendonca1 at sheffield.ac.uk</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi all
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hope your microscopes are aligned and treating you well! I'm sorry if
+</I>&gt;&gt;<i> I've missed this conversation before but I was wondering if any of you have
+</I>&gt;&gt;<i> had similar problems as me with trying to get the Fiji multiview
+</I>&gt;&gt;<i> reconstruction plugin to like my data.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I've tried a range of microspheres - different colours, different sizes
+</I>&gt;&gt;<i> and different concentrations but it never seems to find enough
+</I>&gt;&gt;<i> correspondences between views. I've been primarily experimenting with
+</I>&gt;&gt;<i> interactively detec​​ting interest points. I've tried the presets as well
+</I>&gt;&gt;<i> but with no luck. I've tried to systematically work through various
+</I>&gt;&gt;<i> combinations of sigma and threshold but always end up with 0 inliers.
+</I>&gt;&gt;<i> Registrations always terminates with the following error: &quot;There are no
+</I>&gt;&gt;<i> connected tiles, cannot do an optimization. Quitting.&quot;
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> My home built system doesn't run on µManager and my images are acquired
+</I>&gt;&gt;<i> as .cxd files which I convert to .tifs before processing. I'm attaching
+</I>&gt;&gt;<i> some of my test data -<A HREF="https://drive.google.com/">https://drive.google.com/</A>
+</I>&gt;&gt;<i> file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm
+</I>&gt;&gt;<i> beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct
+</I>&gt;&gt;<i> the 10µm beads. I use the same objectives as on the OpenSPIM system (10X
+</I>&gt;&gt;<i> for illumination and 20X for detection), magnification on the system is
+</I>&gt;&gt;<i> 27.7X. The illumination here is 473nm and detection at 520nm.​​
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> A log file has been included in the zip file to give you an idea of what
+</I>&gt;&gt;<i> I've been trying.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I hope I'm just missing a trick somewhere. Any help would be greatly
+</I>&gt;&gt;<i> appreciated!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best wishes
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tania
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tania Mendonca
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Doctoral Research Student
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> University of Sheffield
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> S10 2TN
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tania Mendonca
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Doctoral Research Student
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> University of Sheffield
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> S10 2TN
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tania Mendonca
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Doctoral Research Student
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> University of Sheffield
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> S10 2TN
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ------------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> This e-mail message (including any attachments) is for the sole use of
+</I>&gt;&gt;<i> the intended recipient(s) and may contain confidential and privileged
+</I>&gt;&gt;<i> information. If the reader of this message is not the intended
+</I>&gt;&gt;<i> recipient, you are hereby notified that any dissemination, distribution
+</I>&gt;&gt;<i> or copying of this message (including any attachments) is strictly
+</I>&gt;&gt;<i> prohibited.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> If you have received this message in error, please contact
+</I>&gt;&gt;<i> the sender by reply e-mail message and destroy all copies of the
+</I>&gt;&gt;<i> original message (including attachments).
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> -------------------------
+</I>&gt;<i> Tania Mendonca
+</I>&gt;<i> Doctoral Research Student
+</I>&gt;<i> University of Sheffield
+</I>&gt;<i> S10 2TN
+</I>&gt;<i> -------------------------
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160829/5b724657/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20160829/5b724657/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="001955.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+	<LI>Next message (by thread): <A HREF="001957.html">[OpenSPIM] Multiview registration - no inliers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1956">[ date ]</a>
+              <a href="thread.html#1956">[ thread ]</a>
+              <a href="subject.html#1956">[ subject ]</a>
+              <a href="author.html#1956">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

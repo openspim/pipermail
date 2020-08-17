@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SPIMAcquisition plugin installation fails
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIMAcquisition%20plugin%20installation%20fails&In-Reply-To=%3Ca54e2609d1e5d18e1957ceeeb9b1bc27%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001610.html">
+   <LINK REL="Next"  HREF="001618.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SPIMAcquisition plugin installation fails</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIMAcquisition%20plugin%20installation%20fails&In-Reply-To=%3Ca54e2609d1e5d18e1957ceeeb9b1bc27%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] SPIMAcquisition plugin installation fails">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Thu Feb 19 04:09:56 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001610.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+        <LI>Next message: <A HREF="001618.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1612">[ date ]</a>
+              <a href="thread.html#1612">[ thread ]</a>
+              <a href="subject.html#1612">[ subject ]</a>
+              <a href="author.html#1612">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Carsten,
+
+On 2015-02-18 16:57, Carsten Wolff wrote:
+
+&gt;<i> to be honest I don't know exactely what command-line I should use to
+</I>&gt;<i> see what is missing. Google didn't help here. I also was playing
+</I>&gt;<i> around a lot but couldn't find something appropriate. I need your help
+</I>&gt;<i> again.
+</I>
+We are talking about starting Micro-Manager (not Fiji), right?
+
+First, you have to find out where Micro-Manager was installed.
+
+The easiest way to find out used to be to right-click on the 
+Micro-Manager icon (either on the Desktop or in the Start Menu) and 
+select &quot;Properties&quot;. The window that pops up should show the working 
+directory as well as the executable, but at least in my Windows version, 
+it only says &quot;(multiple values)&quot; and tells me no more.
+
+Absent that information, you need to either remember where you installed 
+it, or find the installation location. In my setup, it is C:\Program 
+Files\Micro-Manager-1.4 (the default).
+
+Next, you need to edit the `ImageJ.cfg` file in that directory (it might 
+be generated only after you started Micro-Manager for the first time). 
+In the second line, it says something about a &quot;javaw.exe&quot;. To see the 
+command-line output, you will have to change that to &quot;java.exe&quot; (i.e. 
+remove the &quot;w&quot;), for example by directing your Windows Explorer to the 
+Micro-Manager directory, right-clicking on the `ImageJ.cfg` icon, 
+selecting &quot;Open With&quot; from the context menu and opting to edit with 
+Notepad.
+
+After that, start Micro-Manager and you will see a command-line window 
+pop up that gives you a metric ton of information. Typically, you will 
+want to extend the buffer by right-clicking on the window icon on the 
+left of the window's title bar, open the Properties from the context 
+menu, and increase the &quot;Buffer Size&quot; in the &quot;Command History&quot; group of 
+the &quot;Options&quot; tab from its ridiculous &quot;50&quot; to something more appropriate 
+(I chose 5000 here). That will allow you to scroll back and read 
+information that whizzed by too fast.
+
+If you were talking about Fiji instead, have a look here to find out how 
+to run from the command-line: <A HREF="http://fiji.sc/Command-Line_Debugging.">http://fiji.sc/Command-Line_Debugging.</A>
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001610.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+	<LI>Next message: <A HREF="001618.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1612">[ date ]</a>
+              <a href="thread.html#1612">[ thread ]</a>
+              <a href="subject.html#1612">[ subject ]</a>
+              <a href="author.html#1612">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

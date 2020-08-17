@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Jenkins job, was Re: Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Jenkins%20job%2C%0A%20was%20Re%3A%20Fwd%3A%20Re%3A%20%5Bmicro-manager-general%5D%20Building%20MM%20in%20VS2012%20on%0A%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3Calpine.DEB.1.00.1306142244400.28957%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001036.html">
+   <LINK REL="Next"  HREF="001044.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Jenkins job, was Re: Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Jenkins%20job%2C%0A%20was%20Re%3A%20Fwd%3A%20Re%3A%20%5Bmicro-manager-general%5D%20Building%20MM%20in%20VS2012%20on%0A%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3Calpine.DEB.1.00.1306142244400.28957%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] Jenkins job, was Re: Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Fri Jun 14 15:47:52 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001036.html">[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+        <LI>Next message: <A HREF="001044.html">[OpenSPIM] OpenSPIM on Labrigger blog
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1037">[ date ]</a>
+              <a href="thread.html#1037">[ thread ]</a>
+              <a href="subject.html#1037">[ subject ]</a>
+              <a href="author.html#1037">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+On Fri, 14 Jun 2013, Luke Stuyvenberg wrote:
+
+&gt;<i> I'm not entirely familiar with Jenkins' capabilities -- would it be able
+</I>&gt;<i> to run our build scripts as they sit? Or should I begin preparing i.e.
+</I>&gt;<i> an overall ant or msbuild build file?
+</I>
+Jenkins can run everything you write as a script. Hence, since you worked
+so hard on build.sh (which I appreciate very, very much), I think we are
+very close to getting there.
+
+There are only a few tricky parts, such as: how does the Jenkins job get
+the 3rdpartypublic (and maybe even the 3rdparty) repository? It is
+relatively easy to solve, though.
+
+And since we have a Windows node to Jenkins (and can tell Jenkins to run a
+particular job *only* on a particular node), we are sooo close
+*puts-his-fingers-really-close-and-squints-his-eyes*.
+
+Ciao,
+Dscho
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001036.html">[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+	<LI>Next message: <A HREF="001044.html">[OpenSPIM] OpenSPIM on Labrigger blog
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1037">[ date ]</a>
+              <a href="thread.html#1037">[ thread ]</a>
+              <a href="subject.html#1037">[ subject ]</a>
+              <a href="author.html#1037">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

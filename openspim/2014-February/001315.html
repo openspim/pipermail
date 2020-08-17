@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM 64-bit [0000129]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3Calpine.DEB.1.00.1402061533400.14982%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001313.html">
+   <LINK REL="Next"  HREF="001314.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM 64-bit [0000129]</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%2064-bit%20%5B0000129%5D&In-Reply-To=%3Calpine.DEB.1.00.1402061533400.14982%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] OpenSPIM 64-bit [0000129]">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Thu Feb  6 08:39:03 CST 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001313.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+        <LI>Next message: <A HREF="001314.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1315">[ date ]</a>
+              <a href="thread.html#1315">[ thread ]</a>
+              <a href="subject.html#1315">[ subject ]</a>
+              <a href="author.html#1315">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Nikul,
+
+On Wed, 5 Feb 2014, Nikul wrote:
+
+&gt;<i> &gt; P.S.: It might make sense to experiment with a low-impact compression
+</I>&gt;<i> &gt; scheme such as LZO (e.g. via <A HREF="https://github.com/Karmasphere/lzo-java">https://github.com/Karmasphere/lzo-java</A>)
+</I>&gt;<i> &gt; because it can reduce a large chunk of the redundancies at the cost of
+</I>&gt;<i> &gt; CPU but at the benefit of the network or processor bus. If you find
+</I>&gt;<i> &gt; time to experiment with this, I would be very much interested in
+</I>&gt;<i> &gt; hearing how you fared!
+</I>&gt;<i> 
+</I>&gt;<i> We might look at some sort of compression later, but for now I am going
+</I>&gt;<i> to concentrate on trying to maximize throughput.
+</I>
+To be clear, my suggestion of LZO was trying to maximize throughput. The
+bottleneck is most likely the storage -- even if you would use SSD or a
+super-parallel RAID, the data transport between RAM and the storage device
+is very, very slow compared to the transport between the RAM and the CPU.
+
+That is why I suggested giving LZO a try: it might very well turn out that
+throughput is *higher* because your CPU is unlikely to be highly impacted
+by the use of it (I expect it still to be used less than 50% maximum even
+if Micro-Manager is recording *and* LZO is used to compress the data
+stream) and at the same time, the bottleneck -- the data transport to the
+storage device -- is used to the same extent. Only that it would now
+transport between 20-50% more data (depending on your exact data, of
+course, but should be in that ball park given that fluorescence images
+have a histogram very favorable to even simplistic compression).
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001313.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+	<LI>Next message: <A HREF="001314.html">[OpenSPIM] OpenSPIM 64-bit [0000129]
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1315">[ date ]</a>
+              <a href="thread.html#1315">[ thread ]</a>
+              <a href="subject.html#1315">[ subject ]</a>
+              <a href="author.html#1315">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

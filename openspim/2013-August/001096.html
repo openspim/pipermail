@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3CC9336363-B38B-49A9-BE0C-D34965A0F55B%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001095.html">
+   <LINK REL="Next"  HREF="001097.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3CC9336363-B38B-49A9-BE0C-D34965A0F55B%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Tue Aug 13 13:14:47 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001095.html">[OpenSPIM] Software hangs during stack capture
+</A></li>
+        <LI>Next message: <A HREF="001097.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1096">[ date ]</a>
+              <a href="thread.html#1096">[ thread ]</a>
+              <a href="subject.html#1096">[ subject ]</a>
+              <a href="author.html#1096">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I have noticed that when acquiring stacks during a time lapse and writing them to disk, using the 'asynchronous writing' option, the order in which the individual images are laid into the stack is imprecise. What I mean is that an image obviously in the middle of the stack is shifted toward the end. I did not observed a fixed pattern, except that usually the first 15-20 planes are in the right order and the mess is a the end.
+
+ I have carefully observed and the problem does not come from the stage 'going back and forth' during acquisition. It is upon writing to the disk that the problem seems to occur. Also I have noticed that it takes quite a long time (up to 3 minutes) to write to disk a ~400Mb stack. 
+ 
+You can see more precisely what I am talking about by looking at two representative stacks: <A HREF="http://dl.dropbox.com/u/484859/Stacks.zip">http://dl.dropbox.com/u/484859/Stacks.zip</A>
+
+With my best regards,
+
+Alexis
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130813/a6fdd0c2/attachment.sig">http://openspim.org/pipermail/openspim/attachments/20130813/a6fdd0c2/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001095.html">[OpenSPIM] Software hangs during stack capture
+</A></li>
+	<LI>Next message: <A HREF="001097.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1096">[ date ]</a>
+              <a href="thread.html#1096">[ thread ]</a>
+              <a href="subject.html#1096">[ subject ]</a>
+              <a href="author.html#1096">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

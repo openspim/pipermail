@@ -1,0 +1,1254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3CCAHAw%2B8ZgEMPJK2WHk%3DgxNY3JvaxquFcQMg8qVTfmgQGWK_ue8A%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001435.html">
+   <LINK REL="Next"  HREF="001437.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2014%2C%20Issue%2020&In-Reply-To=%3CCAHAw%2B8ZgEMPJK2WHk%3DgxNY3JvaxquFcQMg8qVTfmgQGWK_ue8A%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20">aureliaomega at gmail.com
+       </A><BR>
+    <I>Mon Jun 30 12:55:14 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001435.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+        <LI>Next message: <A HREF="001437.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1436">[ date ]</a>
+              <a href="thread.html#1436">[ thread ]</a>
+              <a href="subject.html#1436">[ subject ]</a>
+              <a href="author.html#1436">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi!,
+With the SerialManager dll from June 24, I get the same error messages but
+entire system doesn't crash, it seems to be an improvement!  New core log
+is attached again.
+Thanks again!
+Aurelia
+
+
+
+On Mon, Jun 30, 2014 at 6:01 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+wrote:
+
+&gt;<i> Hi Aurelia,
+</I>&gt;<i>
+</I>&gt;<i> On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; Thank you! I am still having a problem, probably because I&#39;m using a
+</I>&gt;<i> nonstandard setup. There seems to be a conflict in loading my camera (a
+</I>&gt;<i> PVCam one) and the shutter I use to block the laser (Thorlabs SC10); when I
+</I>&gt;<i> try to configure, I get a message &quot;the specified label COM3 is already in
+</I>&gt;<i> use&quot; before anything has been configured, and then several times after I
+</I>&gt;<i> load both, one that says &quot;Line8: device, COM3, serialmanager, COM3.&quot; The
+</I>&gt;<i> shutter should be on COM3 but not the camera, and I don&#39;t run into this
+</I>&gt;<i> conflict when I load both shutter and camera in the vanilla MM from 24
+</I>&gt;<i> June. I attach a core log showing an attempt to load shutter and camera.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Do the devices work individually in OpenSPIM? i.e. if only one is loaded,
+</I>&gt;<i> do you ever get that message? It sounds like a problem with the
+</I>&gt;<i> SerialManager, a device adapter which I hadn't updated -- you might try
+</I>&gt;<i> pulling mmgr_dal_SerialManager.dll from the 24 June nightly build. I'll
+</I>&gt;<i> also be looking into this.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 06/30/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; The Picard stage now appears in the list of available hardware, but when
+</I>&gt;<i> I try to load all three the computer bluescreens.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Load all three devices (camera, shutter, stage), or load all three stages?
+</I>&gt;<i> Does it bluescreen reliably? (I've not seen/heard of this happening
+</I>&gt;<i> before...)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I'll let you know what I work out. Thanks again!
+</I>&gt;<i> Luke
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 06/30/14, Aurelia Honerkamp-Smith  wrote:
+</I>&gt;<i> &gt; Hi Luke,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thank you! I am still having a problem, probably because I&#39;m using a
+</I>&gt;<i> nonstandard setup. There seems to be a conflict in loading my camera (a
+</I>&gt;<i> PVCam one) and the shutter I use to block the laser (Thorlabs SC10); when I
+</I>&gt;<i> try to configure, I get a message &quot;the specified label COM3 is already in
+</I>&gt;<i> use&quot; before anything has been configured, and then several times after I
+</I>&gt;<i> load both, one that says &quot;Line8: device, COM3, serialmanager, COM3.&quot; The
+</I>&gt;<i> shutter should be on COM3 but not the camera, and I don&#39;t run into this
+</I>&gt;<i> conflict when I load both shutter and camera in the vanilla MM from 24
+</I>&gt;<i> June. I attach a core log showing an attempt to load shutter and camera.
+</I>&gt;<i> The Picard stage now appears in the list of available hardware, but when I
+</I>&gt;<i> try to load all three the computer bluescreens.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thanks again,
+</I>&gt;<i> &gt; Aurelia
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On Mon, Jun 30, 2014 at 3:03 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>')&quot; target=&quot;1&quot;&gt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; &gt; Hi Aurelia,
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Sorry about that; it seems a lot more had changed than I had expected.
+</I>&gt;<i> I&#39;ve updated the update site again, with a number of changes (new
+</I>&gt;<i> MMCore, new versions of the device adapters). It tested okay on my virtual
+</I>&gt;<i> machine, but if there&#39;s still a problem, please let me know. If you run
+</I>&gt;<i> into other device adapter problems (i.e. not with PicardStage), try getting
+</I>&gt;<i> updated device adapter versions from the nightly build as of 24 June or so.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Thanks!
+</I>&gt;<i> &gt; &gt; Luke
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; On 06/29/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; &gt; &gt; Hello,
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; I am afraid that after updating to the newest PicardStage dll, my
+</I>&gt;<i> previous configuration is unable to load the stage. I get an error message:
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 8: Device,Picard Twister,PicardStage,Picard Twister
+</I>&gt;<i> &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 9: Device,Picard Z Stage,PicardStage,Picard Z Stage
+</I>&gt;<i> &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 10: Device,Picard XY Stage,PicardStage,Picard XY Stage
+</I>&gt;<i> &gt; &gt; &gt; Failed to load device adapter &quot;PicardStage&quot; from
+</I>&gt;<i> &quot;C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 22: Property,Picard Twister,Serial Number,60
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard Twister&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 23: Property,Picard Z Stage,Serial Number,181
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard Z Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 24: Property,Picard XY Stage,Serial Number (X),182
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 25: Property,Picard XY Stage,Serial Number (Y),180
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 26: Property,Picard XY Stage,X-Max,8000
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 27: Property,Picard XY Stage,X-Min,1
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 28: Property,Picard XY Stage,Y-Max,8000
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 29: Property,Picard XY Stage,Y-Min,1
+</I>&gt;<i> &gt; &gt; &gt; No device with label &quot;Picard XY Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Line 44: Property,Core,Focus,Picard Z Stage
+</I>&gt;<i> &gt; &gt; &gt; Cannot set Core property Focus to invalid value &quot;Picard Z Stage&quot;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; I can still load the camera and my shutter. The Picard Stage now
+</I>&gt;<i> appears unavailable in the hardware configuration wizard. I am also using
+</I>&gt;<i> 32-bit Fiji on a 64-bit machine, but haven&#39;t had trouble loading the
+</I>&gt;<i> stage before (it appeared to work normally, with the exception of the
+</I>&gt;<i> occasional communication delay that I mentioned earlier). I attach a core
+</I>&gt;<i> log.
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; On Sat, Jun 28, 2014 at 6:00 PM, &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&amp;#39;new(javascript:main.compose(">http://openspim.org/mailman/listinfo/openspim(java_script:main.compose(&#39;new(javascript:main.compose(</A>'new',
+</I>&gt;<i> 't=<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt;&#39;)&quot; target=&quot;1&quot;&gt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt;&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Send OpenSPIM mailing list submissions to
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &lt;a href=)
+</I>&gt;<i> &gt; &gt; &gt; &gt; or, via email, send a message with subject or body &#39;help&#39;
+</I>&gt;<i> to
+</I>&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; You can reach the person managing the list at
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> &gt; &gt; &gt; &gt; than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Today&#39;s Topics:
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; 1. Re: Problems with OpenSPIM system (Ke Li)
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Message: 1
+</I>&gt;<i> &gt; &gt; &gt; &gt; Date: Fri, 27 Jun 2014 22:35:42 -0400
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; From: Ke Li &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; To: Kieran Short &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Subject: Re: [OpenSPIM] Problems with OpenSPIM system
+</I>&gt;<i> &gt; &gt; &gt; &gt; Message-ID:
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">CANQL1FuGbrN-Sm4v+W4utYF1hQTVW_C__xYaguRgf3dEJ3wGKA at mail.gmail.com</A>&gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Content-Type: text/plain; charset=&quot;utf-8&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Hi Kieran,
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Thanks for your detailed info. The 4D stage can be controlled
+</I>&gt;<i> normally by
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; the software from Picard in my system. While I just can&#39;t add
+</I>&gt;<i> the Z stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; when I try to create the hardware configuration wizard by
+</I>&gt;<i> micro-manager. So
+</I>&gt;<i> &gt; &gt; &gt; &gt; there is no place I can put the serial number of the Z stage in.
+</I>&gt;<i> (I can add
+</I>&gt;<i> &gt; &gt; &gt; &gt; XY stage and the twister normally and change -1 into the correct
+</I>&gt;<i> serial
+</I>&gt;<i> &gt; &gt; &gt; &gt; number of the XY stage).
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; I can also reproduce the problem exactly as what Mark did and
+</I>&gt;<i> encountered
+</I>&gt;<i> &gt; &gt; &gt; &gt; (From Mark: I can reproduce the problem: with no Picard hardware
+</I>&gt;<i> connected
+</I>&gt;<i> &gt; &gt; &gt; &gt; to the computer, no configuration dialog for the pre-initialization
+</I>&gt;<i> &gt; &gt; &gt; &gt; settings (including the serial number) is displayed in the hardware
+</I>&gt;<i> &gt; &gt; &gt; &gt; configuration
+</I>&gt;<i> &gt; &gt; &gt; &gt; wizard. This is the case for the Twister and Z stage, but not the
+</I>&gt;<i> XY stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; (at least on my computer).)
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; &gt; Ke
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Ke Li
+</I>&gt;<i> &gt; &gt; &gt; &gt; Research Assistant
+</I>&gt;<i> &gt; &gt; &gt; &gt; Biomedical Engineering
+</I>&gt;<i> &gt; &gt; &gt; &gt; Johns Hopkins University
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; Phone: 410-934-9802(tel:410-934-9802)(tel:410-934-9802(tel:
+</I>&gt;<i> 410-934-9802))
+</I>&gt;<i> &gt; &gt; &gt; &gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; On Fri, Jun 27, 2014 at 6:49 PM, Kieran Short &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kieran.short at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Hi Ke,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; You still can add the seral number to the Z in the Picard
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; application/program. This is totally independent of micromanager.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; The other thing is, the 4D stage axes are labeled with stickers
+</I>&gt;<i> which have
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; 2 bits of info . 1st is stage name and the other is the serial
+</I>&gt;<i> number. The
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; stage name doesn&#39;t necessarily represent what you think it
+</I>&gt;<i> does. Our &quot;Z&quot;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; actually translates the stage toward and away from the detection
+</I>&gt;<i> objective!
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; That doesn&#39;t really matter though, I see Z as just a name
+</I>&gt;<i> that doesn&#39;t
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; truly reflect its function. It still works fine.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Once you enter in the correct serial number in the Picard
+</I>&gt;<i> application the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; indicators for the stage communication in the software should
+</I>&gt;<i> turn from red
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; to green.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; The picard software is*very* strict about this serial number
+</I>&gt;<i> setting. I
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; could use just about any numbers and micromanager worked -- but
+</I>&gt;<i> this really
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; wont.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; My feeling is that if you at least have picards app working you
+</I>&gt;<i> will know
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; if its a &quot;driver&quot; problem or not.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; It&#39;ll make Luke&#39;s job a lot easier if this is done. Have
+</I>&gt;<i> you already done
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; this and is there communication between the 4d stage and its own
+</I>&gt;<i> software
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; once you have entered tge correct serial numbers?
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; Cheers Kieran
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt; On 28/06/2014 8:17 AM, &quot;Ke Li&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tianlankeke at gmail.com</A>&gt;&gt;&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Hi Luke,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Thanks so much. Could you please send the link of the changed
+</I>&gt;<i> version to
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; me? And since my system is 64-bit, how can I solve the Z stage
+</I>&gt;<i> problem (no
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; field to change the serial number since I can&#39;t add the Z
+</I>&gt;<i> stage first)?
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Thanks,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Ke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Ke Li
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Research Assistant
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Biomedical Engineering
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Johns Hopkins University
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Phone: 410-934-9802(tel:410-934-9802)(tel:410-934-9802(tel:
+</I>&gt;<i> 410-934-9802))
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; On Fri, Jun 27, 2014 at 2:55 PM, Luke Stuyvenberg &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Hi everyone,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; On 06/27/14, Luke Stuyvenberg wrote:
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; I&#39;ll report back after fixing/testing and
+</I>&gt;<i> committing/uploading the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; device adapter.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; And so here I am. I&#39;ve committed the changes to SVN and
+</I>&gt;<i> uploaded the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; 32-bit version of the DLL to the OpenSPIM update site.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Mark -- Following your suggestion, those lines were removed --
+</I>&gt;<i> in
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; hindsight, it&#39;s not really the correct behavior, and the
+</I>&gt;<i> possible issue
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; with obtaining an invalid serial number shouldn&#39;t be
+</I>&gt;<i> common at all. Thanks!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Kieran -- I recently became aware of the homing problem; the
+</I>&gt;<i> stage
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; sometimes resets its internal location (when it loses power,
+</I>&gt;<i> perhaps?), so
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; over time it will be pushed away. The X/Y stage can be homed
+</I>&gt;<i> using the MM
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Script Panel, running mmc.home(&quot;Picard XY Stage&quot;) -- the Z
+</I>&gt;<i> stage has no
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; appropriate API call, so for the time being, there is a
+</I>&gt;<i> property &quot;GoHome&quot;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; that will home that stage when set to 1. It&#39;s a workaround
+</I>&gt;<i> until I can
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; submit a more useful patch to the MM team (though, as an API
+</I>&gt;<i> change, that
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; may take a little while).
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Ke -- Please let me know if there are any more problems; hope
+</I>&gt;<i> this helps!
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; On 06/27/14, Luke Stuyvenberg wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; Hi Ke, Mark, Johannes,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; On 06/26/14, Mark Tsuchida wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, I also found the cause: OnSerialGeneric() is
+</I>&gt;<i> calling the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Initialize() function, which fails. This happens before
+</I>&gt;<i> the Hardware
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Wizard calls Initialize (actually, when the wizard is
+</I>&gt;<i> trying to get
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; the initial values of the pre-init properties), so the
+</I>&gt;<i> wizard has no
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; chance to display the configuration dialog.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Simply taking out the calls to Initialize (PicardStage.cpp
+</I>&gt;<i> lines
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; 243-245, 258) seems to fix this, but I&#39;m not sure if
+</I>&gt;<i> that is all that
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; needs to be done (since I don&#39;t have a Picard stage
+</I>&gt;<i> and cannot figure
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; out what the intent of calling Initialize() at this point
+</I>&gt;<i> was).
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, can you take a look at this?
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; The intent of the Initialize call was to test the serial
+</I>&gt;<i> number
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; received from the Pi-detector, but I didn&#39;t account for
+</I>&gt;<i> the possibility of
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; CPiDetector returning DEFAULT_SERIAL_UNKNOWN, which it does if
+</I>&gt;<i> the
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; requested device hadn&#39;t been found. I&#39;m preparing a
+</I>&gt;<i> fix for this that I
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; will submit via SVN as soon as possible.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; The ultimate issue is this: The Pi-detector only tested
+</I>&gt;<i> serial numbers
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; up to 250. I&#39;ve doubled this for now, but this is a
+</I>&gt;<i> stop-gap measure that
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; causes an ugly pause in the device adding process while it
+</I>&gt;<i> probes the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; serial numbers; I will need to seek a different approach to
+</I>&gt;<i> detecting the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; motors.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; I&#39;ll report back after fixing/testing and
+</I>&gt;<i> committing/uploading the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; device adapter.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; Luke
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; On 06/26/14, Mark Tsuchida wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Hi Ke and Johannes,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; On Thu, Jun 26, 2014 at 11:57 AM, Mark Tsuchida &lt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt;&gt;&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; On Wed, Jun 25, 2014 at 10:27:54PM -0400, Ke Li wrote:
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; 1. I still can&#39;t add the Z stage when I create the
+</I>&gt;<i> hardware
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; configuration.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; I tried both 64-bit and 32-bit Windows system, neither
+</I>&gt;<i> can work.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; Since the
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; problem report doesn&#39;t give much info, I&#39;m not
+</I>&gt;<i> sure whether there
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; are other
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; ways to solve this problem? And what possible reasons
+</I>&gt;<i> can cause
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;&gt; problem?
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Are you sure you have the correct serial number for the
+</I>&gt;<i> Z stage (as
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Johannes suggested)? In the problem report you sent us,
+</I>&gt;<i> it looked
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; like
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; you had not set the serial number when adding the Z
+</I>&gt;<i> stage in the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Hardware Configuration Wizard. This causes the device
+</I>&gt;<i> adapter to
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; use the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; serial number &quot;-1&quot;, which always results in an error.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; Do you see a field to enter the serial number for the Z
+</I>&gt;<i> stage? If
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; you cannot
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; get it to work even when entering the correct serial
+</I>&gt;<i> number, could
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; you try
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; &gt; sending another Problem Report?
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Sorry, I hadn&#39;t seen your reply to Johannes that
+</I>&gt;<i> answered that
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; question of mine.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; I can reproduce the problem: with no Picard hardware
+</I>&gt;<i> connected to the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; computer, no configuration dialog for the
+</I>&gt;<i> pre-initialization settings
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; (including the serial number) is displayed in the hardware
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; configuration wizard. This is the case for the Twister and
+</I>&gt;<i> Z stage,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; but not the XY stage (at least on my computer).
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, I also found the cause: OnSerialGeneric() is
+</I>&gt;<i> calling the
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Initialize() function, which fails. This happens before
+</I>&gt;<i> the Hardware
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Wizard calls Initialize (actually, when the wizard is
+</I>&gt;<i> trying to get
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; the initial values of the pre-init properties), so the
+</I>&gt;<i> wizard has no
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; chance to display the configuration dialog.
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Simply taking out the calls to Initialize (PicardStage.cpp
+</I>&gt;<i> lines
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; 243-245, 258) seems to fix this, but I&#39;m not sure if
+</I>&gt;<i> that is all that
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; needs to be done (since I don&#39;t have a Picard stage
+</I>&gt;<i> and cannot figure
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; out what the intent of calling Initialize() at this point
+</I>&gt;<i> was).
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Johannes, can you take a look at this?
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Best,
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Mark
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; --
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Mark Tsuchida
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; Micro-Manager Team (UCSF Vale Lab)
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; &gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; -------------- next part --------------
+</I>&gt;<i> &gt; &gt; &gt; &gt; An HTML attachment was scrubbed...
+</I>&gt;<i> &gt; &gt; &gt; &gt; URL: &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/pipermail/openspim/attachments/20140627/6a368a1d/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20140627/6a368a1d/attachment-0001.html</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; ------------------------------
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt; &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;&gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; &gt; End of OpenSPIM Digest, Vol 14, Issue 20
+</I>&gt;<i> &gt; &gt; &gt; &gt; ****************************************
+</I>&gt;<i> &gt; &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140630/e9d33d46/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20140630/e9d33d46/attachment-0002.html</A>&gt;
+-------------- next part --------------
+2014-06-30T18:51:06.868332 tid3868 [IFO,LogManager] Enabled primary log file C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\CoreLogs\CoreLog20140630T185106_pid5976.txt
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] User: ah659
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] Host: invert
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] MM Studio version: 1.4.x dev
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] MMCore version 4.0.4
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] Device API version 60, Module API version 10
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] Operating System: Windows 7 (x86) 6.1
+2014-06-30T18:51:06.868332 tid3868 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.6.0_24, 32-bit
+2014-06-30T18:51:06.997345 tid340 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+2014-06-30T18:51:07.014346 tid340 [IFO,App] Attempting to install autofocus plugin Autofocus
+2014-06-30T18:51:07.016346 tid340 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2014-06-30T18:51:07.017347 tid340 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2014-06-30T18:51:07.017347 tid340 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2014-06-30T18:51:19.026547 tid3868 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2014-06-30T18:51:19.026547 tid3868 [IFO,App] java.lang.NoSuchMethodError: org.fife.ui.rtextarea.RTextScrollPane: method &lt;init&gt;(Ljava/awt/Component;)V not found
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at org.micromanager.ScriptPanel.&lt;init&gt;(ScriptPanel.java:472)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.createScriptPanel(MMStudioMainFrame.java:2109)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$1900(MMStudioMainFrame.java:157)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:542)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.AWTEventMulticaster.windowOpened(AWTEventMulticaster.java:322)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.Window.processWindowEvent(Window.java:1862)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at javax.swing.JFrame.processWindowEvent(JFrame.java:274)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.Window.processEvent(Window.java:1823)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2014-06-30T18:51:19.026547 tid3868 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:51:42.022847 tid3868 [IFO,Core] Did update system state cache
+2014-06-30T18:51:44.491094 tid3868 [IFO,Core] Did unload all devices
+2014-06-30T18:51:44.491094 tid3868 [IFO,Core] System reset
+2014-06-30T18:51:44.545099 tid3868 [IFO,App] CoherentCube
+2014-06-30T18:51:44.546099 tid3868 [IFO,App]    CoherentCube, CoherentCube Laser
+2014-06-30T18:51:44.546099 tid3868 [IFO,App] DemoCamera
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DCam, Demo camera
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DWheel, Demo filter wheel
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DStateDevice, Demo State Device
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DObjective, Demo objective turret
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DStage, Demo stage
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DXYStage, Demo XY stage
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DLightPath, Demo light path
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DAutoFocus, Demo auto focus
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DShutter, Demo shutter
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    D-DA, Demo DA
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DOptovar, Demo Optovar
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    TransposeProcessor, TransposeProcessor
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    ImageFlipX, ImageFlipX
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    ImageFlipY, ImageFlipY
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    MedianFilter, MedianFilter
+2014-06-30T18:51:44.547099 tid3868 [IFO,App]    DHub, DHub
+2014-06-30T18:51:44.547099 tid3868 [IFO,App] Hamamatsu
+2014-06-30T18:51:44.549099 tid3868 [IFO,App] Error: Unable to load Hamamatsu library: Failed to load device adapter &quot;Hamamatsu&quot; [ Failed to load module &quot;C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\mm\Win32\mmgr_dal_Hamamatsu.dll&quot; [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2014-06-30T18:51:44.549099 tid3868 [IFO,App] HamamatsuHam
+2014-06-30T18:51:44.550099 tid3868 [IFO,App] Error: Unable to load HamamatsuHam library: Failed to load device adapter &quot;HamamatsuHam&quot; [ Failed to load module &quot;C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\mm\Win32\mmgr_dal_HamamatsuHam.dll&quot; [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2014-06-30T18:51:44.550099 tid3868 [IFO,App] PicardStage
+2014-06-30T18:51:44.553100 tid3868 [IFO,App]    Picard Twister, Twister
+2014-06-30T18:51:44.553100 tid3868 [IFO,App]    Picard Z Stage, Z stage
+2014-06-30T18:51:44.553100 tid3868 [IFO,App]    Picard XY Stage, XY stage
+2014-06-30T18:51:44.553100 tid3868 [IFO,App] PVCAM
+2014-06-30T18:51:44.554100 tid3868 [IFO,App]    Camera-1, Universal PVCAM interface - camera slot 1
+2014-06-30T18:51:44.554100 tid3868 [IFO,App]    Camera-2, Universal PVCAM interface - camera slot 2
+2014-06-30T18:51:44.554100 tid3868 [IFO,App]    Camera-3, Universal PVCAM interface - camera slot 3
+2014-06-30T18:51:44.554100 tid3868 [IFO,App]    Camera-4, Universal PVCAM interface - camera slot 4
+2014-06-30T18:51:44.554100 tid3868 [IFO,App] QCam
+2014-06-30T18:51:44.559100 tid3868 [IFO,App]    QCamera, QImaging universal camera adapter
+2014-06-30T18:51:44.559100 tid3868 [IFO,App] SerialManager
+2014-06-30T18:51:44.561101 tid3868 [IFO,App]    COM3, Serial communication port
+2014-06-30T18:51:44.561101 tid3868 [IFO,App] ThorlabsSC10
+2014-06-30T18:51:44.561101 tid3868 [IFO,App]    SC10, ThorLabs SC10 shutter controller
+2014-06-30T18:51:44.561101 tid3868 [IFO,App] TIScam
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    TIS_DCAM, The Imaging Source
+2014-06-30T18:51:44.566101 tid3868 [IFO,App] CoherentCube
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    CoherentCube, CoherentCube Laser
+2014-06-30T18:51:44.566101 tid3868 [IFO,App] DemoCamera
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DCam, Demo camera
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DWheel, Demo filter wheel
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DStateDevice, Demo State Device
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DObjective, Demo objective turret
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DStage, Demo stage
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DXYStage, Demo XY stage
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DLightPath, Demo light path
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DAutoFocus, Demo auto focus
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DShutter, Demo shutter
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    D-DA, Demo DA
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DOptovar, Demo Optovar
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    TransposeProcessor, TransposeProcessor
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    ImageFlipX, ImageFlipX
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    ImageFlipY, ImageFlipY
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    MedianFilter, MedianFilter
+2014-06-30T18:51:44.566101 tid3868 [IFO,App]    DHub, DHub
+2014-06-30T18:51:44.566101 tid3868 [IFO,App] Hamamatsu
+2014-06-30T18:51:44.567101 tid3868 [IFO,App] Error: Unable to load Hamamatsu library: Failed to load device adapter &quot;Hamamatsu&quot; [ Failed to load module &quot;C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\mm\Win32\mmgr_dal_Hamamatsu.dll&quot; [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2014-06-30T18:51:44.568101 tid3868 [IFO,App] HamamatsuHam
+2014-06-30T18:51:44.568101 tid3868 [IFO,App] Error: Unable to load HamamatsuHam library: Failed to load device adapter &quot;HamamatsuHam&quot; [ Failed to load module &quot;C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app\mm\Win32\mmgr_dal_HamamatsuHam.dll&quot; [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2014-06-30T18:51:44.568101 tid3868 [IFO,App] PicardStage
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Picard Twister, Twister
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Picard Z Stage, Z stage
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Picard XY Stage, XY stage
+2014-06-30T18:51:44.569101 tid3868 [IFO,App] PVCAM
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Camera-1, Universal PVCAM interface - camera slot 1
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Camera-2, Universal PVCAM interface - camera slot 2
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Camera-3, Universal PVCAM interface - camera slot 3
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    Camera-4, Universal PVCAM interface - camera slot 4
+2014-06-30T18:51:44.569101 tid3868 [IFO,App] QCam
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    QCamera, QImaging universal camera adapter
+2014-06-30T18:51:44.569101 tid3868 [IFO,App] SerialManager
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    COM3, Serial communication port
+2014-06-30T18:51:44.569101 tid3868 [IFO,App] ThorlabsSC10
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    SC10, ThorLabs SC10 shutter controller
+2014-06-30T18:51:44.569101 tid3868 [IFO,App] TIScam
+2014-06-30T18:51:44.569101 tid3868 [IFO,App]    TIS_DCAM, The Imaging Source
+2014-06-30T18:51:47.381383 tid3868 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2014-06-30T18:51:47.381383 tid3868 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label &quot;COM3&quot; is already in use
+2014-06-30T18:51:47.382383 tid3868 [IFO,App] 
+                                   [       ] java.lang.Exception: The specified label &quot;COM3&quot; is already in use in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadDevice(Native Method)
+                                   [       ]   at mmcorej.CMMCore.loadDevice(CMMCore.java:229)
+                                   [       ]   at org.micromanager.conf2.MicroscopeModel.loadModel(MicroscopeModel.java:1459)
+                                   [       ]   at org.micromanager.conf2.DevicesPage.enterPage(DevicesPage.java:497)
+                                   [       ]   at org.micromanager.conf2.ConfiguratorDlg2.setPage(ConfiguratorDlg2.java:234)
+                                   [       ]   at org.micromanager.conf2.ConfiguratorDlg2.access$300(ConfiguratorDlg2.java:76)
+                                   [       ]   at org.micromanager.conf2.ConfiguratorDlg2$2.actionPerformed(ConfiguratorDlg2.java:152)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                   [       ]   at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:178)
+                                   [       ]   at java.awt.Dialog$1.run(Dialog.java:1046)
+                                   [       ]   at java.awt.Dialog$3.run(Dialog.java:1098)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.awt.Dialog.show(Dialog.java:1096)
+                                   [       ]   at java.awt.Component.show(Component.java:1585)
+                                   [       ]   at java.awt.Component.setVisible(Component.java:1537)
+                                   [       ]   at java.awt.Window.setVisible(Window.java:842)
+                                   [       ]   at java.awt.Dialog.setVisible(Dialog.java:986)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.runHardwareWizard(MMStudioMainFrame.java:3292)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$5400(MMStudioMainFrame.java:157)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$40.run(MMStudioMainFrame.java:1423)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                   [       ]   at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:51:48.518496 tid3868 [IFO,Core] Did unload all devices
+2014-06-30T18:51:53.252970 tid3868 [IFO,Core] Did load device Camera-1 from PVCAM; label = Camera-1
+2014-06-30T18:51:54.574102 tid3868 [IFO,Core] Will initialize device Camera-1
+2014-06-30T18:51:54.576102 tid3868 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 2
+2014-06-30T18:51:54.613106 tid3868 [IFO,dev:Camera-1] Building Speed Table
+2014-06-30T18:51:54.730117 tid3868 [IFO,dev:Camera-1] Initializing Static Camera Properties
+2014-06-30T18:51:54.741118 tid3868 [IFO,dev:Camera-1] Initializing Dynamic Camera Properties
+2014-06-30T18:51:54.783123 tid3868 [IFO,dev:Camera-1] This Camera does not have EM Gain
+2014-06-30T18:51:54.783123 tid3868 [IFO,dev:Camera-1] Frame Transfer mode not available
+2014-06-30T18:51:54.831127 tid3868 [IFO,dev:Camera-1] Using PVCAM callbacks for frame acquisition
+2014-06-30T18:51:54.831127 tid3868 [IFO,Core] Did initialize device Camera-1
+2014-06-30T18:51:59.342579 tid3868 [IFO,Core] Did load device SC10 from ThorlabsSC10; label = SC10
+2014-06-30T18:52:01.206765 tid3868 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2014-06-30T18:52:03.720016 tid3868 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2014-06-30T18:52:03.720016 tid3868 [IFO,Core] Will initialize device COM3
+2014-06-30T18:52:03.741018 tid3868 [IFO,Core] Did initialize device COM3
+2014-06-30T18:52:04.741118 tid3868 [IFO,Core] Will initialize device SC10
+2014-06-30T18:52:04.793124 tid3868 [IFO,dev:SC10] THORLABS SC10 VERSION 1.07
+2014-06-30T18:52:04.809125 tid3868 [IFO,Core] Did initialize device SC10
+2014-06-30T18:52:10.391683 tid3868 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2014-06-30T18:52:10.391683 tid3868 [IFO,dev:Picard Twister] Pinging motors...
+2014-06-30T18:52:11.773822 tid3868 [IFO,dev:Picard Twister] Found 3 motors and 1 twisters.
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property AnswerTimeout=500.0000
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property BaudRate=9600
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property DelayBetweenCharsMs=0.0000
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property Handshaking=Off
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property Parity=None
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property StopBits=1
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property Verbose=1
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property AnswerTimeout=500.0000
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property BaudRate=9600
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property DelayBetweenCharsMs=0.0000
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property Handshaking=Off
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property Parity=None
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property StopBits=1
+2014-06-30T18:52:11.786823 tid3868 [IFO,App] COM3, property Verbose=1
+2014-06-30T18:52:12.966941 tid3868 [IFO,Core] Will initialize device Picard Twister
+2014-06-30T18:52:12.998944 tid3868 [IFO,Core] Did initialize device Picard Twister
+2014-06-30T18:52:14.833127 tid3868 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property AnswerTimeout=500.0000
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property BaudRate=9600
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property DelayBetweenCharsMs=0.0000
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property Handshaking=Off
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property Parity=None
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property StopBits=1
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property Verbose=1
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property AnswerTimeout=500.0000
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property BaudRate=9600
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property DelayBetweenCharsMs=0.0000
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property Handshaking=Off
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property Parity=None
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property StopBits=1
+2014-06-30T18:52:14.883132 tid3868 [IFO,App] COM3, property Verbose=1
+2014-06-30T18:52:16.255270 tid3868 [IFO,Core] Will initialize device Picard Z Stage
+2014-06-30T18:52:16.286273 tid3868 [IFO,Core] Did initialize device Picard Z Stage
+2014-06-30T18:52:18.088453 tid3868 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property AnswerTimeout=500.0000
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property BaudRate=9600
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property DelayBetweenCharsMs=0.0000
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property Handshaking=Off
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property Parity=None
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property StopBits=1
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property Verbose=1
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property AnswerTimeout=500.0000
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property BaudRate=9600
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property DelayBetweenCharsMs=0.0000
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property Handshaking=Off
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property Parity=None
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property StopBits=1
+2014-06-30T18:52:18.198464 tid3868 [IFO,App] COM3, property Verbose=1
+2014-06-30T18:52:19.306575 tid3868 [IFO,Core] Will initialize device Picard XY Stage
+2014-06-30T18:52:19.338578 tid3868 [IFO,Core] Did initialize device Picard XY Stage
+2014-06-30T18:52:30.291673 tid3868 [IFO,Core] Did unload all devices
+2014-06-30T18:52:32.533897 tid3868 [IFO,Core] Did unload all devices
+2014-06-30T18:52:32.588903 tid3868 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2014-06-30T18:52:32.588903 tid3868 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label &quot;COM3&quot; is already in use
+2014-06-30T18:52:32.588903 tid3868 [IFO,Core] Did load device Camera-1 from PVCAM; label = Camera-1
+2014-06-30T18:52:32.588903 tid3868 [IFO,Core] Did load device SC10 from ThorlabsSC10; label = SC10
+2014-06-30T18:52:32.588903 tid3868 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2014-06-30T18:52:32.588903 tid3868 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2014-06-30T18:52:32.589903 tid3868 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2014-06-30T18:52:32.683912 tid3868 [IFO,Core] Will initialize 6 devices
+2014-06-30T18:52:32.683912 tid3868 [IFO,Core] Will initialize device COM3
+2014-06-30T18:52:32.694913 tid3868 [IFO,Core] Did initialize device COM3
+2014-06-30T18:52:32.694913 tid3868 [IFO,Core] Will initialize device Camera-1
+2014-06-30T18:52:32.696914 tid3868 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 2
+2014-06-30T18:52:32.725917 tid3868 [IFO,dev:Camera-1] Building Speed Table
+2014-06-30T18:52:32.841928 tid3868 [IFO,dev:Camera-1] Initializing Static Camera Properties
+2014-06-30T18:52:32.853929 tid3868 [IFO,dev:Camera-1] Initializing Dynamic Camera Properties
+2014-06-30T18:52:32.894933 tid3868 [IFO,dev:Camera-1] This Camera does not have EM Gain
+2014-06-30T18:52:32.894933 tid3868 [IFO,dev:Camera-1] Frame Transfer mode not available
+2014-06-30T18:52:32.942938 tid3868 [IFO,dev:Camera-1] Using PVCAM callbacks for frame acquisition
+2014-06-30T18:52:32.942938 tid3868 [IFO,Core] Did initialize device Camera-1
+2014-06-30T18:52:32.942938 tid3868 [IFO,Core] Default camera set to Camera-1
+2014-06-30T18:52:32.942938 tid3868 [IFO,Core] Will initialize device SC10
+2014-06-30T18:52:32.995944 tid3868 [IFO,dev:SC10] THORLABS SC10 VERSION 1.07
+2014-06-30T18:52:33.012945 tid3868 [IFO,Core] Did initialize device SC10
+2014-06-30T18:52:33.012945 tid3868 [IFO,Core] Default shutter set to SC10
+2014-06-30T18:52:33.012945 tid3868 [IFO,Core] Will initialize device Picard Twister
+2014-06-30T18:52:33.030947 tid3868 [IFO,Core] Did initialize device Picard Twister
+2014-06-30T18:52:33.030947 tid3868 [IFO,Core] Will initialize device Picard Z Stage
+2014-06-30T18:52:33.054949 tid3868 [IFO,Core] Did initialize device Picard Z Stage
+2014-06-30T18:52:33.054949 tid3868 [IFO,Core] Will initialize device Picard XY Stage
+2014-06-30T18:52:33.066951 tid3868 [IFO,Core] Did initialize device Picard XY Stage
+2014-06-30T18:52:33.066951 tid3868 [IFO,Core] Default xy stage set to Picard XY Stage
+2014-06-30T18:52:33.066951 tid3868 [IFO,Core] Finished initializing 6 devices
+2014-06-30T18:52:33.067951 tid3868 [IFO,Core] Default camera set to Camera-1
+2014-06-30T18:52:33.067951 tid3868 [IFO,Core] Default stage set to Picard Z Stage
+2014-06-30T18:52:33.071951 tid3868 [IFO,App] 
+                                   [       ] java.lang.Exception: Line 8: Device,COM3,SerialManager,COM3
+                                   [       ] The specified label &quot;COM3&quot; is already in use
+                                   [       ] 
+                                   [       ]  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                   [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:313)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:3151)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.runHardwareWizard(MMStudioMainFrame.java:3299)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$5400(MMStudioMainFrame.java:157)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$40.run(MMStudioMainFrame.java:1423)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                   [       ]   at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:52:34.817126 tid3868 [IFO,dev:SC10] 0
+2014-06-30T18:52:34.821126 tid3868 [IFO,Core] Did update system state cache
+2014-06-30T18:52:39.048549 tid3868 [IFO,dev:SC10] 0
+2014-06-30T18:52:39.083552 tid3868 [IFO,dev:Camera-1] Started sequence on Camera-1, at 457469559 83552, with 2147483647 and 0 ms
+2014-06-30T18:52:39.665610 tid3868 [IFO,App] 
+                                   [       ] java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at org.micromanager.MMStudioMainFrame.updateCenterAndDragListener(MMStudioMainFrame.java:2240)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.checkSimpleAcquisition(MMStudioMainFrame.java:793)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.checkSimpleAcquisition(MMStudioMainFrame.java:812)
+                                   [       ]   at org.micromanager.acquisition.LiveModeTimer.begin(LiveModeTimer.java:181)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.enableLiveMode(MMStudioMainFrame.java:3881)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$10.run(MMStudioMainFrame.java:1018)
+                                   [       ]   at org.micromanager.utils.GUIUtils$4.actionPerformed(GUIUtils.java:404)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ]   at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:291)
+                                   [       ]   at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ]   at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ]   at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ]   at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:52:43.003944 tid1784 [IFO,App] Stop called in LivemodeTimer, true
+2014-06-30T18:52:43.043948 tid1784 [IFO,dev:SC10] 1
+2014-06-30T18:52:45.438188 tid3868 [IFO,App] Plugin command: Acquire SPIM image
+2014-06-30T18:52:45.452189 tid3868 [IFO,Core] Will initialize 6 devices
+2014-06-30T18:52:45.452189 tid3868 [IFO,Core] Will initialize device COM3
+2014-06-30T18:52:45.452189 tid3868 [IFO,Core] Did initialize device COM3
+2014-06-30T18:52:45.452189 tid3868 [IFO,Core] Will initialize device Camera-1
+2014-06-30T18:52:45.452189 tid3868 [IFO,dev:Camera-1] PVCAM VERSION: 3.0.3. Number of cameras detected: 2
+2014-06-30T18:52:45.452189 tid3868 [IFO,dev:Camera-1] PVCAM API error: &quot;C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera&quot;, code: 14
+                                   [                ] In file: PVCAMUniversal.cpp, line: 325, pl_cam_open
+2014-06-30T18:52:45.452189 tid3868 [ERR,Core] Error occurred in device Camera-1: Error in device Camera-1: C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera. 
+2014-06-30T18:52:45.452189 tid3868 [ERR,Core] Error occurred in device setPixelSizeConfig: Device error encountered.
+2014-06-30T18:52:45.453189 tid3868 [IFO,App] Couldn't define uncalibrated pixel size: 
+2014-06-30T18:52:45.453189 tid3868 [IFO,App] java.lang.Exception: Error in device Camera-1: C0_CAM_NAME_NOT_FOUND       This is not a valid name for opening the camera. 
+                                   [       ] 	at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ] 	at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:777)
+                                   [       ] 	at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:263)
+                                   [       ] 	at spim.SPIMAcquisition.show(SPIMAcquisition.java:220)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2755)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame.access$5800(MMStudioMainFrame.java:157)
+                                   [       ] 	at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2720)
+                                   [       ] 	at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ] 	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                   [       ] 	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                   [       ] 	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                   [       ] 	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                   [       ] 	at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+                                   [       ] 	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+                                   [       ] 	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+                                   [       ] 	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+                                   [       ] 	at java.awt.Component.processMouseEvent(Component.java:6289)
+                                   [       ] 	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                   [       ] 	at java.awt.Component.processEvent(Component.java:6054)
+                                   [       ] 	at java.awt.Container.processEvent(Container.java:2041)
+                                   [       ] 	at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                   [       ] 	at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                   [       ] 	at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ] 	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                   [       ] 	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                   [       ] 	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                   [       ] 	at java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                   [       ] 	at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                   [       ] 	at java.awt.Component.dispatchEvent(Component.java:4482)
+                                   [       ] 	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                   [       ] 	at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                   [       ] 	at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                   [       ] 	at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                   [       ] 	at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                   [       ] 	at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                   [       ] 	at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                   [       ] 	at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ] 	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                   [       ] 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                   [       ] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                   [       ] 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2014-06-30T18:52:45.523196 tid3868 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.&lt;init&gt;(DefaultBoundedRangeModel.java:85)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.JSlider.&lt;init&gt;(JSlider.java:259)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.JSlider.&lt;init&gt;(JSlider.java:226)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at spim.SteppedSlider.&lt;init&gt;(SteppedSlider.java:63)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at spim.SPIMAcquisition$19.&lt;init&gt;(SPIMAcquisition.java:1042)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1042)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:367)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:221)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2755)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$5800(MMStudioMainFrame.java:157)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2720)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Component.processMouseEvent(Component.java:6289)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Component.processEvent(Component.java:6054)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Container.processEvent(Container.java:2041)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2014-06-30T18:52:45.523196 tid3868 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App] Plugin command: Acquire SPIM image
+2014-06-30T18:52:47.679412 tid3868 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2014-06-30T18:52:47.679412 tid3868 [IFO,App] java.lang.NullPointerException
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at spim.SPIMAcquisition.updateUI(SPIMAcquisition.java:1175)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at spim.SPIMAcquisition.configurationChanged(SPIMAcquisition.java:307)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:222)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2755)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$5800(MMStudioMainFrame.java:157)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2720)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Component.processMouseEvent(Component.java:6289)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Component.processEvent(Component.java:6054)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Container.processEvent(Container.java:2041)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:52:47.679412 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2014-06-30T18:52:47.680412 tid3868 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:53:00.489693 tid3868 [IFO,App] Stop called in LivemodeTimer, true
+2014-06-30T18:53:00.649709 tid3868 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2014-06-30T18:53:00.649709 tid3868 [IFO,App] java.lang.NullPointerException
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at spim.SPIMAcquisition.dispose(SPIMAcquisition.java:192)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at org.micromanager.PluginLoader.disposePlugins(PluginLoader.java:351)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.cleanupOnClose(MMStudioMainFrame.java:2941)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame.closeSequence(MMStudioMainFrame.java:3027)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at org.micromanager.MMStudioMainFrame$1.windowClosing(MMStudioMainFrame.java:457)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:332)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.Window.processWindowEvent(Window.java:1865)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at javax.swing.JFrame.processWindowEvent(JFrame.java:274)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.Window.processEvent(Window.java:1823)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2014-06-30T18:53:00.649709 tid3868 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-06-30T18:53:01.705814 tid3868 [IFO,App] Stop called in LivemodeTimer, true
+2014-06-30T18:53:01.705814 tid3868 [IFO,dev:Camera-1] PVCAM API error: &quot;C2_PVCAM_NOT_INITED         The PVCAM library was never initialized&quot;, code: 21
+                                   [                ] In file: PVCAMUniversal.cpp, line: 654, pl_cam_close
+2014-06-30T18:53:01.908835 tid3868 [IFO,Core] Did unload all devices
+2014-06-30T18:53:01.908835 tid3868 [IFO,Core] System reset
+2014-06-30T18:53:01.910835 tid3868 [IFO,Core] Core session ended
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001435.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+	<LI>Next message: <A HREF="001437.html">[OpenSPIM] OpenSPIM Digest, Vol 14, Issue 20
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1436">[ date ]</a>
+              <a href="thread.html#1436">[ thread ]</a>
+              <a href="subject.html#1436">[ subject ]</a>
+              <a href="author.html#1436">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

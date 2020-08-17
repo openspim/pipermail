@@ -1,0 +1,21 @@
+
+
+> On Mar 2, 2016, at 12:34 PM, Feinstein, Timothy N <tnf8@pitt.edu> wrote:
+> 
+> Hello, 
+> 
+> Has anyone tried using a digital focus wheel to control one of the axes of the Picard stage in OpenSpim/Micro-Manager?  In theory a joystick with a wheel on it would be even better.  Any experience appreciated.  
+> 
+> Thanks and all the best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM@openspim.org
+> http://openspim.org/mailman/listinfo/openspim

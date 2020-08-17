@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Andor iXon3 camera
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Andor%20iXon3%20camera&In-Reply-To=%3C7780932e182682.534ed6b5%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001358.html">
+   <LINK REL="Next"  HREF="001368.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Andor iXon3 camera</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Andor%20iXon3%20camera&In-Reply-To=%3C7780932e182682.534ed6b5%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Andor iXon3 camera">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Apr 16 19:15:01 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001358.html">[OpenSPIM] Andor iXon3 camera
+</A></li>
+        <LI>Next message: <A HREF="001368.html">[OpenSPIM] Andor iXon3 camera
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1363">[ date ]</a>
+              <a href="thread.html#1363">[ thread ]</a>
+              <a href="subject.html#1363">[ subject ]</a>
+              <a href="author.html#1363">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Martin,
+
+Sorry about the delay.
+
+On 04/11/14, Martin Capek  wrote:
+&gt;<i> I need to use an Andor iXon3 camera in the OpenSPIM setup. This camera works well in standalone installations of the micromanager (MM), I tried them more. However, when I copy, according to instructions in the web, the corresponding dll to MM included in OpenSPIM sw, it does not work. I also used Dependency Walker as there described.
+</I>
+
+Could you please clarify how it does not work? When in Hardware Configuration, is the 'Andor' device not listed? Is it listed, but with a gray dot next to it? Is it available, but gives an error when you try to add it?
+
+
+Which instructions did you follow, exactly? And did the Dependency Walker show any errors?
+
+
+&gt;<i> Could anybody help me, please? What is the number of MM version used in the OpenSPIM from February 7 2014 ? I see only 1.4.x dev, which is probably not enough to choose the proper one.
+</I>
+
+As near as I can determine, OpenSPIM from 7 Feb 2014 is based on[1] Micro-Manager v1.4.16 (which was released 31 January, 2014). This means that copying DLLs from that version of Micro-Manager to OpenSPIM's mm/win32 directory should work. If it does not, please try downloading the nightly build from 5 February 2014[2]:
+
+
+- From the Micro-Manager website, click 'Downloads'.
+- On the left, click 'Download Nightly Builds'.
+- Click 'Version 1.4 (Windows)'.
+- Scroll through the list looking for 'MMSetup_64bit_1.4.17_20140205.exe'.
+
+
+That version of Micro-Manager should be completely compatible with OpenSPIM.
+
+
+I hope this is helpful! Please let me know if you continue to run into problems.
+
+
+Thanks,
+Luke
+
+
+[1] To be completely precise, it is based on SVN revision r12726, dated 5 February 2014. This was shortly after the release of 1.4.16 as I mention above.
+[2] The direct link is: <A HREF="http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_64bit_1.4.17_20140205.exe">http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_64bit_1.4.17_20140205.exe</A> -- however, please always beware of direct links in e-mails! It is safer to find the file yourself, from a trusted website.
+
+
+On 04/11/14, Martin Capek wrote:
+&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Dear all,
+</I>&gt;<i> 
+</I>&gt;<i> I need to use an Andor iXon3 camera in the OpenSPIM setup. This camera works well in standalone installations of the micromanager (MM), I tried them more. However, when I copy, according to instructions in the web, the corresponding dll to MM included in OpenSPIM sw, it does not work. I also used Dependency Walker as there described.
+</I>&gt;<i> 
+</I>&gt;<i> Could anybody help me, please? What is the number of MM version used in the OpenSPIM from February 7 2014 ? I see only 1.4.x dev, which is probably not enough to choose the proper one.
+</I>&gt;<i> 
+</I>&gt;<i> Any comment will be welcome.
+</I>&gt;<i> 
+</I>&gt;<i> Thank you very much in advance!
+</I>&gt;<i> Martin
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Ing. Martin Čapek, Ph.D. 
+</I>&gt;<i> oddělení biomatematiky
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Fyziologický ústav AV ČR, v.v.i. 
+</I>&gt;<i> Vídeňská 1083
+</I>&gt;<i> 142 20 Praha 4
+</I>&gt;<i> 
+</I>&gt;<i> Tel. +420 241 062 334
+</I>&gt;<i> <A HREF="http://www.biomed.cas.cz/fgu/(http://www.biomed.cas.cz/fgu/">http://www.biomed.cas.cz/fgu/(http://www.biomed.cas.cz/fgu/</A>)
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001358.html">[OpenSPIM] Andor iXon3 camera
+</A></li>
+	<LI>Next message: <A HREF="001368.html">[OpenSPIM] Andor iXon3 camera
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1363">[ date ]</a>
+              <a href="thread.html#1363">[ thread ]</a>
+              <a href="subject.html#1363">[ subject ]</a>
+              <a href="author.html#1363">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

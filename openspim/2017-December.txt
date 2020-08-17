@@ -1,0 +1,224 @@
+From huyan1020 at sjtu.edu.cn  Thu Dec  7 22:52:27 2017
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Fri, 8 Dec 2017 12:52:27 +0800 (CST)
+Subject: [OpenSPIM] focal part changing when I move beads
+Message-ID: <1133444037.2125421.1512708746906.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, everyone.
+
+I used my openSPIM to take photo for beads, 
+and found the focal part is always changing when I move the beads, as shown in the attachment.
+The beads are in a cuvette.
+
+Is there anyone knows the problem?
+What can I do to solve this?
+
+Best,
+Yan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_7-4.tif
+Type: image/tiff
+Size: 4200168 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171208/f965d864/attachment-0004.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_7-3.tif
+Type: image/tiff
+Size: 4200168 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171208/f965d864/attachment-0005.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_7-1.tif
+Type: image/tiff
+Size: 4200168 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171208/f965d864/attachment-0006.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_7-2.tif
+Type: image/tiff
+Size: 4200168 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171208/f965d864/attachment-0007.tif>
+
+From jahr at mpi-cbg.de  Mon Dec 11 09:19:00 2017
+From: jahr at mpi-cbg.de (Wiebke Jahr)
+Date: Mon, 11 Dec 2017 16:19:00 +0100 (CET)
+Subject: [OpenSPIM] focal part changing when I move beads
+In-Reply-To: <1133444037.2125421.1512708746906.JavaMail.zimbra@sjtu.edu.cn>
+References: <1133444037.2125421.1512708746906.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <667622714.22136667.1513005540182.JavaMail.zimbra@mpi-cbg.de>
+
+Hello Yan,
+
+I'm guessing that you're facing two problems at the same time:
+
+1) a tilted lightsheet that you need to align
+2) a changing optical path length as you're moving the cuvette.
+
+To be sure, could you please clarify:
+Do you use the original open SPIM design with water-filled chamber and water dipping lens? The beads would be embedded in agarose, inserted into the chamber from the top and moved through the medium. In that case, changing optical path wouldn't be a problem.
+Or do you use a modified design with an air lens, looking into the chamber? Do you then move the whole chamber (you're writing about a "cuvette") through the light sheet? Then the optical path would change as you move the chamber. As a result, the plane that your detection path focusses at would change. In combination with a tilted lightsheet, you'd get the feeling that the "in-focus" portion of the image translate.
+
+To test for a tilted light sheet, just turn the bottom screw of the corner mirror (the one that's installed first in the original openSPIM instructions). If the light sheet is not tilted, it will just go out of focus over the whole field of view. If it's tilted, the in-focus part of the image translates, because the line where your tilted light sheet and the detection focal plane overlap shifts along the image.
+
+Best, Wiebke
+
+--
+------------------------------------------------------------
+Wiebke Jahr
+PhD Student
+Tel. +49 351 210-2768
+
+Huisken Lab,
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauer Str. 108, 01307 Dresden
+------------------------------------------------------------
+
+----- Original Message -----
+From: "胡衍" <huyan1020 at sjtu.edu.cn>
+To: openspim at openspim.org
+Sent: Friday, December 8, 2017 5:52:27 AM
+Subject: [OpenSPIM] focal part changing when I move beads
+
+Hello, everyone.
+
+I used my openSPIM to take photo for beads, 
+and found the focal part is always changing when I move the beads, as shown in the attachment.
+The beads are in a cuvette.
+
+Is there anyone knows the problem?
+What can I do to solve this?
+
+Best,
+Yan
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From S.Hoehn at damtp.cam.ac.uk  Wed Dec 13 06:18:33 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Wed, 13 Dec 2017 12:18:33 +0000
+Subject: [OpenSPIM] where to save Fiji
+Message-ID: <c351c9489c83fa450c5298369951912c@cam.ac.uk>
+
+Dear All,
+
+I vaguely remember someone telling me not to save the OpenSPIM version 
+of Fiji on C:
+
+Does anyone know if and why this is the case?
+
+Thank you!
+
+Stephanie
+
+
+From judith.bartels at tum.de  Mon Dec 18 08:22:07 2017
+From: judith.bartels at tum.de (Bartels, Judith)
+Date: Mon, 18 Dec 2017 14:22:07 +0000
+Subject: [OpenSPIM] Acquire SPIM image data saving and Anti-Drift problem
+Message-ID: <9cb8518dac6147e29933b92f5465262b@tum.de>
+
+Dear all,
+
+thank you very much for this great project and the effort you put in answering all these questions.
+
+I spent the last few months building and aligning an OpenSpim microscope.
+Now two problems are left I was not yet able to solve.
+
+When defining an output directory and starting an acquisition, the Acquire SPIM image plugin throws an error ("Error acquiring: [I cannot be cast to [B") and stops the acquisition. Fiji then has to be restarted.
+The error in the console reads:
+
+java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+     at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+     at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+     at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+     ... 1 more
+
+The second problem is that I do not know how to use the Anti-Drift function. I am able to manually alter the position, but when selecting automatic application of the
+suggested value nothing changes and the sample just keeps drifting out of the field of view.
+
+Has anyone encountered these problems before or has an idea how to solve them?
+
+Thank you very much,
+Judith
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171218/8ee216c7/attachment.html>
+
+From ctrueden at wisc.edu  Mon Dec 18 14:38:24 2017
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Mon, 18 Dec 2017 21:38:24 +0100
+Subject: [OpenSPIM] where to save Fiji
+In-Reply-To: <c351c9489c83fa450c5298369951912c@cam.ac.uk>
+References: <c351c9489c83fa450c5298369951912c@cam.ac.uk>
+Message-ID: <CADN69y=QsRZmVP_iwhQcbZ9=yPXLYn7NY9cEh+V006imAz7UrA@mail.gmail.com>
+
+Hi Stephanie,
+
+It is a good idea to put your Fiji installation (OpenSPIM or otherwise)
+somewhere under C:\Users\You (where "You" is your username). This is
+because with many Windows configurations, the OS will deny ImageJ write
+access to its own directory structure when you place it into "C:\Program
+Files" or "C:\Program Files (x86)" or "C:\". And then the Updater won't be
+able to update anything.
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - https://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - https://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+
+
+On Wed, Dec 13, 2017 at 1:18 PM, Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk>
+wrote:
+
+> Dear All,
+>
+> I vaguely remember someone telling me not to save the OpenSPIM version of
+> Fiji on C:
+>
+> Does anyone know if and why this is the case?
+>
+> Thank you!
+>
+> Stephanie
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171218/f631e135/attachment.html>
+
+From mredd at cores.utah.edu  Thu Dec 28 15:31:35 2017
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Thu, 28 Dec 2017 21:31:35 +0000
+Subject: [OpenSPIM] multi-channel openspim
+Message-ID: <D66AB0E2.47C33%mredd@cores.utah.edu>
+
+Hi All,
+It has been a while since I looked at the Openspim plugin and I was wondering whether it can now handle more than one channel?
+
+Cheers
+Mike Redd
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171228/8fe8bbfd/attachment.html>
+

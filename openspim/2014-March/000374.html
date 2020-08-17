@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] A question about the Light Sheet software
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20A%20question%20about%20the%20Light%20Sheet%20software&In-Reply-To=%3C5338B45B.10201%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000373.html">
+   <LINK REL="Next"  HREF="000375.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] A question about the Light Sheet software</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20A%20question%20about%20the%20Light%20Sheet%20software&In-Reply-To=%3C5338B45B.10201%40wisc.edu%3E"
+       TITLE="[OpenSPIM] A question about the Light Sheet software">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Sun Mar 30 19:18:35 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000373.html">[OpenSPIM] Post-meeting recap
+</A></li>
+        <LI>Next message: <A HREF="000375.html">[OpenSPIM] A question about the Light Sheet software
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#374">[ date ]</a>
+              <a href="thread.html#374">[ thread ]</a>
+              <a href="subject.html#374">[ subject ]</a>
+              <a href="author.html#374">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello Cristian and Alexis,
+
+Please pardon the long delay in my reply!
+
+On 3/24/2014 3:15 PM, Cristian Undurraga wrote:
+&gt;<i> Thanks Dr. Alexis for the full answer. I`m tempted to updates the 
+</I>&gt;<i> softwares, but I`ll wait for the correct version, :)
+</I>&gt;<i>
+</I>&gt;<i> We are using the MicroManager version &quot;1.4.x dev&quot;, this is a version 
+</I>&gt;<i> for &quot;developers&quot;?, it would be better if we use the &quot;users&quot; version?, 
+</I>&gt;<i> i.e. 1.4.15 (this have a update for the Cobolt laser made by Dr. 
+</I>&gt;<i> Maizel) or the 1.4.14. In these case, I`ll need to configure all the 
+</I>&gt;<i> hardware from zero, as shown on the OpenSpim web page 
+</I>&gt;<i> (<A HREF="http://openspim.org/How_to_install">http://openspim.org/How_to_install</A>).
+</I>&gt;<i> Best,
+</I>&gt;<i>
+</I>&gt;<i> Cristian
+</I>&gt;<i>
+</I>&gt;<i> El 21-03-2014, a las 429, Alexis Maizel escribi&#243;:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Cristian,
+</I>&gt;&gt;<i> sorry for the delay.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> First: do NOT upgrade anything. This will break the ability to 
+</I>&gt;&gt;<i> control the laser. (short explanation: to get the Cobolt laser to 
+</I>&gt;&gt;<i> work with OpenSPIM I had to essentially rewrite the code of the laser 
+</I>&gt;&gt;<i> driver; unfortunately, in between the nice folks at OpenSPIM have 
+</I>&gt;&gt;<i> decided to revamp the way OpenSPIM talks to the laser for the new 
+</I>&gt;&gt;<i> version of OpenSPIM; hence, if you update you loose the ability to 
+</I>&gt;&gt;<i> operate the laser&#8230;). I have to hack the code of the current Cobolt 
+</I>&gt;&gt;<i> driver to make it compatible with hte latest (and hopefully future) 
+</I>&gt;&gt;<i> versions of OpenSPIM. What I need is time...
+</I>Alexis -- this is definitely something we should coordinate on; I feel 
+we might be missing each other in trying to simultaneously accommodate 
+each other. ;-) When it's convenient, feel free to contact me and the 
+OpenSPIM list to sort this out; we can set up a long-term solution.
+
+&gt;&gt;&gt;&gt;&gt;<i> We are using the &quot;version 1.4.x dev&quot; with the configuration file 
+</I>&gt;&gt;&gt;&gt;&gt;<i> to startup &quot;OpenSPIM01.app.cfg&quot;, and the problem is that when we 
+</I>&gt;&gt;&gt;&gt;&gt;<i> specify an &quot;Output directory&quot; (in ex. a new folder in the 
+</I>&gt;&gt;&gt;&gt;&gt;<i> desktop), the program don`t take the picture or don&#180;t start the 
+</I>&gt;&gt;&gt;&gt;&gt;<i> timelapse, but when left empty the &quot;Output directory&quot;, we can take 
+</I>&gt;&gt;&gt;&gt;&gt;<i> the picture or the TL begins. The default option (with an empty 
+</I>&gt;&gt;&gt;&gt;&gt;<i> output directory) is limited for the memory allocated in Fiji 
+</I>&gt;&gt;&gt;&gt;&gt;<i> (1024 in RAM), and therefore is limited the acquisition file to 
+</I>&gt;&gt;&gt;&gt;&gt;<i> this memory amount.
+</I>Christian -- I don't know exactly why this is happening... Could you 
+please try to start a time lapse with the output directory specified 
+again, then attach the most recent Micro-Manager core log (a file named 
+CoreLog########.txt, in the OpenSPIM.app directory)? This will help me 
+find the source of the problem so I can fix it. Thanks!
+
+Once again, I apologize for the delay!
+Luke Stuyvenberg
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000373.html">[OpenSPIM] Post-meeting recap
+</A></li>
+	<LI>Next message: <A HREF="000375.html">[OpenSPIM] A question about the Light Sheet software
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#374">[ date ]</a>
+              <a href="thread.html#374">[ thread ]</a>
+              <a href="subject.html#374">[ subject ]</a>
+              <a href="author.html#374">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

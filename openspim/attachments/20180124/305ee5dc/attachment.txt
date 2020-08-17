@@ -1,0 +1,355 @@
+2018-01-23T19:31:38.105175 tid2260 [IFO,LogManager] Enabled primary log file C:\OpenSPIM\OpenSPIM.app\CoreLogs\CoreLog20180123T193138_pid6364.txt
+2018-01-23T19:31:38.120775 tid2260 [IFO,App] EDTHangLogger: Started monitoring of EDT hangs
+                                   [       ] [heartbeat timeout = 4500 ms, hang check interval = 1000 ms]
+2018-01-23T19:31:38.120775 tid2260 [IFO,App] MM Studio version: 1.4.23 20171109
+2018-01-23T19:31:38.120775 tid2260 [IFO,App] MMCore version 8.5.0
+2018-01-23T19:31:38.120775 tid2260 [IFO,App] Device API version 68, Module API version 10
+2018-01-23T19:31:38.120775 tid2260 [IFO,App] Operating System: Windows 7 (amd64) 6.1
+2018-01-23T19:31:38.120775 tid2260 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_162, 64-bit
+2018-01-23T19:31:38.151975 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmplugins/
+2018-01-23T19:31:38.151975 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Big.jar!/
+2018-01-23T19:31:38.183175 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\DataBrowser.jar!/
+2018-01-23T19:31:40.507181 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\PixelCalibrator.jar!/
+2018-01-23T19:31:40.569581 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Recall.jar!/
+2018-01-23T19:31:40.569581 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\SPIMAcquisition-1.0.1-SNAPSHOT.jar!/
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Installing plugin org.micromanager.browser.Data_Browser...
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Error: Plugin [org.micromanager.browser.Data_Browser] has no menuName field
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] org.micromanager.browser.Data_Browser fails to implement static String tooltipDescription.
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Installing plugin org.micromanager.pixelcalibrator.PixelCalibratorPlugin...
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Installing plugin org.micromanager.recall.RecallPlugin...
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Installing plugin spim.SPIMAcquisition...
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmplugins/Acquisition_Tools/
+2018-01-23T19:31:40.819182 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\AcquireMultipleRegions.jar!/
+2018-01-23T19:31:40.865982 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\Gaussian.jar!/
+2018-01-23T19:31:41.255983 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\HCS.jar!/
+2018-01-23T19:31:41.302783 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\IntelligentAcquisition.jar!/
+2018-01-23T19:31:41.349583 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\Magellan.jar!/
+2018-01-23T19:31:42.535185 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\MMTracker.jar!/
+2018-01-23T19:31:42.566385 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\PatternOverlay.jar!/
+2018-01-23T19:31:42.644385 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Acquisition_Tools\SlideExplorer.jar!/
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin org.micromanager.acquiremultipleregions.AcquireMultipleRegions...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin GaussianTrack_...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin org.micromanager.hcs.SiteGenerator...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin org.micromanager.intelligentacquisition.IntelligentAcquisition...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin org.micromanager.plugins.magellan.main.Magellan...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin com.imaging100x.tracker.TrackerControl...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin org.micromanager.patternoverlay.PatternOverlayPlugin...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Installing plugin org.micromanager.slideexplorer.SlideExplorerPlugin...
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmplugins/Beta/
+2018-01-23T19:31:42.691185 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Beta\CRISPv2.jar!/
+2018-01-23T19:31:42.737985 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Beta\SlideExplorer2.jar!/
+2018-01-23T19:31:45.187190 tid6928 [IFO,App] Installing plugin com.asiimaging.CRISPv2.ASI_CRISP_V2...
+2018-01-23T19:31:45.187190 tid6928 [IFO,App] Installing plugin org.micromanager.SlideExplorer2...
+2018-01-23T19:31:45.187190 tid6928 [IFO,App] Error: Plugin [org.micromanager.SlideExplorer2] has no menuName field
+2018-01-23T19:31:45.187190 tid6928 [IFO,App] org.micromanager.SlideExplorer2 fails to implement static String tooltipDescription.
+2018-01-23T19:31:45.187190 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmplugins/Developer_Tools/
+2018-01-23T19:31:45.187190 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Developer_Tools\ClojureEditor.jar!/
+2018-01-23T19:31:45.202790 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Developer_Tools\DLLAutoReloader.jar!/
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Developer_Tools\SequenceBufferMonitor.jar!/
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Installing plugin org.micromanager.clojureeditor.ClojureEditorPlugin...
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Installing plugin org.micromanager.DLLAutoReloader...
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Error: Plugin [org.micromanager.DLLAutoReloader] has no menuName field
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] org.micromanager.DLLAutoReloader fails to implement static String tooltipDescription.
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Installing plugin org.micromanager.plugins.sequencebuffermonitor.SequenceBufferMonitor...
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmplugins/Device_Control/
+2018-01-23T19:31:45.358790 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\ASIdiSPIM.jar!/
+2018-01-23T19:31:45.748791 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\AutoLase.jar!/
+2018-01-23T19:31:45.779991 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\CRISP.jar!/
+2018-01-23T19:31:45.795591 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\MightexPolygon.jar!/
+2018-01-23T19:31:45.904791 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\MultiCamera.jar!/
+2018-01-23T19:31:45.920391 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\pgFocus.jar!/
+2018-01-23T19:31:45.951591 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\Projector.jar!/
+2018-01-23T19:31:46.076391 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\StageControl.jar!/
+2018-01-23T19:31:46.123191 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\Device_Control\WhiteBalance.jar!/
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin org.micromanager.asidispim.ASIdiSPIM...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin ch.epfl.leb.autolase.AutoLasePlugin...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin org.micromanager.CRISP.CRISP...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin org.micromanager.polygon.PolygonPlugin...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin org.micromanager.multicamera.MultiCamera...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin edu.umassmed.pgfocus.pgFocus...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin org.micromanager.projector.ProjectorPlugin...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin org.micromanager.stagecontrol.StageControl...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Installing plugin PMQI.AutoWB...
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmplugins/On-The-Fly_Processors/
+2018-01-23T19:31:46.138791 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\On-The-Fly_Processors\ImageFlipper.jar!/
+2018-01-23T19:31:46.154391 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\On-The-Fly_Processors\MultiChannelShading.jar!/
+2018-01-23T19:31:46.185591 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmplugins\On-The-Fly_Processors\SplitView.jar!/
+2018-01-23T19:31:46.216791 tid6928 [IFO,App] Installing plugin org.micromanager.newimageflipper.NewTaggedImageFlipper...
+2018-01-23T19:31:46.684792 tid6928 [IFO,App] Installing plugin org.micromanager.multichannelshading.MultiChannelShading...
+2018-01-23T19:31:46.684792 tid6928 [IFO,App] Installing plugin org.micromanager.splitview.SplitView...
+2018-01-23T19:31:46.715992 tid6928 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM/OpenSPIM.app/mmautofocus/
+2018-01-23T19:31:46.715992 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmautofocus\HardwareFocusExtender.jar!/
+2018-01-23T19:31:46.715992 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmautofocus\MMAutofocus.jar!/
+2018-01-23T19:31:46.731592 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmautofocus\MMAutofocusDuo.jar!/
+2018-01-23T19:31:46.731592 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmautofocus\MMAutofocusTB.jar!/
+2018-01-23T19:31:46.731592 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmautofocus\MMNullAutofocus.jar!/
+2018-01-23T19:31:46.731592 tid6928 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM\OpenSPIM.app\mmautofocus\MMOughtaFocus.jar!/
+2018-01-23T19:31:46.747192 tid6928 [IFO,App] Attempting to install autofocus plugin HardwareFocusExtender
+2018-01-23T19:31:46.747192 tid6928 [IFO,App] Attempting to install autofocus plugin Autofocus
+2018-01-23T19:31:46.747192 tid6928 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2018-01-23T19:31:46.747192 tid6928 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2018-01-23T19:31:46.747192 tid6928 [IFO,App] Attempting to install autofocus plugin NullAutofocus
+2018-01-23T19:31:46.747192 tid6928 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2018-01-23T19:31:46.747192 tid2260 [IFO,App] Finished waiting for plugins to load
+2018-01-23T19:31:46.762792 tid2260 [IFO,Core] Did unload all devices
+2018-01-23T19:31:46.762792 tid2260 [IFO,Core] Did load device IDS uEye from IDS_uEye; label = IDS uEye
+2018-01-23T19:31:46.762792 tid2260 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2018-01-23T19:31:46.762792 tid2260 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2018-01-23T19:31:46.762792 tid2260 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2018-01-23T19:31:46.918793 tid2260 [IFO,Core] Will initialize 4 devices
+2018-01-23T19:31:46.918793 tid2260 [IFO,Core] Will initialize device IDS uEye
+2018-01-23T19:31:51.661201 tid3092 [IFO,App] EDTHangLogger: Missed heartbeat; waiting to see if we are stuck on a single event
+2018-01-23T19:31:52.675203 tid3092 [IFO,App] EDTHangLogger: Event handling has exceeded at least 1014 ms (currently 5524 ms since heartbeat timebase)
+                                   [       ] Stack traces follow (note: thread states queried later than stack traces)
+                                   [       ] Thread 2 [Reference Handler] WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at java.lang.Object.wait(Object.java:502)
+                                   [       ]   at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+                                   [       ]   at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+                                   [       ] Thread 3 [Finalizer] WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                                   [       ]   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                                   [       ]   at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:212)
+                                   [       ] Thread 5 [Signal Dispatcher] RUNNABLE
+                                   [       ] Thread 6 [Attach Listener] RUNNABLE
+                                   [       ] Thread 11 [Java2D Disposer] WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                                   [       ]   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                                   [       ]   at sun.java2d.Disposer.run(Disposer.java:148)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 13 [AWT-Windows] RUNNABLE
+                                   [       ]   at sun.awt.windows.WToolkit.eventLoop(Native Method)
+                                   [       ]   at sun.awt.windows.WToolkit.run(WToolkit.java:306)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 19 [SciJava-71890fc5-Thread-0] TIMED_WAITING
+                                   [       ]   at sun.misc.Unsafe.park(Native Method)
+                                   [       ]   at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                                   [       ]   at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+                                   [       ]   at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                                   [       ]   at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+                                   [       ]   at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+                                   [       ]   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+                                   [       ]   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 20 [SciJava-71890fc5-Thread-1] TIMED_WAITING
+                                   [       ]   at sun.misc.Unsafe.park(Native Method)
+                                   [       ]   at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                                   [       ]   at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+                                   [       ]   at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                                   [       ]   at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+                                   [       ]   at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+                                   [       ]   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+                                   [       ]   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 22 [RMI TCP Accept-0] RUNNABLE
+                                   [       ]   at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+                                   [       ]   at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+                                   [       ]   at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+                                   [       ]   at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+                                   [       ]   at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+                                   [       ]   at java.net.ServerSocket.accept(ServerSocket.java:513)
+                                   [       ]   at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400)
+                                   [       ]   at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 23 [RMI Reaper] WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                                   [       ]   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                                   [       ]   at sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 24 [GC Daemon] TIMED_WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at sun.misc.GC$Daemon.run(GC.java:117)
+                                   [       ] Thread 25 [AWT-Shutdown] WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at java.lang.Object.wait(Object.java:502)
+                                   [       ]   at sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:295)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 26 [AWT-EventQueue-0] RUNNABLE
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                   [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:366)
+                                   [       ]   at org.micromanager.MMStudio.loadSystemConfiguration(MMStudio.java:1730)
+                                   [       ]   at org.micromanager.MMStudio.initializationSequence(MMStudio.java:485)
+                                   [       ]   at org.micromanager.MMStudio.<init>(MMStudio.java:375)
+                                   [       ]   at MMStudioPlugin$1.run(MMStudioPlugin.java:76)
+                                   [       ]   at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+                                   [       ]   at java.awt.EventQueue.access$500(EventQueue.java:97)
+                                   [       ]   at java.awt.EventQueue$3.run(EventQueue.java:709)
+                                   [       ]   at java.awt.EventQueue$3.run(EventQueue.java:703)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+                                   [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+                                   [       ] Thread 30 [DestroyJavaVM] RUNNABLE
+                                   [       ] Thread 35 [TimerQueue] TIMED_WAITING
+                                   [       ]   at sun.misc.Unsafe.park(Native Method)
+                                   [       ]   at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                                   [       ]   at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+                                   [       ]   at java.util.concurrent.DelayQueue.take(DelayQueue.java:223)
+                                   [       ]   at javax.swing.TimerQueue.run(TimerQueue.java:174)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 36 [EDTHangLogger timer] RUNNABLE
+                                   [       ]   at java.lang.Thread.dumpThreads(Native Method)
+                                   [       ]   at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+                                   [       ]   at org.micromanager.diagnostics.EDTHangLogger.checkForHang(EDTHangLogger.java:233)
+                                   [       ]   at org.micromanager.diagnostics.EDTHangLogger.access$200(EDTHangLogger.java:34)
+                                   [       ]   at org.micromanager.diagnostics.EDTHangLogger$4.run(EDTHangLogger.java:220)
+                                   [       ]   at java.util.TimerThread.mainLoop(Timer.java:555)
+                                   [       ]   at java.util.TimerThread.run(Timer.java:505)
+                                   [       ] Thread 38 [Thread-6] TIMED_WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at bsh.util.JConsole$BlockingPipedInputStream.read(JConsole.java:771)
+                                   [       ]   at java.io.PipedInputStream.read(PipedInputStream.java:377)
+                                   [       ]   at java.io.InputStream.read(InputStream.java:101)
+                                   [       ]   at bsh.util.JConsole.inPipeWatcher(JConsole.java:667)
+                                   [       ]   at bsh.util.JConsole.run(JConsole.java:677)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+                                   [       ] Thread 39 [BeanShell interpreter] TIMED_WAITING
+                                   [       ]   at java.lang.Object.wait(Native Method)
+                                   [       ]   at java.io.PipedInputStream.read(PipedInputStream.java:326)
+                                   [       ]   at java.io.PipedInputStream.read(PipedInputStream.java:377)
+                                   [       ]   at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+                                   [       ]   at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+                                   [       ]   at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+                                   [       ]   at java.io.InputStreamReader.read(InputStreamReader.java:184)
+                                   [       ]   at bsh.JavaCharStream.FillBuff(JavaCharStream.java:160)
+                                   [       ]   at bsh.JavaCharStream.ReadByte(JavaCharStream.java:188)
+                                   [       ]   at bsh.JavaCharStream.readChar(JavaCharStream.java:289)
+                                   [       ]   at bsh.JavaCharStream.BeginToken(JavaCharStream.java:209)
+                                   [       ]   at bsh.ParserTokenManager.getNextToken(ParserTokenManager.java:2072)
+                                   [       ]   at bsh.Parser.jj_ntk(Parser.java:6022)
+                                   [       ]   at bsh.Parser.Line(Parser.java:163)
+                                   [       ]   at bsh.Interpreter.Line(Interpreter.java:1011)
+                                   [       ]   at bsh.Interpreter.run(Interpreter.java:462)
+                                   [       ]   at java.lang.Thread.run(Thread.java:748)
+2018-01-23T19:32:03.441622 tid2260 [IFO,Core] Did initialize device IDS uEye
+2018-01-23T19:32:03.441622 tid2260 [IFO,Core] Default camera set to IDS uEye
+2018-01-23T19:32:03.441622 tid2260 [IFO,Core] Will initialize device Picard Twister
+2018-01-23T19:32:03.457222 tid2260 [IFO,Core] Did initialize device Picard Twister
+2018-01-23T19:32:03.457222 tid2260 [IFO,Core] Will initialize device Picard XY Stage
+2018-01-23T19:32:03.519622 tid2260 [IFO,Core] Did initialize device Picard XY Stage
+2018-01-23T19:32:03.519622 tid2260 [IFO,Core] Default xy stage set to Picard XY Stage
+2018-01-23T19:32:03.519622 tid2260 [IFO,Core] Will initialize device Picard Z Stage
+2018-01-23T19:32:03.550822 tid2260 [IFO,Core] Did initialize device Picard Z Stage
+2018-01-23T19:32:03.550822 tid2260 [IFO,Core] Finished initializing 4 devices
+2018-01-23T19:32:03.550822 tid2260 [IFO,Core] Default camera set to IDS uEye
+2018-01-23T19:32:03.550822 tid2260 [IFO,Core] Default stage set to Picard Z Stage
+2018-01-23T19:32:03.613222 tid2260 [IFO,Core] Did update system state cache
+2018-01-23T19:32:03.675622 tid2260 [IFO,App] Updating GUI; config pad = true; from cache = false
+2018-01-23T19:32:03.722422 tid2260 [IFO,Core] Did update system state cache
+2018-01-23T19:32:03.722422 tid2260 [IFO,App] Finished updating GUI
+2018-01-23T19:32:03.722422 tid2260 [IFO,App] Startup script file (C:\OpenSPIM\OpenSPIM.app\MMStartup.bsh) not present.
+2018-01-23T19:32:04.424423 tid2260 [IFO,App] Rebuilding config group table
+2018-01-23T19:32:04.424423 tid2260 [IFO,App] Finished rebuilding config group table
+2018-01-23T19:32:04.549223 tid2260 [IFO,App] EDTHangLogger: First heartbeat after miss (17409 ms since timebase)
+2018-01-23T19:32:23.222456 tid2260 [IFO,LogManager] Switching primary log level from info to trace
+2018-01-23T19:32:23.222456 tid2260 [IFO,LogManager] Switched primary log level from info to trace
+2018-01-23T19:32:26.170861 tid2260 [dbg,Core] Will snap image from current camera
+2018-01-23T19:32:26.498462 tid2260 [dbg,Core] Did snap image from current camera
+2018-01-23T19:32:26.514062 tid2260 [IFO,App] [UI] JButton "Snap" clicked in MainFrame.
+2018-01-23T19:32:26.529662 tid2904 [IFO,App] Error: Coercing position count to 1
+2018-01-23T19:32:40.054886 tid2260 [IFO,App] [UI] JMenu "Plugins" clicked in MainFrame.
+2018-01-23T19:32:41.631991 tid2260 [IFO,App] Plugin command: Acquire SPIM image
+2018-01-23T19:32:41.641991 tid2260 [dbg,Core] Pixel size config: preset Uncalibrated: added setting : Core-Initialize = 1
+2018-01-23T19:32:41.644491 tid2260 [dbg,Core] Pixel size config: preset Uncalibrated: set resolution to 1.00000 um/px
+2018-01-23T19:32:41.644491 tid2260 [IFO,Core] Will initialize 4 devices
+2018-01-23T19:32:41.644491 tid2260 [IFO,Core] Will initialize device IDS uEye
+2018-01-23T19:32:41.644491 tid2260 [IFO,Core] Did initialize device IDS uEye
+2018-01-23T19:32:41.644491 tid2260 [IFO,Core] Default camera set to IDS uEye
+2018-01-23T19:32:41.644491 tid2260 [IFO,Core] Will initialize device Picard Twister
+2018-01-23T19:32:41.801993 tid2260 [IFO,Core] Did initialize device Picard Twister
+2018-01-23T19:32:41.801993 tid2260 [IFO,Core] Will initialize device Picard XY Stage
+2018-01-23T19:32:42.026997 tid2260 [IFO,Core] Did initialize device Picard XY Stage
+2018-01-23T19:32:42.026997 tid2260 [IFO,Core] Default xy stage set to Picard XY Stage
+2018-01-23T19:32:42.026997 tid2260 [IFO,Core] Will initialize device Picard Z Stage
+2018-01-23T19:32:42.121998 tid2260 [IFO,Core] Did initialize device Picard Z Stage
+2018-01-23T19:32:42.121998 tid2260 [IFO,Core] Finished initializing 4 devices
+2018-01-23T19:32:42.121998 tid2260 [dbg,App] Notification for Device: Core Property: Initialize changed to value: 1
+2018-01-23T19:32:42.126998 tid2260 [dbg,Core] Applied pixel size configuration preset Uncalibrated
+2018-01-23T19:32:42.126998 tid2260 [IFO,App] Defined uncalibrated pixel size (1:1).
+2018-01-23T19:32:42.324504 tid2260 [dbg,App] Laser min/max/def:1 1000 1000
+2018-01-23T19:33:00.056603 tid2260 [IFO,App] [UI] JTabbedPane set to "Acquisition" in JFrame.
+2018-01-23T19:33:09.517221 tid2260 [IFO,App] [UI] JToggleButton "Desktop" toggled on in JDialog.
+2018-01-23T19:33:09.564021 tid2260 [IFO,App] [UI] JToggleButton "Desktop" toggled on in JDialog.
+2018-01-23T19:33:11.763625 tid2260 [IFO,App] [UI]  set to "C:\OpenSPIM\tests" in JDialog.
+2018-01-23T19:33:11.919625 tid2260 [IFO,App] [UI]  set to "C:\OpenSPIM\tests" in JDialog.
+2018-01-23T19:33:14.712030 tid2260 [IFO,App] [UI] JTextField clicked in JFrame.
+2018-01-23T19:33:27.020452 tid2260 [IFO,App] [UI] JTabbedPane set to "Position List" in JFrame.
+2018-01-23T19:33:28.549255 tid2260 [IFO,App] [UI] JButton "Stack at this Z plus:" clicked in JFrame.
+2018-01-23T19:33:30.561658 tid2260 [IFO,App] [UI] JTabbedPane set to "SPIM Ranges" in JFrame.
+2018-01-23T19:34:05.556457 tid2260 [IFO,App] [UI] JTabbedPane set to "Position List" in JFrame.
+2018-01-23T19:34:09.144463 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:09.456464 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:10.392465 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:10.454865 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:10.595266 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:10.813666 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:10.876066 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:11.032066 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:11.593667 tid2260 [IFO,App] [UI] GlyphButton clicked in JFrame.
+2018-01-23T19:34:18.785280 tid2260 [IFO,App] [UI] JButton "Stack at this Z plus:" clicked in JFrame.
+2018-01-23T19:34:20.392083 tid2260 [IFO,App] [UI] JTable clicked in JFrame.
+2018-01-23T19:34:22.092486 tid2260 [IFO,App] [UI] JButton "Delete Selected Rows" clicked in JFrame.
+2018-01-23T19:34:38.930547 tid5452 [dbg,Core] Autoshutter turned off
+2018-01-23T19:34:38.930547 tid5452 [dbg,Core] Will start absolute move of Picard XY Stage to position (0.000, 0.000) um
+2018-01-23T19:34:38.946147 tid5452 [dbg,Core] Will start absolute move of Picard XY Stage to position (0.000, 0.000) um
+2018-01-23T19:34:38.977347 tid5452 [dbg,Core] Will start absolute move of Picard Z Stage to position 789.00000 um
+2018-01-23T19:34:39.133347 tid5452 [dbg,Core] Will start absolute move of Picard Twister to position 0.00000 um
+2018-01-23T19:34:39.211348 tid5452 [dbg,Core] Waiting for device IDS uEye...
+2018-01-23T19:34:39.211348 tid5452 [dbg,Core] Finished waiting for device IDS uEye
+2018-01-23T19:34:39.211348 tid5452 [dbg,Core] Waiting for device Picard Twister...
+2018-01-23T19:34:39.273748 tid5452 [dbg,Core] Finished waiting for device Picard Twister
+2018-01-23T19:34:39.273748 tid5452 [dbg,Core] Waiting for device Picard XY Stage...
+2018-01-23T19:34:39.273748 tid5452 [dbg,Core] Finished waiting for device Picard XY Stage
+2018-01-23T19:34:39.273748 tid5452 [dbg,Core] Waiting for device Picard Z Stage...
+2018-01-23T19:34:39.273748 tid5452 [dbg,Core] Finished waiting for device Picard Z Stage
+2018-01-23T19:34:39.304948 tid5452 [dbg,Core] Will start absolute move of Picard Z Stage to position 789.00000 um
+2018-01-23T19:34:39.351748 tid5452 [dbg,Core] Will snap image from current camera
+2018-01-23T19:34:39.367348 tid5336 [IFO,App] Beginning stack along dimension 0
+2018-01-23T19:34:39.695851 tid5452 [dbg,Core] Did snap image from current camera
+2018-01-23T19:34:39.851851 tid5452 [dbg,Core] Will start absolute move of Picard Z Stage to position 790.50000 um
+2018-01-23T19:34:39.992251 tid5452 [dbg,Core] Will snap image from current camera
+2018-01-23T19:34:40.304252 tid5452 [dbg,Core] Did snap image from current camera
+2018-01-23T19:34:44.817564 tid2260 [IFO,App] [UI] ConstrainedButton "OptionPane.button" clicked in JDialog.
+
+========================================================================================================================
+
+2018-01-23T19:34:44.833164 tid5452 [IFO,App] Thread 62 (Thread-13) terminated with uncaught exception
+2018-01-23T19:34:44.833164 tid5452 [IFO,App] java.lang.Error: Error acquiring!
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at spim.SPIMAcquisition$29.run(SPIMAcquisition.java:2042)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App] Caused by exception:
+2018-01-23T19:34:44.833164 tid5452 [IFO,App] java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at java.lang.Thread.run(Thread.java:748)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App] Caused by exception:
+2018-01-23T19:34:44.833164 tid5452 [IFO,App] java.lang.ClassCastException: [I cannot be cast to [B
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+2018-01-23T19:34:44.833164 tid5452 [IFO,App]   at java.lang.Thread.run(Thread.java:748)
+
+========================================================================================================================
+
+2018-01-23T19:34:49.542276 tid2260 [IFO,App] [UI] JTabbedPane set to "Log" in JFrame.
+2018-01-23T19:34:51.320679 tid2260 [IFO,App] [UI] JTabbedPane set to "Console" in JFrame.
+2018-01-23T19:34:54.924285 tid2260 [IFO,App] [UI] TextCanvas "canvas5" clicked in TextWindow.
+2018-01-23T19:35:27.633846 tid2260 [IFO,App] [UI] JTable clicked in JFrame.
+2018-01-23T19:35:33.374656 tid2260 [IFO,App] [UI] JTable clicked in JFrame.
+2018-01-23T19:35:51.876288 tid2260 [IFO,App] [UI] JScrollPane clicked in MainFrame.
+2018-01-23T19:35:53.124291 tid2260 [IFO,App] [UI] JMenu "Tools" clicked in MainFrame.
+2018-01-23T19:35:56.774697 tid2260 [IFO,LogManager] Switching primary log level from trace to info
+2018-01-23T19:35:56.774697 tid2260 [IFO,LogManager] Switched primary log level from trace to info
+2018-01-23T19:35:56.774697 tid2260 [IFO,App] [UI] JCheckBox "Enable debug logging" toggled off in OptionsDlg.
+2018-01-23T19:48:26.631057 tid2260 [IFO,App] EDTHangLogger: Stopping monitoring of EDT hangs
+2018-01-23T19:48:28.690261 tid2260 [IFO,Core] Did unload all devices
+2018-01-23T19:48:28.690261 tid2260 [IFO,Core] System reset
+2018-01-23T19:48:28.690261 tid2260 [IFO,Core] Core session ended

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM]  SOLVED: ThorlabsAPTStage 64bit issues
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%20SOLVED%3A%20ThorlabsAPTStage%2064bit%20issues&In-Reply-To=%3C338D38FF-AB2F-434B-8AC8-23A088624C01%40mrc-lmb.cam.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM]  SOLVED: ThorlabsAPTStage 64bit issues</H1>
+    <B>Ben Sutcliffe</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%20SOLVED%3A%20ThorlabsAPTStage%2064bit%20issues&In-Reply-To=%3C338D38FF-AB2F-434B-8AC8-23A088624C01%40mrc-lmb.cam.ac.uk%3E"
+       TITLE="[OpenSPIM]  SOLVED: ThorlabsAPTStage 64bit issues">sutcliff at mrc-lmb.cam.ac.uk
+       </A><BR>
+    <I>Thu May 17 11:56:42 CDT 2018</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2089">[ date ]</a>
+              <a href="thread.html#2089">[ thread ]</a>
+              <a href="subject.html#2089">[ subject ]</a>
+              <a href="author.html#2089">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I was having issues with running a Thorlabs DRV001 connected via a Thorlabs BSC201 controller on a 64bit OpenSPIM setup. 
+
+These issues have now been resolved by doing the following with great help from Jerome Boulanger, MRC LMB, Cambridge, UK:
+
+1. Downloading the micro-manager source code as instructed here (<A HREF="https://micro-manager.org/wiki/Micro-Manager_Source_Code">https://micro-manager.org/wiki/Micro-Manager_Source_Code</A>).
+2. Installing all the relevant programs for building micro-manager as instructed here (<A HREF="https://micro-manager.org/wiki/Building_MM_on_Windows">https://micro-manager.org/wiki/Building_MM_on_Windows</A>).
+3. Setting up Visual C++ 2010 Express as here (<A HREF="https://micro-manager.org/wiki/Visual_Studio_project_settings_for_device_adapters">https://micro-manager.org/wiki/Visual_Studio_project_settings_for_device_adapters</A>).
+4. Installing the 64bit APT software from Thorlabs (<A HREF="https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=Motion_Control&amp;viewtab=1">https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=Motion_Control&amp;viewtab=1</A>).
+5. Downloading and unzipping the APTx64 form here (<A HREF="https://micro-manager.org/wiki/File:APT_x64.zip">https://micro-manager.org/wiki/File:APT_x64.zip</A>).
+6. Then building the ThorlabsAPTStage Device Adapter in 64bit on a 64bit Windows 7 machine, using the 'APT.lib' downloaded in point 5.
+7. The resulting .dll file was renamed to 'mmgr_dal_ThorlabAPTStage.dll' then placed into the OpenSPIM.app folder along with the 'APT.dll' downloaded in point 5.
+8. The OpenSPIM Fiji/MM bundle was then restarted and a ThorlabAPTStage could be configured as described for a 32bit system here (<A HREF="https://micro-manager.org/wiki/ThorlabsAPTStage">https://micro-manager.org/wiki/ThorlabsAPTStage</A>).
+
+If you want to try this 64bit ThorlabsAPTStage Device Adapter then download the .zip file here (<A HREF="https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip">https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip</A>) and unzip into the OpenSPIM or Micro-Manager main folder.
+
+I am still yet to implement this new Z drive in the 'Acquire SPIM Image' plugin. 
+
+Best,
+Ben
+
+--
+Dr Ben Sutcliffe
+Cell Biology Division / Light Microscopy
+MRC Laboratory of Molecular Biology
+Francis Crick Avenue
+Cambridge Biomedical Campus
+Cambridge CB2 0QH, UK
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20180517/8774144c/attachment.html">http://openspim.org/pipermail/openspim/attachments/20180517/8774144c/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2089">[ date ]</a>
+              <a href="thread.html#2089">[ thread ]</a>
+              <a href="subject.html#2089">[ subject ]</a>
+              <a href="author.html#2089">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

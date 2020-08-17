@@ -1,0 +1,1267 @@
+From drichardson at fas.harvard.edu  Mon Nov 10 08:11:16 2014
+From: drichardson at fas.harvard.edu (Richardson, Douglas)
+Date: Mon, 10 Nov 2014 14:11:16 +0000
+Subject: [OpenSPIM] Zeiss lightsheet .czi to .tif conversion
+In-Reply-To: <CABG3x+_xBo99xaah5S_xtAmfohgV1e-PAaHpJUbtTWgSDFk9kw@mail.gmail.com>
+References: <CABG3x+_xBo99xaah5S_xtAmfohgV1e-PAaHpJUbtTWgSDFk9kw@mail.gmail.com>
+Message-ID: <8651159D396AE543B6B4EE695B89E43575354DE2@HARVANDMBX04.fasmail.priv>
+
+Sorry to those of you receiving this multiple times, but I've seen this question on all three lists recently.
+For those of you requiring conversion of Zeiss Lightsheet .czi files to .tif for downstream processing, these two ImageJ/Fiji macros may be of use to you:
+
+http://hcbi.fas.harvard.edu/lightsheet-czi-tif-converter-timelapsemultiview
+http://hcbi.fas.harvard.edu/lightsheet-czi-tif-converter-tiling
+
+Thanks,
+Doug
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141110/61718fd9/attachment.html>
+
+From pitrone at mpi-cbg.de  Wed Nov 12 04:13:35 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 12 Nov 2014 11:13:35 +0100 (CET)
+Subject: [OpenSPIM] [Fwd: FOM2015: Abstracts & Registration opened.
+ Goettingen, Germany, March 29 - April 1, 2015]
+Message-ID: <63045.10.1.191.65.1415787215.squirrel@webmail.mpi-cbg.de>
+
+Howdy OpenSPIM Community,
+
+To all those who are interested, this happens to be a great conference...
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra?e 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names
+are What and Why and When and How and Where and Who." Rudyard Kipling -
+The Elephant's Child
+
+
+--------------------------- Original Message ----------------------------
+Subject: FOM2015: Abstracts & Registration opened. Goettingen, Germany,
+March 29 - April 1, 2015
+From:    "Organization FOM2015" <no-reply at focusonmicroscopy.org>
+Date:    Wed, November 12, 2014 10:52
+To:      pitrone at mpi-cbg.de
+-------------------------------------------------------------------------
+
+FOCUS ON MICROSCOPY 2015
+
+G??ttingen, Germany, March 29 - April 1, 2015
+
+28th International Conference on 3D Image Processing in Microscopy
+27th International Conference on Confocal Microscopy
+
+Dear Colleagues,
+
+Abstracts for oral and poster presentations can now be submitted
+through the conference website: http://www.FocusOnMicroscopy.org where
+also the conference registration has opened and hotel information is
+available.
+
+Deadline for abstract submission: Wednesday, January 20, 2015
+
+After the successful FOM2014 conference held in Sydney earlier this
+year, it is a pleasure to announce FOM2015, the next Focus on
+Microscopy conference. It will take place in the Lokhalle venue,
+G??ttingen, Germany, in the week before Easter from Sunday 29 March
+??? Wednesday 1 April 2015. It will be the next in a series of unique
+interdisciplinary meetings on advanced multi-dimensional light
+microscopy and image processing.
+
+For further details please visit the FOCUS ON MICROSCOPY website
+www.FocusOnMicroscopy.org. There, in addition to general information,
+the scientific program of the previous Sydney and other FOM
+conferences can be found at the link ???Past conferences???. From 2004
+onwards together with links in the scientific program to one page PDF
+abstracts of the contributions presented in that year. Please note
+also the "Search FOM database " button for full searches over the
+digital FOM archive over the years.
+
+FOM2015 is the continuation of a yearly conference series, started in
+1988 presenting the latest innovations and newest trends in optical
+microscopy, and their application in biology, medicine, and the
+material sciences.
+
+Key topics are:
+
+* Theory and practice of confocal and multiphoton-excitation
+microscopy
+* Super-resolution, nanoscopy imaging: from PSF engineering (4pi,
+SIM, STED), fluorescent activation/quenching, stochastic/centroid
+(PALM, STORM, GSDIM, SOFI and related techniques) to TIRF
+* 3D and 4D live cell and tissue imaging
+* Adaptive optics for microscopy
+* Developments in phase/interference microscopies
+* Light sheet microscopy
+* Advanced fluorescence imaging/spectroscopy: FRET, FRAP, FLIM, FCS
+* New fluorescence probes, proteins, quantum dots, single molecule
+imaging
+* Coherent non-linear microscopies: SHG, THG, SFG, CARS.
+* Developments in phase/interference microscopies
+* Multi-dimensional fluorescence and Raman spectroscopy imaging
+* Correlated light/electron microscopy
+* Laser manipulation and tracking, photo-activation
+* Bio- and nano-materials, biosensors
+* OCT, endoscopy
+* Fast acquisition, automated and high-content microscopy
+* 3D image processing and visualization for multidimensional data
+
+At the 2015 conference the topic ???Super-resolution techniques and
+applications??? will receive special attention, this also in
+connection with the recently awarded Nobel Prize in this field.
+
+The conference series is in addition known for covering the rapid
+development of advanced fluorescence labeling techniques for confocal
+and multi-photon 3D imaging of -live- biological specimens.
+
+Abstracts for contributions are invited and can already be submitted
+through the website: www.FocusOnMicroscopy.org  where further
+information on the present and previous FOM conferences can be found.
+
+Important dates/deadlines:
+
+Deadline for the submission of abstracts
+January 20, 2015
+
+Acceptance contributions/program on the web
+February 10, 2015
+
+Deadline for early registration
+February 25, 2015
+
+FOM2015 Conference G??ttingen
+March 29 - April 1, 2015
+
+Easter Sunday 2015
+April 5, 2015
+
+To stay informed about the conference please leave your name and email
+atwww.FocusOnMicroscopy.org/stayinformed.
+
+Welcoming you to G??ttingen for the FOM2015 conference and
+exhibition,
+
+the FOM2015 organizing committee:
+
+* Gertrude Bunt, University Medical Center G??ttingen, Germany
+
+* Fred Wouters, University Medical Center G??ttingen, Germany
+* Fred Brakenhoff, University of Amsterdam, The Netherlands
+E-mail: info2015 at FocusOnMicroscopy.org
+Web: http://www.FocusOnMicroscopy.org
+
+_____________________________
+Click here if you wish to unsubscribe from the FOM announcements:
+http://ymlp222.net/ugjeyuesgsgbuywgeemggbhhbyq
+Powered by YourMailingListProvider
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141112/cdc33430/attachment.html>
+
+From fredrik.ek at med.lu.se  Thu Nov 13 06:03:26 2014
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Thu, 13 Nov 2014 12:03:26 +0000
+Subject: [OpenSPIM] Picard Stage
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EEDDF0C7CC@UWMBX04.uw.lu.se>
+
+Hi,
+
+I have been using the Openspim/Fiji package and managed to install all the drivers in Micro Manager without updating Fiji through help-> update Fiji as mentioned in the description. However, I now realize that I have the same issue as Veli-Pekka described here http://openspim.org/pipermail/openspim/2014-August/000515.html with the twister not rotating exactly as intended. I have tried adding the mmgr_dal_PicardStage.dll from Micro manager 1.4.18 which solved the issue for him, but it is not working with my version of MM (I assume it is because MM is not updated to 1.4.18 or higher, the .dll files from 1.4.17 works fine). Now I'm wondering how to update Micro Manager in the openspim package? I can't seem to find an update site to add and I have tried updating Fiji, openspim and imageJ (and all of them separately) through the ->update Fiji option.
+
+We are running the software in 64-bit windows 7 using compatibility mode for windows xp. The MM .dll files are from the 32-bit versions
+
+Very thankful for help!
+
+Fredrik
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141113/868ddd10/attachment.html>
+
+From fredrik.ek at med.lu.se  Thu Nov 13 16:42:28 2014
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Thu, 13 Nov 2014 22:42:28 +0000
+Subject: [OpenSPIM] Update solved
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EEDDF0C97B@UWMBX04.uw.lu.se>
+
+[https://webmail.lu.se/owa/14.3.195.1/themes/LU/pgrs-sm.gif]
+[X]Dear all,
+
+we finally managed (why is unclear) to update Fiji, openspim and ImageJ and this time it seems Micro Manager got updated as well, since the new .dll files work.
+We also noticed that the issue of rotation is not in the program, but in the transmission in the pulley system of the 4d-stage, i.e. the band is sliding. Not sure how to solve this issue but by looking at the pictures on the website it seems that changing the pulley band is a good idea.
+
+Thanks
+
+Fredrik
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141113/6ec99fd1/attachment.html>
+
+From brau at ipmc.cnrs.fr  Tue Nov 18 08:46:23 2014
+From: brau at ipmc.cnrs.fr (brau)
+Date: Tue, 18 Nov 2014 14:46:23 +0000
+Subject: [OpenSPIM] Choice of emission filters
+Message-ID: <9e8742e99909e74601086e6593b24ba9@ipmc.cnrs.fr>
+
+Dear open spim community members,
+
+We have built an open spim in our MICA facility but have problem of 
+reflexions (transmission of the 488nm laser) in the emission path. We 
+use a quite good Brightline 525/50 band pass filter from Semrock. This 
+transmission of the 488nm is due to the dependance of the wavelength 
+transmission of the filter with the angle of incidence. From your 
+practical experience, what filter, or combination or filters, could we 
+put or add to avoid this problem?
+Thanks in advance,
+Best regards,
+Fr?d?ric
+
+-- 
+------------------------------------------------------------------------------------------
+Fr?d?ric Brau
+Institut de Pharmacologie Mol?culaire et Cellulaire - UMR7275 CNRS/UNS
+660, Route des Lucioles
+06560 VALBONNE
+Courriel : brau at ipmc.cnrs.fr
+Web : http://www.ipmc.cnrs.fr/
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme Microscopie Imagerie C?te d'Azur : http://www.mica-bio.fr
+R?seau Technologique de Microscopie de Fluorescence Multidimensionnelle 
+: http://rtmfm.cnrs.fr/
+-----------------------------------------------------------------------------------------------
+
+
+
+
+From pitrone at mpi-cbg.de  Tue Nov 18 09:01:49 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Tue, 18 Nov 2014 16:01:49 +0100 (CET)
+Subject: [OpenSPIM] Choice of emission filters
+In-Reply-To: <9e8742e99909e74601086e6593b24ba9@ipmc.cnrs.fr>
+References: <9e8742e99909e74601086e6593b24ba9@ipmc.cnrs.fr>
+Message-ID: <9889.95.91.218.50.1416322909.squirrel@webmail.mpi-cbg.de>
+
+Dear Fr?d?ric,
+
+The parts page says to use a clean up filter for the 488 diode laser, as
+it leaks an unmeasurable amount of green light (which happens to be in
+the same range as the emission of GFP) I would recommend a 490/20
+excitation filter from either Semrock or Chroma to block this unwanted
+light.
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra?e 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names
+are What and Why and When and How and Where and Who." Rudyard Kipling -
+The Elephant's Child
+
+On Tue, November 18, 2014 15:46, brau wrote:
+<|> Dear open spim community members,
+<|>
+<|> We have built an open spim in our MICA facility but have problem of
+<|> reflexions (transmission of the 488nm laser) in the emission path. We
+<|> use a quite good Brightline 525/50 band pass filter from Semrock. This
+<|> transmission of the 488nm is due to the dependance of the wavelength
+<|> transmission of the filter with the angle of incidence. From your
+<|> practical experience, what filter, or combination or filters, could we
+<|> put or add to avoid this problem?
+<|> Thanks in advance,
+<|> Best regards,
+<|> Fr??d??ric
+<|>
+<|> --
+<|>
+------------------------------------------------------------------------------------------
+<|> Fr??d??ric Brau
+<|> Institut de Pharmacologie Mol??culaire et Cellulaire - UMR7275 CNRS/UNS
+<|> 660, Route des Lucioles
+<|> 06560 VALBONNE
+<|> Courriel : brau at ipmc.cnrs.fr
+<|> Web : http://www.ipmc.cnrs.fr/
+<|> Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+<|> Fax: 33 (0)4 93 95 77 08
+<|> Plateforme Microscopie Imagerie C??te d'Azur : http://www.mica-bio.fr
+<|> R??seau Technologique de Microscopie de Fluorescence Multidimensionnelle
+<|> : http://rtmfm.cnrs.fr/
+<|>
+-----------------------------------------------------------------------------------------------
+<|>
+<|>
+<|>
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+From harz at biz.uni-muenchen.de  Wed Nov 19 09:20:52 2014
+From: harz at biz.uni-muenchen.de (Hartmann Harz)
+Date: Wed, 19 Nov 2014 16:20:52 +0100
+Subject: [OpenSPIM] Choice of emission filters
+Message-ID: <546CB554.7090308@biz.uni-muenchen.de>
+
+Dear Fr?d?ric,
+in our open spim setup we had the same issue with the 488 laser like you. We detected laser light in the emission path. The solution - as already mentioned by Pete - is a clean up filter. We found a relative cheap filter from Edmund optics Part No.#65-086. This filter has only a blocking efficiency of 10^-4. However, the filter works fine in our GFP application. This filter fits nicely into the aperture in front of the slit, so there in no need for an additional holder.
+
+Best regards
+
+Hartmann
+
+-- 
+Dr. H. Harz
+Ludwig-Maximilians-Universit?t M?nchen
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Gro?haderner Stra?e 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/e8bf0d29/attachment.html>
+
+From mredd at cores.utah.edu  Wed Nov 19 11:42:00 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Wed, 19 Nov 2014 17:42:00 +0000
+Subject: [OpenSPIM] twister motor belt slipping
+Message-ID: <D0922475.1AC48%mredd@cores.utah.edu>
+
+I am struggling with the twister motor belt slipping that others have mentioned.  I have seen the toothed belt used by Edgar's group in Aachen and would be much obliged if he described this in more detail so I could copy it.
+--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/63c0c44e/attachment.html>
+
+From brau at ipmc.cnrs.fr  Wed Nov 19 12:22:24 2014
+From: brau at ipmc.cnrs.fr (Brau)
+Date: Wed, 19 Nov 2014 19:22:24 +0100
+Subject: [OpenSPIM] Choice of emission filters
+In-Reply-To: <546CB554.7090308@biz.uni-muenchen.de>
+References: <546CB554.7090308@biz.uni-muenchen.de>
+Message-ID: <546CDFE0.3000207@ipmc.cnrs.fr>
+
+Dear members of the openspim mailing list,
+
+Many thanks for all the answers I received. I have a 488/10 and we will 
+definitely try this.
+Best regards,
+Fr?d?ric
+
+Le 19/11/2014 16:20, Hartmann Harz a ?crit :
+> Dear Fr?d?ric,
+> in our open spim setup we had the same issue with the 488 laser like you. We detected laser light in the emission path. The solution - as already mentioned by Pete - is a clean up filter. We found a relative cheap filter from Edmund optics Part No.#65-086. This filter has only a blocking efficiency of 10^-4. However, the filter works fine in our GFP application. This filter fits nicely into the aperture in front of the slit, so there in no need for an additional holder.
+>
+> Best regards
+>
+> Hartmann
+> -- 
+> Dr. H. Harz
+> Ludwig-Maximilians-Universit?t M?nchen
+> Biozentrum
+> AG Prof. Leonhardt
+> Raum B02.059
+> Gro?haderner Stra?e 2
+> 82152 Martinsried
+> Germany
+> Phone: +49(89)2180-74 259
+> Fax: +49(89)218099-74 236
+> Mail:harz at biz.uni-muenchen.de
+
+
+-- 
+------------------------------------------------------------------------------------------
+Fr?d?ric Brau
+Institut de Pharmacologie Mol?culaire et Cellulaire - UMR7275 CNRS/UNS
+660, Route des Lucioles
+06560 VALBONNE
+Courriel : brau at ipmc.cnrs.fr
+Web : http://www.ipmc.cnrs.fr/
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme Microscopie Imagerie C?te d'Azur : http://www.mica-bio.fr
+R?seau Technologique de Microscopie de Fluorescence Multidimensionnelle : http://rtmfm.cnrs.fr/
+-----------------------------------------------------------------------------------------------
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/3873d42e/attachment.html>
+
+From harz at biz.uni-muenchen.de  Wed Nov 19 14:20:21 2014
+From: harz at biz.uni-muenchen.de (Hartmann Harz)
+Date: Wed, 19 Nov 2014 21:20:21 +0100
+Subject: [OpenSPIM] twister motor belt slipping
+In-Reply-To: <D0922475.1AC48%mredd@cores.utah.edu>
+References: <D0922475.1AC48%mredd@cores.utah.edu>
+Message-ID: <546CFB85.2090501@biz.uni-muenchen.de>
+
+Dear Michael,
+in the bginning I also had the problem of belt slipping. At least I was 
+believing that the belt slips. Later I learned that the belt tesion was 
+to high and the bearing was hard-steering. This results during the 
+operation of the twister stepping motor in a loss of steps. Loss of 
+steps or slipping has the same effect, the twister does not turn to the 
+expected angle. We solved this issue by exchanging the bearing with a 
+smooth running one and by a LONGER belt producing lower tension and 
+thereby lower friction in the bearings of the motor and the sample holder.
+
+I don't know if this helps to solve your problem but eventually this 
+could help others. At least here in Munich it worked.
+
+Best regards
+
+Hartmann
+
+-- 
+Dr. H. Harz
+Ludwig-Maximilians-Universit?t M?nchen
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Gro?haderner Stra?e 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de
+
+
+
+On 19.11.2014 18:42, Michael Redd wrote:
+> I am struggling with the twister motor belt slipping that others have 
+> mentioned.  I have seen the toothed belt used by Edgar's group in 
+> Aachen and would be much obliged if he described this in more detail 
+> so I could copy it.
+> -- 
+> Michael Redd
+> Imaging Specialist
+> Microscopy Core Facility
+> University of Utah
+> Radiobiology Bldg,Room 55
+> Salt Lake City, Utah
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Dr. H. Harz
+Ludwig-Maximilians-Universit?t M?nchen
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Gro?haderner Stra?e 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/cb18ddbc/attachment.html>
+
+From pitrone at mpi-cbg.de  Thu Nov 20 01:17:19 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Thu, 20 Nov 2014 08:17:19 +0100 (CET)
+Subject: [OpenSPIM] You experiences with OpenSPIM...
+Message-ID: <28127.95.91.248.129.1416467839.squirrel@webmail.mpi-cbg.de>
+
+Dear OpenSPIM Listers,
+
+I am currently writing a broad appeal article for Microscopy and Analysis
+(most likely for the January issue), and would appreciate your input on
+your experiences of building and using the OpenSPIM platform. If you are
+willing to share a dataset and/or images of your samples and/or system,
+and give a brief overview of what you research, I might use it in the
+final draft (fresh material is better than rehashed wiki images*).
+
+Thank you for your time, understanding, and answers in advance.
+
+Best Regards,
+Pete
+
+*I hope it is understood that anything posted to the wiki is free game...
+If you do NOT want me to use material that you uploaded to it, please
+tell me by the end of the month.
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra?e 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names
+are What and Why and When and How and Where and Who." Rudyard Kipling -
+The Elephant's Child
+
+
+
+
+
+From mredd at cores.utah.edu  Thu Nov 20 11:02:52 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Thu, 20 Nov 2014 17:02:52 +0000
+Subject: [OpenSPIM] twister motor belt slipping
+In-Reply-To: <546CFB85.2090501@biz.uni-muenchen.de>
+References: <D0922475.1AC48%mredd@cores.utah.edu>
+	<546CFB85.2090501@biz.uni-muenchen.de>
+Message-ID: <D0936C31.1AC62%mredd@cores.utah.edu>
+
+Thank you for the informative reply. I would be much obliged if you would provide me the part information on the replacement bearings and belt.
+
+From: Hartmann Harz <harz at biz.uni-muenchen.de<mailto:harz at biz.uni-muenchen.de>>
+Date: Wednesday, November 19, 2014 2:20 PM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>, "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Cc: "edgar.escobar.nieto at ipt.fraunhofer.de<mailto:edgar.escobar.nieto at ipt.fraunhofer.de>" <edgar.escobar.nieto at ipt.fraunhofer.de<mailto:edgar.escobar.nieto at ipt.fraunhofer.de>>
+Subject: Re: [OpenSPIM] twister motor belt slipping
+
+Dear Michael,
+in the bginning I also had the problem of belt slipping. At least I was believing that the belt slips. Later I learned that the belt tesion was to high and the bearing was hard-steering. This results during the operation of the twister stepping motor in a loss of steps. Loss of steps or slipping has the same effect, the twister does not turn to the expected angle. We solved this issue by exchanging the bearing with a smooth running one and by a LONGER belt producing lower tension and thereby lower friction in the bearings of the motor and the sample holder.
+
+I don't know if this helps to solve your problem but eventually this could help others. At least here in Munich it worked.
+
+Best regards
+
+Hartmann
+
+
+--
+Dr. H. Harz
+Ludwig-Maximilians-Universit?t M?nchen
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Gro?haderner Stra?e 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de<mailto:harz at biz.uni-muenchen.de>
+
+
+On 19.11.2014 18:42, Michael Redd wrote:
+I am struggling with the twister motor belt slipping that others have mentioned.  I have seen the toothed belt used by Edgar's group in Aachen and would be much obliged if he described this in more detail so I could copy it.
+--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>http://openspim.org/mailman/listinfo/openspim
+
+
+--
+Dr. H. Harz
+Ludwig-Maximilians-Universit?t M?nchen
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Gro?haderner Stra?e 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de<mailto:harz at biz.uni-muenchen.de>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141120/5d2405cb/attachment-0001.html>
+
+From drichardson at fas.harvard.edu  Mon Nov 10 08:11:16 2014
+From: drichardson at fas.harvard.edu (Richardson, Douglas)
+Date: Mon, 10 Nov 2014 14:11:16 +0000
+Subject: [OpenSPIM] Zeiss lightsheet .czi to .tif conversion
+In-Reply-To: <CABG3x+_xBo99xaah5S_xtAmfohgV1e-PAaHpJUbtTWgSDFk9kw@mail.gmail.com>
+References: <CABG3x+_xBo99xaah5S_xtAmfohgV1e-PAaHpJUbtTWgSDFk9kw@mail.gmail.com>
+Message-ID: <8651159D396AE543B6B4EE695B89E43575354DE2@HARVANDMBX04.fasmail.priv>
+
+Sorry to those of you receiving this multiple times, but I've seen this question on all three lists recently.
+For those of you requiring conversion of Zeiss Lightsheet .czi files to .tif for downstream processing, these two ImageJ/Fiji macros may be of use to you:
+
+http://hcbi.fas.harvard.edu/lightsheet-czi-tif-converter-timelapsemultiview
+http://hcbi.fas.harvard.edu/lightsheet-czi-tif-converter-tiling
+
+Thanks,
+Doug
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141110/61718fd9/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Wed Nov 12 04:13:35 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Wed, 12 Nov 2014 11:13:35 +0100 (CET)
+Subject: [OpenSPIM] [Fwd: FOM2015: Abstracts & Registration opened.
+ Goettingen, Germany, March 29 - April 1, 2015]
+Message-ID: <63045.10.1.191.65.1415787215.squirrel@webmail.mpi-cbg.de>
+
+Howdy OpenSPIM Community,
+
+To all those who are interested, this happens to be a great conference...
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names
+are What and Why and When and How and Where and Who." Rudyard Kipling -
+The Elephant's Child
+
+
+--------------------------- Original Message ----------------------------
+Subject: FOM2015: Abstracts & Registration opened. Goettingen, Germany,
+March 29 - April 1, 2015
+From:    "Organization FOM2015" <no-reply at focusonmicroscopy.org>
+Date:    Wed, November 12, 2014 10:52
+To:      pitrone at mpi-cbg.de
+-------------------------------------------------------------------------
+
+FOCUS ON MICROSCOPY 2015
+
+GÃ¶ttingen, Germany, March 29 - April 1, 2015
+
+28th International Conference on 3D Image Processing in Microscopy
+27th International Conference on Confocal Microscopy
+
+Dear Colleagues,
+
+Abstracts for oral and poster presentations can now be submitted
+through the conference website: http://www.FocusOnMicroscopy.org where
+also the conference registration has opened and hotel information is
+available.
+
+Deadline for abstract submission: Wednesday, January 20, 2015
+
+After the successful FOM2014 conference held in Sydney earlier this
+year, it is a pleasure to announce FOM2015, the next Focus on
+Microscopy conference. It will take place in the Lokhalle venue,
+GÃ¶ttingen, Germany, in the week before Easter from Sunday 29 March
+â Wednesday 1 April 2015. It will be the next in a series of unique
+interdisciplinary meetings on advanced multi-dimensional light
+microscopy and image processing.
+
+For further details please visit the FOCUS ON MICROSCOPY website
+www.FocusOnMicroscopy.org. There, in addition to general information,
+the scientific program of the previous Sydney and other FOM
+conferences can be found at the link âPast conferencesâ. From 2004
+onwards together with links in the scientific program to one page PDF
+abstracts of the contributions presented in that year. Please note
+also the "Search FOM database " button for full searches over the
+digital FOM archive over the years.
+
+FOM2015 is the continuation of a yearly conference series, started in
+1988 presenting the latest innovations and newest trends in optical
+microscopy, and their application in biology, medicine, and the
+material sciences.
+
+Key topics are:
+
+* Theory and practice of confocal and multiphoton-excitation
+microscopy
+* Super-resolution, nanoscopy imaging: from PSF engineering (4pi,
+SIM, STED), fluorescent activation/quenching, stochastic/centroid
+(PALM, STORM, GSDIM, SOFI and related techniques) to TIRF
+* 3D and 4D live cell and tissue imaging
+* Adaptive optics for microscopy
+* Developments in phase/interference microscopies
+* Light sheet microscopy
+* Advanced fluorescence imaging/spectroscopy: FRET, FRAP, FLIM, FCS
+* New fluorescence probes, proteins, quantum dots, single molecule
+imaging
+* Coherent non-linear microscopies: SHG, THG, SFG, CARS.
+* Developments in phase/interference microscopies
+* Multi-dimensional fluorescence and Raman spectroscopy imaging
+* Correlated light/electron microscopy
+* Laser manipulation and tracking, photo-activation
+* Bio- and nano-materials, biosensors
+* OCT, endoscopy
+* Fast acquisition, automated and high-content microscopy
+* 3D image processing and visualization for multidimensional data
+
+At the 2015 conference the topic âSuper-resolution techniques and
+applicationsâ will receive special attention, this also in
+connection with the recently awarded Nobel Prize in this field.
+
+The conference series is in addition known for covering the rapid
+development of advanced fluorescence labeling techniques for confocal
+and multi-photon 3D imaging of -live- biological specimens.
+
+Abstracts for contributions are invited and can already be submitted
+through the website: www.FocusOnMicroscopy.org  where further
+information on the present and previous FOM conferences can be found.
+
+Important dates/deadlines:
+
+Deadline for the submission of abstracts
+January 20, 2015
+
+Acceptance contributions/program on the web
+February 10, 2015
+
+Deadline for early registration
+February 25, 2015
+
+FOM2015 Conference GÃ¶ttingen
+March 29 - April 1, 2015
+
+Easter Sunday 2015
+April 5, 2015
+
+To stay informed about the conference please leave your name and email
+atwww.FocusOnMicroscopy.org/stayinformed.
+
+Welcoming you to GÃ¶ttingen for the FOM2015 conference and
+exhibition,
+
+the FOM2015 organizing committee:
+
+* Gertrude Bunt, University Medical Center GÃ¶ttingen, Germany
+
+* Fred Wouters, University Medical Center GÃ¶ttingen, Germany
+* Fred Brakenhoff, University of Amsterdam, The Netherlands
+E-mail: info2015 at FocusOnMicroscopy.org
+Web: http://www.FocusOnMicroscopy.org
+
+_____________________________
+Click here if you wish to unsubscribe from the FOM announcements:
+http://ymlp222.net/ugjeyuesgsgbuywgeemggbhhbyq
+Powered by YourMailingListProvider
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141112/cdc33430/attachment-0002.html>
+
+From fredrik.ek at med.lu.se  Thu Nov 13 06:03:26 2014
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Thu, 13 Nov 2014 12:03:26 +0000
+Subject: [OpenSPIM] Picard Stage
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EEDDF0C7CC@UWMBX04.uw.lu.se>
+
+Hi,
+
+I have been using the Openspim/Fiji package and managed to install all the drivers in Micro Manager without updating Fiji through help-> update Fiji as mentioned in the description. However, I now realize that I have the same issue as Veli-Pekka described here http://openspim.org/pipermail/openspim/2014-August/000515.html with the twister not rotating exactly as intended. I have tried adding the mmgr_dal_PicardStage.dll from Micro manager 1.4.18 which solved the issue for him, but it is not working with my version of MM (I assume it is because MM is not updated to 1.4.18 or higher, the .dll files from 1.4.17 works fine). Now I'm wondering how to update Micro Manager in the openspim package? I can't seem to find an update site to add and I have tried updating Fiji, openspim and imageJ (and all of them separately) through the ->update Fiji option.
+
+We are running the software in 64-bit windows 7 using compatibility mode for windows xp. The MM .dll files are from the 32-bit versions
+
+Very thankful for help!
+
+Fredrik
+
+Fredrik Ek, PhD,
+Researcher, Chemical Biology & Therapeutics
+Department of Experimental Medical Science
+Lund University, BMC D10
+S-221 84 Lund, SWEDEN
+------------------------
+Fredrik.Ek at med.lu.se<mailto:Fredrik.Ek at med.lu.se>
+Phone: +46-727 17 22 05
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141113/868ddd10/attachment-0002.html>
+
+From fredrik.ek at med.lu.se  Thu Nov 13 16:42:28 2014
+From: fredrik.ek at med.lu.se (Fredrik Ek)
+Date: Thu, 13 Nov 2014 22:42:28 +0000
+Subject: [OpenSPIM] Update solved
+Message-ID: <11FEABF97C42FE47AA23C843A13D49EEDDF0C97B@UWMBX04.uw.lu.se>
+
+[https://webmail.lu.se/owa/14.3.195.1/themes/LU/pgrs-sm.gif]
+[X]Dear all,
+
+we finally managed (why is unclear) to update Fiji, openspim and ImageJ and this time it seems Micro Manager got updated as well, since the new .dll files work.
+We also noticed that the issue of rotation is not in the program, but in the transmission in the pulley system of the 4d-stage, i.e. the band is sliding. Not sure how to solve this issue but by looking at the pictures on the website it seems that changing the pulley band is a good idea.
+
+Thanks
+
+Fredrik
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141113/6ec99fd1/attachment-0002.html>
+
+From brau at ipmc.cnrs.fr  Tue Nov 18 08:46:23 2014
+From: brau at ipmc.cnrs.fr (brau)
+Date: Tue, 18 Nov 2014 14:46:23 +0000
+Subject: [OpenSPIM] Choice of emission filters
+Message-ID: <9e8742e99909e74601086e6593b24ba9@ipmc.cnrs.fr>
+
+Dear open spim community members,
+
+We have built an open spim in our MICA facility but have problem of 
+reflexions (transmission of the 488nm laser) in the emission path. We 
+use a quite good Brightline 525/50 band pass filter from Semrock. This 
+transmission of the 488nm is due to the dependance of the wavelength 
+transmission of the filter with the angle of incidence. From your 
+practical experience, what filter, or combination or filters, could we 
+put or add to avoid this problem?
+Thanks in advance,
+Best regards,
+Frédéric
+
+-- 
+------------------------------------------------------------------------------------------
+Frédéric Brau
+Institut de Pharmacologie Moléculaire et Cellulaire - UMR7275 CNRS/UNS
+660, Route des Lucioles
+06560 VALBONNE
+Courriel : brau at ipmc.cnrs.fr
+Web : http://www.ipmc.cnrs.fr/
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme Microscopie Imagerie Côte d'Azur : http://www.mica-bio.fr
+Réseau Technologique de Microscopie de Fluorescence Multidimensionnelle 
+: http://rtmfm.cnrs.fr/
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+From pitrone at mpi-cbg.de  Tue Nov 18 09:01:49 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Tue, 18 Nov 2014 16:01:49 +0100 (CET)
+Subject: [OpenSPIM] Choice of emission filters
+In-Reply-To: <9e8742e99909e74601086e6593b24ba9@ipmc.cnrs.fr>
+References: <9e8742e99909e74601086e6593b24ba9@ipmc.cnrs.fr>
+Message-ID: <9889.95.91.218.50.1416322909.squirrel@webmail.mpi-cbg.de>
+
+Dear Frédéric,
+
+The parts page says to use a clean up filter for the 488 diode laser, as
+it leaks an unmeasurable amount of green light (which happens to be in
+the same range as the emission of GFP) I would recommend a 490/20
+excitation filter from either Semrock or Chroma to block this unwanted
+light.
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names
+are What and Why and When and How and Where and Who." Rudyard Kipling -
+The Elephant's Child
+
+On Tue, November 18, 2014 15:46, brau wrote:
+<|> Dear open spim community members,
+<|>
+<|> We have built an open spim in our MICA facility but have problem of
+<|> reflexions (transmission of the 488nm laser) in the emission path. We
+<|> use a quite good Brightline 525/50 band pass filter from Semrock. This
+<|> transmission of the 488nm is due to the dependance of the wavelength
+<|> transmission of the filter with the angle of incidence. From your
+<|> practical experience, what filter, or combination or filters, could we
+<|> put or add to avoid this problem?
+<|> Thanks in advance,
+<|> Best regards,
+<|> FrÃ©dÃ©ric
+<|>
+<|> --
+<|>
+------------------------------------------------------------------------------------------
+<|> FrÃ©dÃ©ric Brau
+<|> Institut de Pharmacologie MolÃ©culaire et Cellulaire - UMR7275 CNRS/UNS
+<|> 660, Route des Lucioles
+<|> 06560 VALBONNE
+<|> Courriel : brau at ipmc.cnrs.fr
+<|> Web : http://www.ipmc.cnrs.fr/
+<|> Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+<|> Fax: 33 (0)4 93 95 77 08
+<|> Plateforme Microscopie Imagerie CÃ´te d'Azur : http://www.mica-bio.fr
+<|> RÃ©seau Technologique de Microscopie de Fluorescence Multidimensionnelle
+<|> : http://rtmfm.cnrs.fr/
+<|>
+-----------------------------------------------------------------------------------------------
+<|>
+<|>
+<|>
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+
+From harz at biz.uni-muenchen.de  Wed Nov 19 09:20:52 2014
+From: harz at biz.uni-muenchen.de (Hartmann Harz)
+Date: Wed, 19 Nov 2014 16:20:52 +0100
+Subject: [OpenSPIM] Choice of emission filters
+Message-ID: <546CB554.7090308@biz.uni-muenchen.de>
+
+Dear Frédéric,
+in our open spim setup we had the same issue with the 488 laser like you. We detected laser light in the emission path. The solution - as already mentioned by Pete - is a clean up filter. We found a relative cheap filter from Edmund optics Part No.#65-086. This filter has only a blocking efficiency of 10^-4. However, the filter works fine in our GFP application. This filter fits nicely into the aperture in front of the slit, so there in no need for an additional holder.
+
+Best regards
+
+Hartmann
+
+-- 
+Dr. H. Harz
+Ludwig-Maximilians-Universität München
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Großhaderner Straße 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/e8bf0d29/attachment-0002.html>
+
+From mredd at cores.utah.edu  Wed Nov 19 11:42:00 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Wed, 19 Nov 2014 17:42:00 +0000
+Subject: [OpenSPIM] twister motor belt slipping
+Message-ID: <D0922475.1AC48%mredd@cores.utah.edu>
+
+I am struggling with the twister motor belt slipping that others have mentioned.  I have seen the toothed belt used by Edgar's group in Aachen and would be much obliged if he described this in more detail so I could copy it.
+--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/63c0c44e/attachment-0002.html>
+
+From brau at ipmc.cnrs.fr  Wed Nov 19 12:22:24 2014
+From: brau at ipmc.cnrs.fr (Brau)
+Date: Wed, 19 Nov 2014 19:22:24 +0100
+Subject: [OpenSPIM] Choice of emission filters
+In-Reply-To: <546CB554.7090308@biz.uni-muenchen.de>
+References: <546CB554.7090308@biz.uni-muenchen.de>
+Message-ID: <546CDFE0.3000207@ipmc.cnrs.fr>
+
+Dear members of the openspim mailing list,
+
+Many thanks for all the answers I received. I have a 488/10 and we will 
+definitely try this.
+Best regards,
+Frédéric
+
+Le 19/11/2014 16:20, Hartmann Harz a écrit :
+> Dear Frédéric,
+> in our open spim setup we had the same issue with the 488 laser like you. We detected laser light in the emission path. The solution - as already mentioned by Pete - is a clean up filter. We found a relative cheap filter from Edmund optics Part No.#65-086. This filter has only a blocking efficiency of 10^-4. However, the filter works fine in our GFP application. This filter fits nicely into the aperture in front of the slit, so there in no need for an additional holder.
+>
+> Best regards
+>
+> Hartmann
+> -- 
+> Dr. H. Harz
+> Ludwig-Maximilians-Universität München
+> Biozentrum
+> AG Prof. Leonhardt
+> Raum B02.059
+> Großhaderner Straße 2
+> 82152 Martinsried
+> Germany
+> Phone: +49(89)2180-74 259
+> Fax: +49(89)218099-74 236
+> Mail:harz at biz.uni-muenchen.de
+
+
+-- 
+------------------------------------------------------------------------------------------
+Frédéric Brau
+Institut de Pharmacologie Moléculaire et Cellulaire - UMR7275 CNRS/UNS
+660, Route des Lucioles
+06560 VALBONNE
+Courriel : brau at ipmc.cnrs.fr
+Web : http://www.ipmc.cnrs.fr/
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme Microscopie Imagerie Côte d'Azur : http://www.mica-bio.fr
+Réseau Technologique de Microscopie de Fluorescence Multidimensionnelle : http://rtmfm.cnrs.fr/
+-----------------------------------------------------------------------------------------------
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/3873d42e/attachment-0002.html>
+
+From harz at biz.uni-muenchen.de  Wed Nov 19 14:20:21 2014
+From: harz at biz.uni-muenchen.de (Hartmann Harz)
+Date: Wed, 19 Nov 2014 21:20:21 +0100
+Subject: [OpenSPIM] twister motor belt slipping
+In-Reply-To: <D0922475.1AC48%mredd@cores.utah.edu>
+References: <D0922475.1AC48%mredd@cores.utah.edu>
+Message-ID: <546CFB85.2090501@biz.uni-muenchen.de>
+
+Dear Michael,
+in the bginning I also had the problem of belt slipping. At least I was 
+believing that the belt slips. Later I learned that the belt tesion was 
+to high and the bearing was hard-steering. This results during the 
+operation of the twister stepping motor in a loss of steps. Loss of 
+steps or slipping has the same effect, the twister does not turn to the 
+expected angle. We solved this issue by exchanging the bearing with a 
+smooth running one and by a LONGER belt producing lower tension and 
+thereby lower friction in the bearings of the motor and the sample holder.
+
+I don't know if this helps to solve your problem but eventually this 
+could help others. At least here in Munich it worked.
+
+Best regards
+
+Hartmann
+
+-- 
+Dr. H. Harz
+Ludwig-Maximilians-Universität München
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Großhaderner Straße 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de
+
+
+
+On 19.11.2014 18:42, Michael Redd wrote:
+> I am struggling with the twister motor belt slipping that others have 
+> mentioned.  I have seen the toothed belt used by Edgar's group in 
+> Aachen and would be much obliged if he described this in more detail 
+> so I could copy it.
+> -- 
+> Michael Redd
+> Imaging Specialist
+> Microscopy Core Facility
+> University of Utah
+> Radiobiology Bldg,Room 55
+> Salt Lake City, Utah
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Dr. H. Harz
+Ludwig-Maximilians-Universität München
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Großhaderner Straße 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141119/cb18ddbc/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Thu Nov 20 01:17:19 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Thu, 20 Nov 2014 08:17:19 +0100 (CET)
+Subject: [OpenSPIM] You experiences with OpenSPIM...
+Message-ID: <28127.95.91.248.129.1416467839.squirrel@webmail.mpi-cbg.de>
+
+Dear OpenSPIM Listers,
+
+I am currently writing a broad appeal article for Microscopy and Analysis
+(most likely for the January issue), and would appreciate your input on
+your experiences of building and using the OpenSPIM platform. If you are
+willing to share a dataset and/or images of your samples and/or system,
+and give a brief overview of what you research, I might use it in the
+final draft (fresh material is better than rehashed wiki images*).
+
+Thank you for your time, understanding, and answers in advance.
+
+Best Regards,
+Pete
+
+*I hope it is understood that anything posted to the wiki is free game...
+If you do NOT want me to use material that you uploaded to it, please
+tell me by the end of the month.
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names
+are What and Why and When and How and Where and Who." Rudyard Kipling -
+The Elephant's Child
+
+
+
+
+
+
+From mredd at cores.utah.edu  Thu Nov 20 11:02:52 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Thu, 20 Nov 2014 17:02:52 +0000
+Subject: [OpenSPIM] twister motor belt slipping
+In-Reply-To: <546CFB85.2090501@biz.uni-muenchen.de>
+References: <D0922475.1AC48%mredd@cores.utah.edu>
+	<546CFB85.2090501@biz.uni-muenchen.de>
+Message-ID: <D0936C31.1AC62%mredd@cores.utah.edu>
+
+Thank you for the informative reply. I would be much obliged if you would provide me the part information on the replacement bearings and belt.
+
+From: Hartmann Harz <harz at biz.uni-muenchen.de<mailto:harz at biz.uni-muenchen.de>>
+Date: Wednesday, November 19, 2014 2:20 PM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>, "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Cc: "edgar.escobar.nieto at ipt.fraunhofer.de<mailto:edgar.escobar.nieto at ipt.fraunhofer.de>" <edgar.escobar.nieto at ipt.fraunhofer.de<mailto:edgar.escobar.nieto at ipt.fraunhofer.de>>
+Subject: Re: [OpenSPIM] twister motor belt slipping
+
+Dear Michael,
+in the bginning I also had the problem of belt slipping. At least I was believing that the belt slips. Later I learned that the belt tesion was to high and the bearing was hard-steering. This results during the operation of the twister stepping motor in a loss of steps. Loss of steps or slipping has the same effect, the twister does not turn to the expected angle. We solved this issue by exchanging the bearing with a smooth running one and by a LONGER belt producing lower tension and thereby lower friction in the bearings of the motor and the sample holder.
+
+I don't know if this helps to solve your problem but eventually this could help others. At least here in Munich it worked.
+
+Best regards
+
+Hartmann
+
+
+--
+Dr. H. Harz
+Ludwig-Maximilians-Universität München
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Großhaderner Straße 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de<mailto:harz at biz.uni-muenchen.de>
+
+
+On 19.11.2014 18:42, Michael Redd wrote:
+I am struggling with the twister motor belt slipping that others have mentioned.  I have seen the toothed belt used by Edgar's group in Aachen and would be much obliged if he described this in more detail so I could copy it.
+--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>http://openspim.org/mailman/listinfo/openspim
+
+
+--
+Dr. H. Harz
+Ludwig-Maximilians-Universität München
+Biozentrum
+AG Prof. Leonhardt
+Raum B02.059
+Großhaderner Straße 2
+82152 Martinsried
+Germany
+Phone: +49(89)2180-74 259
+Fax: +49(89)218099-74 236
+Mail: harz at biz.uni-muenchen.de<mailto:harz at biz.uni-muenchen.de>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141120/5d2405cb/attachment-0002.html>
+

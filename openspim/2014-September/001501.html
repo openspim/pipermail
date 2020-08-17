@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] problems with adding CUBE to Fiji-SPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20problems%20with%20adding%20CUBE%20to%20Fiji-SPIM&In-Reply-To=%3C54233C54.4010102%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001503.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] problems with adding CUBE to Fiji-SPIM</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20problems%20with%20adding%20CUBE%20to%20Fiji-SPIM&In-Reply-To=%3C54233C54.4010102%40wisc.edu%3E"
+       TITLE="[OpenSPIM] problems with adding CUBE to Fiji-SPIM">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Sep 24 16:49:08 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001503.html">[OpenSPIM] Picard Z stage problem
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1501">[ date ]</a>
+              <a href="thread.html#1501">[ thread ]</a>
+              <a href="subject.html#1501">[ subject ]</a>
+              <a href="author.html#1501">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Martin,
+
+(I hope you don't mind that I've taken the liberty of also addressing 
+these e-mails to the OpenSPIM mailing list: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> -- 
+that way anyone who works with OpenSPIM can have a chance to address 
+your question.)
+
+On 9/24/2014 7:46 AM, Martin Capek wrote:
+&gt;<i> we communicated some time ago about Andor camera. May I ask you for 
+</I>&gt;<i> help with adding Coherent CUBE to Fiji-SPIM sw? I use a pc with win xp 
+</I>&gt;<i> and a usb-to-rs232 converter. When using this with Coherent Connection 
+</I>&gt;<i> sw, cube works fine - please see the first attachment.
+</I>&gt;<i>
+</I>&gt;<i> However, when trying to add cube to fiji-spim, autoscan does not work 
+</I>&gt;<i> and I am getting a message that I should choose settings and a port 
+</I>&gt;<i> manually, see the second attach. If it is the solution, could you 
+</I>&gt;<i> please help me how to do it?
+</I>&gt;<i>
+</I>&gt;<i> ...
+</I>&gt;<i>
+</I>&gt;<i> PS: I also updated the baudrate to 19200 bps for COM, as recommended. 
+</I>My immediate guess would have been trouble with the USB-RS232 converter; 
+however, since the Coherent software is connecting without trouble, that 
+seems unlikely.
+
+As you've probably realized, the Coherent CUBE device adapter can't 
+auto-detect the laser's presence, so it really will come down to a 
+matter of settings. In my experience, the only setting that has actually 
+required changing was the baud rate, which should be reduced to no more 
+than the recommended 19200 bps.
+
+If having all-default settings except the baud rate won't connect to the 
+laser, I'd speculate it to be related to the error seen in your device 
+manager -- perhaps MM is conflicted over the two assignments to COM1 
+where the CUBE software is having no such difficulty?
+
+&gt;<i> I spent this whole day by changing COM port numbers, using various 
+</I>&gt;<i> usb-rs232 converters, updating drivers, trying various versions of MM 
+</I>&gt;<i> to get the connection to cube using MM, but with no success till now.
+</I>If it wasn't among the versions you've tried already, it may also be of 
+merit to try adding the CUBE to a completely vanilla Micro-Manager 
+installation. The device adapter in the OpenSPIM software can lag behind 
+the 'official' distribution, so it may be that a newer device adapter 
+will solve the problem.
+
+I'm afraid I just don't know enough to provide a definitive answer. If 
+trying the above suggestions doesn't work, please do the following:
+- Run (preferably vanilla) Micro-Manager, select no hardware configuration.
+- Start the hardware configuration wizard, and advance it to the devices 
+screen.
+- Attempt to add the CUBE with all default settings except a reduced 
+baud rate, trying all available COM ports.
+- Close Micro-Manager, then locate the most recent core log and e-mail 
+it to the list/me.
+Hopefully this will include some information on the problem.
+
+Thanks,
+Luke Stuyvenberg
+
+On 9/24/2014 7:46 AM, Martin Capek wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> we communicated some time ago about Andor camera. May I ask you for 
+</I>&gt;<i> help with adding Coherent CUBE to Fiji-SPIM sw? I use a pc with win xp 
+</I>&gt;<i> and a usb-to-rs232 converter. When using this with Coherent Connection 
+</I>&gt;<i> sw, cube works fine - please see the first attachment.
+</I>&gt;<i>
+</I>&gt;<i> However, when trying to add cube to fiji-spim, autoscan does not work 
+</I>&gt;<i> and I am getting a message that I should choose settings and a port 
+</I>&gt;<i> manually, see the second attach. If it is the solution, could you 
+</I>&gt;<i> please help me how to do it?
+</I>&gt;<i>
+</I>&gt;<i> I spent this whole day by changing COM port numbers, using various 
+</I>&gt;<i> usb-rs232 converters, updating drivers, trying various versions of MM 
+</I>&gt;<i> to get the connection to cube using MM, but with no success till now.
+</I>&gt;<i>
+</I>&gt;<i> Thank you very much in advance!
+</I>&gt;<i> Best regards,
+</I>&gt;<i> Martin
+</I>&gt;<i>
+</I>&gt;<i> PS: I also updated the baudrate to 19200 bps for COM, as recommended.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Dne 17.4.2014 v 2:15 Luke Stuyvenberg napsal(a):
+</I>&gt;&gt;<i> Hi Martin,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Sorry about the delay.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 04/11/14, Martin Capek  wrote:
+</I>&gt;&gt;&gt;<i> I need to use an Andor iXon3 camera in the OpenSPIM setup. This 
+</I>&gt;&gt;&gt;<i> camera works well in standalone installations of the micromanager 
+</I>&gt;&gt;&gt;<i> (MM), I tried them more. However, when I copy, according to 
+</I>&gt;&gt;&gt;<i> instructions in the web, the corresponding dll to MM included in 
+</I>&gt;&gt;&gt;<i> OpenSPIM sw, it does not work. I also used Dependency Walker as 
+</I>&gt;&gt;&gt;<i> there described.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Could you please clarify how it does not work? When in Hardware 
+</I>&gt;&gt;<i> Configuration, is the 'Andor' device not listed? Is it listed, but 
+</I>&gt;&gt;<i> with a gray dot next to it? Is it available, but gives an error when 
+</I>&gt;&gt;<i> you try to add it?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Which instructions did you follow, exactly? And did the Dependency 
+</I>&gt;&gt;<i> Walker show any errors?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Could anybody help me, please? What is the number of MM version used 
+</I>&gt;&gt;&gt;<i> in the OpenSPIM from February 7 2014 ? I see only 1.4.x dev, which 
+</I>&gt;&gt;&gt;<i> is probably not enough to choose the proper one.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> As near as I can determine, OpenSPIM from 7 Feb 2014 is based on[1] 
+</I>&gt;&gt;<i> Micro-Manager v1.4.16 (which was released 31 January, 2014). This 
+</I>&gt;&gt;<i> means that copying DLLs from that version of Micro-Manager to 
+</I>&gt;&gt;<i> OpenSPIM's mm/win32 directory should work. If it does not, please try 
+</I>&gt;&gt;<i> downloading the nightly build from 5 February 2014[2]:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - From the Micro-Manager website, click 'Downloads'.
+</I>&gt;&gt;<i> - On the left, click 'Download Nightly Builds'.
+</I>&gt;&gt;<i> - Click 'Version 1.4 (Windows)'.
+</I>&gt;&gt;<i> - Scroll through the list looking for 
+</I>&gt;&gt;<i> 'MMSetup_64bit_1.4.17_20140205.exe'.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> That version of Micro-Manager should be completely compatible with 
+</I>&gt;&gt;<i> OpenSPIM.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I hope this is helpful! Please let me know if you continue to run 
+</I>&gt;&gt;<i> into problems.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> Luke
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> [1] To be completely precise, it is based on SVN revision r12726, 
+</I>&gt;&gt;<i> dated 5 February 2014. This was shortly after the release of 1.4.16 
+</I>&gt;&gt;<i> as I mention above.
+</I>&gt;&gt;<i> [2] The direct link is: 
+</I>&gt;&gt;<i> <A HREF="http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_64bit_1.4.17_20140205.exe">http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_64bit_1.4.17_20140205.exe</A> 
+</I>&gt;&gt;<i> -- however, please always beware of direct links in e-mails! It is 
+</I>&gt;&gt;<i> safer to find the file yourself, from a trusted website.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 04/11/14, Martin Capek wrote:
+</I>&gt;&gt;&gt;<i>       Dear all,
+</I>&gt;&gt;&gt;<i>   I need to use an Andor iXon3 camera in the OpenSPIM setup. This 
+</I>&gt;&gt;&gt;<i> camera works well in standalone installations of the micromanager 
+</I>&gt;&gt;&gt;<i> (MM), I tried them more. However, when I copy, according to 
+</I>&gt;&gt;&gt;<i> instructions in the web, the corresponding dll to MM included in 
+</I>&gt;&gt;&gt;<i> OpenSPIM sw, it does not work. I also used Dependency Walker as 
+</I>&gt;&gt;&gt;<i> there described.
+</I>&gt;&gt;&gt;<i>   Could anybody help me, please? What is the number of MM version 
+</I>&gt;&gt;&gt;<i> used in the OpenSPIM from February 7 2014 ? I see only 1.4.x dev, 
+</I>&gt;&gt;&gt;<i> which is probably not enough to choose the proper one.
+</I>&gt;&gt;&gt;<i>   Any comment will be welcome.
+</I>&gt;&gt;&gt;<i>   Thank you very much in advance!
+</I>&gt;&gt;&gt;<i> Martin
+</I>&gt;&gt;&gt;<i>   --
+</I>&gt;&gt;&gt;<i>     Ing. Martin Čapek, Ph.D.
+</I>&gt;&gt;&gt;<i> oddělení biomatematiky
+</I>&gt;&gt;&gt;<i>       Fyziologický ústav AV ČR, v.v.i.
+</I>&gt;&gt;&gt;<i> Vídeňská 1083
+</I>&gt;&gt;&gt;<i> 142 20 Praha 4
+</I>&gt;&gt;&gt;<i>   Tel. +420 241 062 334
+</I>&gt;&gt;&gt;<i> <A HREF="http://www.biomed.cas.cz/fgu/">http://www.biomed.cas.cz/fgu/</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;<i>
+</I>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001503.html">[OpenSPIM] Picard Z stage problem
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1501">[ date ]</a>
+              <a href="thread.html#1501">[ thread ]</a>
+              <a href="subject.html#1501">[ subject ]</a>
+              <a href="author.html#1501">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] ome-tiff output
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20ome-tiff%20output&In-Reply-To=%3C81048510-f025-056b-7b6d-8b731893e70c%40ist.ac.at%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002050.html">
+   <LINK REL="Next"  HREF="002052.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] ome-tiff output</H1>
+    <B>Christoph Sommer</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20ome-tiff%20output&In-Reply-To=%3C81048510-f025-056b-7b6d-8b731893e70c%40ist.ac.at%3E"
+       TITLE="[OpenSPIM] ome-tiff output">christoph.sommer at ist.ac.at
+       </A><BR>
+    <I>Fri Nov 10 04:05:05 CST 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002050.html">[OpenSPIM] ome-tiff output
+</A></li>
+        <LI>Next message (by thread): <A HREF="002052.html">[OpenSPIM] ome-tiff output
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2051">[ date ]</a>
+              <a href="thread.html#2051">[ thread ]</a>
+              <a href="subject.html#2051">[ subject ]</a>
+              <a href="author.html#2051">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Stephan and OpenSpim users,
+
+thanks for pointing me to the autoloader. I tested it on our data and 
+technically it works! It seems tiles and angles are still mistaken, but 
+this seems to be a problem of the wrong meta data... I now work on 
+automating the MVR process for our setup.
+
+Also, we found a way to truncate the containing ome-xml data, to make 
+each output files 'stand-alone' for specific cases. Yet, the autoloader 
+is my preferred solution.
+
+Thanks to all for your help!
+
+Cheers,
+
+Chris
+
+
+Am 11/7/2017 um 8:17 PM schrieb <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>:
+&gt;<i> Hi, did you try using the Autoloader of the MVR/BigStitcher (it’s 
+</I>&gt;<i> basically the same now) for import? Activate the BigStitcher update 
+</I>&gt;<i> site first to get the newest code. It should handle OME-TIff ... if 
+</I>&gt;<i> not, send us a small example and we’ll fix it.
+</I>&gt;<i>
+</I>&gt;<i> Cheers,
+</I>&gt;<i> Stephan
+</I>&gt;<i>
+</I>&gt;<i> Sent from my iPhone
+</I>&gt;<i>
+</I>&gt;<i> On Nov 7, 2017, at 16:17, Christoph Sommer &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A> 
+</I>&gt;<i> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Dear HongKee,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> thank so much for your recommendation and code. When I understand 
+</I>&gt;&gt;<i> correctly, it would require the deployment of this VirtualStack class 
+</I>&gt;&gt;<i> to all ImageJ instances of potential users. I was hoping for a 
+</I>&gt;&gt;<i> solution, which does not need adaptions of ImageJ.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Alternatively, we could create a different output format in the 
+</I>&gt;&gt;<i> acquisition (no multi-file OMETiff). I saw that there's already a 
+</I>&gt;&gt;<i> &quot;IndividualImagesHandler&quot; or an HDF5 handler in &quot;spim.io 
+</I>&gt;&gt;<i> &lt;<A HREF="http://spim.io">http://spim.io</A>&gt;&quot;. Does someone have experience with alternative 
+</I>&gt;&gt;<i> output formats?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Cheers,
+</I>&gt;&gt;<i> Chris
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> We have also faced those problems because the default image opener 
+</I>&gt;&gt;&gt;<i> is trying to get the metadata for every file.
+</I>&gt;&gt;&gt;<i> I really recommend you to make own ImageStack class for reading the 
+</I>&gt;&gt;&gt;<i> metadata just once for your whole series.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> We had to create our version of VirtualStack class based on 
+</I>&gt;&gt;&gt;<i> <A HREF="https://imagej.nih.gov/ij/plugins/virtual-opener.html">https://imagej.nih.gov/ij/plugins/virtual-opener.html</A> 
+</I>&gt;&gt;&gt;<i> &lt;<A HREF="https://imagej.nih.gov/ij/plugins/virtual-opener.html">https://imagej.nih.gov/ij/plugins/virtual-opener.html</A>&gt; to avoid 
+</I>&gt;&gt;&gt;<i> redundant metadata reading. The below code is not a perfect version, 
+</I>&gt;&gt;&gt;<i> please, use it as a reference.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Hopefully, it will help you.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Cheers,
+</I>&gt;&gt;&gt;<i> HongKee
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ———————————————————
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> import ij.ImageStack;
+</I>&gt;&gt;&gt;<i> import ij.process.ByteProcessor;
+</I>&gt;&gt;&gt;<i> import ij.process.ImageProcessor;
+</I>&gt;&gt;&gt;<i> import loci.formats.FormatException;
+</I>&gt;&gt;&gt;<i> import loci.formats.ImageReader;
+</I>&gt;&gt;&gt;<i> import loci.plugins.util.ImageProcessorReader;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> import loci.common.services.DependencyException;
+</I>&gt;&gt;&gt;<i> import loci.common.services.ServiceException;
+</I>&gt;&gt;&gt;<i> import loci.common.services.ServiceFactory;
+</I>&gt;&gt;&gt;<i> import loci.formats.FormatException;
+</I>&gt;&gt;&gt;<i> import loci.formats.ImageReader;
+</I>&gt;&gt;&gt;<i> import loci.formats.meta.IMetadata;
+</I>&gt;&gt;&gt;<i> import loci.formats.services.OMEXMLService;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> public class MyImageStack extends ImageStack
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> private int bitDepth;
+</I>&gt;&gt;&gt;<i> private int width, height;
+</I>&gt;&gt;&gt;<i> ImageProcessorReader imageProcessorReader;
+</I>&gt;&gt;&gt;<i> private int zSize = 1, tSize = 1, cSize = 1;
+</I>&gt;&gt;&gt;<i> private int cEffectiveSize = 1;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> public void addSlice( String path )
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> if(path != null)
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> if(width == 0)
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> // create format reader
+</I>&gt;&gt;&gt;<i> ImageReader reader = getImageReader( path );
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> // output dimensional information
+</I>&gt;&gt;&gt;<i> int sizeX = reader.getSizeX();
+</I>&gt;&gt;&gt;<i> this.width = sizeX;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> int sizeY = reader.getSizeY();
+</I>&gt;&gt;&gt;<i> this.height = sizeY;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> // System.out.println(&quot;Effective C&quot; + reader.getEffectiveSizeC());
+</I>&gt;&gt;&gt;<i> setcEffectiveSize( reader.getEffectiveSizeC() );
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> int sizeC = reader.getSizeC();
+</I>&gt;&gt;&gt;<i> int sizeZ = reader.getSizeZ();
+</I>&gt;&gt;&gt;<i> int sizeT = reader.getSizeT();
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> // System.out.println( &quot;C=&quot; + sizeC + &quot; Z=&quot; + sizeZ + &quot; T=&quot; + sizeT );
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> setcSize( sizeC );
+</I>&gt;&gt;&gt;<i> setzSize( sizeZ );
+</I>&gt;&gt;&gt;<i> settSize( sizeT );
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> this.bitDepth = reader.getBitsPerPixel();
+</I>&gt;&gt;&gt;<i> this.imageProcessorReader = new ImageProcessorReader( reader );
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> public ImageProcessor getProcessor(int n)
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> // properly implement to get ImageProcessor based on n
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> public static ImageReader getImageReader( String path )
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> ImageReader reader = null;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> try
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> ServiceFactory factory = new ServiceFactory();
+</I>&gt;&gt;&gt;<i> OMEXMLService service = factory.getInstance(OMEXMLService.class);
+</I>&gt;&gt;&gt;<i> IMetadata meta = service.createOMEXMLMetadata();
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> // create format reader
+</I>&gt;&gt;&gt;<i> reader = new ImageReader();
+</I>&gt;&gt;&gt;<i> reader.setMetadataStore(meta);
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> // initialize file
+</I>&gt;&gt;&gt;<i> //System.out.println(path);
+</I>&gt;&gt;&gt;<i> reader.setId( path );
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> catch ( DependencyException e )
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> e.printStackTrace();
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> catch ( ServiceException e )
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> e.printStackTrace();
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> catch ( IOException e )
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> e.printStackTrace();
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> catch ( FormatException e )
+</I>&gt;&gt;&gt;<i> {
+</I>&gt;&gt;&gt;<i> e.printStackTrace();
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> return reader;
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i> }
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ———————————————
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> On Nov 6, 2017, at 10:43 AM, Christoph Sommer 
+</I>&gt;&gt;&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&gt;&gt; wrote:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Dear OpenSpim folks,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> thanks for creating such a great resource!
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> We are currently using an OpenSpim setup and the created output is 
+</I>&gt;&gt;&gt;&gt;<i> a multi-file ome-tiff. For many applications (e.g. the MVR from 
+</I>&gt;&gt;&gt;&gt;<i> Stephan Preibisch et al.) we need to convert the ome-tiff to normal 
+</I>&gt;&gt;&gt;&gt;<i> tiff.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Unfortunately, for long time-lapse the conversion takes forever, 
+</I>&gt;&gt;&gt;&gt;<i> since for each conversion step all meta-data is parsed from each 
+</I>&gt;&gt;&gt;&gt;<i> single time point. My script uses the Bioformats ImporterOptions 
+</I>&gt;&gt;&gt;&gt;<i> class, but I can't see how I can bypass the meta-data parsing. I 
+</I>&gt;&gt;&gt;&gt;<i> also tried the 'bvconvert' command line script but also got issues 
+</I>&gt;&gt;&gt;&gt;<i> there. Also reading from Python (e.g. with the module 'tifffile' 
+</I>&gt;&gt;&gt;&gt;<i> only return always the first angle image-stack...)
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Would you have any idea?
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Cheers,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Chris
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;<i> HongKee Moon
+</I>&gt;&gt;&gt;<i> Scientific Software Engineer
+</I>&gt;&gt;&gt;<i> Scientific Computing Facility
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;&gt;&gt;<i> Pfotenhauerstr. 108
+</I>&gt;&gt;&gt;<i> 01307 Dresden
+</I>&gt;&gt;&gt;<i> Germany
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> fon: +49 351 210 1923
+</I>&gt;&gt;&gt;<i> fax: +49 351 210 1907
+</I>&gt;&gt;&gt;<i> www.mpi-cbg.de &lt;<A HREF="http://www.mpi-cbg.de">http://www.mpi-cbg.de</A>&gt;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20171110/d400b7fc/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20171110/d400b7fc/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002050.html">[OpenSPIM] ome-tiff output
+</A></li>
+	<LI>Next message (by thread): <A HREF="002052.html">[OpenSPIM] ome-tiff output
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2051">[ date ]</a>
+              <a href="thread.html#2051">[ thread ]</a>
+              <a href="subject.html#2051">[ subject ]</a>
+              <a href="author.html#2051">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

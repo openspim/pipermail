@@ -1,0 +1,94 @@
+[From nobody Wed Jun 12 22:37:11 2013
+Return-path: &lt;openspim-bounces@openspim.org&gt;
+Received: from smtp4.wiscmail.wisc.edu (smtp4 [144.92.8.185])
+	by wmstore1pvt.pri.doit.wisc.edu
+	(Oracle Communications Messaging Server 7u4-26.01(7.0.4.26.0) 64bit
+	(built Jul 13 2012)) with ESMTP id
+	&lt;0MOB007G1A58N210@wmstore1pvt.pri.doit.wisc.edu&gt; for
+	eliceiri@wisc.edu; Wed, 12 Jun 2013 22:10:20 -0500 (CDT)
+Received: from skynet.loci.wisc.edu ([144.92.48.176])
+	by smtp4.wiscmail.wisc.edu
+	(Oracle Communications Messaging Server 7u4-27.01(7.0.4.27.0) 64bit
+	(built Aug
+	30 2012)) with ESMTPS id &lt;0MOB0089CA5798F0@smtp4.wiscmail.wisc.edu&gt; for
+	eliceiri@wisc.edu (ORCPT eliceiri@wisc.edu); Wed,
+	12 Jun 2013 22:10:20 -0500 (CDT)
+Received: from localhost ([127.0.0.1] helo=skynet.loci.wisc.edu)
+	by skynet.loci.wisc.edu with esmtp (Exim 4.71)
+	(envelope-from &lt;openspim-bounces@openspim.org&gt;)	id 1UmxvW-0003LZ-T0;
+	Wed, 12 Jun 2013 22:10:18 -0500
+Received: from mout.gmx.net ([212.227.15.19])	by skynet.loci.wisc.edu with
+	esmtp (Exim 4.71)	(envelope-from &lt;johannes.schindelin@gmx.de&gt;)
+	id 1UmxvV-0003LC-Fn	for openspim@openspim.org;
+	Wed, 12 Jun 2013 22:10:17 -0500
+Received: from mailout-de.gmx.net ([10.1.76.12])
+	by mrigmx.server.lan	(mrigmx001) with ESMTP (Nemesis)
+	id 0MARzI-1UcTXy2LG6-00BZqc for	&lt;openspim@openspim.org&gt;; Thu,
+	13 Jun 2013 05:10:12 +0200
+Received: (qmail invoked by alias); Thu, 13 Jun 2013 03:10:12 +0000
+Received: from s15462909.onlinehome-server.info
+	(EHLO	s15462909.onlinehome-server.info) [87.106.4.80]	by mail.gmx.net
+	(mp012) with SMTP; Thu, 13 Jun 2013 05:10:12 +0200
+Date: Thu, 13 Jun 2013 05:10:10 +0200 (CEST)
+From: Johannes Schindelin &lt;Johannes.Schindelin@gmx.de&gt;
+Subject: Re: [OpenSPIM] additional questions
+In-reply-to: &lt;CAHAw+8YsEq8LsD7wp31YY+WU931ptn8P2jJB3jFoBy1TvrnpsA@mail.gmail.com&gt;
+Sender: openspim-bounces@openspim.org
+X-X-Sender: schindelin@s15462909.onlinehome-server.info
+To: Aurelia Honerkamp-Smith &lt;aureliaomega@gmail.com&gt;
+Cc: openspim@openspim.org
+Errors-to: openspim-bounces@openspim.org
+Message-id: &lt;alpine.DEB.1.00.1306130506451.28957@s15462909.onlinehome-server.info&gt;
+MIME-version: 1.0
+Content-type: text/plain; CHARSET=US-ASCII
+Content-transfer-encoding: 7BIT
+Precedence: list
+X-BeenThere: openspim@openspim.org
+X-Spam-PmxInfo: Server=avs-14, Version=5.6.1.2065439,
+	Antispam-Engine: 2.7.2.376379, Antispam-Data: 2013.6.13.30024,
+	SenderIP=144.92.48.176
+X-Spam-Report: TrustedSender=yes, SenderIP=144.92.48.176
+X-Authenticated: #1490710
+X-Provags-ID: V01U2FsdGVkX1/r4bRmA37r1WsF1HHBhchuEUcxjrIUGlwfp15PCP
+	8UPkIAASVgkvLH
+X-Y-GMX-Trusted: 0
+References: &lt;CAHAw+8YsEq8LsD7wp31YY+WU931ptn8P2jJB3jFoBy1TvrnpsA@mail.gmail.com&gt;
+X-Mailman-Version: 2.1.13
+List-Post: &lt;mailto:openspim@openspim.org&gt;
+List-Subscribe: &lt;http://openspim.org/mailman/listinfo/openspim&gt;,
+	&lt;mailto:openspim-request@openspim.org?subject=subscribe&gt;
+List-Unsubscribe: &lt;http://openspim.org/mailman/options/openspim&gt;,
+	&lt;mailto:openspim-request@openspim.org?subject=unsubscribe&gt;
+List-Archive: &lt;http://openspim.org/pipermail/openspim&gt;
+List-Help: &lt;mailto:openspim-request@openspim.org?subject=help&gt;
+List-Id: OpenSPIM discussion list &lt;openspim.openspim.org&gt;
+User-Agent: Alpine 1.00 (DEB 882 2007-12-20)
+Original-recipient: rfc822;eliceiri@wisc.edu
+
+Hi Aurelia,
+
+On Mon, 10 Jun 2013, Aurelia Honerkamp-Smith wrote:
+
+&gt; Is there a way to ask more questions, in addition to those already on the
+&gt; FAQ?
+
+There is, and you found it!
+
+&gt; I'm beginning an Open SPIM build and would like clarification on some
+&gt; of the parts.  For instance, in the sample preparation section, where can
+&gt; one find and purchase the capillaries and plungers which are used to make
+&gt; the agarose columns?  I am sure I will have other questions as the build
+&gt; goes on.
+
+I have a vague memory that one of my colleagues found a supplier of
+similar materials in the US. If you need a European supplier, I think
+Braun is to contact.
+
+Ciao,
+Johannes
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM@openspim.org
+http://openspim.org/mailman/listinfo/openspim
+]

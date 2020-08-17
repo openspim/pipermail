@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] ome-tiff output
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20ome-tiff%20output&In-Reply-To=%3C9BA08565-12A4-4C9C-A5C1-9E1D4C8CC477%40mdc-berlin.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002051.html">
+   <LINK REL="Next"  HREF="002053.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] ome-tiff output</H1>
+    <B>Stephan.Preibisch at mdc-berlin.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20ome-tiff%20output&In-Reply-To=%3C9BA08565-12A4-4C9C-A5C1-9E1D4C8CC477%40mdc-berlin.de%3E"
+       TITLE="[OpenSPIM] ome-tiff output">Stephan.Preibisch at mdc-berlin.de
+       </A><BR>
+    <I>Fri Nov 10 08:56:49 CST 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002051.html">[OpenSPIM] ome-tiff output
+</A></li>
+        <LI>Next message (by thread): <A HREF="002053.html">[OpenSPIM] no structure in brain tissue image
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2052">[ date ]</a>
+              <a href="thread.html#2052">[ thread ]</a>
+              <a href="subject.html#2052">[ subject ]</a>
+              <a href="author.html#2052">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Great to hear! If we can make it even more intuitive or compatible just let us know!
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Nov 10, 2017, at 08:10, Christoph Sommer &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&gt;&gt; wrote:
+
+
+Dear Stephan and OpenSpim users,
+
+thanks for pointing me to the autoloader. I tested it on our data and technically it works! It seems tiles and angles are still mistaken, but this seems to be a problem of the wrong meta data... I now work on automating the MVR process for our setup.
+
+Also, we found a way to truncate the containing ome-xml data, to make each output files 'stand-alone' for specific cases. Yet, the autoloader is my preferred solution.
+
+Thanks to all for your help!
+
+Cheers,
+
+Chris
+
+Am 11/7/2017 um 8:17 PM schrieb <A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">Stephan.Preibisch at mdc-berlin.de</A>&gt;:
+Hi, did you try using the Autoloader of the MVR/BigStitcher (it’s basically the same now) for import? Activate the BigStitcher update site first to get the newest code. It should handle OME-TIff ... if not, send us a small example and we’ll fix it.
+
+Cheers,
+Stephan
+
+Sent from my iPhone
+
+On Nov 7, 2017, at 16:17, Christoph Sommer &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&gt;&gt; wrote:
+
+
+Dear HongKee,
+
+thank so much for your recommendation and code. When I understand correctly, it would require the deployment of this VirtualStack class to all ImageJ instances of potential users. I was hoping for a solution, which does not need adaptions of ImageJ.
+
+Alternatively, we could create a different output format in the acquisition (no multi-file OMETiff). I saw that there's already a &quot;IndividualImagesHandler&quot; or an HDF5 handler in &quot;spim.io&lt;<A HREF="http://spim.io">http://spim.io</A>&gt;&quot;. Does someone have experience with alternative output formats?
+
+Cheers,
+Chris
+
+
+We have also faced those problems because the default image opener is trying to get the metadata for every file.
+I really recommend you to make own ImageStack class for reading the metadata just once for your whole series.
+
+We had to create our version of VirtualStack class based on <A HREF="https://imagej.nih.gov/ij/plugins/virtual-opener.html">https://imagej.nih.gov/ij/plugins/virtual-opener.html</A> to avoid redundant metadata reading. The below code is not a perfect version, please, use it as a reference.
+
+Hopefully, it will help you.
+
+Cheers,
+HongKee
+
+———————————————————
+
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.plugins.util.ImageProcessorReader;
+
+import loci.common.services.DependencyException;
+import loci.common.services.ServiceException;
+import loci.common.services.ServiceFactory;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.formats.meta.IMetadata;
+import loci.formats.services.OMEXMLService;
+
+public class MyImageStack extends ImageStack
+{
+private int bitDepth;
+private int width, height;
+ImageProcessorReader imageProcessorReader;
+private int zSize = 1, tSize = 1, cSize = 1;
+private int cEffectiveSize = 1;
+
+public void addSlice( String path )
+{
+if(path != null)
+{
+if(width == 0)
+{
+// create format reader
+ImageReader reader = getImageReader( path );
+
+// output dimensional information
+int sizeX = reader.getSizeX();
+this.width = sizeX;
+
+int sizeY = reader.getSizeY();
+this.height = sizeY;
+
+// System.out.println(&quot;Effective C&quot; + reader.getEffectiveSizeC());
+setcEffectiveSize( reader.getEffectiveSizeC() );
+
+int sizeC = reader.getSizeC();
+int sizeZ = reader.getSizeZ();
+int sizeT = reader.getSizeT();
+
+// System.out.println( &quot;C=&quot; + sizeC + &quot; Z=&quot; + sizeZ + &quot; T=&quot; + sizeT );
+
+setcSize( sizeC );
+setzSize( sizeZ );
+settSize( sizeT );
+
+this.bitDepth = reader.getBitsPerPixel();
+this.imageProcessorReader = new ImageProcessorReader( reader );
+}
+}
+}
+
+public ImageProcessor getProcessor(int n)
+{
+// properly implement to get ImageProcessor based on n
+}
+
+public static ImageReader getImageReader( String path )
+{
+ImageReader reader = null;
+
+try
+{
+ServiceFactory factory = new ServiceFactory();
+OMEXMLService service = factory.getInstance(OMEXMLService.class);
+IMetadata meta = service.createOMEXMLMetadata();
+
+// create format reader
+reader = new ImageReader();
+reader.setMetadataStore(meta);
+
+// initialize file
+// System.out.println(path);
+reader.setId( path );
+}
+catch ( DependencyException e )
+{
+e.printStackTrace();
+}
+catch ( ServiceException e )
+{
+e.printStackTrace();
+}
+catch ( IOException e )
+{
+e.printStackTrace();
+}
+catch ( FormatException e )
+{
+e.printStackTrace();
+}
+
+return reader;
+}
+}
+
+———————————————
+
+
+On Nov 6, 2017, at 10:43 AM, Christoph Sommer &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">christoph.sommer at ist.ac.at</A>&gt;&gt; wrote:
+
+Dear OpenSpim folks,
+
+thanks for creating such a great resource!
+
+We are currently using an OpenSpim setup and the created output is a multi-file ome-tiff. For many applications (e.g. the MVR from Stephan Preibisch et al.) we need to convert the ome-tiff to normal tiff.
+
+Unfortunately, for long time-lapse the conversion takes forever, since for each conversion step all meta-data is parsed from each single time point. My script uses the Bioformats ImporterOptions class, but I can't see how I can bypass the meta-data parsing. I also tried the 'bvconvert' command line script but also got issues there. Also reading from Python (e.g. with the module 'tifffile' only return always the first angle image-stack...)
+
+Would you have any idea?
+
+Cheers,
+
+Chris
+
+
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+
+--
+HongKee Moon
+Scientific Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 1923
+fax: +49 351 210 1907
+www.mpi-cbg.de&lt;<A HREF="http://www.mpi-cbg.de">http://www.mpi-cbg.de</A>&gt;
+
+
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20171110/e4e48e3f/attachment.html">http://openspim.org/pipermail/openspim/attachments/20171110/e4e48e3f/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002051.html">[OpenSPIM] ome-tiff output
+</A></li>
+	<LI>Next message (by thread): <A HREF="002053.html">[OpenSPIM] no structure in brain tissue image
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2052">[ date ]</a>
+              <a href="thread.html#2052">[ thread ]</a>
+              <a href="subject.html#2052">[ subject ]</a>
+              <a href="author.html#2052">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

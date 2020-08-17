@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Rotation Axis
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Rotation%20Axis&In-Reply-To=%3CCB307057-A512-4015-9F71-282521B646E2%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000917.html">
+   <LINK REL="Next"  HREF="000922.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Rotation Axis</H1>
+    <B>Jan Huisken</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Rotation%20Axis&In-Reply-To=%3CCB307057-A512-4015-9F71-282521B646E2%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Rotation Axis">huisken at mpi-cbg.de
+       </A><BR>
+    <I>Tue Feb 23 02:10:42 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000917.html">[OpenSPIM] Rotation Axis
+</A></li>
+        <LI>Next message: <A HREF="000922.html">[OpenSPIM] Rotation Axis
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#918">[ date ]</a>
+              <a href="thread.html#918">[ thread ]</a>
+              <a href="subject.html#918">[ subject ]</a>
+              <a href="author.html#918">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Neil
+
+here are a few thoughts:
+
+- The rotational axis can be determined very precisely by mounting a cylinder of fluorescent beads, switching on the laser and spinning the sample. You will see a &#8220;snow storm&#8221; of beads. You keep on moving your sample in x and z until you see a line of beads that do not move. This is your rotational axis. Above this line you will see beads coming towards the lens, below away (or the other way around). You position this line of beads in your FOV&#8217;s center and call this stage position (0,y,0).
+
+- Once you have determined the rotational axis you can find and center your sample in the FOV. (The sample will not necessarily be on the rational axis.) When your sample is in the FOV the stage position tells you how far away from the rational axis you are. Rotating now by an angle theta should go along with a translation along x and z that you can easily calculate with Sin(theta) and Cos(Theta) and the distance from the axis. The sample will now rotate around the FOV&#8217;s center. (I do not know how the openSPIM software handles this.)
+
+- You can also build a little translational stage that allows you to reposition the sample with respect to the rotational axis (very important for OPT, useful for SPIM, see Bassi et al, Development 2015). This way you can always position the sample precisely on the rotational axis. 
+
+- The rotational axis is never perfectly vertical (parallel to y). Generally this is not a big deal. If you want to do MV imaging you anyway need to register the data sets.
+
+- Ideally you should have stages that are precise and reliable, i.e. they find the same position even after a few hours. Then you can image a bunch of beads from different directions at the beginning of your experiment, register the beads (Preibisch et al.) and you know once and forever how to register data from these directions. No need to embed ugly beads with your sample. Again, this assumes that you have a nice set of motors.
+
+- It is important to understand that the registration of data is independent of the actual sample&#8217;s position. It does not matter if the FEP tube is bent, if the sample is at an angle or off-axis. The transformations necessary to register the data are solely determined by how (well) you have assembled the (hopefully precise) motors.
+
+Hope this helps. 
+
+Jan
+
+
+&#8212;
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+Pfotenhauerstr. 108
+01307 Dresden, Germany
+
+www.mpi-cbg.de/huisken
+<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A>&gt;
++49 351 2102487
+
+
+
+
+
+
+&gt;<i> On Feb 23, 2016, at 3:39 AM, Anthony, Neil &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi all, I hope the scopes are treating you well.
+</I>&gt;<i> 
+</I>&gt;<i> I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+</I>&gt;<i> 
+</I>&gt;<i> Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+</I>&gt;<i> 
+</I>&gt;<i> Any experiences or thoughts in this direction are much appreciated.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks in advance for your time.
+</I>&gt;<i> 
+</I>&gt;<i> Neil
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ________________________________
+</I>&gt;<i> 
+</I>&gt;<i> This e-mail message (including any attachments) is for the sole use of
+</I>&gt;<i> the intended recipient(s) and may contain confidential and privileged
+</I>&gt;<i> information. If the reader of this message is not the intended
+</I>&gt;<i> recipient, you are hereby notified that any dissemination, distribution
+</I>&gt;<i> or copying of this message (including any attachments) is strictly
+</I>&gt;<i> prohibited.
+</I>&gt;<i> 
+</I>&gt;<i> If you have received this message in error, please contact
+</I>&gt;<i> the sender by reply e-mail message and destroy all copies of the
+</I>&gt;<i> original message (including attachments).
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160223/378813f1/attachment.html">http://openspim.org/pipermail/openspim/attachments/20160223/378813f1/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000917.html">[OpenSPIM] Rotation Axis
+</A></li>
+	<LI>Next message: <A HREF="000922.html">[OpenSPIM] Rotation Axis
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#918">[ date ]</a>
+              <a href="thread.html#918">[ thread ]</a>
+              <a href="subject.html#918">[ subject ]</a>
+              <a href="author.html#918">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

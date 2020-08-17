@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C7670897768185.51a61cf8%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000023.html">
+   <LINK REL="Next"  HREF="000025.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C7670897768185.51a61cf8%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed May 29 15:21:28 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000023.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="000025.html">[OpenSPIM] [openspim] OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#24">[ date ]</a>
+              <a href="thread.html#24">[ thread ]</a>
+              <a href="subject.html#24">[ subject ]</a>
+              <a href="author.html#24">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello Alexis,
+
+A little over a month ago, we finished rebasing the OpenSPIM source code onto the (then) latest Micro-Manager code. If you fully update your OpenSPIM installation (Help -&gt; Update Fiji), when you launch Micro-Manager it should register as 'v1.4.x dev' (I believe the code was between 1.4.13 and 1.4.14). I just tested now (Windows XP, freshly up-to-date OpenSPIM-20130131.zip, with an Orca R^2), and the software can load the mmgr_dal_HamamatsuHam.dll file included in the latest MM nightly build. I can't make any certain statements about support for Windows 7, unfortunately, since our goal at present is to maximize support for Windows XP first.
+
+
+Regarding the development environment, I'm actively working on bringing it up-to-date, and your assistance in this would be invaluable -- I was hoping you might test something for me: Please try downloading&#160;<A HREF="https://dl.dropboxusercontent.com/u/57890359/OpenSPIM-dev-env-20130529.exe">https://dl.dropboxusercontent.com/u/57890359/OpenSPIM-dev-env-20130529.exe</A> and installing it. This is a newer version of the installer, and hopefully should at least finish putting everything into place.
+
+
+You are also correct about the necessary steps for building a functional OpenSPIM installation. To answer your questions:
+1. a) I believe the mmstudio project only has the device adapters as dependencies to ensure they are built at all. You should be able to build it without compiling them first.
+b) mmstudio is meant to be built by ant -- using the build32.xml file in its directory. However, the Visual Studio project has been configured to do just that, as long as your directory structure has '3rdpartypublic' alongside 'micromanager'.
+
+
+2. The SPIM Acquisition plugin is also built by ant. Unfortunately, there isn't a neat way to do this quite yet -- you can call it from the command line (within plugins/SPIMAcquisition) with ../../../3rdpartypublic/apache-ant-1.6.5/bin/ant -buildfile build.xml
+
+
+A few extra notes regarding compiling from source:
+- Please make sure you're using the latest version of the source code, obtained from github.com/openspim -- preferably using Git for Windows.
+- If you're feeling a little daring and haven't already done so, I'd recommend moving to Visual C++ 2010 Express, available for free from Microsoft. The latest code from github includes the project and solution files used by 2010, and even an (experimental) build script -- build-openspim.sh, meant to replace build.sh -- which builds the necessary objects.
+
+
+Thank you for your help,
+Luke Stuyvenberg
+
+On 05/29/13, Alexis Maizel  wrote:
+&gt;<i> Hi there,
+</I>&gt;<i> 
+</I>&gt;<i> I use an ORCA Flash4 in our OpenSPIM setup but I run into severe problems regarding its integration with the OpenSPIM software. 
+</I>&gt;<i> 
+</I>&gt;<i> The latest DCAM drivers (Feb 2013) brought compatibility with windows 7 (what we run on) and allow the integration and use of e.g. an Orca Flash4 in micro-manager (MM v1.4.13) using the HamamatsuHam device adapter . I tested this in a standalone MM and it works great. 
+</I>&gt;<i> 
+</I>&gt;<i> However, as the current micro-manager code base used by OpenSPIM is anterior (seems to be MM v1.4.9), this latest HamamatsuHam device adapter is not recognised/loaded by the OpenSPIM software.
+</I>&gt;<i> 
+</I>&gt;<i> Unless I am mistaken, in order to have this HamamatsuHam device adapter compatible with OpenSPIM, the OpenSPIM/MicroManager code has to be brought in sync to the current MM version 1.4.13/14; which in other words mean, recompiling OpenSPIM using the latest Micromanager source code, correct?
+</I>&gt;<i> 
+</I>&gt;<i> I have been struggling for several weeks now to try to do just that&#8230;
+</I>&gt;<i> 
+</I>&gt;<i> First, and unfortunately for me, the OpenSPIM development environment installer (<A HREF="http://openspim.org/downloads/OpenSPIM-dev-env-20130201.exe">http://openspim.org/downloads/OpenSPIM-dev-env-20130201.exe</A>) which is supposed to make it really easy for everyone, did not work for me (it hangs and does not fetch the different sources). So I had to go the &quot;hard way&quot; and download, configure everything properly (d/l the boostPro libs, Ant, JDK, PATHs configurations, etc&#8230;). After a few hours of sweating, I troubleshooted almost everything. However, I am far from the described step &quot; by clicking on Build&gt;Build Solution or by pressing the F7 key&quot; everything builds auto-magically.
+</I>&gt;<i> 
+</I>&gt;<i> If I understood correctly, to get a functional OpenSPIM software compatible with MM v1.4.13, I have to , a minima, recompile:
+</I>&gt;<i> - MMCore
+</I>&gt;<i> - MMcoreJ_wrap
+</I>&gt;<i> - Any DeviceAdapter I need (OpenSPIM, Cobolt, etc&#8230;) or on which the MMCoreJ_wrap depends (SerialManager, &#8230;)
+</I>&gt;<i> - mmstudio
+</I>&gt;<i> - SPIMAcquisition
+</I>&gt;<i> 
+</I>&gt;<i> I have questions regarding the last 2:
+</I>&gt;<i> - mmstudio: about 40 devices adapters are listed as dependencies (AAOTF, etc&#8230;). Do I have to recompile them or it will be OK to forget about them (assuming I do not need them) or adding them from the current MM release? It is unclear whether I can recompile this in Visual Studio or using Ant. 
+</I>&gt;<i> 
+</I>&gt;<i> - SPIMAcquisition: that's a JAVA plugin how do I do that? Using Ant?
+</I>&gt;<i> 
+</I>&gt;<i> I have the feeling that I am getting lost in territories that have been charted by others before. 
+</I>&gt;<i> At this point I could really benefit from help of any good samaritans in the community to point me into the right directions to help me recompile the whole OpenSPIM using a more recent MM code base. In my opinion, this effort would actually benefit the whole community, as I am probably not the only one which may suffer from OpenSPIM being based on a several-month old MM release. 
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> 
+</I>&gt;<i> Alexis
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000023.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="000025.html">[OpenSPIM] [openspim] OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#24">[ date ]</a>
+              <a href="thread.html#24">[ thread ]</a>
+              <a href="subject.html#24">[ subject ]</a>
+              <a href="author.html#24">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

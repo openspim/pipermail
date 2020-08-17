@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] stradus laser in OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20stradus%20laser%20in%20OpenSPIM&In-Reply-To=%3CD062F808.19839%25mredd%40cores.utah.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001514.html">
+   <LINK REL="Next"  HREF="001513.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] stradus laser in OpenSPIM</H1>
+    <B>Michael Redd</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20stradus%20laser%20in%20OpenSPIM&In-Reply-To=%3CD062F808.19839%25mredd%40cores.utah.edu%3E"
+       TITLE="[OpenSPIM] stradus laser in OpenSPIM">mredd at cores.utah.edu
+       </A><BR>
+    <I>Tue Oct 14 16:59:31 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001514.html">[OpenSPIM] stradus laser in OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001513.html">[OpenSPIM] metal sample holder
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1516">[ date ]</a>
+              <a href="thread.html#1516">[ thread ]</a>
+              <a href="subject.html#1516">[ subject ]</a>
+              <a href="author.html#1516">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks for the reply. It worked. I was finally able to open the Spim   acquisition plugin and take images with the microscope. I am running Fiji on a Windows 7 32 bit machine with the Stradus laser. I still have an issue. The Stradus laser power cannot be modulated by the Spim acquisition window. The laser power slider doesn't do anything. Any advice?
+
+Cheers
+mike
+
+From: Zuomin Zhao &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">zuomin at ee.oulu.fi</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">zuomin at ee.oulu.fi</A>&gt;&gt;
+Date: Tuesday, October 14, 2014 2:35 AM
+To: Michael Redd &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>&gt;&gt;
+Subject: RE: stradus laser in OpenSPIM
+
+Oh, Yes. we solved the problem, as the suggestion <A HREF="http://openspim.org/pipermail/openspim/2014-May/000408.html">http://openspim.org/pipermail/openspim/2014-May/000408.html</A>
+
+Since the Stradus device adapter is &quot;secret&quot;, my ability to help is limited.
+My suggestion is:
+- First, please make sure you are using the Stradus device adapter
+(mmgr_dal_Stradus.dll) from the 5 February 2014 nightly build of
+Micro-Manager[1].
+- Run OpenSPIM, but before clicking &quot;Acquire SPIM Image&quot;, create a pixel
+size:
+- On Micro-Manager, click &quot;Tools -&gt; Pixel Size Calibration...&quot;
+- Click &quot;New&quot;
+- Set Label to &quot;Uncalibrated&quot;
+- Set Pixel Size (um/pixel) to 1.00
+- Across from &quot;Core - Initialize&quot; click &quot;Use&quot; checkbox.
+- Click &quot;OK&quot;.
+- Try &quot;Acquire SPIM Image&quot; again.
+
+-Zuomin
+
+From: Michael Redd [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>]
+Sent: Monday, October 13, 2014 10:54 PM
+To: Zuomin Zhao
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+Subject: Re: stradus laser in OpenSPIM
+
+I am experiencing the same problem that you described in a posting on the Openspim forum in June:
+
+
+&quot;Dear Sir,
+
+
+
+
+
+
+
+We used a stradus laser in OpenSPIM. But we cannot open the Acquire OpenSPIM
+
+option from Micro-manager. The settings can be seen in attachments. It
+
+always shows error like &quot;Error in device VLTStradus: Duplicate property
+
+names are not allowed&quot;
+
+
+
+
+
+
+
+Now we use one stradus laser with wavelength 561 nm, I cannot understand
+
+where &quot;duplicate property names&quot; happens.
+
+
+
+
+
+
+
+Another problem is the information in Corelog20140430 that &quot;Startup script
+
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present.&quot; I do not
+
+know why miss this file MMSartup.bsh. How handle it?
+
+
+
+
+
+
+
+Could you help us? Thank you very much.
+
+
+
+
+
+
+
+Best regards,
+
+
+
+
+
+
+
+Zuomin Zhao
+
+
+
+
+
+Were you able to solve this problem and move on?
+
+
+
+Cheers
+
+mike
+
+From: Zuomin Zhao &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">zuomin at ee.oulu.fi</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">zuomin at ee.oulu.fi</A>&gt;&gt;
+Date: Monday, October 13, 2014 12:44 AM
+To: Michael Redd &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>&gt;&gt;
+Subject: RE: stradus laser in OpenSPIM
+
+Dear Michael,
+
+What ”duplicate properties”? Could you tell more detail about your problem?
+
+Regards,
+
+Zuomin
+
+From: Michael Redd [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>]
+Sent: Saturday, October 11, 2014 3:09 AM
+To: <A HREF="http://openspim.org/mailman/listinfo/openspim">zuomin at ee.oulu.fi</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">zuomin at ee.oulu.fi</A>&gt;
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+Subject: stradus laser in OpenSPIM
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same &quot;duplicate properties&quot; error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20141014/666e7cda/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20141014/666e7cda/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001514.html">[OpenSPIM] stradus laser in OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001513.html">[OpenSPIM] metal sample holder
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1516">[ date ]</a>
+              <a href="thread.html#1516">[ thread ]</a>
+              <a href="subject.html#1516">[ subject ]</a>
+              <a href="author.html#1516">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

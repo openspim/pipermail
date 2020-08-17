@@ -1,0 +1,52 @@
+[From nobody Thu Jul 25 12:35:21 2013
+Received: from [144.92.8.223] (Forwarded-For: 144.92.8.223)
+	by wmweb3.doit.wisc.edu (mshttpd); Wed, 24 Jul 2013 12:50:14 -0500
+Date: Wed, 24 Jul 2013 12:50:14 -0500
+From: Luke Stuyvenberg &lt;stuyvenberg@wisc.edu&gt;
+Subject: Re: API(s) for OpenSPIM control of laser intensity?
+In-reply-to: &lt;7610a49a732c.51f013c8@wiscmail.wisc.edu&gt;
+To: Alexis Maizel &lt;Alexis.Maizel@cos.uni-heidelberg.de&gt;
+Message-id: &lt;7790e11d44bf.51efcd86@wiscmail.wisc.edu&gt;
+MIME-version: 1.0
+X-Mailer: Oracle Communications Messenger Express 7u4-25.01(7.0.4.25.0) 64bit
+	(built Feb 29 2012)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-language: en
+Content-transfer-encoding: 7BIT
+Content-disposition: inline
+X-Accept-Language: en
+Priority: normal
+References: &lt;49B874FB-5F29-49B7-9C0D-DD9C8034E1E7@cos.uni-heidelberg.de&gt;
+	&lt;779099014199.51f01128@wiscmail.wisc.edu&gt;
+	&lt;7790d44c6ea8.51f01164@wiscmail.wisc.edu&gt;
+	&lt;7620be2246e9.51f011a1@wiscmail.wisc.edu&gt;
+	&lt;76e08726191f.51f01219@wiscmail.wisc.edu&gt;
+	&lt;76e0aa0e5df7.51f01292@wiscmail.wisc.edu&gt;
+	&lt;7710f5033fbc.51f012cf@wiscmail.wisc.edu&gt;
+	&lt;7710e3486b69.51f0130d@wiscmail.wisc.edu&gt;
+	&lt;76d0c217d90.51f0134c@wiscmail.wisc.edu&gt;
+	&lt;7610f37a2e7a.51f01389@wiscmail.wisc.edu&gt;
+	&lt;7610a49a732c.51f013c8@wiscmail.wisc.edu&gt;
+
+Hi Alexis,
+On 07/24/13, Alexis Maizel  wrote:
+&gt; I'd like to modify the code of the device adapter for our Cobolt laser to allow modulation of laser power from within OpenSPIM. As of now this is not working.
+&gt; 
+&gt; After looking at the CoherentCube source code, I am a bit confused as to which API(s) OpenSPIM or MicroManager are expecting.Could you point me in the right direction?
+
+
+Unfortunately, Micro-Manager only recognizes shutter devices as 'open' or 'closed'; there is no API to control laser power directly. Instead, we use a property exposed by the CoherentCube DAL (&quot;PowerSetPoint&quot;) to control the power. The Cobalt DAL offers a similar option called &quot;Power&quot;; so long as the Cobolt device is set up as the system's shutter (which I'm guessing was the purpose of your modifications before), this makes the fix considerably easier than otherwise:
+
+
+In SPIMAcquisition.java:
+- On lines 865-867, replace the fetching of minimum and maximum with hard-coded values (the Cobalt doesn't seem to offer these as properties), and change &quot;PowerSetPoint&quot; to &quot;Power&quot;.
+- On line 877, replace &quot;PowerSetPoint&quot; with &quot;Power&quot;.
+- On lines 1354 and 1358, replace &quot;PowerSetPoint&quot; with &quot;Power&quot;.
+
+
+That should do the trick. I've been hoping to somehow centralize that property (and may be able to do so before long, with some changes to DeviceManager that I'm working on), but unfortunately Micro-Manager doesn't offer a simple function call to set power (which makes some sense, as a classical shutter doesn't have a concept of 'power').
+
+
+Let me know how it works out,
+Luke Stuyvenberg
+]

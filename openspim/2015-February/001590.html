@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] [micro-manager-general] OpenSPIM: aquire SPIM image	tool
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20OpenSPIM%3A%20aquire%20SPIM%20image%0A%09tool&In-Reply-To=%3C20150210204108.GA20052%40dhcp-169-230-22-250.compbio.ucsf.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001622.html">
+   <LINK REL="Next"  HREF="001592.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] [micro-manager-general] OpenSPIM: aquire SPIM image	tool</H1>
+    <B>Mark Tsuchida</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20OpenSPIM%3A%20aquire%20SPIM%20image%0A%09tool&In-Reply-To=%3C20150210204108.GA20052%40dhcp-169-230-22-250.compbio.ucsf.edu%3E"
+       TITLE="[OpenSPIM] [micro-manager-general] OpenSPIM: aquire SPIM image	tool">marktsuchida at gmail.com
+       </A><BR>
+    <I>Tue Feb 10 14:41:08 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001622.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+        <LI>Next message: <A HREF="001592.html">[OpenSPIM] Trying to open the openspim plugin on MM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1590">[ date ]</a>
+              <a href="thread.html#1590">[ thread ]</a>
+              <a href="subject.html#1590">[ subject ]</a>
+              <a href="author.html#1590">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Rob,
+
+It seems like you have two distinct problems.
+
+On Tue, Feb 10, 2015 at 11:39:31AM -0700, Robert_Kon wrote:
+&gt;<i> I am trying to get the OpenSPIM plugin to work on MM v18 but I come across
+</I>&gt;<i> this error.
+</I>&gt;<i> 
+</I>&gt;<i> &quot; Your setup appears to be invalid. Please make sure that you have the
+</I>&gt;<i> camera and the 4D stage setup. You may need to restart MM for the openspim
+</I>&gt;<i> plugin to detect a correct setup.&quot;
+</I>&gt;<i> 
+</I>&gt;<i> I have added all the devices apart from my laser to the system. Do I need to
+</I>&gt;<i> configure them in a way that I can get the plugin to work?
+</I>
+The best place to ask this question is the OpenSPIM mailing list (Cc'd).
+
+&gt;<i> I haven't added my coherent obis laser to the system as similarly I come up
+</I>&gt;<i> with another error when I try to add that:
+</I>&gt;<i> 
+</I>&gt;<i> &quot;Error in device 'coherent obis': Serial command failed. Is the device
+</I>&gt;<i> connected to the serial port? (14)&quot;
+</I>&gt;<i> 
+</I>&gt;<i> Which I do not really get the question here it's trying to ask. At the
+</I>&gt;<i> moment it is there is a USB to the control unit and not the laser. So I'd
+</I>&gt;<i> like to know whether the USB needs to do directly to the laser instead? Or
+</I>&gt;<i> whether there is some other underlying issue here. 
+</I>
+&gt;<i>From looking at the problem report that you sent separately, it appears
+</I>that the error is the result of not setting the OBIS device's Port when
+adding it in the Hardware Configuration Wizard. You need to set Port to
+the appropriate COM port.
+
+I'm not sure how the OBIS USB interface works (and cannot easily check
+online at the moment), but I think the OBIS controllers that work with
+Micro-Manager either have a serial (RS-232) port, or their USB port
+works as a virtual serial port (i.e. shows up as a COM port when plugged
+in). If it is the latter, you should see a COM port that can be selected
+for Port (and it should appear only when the controller is connected to
+the computer, though you will need to restart Micro-Manager for changes
+to be recognized).
+
+Also note that the baudrate needs to be set to 115200, as noted on our
+device page (<A HREF="https://micro-manager.org/wiki/CoherentOBIS">https://micro-manager.org/wiki/CoherentOBIS</A>).
+
+Hope this helps.
+
+Best,
+Mark
+
+-- 
+Mark Tsuchida
+Micro-Manager Team (UCSF Vale Lab)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001622.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+	<LI>Next message: <A HREF="001592.html">[OpenSPIM] Trying to open the openspim plugin on MM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1590">[ date ]</a>
+              <a href="thread.html#1590">[ thread ]</a>
+              <a href="subject.html#1590">[ subject ]</a>
+              <a href="author.html#1590">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

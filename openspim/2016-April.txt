@@ -1,0 +1,2428 @@
+From nantho2 at emory.edu  Fri Apr  8 16:03:20 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 8 Apr 2016 21:03:20 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+Message-ID: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+
+Second telescope optics image:
+https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+
+BFP location image from Olympus:
+https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From nantho2 at emory.edu  Mon Apr 11 08:31:24 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 11 Apr 2016 13:31:24 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <610168716.3849446.1460380568653.JavaMail.zimbra@mpi-cbg.de>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+	<610168716.3849446.1460380568653.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <DM2PR05MB68599DE79A7F6BED5F76D03EC940@DM2PR05MB685.namprd05.prod.outlook.com>
+
+Hi Pete, thanks for the tips.
+
+Can I ask how the slit plays a role?  Once I find the focus, am I correct in thinking that opening the slit will create a more pronounced focus (more divergence either end)?
+
+Thanks
+Neil
+
+-----Original Message-----
+From: Peter Gabriel Pitrone [mailto:pitrone at mpi-cbg.de] 
+Sent: Monday, April 11, 2016 9:16 AM
+To: Anthony, Neil
+Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+
+Hey Anthony,
+
+First off, congrats...
+
+I think your issues have to do with the second telescope and the positions of it's lenses. I know it seems counter intuitive that the lens closest to the illumination objective is so far away from where it "should" be, but it works.
+
+Here's a quick run down of what I would recommend you do:
+
+1. take the emission filter out of the infinity tube (or make a batch of fluorescine agarose in a capillary), and take the cylidrical lens out of the beam path
+
+2. adjust the positions of the two lenses of the conjugate plane telescope until you find the beam focus (i.e. see the beam converge and diverge on either side of the field of view, with the thinnest part in the middle... both horizontally and vertically), this might/will require fiddling with the gimbal mount positioning.
+
+3. put the cylidrical lens back in it's place, as you should be done.
+
+Good luck!
+Pete
+
+
+
+ 
+
+----- Original Message -----
+From: "Anthony, Neil" <nantho2 at emory.edu>
+To: openspim at openspim.org
+Sent: Friday, April 8, 2016 10:03:20 PM
+Subject: [OpenSPIM] Out of focus signal and optics questions
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+
+Second telescope optics image:
+https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+
+BFP location image from Olympus:
+https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+From nantho2 at emory.edu  Mon Apr 11 08:39:14 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 11 Apr 2016 13:39:14 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <5b2f878d02984a64b163906a317b0439@pitt-prodx-02.univ.pitt.edu>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+	<5b2f878d02984a64b163906a317b0439@pitt-prodx-02.univ.pitt.edu>
+Message-ID: <DM2PR05MB685755C39A37A13651A58EAEC940@DM2PR05MB685.namprd05.prod.outlook.com>
+
+Hi Tim, thanks for your help.
+
+I'm a little confused, and I think it's the bad image quality that's to blame.  I have the 10X in the illumination path.  The 10X is yellow and the 20X is green.
+
+Or maybe I'm being confusing due to the Olympus info.  They sent the details for the 20X but informed me that all the UMPlanFL water lenses have the same BFP location.  When you say "easier to manage", do you mean difference in sensitivity to focus?
+
+Given the advice from Pete, I'm thinking it's more empirical than anything, but I'm really curious to know the optical specifics.  Are there other 'planes' of relevance when considering the optics of the objective lens?
+
+Thanks
+Neil
+ 
+
+-----Original Message-----
+From: Feinstein, Timothy N [mailto:tnf8 at pitt.edu] 
+Sent: Monday, April 11, 2016 9:13 AM
+To: Anthony, Neil
+Subject: RE: Out of focus signal and optics questions
+
+Hi Neil, 
+
+It looks like you are using a 20x objective in the excitation path.  Is there a reason for doing that?  I thought a 10x/0.5W was pretty much standard for creating the light sheet.  For one thing its back focal plane is a bit easier to manage.  
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Dept. of Developmental Biology
+
+
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+Sent: Friday, April 08, 2016 5:03 PM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Out of focus signal and optics questions
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+
+Second telescope optics image:
+https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+
+BFP location image from Olympus:
+https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From m.pawlowska at nencki.gov.pl  Mon Apr 11 09:00:48 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 11 Apr 2016 16:00:48 +0200
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <op.yfrc7mjaahhlbl@pc507-99ff.ibd>
+
+Hi,
+
+I think it would be easier for us to guess the reason of the problem if we  
+had an example image of the "out of focus light". :)
+
+But: there is a trick to find the BFP even when you have no idea where it  
+is (I didn't  :P ). Start with a collimated beam after the 1st telescope ,  
+mount the second telescope so that the beam is collimated again, and then  
+take out first lens of second telescope and put the objective in. This  
+way, second lens should focus and objective recollimate the beam.
+
+Afterwards, when everything is in place, rotating cyl. lens 90 degrees  
+lets you see (without fluorescence filter) whether the light sheet is in  
+the centre of FOV (this is similar to Pete's hint, but you don't have to  
+take the cyl. lens out).
+
+Monika
+
+W dniu .04.2016 o 23:03 Anthony, Neil <nantho2 at emory.edu> pisze:
+
+> Hi all,  I'm pleased to say that I have my two colour light sheet setup  
+> up and running :)
+>
+> Alas, I have a few teething problems, one of which is that I'm seeing a  
+> lot of out of focus light during my z-stacks.  I expect to see some out  
+> of focus blur, but with the selective illumination I thought it would be  
+> less.  I think things are pretty well aligned, with everything in the  
+> right place, and wondered if you could help me think about a couple of  
+> things.  The main two I'm thinking about are the function of the slit  
+> and the position of the final lens before the illumination objective,  
+> and how this is affecting my sheet.
+>
+> I have the first telescope in exactly the correct position, following  
+> the drawings on the Thorlabs page, with the lens back-to-back such that  
+> infinity of their design is pointing out at both ends (see below link to  
+> Thorlabs page; I'm referring to the threaded side as the back).  This  
+> gives me a really consistent expanded spot size across the room.  The  
+> slit, cylindrical lens, gimbal corner mirror and first lens of the  
+> second telescope are all pretty much exactly 50mm spaced.  The  
+> horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+>
+> The second telescope is where I get confused as we have two focusing  
+> paths in one.  Viewed from above it's the same as the expanding  
+> telescope before the slit, but in reverse to reduce the beam, so it  
+> would be nicer to have the Thorlabs optics back-to-back.  For the side  
+> view the beam path goes through the telescope in infinity space so we'd  
+> like the lens to be front-to-front, so to speak.  The preference for  
+> back-to-back or front-to-front is just for accurately locating the  
+> optics, and I'm guessing the focus in the opposite direction would be  
+> just as good, but difficult to know where to measure the focal distance  
+> from.
+>
+> In my setup I have both lens pointing the same direction with the front  
+> towards the illumination lens.  I have a picture of my SPIM below (low  
+> res; I'll get a better one for the website soon).  My confusion comes  
+> when I look at the back-focal-plane (BFP) of the objective lens, which  
+> lies 19mm above the flange, just before the yellow line (see image sent  
+> from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip  
+> from their system resources).  I have my second lens of the second  
+> telescope pair (25mm) right up against the objective to reach the BFP.   
+> This is not how it looks in the website assembly and pictures, but as  
+> far as I know, is where the optical setup dictates it should be.
+>
+> My next question is the function of the slit.  Following the ray path  
+> diagrams the width of the slit changes the width of the horizontal beam  
+> focused on the BFP of the objective.  A wider beam would lead to a  
+> higher NA focused sheet, with the corresponding thinner focus and  
+> shorter depth of focus.  When I reduce the width of the slit I appear to  
+> get a thinner and thinner sheet, which doesn't make sense.  I should see  
+> a thinner beam with a wider beam, right?
+>
+> I've checked the alignment by removing the cylindrical lens and creating  
+> the sharpest thinnest beam of light in a dense sample of tiny beads.  On  
+> inserting the cylindrical lens again it shifts a little, but I can get  
+> the sheet in focus with a small adjustment.
+>
+> In writing this email and composing my thoughts I think I have my sheet  
+> focused either before or after the collection lens axis, such that the  
+> decrease in sheet thickness is likely coming from the reduced width of  
+> the triangle of light and not from the tighter focus.
+>
+> Thanks for taking the time to read this long email.  I hope you have  
+> some thoughts that might lead me in the right direction.  I'm not sure  
+> why the original design has such a large gap from the objective given  
+> the details of the BFP?  Is there a different plane on the back of the  
+> objective that should be focused on instead?  If not, what would the ray  
+> diagram look like for the focus prior to the BFP?
+>
+> The last caveat to my setup is that I opted to make it on the imperial  
+> spaced table, and as such I've mounted the chamber holder on the same  
+> rail as that last telescope setup (I thought it might also allow me to  
+> slide things if I ever change lenses).   I have two cameras that are  
+> free standing and have been aligned to a mm or so accuracy to be on the  
+> centre of the axis as needed.  I include this for completeness and feel  
+> it's not likely to play a roll, as moving things around lets me find the  
+> edges of my field of view from the detection objective but I don't  
+> really see much change in the thickness of my sheet in the different  
+> translations.
+>
+> Please let me know if you need further details, images, etc.
+>
+> Neil
+>
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+>
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+>
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+>
+>
+>
+>
+>
+>
+> ________________________________
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+>
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From m.hilbrant at uni-koeln.de  Mon Apr 11 09:27:23 2016
+From: m.hilbrant at uni-koeln.de (Maarten Hilbrant)
+Date: Mon, 11 Apr 2016 16:27:23 +0200
+Subject: [OpenSPIM] fluorescent beads for 511/20 and 561LP detection
+In-Reply-To: <mailman.157.1460383265.2650.openspim@openspim.org>
+References: <mailman.157.1460383265.2650.openspim@openspim.org>
+Message-ID: <867A69FC-F661-4F34-A02A-B254A5052AF9@uni-koeln.de>
+
+Dear all,
+
+I've been using Estapor FY050 beads for single-color multi-view reconstruction for a long time now, and they were perfect for the job. Recently however I replaced our 525/45 detection filter with a 511/20 filter in order to more efficiently separate EGFP and dsRED2 emission spectra (dsRED2 turns out to be quite excitable at 488 unfortunately). The FY beads are not visible at this narrow band.
+
+Any tips as to what 0.5?m beads I could use that are both excitable-detectable at 488-511/20 and 561-561LP? Estapor's Z beads didn't work well for me, and I don't think the XC beads are excitable at 561. Does anyone have experience with Polysciences' Polychromatic Red beads?
+
+thanks in advance,
+Maarten
+
+
+ to detect both at 511/20 and 561LP 
+
+On 11 Apr 2016, at 16:01, openspim-request at openspim.org wrote:
+
+> Send OpenSPIM mailing list submissions to
+> 	openspim at openspim.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> 	openspim-request at openspim.org
+> 
+> You can reach the person managing the list at
+> 	openspim-owner at openspim.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+> 
+> 
+> Today's Topics:
+> 
+>   1. Re: Out of focus signal and optics questions (Anthony, Neil)
+>   2. Re: Out of focus signal and optics questions (Anthony, Neil)
+>   3. Re: Out of focus signal and optics questions (Monika Paw?owska)
+> 
+> 
+> ----------------------------------------------------------------------
+> 
+> Message: 1
+> Date: Mon, 11 Apr 2016 13:31:24 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: Peter Gabriel Pitrone <pitrone at mpi-cbg.de>
+> Cc: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> Message-ID:
+> 	<DM2PR05MB68599DE79A7F6BED5F76D03EC940 at DM2PR05MB685.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="utf-8"
+> 
+> Hi Pete, thanks for the tips.
+> 
+> Can I ask how the slit plays a role?  Once I find the focus, am I correct in thinking that opening the slit will create a more pronounced focus (more divergence either end)?
+> 
+> Thanks
+> Neil
+> 
+> -----Original Message-----
+> From: Peter Gabriel Pitrone [mailto:pitrone at mpi-cbg.de] 
+> Sent: Monday, April 11, 2016 9:16 AM
+> To: Anthony, Neil
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> 
+> Hey Anthony,
+> 
+> First off, congrats...
+> 
+> I think your issues have to do with the second telescope and the positions of it's lenses. I know it seems counter intuitive that the lens closest to the illumination objective is so far away from where it "should" be, but it works.
+> 
+> Here's a quick run down of what I would recommend you do:
+> 
+> 1. take the emission filter out of the infinity tube (or make a batch of fluorescine agarose in a capillary), and take the cylidrical lens out of the beam path
+> 
+> 2. adjust the positions of the two lenses of the conjugate plane telescope until you find the beam focus (i.e. see the beam converge and diverge on either side of the field of view, with the thinnest part in the middle... both horizontally and vertically), this might/will require fiddling with the gimbal mount positioning.
+> 
+> 3. put the cylidrical lens back in it's place, as you should be done.
+> 
+> Good luck!
+> Pete
+> 
+> 
+> 
+> 
+> 
+> ----- Original Message -----
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: openspim at openspim.org
+> Sent: Friday, April 8, 2016 10:03:20 PM
+> Subject: [OpenSPIM] Out of focus signal and optics questions
+> 
+> Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+> 
+> Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+> 
+> I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+> 
+> The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+> 
+> In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+> 
+> My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+> 
+> I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+> 
+> In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+> 
+> Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+> 
+> The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+> 
+> Please let me know if you need further details, images, etc.
+> 
+> Neil
+> 
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+> 
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+> 
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+> 
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+> 
+> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> ------------------------------
+> 
+> Message: 2
+> Date: Mon, 11 Apr 2016 13:39:14 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "Feinstein, Timothy N" <tnf8 at pitt.edu>
+> Cc: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> Message-ID:
+> 	<DM2PR05MB685755C39A37A13651A58EAEC940 at DM2PR05MB685.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi Tim, thanks for your help.
+> 
+> I'm a little confused, and I think it's the bad image quality that's to blame.  I have the 10X in the illumination path.  The 10X is yellow and the 20X is green.
+> 
+> Or maybe I'm being confusing due to the Olympus info.  They sent the details for the 20X but informed me that all the UMPlanFL water lenses have the same BFP location.  When you say "easier to manage", do you mean difference in sensitivity to focus?
+> 
+> Given the advice from Pete, I'm thinking it's more empirical than anything, but I'm really curious to know the optical specifics.  Are there other 'planes' of relevance when considering the optics of the objective lens?
+> 
+> Thanks
+> Neil
+> 
+> 
+> -----Original Message-----
+> From: Feinstein, Timothy N [mailto:tnf8 at pitt.edu] 
+> Sent: Monday, April 11, 2016 9:13 AM
+> To: Anthony, Neil
+> Subject: RE: Out of focus signal and optics questions
+> 
+> Hi Neil, 
+> 
+> It looks like you are using a 20x objective in the excitation path.  Is there a reason for doing that?  I thought a 10x/0.5W was pretty much standard for creating the light sheet.  For one thing its back focal plane is a bit easier to manage.  
+> 
+> Best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Dept. of Developmental Biology
+> 
+> 
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+> Sent: Friday, April 08, 2016 5:03 PM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Out of focus signal and optics questions
+> 
+> Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+> 
+> Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+> 
+> I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+> 
+> The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+> 
+> In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+> 
+> My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+> 
+> I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+> 
+> In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+> 
+> Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+> 
+> The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+> 
+> Please let me know if you need further details, images, etc.
+> 
+> Neil
+> 
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+> 
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+> 
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+> 
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+> 
+> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> 
+> ------------------------------
+> 
+> Message: 3
+> Date: Mon, 11 Apr 2016 16:00:48 +0200
+> From: Monika Paw?owska <m.pawlowska at nencki.gov.pl>
+> To: openspim at openspim.org
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> Message-ID: <op.yfrc7mjaahhlbl at pc507-99ff.ibd>
+> Content-Type: text/plain; charset=utf-8; format=flowed; delsp=yes
+> 
+> Hi,
+> 
+> I think it would be easier for us to guess the reason of the problem if we  
+> had an example image of the "out of focus light". :)
+> 
+> But: there is a trick to find the BFP even when you have no idea where it  
+> is (I didn't  :P ). Start with a collimated beam after the 1st telescope ,  
+> mount the second telescope so that the beam is collimated again, and then  
+> take out first lens of second telescope and put the objective in. This  
+> way, second lens should focus and objective recollimate the beam.
+> 
+> Afterwards, when everything is in place, rotating cyl. lens 90 degrees  
+> lets you see (without fluorescence filter) whether the light sheet is in  
+> the centre of FOV (this is similar to Pete's hint, but you don't have to  
+> take the cyl. lens out).
+> 
+> Monika
+> 
+> W dniu .04.2016 o 23:03 Anthony, Neil <nantho2 at emory.edu> pisze:
+> 
+>> Hi all,  I'm pleased to say that I have my two colour light sheet setup  
+>> up and running :)
+>> 
+>> Alas, I have a few teething problems, one of which is that I'm seeing a  
+>> lot of out of focus light during my z-stacks.  I expect to see some out  
+>> of focus blur, but with the selective illumination I thought it would be  
+>> less.  I think things are pretty well aligned, with everything in the  
+>> right place, and wondered if you could help me think about a couple of  
+>> things.  The main two I'm thinking about are the function of the slit  
+>> and the position of the final lens before the illumination objective,  
+>> and how this is affecting my sheet.
+>> 
+>> I have the first telescope in exactly the correct position, following  
+>> the drawings on the Thorlabs page, with the lens back-to-back such that  
+>> infinity of their design is pointing out at both ends (see below link to  
+>> Thorlabs page; I'm referring to the threaded side as the back).  This  
+>> gives me a really consistent expanded spot size across the room.  The  
+>> slit, cylindrical lens, gimbal corner mirror and first lens of the  
+>> second telescope are all pretty much exactly 50mm spaced.  The  
+>> horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+>> 
+>> The second telescope is where I get confused as we have two focusing  
+>> paths in one.  Viewed from above it's the same as the expanding  
+>> telescope before the slit, but in reverse to reduce the beam, so it  
+>> would be nicer to have the Thorlabs optics back-to-back.  For the side  
+>> view the beam path goes through the telescope in infinity space so we'd  
+>> like the lens to be front-to-front, so to speak.  The preference for  
+>> back-to-back or front-to-front is just for accurately locating the  
+>> optics, and I'm guessing the focus in the opposite direction would be  
+>> just as good, but difficult to know where to measure the focal distance  
+>> from.
+>> 
+>> In my setup I have both lens pointing the same direction with the front  
+>> towards the illumination lens.  I have a picture of my SPIM below (low  
+>> res; I'll get a better one for the website soon).  My confusion comes  
+>> when I look at the back-focal-plane (BFP) of the objective lens, which  
+>> lies 19mm above the flange, just before the yellow line (see image sent  
+>> from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip  
+>> from their system resources).  I have my second lens of the second  
+>> telescope pair (25mm) right up against the objective to reach the BFP.   
+>> This is not how it looks in the website assembly and pictures, but as  
+>> far as I know, is where the optical setup dictates it should be.
+>> 
+>> My next question is the function of the slit.  Following the ray path  
+>> diagrams the width of the slit changes the width of the horizontal beam  
+>> focused on the BFP of the objective.  A wider beam would lead to a  
+>> higher NA focused sheet, with the corresponding thinner focus and  
+>> shorter depth of focus.  When I reduce the width of the slit I appear to  
+>> get a thinner and thinner sheet, which doesn't make sense.  I should see  
+>> a thinner beam with a wider beam, right?
+>> 
+>> I've checked the alignment by removing the cylindrical lens and creating  
+>> the sharpest thinnest beam of light in a dense sample of tiny beads.  On  
+>> inserting the cylindrical lens again it shifts a little, but I can get  
+>> the sheet in focus with a small adjustment.
+>> 
+>> In writing this email and composing my thoughts I think I have my sheet  
+>> focused either before or after the collection lens axis, such that the  
+>> decrease in sheet thickness is likely coming from the reduced width of  
+>> the triangle of light and not from the tighter focus.
+>> 
+>> Thanks for taking the time to read this long email.  I hope you have  
+>> some thoughts that might lead me in the right direction.  I'm not sure  
+>> why the original design has such a large gap from the objective given  
+>> the details of the BFP?  Is there a different plane on the back of the  
+>> objective that should be focused on instead?  If not, what would the ray  
+>> diagram look like for the focus prior to the BFP?
+>> 
+>> The last caveat to my setup is that I opted to make it on the imperial  
+>> spaced table, and as such I've mounted the chamber holder on the same  
+>> rail as that last telescope setup (I thought it might also allow me to  
+>> slide things if I ever change lenses).   I have two cameras that are  
+>> free standing and have been aligned to a mm or so accuracy to be on the  
+>> centre of the axis as needed.  I include this for completeness and feel  
+>> it's not likely to play a roll, as moving things around lets me find the  
+>> edges of my field of view from the detection objective but I don't  
+>> really see much change in the thickness of my sheet in the different  
+>> translations.
+>> 
+>> Please let me know if you need further details, images, etc.
+>> 
+>> Neil
+>> 
+>> Thorlabs lens ray drawing:
+>> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+>> 
+>> Second telescope optics image:
+>> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+>> 
+>> BFP location image from Olympus:
+>> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> ________________________________
+>> 
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination, distribution
+>> or copying of this message (including any attachments) is strictly
+>> prohibited.
+>> 
+>> If you have received this message in error, please contact
+>> the sender by reply e-mail message and destroy all copies of the
+>> original message (including attachments).
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> -- 
+> Dr Monika Paw?owska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> 
+> 
+> ------------------------------
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> End of OpenSPIM Digest, Vol 36, Issue 2
+> ***************************************
+
+
+
+From nantho2 at emory.edu  Thu Apr 14 17:57:09 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 14 Apr 2016 22:57:09 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <op.yfrc7mjaahhlbl@pc507-99ff.ibd>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+	<op.yfrc7mjaahhlbl@pc507-99ff.ibd>
+Message-ID: <CO2PR05MB252005EB445BBBE473805B96EC970@CO2PR05MB2520.namprd05.prod.outlook.com>
+
+Hi all, thanks for the tips.
+
+I moved things around and realigned to what I now feel is a better focus, where slight movements of the second lens of the second telescope shifts the beam waist left and right on the camera (with the cylindrical lens removed).
+
+Monika, I tried to collimate the beam using the objective as you suggest, but found it hard to see how well the beam was collimated through the water and chamber...  I think it was collimated to some degree.  My assumption here is that you'd need those in place?
+
+Either way, it looks like the beam waist and I've gotten some bead data to share with you as I still feel something is wrong regarding the out of focus light.  I've taken a z-stack of 100nm beads in 1% agarose, including a bright piece of schmutz that highlights the out of focus illumination.  The images are from an ORCA CCD, but I've reduced the bit depth and cropped to a thin column of data to make the files smaller.  The height of the sheet does not completely fill the CCD, I think due to the 0.5x c mount and the fact that the beam width on the Stradus is a little smaller than I need and I might need a little more beam expansion.  The sheet is incident from the right hand side of the images.
+
+Tif stacks:
+0.4mm slit
+https://drive.google.com/file/d/0BzfJAGNfrgieOUszTGYwZGh1YVE/view?usp=sharing
+0.8mm slit
+https://drive.google.com/file/d/0BzfJAGNfrgiea21vLUtqZTdsTHc/view?usp=sharing
+Orthogonal screen shots:
+https://drive.google.com/file/d/0BzfJAGNfrgieekktMnFETEwzd3M/view?usp=sharing
+https://drive.google.com/file/d/0BzfJAGNfrgieOExHRVNYYndHVGs/view?usp=sharing
+
+It appears that there's significant difference in the sheet profile for the different slit sizes.  The piece of schmutz is quite large, so this is a guess, but it looks like the thickness of the sheet is 50um or more.  I have the contrast cranked up, and this is over emphasizing the tails of the sheet profile, but I'm a little perplexed.
+
+Thanks in advance for your time.  Please let me know if you need any further details/data.
+Neil
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+Sent: Monday, April 11, 2016 10:01 AM
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+
+Hi,
+
+I think it would be easier for us to guess the reason of the problem if we had an example image of the "out of focus light". :)
+
+But: there is a trick to find the BFP even when you have no idea where it is (I didn't  :P ). Start with a collimated beam after the 1st telescope , mount the second telescope so that the beam is collimated again, and then take out first lens of second telescope and put the objective in. This way, second lens should focus and objective recollimate the beam.
+
+Afterwards, when everything is in place, rotating cyl. lens 90 degrees lets you see (without fluorescence filter) whether the light sheet is in the centre of FOV (this is similar to Pete's hint, but you don't have to take the cyl. lens out).
+
+Monika
+
+W dniu .04.2016 o 23:03 Anthony, Neil <nantho2 at emory.edu> pisze:
+
+> Hi all,  I'm pleased to say that I have my two colour light sheet
+> setup up and running :)
+>
+> Alas, I have a few teething problems, one of which is that I'm seeing
+> a lot of out of focus light during my z-stacks.  I expect to see some
+> out of focus blur, but with the selective illumination I thought it
+> would be less.  I think things are pretty well aligned, with
+> everything in the right place, and wondered if you could help me think
+> about a couple of things.  The main two I'm thinking about are the
+> function of the slit and the position of the final lens before the
+> illumination objective, and how this is affecting my sheet.
+>
+> I have the first telescope in exactly the correct position, following
+> the drawings on the Thorlabs page, with the lens back-to-back such
+> that infinity of their design is pointing out at both ends (see below
+> link to Thorlabs page; I'm referring to the threaded side as the
+> back).  This gives me a really consistent expanded spot size across
+> the room.  The slit, cylindrical lens, gimbal corner mirror and first
+> lens of the second telescope are all pretty much exactly 50mm spaced.
+> The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+>
+> The second telescope is where I get confused as we have two focusing
+> paths in one.  Viewed from above it's the same as the expanding
+> telescope before the slit, but in reverse to reduce the beam, so it
+> would be nicer to have the Thorlabs optics back-to-back.  For the side
+> view the beam path goes through the telescope in infinity space so
+> we'd like the lens to be front-to-front, so to speak.  The preference
+> for back-to-back or front-to-front is just for accurately locating the
+> optics, and I'm guessing the focus in the opposite direction would be
+> just as good, but difficult to know where to measure the focal
+> distance from.
+>
+> In my setup I have both lens pointing the same direction with the
+> front towards the illumination lens.  I have a picture of my SPIM
+> below (low res; I'll get a better one for the website soon).  My
+> confusion comes when I look at the back-focal-plane (BFP) of the
+> objective lens, which lies 19mm above the flange, just before the
+> yellow line (see image sent from Olympus TAC; they couldn't send a PDF
+> so I'm guessing this a clip from their system resources).  I have my second lens of the second
+> telescope pair (25mm) right up against the objective to reach the BFP.
+> This is not how it looks in the website assembly and pictures, but as
+> far as I know, is where the optical setup dictates it should be.
+>
+> My next question is the function of the slit.  Following the ray path
+> diagrams the width of the slit changes the width of the horizontal
+> beam focused on the BFP of the objective.  A wider beam would lead to
+> a higher NA focused sheet, with the corresponding thinner focus and
+> shorter depth of focus.  When I reduce the width of the slit I appear
+> to get a thinner and thinner sheet, which doesn't make sense.  I
+> should see a thinner beam with a wider beam, right?
+>
+> I've checked the alignment by removing the cylindrical lens and
+> creating the sharpest thinnest beam of light in a dense sample of tiny
+> beads.  On inserting the cylindrical lens again it shifts a little,
+> but I can get the sheet in focus with a small adjustment.
+>
+> In writing this email and composing my thoughts I think I have my
+> sheet focused either before or after the collection lens axis, such
+> that the decrease in sheet thickness is likely coming from the reduced
+> width of the triangle of light and not from the tighter focus.
+>
+> Thanks for taking the time to read this long email.  I hope you have
+> some thoughts that might lead me in the right direction.  I'm not sure
+> why the original design has such a large gap from the objective given
+> the details of the BFP?  Is there a different plane on the back of the
+> objective that should be focused on instead?  If not, what would the
+> ray diagram look like for the focus prior to the BFP?
+>
+> The last caveat to my setup is that I opted to make it on the imperial
+> spaced table, and as such I've mounted the chamber holder on the same
+> rail as that last telescope setup (I thought it might also allow me to
+> slide things if I ever change lenses).   I have two cameras that are
+> free standing and have been aligned to a mm or so accuracy to be on
+> the centre of the axis as needed.  I include this for completeness and
+> feel it's not likely to play a roll, as moving things around lets me
+> find the edges of my field of view from the detection objective but I
+> don't really see much change in the thickness of my sheet in the
+> different translations.
+>
+> Please let me know if you need further details, images, etc.
+>
+> Neil
+>
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawi
+> ng_A3-780.gif
+>
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=
+> sharing
+>
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=
+> sharing
+>
+>
+>
+>
+>
+>
+> ________________________________
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination,
+> distribution or copying of this message (including any attachments) is
+> strictly prohibited.
+>
+> If you have received this message in error, please contact the sender
+> by reply e-mail message and destroy all copies of the original message
+> (including attachments).
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+From tnf8 at pitt.edu  Wed Apr 27 09:13:32 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 27 Apr 2016 14:13:32 +0000
+Subject: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+Message-ID: <D3463F1B.D681%tnf8@pitt.edu>
+
+Hello all, 
+
+I found the Selzer group's solution (Keller et al. 2013) quite interesting
+and would love to know if anyone had a positive experience doing that.
+The banding from my basic openSPIM is definitely a problem for
+segmentation and analysis.
+
+As far as I can tell fixing the banding will mostly involve buying a scan
+mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+about $1k.  That seems reasonable and not that hard for regular folks to
+implement.  
+
+In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+has an option to fight banding in light sheet data.  I have not tested it
+yet but potentially that feature could be useful.  I will just post my
+usual warning for folks trying TeraStitcher for the first time: it
+stitches really well but it could be a hair more user-friendly.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+From 709314090 at qq.com  Thu Apr 28 05:03:16 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Thu, 28 Apr 2016 18:03:16 +0800
+Subject: [OpenSPIM] ImageJ takes lots of time to read the SPIM acquired
+	image stack file
+Message-ID: <tencent_4629526A1E0D95D203176665@qq.com>
+
+Hi, All,
+       I have updated the ImageJ, and it had some updates in the Acquire SPIM plugin. However, the imageJ takes more time to read the new acquired image stack than before. The log window just shows "prepare metedate.." and the image stack appeared until a long time. For example, it takes about 1 min to read a 500M image stack. For a 2G file, it takes more time. It seems some changes in the acquired image stack format. When I used the script to resave the file as tif format just like the web said, it can read the file very quickly.
+      Is this thing normal? or bug?
+      Thank you for listening my words.
+      All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160428/3e642518/attachment.html>
+
+From huisken at mpi-cbg.de  Fri Apr 29 02:00:35 2016
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Fri, 29 Apr 2016 09:00:35 +0200
+Subject: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+In-Reply-To: <D3463F1B.D681%tnf8@pitt.edu>
+References: <D3463F1B.D681%tnf8@pitt.edu>
+Message-ID: <64E6EABA-1352-4F94-818C-787A3E55A551@mpi-cbg.de>
+
+Dear Tim,
+
+I think you are mixing up two issue.
+
+1. Getting rid of stripes.
+
+Yes, you can do a little bit in post-processing but the stripes can be quite complex and are not necessarily straight. Oftentimes you see a lot of lensing and I do not think you can easily remove it with image processing.
+
+a) Double-sided illumination helps. Depending on the sample you may want to do simultaneous or sequential double-sided illumination. There are various ways of merging the two images.
+b) A resonant mSPIM mirror is cheap and easy to integrate. You will get rid of most stripes, but again this depends on the sample. The details for a) and b) are in our Opt. Lett. paper (Huisken & Stainier, 2007). Basically, you are pivoting the light sheet around the center of your field of view, e.g. with 1kHz. The stripes are ?washed out? during the exposure time of your camera. We use this on most of our systems and it helps a lot to reduce stripes.
+c) Multi-view fusion can also help to some extent.
+
+2. DSLM vs. SPIM
+
+Yes, DSLM should also help reducing stripes but I have no experience with that. Basically, your light sheet is not coherent anymore and the sheet does not ?interfere with itself?. However, the setup is more expensive and requires you to power and control another element: the galvo scanner to sweep the beam up and down. You need a proper scan mirror and not just the cheap mSPIM mirror. The additional benefit is that the resulting light sheet is more uniform than the cropped Gaussian light sheet. However, you need to illuminate each line with higher intensity which may result in saturation and worse dynamic range. Obviously you need to wait for the scan and need to synchronize your readout. Depending whether you have a global shutter or rolling shutter camera you need to take some precaution.
+
+Best
+Jan
+
+
+
+?
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+
+> On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+> 
+> Hello all, 
+> 
+> I found the Selzer group's solution (Keller et al. 2013) quite interesting
+> and would love to know if anyone had a positive experience doing that.
+> The banding from my basic openSPIM is definitely a problem for
+> segmentation and analysis.
+> 
+> As far as I can tell fixing the banding will mostly involve buying a scan
+> mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+> that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+> about $1k.  That seems reasonable and not that hard for regular folks to
+> implement.  
+> 
+> In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+> has an option to fight banding in light sheet data.  I have not tested it
+> yet but potentially that feature could be useful.  I will just post my
+> usual warning for folks trying TeraStitcher for the first time: it
+> stitches really well but it could be a hair more user-friendly.
+> 
+> Best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160429/6d2446e3/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Apr 29 04:03:31 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 29 Apr 2016 11:03:31 +0200
+Subject: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+In-Reply-To: <D3463F1B.D681%tnf8@pitt.edu>
+References: <D3463F1B.D681%tnf8@pitt.edu>
+Message-ID: <op.ygobf5w7ahhlbl@pc507-99ff.ibd>
+
+Re: removing stripes in post-processing I tried this plugin:
+
+http://www.math.univ-toulouse.fr/~weiss/PageCodes.html
+
+and it's not bad, but lately stopped working for me after updating fiji.
+
+Monika
+
+W dniu .04.2016 o 16:13 Feinstein, Timothy N <tnf8 at pitt.edu> pisze:
+
+> Hello all,
+>
+> I found the Selzer group's solution (Keller et al. 2013) quite  
+> interesting
+> and would love to know if anyone had a positive experience doing that.
+> The banding from my basic openSPIM is definitely a problem for
+> segmentation and analysis.
+>
+> As far as I can tell fixing the banding will mostly involve buying a scan
+> mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+> that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+> about $1k.  That seems reasonable and not that hard for regular folks to
+> implement.
+>
+> In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+> has an option to fight banding in light sheet data.  I have not tested it
+> yet but potentially that feature could be useful.  I will just post my
+> usual warning for folks trying TeraStitcher for the first time: it
+> stitches really well but it could be a hair more user-friendly.
+>
+> Best,
+>
+>
+> Tim
+>
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From nantho2 at emory.edu  Fri Apr  8 16:03:20 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 8 Apr 2016 21:03:20 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+Message-ID: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+
+Second telescope optics image:
+https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+
+BFP location image from Olympus:
+https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From nantho2 at emory.edu  Mon Apr 11 08:31:24 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 11 Apr 2016 13:31:24 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <610168716.3849446.1460380568653.JavaMail.zimbra@mpi-cbg.de>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+	<610168716.3849446.1460380568653.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <DM2PR05MB68599DE79A7F6BED5F76D03EC940@DM2PR05MB685.namprd05.prod.outlook.com>
+
+Hi Pete, thanks for the tips.
+
+Can I ask how the slit plays a role?  Once I find the focus, am I correct in thinking that opening the slit will create a more pronounced focus (more divergence either end)?
+
+Thanks
+Neil
+
+-----Original Message-----
+From: Peter Gabriel Pitrone [mailto:pitrone at mpi-cbg.de] 
+Sent: Monday, April 11, 2016 9:16 AM
+To: Anthony, Neil
+Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+
+Hey Anthony,
+
+First off, congrats...
+
+I think your issues have to do with the second telescope and the positions of it's lenses. I know it seems counter intuitive that the lens closest to the illumination objective is so far away from where it "should" be, but it works.
+
+Here's a quick run down of what I would recommend you do:
+
+1. take the emission filter out of the infinity tube (or make a batch of fluorescine agarose in a capillary), and take the cylidrical lens out of the beam path
+
+2. adjust the positions of the two lenses of the conjugate plane telescope until you find the beam focus (i.e. see the beam converge and diverge on either side of the field of view, with the thinnest part in the middle... both horizontally and vertically), this might/will require fiddling with the gimbal mount positioning.
+
+3. put the cylidrical lens back in it's place, as you should be done.
+
+Good luck!
+Pete
+
+
+
+ 
+
+----- Original Message -----
+From: "Anthony, Neil" <nantho2 at emory.edu>
+To: openspim at openspim.org
+Sent: Friday, April 8, 2016 10:03:20 PM
+Subject: [OpenSPIM] Out of focus signal and optics questions
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+
+Second telescope optics image:
+https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+
+BFP location image from Olympus:
+https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+From nantho2 at emory.edu  Mon Apr 11 08:39:14 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 11 Apr 2016 13:39:14 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <5b2f878d02984a64b163906a317b0439@pitt-prodx-02.univ.pitt.edu>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+	<5b2f878d02984a64b163906a317b0439@pitt-prodx-02.univ.pitt.edu>
+Message-ID: <DM2PR05MB685755C39A37A13651A58EAEC940@DM2PR05MB685.namprd05.prod.outlook.com>
+
+Hi Tim, thanks for your help.
+
+I'm a little confused, and I think it's the bad image quality that's to blame.  I have the 10X in the illumination path.  The 10X is yellow and the 20X is green.
+
+Or maybe I'm being confusing due to the Olympus info.  They sent the details for the 20X but informed me that all the UMPlanFL water lenses have the same BFP location.  When you say "easier to manage", do you mean difference in sensitivity to focus?
+
+Given the advice from Pete, I'm thinking it's more empirical than anything, but I'm really curious to know the optical specifics.  Are there other 'planes' of relevance when considering the optics of the objective lens?
+
+Thanks
+Neil
+ 
+
+-----Original Message-----
+From: Feinstein, Timothy N [mailto:tnf8 at pitt.edu] 
+Sent: Monday, April 11, 2016 9:13 AM
+To: Anthony, Neil
+Subject: RE: Out of focus signal and optics questions
+
+Hi Neil, 
+
+It looks like you are using a 20x objective in the excitation path.  Is there a reason for doing that?  I thought a 10x/0.5W was pretty much standard for creating the light sheet.  For one thing its back focal plane is a bit easier to manage.  
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Dept. of Developmental Biology
+
+
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+Sent: Friday, April 08, 2016 5:03 PM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Out of focus signal and optics questions
+
+Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+
+Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+
+I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+
+The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+
+In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+
+My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+
+I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+
+In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+
+Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+
+The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+
+Please let me know if you need further details, images, etc.
+
+Neil
+
+Thorlabs lens ray drawing:
+https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+
+Second telescope optics image:
+https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+
+BFP location image from Olympus:
+https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From m.pawlowska at nencki.gov.pl  Mon Apr 11 09:00:48 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 11 Apr 2016 16:00:48 +0200
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <op.yfrc7mjaahhlbl@pc507-99ff.ibd>
+
+Hi,
+
+I think it would be easier for us to guess the reason of the problem if we  
+had an example image of the "out of focus light". :)
+
+But: there is a trick to find the BFP even when you have no idea where it  
+is (I didn't  :P ). Start with a collimated beam after the 1st telescope ,  
+mount the second telescope so that the beam is collimated again, and then  
+take out first lens of second telescope and put the objective in. This  
+way, second lens should focus and objective recollimate the beam.
+
+Afterwards, when everything is in place, rotating cyl. lens 90 degrees  
+lets you see (without fluorescence filter) whether the light sheet is in  
+the centre of FOV (this is similar to Pete's hint, but you don't have to  
+take the cyl. lens out).
+
+Monika
+
+W dniu .04.2016 o 23:03 Anthony, Neil <nantho2 at emory.edu> pisze:
+
+> Hi all,  I'm pleased to say that I have my two colour light sheet setup  
+> up and running :)
+>
+> Alas, I have a few teething problems, one of which is that I'm seeing a  
+> lot of out of focus light during my z-stacks.  I expect to see some out  
+> of focus blur, but with the selective illumination I thought it would be  
+> less.  I think things are pretty well aligned, with everything in the  
+> right place, and wondered if you could help me think about a couple of  
+> things.  The main two I'm thinking about are the function of the slit  
+> and the position of the final lens before the illumination objective,  
+> and how this is affecting my sheet.
+>
+> I have the first telescope in exactly the correct position, following  
+> the drawings on the Thorlabs page, with the lens back-to-back such that  
+> infinity of their design is pointing out at both ends (see below link to  
+> Thorlabs page; I'm referring to the threaded side as the back).  This  
+> gives me a really consistent expanded spot size across the room.  The  
+> slit, cylindrical lens, gimbal corner mirror and first lens of the  
+> second telescope are all pretty much exactly 50mm spaced.  The  
+> horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+>
+> The second telescope is where I get confused as we have two focusing  
+> paths in one.  Viewed from above it's the same as the expanding  
+> telescope before the slit, but in reverse to reduce the beam, so it  
+> would be nicer to have the Thorlabs optics back-to-back.  For the side  
+> view the beam path goes through the telescope in infinity space so we'd  
+> like the lens to be front-to-front, so to speak.  The preference for  
+> back-to-back or front-to-front is just for accurately locating the  
+> optics, and I'm guessing the focus in the opposite direction would be  
+> just as good, but difficult to know where to measure the focal distance  
+> from.
+>
+> In my setup I have both lens pointing the same direction with the front  
+> towards the illumination lens.  I have a picture of my SPIM below (low  
+> res; I'll get a better one for the website soon).  My confusion comes  
+> when I look at the back-focal-plane (BFP) of the objective lens, which  
+> lies 19mm above the flange, just before the yellow line (see image sent  
+> from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip  
+> from their system resources).  I have my second lens of the second  
+> telescope pair (25mm) right up against the objective to reach the BFP.   
+> This is not how it looks in the website assembly and pictures, but as  
+> far as I know, is where the optical setup dictates it should be.
+>
+> My next question is the function of the slit.  Following the ray path  
+> diagrams the width of the slit changes the width of the horizontal beam  
+> focused on the BFP of the objective.  A wider beam would lead to a  
+> higher NA focused sheet, with the corresponding thinner focus and  
+> shorter depth of focus.  When I reduce the width of the slit I appear to  
+> get a thinner and thinner sheet, which doesn't make sense.  I should see  
+> a thinner beam with a wider beam, right?
+>
+> I've checked the alignment by removing the cylindrical lens and creating  
+> the sharpest thinnest beam of light in a dense sample of tiny beads.  On  
+> inserting the cylindrical lens again it shifts a little, but I can get  
+> the sheet in focus with a small adjustment.
+>
+> In writing this email and composing my thoughts I think I have my sheet  
+> focused either before or after the collection lens axis, such that the  
+> decrease in sheet thickness is likely coming from the reduced width of  
+> the triangle of light and not from the tighter focus.
+>
+> Thanks for taking the time to read this long email.  I hope you have  
+> some thoughts that might lead me in the right direction.  I'm not sure  
+> why the original design has such a large gap from the objective given  
+> the details of the BFP?  Is there a different plane on the back of the  
+> objective that should be focused on instead?  If not, what would the ray  
+> diagram look like for the focus prior to the BFP?
+>
+> The last caveat to my setup is that I opted to make it on the imperial  
+> spaced table, and as such I've mounted the chamber holder on the same  
+> rail as that last telescope setup (I thought it might also allow me to  
+> slide things if I ever change lenses).   I have two cameras that are  
+> free standing and have been aligned to a mm or so accuracy to be on the  
+> centre of the axis as needed.  I include this for completeness and feel  
+> it's not likely to play a roll, as moving things around lets me find the  
+> edges of my field of view from the detection objective but I don't  
+> really see much change in the thickness of my sheet in the different  
+> translations.
+>
+> Please let me know if you need further details, images, etc.
+>
+> Neil
+>
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+>
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+>
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+>
+>
+>
+>
+>
+>
+> ________________________________
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+>
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+
+From m.hilbrant at uni-koeln.de  Mon Apr 11 09:27:23 2016
+From: m.hilbrant at uni-koeln.de (Maarten Hilbrant)
+Date: Mon, 11 Apr 2016 16:27:23 +0200
+Subject: [OpenSPIM] fluorescent beads for 511/20 and 561LP detection
+In-Reply-To: <mailman.157.1460383265.2650.openspim@openspim.org>
+References: <mailman.157.1460383265.2650.openspim@openspim.org>
+Message-ID: <867A69FC-F661-4F34-A02A-B254A5052AF9@uni-koeln.de>
+
+Dear all,
+
+I've been using Estapor FY050 beads for single-color multi-view reconstruction for a long time now, and they were perfect for the job. Recently however I replaced our 525/45 detection filter with a 511/20 filter in order to more efficiently separate EGFP and dsRED2 emission spectra (dsRED2 turns out to be quite excitable at 488 unfortunately). The FY beads are not visible at this narrow band.
+
+Any tips as to what 0.5µm beads I could use that are both excitable-detectable at 488-511/20 and 561-561LP? Estapor's Z beads didn't work well for me, and I don't think the XC beads are excitable at 561. Does anyone have experience with Polysciences' Polychromatic Red beads?
+
+thanks in advance,
+Maarten
+
+
+ to detect both at 511/20 and 561LP 
+
+On 11 Apr 2016, at 16:01, openspim-request at openspim.org wrote:
+
+> Send OpenSPIM mailing list submissions to
+> 	openspim at openspim.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> 	openspim-request at openspim.org
+> 
+> You can reach the person managing the list at
+> 	openspim-owner at openspim.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+> 
+> 
+> Today's Topics:
+> 
+>   1. Re: Out of focus signal and optics questions (Anthony, Neil)
+>   2. Re: Out of focus signal and optics questions (Anthony, Neil)
+>   3. Re: Out of focus signal and optics questions (Monika Paw?owska)
+> 
+> 
+> ----------------------------------------------------------------------
+> 
+> Message: 1
+> Date: Mon, 11 Apr 2016 13:31:24 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: Peter Gabriel Pitrone <pitrone at mpi-cbg.de>
+> Cc: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> Message-ID:
+> 	<DM2PR05MB68599DE79A7F6BED5F76D03EC940 at DM2PR05MB685.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="utf-8"
+> 
+> Hi Pete, thanks for the tips.
+> 
+> Can I ask how the slit plays a role?  Once I find the focus, am I correct in thinking that opening the slit will create a more pronounced focus (more divergence either end)?
+> 
+> Thanks
+> Neil
+> 
+> -----Original Message-----
+> From: Peter Gabriel Pitrone [mailto:pitrone at mpi-cbg.de] 
+> Sent: Monday, April 11, 2016 9:16 AM
+> To: Anthony, Neil
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> 
+> Hey Anthony,
+> 
+> First off, congrats...
+> 
+> I think your issues have to do with the second telescope and the positions of it's lenses. I know it seems counter intuitive that the lens closest to the illumination objective is so far away from where it "should" be, but it works.
+> 
+> Here's a quick run down of what I would recommend you do:
+> 
+> 1. take the emission filter out of the infinity tube (or make a batch of fluorescine agarose in a capillary), and take the cylidrical lens out of the beam path
+> 
+> 2. adjust the positions of the two lenses of the conjugate plane telescope until you find the beam focus (i.e. see the beam converge and diverge on either side of the field of view, with the thinnest part in the middle... both horizontally and vertically), this might/will require fiddling with the gimbal mount positioning.
+> 
+> 3. put the cylidrical lens back in it's place, as you should be done.
+> 
+> Good luck!
+> Pete
+> 
+> 
+> 
+> 
+> 
+> ----- Original Message -----
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: openspim at openspim.org
+> Sent: Friday, April 8, 2016 10:03:20 PM
+> Subject: [OpenSPIM] Out of focus signal and optics questions
+> 
+> Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+> 
+> Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+> 
+> I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+> 
+> The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+> 
+> In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+> 
+> My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+> 
+> I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+> 
+> In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+> 
+> Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+> 
+> The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+> 
+> Please let me know if you need further details, images, etc.
+> 
+> Neil
+> 
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+> 
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+> 
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+> 
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+> 
+> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> ------------------------------
+> 
+> Message: 2
+> Date: Mon, 11 Apr 2016 13:39:14 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "Feinstein, Timothy N" <tnf8 at pitt.edu>
+> Cc: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> Message-ID:
+> 	<DM2PR05MB685755C39A37A13651A58EAEC940 at DM2PR05MB685.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi Tim, thanks for your help.
+> 
+> I'm a little confused, and I think it's the bad image quality that's to blame.  I have the 10X in the illumination path.  The 10X is yellow and the 20X is green.
+> 
+> Or maybe I'm being confusing due to the Olympus info.  They sent the details for the 20X but informed me that all the UMPlanFL water lenses have the same BFP location.  When you say "easier to manage", do you mean difference in sensitivity to focus?
+> 
+> Given the advice from Pete, I'm thinking it's more empirical than anything, but I'm really curious to know the optical specifics.  Are there other 'planes' of relevance when considering the optics of the objective lens?
+> 
+> Thanks
+> Neil
+> 
+> 
+> -----Original Message-----
+> From: Feinstein, Timothy N [mailto:tnf8 at pitt.edu] 
+> Sent: Monday, April 11, 2016 9:13 AM
+> To: Anthony, Neil
+> Subject: RE: Out of focus signal and optics questions
+> 
+> Hi Neil, 
+> 
+> It looks like you are using a 20x objective in the excitation path.  Is there a reason for doing that?  I thought a 10x/0.5W was pretty much standard for creating the light sheet.  For one thing its back focal plane is a bit easier to manage.  
+> 
+> Best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Dept. of Developmental Biology
+> 
+> 
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+> Sent: Friday, April 08, 2016 5:03 PM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Out of focus signal and optics questions
+> 
+> Hi all,  I'm pleased to say that I have my two colour light sheet setup up and running :)
+> 
+> Alas, I have a few teething problems, one of which is that I'm seeing a lot of out of focus light during my z-stacks.  I expect to see some out of focus blur, but with the selective illumination I thought it would be less.  I think things are pretty well aligned, with everything in the right place, and wondered if you could help me think about a couple of things.  The main two I'm thinking about are the function of the slit and the position of the final lens before the illumination objective, and how this is affecting my sheet.
+> 
+> I have the first telescope in exactly the correct position, following the drawings on the Thorlabs page, with the lens back-to-back such that infinity of their design is pointing out at both ends (see below link to Thorlabs page; I'm referring to the threaded side as the back).  This gives me a really consistent expanded spot size across the room.  The slit, cylindrical lens, gimbal corner mirror and first lens of the second telescope are all pretty much exactly 50mm spaced.  The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+> 
+> The second telescope is where I get confused as we have two focusing paths in one.  Viewed from above it's the same as the expanding telescope before the slit, but in reverse to reduce the beam, so it would be nicer to have the Thorlabs optics back-to-back.  For the side view the beam path goes through the telescope in infinity space so we'd like the lens to be front-to-front, so to speak.  The preference for back-to-back or front-to-front is just for accurately locating the optics, and I'm guessing the focus in the opposite direction would be just as good, but difficult to know where to measure the focal distance from.
+> 
+> In my setup I have both lens pointing the same direction with the front towards the illumination lens.  I have a picture of my SPIM below (low res; I'll get a better one for the website soon).  My confusion comes when I look at the back-focal-plane (BFP) of the objective lens, which lies 19mm above the flange, just before the yellow line (see image sent from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip from their system resources).  I have my second lens of the second telescope pair (25mm) right up against the objective to reach the BFP.  This is not how it looks in the website assembly and pictures, but as far as I know, is where the optical setup dictates it should be.
+> 
+> My next question is the function of the slit.  Following the ray path diagrams the width of the slit changes the width of the horizontal beam focused on the BFP of the objective.  A wider beam would lead to a higher NA focused sheet, with the corresponding thinner focus and shorter depth of focus.  When I reduce the width of the slit I appear to get a thinner and thinner sheet, which doesn't make sense.  I should see a thinner beam with a wider beam, right?
+> 
+> I've checked the alignment by removing the cylindrical lens and creating the sharpest thinnest beam of light in a dense sample of tiny beads.  On inserting the cylindrical lens again it shifts a little, but I can get the sheet in focus with a small adjustment.
+> 
+> In writing this email and composing my thoughts I think I have my sheet focused either before or after the collection lens axis, such that the decrease in sheet thickness is likely coming from the reduced width of the triangle of light and not from the tighter focus.
+> 
+> Thanks for taking the time to read this long email.  I hope you have some thoughts that might lead me in the right direction.  I'm not sure why the original design has such a large gap from the objective given the details of the BFP?  Is there a different plane on the back of the objective that should be focused on instead?  If not, what would the ray diagram look like for the focus prior to the BFP?
+> 
+> The last caveat to my setup is that I opted to make it on the imperial spaced table, and as such I've mounted the chamber holder on the same rail as that last telescope setup (I thought it might also allow me to slide things if I ever change lenses).   I have two cameras that are free standing and have been aligned to a mm or so accuracy to be on the centre of the axis as needed.  I include this for completeness and feel it's not likely to play a roll, as moving things around lets me find the edges of my field of view from the detection objective but I don't really see much change in the thickness of my sheet in the different translations.
+> 
+> Please let me know if you need further details, images, etc.
+> 
+> Neil
+> 
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+> 
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+> 
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+> 
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+> 
+> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> 
+> ------------------------------
+> 
+> Message: 3
+> Date: Mon, 11 Apr 2016 16:00:48 +0200
+> From: Monika Paw?owska <m.pawlowska at nencki.gov.pl>
+> To: openspim at openspim.org
+> Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+> Message-ID: <op.yfrc7mjaahhlbl at pc507-99ff.ibd>
+> Content-Type: text/plain; charset=utf-8; format=flowed; delsp=yes
+> 
+> Hi,
+> 
+> I think it would be easier for us to guess the reason of the problem if we  
+> had an example image of the "out of focus light". :)
+> 
+> But: there is a trick to find the BFP even when you have no idea where it  
+> is (I didn't  :P ). Start with a collimated beam after the 1st telescope ,  
+> mount the second telescope so that the beam is collimated again, and then  
+> take out first lens of second telescope and put the objective in. This  
+> way, second lens should focus and objective recollimate the beam.
+> 
+> Afterwards, when everything is in place, rotating cyl. lens 90 degrees  
+> lets you see (without fluorescence filter) whether the light sheet is in  
+> the centre of FOV (this is similar to Pete's hint, but you don't have to  
+> take the cyl. lens out).
+> 
+> Monika
+> 
+> W dniu .04.2016 o 23:03 Anthony, Neil <nantho2 at emory.edu> pisze:
+> 
+>> Hi all,  I'm pleased to say that I have my two colour light sheet setup  
+>> up and running :)
+>> 
+>> Alas, I have a few teething problems, one of which is that I'm seeing a  
+>> lot of out of focus light during my z-stacks.  I expect to see some out  
+>> of focus blur, but with the selective illumination I thought it would be  
+>> less.  I think things are pretty well aligned, with everything in the  
+>> right place, and wondered if you could help me think about a couple of  
+>> things.  The main two I'm thinking about are the function of the slit  
+>> and the position of the final lens before the illumination objective,  
+>> and how this is affecting my sheet.
+>> 
+>> I have the first telescope in exactly the correct position, following  
+>> the drawings on the Thorlabs page, with the lens back-to-back such that  
+>> infinity of their design is pointing out at both ends (see below link to  
+>> Thorlabs page; I'm referring to the threaded side as the back).  This  
+>> gives me a really consistent expanded spot size across the room.  The  
+>> slit, cylindrical lens, gimbal corner mirror and first lens of the  
+>> second telescope are all pretty much exactly 50mm spaced.  The  
+>> horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+>> 
+>> The second telescope is where I get confused as we have two focusing  
+>> paths in one.  Viewed from above it's the same as the expanding  
+>> telescope before the slit, but in reverse to reduce the beam, so it  
+>> would be nicer to have the Thorlabs optics back-to-back.  For the side  
+>> view the beam path goes through the telescope in infinity space so we'd  
+>> like the lens to be front-to-front, so to speak.  The preference for  
+>> back-to-back or front-to-front is just for accurately locating the  
+>> optics, and I'm guessing the focus in the opposite direction would be  
+>> just as good, but difficult to know where to measure the focal distance  
+>> from.
+>> 
+>> In my setup I have both lens pointing the same direction with the front  
+>> towards the illumination lens.  I have a picture of my SPIM below (low  
+>> res; I'll get a better one for the website soon).  My confusion comes  
+>> when I look at the back-focal-plane (BFP) of the objective lens, which  
+>> lies 19mm above the flange, just before the yellow line (see image sent  
+>> from Olympus TAC; they couldn't send a PDF so I'm guessing this a clip  
+>> from their system resources).  I have my second lens of the second  
+>> telescope pair (25mm) right up against the objective to reach the BFP.   
+>> This is not how it looks in the website assembly and pictures, but as  
+>> far as I know, is where the optical setup dictates it should be.
+>> 
+>> My next question is the function of the slit.  Following the ray path  
+>> diagrams the width of the slit changes the width of the horizontal beam  
+>> focused on the BFP of the objective.  A wider beam would lead to a  
+>> higher NA focused sheet, with the corresponding thinner focus and  
+>> shorter depth of focus.  When I reduce the width of the slit I appear to  
+>> get a thinner and thinner sheet, which doesn't make sense.  I should see  
+>> a thinner beam with a wider beam, right?
+>> 
+>> I've checked the alignment by removing the cylindrical lens and creating  
+>> the sharpest thinnest beam of light in a dense sample of tiny beads.  On  
+>> inserting the cylindrical lens again it shifts a little, but I can get  
+>> the sheet in focus with a small adjustment.
+>> 
+>> In writing this email and composing my thoughts I think I have my sheet  
+>> focused either before or after the collection lens axis, such that the  
+>> decrease in sheet thickness is likely coming from the reduced width of  
+>> the triangle of light and not from the tighter focus.
+>> 
+>> Thanks for taking the time to read this long email.  I hope you have  
+>> some thoughts that might lead me in the right direction.  I'm not sure  
+>> why the original design has such a large gap from the objective given  
+>> the details of the BFP?  Is there a different plane on the back of the  
+>> objective that should be focused on instead?  If not, what would the ray  
+>> diagram look like for the focus prior to the BFP?
+>> 
+>> The last caveat to my setup is that I opted to make it on the imperial  
+>> spaced table, and as such I've mounted the chamber holder on the same  
+>> rail as that last telescope setup (I thought it might also allow me to  
+>> slide things if I ever change lenses).   I have two cameras that are  
+>> free standing and have been aligned to a mm or so accuracy to be on the  
+>> centre of the axis as needed.  I include this for completeness and feel  
+>> it's not likely to play a roll, as moving things around lets me find the  
+>> edges of my field of view from the detection objective but I don't  
+>> really see much change in the thickness of my sheet in the different  
+>> translations.
+>> 
+>> Please let me know if you need further details, images, etc.
+>> 
+>> Neil
+>> 
+>> Thorlabs lens ray drawing:
+>> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawing_A3-780.gif
+>> 
+>> Second telescope optics image:
+>> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=sharing
+>> 
+>> BFP location image from Olympus:
+>> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=sharing
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> ________________________________
+>> 
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination, distribution
+>> or copying of this message (including any attachments) is strictly
+>> prohibited.
+>> 
+>> If you have received this message in error, please contact
+>> the sender by reply e-mail message and destroy all copies of the
+>> original message (including attachments).
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> -- 
+> Dr Monika Paw?owska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> 
+> 
+> ------------------------------
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> End of OpenSPIM Digest, Vol 36, Issue 2
+> ***************************************
+
+
+
+
+From nantho2 at emory.edu  Thu Apr 14 17:57:09 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 14 Apr 2016 22:57:09 +0000
+Subject: [OpenSPIM] Out of focus signal and optics questions
+In-Reply-To: <op.yfrc7mjaahhlbl@pc507-99ff.ibd>
+References: <CO2PR05MB681358EA724F5C2FF4EDD12EC910@CO2PR05MB681.namprd05.prod.outlook.com>
+	<op.yfrc7mjaahhlbl@pc507-99ff.ibd>
+Message-ID: <CO2PR05MB252005EB445BBBE473805B96EC970@CO2PR05MB2520.namprd05.prod.outlook.com>
+
+Hi all, thanks for the tips.
+
+I moved things around and realigned to what I now feel is a better focus, where slight movements of the second lens of the second telescope shifts the beam waist left and right on the camera (with the cylindrical lens removed).
+
+Monika, I tried to collimate the beam using the objective as you suggest, but found it hard to see how well the beam was collimated through the water and chamber...  I think it was collimated to some degree.  My assumption here is that you'd need those in place?
+
+Either way, it looks like the beam waist and I've gotten some bead data to share with you as I still feel something is wrong regarding the out of focus light.  I've taken a z-stack of 100nm beads in 1% agarose, including a bright piece of schmutz that highlights the out of focus illumination.  The images are from an ORCA CCD, but I've reduced the bit depth and cropped to a thin column of data to make the files smaller.  The height of the sheet does not completely fill the CCD, I think due to the 0.5x c mount and the fact that the beam width on the Stradus is a little smaller than I need and I might need a little more beam expansion.  The sheet is incident from the right hand side of the images.
+
+Tif stacks:
+0.4mm slit
+https://drive.google.com/file/d/0BzfJAGNfrgieOUszTGYwZGh1YVE/view?usp=sharing
+0.8mm slit
+https://drive.google.com/file/d/0BzfJAGNfrgiea21vLUtqZTdsTHc/view?usp=sharing
+Orthogonal screen shots:
+https://drive.google.com/file/d/0BzfJAGNfrgieekktMnFETEwzd3M/view?usp=sharing
+https://drive.google.com/file/d/0BzfJAGNfrgieOExHRVNYYndHVGs/view?usp=sharing
+
+It appears that there's significant difference in the sheet profile for the different slit sizes.  The piece of schmutz is quite large, so this is a guess, but it looks like the thickness of the sheet is 50um or more.  I have the contrast cranked up, and this is over emphasizing the tails of the sheet profile, but I'm a little perplexed.
+
+Thanks in advance for your time.  Please let me know if you need any further details/data.
+Neil
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+Sent: Monday, April 11, 2016 10:01 AM
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] Out of focus signal and optics questions
+
+Hi,
+
+I think it would be easier for us to guess the reason of the problem if we had an example image of the "out of focus light". :)
+
+But: there is a trick to find the BFP even when you have no idea where it is (I didn't  :P ). Start with a collimated beam after the 1st telescope , mount the second telescope so that the beam is collimated again, and then take out first lens of second telescope and put the objective in. This way, second lens should focus and objective recollimate the beam.
+
+Afterwards, when everything is in place, rotating cyl. lens 90 degrees lets you see (without fluorescence filter) whether the light sheet is in the centre of FOV (this is similar to Pete's hint, but you don't have to take the cyl. lens out).
+
+Monika
+
+W dniu .04.2016 o 23:03 Anthony, Neil <nantho2 at emory.edu> pisze:
+
+> Hi all,  I'm pleased to say that I have my two colour light sheet
+> setup up and running :)
+>
+> Alas, I have a few teething problems, one of which is that I'm seeing
+> a lot of out of focus light during my z-stacks.  I expect to see some
+> out of focus blur, but with the selective illumination I thought it
+> would be less.  I think things are pretty well aligned, with
+> everything in the right place, and wondered if you could help me think
+> about a couple of things.  The main two I'm thinking about are the
+> function of the slit and the position of the final lens before the
+> illumination objective, and how this is affecting my sheet.
+>
+> I have the first telescope in exactly the correct position, following
+> the drawings on the Thorlabs page, with the lens back-to-back such
+> that infinity of their design is pointing out at both ends (see below
+> link to Thorlabs page; I'm referring to the threaded side as the
+> back).  This gives me a really consistent expanded spot size across
+> the room.  The slit, cylindrical lens, gimbal corner mirror and first
+> lens of the second telescope are all pretty much exactly 50mm spaced.
+> The horizontal focused beam is as crisp as I can get it on the gimbal mirror.
+>
+> The second telescope is where I get confused as we have two focusing
+> paths in one.  Viewed from above it's the same as the expanding
+> telescope before the slit, but in reverse to reduce the beam, so it
+> would be nicer to have the Thorlabs optics back-to-back.  For the side
+> view the beam path goes through the telescope in infinity space so
+> we'd like the lens to be front-to-front, so to speak.  The preference
+> for back-to-back or front-to-front is just for accurately locating the
+> optics, and I'm guessing the focus in the opposite direction would be
+> just as good, but difficult to know where to measure the focal
+> distance from.
+>
+> In my setup I have both lens pointing the same direction with the
+> front towards the illumination lens.  I have a picture of my SPIM
+> below (low res; I'll get a better one for the website soon).  My
+> confusion comes when I look at the back-focal-plane (BFP) of the
+> objective lens, which lies 19mm above the flange, just before the
+> yellow line (see image sent from Olympus TAC; they couldn't send a PDF
+> so I'm guessing this a clip from their system resources).  I have my second lens of the second
+> telescope pair (25mm) right up against the objective to reach the BFP.
+> This is not how it looks in the website assembly and pictures, but as
+> far as I know, is where the optical setup dictates it should be.
+>
+> My next question is the function of the slit.  Following the ray path
+> diagrams the width of the slit changes the width of the horizontal
+> beam focused on the BFP of the objective.  A wider beam would lead to
+> a higher NA focused sheet, with the corresponding thinner focus and
+> shorter depth of focus.  When I reduce the width of the slit I appear
+> to get a thinner and thinner sheet, which doesn't make sense.  I
+> should see a thinner beam with a wider beam, right?
+>
+> I've checked the alignment by removing the cylindrical lens and
+> creating the sharpest thinnest beam of light in a dense sample of tiny
+> beads.  On inserting the cylindrical lens again it shifts a little,
+> but I can get the sheet in focus with a small adjustment.
+>
+> In writing this email and composing my thoughts I think I have my
+> sheet focused either before or after the collection lens axis, such
+> that the decrease in sheet thickness is likely coming from the reduced
+> width of the triangle of light and not from the tighter focus.
+>
+> Thanks for taking the time to read this long email.  I hope you have
+> some thoughts that might lead me in the right direction.  I'm not sure
+> why the original design has such a large gap from the objective given
+> the details of the BFP?  Is there a different plane on the back of the
+> objective that should be focused on instead?  If not, what would the
+> ray diagram look like for the focus prior to the BFP?
+>
+> The last caveat to my setup is that I opted to make it on the imperial
+> spaced table, and as such I've mounted the chamber holder on the same
+> rail as that last telescope setup (I thought it might also allow me to
+> slide things if I ever change lenses).   I have two cameras that are
+> free standing and have been aligned to a mm or so accuracy to be on
+> the centre of the axis as needed.  I include this for completeness and
+> feel it's not likely to play a roll, as moving things around lets me
+> find the edges of my field of view from the detection objective but I
+> don't really see much change in the thickness of my sheet in the
+> different translations.
+>
+> Please let me know if you need further details, images, etc.
+>
+> Neil
+>
+> Thorlabs lens ray drawing:
+> https://www.thorlabs.com/images/TabImages/Achromatic_Doublet_Ray_Drawi
+> ng_A3-780.gif
+>
+> Second telescope optics image:
+> https://drive.google.com/file/d/0BzfJAGNfrgieRWpxbk5xckg4R2M/view?usp=
+> sharing
+>
+> BFP location image from Olympus:
+> https://drive.google.com/file/d/0BzfJAGNfrgieQXNFRFowd0xxems/view?usp=
+> sharing
+>
+>
+>
+>
+>
+>
+> ________________________________
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination,
+> distribution or copying of this message (including any attachments) is
+> strictly prohibited.
+>
+> If you have received this message in error, please contact the sender
+> by reply e-mail message and destroy all copies of the original message
+> (including attachments).
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+From tnf8 at pitt.edu  Wed Apr 27 09:13:32 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 27 Apr 2016 14:13:32 +0000
+Subject: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+Message-ID: <D3463F1B.D681%tnf8@pitt.edu>
+
+Hello all, 
+
+I found the Selzer group's solution (Keller et al. 2013) quite interesting
+and would love to know if anyone had a positive experience doing that.
+The banding from my basic openSPIM is definitely a problem for
+segmentation and analysis.
+
+As far as I can tell fixing the banding will mostly involve buying a scan
+mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+about $1k.  That seems reasonable and not that hard for regular folks to
+implement.  
+
+In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+has an option to fight banding in light sheet data.  I have not tested it
+yet but potentially that feature could be useful.  I will just post my
+usual warning for folks trying TeraStitcher for the first time: it
+stitches really well but it could be a hair more user-friendly.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+From 709314090 at qq.com  Thu Apr 28 05:03:16 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Thu, 28 Apr 2016 18:03:16 +0800
+Subject: [OpenSPIM] ImageJ takes lots of time to read the SPIM acquired
+	image stack file
+Message-ID: <tencent_4629526A1E0D95D203176665@qq.com>
+
+Hi, All,
+       I have updated the ImageJ, and it had some updates in the Acquire SPIM plugin. However, the imageJ takes more time to read the new acquired image stack than before. The log window just shows "prepare metedate.." and the image stack appeared until a long time. For example, it takes about 1 min to read a 500M image stack. For a 2G file, it takes more time. It seems some changes in the acquired image stack format. When I used the script to resave the file as tif format just like the web said, it can read the file very quickly.
+      Is this thing normal? or bug?
+      Thank you for listening my words.
+      All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160428/3e642518/attachment-0002.html>
+
+From huisken at mpi-cbg.de  Fri Apr 29 02:00:35 2016
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Fri, 29 Apr 2016 09:00:35 +0200
+Subject: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+In-Reply-To: <D3463F1B.D681%tnf8@pitt.edu>
+References: <D3463F1B.D681%tnf8@pitt.edu>
+Message-ID: <64E6EABA-1352-4F94-818C-787A3E55A551@mpi-cbg.de>
+
+Dear Tim,
+
+I think you are mixing up two issue.
+
+1. Getting rid of stripes.
+
+Yes, you can do a little bit in post-processing but the stripes can be quite complex and are not necessarily straight. Oftentimes you see a lot of lensing and I do not think you can easily remove it with image processing.
+
+a) Double-sided illumination helps. Depending on the sample you may want to do simultaneous or sequential double-sided illumination. There are various ways of merging the two images.
+b) A resonant mSPIM mirror is cheap and easy to integrate. You will get rid of most stripes, but again this depends on the sample. The details for a) and b) are in our Opt. Lett. paper (Huisken & Stainier, 2007). Basically, you are pivoting the light sheet around the center of your field of view, e.g. with 1kHz. The stripes are “washed out” during the exposure time of your camera. We use this on most of our systems and it helps a lot to reduce stripes.
+c) Multi-view fusion can also help to some extent.
+
+2. DSLM vs. SPIM
+
+Yes, DSLM should also help reducing stripes but I have no experience with that. Basically, your light sheet is not coherent anymore and the sheet does not “interfere with itself”. However, the setup is more expensive and requires you to power and control another element: the galvo scanner to sweep the beam up and down. You need a proper scan mirror and not just the cheap mSPIM mirror. The additional benefit is that the resulting light sheet is more uniform than the cropped Gaussian light sheet. However, you need to illuminate each line with higher intensity which may result in saturation and worse dynamic range. Obviously you need to wait for the scan and need to synchronize your readout. Depending whether you have a global shutter or rolling shutter camera you need to take some precaution.
+
+Best
+Jan
+
+
+
+—
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+
+> On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+> 
+> Hello all, 
+> 
+> I found the Selzer group's solution (Keller et al. 2013) quite interesting
+> and would love to know if anyone had a positive experience doing that.
+> The banding from my basic openSPIM is definitely a problem for
+> segmentation and analysis.
+> 
+> As far as I can tell fixing the banding will mostly involve buying a scan
+> mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+> that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+> about $1k.  That seems reasonable and not that hard for regular folks to
+> implement.  
+> 
+> In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+> has an option to fight banding in light sheet data.  I have not tested it
+> yet but potentially that feature could be useful.  I will just post my
+> usual warning for folks trying TeraStitcher for the first time: it
+> stitches really well but it could be a hair more user-friendly.
+> 
+> Best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160429/6d2446e3/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Apr 29 04:03:31 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 29 Apr 2016 11:03:31 +0200
+Subject: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+In-Reply-To: <D3463F1B.D681%tnf8@pitt.edu>
+References: <D3463F1B.D681%tnf8@pitt.edu>
+Message-ID: <op.ygobf5w7ahhlbl@pc507-99ff.ibd>
+
+Re: removing stripes in post-processing I tried this plugin:
+
+http://www.math.univ-toulouse.fr/~weiss/PageCodes.html
+
+and it's not bad, but lately stopped working for me after updating fiji.
+
+Monika
+
+W dniu .04.2016 o 16:13 Feinstein, Timothy N <tnf8 at pitt.edu> pisze:
+
+> Hello all,
+>
+> I found the Selzer group's solution (Keller et al. 2013) quite  
+> interesting
+> and would love to know if anyone had a positive experience doing that.
+> The banding from my basic openSPIM is definitely a problem for
+> segmentation and analysis.
+>
+> As far as I can tell fixing the banding will mostly involve buying a scan
+> mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+> that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+> about $1k.  That seems reasonable and not that hard for regular folks to
+> implement.
+>
+> In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+> has an option to fight banding in light sheet data.  I have not tested it
+> yet but potentially that feature could be useful.  I will just post my
+> usual warning for folks trying TeraStitcher for the first time: it
+> stitches really well but it could be a hair more user-friendly.
+>
+> Best,
+>
+>
+> Tim
+>
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20Building%20MM%20in%20VS2012%20on%0A%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3C7790a3bd1822a.51bb1caf%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000065.html">
+   <LINK REL="Next"  HREF="000068.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20Building%20MM%20in%20VS2012%20on%0A%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3C7790a3bd1822a.51bb1caf%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Jun 14 13:37:51 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000065.html">[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+        <LI>Next message: <A HREF="000068.html">[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#66">[ date ]</a>
+              <a href="thread.html#66">[ thread ]</a>
+              <a href="subject.html#66">[ subject ]</a>
+              <a href="author.html#66">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Mark,
+
+(Whoops; we lost the mailing list.)
+
+I had expected it might be the case that a merge wouldn't be viable, but thanks for the heads-up just the same. We were actually planning to rebase soon to pick up the changes for x64; given how close you seem to be to finishing the VS2010 project files, I think we'll hold off on that until you've finished. I'll also be looking forward to the changes they bring; managing the output paths has been something of an issue for us in the past.
+
+
+Thanks,
+Luke
+
+On 06/14/13, Mark Tsuchida&#160;wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i>&#160;
+</I>&gt;<i> On Fri, Jun 14, 2013 at 9:44 AM, Luke Stuyvenberg wrote:
+</I>&gt;<i>&#160;
+</I>&gt;<i>&#160;
+</I>&gt;<i> &gt; We've actually been working on this task separately as well, and I was thinking some of our work might be of use to you. You can see the current state of our code at <A HREF="http://github.com/openspim/micromanager">http://github.com/openspim/micromanager</A> -- I believe the project files are based off of Micro-Manager 1.4.13 or so (from the source code available roughly 2 months ago).
+</I>&gt;<i>&#160;
+</I>&gt;<i>&#160;
+</I>&gt;<i> Thanks for this note. The Core and the device adaptors without external dependencies have not presented much of a problem, and most of the work has been getting the device adapters to build against external libraries. I have pretty much gotten everything working except for the most recently added device adapters (which I simply haven't gotten around to yet).
+</I>&gt;<i>&#160;
+</I>&gt;<i>&#160;
+</I>&gt;<i>&#160;
+</I>&gt;<i> The VS2008 project files have undergone quite a bit of cleanup over the past month and a half, and I'll be merging more of that before switching the SVN head to VS2010, so if you intend to keep tracking the official SVN repo, I'm afraid you might have to discard your version (even with git, I don't think it will be practical to merge). I am also moving common settings to property sheets, though, so setting up things like different copy destination paths should become easier.
+</I>&gt;<i>&#160;
+</I>&gt;<i>&#160;
+</I>&gt;<i> Best,
+</I>&gt;<i> Mark
+</I>
+</PRE>
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000065.html">[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+	<LI>Next message: <A HREF="000068.html">[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#66">[ date ]</a>
+              <a href="thread.html#66">[ thread ]</a>
+              <a href="subject.html#66">[ subject ]</a>
+              <a href="author.html#66">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

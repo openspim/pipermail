@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20Re%3A%20%5Bmicro-manager-general%5D%20Building%20MM%20in%0A%20VS2012%20on%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3Calpine.DEB.1.00.1306142130430.28957%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001033.html">
+   <LINK REL="Next"  HREF="001036.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20Re%3A%20%5Bmicro-manager-general%5D%20Building%20MM%20in%0A%20VS2012%20on%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3Calpine.DEB.1.00.1306142130430.28957%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)">schindelin at wisc.edu
+       </A><BR>
+    <I>Fri Jun 14 14:34:45 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001033.html">[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+        <LI>Next message: <A HREF="001036.html">[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1035">[ date ]</a>
+              <a href="thread.html#1035">[ thread ]</a>
+              <a href="subject.html#1035">[ subject ]</a>
+              <a href="author.html#1035">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+I re-Cc:ed the list because I feel it to be inappropriate to keep this
+conversation a secret from our collaborators.
+
+On Fri, 14 Jun 2013, Luke Stuyvenberg wrote:
+
+&gt;<i> [...] our rebase is going to be painful.
+</I>
+Not really, *iff* we wait until Mark switches their HEAD to 2010, and
+*iff* you simply delete all of our changes to .vcxproj files.
+
+&gt;<i> Personally, I'd like to suggest we just accept Micro-Manager's changes
+</I>&gt;<i> to all vcxproj and sln files (or not apply any of our own, as the case
+</I>&gt;<i> may be), then fix our build when the dust settles. It isn't ideal, but
+</I>&gt;<i> at least this way we have a well-defined conflict resolution for those
+</I>&gt;<i> files...
+</I>
+Right. That's what I meant by: our work was basically wasting time because
+we cannot continue to use those changes.
+
+Unless you disagree, let's focus more on early collaboration on things
+that are not specific to OpenSPIM.
+
+&gt;<i> While we're on the topic of the build system, I wanted to run an idea
+</I>&gt;<i> past you -- that is, adding VS projects for the Micro-Manager plugins
+</I>&gt;<i> and acquisition engine. For people less inclined to build from the
+</I>&gt;<i> command line, it may be helpful to create these projects and add them to
+</I>&gt;<i> our working solution (most likely after the VS2010 update and our
+</I>&gt;<i> rebase). The basic idea is much like that of Micro-Manager; I will
+</I>&gt;<i> probably just have the project use NMake to call the ant build files of
+</I>&gt;<i> the plugins and acquisition engine. (Especially considering since we say
+</I>&gt;<i> 'press F7 to build it all', it would make sense to do this.)
+</I>
+I agree. The easier it is to build it all, the better. Remember: I want
+Jenkins to build this thing eventually.
+
+Ciao,
+Dscho
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001033.html">[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+	<LI>Next message: <A HREF="001036.html">[OpenSPIM] Fwd: Re: [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1035">[ date ]</a>
+              <a href="thread.html#1035">[ thread ]</a>
+              <a href="subject.html#1035">[ subject ]</a>
+              <a href="author.html#1035">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

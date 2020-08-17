@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Light Sheet Alignment Procedure (Was: 3D	Reconstruction)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Light%20Sheet%20Alignment%20Procedure%20%28Was%3A%203D%0A%09Reconstruction%29&In-Reply-To=%3C5D6FF6E4-449F-4CF9-8867-63DC64AB4BCD%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001837.html">
+   <LINK REL="Next"  HREF="001840.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D	Reconstruction)</H1>
+    <B>Peter Gabriel Pitrone</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Light%20Sheet%20Alignment%20Procedure%20%28Was%3A%203D%0A%09Reconstruction%29&In-Reply-To=%3C5D6FF6E4-449F-4CF9-8867-63DC64AB4BCD%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D	Reconstruction)">pitrone at mpi-cbg.de
+       </A><BR>
+    <I>Wed Nov 11 10:45:19 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001837.html">[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D Reconstruction)
+</A></li>
+        <LI>Next message: <A HREF="001840.html">[OpenSPIM] Light Sheet Alignment Procedure (Was:	3D	Reconstruction)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1838">[ date ]</a>
+              <a href="thread.html#1838">[ thread ]</a>
+              <a href="subject.html#1838">[ subject ]</a>
+              <a href="author.html#1838">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Howdy Dylan,
+
+Go ahead and use an ND filter, it shouldn’t effect the process much at all… Sometimes I use them as well when the signal is too intense, but one can’t see any beads when it is in place.
+
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &amp;
+<A HREF="http://www.openspim.org">http://www.openspim.org</A>
+
+&quot;I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who.&quot; Rudyard Kipling - The Elephant's Child
+
+
+
+&gt;<i> On Nov 11, 2015, at 4:32 PM, Windell, Dylan &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hey Pete,
+</I>&gt;<i>  
+</I>&gt;<i> Thanks for the instructions, I will try them out ASAP. I am guessing you meant replacing the cylindrical lens after the alignment?
+</I>&gt;<i>  
+</I>&gt;<i> My laser cannot be attenuated that low but if I were to use an ND filter, would that affect the alignment process?
+</I>&gt;<i>  
+</I>&gt;<i> Kind regards,
+</I>&gt;<i>  
+</I>&gt;<i> Dylan
+</I>&gt;<i>  
+</I>&gt;<i> From: Peter Gabriel Pitrone [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>] 
+</I>&gt;<i> Sent: 11 November 2015 15:22
+</I>&gt;<i> To: Windell, Dylan
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] Light Sheet Alignment Procedure (Was: 3D Reconstruction)
+</I>&gt;<i>  
+</I>&gt;<i> Of course you need to replace the Cylindrical lens to SPIMage again… Sent that last one too fast.
+</I>&gt;<i> 
+</I>&gt;<i> On Nov 11, 2015, at 4:14 PM, Peter Gabriel Pitrone &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>&gt;&gt; wrote:
+</I>&gt;<i>  
+</I>&gt;<i> Hey Dylan,
+</I>&gt;<i>  
+</I>&gt;<i> I’ve started using a different technique for alignment that doesn’t require any thing at all (except for the media) in the sample chamber. I’ll describe it in short below:
+</I>&gt;<i>  
+</I>&gt;<i> - Either take out the sample, or move it well beyond the focal plane (far away from the detection objective)
+</I>&gt;<i>  
+</I>&gt;<i> - Take out all the filters blocking the laser from the camera (make sure that the laser is modulated way down to around ±1 mW)
+</I>&gt;<i>  
+</I>&gt;<i> - Take out the cylindrical lens(es)
+</I>&gt;<i>  
+</I>&gt;<i> - Go “Live” at a short exposure time (10-25 ms)
+</I>&gt;<i>  
+</I>&gt;<i> You should see an in-focus beam in the middle of the field of view that cuts across the image, and it should slightly converge and then diverge with the narrowest point in the middle of the field of view. Now you can adjust the conjugate plane (corner) mirror horizontally to correct any misalignment in terms of focus, and vertically to place it in the center across the field. The two lens telescope between the mirror and the illumination lens can be adjusted along the rail so the narrowest part of the beam is centered in the exact middle.
+</I>&gt;<i>  
+</I>&gt;<i> Best Regards,
+</I>&gt;<i> Pete
+</I>&gt;<i>  
+</I>&gt;<i> Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+</I>&gt;<i> Light Sheet Fluorescence Microscopist and Imaging Specialist
+</I>&gt;<i> for Dr. Pavel Tomancak's research group at the
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstraße 108
+</I>&gt;<i> 01307 Dresden, Saxony
+</I>&gt;<i> Germany
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &lt;<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>&gt; &amp;
+</I>&gt;<i> <A HREF="http://www.openspim.org">http://www.openspim.org</A> &lt;<A HREF="http://www.openspim.org/">http://www.openspim.org/</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> &quot;I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who.&quot; Rudyard Kipling - The Elephant's Child
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> On Nov 10, 2015, at 5:57 PM, Windell, Dylan &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;&gt; wrote:
+</I>&gt;<i>  
+</I>&gt;<i> Hi Pete,
+</I>&gt;<i>  
+</I>&gt;<i> I have a cut micrometre slide stuck in a syringe which I use to check the laser sheet straightness as per OpenSPIM instructions followed by checking the embryos for image sharpness. I probably should be doing it with beads but I am more comfortable with an embryo as I am not 100% what an optimal bead scan would look like.
+</I>&gt;<i>  
+</I>&gt;<i> Kind regards,
+</I>&gt;<i>  
+</I>&gt;<i> Dylan
+</I>&gt;<i>  
+</I>&gt;<i> From: Peter Gabriel Pitrone [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>&gt;] 
+</I>&gt;<i> Sent: 10 November 2015 17:41
+</I>&gt;<i> To: Windell, Dylan &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;&gt;
+</I>&gt;<i> Cc: Pavel Tomancak &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt;&gt;; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;<i> Subject: Re: [OpenSPIM] 3D Reconstruction
+</I>&gt;<i>  
+</I>&gt;<i> Hello Dylan,
+</I>&gt;<i>  
+</I>&gt;<i> Can you tell me your light sheet alignment procedure that you do, hopefully before each experiment, maybe it could help exclude that possibility from the equation… 
+</I>&gt;<i>  
+</I>&gt;<i> Best Regards,
+</I>&gt;<i> Pete
+</I>&gt;<i>  
+</I>&gt;<i> Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+</I>&gt;<i> Light Sheet Fluorescence Microscopist and Imaging Specialist
+</I>&gt;<i> for Dr. Pavel Tomancak's research group at the
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstraße 108
+</I>&gt;<i> 01307 Dresden, Saxony
+</I>&gt;<i> Germany
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &lt;<A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>&gt; &amp;
+</I>&gt;<i> <A HREF="http://www.openspim.org">http://www.openspim.org</A> &lt;<A HREF="http://www.openspim.org/">http://www.openspim.org/</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> &quot;I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who.&quot; Rudyard Kipling - The Elephant's Child
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> On Nov 10, 2015, at 5:20 PM, Windell, Dylan &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;&gt; wrote:
+</I>&gt;<i>  
+</I>&gt;<i> Dear Pavel,
+</I>&gt;<i>  
+</I>&gt;<i> Thank you for your email. I just ran the registrations again on a couple of datasets I had. They were taken at 60 degrees apart at 10 or 20x magnification. The logs correspond with the raw data I have uploaded on my onedrive if you want to have a look at those too:
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="http://1drv.ms/1M426qo">http://1drv.ms/1M426qo</A> &lt;<A HREF="http://1drv.ms/1M426qo">http://1drv.ms/1M426qo</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> I have purchased some wider borosilicate capillaries that might help in both having more volume for beads and ensuring the tube is dead straight. Zhung, you might find that helpful? I will be running tests on them very soon so would let you know. I will also try Vaa3D, thanks for the suggestion.
+</I>&gt;<i>  
+</I>&gt;<i> Let me know if you need any more information.
+</I>&gt;<i>  
+</I>&gt;<i> Thanks again,
+</I>&gt;<i> 
+</I>&gt;<i> Dylan
+</I>&gt;<i>  
+</I>&gt;<i> From: Pavel Tomancak [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt;] 
+</I>&gt;<i> Sent: 10 November 2015 13:33
+</I>&gt;<i> To: Windell, Dylan
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;<i> Subject: Re: [OpenSPIM] 3D Reconstruction
+</I>&gt;<i>  
+</I>&gt;<i> Dear Dylan,
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I have been trying to register Z-stacks of Zebrafish using the SPIM plugin with various concentrations of beads but despite everything I try I cannot get the beads to match with different angles.
+</I>&gt;<i>  
+</I>&gt;<i> I am not sure if this is because of the light sheet not being aligned properly (I am calculating the PSF very soon and will re-align the system from scratch) or due to sample prep etc. I have corrected bead drifting (as this was evident in low concentrations of agarose) and I am pretty sure the xy and z resolution numbers are correct. I will attempt the Multiview reconstruction package, FluoRender or even ClearVolume but without bead registration working I am not sure if that will work either.
+</I>&gt;<i>  
+</I>&gt;<i> Did you already run the multi-view reconstruction? Can you attach the ImageJ log.  I am particularly looking for numbers of beads and numbers of RANSAC inliers. That would be the way to start troubleshooting.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Would it be possible that if the FEP tube is not straight, the manual positioning of the next angles would misalign bead registration? I have also thought that as the embryo fills up the tube, I am not getting enough volume of beads on either side of the stack for bead registration?
+</I>&gt;<i>  
+</I>&gt;<i> That maybe a problem. There may be not enough beads in the OVERLAP between the views. You can visualise that in the Multiview Reconstruction application.
+</I>&gt;<i>  
+</I>&gt;<i> I will help more after you send the logs or even deposit the data somewhere.
+</I>&gt;<i>  
+</I>&gt;<i> All the best
+</I>&gt;<i>  
+</I>&gt;<i> PAvel
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> If anyone has had difficulty in this or have done work on Zebrafish with SPIM I would really appreciate any help.
+</I>&gt;<i>  
+</I>&gt;<i> Kind regards,
+</I>&gt;<i>  
+</I>&gt;<i> Dylan
+</I>&gt;<i>  
+</I>&gt;<i> Dylan Windell
+</I>&gt;<i> Postgraduate Researcher
+</I>&gt;<i> College &lt;<A HREF="http://business-school.exeter.ac.uk/research/areas/centres/isr/">http://business-school.exeter.ac.uk/research/areas/centres/isr/</A>&gt; of Life and Environmental Sciences
+</I>&gt;<i> University of Exeter, Geoffrey Pope
+</I>&gt;<i> Stocker Road, Exeter EX4 4QD, UK
+</I>&gt;<i> phone: +44 (0) 7596725056
+</I>&gt;<i> email: <A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>&gt;
+</I>&gt;<i> &lt;5um_140exp_3_angles.txt&gt;&lt;3um_3_angles.txt&gt;_______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>&gt;
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151111/483253fa/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20151111/483253fa/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001837.html">[OpenSPIM] Light Sheet Alignment Procedure (Was: 3D Reconstruction)
+</A></li>
+	<LI>Next message: <A HREF="001840.html">[OpenSPIM] Light Sheet Alignment Procedure (Was:	3D	Reconstruction)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1838">[ date ]</a>
+              <a href="thread.html#1838">[ thread ]</a>
+              <a href="subject.html#1838">[ subject ]</a>
+              <a href="author.html#1838">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] windows crash after today's update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20windows%20crash%20after%20today%27s%20update&In-Reply-To=%3CCAHAw%2B8Y_PW70ABkFp66JO30hP%2BJeKQt5yVD%3D8TkQrwgKnn%2B7SA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001219.html">
+   <LINK REL="Next"  HREF="001217.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] windows crash after today's update</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20windows%20crash%20after%20today%27s%20update&In-Reply-To=%3CCAHAw%2B8Y_PW70ABkFp66JO30hP%2BJeKQt5yVD%3D8TkQrwgKnn%2B7SA%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] windows crash after today's update">aureliaomega at gmail.com
+       </A><BR>
+    <I>Mon Oct 28 07:27:37 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001219.html">[OpenSPIM] windows crash after today's update
+</A></li>
+        <LI>Next message: <A HREF="001217.html">[OpenSPIM] &quot;Stack at this Z plus&quot; problem persisting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1222">[ date ]</a>
+              <a href="thread.html#1222">[ thread ]</a>
+              <a href="subject.html#1222">[ subject ]</a>
+              <a href="author.html#1222">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi again,
+Thanks!  The problem was the DLL file and when I changed it to the correct
+one the problem was resolved.  Sorry, I should have figured this out on my
+own, but for some reason, Gmail decided to put specifically the update
+email into my spam folder, but not the open spim emails before or after it,
+so I hadn't seen it (and didn't know it was missing).  But now everything
+is working again.
+Thank you,
+Aurelia
+
+
+
+On Fri, Oct 25, 2013 at 7:33 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;wrote:
+
+&gt;<i> Hi Aurelia,
+</I>&gt;<i>
+</I>&gt;<i> Sorry about this. It sounds like this is a device adapter problem, most
+</I>&gt;<i> likely in the camera. If you can, please try copying the device adapters
+</I>&gt;<i> and extra DLLs from the Micro-Manager build I linked to in the update email
+</I>&gt;<i> -- it's possible either the DA or a manufacturer DLL has been upgraded.
+</I>&gt;<i>
+</I>&gt;<i> Did the error create an error log? This would be something like
+</I>&gt;<i> hs_err_pid1234 -- if a file like this was created the same day as the
+</I>&gt;<i> crash, could you please attach it to a reply?
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Luke
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Aurelia Honerkamp-Smith &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hello,
+</I>&gt;<i>
+</I>&gt;<i> I have developed a new software problem: after I start the OpenSPIM
+</I>&gt;<i> plugin, I get an &quot;ImageJ has stopped working&quot; message from Windows,
+</I>&gt;<i> followed a few seconds later by a blue screen with the message &quot;Process has
+</I>&gt;<i> locked pages.&quot;  This happens after I start the OpenSPIM plugin or if I try
+</I>&gt;<i> to start the camera live view.  A core log follows, but I don't think it
+</I>&gt;<i> shows anything strange.
+</I>&gt;<i> I can avoid the crash by doing a system restore back to last week, but in
+</I>&gt;<i> that case for some reason my camera live view malfunctions (it opens and
+</I>&gt;<i> runs, but doesn't display the live image).
+</I>&gt;<i> Is anyone else having this problem?
+</I>&gt;<i>
+</I>&gt;<i> Thank you,
+</I>&gt;<i> Aurelia
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] --------&gt;&gt;
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] Core session started on
+</I>&gt;<i> 2013-10-24T18:10:30.647125 by ah659 on INVERT
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] Debug logging disabled
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] Debug logging disabled
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] &gt; MM Studio version: 1.4.x
+</I>&gt;<i> dev
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] &gt; MMCore version 2.3.2
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] &gt; Device API version 53,
+</I>&gt;<i> Module API version 7
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] &gt; Operating System: Windows
+</I>&gt;<i> 7 6.1
+</I>&gt;<i> 2013-10-24T18:10:30.647125 p:6080 t:4488 [LOG] &gt; JVM: Java HotSpot(TM)
+</I>&gt;<i> Client VM, version 1.6.0_24; 32 bit
+</I>&gt;<i> 2013-10-24T18:10:32.177213 p:6080 t:2152 [LOG] &gt; #uManager plugins: 120
+</I>&gt;<i> 2013-10-24T18:10:32.177213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> org.apache.commons.math.analysis.MultivariateRealFunction
+</I>&gt;<i> 2013-10-24T18:10:32.177213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> org.apache.commons.math.analysis.MultivariateRealFunction
+</I>&gt;<i> 2013-10-24T18:10:32.177213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.177213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.177213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> org.apache.commons.math.analysis.MultivariateRealFunction
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.MouseListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ItemListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ItemListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.util.Comparator
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.io.FilenameFilter
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AntiDrift$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> org.micromanager.api.MMPlugin
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ItemListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.SPIMAutoCalibrator$RunnableWRet
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.SPIMCalibrator
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.MouseListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.MouseMotionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.SPIMCalibrator
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.SPIMCalibrator
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.MouseListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.WindowListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.178213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.KeyListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.FocusListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ActionListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> javax.swing.event.ChangeListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AcqOutputHandler
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Thread$UncaughtExceptionHandler
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AcqOutputHandler
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AcqOutputHandler
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AcqOutputHandler
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AntiDrift$Callback
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Runnable
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.progacq.AntiDrift$Callback
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.KeyListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> javax.swing.event.ChangeListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.KeyListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.lang.Iterable
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.awt.event.ItemListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> java.util.EventListener
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; interface found:
+</I>&gt;<i> spim.setup.Device$Factory
+</I>&gt;<i> 2013-10-24T18:10:32.179213 p:6080 t:2152 [LOG] &gt; Attempting to install
+</I>&gt;<i> plugin spim.SPIMAcquisition
+</I>&gt;<i> 2013-10-24T18:10:35.123381 p:6080 t:4488 [LOG] All devices unloaded.
+</I>&gt;<i> 2013-10-24T18:10:35.125381 p:6080 t:4488 [LOG] Device COM3 loaded from
+</I>&gt;<i> SerialManager and labeled as COM3
+</I>&gt;<i> 2013-10-24T18:10:35.192385 p:6080 t:4488 [LOG] Device Camera-1 loaded from
+</I>&gt;<i> PVCAM and labeled as CoolsnapMyo
+</I>&gt;<i> 2013-10-24T18:10:36.237445 p:6080 t:4488 [LOG] Device Picard Twister
+</I>&gt;<i> loaded from PicardStage and labeled as Picard Twister
+</I>&gt;<i> 2013-10-24T18:10:36.237445 p:6080 t:4488 [LOG] Device Picard Z Stage
+</I>&gt;<i> loaded from PicardStage and labeled as Picard Z Stage
+</I>&gt;<i> 2013-10-24T18:10:36.238445 p:6080 t:4488 [LOG] Device Picard XY Stage
+</I>&gt;<i> loaded from PicardStage and labeled as Picard XY Stage
+</I>&gt;<i> 2013-10-24T18:10:36.271447 p:6080 t:4488 [LOG] Device SC10 loaded from
+</I>&gt;<i> ThorlabsSC10 and labeled as SC10
+</I>&gt;<i> 2013-10-24T18:10:36.323450 p:6080 t:4488 [LOG] Starting initialization
+</I>&gt;<i> sequence for 6 devices...
+</I>&gt;<i> 2013-10-24T18:10:36.418455 p:6080 t:4488 [LOG] Device COM3 initialized.
+</I>&gt;<i> 2013-10-24T18:10:36.424456 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> PVCAM VERSION: 2.9.5. Number of cameras detected: 1
+</I>&gt;<i> 2013-10-24T18:10:36.616467 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> Building Speed Table
+</I>&gt;<i> 2013-10-24T18:10:36.735474 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> Initializing Static Camera Properties
+</I>&gt;<i> 2013-10-24T18:10:36.747474 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> Initializing Dynamic Camera Properties
+</I>&gt;<i> 2013-10-24T18:10:36.931485 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> This Camera does not have EM Gain
+</I>&gt;<i> 2013-10-24T18:10:36.931485 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> Frame Transfer mode not available
+</I>&gt;<i> 2013-10-24T18:10:36.976487 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> Using PVCAM callbacks for frame acquisition
+</I>&gt;<i> 2013-10-24T18:10:36.976487 p:6080 t:4488 [LOG] Device CoolsnapMyo set as
+</I>&gt;<i> default camera.
+</I>&gt;<i> 2013-10-24T18:10:36.976487 p:6080 t:4488 [LOG] Device CoolsnapMyo
+</I>&gt;<i> initialized.
+</I>&gt;<i> 2013-10-24T18:10:36.999489 p:6080 t:4488 [LOG] Device Picard Twister
+</I>&gt;<i> initialized.
+</I>&gt;<i> 2013-10-24T18:10:37.003489 p:6080 t:4488 [LOG] Device Picard Z Stage
+</I>&gt;<i> initialized.
+</I>&gt;<i> 2013-10-24T18:10:37.027490 p:6080 t:4488 [LOG] Device Picard XY Stage set
+</I>&gt;<i> as default xyStage.
+</I>&gt;<i> 2013-10-24T18:10:37.027490 p:6080 t:4488 [LOG] Device Picard XY Stage
+</I>&gt;<i> initialized.
+</I>&gt;<i> 2013-10-24T18:10:37.078493 p:6080 t:4488 [LOG] Device SC10 message:
+</I>&gt;<i> THORLABS SC10 VERSION 1.07
+</I>&gt;<i>
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Device SC10 set as default
+</I>&gt;<i> shutter.
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Device SC10 initialized.
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Camera device set to
+</I>&gt;<i> CoolsnapMyo
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Focus device set to Picard
+</I>&gt;<i> Z Stage
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Auto shutter ON.
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard Z Stage defined as StepSize=1.5000
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard Z Stage defined as Velocity=10
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard XY Stage defined as TransposeMirrorX=0
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard XY Stage defined as TransposeMirrorY=0
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard XY Stage defined as X-StepSize=1.5000
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard XY Stage defined as X-Velocity=10
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard XY Stage defined as Y-StepSize=1.5000
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Resolution ID 20X: for
+</I>&gt;<i> device Picard XY Stage defined as Y-Velocity=10
+</I>&gt;<i> 2013-10-24T18:10:37.094494 p:6080 t:4488 [LOG] Pixel size 0.482100 um set
+</I>&gt;<i> for resolution ID: 20X
+</I>&gt;<i> 2013-10-24T18:10:37.123496 p:6080 t:4488 [LOG] System state cache updated.
+</I>&gt;<i> 2013-10-24T18:10:37.206500 p:6080 t:4488 [LOG] Device SC10 message: 1
+</I>&gt;<i>
+</I>&gt;<i> 2013-10-24T18:10:37.219501 p:6080 t:4488 [LOG] System state cache updated.
+</I>&gt;<i> 2013-10-24T18:10:37.287505 p:6080 t:4488 [LOG] &gt; Startup script file
+</I>&gt;<i> (C:\Users\ah659\Desktop\OpenSPIM-20130131\OpenSPIM.app/MMStartup.bsh) not
+</I>&gt;<i> present.
+</I>&gt;<i> 2013-10-24T18:13:57.141936 p:6080 t:4488 [LOG] &gt; Plugin command: Acquire
+</I>&gt;<i> SPIM image
+</I>&gt;<i> 2013-10-24T18:13:57.487956 p:6080 t:4488 [LOG] Device SC10 message: 1
+</I>&gt;<i>
+</I>&gt;<i> 2013-10-24T18:13:57.563960 p:6080 t:4488 [LOG] Device CoolsnapMyo message:
+</I>&gt;<i> Started sequence on CoolsnapMyo, at 435953637 563960, with 2147483647 and
+</I>&gt;<i> 0 ms
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131028/39898248/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20131028/39898248/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001219.html">[OpenSPIM] windows crash after today's update
+</A></li>
+	<LI>Next message: <A HREF="001217.html">[OpenSPIM] &quot;Stack at this Z plus&quot; problem persisting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1222">[ date ]</a>
+              <a href="thread.html#1222">[ thread ]</a>
+              <a href="subject.html#1222">[ subject ]</a>
+              <a href="author.html#1222">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

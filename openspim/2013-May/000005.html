@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] [openspim] laser questions
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bopenspim%5D%20laser%20questions&In-Reply-To=%3C5194E6CE.8070702%40buffalo.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000004.html">
+   <LINK REL="Next"  HREF="000006.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] [openspim] laser questions</H1>
+    <B>Wade Sigurdson</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bopenspim%5D%20laser%20questions&In-Reply-To=%3C5194E6CE.8070702%40buffalo.edu%3E"
+       TITLE="[OpenSPIM] [openspim] laser questions">wjs at buffalo.edu
+       </A><BR>
+    <I>Thu May 16 09:01:50 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000004.html">[OpenSPIM] About the OpenSPIM/Fiji package
+</A></li>
+        <LI>Next message: <A HREF="000006.html">[OpenSPIM] Thickness of Open SPIM Light Sheet
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes,
+
+We are making good progress on our Open SPIM project.  Machining almost 
+done and we just received the USB Pickard stage.
+
+I'm now trying the get the software working.  I use Fiji all the time 
+for image processing (great package and a pleasure to use) and so am 
+familiar with installation and operation.  But when I installed the 
+OpenSPIM version and opened MicroManager Studio I get the following 
+error window:
+
+Failed to open libMMCoreJ_wrap.jnilib
+mmcorej.MMCoreJJNI.swig_module_init()V
+
+The MM window opens, but when I try to run the Hardware config wizard I 
+get the following:
+
+org.micromanager.MMStudioMainFrame.run HardwareWizard 
+(MMStudioMainFrame.java:4763)
+
+which I'm guessing is due to the first error.
+
+I looked around at the MM forum for some ideas on what might be wrong 
+and even tried copying the MMCoreJ_wrap.dll into the OpenSPIM root 
+directory, but still have the error.
+
+Is there something wrong with my XP environment variables or is there a 
+path I need to configure?
+
+Thanks for any help.
+
+Wade
+On 03/14/2013 11:58 AM, Johannes Schindelin wrote:
+&gt;<i> Hi Wade,
+</I>&gt;<i>
+</I>&gt;<i> On Thu, 14 Mar 2013, Wade Sigurdson wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> We are planning on building the OpenSPIM system as described on your
+</I>&gt;&gt;<i> wiki page and are trying to re-purpose an Ar/Kr laser from an old
+</I>&gt;&gt;<i> Bio-Rad Confocal as the illumination source.  For the 488nm line, I
+</I>&gt;&gt;<i> measured about 2mW  output from the fiber optic after aligning the laser
+</I>&gt;&gt;<i> launch.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> We could easily design and make a mount for the fiber optic which would
+</I>&gt;&gt;<i> replace the Coherent laser in your original plans, but is this enough
+</I>&gt;&gt;<i> power to be usable?
+</I>&gt;<i> IIRC we often drive it with about 1mW or even less, so you should be fine.
+</I>&gt;<i> Note, however, that we needed computer control over the laser in long-term
+</I>&gt;<i> time-lapse recordings because the specimen bleached too much otherwise.
+</I>&gt;<i>
+</I>&gt;&gt;<i> Since this is a proof of principle project and if we get the system
+</I>&gt;&gt;<i> working without purchasing the diode laser, we likely could interest
+</I>&gt;&gt;<i> other potential uses to contribute money to the project.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> We also have in hand a Zeiss 63x/1.0 water immersion objective which we
+</I>&gt;&gt;<i> may interested in using as a replacement for the Olympus 20x lens. Could
+</I>&gt;&gt;<i> this be used with the Olympus tube lens without introducing significant
+</I>&gt;&gt;<i> aberrations?  I believe that Zeiss does some chromatic aberration
+</I>&gt;&gt;<i> correction in the tube lens of their microscopes, but have no idea if
+</I>&gt;&gt;<i> the  Olympus tube lens would be compatible with Zeiss objectives.
+</I>&gt;<i> The tube lens is on the illumination side, for which I would stay with a
+</I>&gt;<i> 10x lens. On the detection side, we have a 20x objective that might be
+</I>&gt;<i> easily replaced by your 63x objective. I am no optics expert and depending
+</I>&gt;<i> who I asked, I got encouraging and discouraging answers whether it would
+</I>&gt;<i> work to replace the detection objective with a different magnification
+</I>&gt;<i> one.
+</I>&gt;<i>
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+-- 
+*Wade J. Sigurdson, Ph.D.
+Director, Confocal Microscope and Flow Cytometry Facility
+School of Medicine and Biomedical Sciences
+University at Buffalo
+*
+Voice - 716-829-3589
+FAX - 716-829-3589
+<A HREF="http://openspim.org/mailman/listinfo/openspim">wjs at buffalo.edu</A>
+www.smbs.buffalo.edu/confocal
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130516/a095a0f8/attachment.html">http://openspim.org/pipermail/openspim/attachments/20130516/a095a0f8/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000004.html">[OpenSPIM] About the OpenSPIM/Fiji package
+</A></li>
+	<LI>Next message: <A HREF="000006.html">[OpenSPIM] Thickness of Open SPIM Light Sheet
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

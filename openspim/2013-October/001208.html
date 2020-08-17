@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] New OpenSPIM version available
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20OpenSPIM%20version%20available&In-Reply-To=%3C76208b2522fb6.52681b28%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001207.html">
+   <LINK REL="Next"  HREF="001209.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] New OpenSPIM version available</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20OpenSPIM%20version%20available&In-Reply-To=%3C76208b2522fb6.52681b28%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] New OpenSPIM version available">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Oct 23 18:53:28 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001207.html">[OpenSPIM] paper in PLoSOne
+</A></li>
+        <LI>Next message: <A HREF="001209.html">[OpenSPIM] New OpenSPIM version available
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1208">[ date ]</a>
+              <a href="thread.html#1208">[ thread ]</a>
+              <a href="subject.html#1208">[ subject ]</a>
+              <a href="author.html#1208">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello everyone,
+
+I've finished updating the plugin to use (nearly) the latest Micro-Manager base. The changes have been pushed to our update site; please be sure you update Fiji to get the latest code (This is a good idea in general, particularly if you encounter a possible issue.). I should point out that completely updating Fiji sometimes takes two or three goes before all changes have been acquired successfully; please make sure that the updater says &quot;Your ImageJ is up to date!&quot; at the end (or, if you're tinkering with the development environment, there will only be locally-modified files).
+
+
+There is one known issue I've encountered: having the plugin auto-start with Micro-Manager causes stage controls to not function. (I suspect the startup sequence for Micro-Manager has changed, causing the startup script to run earlier than expected.) As a temporary workaround, please do not auto-start the plugin. I hope to have a fix for this tomorrow or early next week.
+
+
+I also expect people using unexpected hardware may receive load errors saying the device adapter interface versions are mismatched. (This may also happen silently, causing unexpected program crashes.) If this is the case, please download the latest _non-nightly_ version of Micro-Manager and try the adapters from there. (For reference, the Hamamatsu device adapter we distribute now comes from the October 11 nightly build: <A HREF="http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_32bit_1.4.16_20131011.exe">http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_32bit_1.4.16_20131011.exe</A> -- any device adapters from that release will almost certainly work with OpenSPIM.)
+N.B.: The latest nightly build has once again changed version numbers, so device adapters from that build will _not_ load in OpenSPIM -- yet. :-)
+
+
+Some special notes for people using our development environment:
+- You will need to &quot;git pull&quot; to update to the latest source code.
+- Your device adapters may not show any need for updating, but their use could cause trouble -- see the above note for where to find replacements, if you aren't building them from scratch.
+
+
+As always, if you encounter any problems, feel free to e-mail myself and/or the list; I'll do my best to address issues as they are raised.
+
+
+Thank you,
+Luke Stuyvenberg
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001207.html">[OpenSPIM] paper in PLoSOne
+</A></li>
+	<LI>Next message: <A HREF="001209.html">[OpenSPIM] New OpenSPIM version available
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1208">[ date ]</a>
+              <a href="thread.html#1208">[ thread ]</a>
+              <a href="subject.html#1208">[ subject ]</a>
+              <a href="author.html#1208">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

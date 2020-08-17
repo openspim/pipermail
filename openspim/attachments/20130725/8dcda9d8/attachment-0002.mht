@@ -1,0 +1,62 @@
+[From nobody Fri Jul  1 14:07:47 2016
+Received: from [144.92.8.223] (Forwarded-For: 144.92.8.223)
+ by wmweb3.doit.wisc.edu (mshttpd); Wed, 24 Jul 2013 16:30:53 -0500
+Date: Wed, 24 Jul 2013 16:30:53 -0500
+From: Luke Stuyvenberg &lt;stuyvenberg@wisc.edu&gt;
+Subject: Re: API(s) for OpenSPIM control of laser intensity?
+In-reply-to: &lt;76b0c2323f18.51f04775@wiscmail.wisc.edu&gt;
+To: Alexis Maizel &lt;Alexis.Maizel@cos.uni-heidelberg.de&gt;
+Message-id: &lt;77009375218d.51f0013d@wiscmail.wisc.edu&gt;
+MIME-version: 1.0
+X-Mailer: Oracle Communications Messenger Express 7u4-25.01(7.0.4.25.0) 64bit
+ (built Feb 29 2012)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-language: en
+Content-transfer-encoding: 7BIT
+Content-disposition: inline
+X-Accept-Language: en
+Priority: normal
+References: &lt;49B874FB-5F29-49B7-9C0D-DD9C8034E1E7@cos.uni-heidelberg.de&gt;
+ &lt;779099014199.51f01128@wiscmail.wisc.edu&gt;
+ &lt;7790d44c6ea8.51f01164@wiscmail.wisc.edu&gt;
+ &lt;7620be2246e9.51f011a1@wiscmail.wisc.edu&gt;
+ &lt;76e08726191f.51f01219@wiscmail.wisc.edu&gt;
+ &lt;76e0aa0e5df7.51f01292@wiscmail.wisc.edu&gt;
+ &lt;7710f5033fbc.51f012cf@wiscmail.wisc.edu&gt;
+ &lt;7710e3486b69.51f0130d@wiscmail.wisc.edu&gt;
+ &lt;76d0c217d90.51f0134c@wiscmail.wisc.edu&gt;
+ &lt;7610f37a2e7a.51f01389@wiscmail.wisc.edu&gt;
+ &lt;7610a49a732c.51f013c8@wiscmail.wisc.edu&gt;
+ &lt;7790e11d44bf.51efcd86@wiscmail.wisc.edu&gt;
+ &lt;09DC69B2-F137-4739-8E27-2163DE972E66@cos.uni-heidelberg.de&gt;
+ &lt;76d0cf61c6a.51f04586@wiscmail.wisc.edu&gt;
+ &lt;7630ff848b0.51f045c9@wiscmail.wisc.edu&gt;
+ &lt;76e0c8b7336b.51f04608@wiscmail.wisc.edu&gt;
+ &lt;7610de092aeb.51f04644@wiscmail.wisc.edu&gt;
+ &lt;76b0ad073b0f.51f04680@wiscmail.wisc.edu&gt;
+ &lt;7690936e560d.51f046bd@wiscmail.wisc.edu&gt;
+ &lt;761091b33afa.51f046fc@wiscmail.wisc.edu&gt;
+ &lt;77909814700d.51f04739@wiscmail.wisc.edu&gt;
+ &lt;76b0c2323f18.51f04775@wiscmail.wisc.edu&gt;
+
+Hi Alexis,
+On 07/24/13, Alexis Maizel  wrote:
+&gt; If we would assume that I'd prefer to not alter the OpenSPIM core code, I could in principle achieve the same effect by renaming the &quot;OnPower&quot; properties of the Cobolt DAL to be called &quot;OnPowerSetPoint&quot; and refactor it to implement the CoherentCube DAL behaviour, no?
+&gt; Definitively more work than your solution, but like this I am sure that all my hacks are in the same place, which should warrant less maintenance headaches on the long run (i-e next time OpenSPIM is updated, I do not have to remember to modify again SPIMAcquisition.java) 
+
+
+Quite right. If that's the approach you'd prefer, there is another change you'll have to make -- OpenSPIM expects properties for minimum and maximum laser power as well; Cobolt doesn't offer these, but they can be added:
+
+
+- On (what used to be) line 86, change CreateProperty(&quot;Power&quot; ... to CreateProperty(&quot;PowerSetPoint&quot; ... (Micro-Manager only cares about that string, as far as accessing the property.)
+- Add lines inside that function:
+ - CreateProperty(&quot;Minimum Laser Power&quot;, &quot;&lt;lowest value&gt;&quot;, MM::Float, true)
+ - CreateProperty(&quot;Maximum Laser Power&quot;, &quot;&lt;highest value&gt;&quot;, MM::Float, true)
+ filling in the values as appropriate, of course.
+
+
+I hope this helps. Do let me know if you get it working!
+
+
+Luke Stuyvenberg
+]

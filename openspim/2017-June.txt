@@ -1,0 +1,1089 @@
+From m.pawlowska at nencki.gov.pl  Mon Jun  5 07:42:08 2017
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 05 Jun 2017 14:42:08 +0200
+Subject: [OpenSPIM] thicker light sheet
+Message-ID: <op.y1c1kif6ahhlbl@pc507-99ff.ibd>
+
+Dear all,
+
+just to make sure that my understanding of optics is not failing me: if I  
+want to have a thicker (and more uniform) light sheet, but with the same  
+height (same FOV), I can
+-use a slit, losing power and introducing diffraction pattern
+-exchange illumination objective into lower magnification (losing money ;)  
+)
+
+are there other options?
+
+Regards,
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From Michael_Weber at hms.harvard.edu  Mon Jun  5 08:06:43 2017
+From: Michael_Weber at hms.harvard.edu (Weber, Michael)
+Date: Mon, 5 Jun 2017 13:06:43 +0000
+Subject: [OpenSPIM] thicker light sheet
+In-Reply-To: <op.y1c1kif6ahhlbl@pc507-99ff.ibd>
+References: <op.y1c1kif6ahhlbl@pc507-99ff.ibd>
+Message-ID: <B1EC76CF-D0F4-4709-89ED-E67C05437F9B@hms.harvard.edu>
+
+Hi Monika,
+
+Using a slit is a quick and flexible solution. By reducing the magnification of the illumination objective you’re also increasing the light sheet height, losing laser power but gaining illumination uniformity for a given field of view. You’d need to modify the ratio of beam expander and telescope to modify the light sheet properties. You can find examples for calculating the optics for light sheet illumination in a recent book chapter:
+
+http://www.wiley.com/WileyCDA/WileyTitle/productCd-3527338373.html
+
+Best,
+Michael
+
+On Jun 5, 2017, at 8:42 AM, Monika Pawłowska <m.pawlowska at nencki.gov.pl<mailto:m.pawlowska at nencki.gov.pl>> wrote:
+
+Dear all,
+
+just to make sure that my understanding of optics is not failing me: if I want to have a thicker (and more uniform) light sheet, but with the same height (same FOV), I can
+-use a slit, losing power and introducing diffraction pattern
+-exchange illumination objective into lower magnification (losing money ;) )
+
+are there other options?
+
+Regards,
+
+--
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Dr. Michael Weber
+Advanced Microscopy Fellow
+Harvard Medical School
+240 Longwood Ave, LHRRB 113, Boston, MA 02115
+http://nic.med.harvard.edu
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170605/f1702730/attachment.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Fri Jun  9 08:42:58 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Fri, 09 Jun 2017 14:42:58 +0100
+Subject: [OpenSPIM] distance telescope illumination objective
+Message-ID: <a76138ed3fecf6377274c4ef4de4b2db@cam.ac.uk>
+
+Dear all,
+
+do I understand correctly that there has to be a specific distance 
+between the last telescope lens and the illumination objective?
+
+So I could NOT move the sample chamber further away from the telescope? 
+I was thinking about doing this since we have a wider bread board and a 
+longer path would make it easier to align the laser.
+
+Thank you,
+
+Stephanie
+
+
+Dr. Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+Office Tel: 01223 337859
+Office: H0.03
+
+
+
+
+From Michael_Weber at hms.harvard.edu  Fri Jun  9 09:15:14 2017
+From: Michael_Weber at hms.harvard.edu (Weber, Michael)
+Date: Fri, 9 Jun 2017 14:15:14 +0000
+Subject: [OpenSPIM] distance telescope illumination objective
+In-Reply-To: <a76138ed3fecf6377274c4ef4de4b2db@cam.ac.uk>
+References: <a76138ed3fecf6377274c4ef4de4b2db@cam.ac.uk>
+Message-ID: <BLUPR0701MB17450275AAC2BBB12FDF1062DDCE0@BLUPR0701MB1745.namprd07.prod.outlook.com>
+
+Hi Stephanie,
+
+
+
+Every distance after the cylindrical lens is critical. Moving the sample chamber with respect to the telescope will shift the position of the light sheet waist. If you want to increase the distance between telescope and chamber you could build the telescope out of two lenses with longer focal lengths but the same ratio.
+
+
+
+Best,
+
+Michael
+
+
+
+From: Dr S. Hoehn<mailto:S.Hoehn at damtp.cam.ac.uk>
+Sent: Friday, June 9, 2017 9:43 AM
+To: OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+Subject: [OpenSPIM] distance telescope illumination objective
+
+
+
+Dear all,
+
+do I understand correctly that there has to be a specific distance
+between the last telescope lens and the illumination objective?
+
+So I could NOT move the sample chamber further away from the telescope?
+I was thinking about doing this since we have a wider bread board and a
+longer path would make it easier to align the laser.
+
+Thank you,
+
+Stephanie
+
+
+Dr. Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+Office Tel: 01223 337859
+Office: H0.03
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170609/e5eae151/attachment.html>
+
+From david.potter at monash.edu  Sat Jun 10 00:10:33 2017
+From: david.potter at monash.edu (David Potter)
+Date: Sat, 10 Jun 2017 15:10:33 +1000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 46, Issue 2
+In-Reply-To: <mailman.1.1497027601.93176.openspim@openspim.org>
+References: <mailman.1.1497027601.93176.openspim@openspim.org>
+Message-ID: <CAHmtN7nvE8y7UvW-ijc-7kvoaBiqPZ4hjVy+x+T78NwmkL_P4w@mail.gmail.com>
+
+Stephanie,
+
+You are correct. The tube lens (the 25mm) of the 2nd telescope needs to be
+focused at the back focal plane (BFP) of the illumination objective. Move
+the focus from the BFP and the light sheet exiting the objective will
+either converge or diverge i.e. the sheet won't be collimated in the XY
+plane and it'll look fan shaped. Conversely, even if you do move the
+objective/chamber along the axis of the objective, the XZ plane will remain
+in focus at 3.5 mm from the nose of the objective as the laser is
+collimated in that plane at the BFP. Of course this behavior assumes all of
+the upstream optics are in proper relationship to each other. You could
+have the upstream alignments wrong and still get a visibly collimated sheet
+with the 25 mm tube lens not focused in the BFP but your light sheet
+quality will be somewhere between slightly off to just plain crap as well
+as potentially being tilted out of and/or within the detection plane. The
+final four optical elements are indeed functionally tied together. The
+cylindrical lens shares a focal plane with the following 50mm which shares
+a focal plane with the 25mm which shares a focal plane with the objective
+all of which only work if the laser coming into the cylindrical is
+collimated and enters into the center and is on axis.
+
+Your next question might well be: where is the BFP of an objective? As most
+objective houses won't tell you, you have to find it experimentally. This
+can be done pretty easily. Assuming your system is assembled, mirror align
+the laser, all lenses removed from their mounts, to the center and along
+the axis of the illumination objective. Fill the sample chamber with water
+containing a fluorophore appropriate to your laser. With the laser and
+camera on and the objectives correctly placed with respect to each other,
+you should see the laser focal point more or less in the center of the
+camera image. Please note that your alignment could be pure genius and
+still look stuffed up if your camera and tube lens aren't aligned with and
+centered on the detection objective axis. Move the illumination objective
+to center the laser focal point in the FOV and move the detection objective
+to bring the beam into best focus. Try using profile plot with live update
+in Fiji while dragging the ROI around to find the highest intensity point
+i.e the center. If the beam is tilted within or out the FOV plane, the
+laser is entering the objective at an angle to the axis (or the objectives
+aren't square to each other). Too high or too low, and the beam is parallel
+to the objective axis but not _on_ the axis. The laser back reflection off
+a properly aligned objective should line up with the laser spot on the
+mirror face. It's also fair to note that the sample chamber may be poorly
+mounted and the objective ports not be perfectly in plane and at 90 degrees
+to each other. This is important to consider because if you start with a
+well aligned beam i.e. in plane, 50 mm from the optics board and centered
+through the lens mounts, and then tilt the beam to match a poorly placed or
+built chamber, which is certainly an optical element in this build, you'll
+never get a really good alignment after putting the optics back in the
+system as they are all mounted on fixed height posts and now might not
+co-axially align with the new beam path.
+
+Once you're satisfied with the location of the beam and chamber, place a
+point reference either on the monitor (a Post-It corner works) or an ROI on
+the live imaging window to mark the center point of focus for later use.
+Place the 25 mm lens in question on the rail. Turn the laser back on and
+live image while you slide the lens back and forth; you are in the BFP when
+the light sheet exiting the objective is collimated. It really helps if you
+have a thin object in the beam path as the shadows cast are very good
+indicators of collimation and the expanded beam will be much fainter (and
+possibly impossible to resolve clearly) than the focused beam. Look for
+zero convergence/divergence of the shadows. Measure the distance from the
+lens mount to the objective for your future reference. Note: if your lens
+mount is rotated about the pillar mount axis or tipped at some small angle,
+you won't be able to discern the issue until you mount the 50 mm lens.
+Which then leaves you with a two variable question but...
+
+When you place the 50 mm telescope lens onto the rail you can co-localize
+its focal point with the 25 mm lens focal point by sliding it along until
+the laser is in focus and located at your previously marked center point.
+The center will be harder to find as the NA of the beam will be smaller
+than the raw laser and thus the Rayleigh length longer. Again Fiji profile
+can help. If the beam is tilted in the plane and/or out of plane, the laser
+and the lens or lens pair don't share an axis. Adjust the lens, actually
+more likely both lenses, as best as you can and move the beam via the
+mirrors only as a last resort. This is the fiddly frustrating bit of
+putting together a base level OpenSPIM as finding the right set of
+sub-optimal alignments of mostly fixed optics that will work in the end is
+a deeply iterative process.You can continue the alignment from this point
+by working backwards through the remaining optics though I would leave the
+cylindrical for last and you'll need to place the beam expander lens pair
+as a group. Using a 1" 50mm achromat lens in place of the cylindrical for
+initial alignment can be useful to get mounting angles close because
+cylindrical lenses can be very difficult to center properly.
+
+Finish up your alignment with a fine tune of light sheet planar and focal
+parameters via imaging the center of an agarose cylinder sample containing
+fluoro beads or simply dumping enough beads into chamber water (without
+fluorophore of course). It'll be very obvious if your sheet is tipped out
+of the detection focal plane. This is really the only way to get
+cylindrical rotation correct. While you're at it, fine focus the detection
+objective. A large number of out of focus beads in front of and/or behind
+the focal plane indicates a loss of optical confinement and can mean your
+sheet is badly formed. Take the opportunity to adjust the corner mirror to
+understand what changes are reflected in light sheet propagation. You can
+also use the airy discs of out of focus beads to tell you if your detection
+objective, tube lens and camera are well aligned. I don't recommend using
+an agarose cylinder for the initial build process as the agarose cylinder
+will steer the beam potentially leaving your baseline alignment crooked. Of
+course you're correct if you think the same issue is at work during sample
+imaging. Nature of the beast.
+
+Well it isn't a short answer but hopefully it's a useful one. Have a good
+weekend.
+
+Cheers,
+
+- David
+
+David Potter
+Lattice Light Sheet Microscopy Manager
+Monash Micro Imaging - Advanced Optical Microscopy
+Monash University Clayton, VIC 3800, Australia
+
+
+
+On 10 June 2017 at 03:00, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. distance telescope illumination objective (Dr S. Hoehn)
+>    2. Re: distance telescope illumination objective (Weber, Michael)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Fri, 09 Jun 2017 14:42:58 +0100
+> From: "Dr S. Hoehn" <S.Hoehn at damtp.cam.ac.uk>
+> To: OpenSPIM at openspim.org
+> Subject: [OpenSPIM] distance telescope illumination objective
+> Message-ID: <a76138ed3fecf6377274c4ef4de4b2db at cam.ac.uk>
+> Content-Type: text/plain; charset=US-ASCII; format=flowed
+>
+> Dear all,
+>
+> do I understand correctly that there has to be a specific distance
+> between the last telescope lens and the illumination objective?
+>
+> So I could NOT move the sample chamber further away from the telescope?
+> I was thinking about doing this since we have a wider bread board and a
+> longer path would make it easier to align the laser.
+>
+> Thank you,
+>
+> Stephanie
+>
+>
+> Dr. Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> Office Tel: 01223 337859
+> Office: H0.03
+>
+>
+>
+>
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Fri, 9 Jun 2017 14:15:14 +0000
+> From: "Weber, Michael" <Michael_Weber at hms.harvard.edu>
+> To: "OpenSPIM at openspim.org" <OpenSPIM at openspim.org>
+> Subject: Re: [OpenSPIM] distance telescope illumination objective
+> Message-ID:
+>         <BLUPR0701MB17450275AAC2BBB12FDF1062DDCE0 at BLUPR0701MB1745.
+> namprd07.prod.outlook.com>
+>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Hi Stephanie,
+>
+>
+>
+> Every distance after the cylindrical lens is critical. Moving the sample
+> chamber with respect to the telescope will shift the position of the light
+> sheet waist. If you want to increase the distance between telescope and
+> chamber you could build the telescope out of two lenses with longer focal
+> lengths but the same ratio.
+>
+>
+>
+> Best,
+>
+> Michael
+>
+>
+>
+> From: Dr S. Hoehn<mailto:S.Hoehn at damtp.cam.ac.uk>
+> Sent: Friday, June 9, 2017 9:43 AM
+> To: OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+> Subject: [OpenSPIM] distance telescope illumination objective
+>
+>
+>
+> Dear all,
+>
+> do I understand correctly that there has to be a specific distance
+> between the last telescope lens and the illumination objective?
+>
+> So I could NOT move the sample chamber further away from the telescope?
+> I was thinking about doing this since we have a wider bread board and a
+> longer path would make it easier to align the laser.
+>
+> Thank you,
+>
+> Stephanie
+>
+>
+> Dr. Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> Office Tel: 01223 337859
+> Office: H0.03
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20170609/e5eae151/attachment-0001.html>
+>
+> ------------------------------
+>
+> Subject: Digest Footer
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> ------------------------------
+>
+> End of OpenSPIM Digest, Vol 46, Issue 2
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170610/cdd3d8f0/attachment.html>
+
+From nijack at umich.edu  Sat Jun 10 17:49:55 2017
+From: nijack at umich.edu (Nichelle Jackson)
+Date: Sat, 10 Jun 2017 18:49:55 -0400
+Subject: [OpenSPIM] Zebrafish embryo sample preparation
+Message-ID: <CAPYrD_LEzTW0S6kzn-5suYp5Uxpeh=pTdOkpVL=yfQPt-Xb7vw@mail.gmail.com>
+
+Hello,
+
+Currently we are trying to find the best way to hold a prepared sample in
+FEP tubing in the sample pulley so we can rotate it without shaking. We
+have tried attaching the FEP tube to a syringe which sits on top of the
+sample pulley and drilling a small whole through a rubber stopper, however
+upon rotating the sample, there was a pretty dramatic shift. I was
+wondering if there are deigns for the sample holder shown on the OpenSPIM
+Wiki, or other suggestions for holding a sample prepared for longterm
+imaging of live zebrafish.
+
+Best,
+Nichelle Jackson
+
+Ph.D. Student
+Department of Pharmacology
+University of Michigan, Ann Arbor, MI
+nijack at umich.edu
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170610/579b4c5d/attachment.html>
+
+From nvladimus at gmail.com  Sun Jun 11 08:36:29 2017
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Sun, 11 Jun 2017 09:36:29 -0400
+Subject: [OpenSPIM] Zebrafish embryo sample preparation
+In-Reply-To: <CAPYrD_LEzTW0S6kzn-5suYp5Uxpeh=pTdOkpVL=yfQPt-Xb7vw@mail.gmail.com>
+References: <CAPYrD_LEzTW0S6kzn-5suYp5Uxpeh=pTdOkpVL=yfQPt-Xb7vw@mail.gmail.com>
+Message-ID: <CAC+J2jmhg4_=zc1Or-mY4=7-ibTMCyTf1J5eXKp-ZD88mXgK3Q@mail.gmail.com>
+
+Hi, Nichelle,
+We used a custom-made fish holder (see attached paper, suppl.,Fig.1) to
+hold 5-7 dpf zebrafish in SPIM, while it's head and tail are free in water.
+The holder surrounds the central segment of fish body (like a slit), and
+holds him at place with a thin layer of agarose. Fish was paralyzed or
+sedated with MS222, otherwise it would swim out. The agarose is used only
+between the mid-body and the holder, and the rest of fish is surrounded by
+water. Making the holder and mounting the fish are a bit tricky, but I am
+happy to share details if anyone is interested.
+[image: Inline image 1]
+Best,
+Nikita Vladimirov
+
+
+
+On Sat, Jun 10, 2017 at 6:49 PM, Nichelle Jackson <nijack at umich.edu> wrote:
+
+> Hello,
+>
+> Currently we are trying to find the best way to hold a prepared sample in
+> FEP tubing in the sample pulley so we can rotate it without shaking. We
+> have tried attaching the FEP tube to a syringe which sits on top of the
+> sample pulley and drilling a small whole through a rubber stopper, however
+> upon rotating the sample, there was a pretty dramatic shift. I was
+> wondering if there are deigns for the sample holder shown on the OpenSPIM
+> Wiki, or other suggestions for holding a sample prepared for longterm
+> imaging of live zebrafish.
+>
+> Best,
+> Nichelle Jackson
+>
+> Ph.D. Student
+> Department of Pharmacology
+> University of Michigan, Ann Arbor, MI
+> nijack at umich.edu
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170611/c28ac405/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image.png
+Type: image/png
+Size: 18700 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20170611/c28ac405/attachment-0001.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: 2014Vladimirov_etal(Light-sheet functional imaging)SUPPL.pdf
+Type: application/pdf
+Size: 5410279 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20170611/c28ac405/attachment-0002.pdf>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: 2014Vladimirov_etal(Light-sheet functional imaging).pdf
+Type: application/pdf
+Size: 714476 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20170611/c28ac405/attachment-0003.pdf>
+
+From S.Hoehn at damtp.cam.ac.uk  Thu Jun 15 09:30:28 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 15 Jun 2017 15:30:28 +0100
+Subject: [OpenSPIM] fluorophores for alignment
+Message-ID: <add9217177daf2c9b2dc490775cd8c56@cam.ac.uk>
+
+Hello,
+
+Can anyone recommend (cheap) fluorophores that are fluorescent in water 
+for alignment purposes?
+
+We'd specifically need one for a 637nm laser, but fluorophores for the 
+488nm and 534nm laser line would also be helpful.
+
+Thanks a lot.
+
+Best wishes,
+Stephanie
+
+
+Dr. Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+Office Tel: 01223 337859
+Office: H0.03
+
+
+
+
+From nvladimus at gmail.com  Thu Jun 15 10:07:23 2017
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Thu, 15 Jun 2017 11:07:23 -0400
+Subject: [OpenSPIM] fluorophores for alignment
+In-Reply-To: <add9217177daf2c9b2dc490775cd8c56@cam.ac.uk>
+References: <add9217177daf2c9b2dc490775cd8c56@cam.ac.uk>
+Message-ID: <CAC+J2jmZfDd2BPPwn30L7pkr4GAA-rW0PMndgJmmh-d=kseKrw@mail.gmail.com>
+
+Hi, Stephanie,
+I use fluorescein with 488 nm laser, it is super-cheap, water-soluble, and
+very bright.
+Best,
+Nikita
+
+On Thu, Jun 15, 2017 at 10:30 AM, Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk>
+wrote:
+
+> Hello,
+>
+> Can anyone recommend (cheap) fluorophores that are fluorescent in water
+> for alignment purposes?
+>
+> We'd specifically need one for a 637nm laser, but fluorophores for the
+> 488nm and 534nm laser line would also be helpful.
+>
+> Thanks a lot.
+>
+> Best wishes,
+> Stephanie
+>
+>
+> Dr. Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> Office Tel: 01223 337859
+> Office: H0.03
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170615/d1a702a7/attachment.html>
+
+From tnf8 at pitt.edu  Thu Jun 15 10:19:00 2017
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Thu, 15 Jun 2017 15:19:00 +0000
+Subject: [OpenSPIM] fluorophores for alignment
+In-Reply-To: <add9217177daf2c9b2dc490775cd8c56@cam.ac.uk>
+References: <add9217177daf2c9b2dc490775cd8c56@cam.ac.uk>
+Message-ID: <A2A97F0B-F5A1-4888-A534-EE4497A1F8D5@pitt.edu>
+
+We can see the laser well enough using about 1% phenol red in water, at least with 488 and 561 nm lasers.  I have not tried 647 nm.  This is for the alignment technique where you remove the cylinder lens correct?
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D. 
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+On 6/15/17, 10:30 AM, "OpenSPIM on behalf of Dr S. Hoehn" <openspim-bounces at openspim.org on behalf of S.Hoehn at damtp.cam.ac.uk> wrote:
+
+    Hello,
+    
+    Can anyone recommend (cheap) fluorophores that are fluorescent in water 
+    for alignment purposes?
+    
+    We'd specifically need one for a 637nm laser, but fluorophores for the 
+    488nm and 534nm laser line would also be helpful.
+    
+    Thanks a lot.
+    
+    Best wishes,
+    Stephanie
+    
+    
+    Dr. Stephanie Hoehn
+    DAMTP, Biological Physics
+    Centre for Mathematical Sciences
+    Wilberforce Road
+    Cambridge
+    CB3 0WA
+    United Kingdom
+    Office Tel: 01223 337859
+    Office: H0.03
+    
+    
+    
+    _______________________________________________
+    OpenSPIM mailing list
+    OpenSPIM at openspim.org
+    https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7Ce0bacbb0ee224a6846c408d4b3fb2235%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=xzEfop7CdW1wxlPV9K8GuK%2FEB1iN7vKxMJpUQeH5WbY%3D&reserved=0
+    
+
+
+From Michael_Weber at hms.harvard.edu  Thu Jun 15 10:54:11 2017
+From: Michael_Weber at hms.harvard.edu (Weber, Michael)
+Date: Thu, 15 Jun 2017 15:54:11 +0000
+Subject: [OpenSPIM] fluorophores for alignment
+In-Reply-To: <A2A97F0B-F5A1-4888-A534-EE4497A1F8D5@pitt.edu>
+References: <add9217177daf2c9b2dc490775cd8c56@cam.ac.uk>
+ <A2A97F0B-F5A1-4888-A534-EE4497A1F8D5@pitt.edu>
+Message-ID: <F879CC07-85B9-4108-AD1C-37645F7E3991@hms.harvard.edu>
+
+I all you want to see is the laser beam in the field of view than you’re good with water and no emission filter.
+
+Best,
+Michael
+
+> On Jun 15, 2017, at 11:19 AM, Feinstein, Timothy N <tnf8 at pitt.edu> wrote:
+> 
+> We can see the laser well enough using about 1% phenol red in water, at least with 488 and 561 nm lasers.  I have not tried 647 nm.  This is for the alignment technique where you remove the cylinder lens correct?
+> 
+> Best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> On 6/15/17, 10:30 AM, "OpenSPIM on behalf of Dr S. Hoehn" <openspim-bounces at openspim.org on behalf of S.Hoehn at damtp.cam.ac.uk> wrote:
+> 
+>    Hello,
+> 
+>    Can anyone recommend (cheap) fluorophores that are fluorescent in water 
+>    for alignment purposes?
+> 
+>    We'd specifically need one for a 637nm laser, but fluorophores for the 
+>    488nm and 534nm laser line would also be helpful.
+> 
+>    Thanks a lot.
+> 
+>    Best wishes,
+>    Stephanie
+> 
+> 
+>    Dr. Stephanie Hoehn
+>    DAMTP, Biological Physics
+>    Centre for Mathematical Sciences
+>    Wilberforce Road
+>    Cambridge
+>    CB3 0WA
+>    United Kingdom
+>    Office Tel: 01223 337859
+>    Office: H0.03
+> 
+> 
+> 
+>    _______________________________________________
+>    OpenSPIM mailing list
+>    OpenSPIM at openspim.org
+>    https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7Ce0bacbb0ee224a6846c408d4b3fb2235%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=xzEfop7CdW1wxlPV9K8GuK%2FEB1iN7vKxMJpUQeH5WbY%3D&reserved=0
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From jon at asiimaging.com  Thu Jun 15 11:28:09 2017
+From: jon at asiimaging.com (Jon Daniels)
+Date: Thu, 15 Jun 2017 09:28:09 -0700
+Subject: [OpenSPIM] fluorophores for alignment
+In-Reply-To: <F879CC07-85B9-4108-AD1C-37645F7E3991@hms.harvard.edu>
+Message-ID: <SldGRUZXQyo1VlVbJCtSMTIwNzE3NDg5MA@JONIO>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170615/83b21c00/attachment-0001.html>
+
+From kathrincallaghan at gmail.com  Fri Jun 16 04:22:14 2017
+From: kathrincallaghan at gmail.com (Kathrin Callaghan)
+Date: Fri, 16 Jun 2017 10:22:14 +0100
+Subject: [OpenSPIM] "Acquire SPIM Image" plugin does not open
+Message-ID: <CACD_Gs+KV-1Q31iCH_EoKtWE=rEnHUzgkh5r6D+iuuOk5TLbzg@mail.gmail.com>
+
+Hi,
+
+
+
+Would it be possible that someone could help me with a software issue?
+
+
+
+I have just installed OpenSpim and configured all hardware components in
+MicroManager. The laser is a Coherent Obis, the stage is from Picard and
+the camera is a Point Grey Grasshopper USB3.
+
+
+
+To configure the camera I had to copy a few .dll files in the MM folder, as
+it was not preconfigured in the list of available hardware devices, but it
+is recognized now.
+
+
+
+All hardware devices seem to work independently in MM. However, when I
+click on "Acquire SPIM image", nothing happens. I have attached a copy of
+the error log too in case that helps to solve the issue.
+
+
+
+Thank you for your help.
+
+
+
+Regards,
+
+
+
+Kathrin
+
+
+-- 
+*Dr. Kathrin Callaghan geb. Scherer*
+Sales & Applications Engineer
+
+Mobile: +44(0)7787812833
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170616/5e708f57/attachment.html>
+-------------- next part --------------
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+	at org.scijava.Context.inject(Context.java:440)
+	at org.scijava.Context.inject(Context.java:382)
+	at org.scijava.command.CommandModule.initialize(CommandModule.java:146)
+	at org.scijava.module.process.InitPreprocessor.process(InitPreprocessor.java:61)
+	at org.scijava.module.ModuleRunner.preProcess(ModuleRunner.java:104)
+	at org.scijava.module.ModuleRunner.run(ModuleRunner.java:156)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:126)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:65)
+	at org.scijava.thread.DefaultThreadService$2.call(DefaultThreadService.java:191)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#statusService
+	at org.scijava.Context.inject(Context.java:440)
+	at org.scijava.Context.inject(Context.java:382)
+	at org.scijava.command.CommandModule.initialize(CommandModule.java:146)
+	at org.scijava.module.process.InitPreprocessor.process(InitPreprocessor.java:61)
+	at org.scijava.module.ModuleRunner.preProcess(ModuleRunner.java:104)
+	at org.scijava.module.ModuleRunner.run(ModuleRunner.java:156)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:126)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:65)
+	at org.scijava.thread.DefaultThreadService$2.call(DefaultThreadService.java:191)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#log
+	at org.scijava.Context.inject(Context.java:440)
+	at org.scijava.Context.inject(Context.java:382)
+	at org.scijava.command.CommandModule.initialize(CommandModule.java:146)
+	at org.scijava.module.process.InitPreprocessor.process(InitPreprocessor.java:61)
+	at org.scijava.module.ModuleRunner.preProcess(ModuleRunner.java:104)
+	at org.scijava.module.ModuleRunner.run(ModuleRunner.java:156)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:126)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:65)
+	at org.scijava.thread.DefaultThreadService$2.call(DefaultThreadService.java:191)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+From S.Hoehn at damtp.cam.ac.uk  Fri Jun 16 06:10:32 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Fri, 16 Jun 2017 12:10:32 +0100
+Subject: [OpenSPIM] fluorophores for alignment
+In-Reply-To: <SldGRUZXQyo1VlVbJCtSMTIwNzE3NDg5MA@JONIO>
+References: <SldGRUZXQyo1VlVbJCtSMTIwNzE3NDg5MA@JONIO>
+Message-ID: <e45346a68e457a119fbbbae3fd5a1028@cam.ac.uk>
+
+Thanks everyone for the advice!
+
+Best wishes,
+Stephanie
+
+On 2017-06-15 17:28, Jon Daniels wrote:
+> I routinely use a Zebra Mildliner highlighter dipped in water to give
+> micron-scale fluorescent blobs that diffuse randomly like beads. I
+> have yet to find a Zebra Mildliner variety that doesn't have this
+> useful property (most highlighter pens just give a uniform dye, and
+> sometimes it is very tough to wash out, unlike fluorescein). I'm
+> usually using 488nm; once I tried at 640nm and it was pretty dim but
+> maybe choosing another color would have solved the problem (I haven't
+> investigated relative signal from different colors of the Zebra
+> Mildliner).
+> 
+> Good luck!
+> Jon
+> 
+> -------------------------------------------
+> Jon Daniels
+> Applied Scientific Instrumentation
+> Phone: (541) 461-8181 x118
+> -------------------------------------------
+> 
+>> I all you want to see is the laser beam in the field of view than
+> you're good
+>> with water and no emission filter.
+>> 
+>> Best,
+>> Michael
+>> 
+>> > On Jun 15, 2017, at 11:19 AM, Feinstein, Timothy N <tnf8 at pitt.edu>
+> wrote:
+>> >
+>> > We can see the laser well enough using about 1% phenol red in
+> water, at
+>> least with 488 and 561 nm lasers. I have not tried 647 nm. This is
+> for the
+>> alignment technique where you remove the cylinder lens correct?
+>> >
+>> > Best,
+>> >
+>> >
+>> > Tim
+>> >
+>> > Timothy Feinstein, Ph.D.
+>> > Research Scientist
+>> > University of Pittsburgh Department of Developmental Biology
+>  > >
+>> >
+>> > On 6/15/17, 10:30 AM, "OpenSPIM on behalf of Dr S. Hoehn"
+>> <openspim-bounces at openspim.org on behalf of S.Hoehn at damtp.cam.ac.uk>
+> wrote:
+>> >
+>> > Hello,
+>> >
+>> > Can anyone recommend (cheap) fluorophores that are fluorescent in
+> water
+>> > for alignment purposes?
+>> >
+>> > We'd specifically need one for a 637nm laser, but fluorophores for
+> the
+>> > 488nm and 534nm laser line would also be helpful.
+>> >
+>> > Thanks a lot.
+>> >
+>> > Best wishes,
+>> > Stephanie
+>> >
+>> >
+>> > Dr. Stephanie Hoehn
+>> > DAMTP, Biological Physics
+>> > Centre for Mathematical Sciences
+>  > > Wilberforce Road
+>> > Cambridge
+>> > CB3 0WA
+>> > United Kingdom
+>> > Office Tel: 01223 337859
+>> > Office: H0.03
+>> >
+>> >
+>> >
+>> > _______________________________________________
+>> > OpenSPIM mailing list
+>> > OpenSPIM at openspim.org
+>> >
+>> 
+> https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org
+> [1]
+>> 
+> %2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7Ce0bacbb0ee2
+>> 
+> 24a6846c408d4b3fb2235%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=xzEfop7CdW
+>  > 1wxlPV9K8GuK%2FEB1iN7vKxMJpUQeH5WbY%3D&reserved=0
+>> >
+>> >
+>> > _______________________________________________
+>> > OpenSPIM mailing list
+>> > OpenSPIM at openspim.org
+>> > http://openspim.org/mailman/listinfo/openspim [2]
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim [2]
+> 
+> 
+> 
+> Links:
+> ------
+> [1] 
+> https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org
+> [2] http://openspim.org/mailman/listinfo/openspim
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From ctrueden at wisc.edu  Fri Jun 16 12:55:21 2017
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Fri, 16 Jun 2017 12:55:21 -0500
+Subject: [OpenSPIM] "Acquire SPIM Image" plugin does not open
+In-Reply-To: <CACD_Gs+KV-1Q31iCH_EoKtWE=rEnHUzgkh5r6D+iuuOk5TLbzg@mail.gmail.com>
+References: <CACD_Gs+KV-1Q31iCH_EoKtWE=rEnHUzgkh5r6D+iuuOk5TLbzg@mail.gmail.com>
+Message-ID: <CADN69y=72evtgPZiNeH9JO4=a5awdEjX1gezHpcAzgp9ON+HVA@mail.gmail.com>
+
+Hi Kathrin,
+
+> java.lang.IllegalStateException: Context already injected:
+> net.imagej.updater.CheckForUpdates#commandService
+
+This sort of error suggests a possible skew between versions of the
+libraries (OpenSPIM.app\jars\*.jar).
+
+Is your OpenSPIM fully up-to-date? Have you tried downloading a new package
+from http://openspim.org/Downloads, and updating from there via Help >
+Update...? (Your existing installation appears to be at least partially
+broken, such that the Updater might not function correctly, but you can try
+it.)
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - https://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - https://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+
+
+On Fri, Jun 16, 2017 at 4:22 AM, Kathrin Callaghan <
+kathrincallaghan at gmail.com> wrote:
+
+> Hi,
+>
+>
+>
+> Would it be possible that someone could help me with a software issue?
+>
+>
+>
+> I have just installed OpenSpim and configured all hardware components in
+> MicroManager. The laser is a Coherent Obis, the stage is from Picard and
+> the camera is a Point Grey Grasshopper USB3.
+>
+>
+>
+> To configure the camera I had to copy a few .dll files in the MM folder,
+> as it was not preconfigured in the list of available hardware devices, but
+> it is recognized now.
+>
+>
+>
+> All hardware devices seem to work independently in MM. However, when I
+> click on "Acquire SPIM image", nothing happens. I have attached a copy of
+> the error log too in case that helps to solve the issue.
+>
+>
+>
+> Thank you for your help.
+>
+>
+>
+> Regards,
+>
+>
+>
+> Kathrin
+>
+>
+> --
+> *Dr. Kathrin Callaghan geb. Scherer*
+> Sales & Applications Engineer
+>
+> Mobile: +44(0)7787812833 <+44%207787%20812833>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170616/c674ddfe/attachment.html>
+

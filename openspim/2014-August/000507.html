@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard stage error after update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20stage%20error%20after%20update&In-Reply-To=%3C53EEAFA1.2010005%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000506.html">
+   <LINK REL="Next"  HREF="000508.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard stage error after update</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20stage%20error%20after%20update&In-Reply-To=%3C53EEAFA1.2010005%40wisc.edu%3E"
+       TITLE="[OpenSPIM] Picard stage error after update">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Aug 15 20:10:57 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000506.html">[OpenSPIM] Picard stage error after update
+</A></li>
+        <LI>Next message: <A HREF="000508.html">[OpenSPIM] Picard stage error after update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#507">[ date ]</a>
+              <a href="thread.html#507">[ thread ]</a>
+              <a href="subject.html#507">[ subject ]</a>
+              <a href="author.html#507">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Veli-Pekka,
+
+On 8/14/2014 7:01 AM, Veli-Pekka Ronkainen wrote:
+&gt;<i> However, now after using the Fiji updater Picard USB-stage rotation 
+</I>&gt;<i> angle coordinates are not right anymore. Changing angle from -180 deg 
+</I>&gt;<i> to 180 deg rotates the sample holder only ~180 degrees, and rotation 
+</I>&gt;<i> in general spins the sample much less than indicated by the slider. In 
+</I>&gt;<i> addition, we can not access and modify old .cfg-files, so that it 
+</I>&gt;<i> would be possible to change step size of the twister from 1.8 to 1, as 
+</I>&gt;<i> it was discussed earlier: 
+</I>&gt;<i> <A HREF="http://openspim.org/pipermail/openspim/2014-July/000482.html">http://openspim.org/pipermail/openspim/2014-July/000482.html</A> 
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/pipermail/openspim/2014-July/000482.html">http://openspim.org/pipermail/openspim/2014-July/000482.html</A>&gt; .
+</I>As you suspected, this is because of the change in step size.
+
+&gt;<i> Modification of an existing configuration starts with an error &quot;Error 
+</I>&gt;<i> in device Picard Z Stage: Unable to communicate with the device&quot; 
+</I>&gt;<i> followed by lots of COM and &quot;No device with label _device name_&quot; 
+</I>&gt;<i> -errors. Creating a new configuration doesn't help since it is not 
+</I>&gt;<i> possible to add Picard stage z-axis to the config file or modify 
+</I>&gt;<i> the serial number.
+</I>The error when modifying a configuration or creating new configurations 
+is a different problem entirely, and one I wasn't aware of. If you 
+could, please, attach a CoreLog or two from after the update, when 
+you've received these errors. (If you can't tell which one contains 
+these errors, you can open them and search, or just run the program 
+again and produce a new one.) This would go a long way towards figuring 
+out what's causing this problem.
+
+But in the meantime, an easy, dirty solution to the problem interfering 
+with your experiments is to open a working configuration file in 
+Notepad. You should see a line in there that reads something like
+
+&quot;Device,Picard Twister,StepSize,1.8&quot;
+
+Changing the 1.8 to 1 should resolve at least the rotational stage problem.
+
+&gt;<i> We've tried to copy the latest Picard .dll-files from the recent 
+</I>&gt;<i> Micro-Manager nightly build but the problem persists. Are there some 
+</I>&gt;<i> other files we should copy and replace as well? Of course we can still 
+</I>&gt;<i> download and configure the non-updated package from openspim.org and 
+</I>&gt;<i> be happy using that older version without any problems. Still 
+</I>&gt;<i> it would be nice to be up-to-date. Anyone having the same problems or 
+</I>&gt;<i> some solutions? Thanks!
+</I>&gt;<i>
+</I>You shouldn't need any other files; hopefully the above is all it takes 
+to get things running until I can figure out what's causing the trouble 
+with editing configurations.
+
+Hope this helps,
+Luke Stuyvenberg
+
+P.S. If you get a few moments, please feel free to update 
+<A HREF="http://openspim.org/Who_has_an_OpenSPIM%3F">http://openspim.org/Who_has_an_OpenSPIM%3F</A> with your location and 
+information! We love hearing about people using the system.
+
+On 8/14/2014 7:01 AM, Veli-Pekka Ronkainen wrote:
+&gt;<i>
+</I>&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> We've been scanning some mouse tissue test samples with our dual-side 
+</I>&gt;<i> illumination OpenSPIM for a short while now, and we are very happy 
+</I>&gt;<i> with the first results!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> We have used the original software package downloaded 
+</I>&gt;<i> from openspim.org without any updates, and it has been working fine. 
+</I>&gt;<i> However, now after using the Fiji updater Picard USB-stage rotation 
+</I>&gt;<i> angle coordinates are not right anymore. Changing angle from -180 deg 
+</I>&gt;<i> to 180 deg rotates the sample holder only ~180 degrees, and rotation 
+</I>&gt;<i> in general spins the sample much less than indicated by the slider. In 
+</I>&gt;<i> addition, we can not access and modify old .cfg-files, so that it 
+</I>&gt;<i> would be possible to change step size of the twister from 1.8 to 1, as 
+</I>&gt;<i> it was discussed earlier: 
+</I>&gt;<i> <A HREF="http://openspim.org/pipermail/openspim/2014-July/000482.html">http://openspim.org/pipermail/openspim/2014-July/000482.html</A> . 
+</I>&gt;<i> Modification of an existing configuration starts with an error &quot;Error 
+</I>&gt;<i> in device Picard Z Stage: Unable to communicate with the device&quot; 
+</I>&gt;<i> followed by lots of COM and &quot;No device with label _device name_&quot; 
+</I>&gt;<i> -errors. Creating a new configuration doesn't help since it is not 
+</I>&gt;<i> possible to add Picard stage z-axis to the config file or modify 
+</I>&gt;<i> the serial number.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> We've tried to copy the latest Picard .dll-files from the recent 
+</I>&gt;<i> Micro-Manager nightly build but the problem persists. Are there some 
+</I>&gt;<i> other files we should copy and replace as well? Of course we can still 
+</I>&gt;<i> download and configure the non-updated package from openspim.org and 
+</I>&gt;<i> be happy using that older version without any problems. Still 
+</I>&gt;<i> it would be nice to be up-to-date. Anyone having the same problems or 
+</I>&gt;<i> some solutions? Thanks!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i> Veli-Pekka Ronkainen
+</I>&gt;<i>
+</I>&gt;<i> Light Microscopy Core Facility
+</I>&gt;<i>
+</I>&gt;<i> Biocenter Oulu, University of Oulu
+</I>&gt;<i>
+</I>&gt;<i> Finland
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140815/4a1f4404/attachment.html">http://openspim.org/pipermail/openspim/attachments/20140815/4a1f4404/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000506.html">[OpenSPIM] Picard stage error after update
+</A></li>
+	<LI>Next message: <A HREF="000508.html">[OpenSPIM] Picard stage error after update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#507">[ date ]</a>
+              <a href="thread.html#507">[ thread ]</a>
+              <a href="subject.html#507">[ subject ]</a>
+              <a href="author.html#507">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

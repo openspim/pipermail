@@ -1,0 +1,480 @@
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] -------->>
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] Core session started by Admin on SPIM-MACHINE
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] Debug logging disabled
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] Debug logging disabled
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] > MM Studio version: 1.4.x dev
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] > MMCore version 2.3.2
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] > Device API version 57, Module API version 8
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] > Operating System: Windows 7 (x86) 6.1
+2014-04-30T12:41:02.852959 p:5668 t:1188 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.6.0_24, 32-bit
+2014-04-30T12:41:02.852959 p:5668 t:1188 [dbg] Circular buffer set to 25 MB.
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > #uManager plugins: 119
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.MouseListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ItemListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ItemListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.util.Comparator
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.io.FilenameFilter
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.972959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ItemListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.SPIMCalibrator
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.MouseListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.SPIMCalibrator
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.SPIMCalibrator
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.MouseListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.WindowListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.KeyListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.FocusListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ActionListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Runnable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.KeyListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.KeyListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.lang.Iterable
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.awt.event.ItemListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: java.util.EventListener
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.982959 p:5668 t:5940 [LOG] > interface found: spim.setup.Device$Factory
+2014-04-30T12:41:02.992959 p:5668 t:5940 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-04-30T12:41:02.992959 p:5668 t:5940 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-04-30T12:41:03.002959 p:5668 t:5940 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-04-30T12:41:03.002959 p:5668 t:5940 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-04-30T12:41:03.002959 p:5668 t:5940 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-04-30T12:41:08.282966 p:5668 t:1188 [dbg] Will set property: "Core"-"Initialize" = "0"
+2014-04-30T12:41:08.282966 p:5668 t:1188 [LOG] All devices unloaded.
+2014-04-30T12:41:08.282966 p:5668 t:1188 [dbg] > Notification for Device: Core Property: Initialize changed to value: 0
+2014-04-30T12:41:08.282966 p:5668 t:1188 [dbg] Did set property: "Core"-"Initialize" = "0"
+2014-04-30T12:41:08.282966 p:5668 t:1188 [LOG] Device COM4 loaded from SerialManager and labeled as COM4
+2014-04-30T12:41:08.872967 p:5668 t:1188 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-04-30T12:41:08.882967 p:5668 t:1188 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-04-30T12:41:08.882967 p:5668 t:1188 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-04-30T12:41:08.882967 p:5668 t:1188 [LOG] Device HamamatsuHam_DCAM loaded from HamamatsuHam and labeled as HamamatsuHam_DCAM
+2014-04-30T12:41:08.882967 p:5668 t:1188 [LOG] Device VLTStradus loaded from Stradus and labeled as VLTStradus
+2014-04-30T12:41:08.882967 p:5668 t:1188 [dbg] Will set property: "Picard Twister"-"Serial Number" = "89"
+2014-04-30T12:41:08.892967 p:5668 t:1188 [dbg] Did set property: "Picard Twister"-"Serial Number" = "89"
+2014-04-30T12:41:08.892967 p:5668 t:1188 [dbg] Will set property: "Picard Z Stage"-"Serial Number" = "255"
+2014-04-30T12:41:08.902967 p:5668 t:1188 [dbg] Did set property: "Picard Z Stage"-"Serial Number" = "255"
+2014-04-30T12:41:08.902967 p:5668 t:1188 [dbg] Will set property: "Picard XY Stage"-"Serial Number (X)" = "253"
+2014-04-30T12:41:08.922967 p:5668 t:1188 [dbg] Did set property: "Picard XY Stage"-"Serial Number (X)" = "253"
+2014-04-30T12:41:08.922967 p:5668 t:1188 [dbg] Will set property: "Picard XY Stage"-"Serial Number (Y)" = "254"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "Picard XY Stage"-"Serial Number (Y)" = "254"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "Picard XY Stage"-"X-Min" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "Picard XY Stage"-"X-Min" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "VLTStradus"-"Port" = "COM4"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "VLTStradus"-"Port" = "COM4"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"AnswerTimeout" = "5000.0000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"AnswerTimeout" = "5000.0000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"BaudRate" = "19200"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"BaudRate" = "19200"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"DelayBetweenCharsMs" = "0.0000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"DelayBetweenCharsMs" = "0.0000"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"Handshaking" = "Off"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"Handshaking" = "Off"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"Parity" = "None"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"Parity" = "None"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"StopBits" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"StopBits" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "COM4"-"Verbose" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Did set property: "COM4"-"Verbose" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [dbg] Will set property: "Core"-"Initialize" = "1"
+2014-04-30T12:41:08.952967 p:5668 t:1188 [LOG] Starting initialization sequence for 6 devices...
+2014-04-30T12:41:08.982967 p:5668 t:1188 [dbg] Device COM4 debug message: Attempting to set baud of COM4 to 19200
+2014-04-30T12:41:08.982967 p:5668 t:1188 [dbg] Device COM4 debug message: Attempting to set flow of COM4 to none
+2014-04-30T12:41:08.982967 p:5668 t:1188 [dbg] Device COM4 debug message: Attempting to set parity of COM4 to none
+2014-04-30T12:41:08.982967 p:5668 t:1188 [dbg] Device COM4 debug message: Attempting to set stopBits of COM4 to 1
+2014-04-30T12:41:08.982967 p:5668 t:1188 [LOG] Device COM4 initialized.
+2014-04-30T12:41:08.992967 p:5668 t:1188 [LOG] Device Picard Twister initialized.
+2014-04-30T12:41:08.992967 p:5668 t:1188 [LOG] Device Picard Z Stage initialized.
+2014-04-30T12:41:09.042967 p:5668 t:1188 [LOG] Device Picard XY Stage set as default xyStage.
+2014-04-30T12:41:09.042967 p:5668 t:1188 [LOG] Device Picard XY Stage initialized.
+2014-04-30T12:41:10.645057 p:5668 t:1188 [LOG] Device HamamatsuHam_DCAM set as default camera.
+2014-04-30T12:41:10.645057 p:5668 t:1188 [LOG] Device HamamatsuHam_DCAM initialized.
+2014-04-30T12:41:10.646057 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?epc\r
+2014-04-30T12:41:10.696060 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?epc\r\r\n
+2014-04-30T12:41:10.696060 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?EPC=0\r\n
+2014-04-30T12:41:10.696060 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?bpt\r
+2014-04-30T12:41:10.900072 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 155
+2014-04-30T12:41:10.900072 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?bpt\r\r\n
+2014-04-30T12:41:10.900072 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?BPT= 26\r\n
+2014-04-30T12:41:10.900072 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lc\r
+2014-04-30T12:41:11.118084 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:11.118084 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?lc\r\r\n
+2014-04-30T12:41:11.118084 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LC=0.4\r\n
+2014-04-30T12:41:11.118084 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pul\r
+2014-04-30T12:41:11.335097 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:11.335097 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- 1> ?pul\r\r\n
+2014-04-30T12:41:11.335097 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PUL=0\r\n
+2014-04-30T12:41:11.335097 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pp\r
+2014-04-30T12:41:11.552109 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:11.552109 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?pp\r\r\n
+2014-04-30T12:41:11.552109 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PP=50\r\n
+2014-04-30T12:41:11.552109 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pp\r
+2014-04-30T12:41:11.768121 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:11.768121 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?pp\r\r\n
+2014-04-30T12:41:11.768121 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PP=50\r\n
+2014-04-30T12:41:11.768121 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fc\r
+2014-04-30T12:41:11.985134 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:11.985134 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?fc\r\r\n
+2014-04-30T12:41:11.985134 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FC=1\r\n
+2014-04-30T12:41:11.985134 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fv\r
+2014-04-30T12:41:12.201146 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:12.201146 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?fv\r\r\n
+2014-04-30T12:41:12.201146 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FV=2.0.0Y\r\n
+2014-04-30T12:41:12.201146 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lh\r
+2014-04-30T12:41:12.419159 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:12.419159 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- us:1> ?lh\r\r\n
+2014-04-30T12:41:12.419159 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LH=33.9\r\n
+2014-04-30T12:41:12.419159 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?il\r
+2014-04-30T12:41:12.637171 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:12.637171 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?il\r\r\n
+2014-04-30T12:41:12.637171 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?IL=1\r\n
+2014-04-30T12:41:12.637171 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?le\r
+2014-04-30T12:41:12.856184 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 170
+2014-04-30T12:41:12.856184 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- adus:1> ?le\r\r\n
+2014-04-30T12:41:12.856184 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LE=0\r\n
+2014-04-30T12:41:12.856184 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?li\r
+2014-04-30T12:41:13.072196 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:13.072196 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?li\r\r\n
+2014-04-30T12:41:13.091197 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 20
+2014-04-30T12:41:13.091197 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LI=VL02143C03, 11103, 561nm, 50mW, C\r\n
+2014-04-30T12:41:13.091197 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fd\r
+2014-04-30T12:41:13.305209 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 165
+2014-04-30T12:41:13.305209 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?fd\r\r\n
+2014-04-30T12:41:13.305209 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FD=STANDBY\r\n
+2014-04-30T12:41:13.305209 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lp\r
+2014-04-30T12:41:13.524222 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 170
+2014-04-30T12:41:13.524222 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- dus:1> ?lp\r\r\n
+2014-04-30T12:41:13.524222 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LP=0.2\r\n
+2014-04-30T12:41:13.524222 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lps\r
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- 1> ?lps\r\r\n
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LPS=5.0\r\n
+2014-04-30T12:41:13.741234 p:5668 t:1188 [LOG] Device VLTStradus set as default shutter.
+2014-04-30T12:41:13.741234 p:5668 t:1188 [LOG] Device VLTStradus initialized.
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] > Notification for Device: Core Property: Initialize changed to value: 1
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Did set property: "Core"-"Initialize" = "1"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Will set property: "Core"-"Camera" = "HamamatsuHam_DCAM"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [LOG] Camera device set to HamamatsuHam_DCAM
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] > Notification for Device: Core Property: Camera changed to value: HamamatsuHam_DCAM
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Did set property: "Core"-"Camera" = "HamamatsuHam_DCAM"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Will set property: "Core"-"Shutter" = "VLTStradus"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] > Notification for Device: Core Property: Shutter changed to value: VLTStradus
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Did set property: "Core"-"Shutter" = "VLTStradus"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Will set property: "Core"-"Focus" = "Picard Z Stage"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [LOG] Focus device set to Picard Z Stage
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Did set property: "Core"-"Focus" = "Picard Z Stage"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [dbg] Will set property: "Core"-"AutoShutter" = "1"
+2014-04-30T12:41:13.741234 p:5668 t:1188 [LOG] Auto shutter ON.
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] > Notification for Device: Core Property: AutoShutter changed to value: 1
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Did set property: "Core"-"AutoShutter" = "1"
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Waiting for device COM4...
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Finished waiting.
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Waiting for device Picard Twister...
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Finished waiting.
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Waiting for device Picard Z Stage...
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Finished waiting.
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Waiting for device Picard XY Stage...
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Finished waiting.
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Waiting for device HamamatsuHam_DCAM...
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Finished waiting.
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Waiting for device VLTStradus...
+2014-04-30T12:41:13.742234 p:5668 t:1188 [dbg] Finished waiting.
+2014-04-30T12:41:13.759235 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?epc\r
+2014-04-30T12:41:13.959247 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 151
+2014-04-30T12:41:13.959247 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?epc\r\r\n
+2014-04-30T12:41:13.959247 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?EPC=0\r\n
+2014-04-30T12:41:13.959247 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?bpt\r
+2014-04-30T12:41:14.176259 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:14.176259 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?bpt\r\r\n
+2014-04-30T12:41:14.176259 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?BPT= 27\r\n
+2014-04-30T12:41:14.176259 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lc\r
+2014-04-30T12:41:14.394272 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:14.394272 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?lc\r\r\n
+2014-04-30T12:41:14.394272 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LC=0.4\r\n
+2014-04-30T12:41:14.394272 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pul\r
+2014-04-30T12:41:14.611284 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:14.611284 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- 1> ?pul\r\r\n
+2014-04-30T12:41:14.611284 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PUL=0\r\n
+2014-04-30T12:41:14.611284 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pp\r
+2014-04-30T12:41:14.828297 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:14.828297 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?pp\r\r\n
+2014-04-30T12:41:14.828297 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PP=50\r\n
+2014-04-30T12:41:14.828297 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pp\r
+2014-04-30T12:41:15.044309 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:15.044309 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?pp\r\r\n
+2014-04-30T12:41:15.044309 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PP=50\r\n
+2014-04-30T12:41:15.044309 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fc\r
+2014-04-30T12:41:15.261321 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:15.261321 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?fc\r\r\n
+2014-04-30T12:41:15.261321 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FC=1\r\n
+2014-04-30T12:41:15.261321 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fv\r
+2014-04-30T12:41:15.477334 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:15.477334 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?fv\r\r\n
+2014-04-30T12:41:15.477334 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FV=2.0.0Y\r\n
+2014-04-30T12:41:15.477334 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lh\r
+2014-04-30T12:41:15.695346 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:15.695346 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- us:1> ?lh\r\r\n
+2014-04-30T12:41:15.695346 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LH=33.9\r\n
+2014-04-30T12:41:15.695346 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?il\r
+2014-04-30T12:41:15.913359 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:15.913359 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?il\r\r\n
+2014-04-30T12:41:15.913359 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?IL=1\r\n
+2014-04-30T12:41:15.913359 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?le\r
+2014-04-30T12:41:16.132371 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 170
+2014-04-30T12:41:16.132371 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- adus:1> ?le\r\r\n
+2014-04-30T12:41:16.132371 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LE=0\r\n
+2014-04-30T12:41:16.132371 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?li\r
+2014-04-30T12:41:16.348383 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:16.348383 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?li\r\r\n
+2014-04-30T12:41:16.368385 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 21
+2014-04-30T12:41:16.368385 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LI=VL02143C03, 11103, 561nm, 50mW, C\r\n
+2014-04-30T12:41:16.368385 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fd\r
+2014-04-30T12:41:16.581397 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 164
+2014-04-30T12:41:16.581397 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?fd\r\r\n
+2014-04-30T12:41:16.581397 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FD=STANDBY\r\n
+2014-04-30T12:41:16.581397 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lp\r
+2014-04-30T12:41:16.800409 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 170
+2014-04-30T12:41:16.800409 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- dus:1> ?lp\r\r\n
+2014-04-30T12:41:16.800409 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LP=0.2\r\n
+2014-04-30T12:41:16.800409 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lps\r
+2014-04-30T12:41:17.017422 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:17.017422 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- 1> ?lps\r\r\n
+2014-04-30T12:41:17.017422 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LPS=5.0\r\n
+2014-04-30T12:41:17.017422 p:5668 t:1188 [LOG] System state cache updated.
+2014-04-30T12:41:17.036423 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?le\r
+2014-04-30T12:41:17.235434 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 149
+2014-04-30T12:41:17.235434 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?le\r\r\n
+2014-04-30T12:41:17.235434 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LE=0\r\n
+2014-04-30T12:41:17.236434 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?epc\r
+2014-04-30T12:41:17.451447 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 166
+2014-04-30T12:41:17.451447 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?epc\r\r\n
+2014-04-30T12:41:17.451447 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?EPC=0\r\n
+2014-04-30T12:41:17.451447 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?bpt\r
+2014-04-30T12:41:17.668459 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:17.668459 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?bpt\r\r\n
+2014-04-30T12:41:17.668459 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?BPT= 27\r\n
+2014-04-30T12:41:17.668459 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lc\r
+2014-04-30T12:41:17.886471 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:17.886471 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?lc\r\r\n
+2014-04-30T12:41:17.886471 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LC=0.4\r\n
+2014-04-30T12:41:17.886471 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pul\r
+2014-04-30T12:41:18.103484 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:18.103484 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- 1> ?pul\r\r\n
+2014-04-30T12:41:18.103484 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PUL=0\r\n
+2014-04-30T12:41:18.103484 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pp\r
+2014-04-30T12:41:18.320496 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:18.320496 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?pp\r\r\n
+2014-04-30T12:41:18.320496 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PP=50\r\n
+2014-04-30T12:41:18.320496 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?pp\r
+2014-04-30T12:41:18.536509 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:18.536509 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?pp\r\r\n
+2014-04-30T12:41:18.536509 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?PP=50\r\n
+2014-04-30T12:41:18.536509 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fc\r
+2014-04-30T12:41:18.753521 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:18.753521 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- > ?fc\r\r\n
+2014-04-30T12:41:18.753521 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FC=1\r\n
+2014-04-30T12:41:18.753521 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fv\r
+2014-04-30T12:41:18.969533 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:18.969533 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?fv\r\r\n
+2014-04-30T12:41:18.969533 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FV=2.0.0Y\r\n
+2014-04-30T12:41:18.969533 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lh\r
+2014-04-30T12:41:19.187546 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:19.187546 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- us:1> ?lh\r\r\n
+2014-04-30T12:41:19.187546 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LH=33.9\r\n
+2014-04-30T12:41:19.187546 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?il\r
+2014-04-30T12:41:19.405558 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 169
+2014-04-30T12:41:19.405558 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?il\r\r\n
+2014-04-30T12:41:19.405558 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?IL=1\r\n
+2014-04-30T12:41:19.405558 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?le\r
+2014-04-30T12:41:19.624571 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 170
+2014-04-30T12:41:19.624571 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- adus:1> ?le\r\r\n
+2014-04-30T12:41:19.624571 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LE=0\r\n
+2014-04-30T12:41:19.624571 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?li\r
+2014-04-30T12:41:19.840583 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 167
+2014-04-30T12:41:19.840583 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- \x20?li\r\r\n
+2014-04-30T12:41:19.859584 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 20
+2014-04-30T12:41:19.859584 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LI=VL02143C03, 11103, 561nm, 50mW, C\r\n
+2014-04-30T12:41:19.859584 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?fd\r
+2014-04-30T12:41:20.073597 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 165
+2014-04-30T12:41:20.073597 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?fd\r\r\n
+2014-04-30T12:41:20.073597 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?FD=STANDBY\r\n
+2014-04-30T12:41:20.073597 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lp\r
+2014-04-30T12:41:20.292609 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 170
+2014-04-30T12:41:20.292609 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- dus:1> ?lp\r\r\n
+2014-04-30T12:41:20.292609 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LP=0.3\r\n
+2014-04-30T12:41:20.292609 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lps\r
+2014-04-30T12:41:20.509621 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 168
+2014-04-30T12:41:20.509621 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- 1> ?lps\r\r\n
+2014-04-30T12:41:20.509621 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LPS=5.0\r\n
+2014-04-30T12:41:20.509621 p:5668 t:1188 [LOG] System state cache updated.
+2014-04-30T12:41:20.516622 p:5668 t:1188 [LOG] > Startup script file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present.
+2014-04-30T12:41:22.836755 p:5668 t:1188 [LOG] > Plugin command: Acquire SPIM image
+2014-04-30T12:41:22.846755 p:5668 t:1188 [LOG] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-04-30T12:41:22.846755 p:5668 t:1188 [LOG] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-04-30T12:41:22.847755 p:5668 t:1188 [LOG] Starting initialization sequence for 6 devices...
+2014-04-30T12:41:22.847755 p:5668 t:1188 [LOG] Device COM4 initialized.
+2014-04-30T12:41:22.850755 p:5668 t:1188 [LOG] Device Picard Twister initialized.
+2014-04-30T12:41:22.854756 p:5668 t:1188 [LOG] Device Picard Z Stage initialized.
+2014-04-30T12:41:22.906759 p:5668 t:1188 [LOG] Device Picard XY Stage set as default xyStage.
+2014-04-30T12:41:22.906759 p:5668 t:1188 [LOG] Device Picard XY Stage initialized.
+2014-04-30T12:41:22.906759 p:5668 t:1188 [LOG] Device HamamatsuHam_DCAM set as default camera.
+2014-04-30T12:41:22.906759 p:5668 t:1188 [LOG] Device HamamatsuHam_DCAM initialized.
+2014-04-30T12:41:22.906759 p:5668 t:1188 [LOG] Error occurred. Device VLTStradus. Error in device VLTStradus: Duplicate property names are not allowed: PowerSetting. 
+, file MMCore.cpp, line 885
+2014-04-30T12:41:22.906759 p:5668 t:1188 [LOG] Error occurred. Device setPixelSizeConfig. Device error encountered.
+2014-04-30T12:41:22.908759 p:5668 t:1188 [LOG] > Couldn't define uncalibrated pixel size:
+2014-04-30T12:41:22.908759 p:5668 t:1188 [LOG] > java.lang.Exception: Error in device VLTStradus: Duplicate property names are not allowed: . 
+	at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+	at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:729)
+	at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:263)
+	at spim.SPIMAcquisition.show(SPIMAcquisition.java:220)
+	at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+	at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+	at java.awt.Component.processMouseEvent(Component.java:6289)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+	at java.awt.Component.processEvent(Component.java:6054)
+	at java.awt.Container.processEvent(Container.java:2041)
+	at java.awt.Component.dispatchEventImpl(Component.java:4652)
+	at java.awt.Container.dispatchEventImpl(Container.java:2099)
+	at java.awt.Component.dispatchEvent(Component.java:4482)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+	at java.awt.Container.dispatchEventImpl(Container.java:2085)
+	at java.awt.Window.dispatchEventImpl(Window.java:2478)
+	at java.awt.Component.dispatchEvent(Component.java:4482)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+	at java.awt.EventQueue.access$000(EventQueue.java:85)
+	at java.awt.EventQueue$1.run(EventQueue.java:603)
+	at java.awt.EventQueue$1.run(EventQueue.java:601)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+	at java.awt.EventQueue$2.run(EventQueue.java:617)
+	at java.awt.EventQueue$2.run(EventQueue.java:615)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2014-04-30T12:41:23.002764 p:5668 t:1188 [dbg] Device COM4 debug message: SetCommand -> ?lp\r
+2014-04-30T12:41:23.187775 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer # retries = 136
+2014-04-30T12:41:23.187775 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- :1> ?lp\r\r\n
+2014-04-30T12:41:23.187775 p:5668 t:1188 [dbg] Device COM4 debug message: GetAnswer <- ?LP=0.2\r\n
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] > Uncaught exception in AWT/Swing event dispatch thread:
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] > java.lang.IllegalArgumentException: invalid range properties
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:85)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at javax.swing.JSlider.<init>(JSlider.java:259)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at javax.swing.JSlider.<init>(JSlider.java:226)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at spim.SPIMAcquisition$10.<init>(SPIMAcquisition.java:784)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:784)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at spim.SPIMAcquisition.show(SPIMAcquisition.java:221)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+2014-04-30T12:41:23.188775 p:5668 t:1188 [LOG] >   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.AbstractButton.doClick(AbstractButton.java:357)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:809)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:850)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:272)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Component.processMouseEvent(Component.java:6289)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Component.processEvent(Component.java:6054)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Container.processEvent(Container.java:2041)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4482)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-04-30T12:41:23.189775 p:5668 t:1188 [LOG] >   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue$2.run(EventQueue.java:617)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue$2.run(EventQueue.java:615)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2014-04-30T12:41:23.190775 p:5668 t:1188 [LOG] >   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)

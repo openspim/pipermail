@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OMETiffHandler fix
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OMETiffHandler%20fix&In-Reply-To=%3CCAHAw%2B8YDEFo8Ug3uj2jKx4JzfUeZr2E%2BBKseoqF1Q93cbRDSEg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000696.html">
+   <LINK REL="Next"  HREF="000698.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OMETiffHandler fix</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OMETiffHandler%20fix&In-Reply-To=%3CCAHAw%2B8YDEFo8Ug3uj2jKx4JzfUeZr2E%2BBKseoqF1Q93cbRDSEg%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] OMETiffHandler fix">aureliaomega at gmail.com
+       </A><BR>
+    <I>Tue Apr 21 15:05:08 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000696.html">[OpenSPIM] Automatic builds
+</A></li>
+        <LI>Next message: <A HREF="000698.html">[OpenSPIM] Request for testing: 64-bit
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#697">[ date ]</a>
+              <a href="thread.html#697">[ thread ]</a>
+              <a href="subject.html#697">[ subject ]</a>
+              <a href="author.html#697">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+Ulrik, thank you for updating the OMETiffHandler.  I have to admit, I don't
+know what to do with the file you have linked, though.  I haven't used
+Maven before.  Is that the only way to incorporate this change into Fiji?
+Thank you,
+Aurelia
+
+
+
+On Mon, Apr 20, 2015 at 6:00 PM, &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt; wrote:
+
+&gt;<i> Send OpenSPIM mailing list submissions to
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i>
+</I>&gt;<i>    1. Re: open SPIM acquisition error (Ulrik G?nther)
+</I>&gt;<i>    2. Re: open SPIM acquisition error (Johannes Schindelin)
+</I>&gt;<i>    3. 64-bit Fiji Memory Limit Issue (Roberts, Thomas)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 1
+</I>&gt;<i> Date: 20 Apr 2015 10:23:42 +0200
+</I>&gt;<i> From: Ulrik G?nther &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>&gt;
+</I>&gt;<i> To: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt;
+</I>&gt;<i> Cc: Aurelia Honerkamp-Smith &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt;,
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] open SPIM acquisition error
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">2D47F005-0963-4704-B2CC-ACD0D4044D0B at mpi-cbg.de</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;utf-8&quot;
+</I>&gt;<i>
+</I>&gt;<i>   Hello Aurelia and Johannes,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I modified the OMETiffHandler to use the new Units API of BioFormats, you
+</I>&gt;<i> can find the changes at?
+</I>&gt;<i> <A HREF="https://github.com/skalarproduktraum/SPIMAcquisition/tree/OMEUnitFixes">https://github.com/skalarproduktraum/SPIMAcquisition/tree/OMEUnitFixes</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Question to Johannes: Do you want a pull request for that? The issue I?m
+</I>&gt;<i> currently having is that it works just fine in Fiji with the MM update
+</I>&gt;<i> site, but not with the latest MM nightly, as it brings an older ome-xml
+</I>&gt;<i> version. Suggestions?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> cheers,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ulrik
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ?
+</I>&gt;<i> Ulrik G?nther, Dipl.-Phys.
+</I>&gt;<i> PhD Student
+</I>&gt;<i> MOSAIC Group &amp; Tomancak Lab,?Center of Systems Biology Dresden
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> E-Mail:?<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> &gt; On Apr 17, 2015, at 10:10 PM, Johannes Schindelin &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt; wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Hi Aurelia,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; java.lang.NoSuchMethodError:
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; It would appear as if OMERO might have broken Bio-Formats'?
+</I>&gt;<i> &gt; backwards-compatibility once again... Exceptions like this one mean that?
+</I>&gt;<i> &gt; the method setPixelsPhysicalSizeX(PositiveFloat) was available at?
+</I>&gt;<i> &gt; compile time but is no longer available at runtime.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; And indeed, it looks as if IMetadata by virtue of extending?
+</I>&gt;<i> &gt; ome.xml.meta.MetadataStore defines only the following?
+</I>&gt;<i> &gt; setPixelsPhysicalSizeX() method:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length,?
+</I>&gt;<i> &gt; int);
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I fear that we will have to update the SPIMAcquisition plugin in a hurry?
+</I>&gt;<i> &gt; to conform with the new Bio-Formats version that was so overzealously?
+</I>&gt;<i> &gt; uploaded to the Fiji update site despite breaking backwards?
+</I>&gt;<i> &gt; compatibility in a rather blatant way.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; My calendar is densely packed, though, so I have no idea when I will get?
+</I>&gt;<i> &gt; around to fix it (hint: help appreciated).
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Ciao,
+</I>&gt;<i> &gt; Johannes
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An HTML attachment was scrubbed...
+</I>&gt;<i> URL: &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/pipermail/openspim/attachments/20150420/9e46453b/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20150420/9e46453b/attachment-0001.html</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 2
+</I>&gt;<i> Date: Mon, 20 Apr 2015 11:26:49 +0200
+</I>&gt;<i> From: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt;
+</I>&gt;<i> To: Ulrik G?nther &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>&gt;
+</I>&gt;<i> Cc: Aurelia Honerkamp-Smith &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt;,
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] open SPIM acquisition error
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">cf359e135dae45adea047be9c310649b at www.dscho.org</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=UTF-8; format=flowed
+</I>&gt;<i>
+</I>&gt;<i> Hi Ulrik,
+</I>&gt;<i>
+</I>&gt;<i> On 2015-04-20 10:23, Ulrik G?nther wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; Question to Johannes: Do you want a pull request for that?
+</I>&gt;<i>
+</I>&gt;<i> Whenever some code in OpenSPIM has been improved, or for that matter, in
+</I>&gt;<i> any Open Source software I maintain, I want a Pull Request. Otherwise
+</I>&gt;<i> the software would not improve but deteriorate, wouldn't it?
+</I>&gt;<i>
+</I>&gt;<i> So was that a trick question?
+</I>&gt;<i>
+</I>&gt;<i> &gt; The issue I?m currently having is that it works just fine in Fiji with
+</I>&gt;<i> &gt; the MM
+</I>&gt;<i> &gt; update site, but not with the latest MM nightly, as it brings an older
+</I>&gt;<i> &gt; ome-xml version. Suggestions?
+</I>&gt;<i>
+</I>&gt;<i> My suggestion is not new.
+</I>&gt;<i>
+</I>&gt;<i> My suggestion is to finally work together on having *the same* software
+</I>&gt;<i> versions in all OpenSPIM setups, by using the update site. We already
+</I>&gt;<i> have a beautiful update site, but nobody took care so far to get it back
+</I>&gt;<i> up-to-date, right? So now everybody and her dog has to work just as hard
+</I>&gt;<i> as everybody else to get to a working state, and nobody benefits from
+</I>&gt;<i> anybody else's work (the Pull Requests that have been opened and merged
+</I>&gt;<i> have been a really nice exception).
+</I>&gt;<i>
+</I>&gt;<i> I know that it is typically highly discouraged in scientific work to
+</I>&gt;<i> work with other groups: after all, you could write papers, and even
+</I>&gt;<i> scoop other groups, instead of working on something that benefits them
+</I>&gt;<i> as well as yourself, right? This, however, is not the idea behind
+</I>&gt;<i> OpenSPIM. The idea of OpenSPIM is that when everybody works a little,
+</I>&gt;<i> everybody benefits a *lot*.
+</I>&gt;<i>
+</I>&gt;<i> So let's work everybody a little on the software. Preferably in a way
+</I>&gt;<i> that other people do not have to solve the same problem that you solved,
+</I>&gt;<i> *again*. Rather, in a way where each problem is solved such that nobody
+</I>&gt;<i> else has to bother with the same problem. Whether you share your
+</I>&gt;<i> solution as a mail to this list, as an edit to the wiki, as a Pull
+</I>&gt;<i> Request, just share it.
+</I>&gt;<i>
+</I>&gt;<i> Then we all will benefit.
+</I>&gt;<i>
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 3
+</I>&gt;<i> Date: Mon, 20 Apr 2015 15:31:57 +0000
+</I>&gt;<i> From: &quot;Roberts, Thomas&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">thomas.roberts.10 at ucl.ac.uk</A>&gt;
+</I>&gt;<i> To: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;<i> Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">1429543916741.90268 at ucl.ac.uk</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;iso-8859-1&quot;
+</I>&gt;<i>
+</I>&gt;<i> Hi everyone,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> This is probably a wider issue with Fiji than OpenSPIM, but I was
+</I>&gt;<i> wondering if anyone else encountered the same problem we are having.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> For reference, we are running 64-bit Windows 7 on a monster machine with
+</I>&gt;<i> 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> We generally run the 32-bit version of OpenSPIM for acquisition, but
+</I>&gt;<i> opening large image datasets (such as the ones in the Registation tutorial:
+</I>&gt;<i> <A HREF="http://openspim.org/Registration">http://openspim.org/Registration</A>) results in Fiji reaching its memory
+</I>&gt;<i> limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji
+</I>&gt;<i> in an attempt to increase the memory limit.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> If I set the memory limit to a large value (20,000 MB) by going to Edit &gt;
+</I>&gt;<i> Options &gt; Memory &amp; Threads, I get the same error message, as below:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+</I>&gt;<i> Data\tiffs\\spim_TL05_Angle0.tif
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</I>&gt;<i> &lt;Out of memory&gt;
+</I>&gt;<i> &lt;All available memory (505MB) has been&gt;
+</I>&gt;<i> &lt;used. To make more available, use the&gt;
+</I>&gt;<i> &lt;Edit&gt;Options&gt;Memory &amp; Threads command.&gt;
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</I>&gt;<i>
+</I>&gt;<i> This is really odd, because if I go to Help &gt; About ImageJ, it says that
+</I>&gt;<i> 13MB out of 20000MB (&lt;1%) is in use. Put another way, Fiji accepts that I
+</I>&gt;<i> want to increase the memory limit, but it still doesn't use more than 505MB
+</I>&gt;<i> of memory.
+</I>&gt;<i>
+</I>&gt;<i> As a sanity check, I have installed 64-bit Fiji on my office computer and
+</I>&gt;<i> I can open the Registration tutorial data there, but my personal computer
+</I>&gt;<i> is really slow at manipulating the large datasets!
+</I>&gt;<i>
+</I>&gt;<i> Has anyone else experienced this problem? Or does anyone have any
+</I>&gt;<i> suggestions for how to solve the issue?
+</I>&gt;<i>
+</I>&gt;<i> It's really frustrating as our behemoth PC refuses to do what it was
+</I>&gt;<i> bought to do!
+</I>&gt;<i>
+</I>&gt;<i> Many thanks in advance for any replies.
+</I>&gt;<i> Tom Roberts
+</I>&gt;<i>
+</I>&gt;<i> -----
+</I>&gt;<i> Research Associate
+</I>&gt;<i> UCL Centre for Advanced Biomedical Imaging
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">thomas.roberts.10 at ucl.ac.uk</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An HTML attachment was scrubbed...
+</I>&gt;<i> URL: &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment-0001.html</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> End of OpenSPIM Digest, Vol 24, Issue 4
+</I>&gt;<i> ***************************************
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150421/bf19c687/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150421/bf19c687/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000696.html">[OpenSPIM] Automatic builds
+</A></li>
+	<LI>Next message: <A HREF="000698.html">[OpenSPIM] Request for testing: 64-bit
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#697">[ date ]</a>
+              <a href="thread.html#697">[ thread ]</a>
+              <a href="subject.html#697">[ subject ]</a>
+              <a href="author.html#697">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

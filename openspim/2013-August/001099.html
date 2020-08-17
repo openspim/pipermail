@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C698586BA-C7E4-479D-8D6C-DB66B50208E4%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001097.html">
+   <LINK REL="Next"  HREF="001105.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C698586BA-C7E4-479D-8D6C-DB66B50208E4%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Wed Aug 14 03:11:01 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001097.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+        <LI>Next message: <A HREF="001105.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1099">[ date ]</a>
+              <a href="thread.html#1099">[ thread ]</a>
+              <a href="subject.html#1099">[ subject ]</a>
+              <a href="author.html#1099">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Pavel,
+
+I did some more tests this morning. 
+The asynchronous writing is indeed the culprit. You can get two stacks here: <A HREF="http://dl.dropbox.com/u/484859/async_ON_vs_OFF.zip">http://dl.dropbox.com/u/484859/async_ON_vs_OFF.zip</A>
+
+With async OFF: the images are written to the disk as soon as they are acquired; it is slow but the planes are in the right order.
+
+With async ON: the stack is acquired and written 'in bursts' to the disk. Sometimes there is a gap of several seconds between two bursts of disk writing and I have the feeling this corresponds to points when the planes are written in the wrong order. I have also noticed that irrespective of the time delay between two time lapse acquisition, the last image(s) of time point N are written to the disk instant before the time point N+1 starts to be acquired. Also, if one abort a time lapse recording in between two time points, but when all planes have not yet been written to disk,  then there is a warning windows displayed (which is empty…) after some seconds, the window disappear and the recording has been aborted. 
+So I do not know, what's wrong but something does not seem right in this 'asynchronous writing' option, at least on our config:
+Windows 7 pro
+1024Mb of RAM allocated to Fiji (we can not allocate more, otherwise the Orca won't operate)
+JRE 1.6.0
+everything 32bits version
+
+Would be great to get that fixed :-)
+
+With my best regards,
+
+Alexis
+
+
+On 14 Aug 2013, at 00:30, Pavel Tomancak &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt; wrote:
+
+&gt;<i> Hi Alexis,
+</I>&gt;<i> 
+</I>&gt;<i> That is very strange. I have never seen that. We made some acquisitions today and nothing like that was going on. Its obviously a serious issue. Does it happen only when you have the asynchronous writing enabled? I assume you are running on Windows 7.
+</I>&gt;<i> 
+</I>&gt;<i> All the best
+</I>&gt;<i> 
+</I>&gt;<i> PAvel
+</I>&gt;<i> 
+</I>&gt;<i> -----------------------------------------------------------------------------------
+</I>&gt;<i> Pavel Tomancak, Ph.D.
+</I>&gt;<i> 
+</I>&gt;<i> Group Leader
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108
+</I>&gt;<i> D-01307 Dresden				Tel.: +49 351 210 2670
+</I>&gt;<i> Germany						Fax: +49 351 210 2020
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de">http://www.mpi-cbg.de</A>
+</I>&gt;<i> -----------------------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Aug 13, 2013, at 8:14 PM, Alexis Maizel &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Alexis.Maizel at cos.uni-heidelberg.de</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Hi,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I have noticed that when acquiring stacks during a time lapse and writing them to disk, using the 'asynchronous writing' option, the order in which the individual images are laid into the stack is imprecise. What I mean is that an image obviously in the middle of the stack is shifted toward the end. I did not observed a fixed pattern, except that usually the first 15-20 planes are in the right order and the mess is a the end.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I have carefully observed and the problem does not come from the stage 'going back and forth' during acquisition. It is upon writing to the disk that the problem seems to occur. Also I have noticed that it takes quite a long time (up to 3 minutes) to write to disk a ~400Mb stack. 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> You can see more precisely what I am talking about by looking at two representative stacks: <A HREF="http://dl.dropbox.com/u/484859/Stacks.zip">http://dl.dropbox.com/u/484859/Stacks.zip</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> With my best regards,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Alexis
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130814/b83aa6d8/attachment.sig">http://openspim.org/pipermail/openspim/attachments/20130814/b83aa6d8/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001097.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+	<LI>Next message: <A HREF="001105.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1099">[ date ]</a>
+              <a href="thread.html#1099">[ thread ]</a>
+              <a href="subject.html#1099">[ subject ]</a>
+              <a href="author.html#1099">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

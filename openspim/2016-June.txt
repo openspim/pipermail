@@ -1,0 +1,2089 @@
+From huyan1020 at sjtu.edu.cn  Wed Jun  1 22:08:48 2016
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Thu, 2 Jun 2016 11:08:48 +0800 (CST)
+Subject: [OpenSPIM] how many slices per second by the system
+In-Reply-To: <292105436.25209.1464836637599.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, everyone,
+
+This is Yan.
+Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+
+I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+
+I am looking forward for your reply.
+
+Sincerely,
+Yan 
+
+
+From robert.hauschild at ist.ac.at  Thu Jun  2 02:11:14 2016
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Thu, 2 Jun 2016 09:11:14 +0200
+Subject: [OpenSPIM] how many slices per second by the system
+In-Reply-To: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+References: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <c035d305-564e-2fb1-7bbc-6fa2f5ccf554@ist.ac.at>
+
+Hi Yan,
+
+I  get about 1.5 slices /second with the openspim plugin. There is a lot 
+of overhead in the communication with the hardware (e.g. everything 
+(laser power, x,y,z etc.) is set and queried even if the only parameter 
+that changes is the z position.
+I never was able to quite figure out why it is so slow.
+Here is a profile output I posted to the list some time ago:
+
+> My setup is Orca R2, Coherent Cube, Picard stage.
+> I tested a couple of things and it it still unclear to me where the 
+> time is wasted.
+>
+> I attached the core log of a 10 frame long time series (100ms 
+> exposure) recorded to memory with X/Y/Z Stage/Theta all unchecked and  
+> without "Update Live preview".
+>
+> I tried two configurations:
+> 1. Orca  + Cube + Picard
+> 2. Orca  + Picard
+>
+> "1" took 7.6 s of which ("1"- "2") = 1.4 s are communication with 
+> laser, which, while way too much, is not the source of the problem.
+>
+> Profiler("performAcquisition")[4 children]: 7.6113s
+> 0.0017%:    Profiler("Output")[0 children]: 0.0001s
+> 0.0000%:    Profiler("Acquisition")[0 children]: 0.0000s
+> 24.0133%:    Profiler("Movement")[0 children]: 1.8277s
+> 0.0013%:    Profiler("Setup")[0 children]: 0.0001s
+>
+> So most of the time the system is doing something that the Profiler is 
+> not recording.
+
+Best,
+
+Robert
+
+
+On 02.06.2016 05:08, ?? wrote:
+> Hello, everyone,
+>
+> This is Yan.
+> Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+>
+> I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+>
+> I am looking forward for your reply.
+>
+> Sincerely,
+> Yan
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A ? 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   robert.hauschild at ist.ac.at
+
+
+
+From huyan1020 at sjtu.edu.cn  Thu Jun  2 02:31:20 2016
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Thu, 2 Jun 2016 15:31:20 +0800 (CST)
+Subject: [OpenSPIM] how many slices per second by the system
+In-Reply-To: <c035d305-564e-2fb1-7bbc-6fa2f5ccf554@ist.ac.at>
+References: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+	<c035d305-564e-2fb1-7bbc-6fa2f5ccf554@ist.ac.at>
+Message-ID: <1471506853.25457.1464852680227.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, Robert,
+
+Thank you very much for your explanation.
+
+I got to know from the Picard Industries, the following information:
+The 4D-Stage can not move 10 times in one second.
+The USB communications takes about 100 ms to tell the 4D-Stage to move.
+Then the 4D-Stage begins to move for the number of steps you wish to move.
+This takes time along with detecting when the move is completed (more USB
+communications).
+It looks like the 4D-Stage can do about 3-4 moves per second, not 10.
+You may be able to optimize this by reducing the amount of USB
+communications.
+
+I thought the system could take 3 or 4 slices per second, but after reading the paper by Pete,
+I found that he took 1.35 or 1.7 slices per second from the data in the paper.
+So I am confused about the movement.
+
+Anyone knows how to improve the speed?
+
+I am looking forward for your reply.
+
+Sincerely,
+Yan
+
+
+----- ???? -----
+???: "Robert Hauschild" <robert.hauschild at ist.ac.at>
+???: openspim at openspim.org
+????: ???, 2016? 6 ? 02? ?? 3:11:14
+??: Re: [OpenSPIM] how many slices per second by the system
+
+Hi Yan,
+
+I  get about 1.5 slices /second with the openspim plugin. There is a lot 
+of overhead in the communication with the hardware (e.g. everything 
+(laser power, x,y,z etc.) is set and queried even if the only parameter 
+that changes is the z position.
+I never was able to quite figure out why it is so slow.
+Here is a profile output I posted to the list some time ago:
+
+> My setup is Orca R2, Coherent Cube, Picard stage.
+> I tested a couple of things and it it still unclear to me where the 
+> time is wasted.
+>
+> I attached the core log of a 10 frame long time series (100ms 
+> exposure) recorded to memory with X/Y/Z Stage/Theta all unchecked and  
+> without "Update Live preview".
+>
+> I tried two configurations:
+> 1. Orca  + Cube + Picard
+> 2. Orca  + Picard
+>
+> "1" took 7.6 s of which ("1"- "2") = 1.4 s are communication with 
+> laser, which, while way too much, is not the source of the problem.
+>
+> Profiler("performAcquisition")[4 children]: 7.6113s
+> 0.0017%:    Profiler("Output")[0 children]: 0.0001s
+> 0.0000%:    Profiler("Acquisition")[0 children]: 0.0000s
+> 24.0133%:    Profiler("Movement")[0 children]: 1.8277s
+> 0.0013%:    Profiler("Setup")[0 children]: 0.0001s
+>
+> So most of the time the system is doing something that the Profiler is 
+> not recording.
+
+Best,
+
+Robert
+
+
+On 02.06.2016 05:08, ?? wrote:
+> Hello, everyone,
+>
+> This is Yan.
+> Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+>
+> I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+>
+> I am looking forward for your reply.
+>
+> Sincerely,
+> Yan
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A ? 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   robert.hauschild at ist.ac.at
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From msymeoni at uvm.edu  Thu Jun  2 06:48:30 2016
+From: msymeoni at uvm.edu (Menelaos Symeonides)
+Date: Thu, 2 Jun 2016 07:48:30 -0400
+Subject: [OpenSPIM]  Planning an appropriate SPIM build for my experiments
+Message-ID: <fdb8980b-3415-1a00-5431-e76a1010a885@uvm.edu>
+
+Hello OpenSPIM,
+
+I've been following this list and reading papers in the field for about 
+a year. In our lab, we've come to a point where we need to carry out 
+long term fast nontoxic imaging of cell cultures that is only possible 
+with SPIM, and have just obtained funding to build our own microscope to 
+do these experiments. I was hoping to pick the brains of this mailing 
+list to hopefully design an appropriate setup, perhaps based on the 
+OpenSPIM platform, so that we can carry out these experiments.
+
+In general, the experiment involves imaging HIV-infected T cells 
+embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+spread the infection to other cells and do various other things related 
+to the infection, e.g. bystander cell killing. Here are some of the 
+considerations:
+
+1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+apoptosis sensor in the iRFP channel, and will also need to somehow 
+label nuclei and perhaps also membranes. That would be a maximum of 4 
+channels, with 3 channels being "acceptable".
+
+2. The cells will need to be imaged for 2 to 3 days, with a time 
+resolution on the order of 2 Hz (for the full volume). T cells migrate 
+at about 15 ?m/sec, and we would like sufficient time resolution to 
+capture each cell at least twice during each body length movement (body 
+length is about 10 ?m, hence needing around 2 Hz).
+
+3. The entire volume (or close to that) of the hydrogel will need to be 
+imaged at each timepoint. The volume of the hydrogel is up to our 
+discretion, but generally it is on the order of 150 to 300 ?L.
+
+4. Spatial resolution is not of particular concern, as we are more 
+interested in the cells as whole entities rather than e.g. the details 
+of virus assembly in each cell. However, we would like comparable 
+resolution in all three dimensions, as there is no real "plane" we are 
+interested in and the cells can go in any direction.
+
+5. The hydrogel can be fairly optically dense, and we experience 
+prohibitive distortion at anything deeper than ~100 ?m with widefield 
+single photon imaging.
+
+6. Of course, temperature control and media perfusion will be required. 
+Given the nature of the pathogen, we will need to be able to fully 
+decontaminate the sample chamber and anything that has come into contact 
+with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+ideas for the tissue culture chamber. We have access to a fabrication 
+service at our institute that can help us design and build the chamber.
+
+
+Just to give you a general idea, we have about $100K available to us to 
+purchase parts for this, not including the fabrication fee for the 
+culture chamber for which we have other money set aside.
+
+Other than general ideas of what direction we should be heading in, or 
+links to papers for setups we could emulate, I also have some more 
+specific questions:
+
+A. Would two-photon imaging be an inevitable requirement given the 
+density of the sample?
+
+B. If the sort of speed of acquisition we are looking for is beyond 
+reach for any system we could feasibly build ourselves (especially given 
+the need for exposing in multiple fluorescence channels at each 
+position), what should we sacrifice in our experimental plan to make it 
+more within reach?
+
+C. Does anyone know of any labs in the Northeast US/Quebec that have 
+implemented a similar setup that we could go see in person? We are based 
+in Vermont.
+
+
+I appreciate the work everyone on this list puts in for newcomers, so 
+thank you!
+
+Best regards,
+Mel
+
+
+-- 
+Menelaos Symeonides
+Post-Doctoral Associate, Thali Lab
+Department of Microbiology and Molecular Genetics
+University of Vermont
+318 Stafford Hall
+95 Carrigan Dr
+Burlington, VT 05405
+msymeoni at uvm.edu
+Phone: 802-656-1161
+
+
+From leon.islas at gmail.com  Fri Jun  3 16:21:56 2016
+From: leon.islas at gmail.com (Leon Islas)
+Date: Fri, 3 Jun 2016 16:21:56 -0500
+Subject: [OpenSPIM] Nikon vs Olympus
+Message-ID: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+
+Hello
+I am gathering pieces to build an openSPIM. I have two Nikon water
+immersion objectives and I am wondering if they will work with the Olympus
+lens tube ?
+
+-- 
+Le?n Islas, PhD
+Departamento de Fisiolog?a
+Facultad de Medicina, UNAM
+M?xico DF, M?xico
+Tel: 56232132
+http://canales.facmed.unam.mx/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160603/07a085c5/attachment.html>
+
+From nvladimus at gmail.com  Fri Jun  3 23:48:40 2016
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Sat, 4 Jun 2016 00:48:40 -0400
+Subject: [OpenSPIM] Nikon vs Olympus
+In-Reply-To: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+References: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+Message-ID: <CAC+J2jmOPNX-meovUMOR3-WxH+6HWOFOE7vPKRMr7Qyih6oUKg@mail.gmail.com>
+
+Hi,
+My guess that Nikon objective will work with Olympus tube lens, but if you
+want to know your magnification, you will need to correct it. Say, Nikon
+x16 objective has x16 mag assuming 200 mm Nikon tube lens. Olympus tube
+lens has f=180 mm, so magnification will be proportionally smaller: 16 *
+180/200 = 14.4. Please correct me if I am wrong.
+Nikita
+
+On Fri, Jun 3, 2016 at 5:21 PM, Leon Islas <leon.islas at gmail.com> wrote:
+
+> Hello
+> I am gathering pieces to build an openSPIM. I have two Nikon water
+> immersion objectives and I am wondering if they will work with the Olympus
+> lens tube ?
+>
+> --
+> Le?n Islas, PhD
+> Departamento de Fisiolog?a
+> Facultad de Medicina, UNAM
+> M?xico DF, M?xico
+> Tel: 56232132
+> http://canales.facmed.unam.mx/
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160604/23698358/attachment.html>
+
+From msymeoni at uvm.edu  Sat Jun  4 18:45:57 2016
+From: msymeoni at uvm.edu (Menelaos Symeonides)
+Date: Sat, 04 Jun 2016 19:45:57 -0400
+Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+Message-ID: <592x8fc6j0nc8b9hjpgl51ww.1465083957973@email.android.com>
+
+A little correction... the velocity of the cells is 15 ?m/min, not /sec, meaning that the desired imaging speed would be on the order of 2-3 volumes/min, which should be a bit more manageable!
+Mel
+-------- Original message --------From: Menelaos Symeonides <msymeoni at uvm.edu> Date: 6/2/16  7:48 AM  (GMT-05:00) To: openspim at openspim.org Subject: [OpenSPIM]  Planning an appropriate SPIM build for my experiments 
+Hello OpenSPIM,
+
+I've been following this list and reading papers in the field for about 
+a year. In our lab, we've come to a point where we need to carry out 
+long term fast nontoxic imaging of cell cultures that is only possible 
+with SPIM, and have just obtained funding to build our own microscope to 
+do these experiments. I was hoping to pick the brains of this mailing 
+list to hopefully design an appropriate setup, perhaps based on the 
+OpenSPIM platform, so that we can carry out these experiments.
+
+In general, the experiment involves imaging HIV-infected T cells 
+embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+spread the infection to other cells and do various other things related 
+to the infection, e.g. bystander cell killing. Here are some of the 
+considerations:
+
+1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+apoptosis sensor in the iRFP channel, and will also need to somehow 
+label nuclei and perhaps also membranes. That would be a maximum of 4 
+channels, with 3 channels being "acceptable".
+
+2. The cells will need to be imaged for 2 to 3 days, with a time 
+resolution on the order of 2 Hz (for the full volume). T cells migrate 
+at about 15 ?m/sec, and we would like sufficient time resolution to 
+capture each cell at least twice during each body length movement (body 
+length is about 10 ?m, hence needing around 2 Hz).
+
+3. The entire volume (or close to that) of the hydrogel will need to be 
+imaged at each timepoint. The volume of the hydrogel is up to our 
+discretion, but generally it is on the order of 150 to 300 ?L.
+
+4. Spatial resolution is not of particular concern, as we are more 
+interested in the cells as whole entities rather than e.g. the details 
+of virus assembly in each cell. However, we would like comparable 
+resolution in all three dimensions, as there is no real "plane" we are 
+interested in and the cells can go in any direction.
+
+5. The hydrogel can be fairly optically dense, and we experience 
+prohibitive distortion at anything deeper than ~100 ?m with widefield 
+single photon imaging.
+
+6. Of course, temperature control and media perfusion will be required. 
+Given the nature of the pathogen, we will need to be able to fully 
+decontaminate the sample chamber and anything that has come into contact 
+with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+ideas for the tissue culture chamber. We have access to a fabrication 
+service at our institute that can help us design and build the chamber.
+
+
+Just to give you a general idea, we have about $100K available to us to 
+purchase parts for this, not including the fabrication fee for the 
+culture chamber for which we have other money set aside.
+
+Other than general ideas of what direction we should be heading in, or 
+links to papers for setups we could emulate, I also have some more 
+specific questions:
+
+A. Would two-photon imaging be an inevitable requirement given the 
+density of the sample?
+
+B. If the sort of speed of acquisition we are looking for is beyond 
+reach for any system we could feasibly build ourselves (especially given 
+the need for exposing in multiple fluorescence channels at each 
+position), what should we sacrifice in our experimental plan to make it 
+more within reach?
+
+C. Does anyone know of any labs in the Northeast US/Quebec that have 
+implemented a similar setup that we could go see in person? We are based 
+in Vermont.
+
+
+I appreciate the work everyone on this list puts in for newcomers, so 
+thank you!
+
+Best regards,
+Mel
+
+
+-- 
+Menelaos Symeonides
+Post-Doctoral Associate, Thali Lab
+Department of Microbiology and Molecular Genetics
+University of Vermont
+318 Stafford Hall
+95 Carrigan Dr
+Burlington, VT 05405
+msymeoni at uvm.edu
+Phone: 802-656-1161
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160604/c415483e/attachment.html>
+
+From weber at mpi-cbg.de  Mon Jun  6 08:50:03 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Mon, 6 Jun 2016 09:50:03 -0400
+Subject: [OpenSPIM] Nikon vs Olympus
+In-Reply-To: <CAC+J2jmOPNX-meovUMOR3-WxH+6HWOFOE7vPKRMr7Qyih6oUKg@mail.gmail.com>
+References: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+	<CAC+J2jmOPNX-meovUMOR3-WxH+6HWOFOE7vPKRMr7Qyih6oUKg@mail.gmail.com>
+Message-ID: <F089D9FC-FD48-43EE-9615-47B428F4739C@mpi-cbg.de>
+
+Hi Leon,
+
+you can get a 200 mm Nikon tube lens on Thorlabs (ITL200). They also have the appropriate adapters and mounts.
+
+Best,
+Michael
+
+> On Jun 4, 2016, at 12:48 AM, Nikita Vladimirov <nvladimus at gmail.com> wrote:
+> 
+> Hi,
+> My guess that Nikon objective will work with Olympus tube lens, but if you want to know your magnification, you will need to correct it. Say, Nikon x16 objective has x16 mag assuming 200 mm Nikon tube lens. Olympus tube lens has f=180 mm, so magnification will be proportionally smaller: 16 * 180/200 = 14.4. Please correct me if I am wrong.
+> Nikita
+> 
+> On Fri, Jun 3, 2016 at 5:21 PM, Leon Islas <leon.islas at gmail.com <mailto:leon.islas at gmail.com>> wrote:
+> Hello
+> I am gathering pieces to build an openSPIM. I have two Nikon water immersion objectives and I am wondering if they will work with the Olympus lens tube ? 
+> 
+> -- 
+> Le?n Islas, PhD
+> Departamento de Fisiolog?a
+> Facultad de Medicina, UNAM
+> M?xico DF, M?xico
+> Tel: 56232132
+> http://canales.facmed.unam.mx/ <http://canales.facmed.unam.mx/>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160606/7f17eb58/attachment.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Mon Jun  6 11:02:09 2016
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Mon, 06 Jun 2016 17:02:09 +0100
+Subject: [OpenSPIM] defining interest points fails
+Message-ID: <c8fef2152327b71ca332d635bb0071c0@cam.ac.uk>
+
+
+Dear All,
+
+Has anyone recently had trouble with the registration of multi-view SPIM
+data? If you encountered the problem described below I'll write a bug
+report, but I first wanted to know if I'm just forgetting something:
+
+I have been trying to register z-stacks from 3 angles at a single time
+point with the old fiji plugin (SPIM Registration) and the new one
+(Multiview Reconstruction). In each case when I try to choose a z-stack
+for finding interest points I get the following error message:
+
+(Fiji Is Just) ImageJ 2.0.0-rc-43/1.51a; Java 1.6.0_24 [64-bit]; Windows
+7 6.1; 428MB of 490870MB (<1%)
+
+java.lang.IllegalArgumentException: STACK IS EMPTY
+     at ij.ImagePlus.setStack(ImagePlus.java:642)
+     at ij.ImagePlus.<init>(ImagePlus.java:149)
+     at
+net.imglib2.img.display.imagej.ImageJFunctions.makeImagePlus(ImageJFunctions.java:245)
+     at
+net.imglib2.img.display.imagej.ImageJFunctions.wrapFloat(ImageJFunctions.java:240)
+     at
+spim.fiji.plugin.interestpointdetection.DifferenceOfGaussian.setInteractiveValues(DifferenceOfGaussian.java:238)
+     at
+spim.fiji.plugin.interestpointdetection.DifferenceOf.queryParameters(DifferenceOf.java:225)
+     at
+spim.fiji.plugin.Interest_Point_Detection.detectInterestPoints(Interest_Point_Detection.java:161)
+     at
+spim.fiji.plugin.Interest_Point_Detection.run(Interest_Point_Detection.java:67)
+     at ij.IJ.runUserPlugIn(IJ.java:216)
+     at ij.IJ.runPlugIn(IJ.java:180)
+     at ij.Executer.runCommand(Executer.java:137)
+     at ij.Executer.run(Executer.java:66)
+     at java.lang.Thread.run(Thread.java:662)
+
+I attached the z-stacks I wanted to register and fuse (as Google Drive
+links, below). I chose the first one to find beads.?
+  spim_TL01_Angle2.tif [1]??
+  spim_TL01_Angle0.tif [2]??
+  spim_TL01_Angle1.tif [3]?
+
+With the old SPIM Registration a window opens showing the first image of
+the stack (instead of the entire z-stack) and it doesn't show any green
+or red circles around beads, no matter where I set the threshold.
+
+Would anyone have any ideas what's going wrong?
+
+Thanks a lot!
+
+Best wishes,
+Stephanie
+
+-- 
+
+Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+OFFICE TEL: 01223 337859
+Office: H0.03
+
+-- 
+
+Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+OFFICE TEL: 01223 337859
+Office: H0.03
+
+Links:
+------
+[1] 
+https://drive.google.com/file/d/0B7_ptH2Tf_XdcEowRDJncF9mekE/view?usp=drive_web
+[2] 
+https://drive.google.com/file/d/0B7_ptH2Tf_XdazFFRlBYSXp5YzA/view?usp=drive_web
+[3] 
+https://drive.google.com/file/d/0B7_ptH2Tf_XdWkV2cGtGQU1yUDQ/view?usp=drive_web
+
+
+From weber at mpi-cbg.de  Mon Jun  6 14:48:51 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Mon, 6 Jun 2016 15:48:51 -0400
+Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+In-Reply-To: <592x8fc6j0nc8b9hjpgl51ww.1465083957973@email.android.com>
+References: <592x8fc6j0nc8b9hjpgl51ww.1465083957973@email.android.com>
+Message-ID: <91E32B1C-9BDC-4BD8-A564-906E40C448C1@mpi-cbg.de>
+
+Hi Mel,
+
+that?s a long list of requirements. Here are some thoughts:
+
+- test your samples on existing light sheet setups
+- also test/consider a diSPIM-like configuration
+- 2-Photon is beyond reach for $100k - and hard to do for 3-4 channels
+- a fiber-coupled laser launch with 4 lines will be expensive - you might want to start with less lines and upgrade later
+- a feasible detection combination would be a single sCMOS camera plus a filter wheel
+
+Best,
+Michael
+
+> On Jun 4, 2016, at 7:45 PM, Menelaos Symeonides <msymeoni at UVM.EDU> wrote:
+> 
+> A little correction... the velocity of the cells is 15 ?m/min, not /sec, meaning that the desired imaging speed would be on the order of 2-3 volumes/min, which should be a bit more manageable!
+> 
+> Mel
+> 
+> -------- Original message --------
+> From: Menelaos Symeonides <msymeoni at uvm.edu>
+> Date: 6/2/16 7:48 AM (GMT-05:00)
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+> 
+> Hello OpenSPIM,
+> 
+> I've been following this list and reading papers in the field for about 
+> a year. In our lab, we've come to a point where we need to carry out 
+> long term fast nontoxic imaging of cell cultures that is only possible 
+> with SPIM, and have just obtained funding to build our own microscope to 
+> do these experiments. I was hoping to pick the brains of this mailing 
+> list to hopefully design an appropriate setup, perhaps based on the 
+> OpenSPIM platform, so that we can carry out these experiments.
+> 
+> In general, the experiment involves imaging HIV-infected T cells 
+> embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+> spread the infection to other cells and do various other things related 
+> to the infection, e.g. bystander cell killing. Here are some of the 
+> considerations:
+> 
+> 1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+> apoptosis sensor in the iRFP channel, and will also need to somehow 
+> label nuclei and perhaps also membranes. That would be a maximum of 4 
+> channels, with 3 channels being "acceptable".
+> 
+> 2. The cells will need to be imaged for 2 to 3 days, with a time 
+> resolution on the order of 2 Hz (for the full volume). T cells migrate 
+> at about 15 ?m/sec, and we would like sufficient time resolution to 
+> capture each cell at least twice during each body length movement (body 
+> length is about 10 ?m, hence needing around 2 Hz).
+> 
+> 3. The entire volume (or close to that) of the hydrogel will need to be 
+> imaged at each timepoint. The volume of the hydrogel is up to our 
+> discretion, but generally it is on the order of 150 to 300 ?L.
+> 
+> 4. Spatial resolution is not of particular concern, as we are more 
+> interested in the cells as whole entities rather than e.g. the details 
+> of virus assembly in each cell. However, we would like comparable 
+> resolution in all three dimensions, as there is no real "plane" we are 
+> interested in and the cells can go in any direction.
+> 
+> 5. The hydrogel can be fairly optically dense, and we experience 
+> prohibitive distortion at anything deeper than ~100 ?m with widefield 
+> single photon imaging.
+> 
+> 6. Of course, temperature control and media perfusion will be required. 
+> Given the nature of the pathogen, we will need to be able to fully 
+> decontaminate the sample chamber and anything that has come into contact 
+> with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+> ideas for the tissue culture chamber. We have access to a fabrication 
+> service at our institute that can help us design and build the chamber.
+> 
+> 
+> Just to give you a general idea, we have about $100K available to us to 
+> purchase parts for this, not including the fabrication fee for the 
+> culture chamber for which we have other money set aside.
+> 
+> Other than general ideas of what direction we should be heading in, or 
+> links to papers for setups we could emulate, I also have some more 
+> specific questions:
+> 
+> A. Would two-photon imaging be an inevitable requirement given the 
+> density of the sample?
+> 
+> B. If the sort of speed of acquisition we are looking for is beyond 
+> reach for any system we could feasibly build ourselves (especially given 
+> the need for exposing in multiple fluorescence channels at each 
+> position), what should we sacrifice in our experimental plan to make it 
+> more within reach?
+> 
+> C. Does anyone know of any labs in the Northeast US/Quebec that have 
+> implemented a similar setup that we could go see in person? We are based 
+> in Vermont.
+> 
+> 
+> I appreciate the work everyone on this list puts in for newcomers, so 
+> thank you!
+> 
+> Best regards,
+> Mel
+> 
+> 
+> -- 
+> Menelaos Symeonides
+> Post-Doctoral Associate, Thali Lab
+> Department of Microbiology and Molecular Genetics
+> University of Vermont
+> 318 Stafford Hall
+> 95 Carrigan Dr
+> Burlington, VT 05405
+> msymeoni at uvm.edu
+> Phone: 802-656-1161
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From jon at asiimaging.com  Mon Jun  6 15:28:52 2016
+From: jon at asiimaging.com (Jon Daniels)
+Date: Mon, 6 Jun 2016 13:28:52 -0700
+Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+In-Reply-To: <91E32B1C-9BDC-4BD8-A564-906E40C448C1@mpi-cbg.de>
+Message-ID: <SjVQWFdETyowTltJJCtSMTAyNzAzMzE3NQ@Jonio>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160606/3853c93a/attachment.html>
+
+From robert.hauschild at ist.ac.at  Wed Jun  8 07:17:26 2016
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Wed, 8 Jun 2016 14:17:26 +0200
+Subject: [OpenSPIM] Fwd: Open SPIM- Cube laser problems
+In-Reply-To: <C30EB83099EDD444B88CFB31D841FE8A3288710E@W1521107.ist.local>
+References: <C30EB83099EDD444B88CFB31D841FE8A3288710E@W1521107.ist.local>
+Message-ID: <718cc935-e2df-994a-b5b2-2658a6c0dd3d@ist.ac.at>
+
+
+*From:*Ekaterina PAPUSHEVA
+*Sent:* Wednesday, June 08, 2016 10:28 AM
+*To:* 'openspim at openspim.org'
+*Subject:* Open SPIM- Cube laser problems
+
+Dear listers,
+
+We need a good advice regarding OpenSPIM laser. We used the Cube, as 
+recommended. And it died twice by now, after 50-60 hours of use. Talking 
+with Coherent, we realized that the reason might lie on the OpenSPIM 
+software. It repeatedly sends commands ?power?" "power=x" at each slice, 
+and this command seems to wearing out EEPROM of the cube after a million 
+cycles (which is about 50 hours of continuous imaging?)
+
+I wonder- are you familiar with this  Cube issue? How do you work around 
+it? did you remove the "power?" "power=x" commands out of the OpenSpim 
+software, or do you use other type of laser?
+
+Would be grateful for any tip!
+
+Katja
+
+___
+
+Ekaterina Papusheva
+
+Manager of Bioimaging Facility
+
+Institute of Science and Technology Austria
+
+Phone +43-(0)2243 9000-1043;
+
+Mobile +43-(0)664 88509130
+
+Fax +43-(0)2243 9000-2000
+
+Am Campus 1
+
+A-3400 Klosterneuburg
+
+Visit our website: www.ist.ac.at <http://www.ist.ac.at>
+
+This message and any attachment (together "the Message") are 
+confidential and intended only for the individual named. If you have 
+received the Message in error you should not distribute or copy this 
+Message. Please notify the sender immediately by e-mail if you have 
+received this Message in error and delete the Message from your system. 
+Correspondence via e-mail is for information purposes. IST Austria 
+neither makes nor accepts legally binding statements unless explicitly 
+otherwise agreed to the contrary.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160608/537a787e/attachment.html>
+
+From Ann.Wheeler at igmm.ed.ac.uk  Thu Jun  9 15:48:29 2016
+From: Ann.Wheeler at igmm.ed.ac.uk (WHEELER Ann)
+Date: Thu, 9 Jun 2016 20:48:29 +0000
+Subject: [OpenSPIM] auotcad files for 3D printing
+Message-ID: <AM4PR05MB15567C18EF788C4BEB50BE4FEC5F0@AM4PR05MB1556.eurprd05.prod.outlook.com>
+
+Dear OpenSPIM list
+
+
+I want to make a mock up of the sample chamber by 3D printing as we're testing our system. Has anyone tried this and does anyone have any AtuoCAD files we can have for this? There are some files on the website which are helpful but no in the format our 3D printer likes.
+
+
+Alternatively if anyone has had any experience in converting the files on the OPENSpim website into an autocad friendly format that would helpful.
+
+
+Ann
+
+
+Dr Ann Wheeler
+
+Head of IGMM Advanced Imaging Resource
+
+IGMM, Edinburgh EH4 2XU, UK
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160609/a35356ae/attachment.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160609/a35356ae/attachment.ksh>
+
+From Ann.Wheeler at igmm.ed.ac.uk  Fri Jun 10 03:51:46 2016
+From: Ann.Wheeler at igmm.ed.ac.uk (WHEELER Ann)
+Date: Fri, 10 Jun 2016 08:51:46 +0000
+Subject: [OpenSPIM] auotcad files for 3D printing
+In-Reply-To: <1998CE00-9974-48FF-A280-8E0BEC4B4F66@live.unc.edu>
+References: <AM4PR05MB15567C18EF788C4BEB50BE4FEC5F0@AM4PR05MB1556.eurprd05.prod.outlook.com>,
+	<1998CE00-9974-48FF-A280-8E0BEC4B4F66@live.unc.edu>
+Message-ID: <DB5PR05MB1559B5056D35E632BB267096EC500@DB5PR05MB1559.eurprd05.prod.outlook.com>
+
+Hi Tanner
+
+
+Many thanks for that helpful explanation. We do need to edit the autocad file because our objectives are from different manufacturers to those used by the Dresden team. Its also why I want to 3D print as I suspect we mayn't get it right first time. I'll have a go at converting the stl to a dwg and go from there.
+
+
+Ann
+
+
+Dr Ann Wheeler
+
+Head of IGMM Advanced Imaging Resource
+
+IGMM, Edinburgh EH4 2XU, UK
+
+________________________________
+From: fadero <fadero at live.unc.edu>
+Sent: 09 June 2016 22:50:09
+To: WHEELER Ann
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] auotcad files for 3D printing
+
+Hi Ann,
+
+The sample chamber has an stl format on the openspim website, which is the normal file for most 3D printers. You won't be able to edit this file in autocad though. If you want to edit it before printing it, you'll have to use an online stl to .dwg converter to open it in autocad. Then, after editing, you'll have to re-export it as an stl file again for printing.
+
+If you just want to test print it, the provided stl file will do fine.
+
+Tanner
+
+Tanner Fadero
+Research Technician/Lab Manager
+Maddox Labs
+250 Bell Tower Drive<x-apple-data-detectors://1>
+Genome Sciences Building 4434<x-apple-data-detectors://1>
+Department of Biology, UNC-Chapel Hill
+Chapel Hill, NC 27599<x-apple-data-detectors://2/0>
+fadero at ad.unc.edu<mailto:fadero at ad.unc.edu>
+work: 919-962-4571<tel:919-962-4571>
+
+On Jun 9, 2016, at 16:48, WHEELER Ann <Ann.Wheeler at igmm.ed.ac.uk<mailto:Ann.Wheeler at igmm.ed.ac.uk>> wrote:
+
+
+Dear OpenSPIM list
+
+
+I want to make a mock up of the sample chamber by 3D printing as we're testing our system. Has anyone tried this and does anyone have any AtuoCAD files we can have for this? There are some files on the website which are helpful but no in the format our 3D printer likes.
+
+
+Alternatively if anyone has had any experience in converting the files on the OPENSpim website into an autocad friendly format that would helpful.
+
+
+Ann
+
+
+Dr Ann Wheeler
+
+Head of IGMM Advanced Imaging Resource
+
+IGMM, Edinburgh EH4 2XU, UK
+
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160610/7f803671/attachment-0001.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160610/7f803671/attachment-0001.ksh>
+
+From ctrueden at wisc.edu  Wed Jun 29 10:21:39 2016
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Wed, 29 Jun 2016 10:21:39 -0500
+Subject: [OpenSPIM] Wiki read-only for a while
+Message-ID: <CADN69ynqv7psaLtri__Rwy4Yhwr3hvZPYSUxuzvjCSvdBg=njQ@mail.gmail.com>
+
+Hi OpenSPIMers!
+
+In the coming days, we will be upgrading the OpenSPIM wiki to the latest
+MediaWiki components. So for the moment, to avoid data loss, the wiki has
+been set to read-only. Apologies for the inconvenience. I will make another
+announcement as soon as the upgrade is complete.
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - http://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160629/f2f04868/attachment.html>
+
+From huyan1020 at sjtu.edu.cn  Wed Jun  1 22:08:48 2016
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Thu, 2 Jun 2016 11:08:48 +0800 (CST)
+Subject: [OpenSPIM] how many slices per second by the system
+In-Reply-To: <292105436.25209.1464836637599.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, everyone,
+
+This is Yan.
+Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+
+I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+
+I am looking forward for your reply.
+
+Sincerely,
+Yan 
+
+
+
+From robert.hauschild at ist.ac.at  Thu Jun  2 02:11:14 2016
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Thu, 2 Jun 2016 09:11:14 +0200
+Subject: [OpenSPIM] how many slices per second by the system
+In-Reply-To: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+References: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <c035d305-564e-2fb1-7bbc-6fa2f5ccf554@ist.ac.at>
+
+Hi Yan,
+
+I  get about 1.5 slices /second with the openspim plugin. There is a lot 
+of overhead in the communication with the hardware (e.g. everything 
+(laser power, x,y,z etc.) is set and queried even if the only parameter 
+that changes is the z position.
+I never was able to quite figure out why it is so slow.
+Here is a profile output I posted to the list some time ago:
+
+> My setup is Orca R2, Coherent Cube, Picard stage.
+> I tested a couple of things and it it still unclear to me where the 
+> time is wasted.
+>
+> I attached the core log of a 10 frame long time series (100ms 
+> exposure) recorded to memory with X/Y/Z Stage/Theta all unchecked and  
+> without "Update Live preview".
+>
+> I tried two configurations:
+> 1. Orca  + Cube + Picard
+> 2. Orca  + Picard
+>
+> "1" took 7.6 s of which ("1"- "2") = 1.4 s are communication with 
+> laser, which, while way too much, is not the source of the problem.
+>
+> Profiler("performAcquisition")[4 children]: 7.6113s
+> 0.0017%:    Profiler("Output")[0 children]: 0.0001s
+> 0.0000%:    Profiler("Acquisition")[0 children]: 0.0000s
+> 24.0133%:    Profiler("Movement")[0 children]: 1.8277s
+> 0.0013%:    Profiler("Setup")[0 children]: 0.0001s
+>
+> So most of the time the system is doing something that the Profiler is 
+> not recording.
+
+Best,
+
+Robert
+
+
+On 02.06.2016 05:08, 胡衍 wrote:
+> Hello, everyone,
+>
+> This is Yan.
+> Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+>
+> I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+>
+> I am looking forward for your reply.
+>
+> Sincerely,
+> Yan
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A – 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   robert.hauschild at ist.ac.at
+
+
+
+
+From huyan1020 at sjtu.edu.cn  Thu Jun  2 02:31:20 2016
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Thu, 2 Jun 2016 15:31:20 +0800 (CST)
+Subject: [OpenSPIM] how many slices per second by the system
+In-Reply-To: <c035d305-564e-2fb1-7bbc-6fa2f5ccf554@ist.ac.at>
+References: <374394698.25226.1464836928238.JavaMail.zimbra@sjtu.edu.cn>
+	<c035d305-564e-2fb1-7bbc-6fa2f5ccf554@ist.ac.at>
+Message-ID: <1471506853.25457.1464852680227.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, Robert,
+
+Thank you very much for your explanation.
+
+I got to know from the Picard Industries, the following information:
+The 4D-Stage can not move 10 times in one second.
+The USB communications takes about 100 ms to tell the 4D-Stage to move.
+Then the 4D-Stage begins to move for the number of steps you wish to move.
+This takes time along with detecting when the move is completed (more USB
+communications).
+It looks like the 4D-Stage can do about 3-4 moves per second, not 10.
+You may be able to optimize this by reducing the amount of USB
+communications.
+
+I thought the system could take 3 or 4 slices per second, but after reading the paper by Pete,
+I found that he took 1.35 or 1.7 slices per second from the data in the paper.
+So I am confused about the movement.
+
+Anyone knows how to improve the speed?
+
+I am looking forward for your reply.
+
+Sincerely,
+Yan
+
+
+----- 原始邮件 -----
+发件人: "Robert Hauschild" <robert.hauschild at ist.ac.at>
+收件人: openspim at openspim.org
+发送时间: 星期四, 2016年 6 月 02日 下午 3:11:14
+主题: Re: [OpenSPIM] how many slices per second by the system
+
+Hi Yan,
+
+I  get about 1.5 slices /second with the openspim plugin. There is a lot 
+of overhead in the communication with the hardware (e.g. everything 
+(laser power, x,y,z etc.) is set and queried even if the only parameter 
+that changes is the z position.
+I never was able to quite figure out why it is so slow.
+Here is a profile output I posted to the list some time ago:
+
+> My setup is Orca R2, Coherent Cube, Picard stage.
+> I tested a couple of things and it it still unclear to me where the 
+> time is wasted.
+>
+> I attached the core log of a 10 frame long time series (100ms 
+> exposure) recorded to memory with X/Y/Z Stage/Theta all unchecked and  
+> without "Update Live preview".
+>
+> I tried two configurations:
+> 1. Orca  + Cube + Picard
+> 2. Orca  + Picard
+>
+> "1" took 7.6 s of which ("1"- "2") = 1.4 s are communication with 
+> laser, which, while way too much, is not the source of the problem.
+>
+> Profiler("performAcquisition")[4 children]: 7.6113s
+> 0.0017%:    Profiler("Output")[0 children]: 0.0001s
+> 0.0000%:    Profiler("Acquisition")[0 children]: 0.0000s
+> 24.0133%:    Profiler("Movement")[0 children]: 1.8277s
+> 0.0013%:    Profiler("Setup")[0 children]: 0.0001s
+>
+> So most of the time the system is doing something that the Profiler is 
+> not recording.
+
+Best,
+
+Robert
+
+
+On 02.06.2016 05:08, 胡衍 wrote:
+> Hello, everyone,
+>
+> This is Yan.
+> Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+>
+> I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+>
+> I am looking forward for your reply.
+>
+> Sincerely,
+> Yan
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A – 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   robert.hauschild at ist.ac.at
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From msymeoni at uvm.edu  Thu Jun  2 06:48:30 2016
+From: msymeoni at uvm.edu (Menelaos Symeonides)
+Date: Thu, 2 Jun 2016 07:48:30 -0400
+Subject: [OpenSPIM]  Planning an appropriate SPIM build for my experiments
+Message-ID: <fdb8980b-3415-1a00-5431-e76a1010a885@uvm.edu>
+
+Hello OpenSPIM,
+
+I've been following this list and reading papers in the field for about 
+a year. In our lab, we've come to a point where we need to carry out 
+long term fast nontoxic imaging of cell cultures that is only possible 
+with SPIM, and have just obtained funding to build our own microscope to 
+do these experiments. I was hoping to pick the brains of this mailing 
+list to hopefully design an appropriate setup, perhaps based on the 
+OpenSPIM platform, so that we can carry out these experiments.
+
+In general, the experiment involves imaging HIV-infected T cells 
+embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+spread the infection to other cells and do various other things related 
+to the infection, e.g. bystander cell killing. Here are some of the 
+considerations:
+
+1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+apoptosis sensor in the iRFP channel, and will also need to somehow 
+label nuclei and perhaps also membranes. That would be a maximum of 4 
+channels, with 3 channels being "acceptable".
+
+2. The cells will need to be imaged for 2 to 3 days, with a time 
+resolution on the order of 2 Hz (for the full volume). T cells migrate 
+at about 15 μm/sec, and we would like sufficient time resolution to 
+capture each cell at least twice during each body length movement (body 
+length is about 10 μm, hence needing around 2 Hz).
+
+3. The entire volume (or close to that) of the hydrogel will need to be 
+imaged at each timepoint. The volume of the hydrogel is up to our 
+discretion, but generally it is on the order of 150 to 300 μL.
+
+4. Spatial resolution is not of particular concern, as we are more 
+interested in the cells as whole entities rather than e.g. the details 
+of virus assembly in each cell. However, we would like comparable 
+resolution in all three dimensions, as there is no real "plane" we are 
+interested in and the cells can go in any direction.
+
+5. The hydrogel can be fairly optically dense, and we experience 
+prohibitive distortion at anything deeper than ~100 μm with widefield 
+single photon imaging.
+
+6. Of course, temperature control and media perfusion will be required. 
+Given the nature of the pathogen, we will need to be able to fully 
+decontaminate the sample chamber and anything that has come into contact 
+with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+ideas for the tissue culture chamber. We have access to a fabrication 
+service at our institute that can help us design and build the chamber.
+
+
+Just to give you a general idea, we have about $100K available to us to 
+purchase parts for this, not including the fabrication fee for the 
+culture chamber for which we have other money set aside.
+
+Other than general ideas of what direction we should be heading in, or 
+links to papers for setups we could emulate, I also have some more 
+specific questions:
+
+A. Would two-photon imaging be an inevitable requirement given the 
+density of the sample?
+
+B. If the sort of speed of acquisition we are looking for is beyond 
+reach for any system we could feasibly build ourselves (especially given 
+the need for exposing in multiple fluorescence channels at each 
+position), what should we sacrifice in our experimental plan to make it 
+more within reach?
+
+C. Does anyone know of any labs in the Northeast US/Quebec that have 
+implemented a similar setup that we could go see in person? We are based 
+in Vermont.
+
+
+I appreciate the work everyone on this list puts in for newcomers, so 
+thank you!
+
+Best regards,
+Mel
+
+
+-- 
+Menelaos Symeonides
+Post-Doctoral Associate, Thali Lab
+Department of Microbiology and Molecular Genetics
+University of Vermont
+318 Stafford Hall
+95 Carrigan Dr
+Burlington, VT 05405
+msymeoni at uvm.edu
+Phone: 802-656-1161
+
+
+
+From leon.islas at gmail.com  Fri Jun  3 16:21:56 2016
+From: leon.islas at gmail.com (Leon Islas)
+Date: Fri, 3 Jun 2016 16:21:56 -0500
+Subject: [OpenSPIM] Nikon vs Olympus
+Message-ID: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+
+Hello
+I am gathering pieces to build an openSPIM. I have two Nikon water
+immersion objectives and I am wondering if they will work with the Olympus
+lens tube ?
+
+-- 
+León Islas, PhD
+Departamento de Fisiología
+Facultad de Medicina, UNAM
+México DF, México
+Tel: 56232132
+http://canales.facmed.unam.mx/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160603/07a085c5/attachment-0002.html>
+
+From nvladimus at gmail.com  Fri Jun  3 23:48:40 2016
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Sat, 4 Jun 2016 00:48:40 -0400
+Subject: [OpenSPIM] Nikon vs Olympus
+In-Reply-To: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+References: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+Message-ID: <CAC+J2jmOPNX-meovUMOR3-WxH+6HWOFOE7vPKRMr7Qyih6oUKg@mail.gmail.com>
+
+Hi,
+My guess that Nikon objective will work with Olympus tube lens, but if you
+want to know your magnification, you will need to correct it. Say, Nikon
+x16 objective has x16 mag assuming 200 mm Nikon tube lens. Olympus tube
+lens has f=180 mm, so magnification will be proportionally smaller: 16 *
+180/200 = 14.4. Please correct me if I am wrong.
+Nikita
+
+On Fri, Jun 3, 2016 at 5:21 PM, Leon Islas <leon.islas at gmail.com> wrote:
+
+> Hello
+> I am gathering pieces to build an openSPIM. I have two Nikon water
+> immersion objectives and I am wondering if they will work with the Olympus
+> lens tube ?
+>
+> --
+> León Islas, PhD
+> Departamento de Fisiología
+> Facultad de Medicina, UNAM
+> México DF, México
+> Tel: 56232132
+> http://canales.facmed.unam.mx/
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160604/23698358/attachment-0002.html>
+
+From msymeoni at uvm.edu  Sat Jun  4 18:45:57 2016
+From: msymeoni at uvm.edu (Menelaos Symeonides)
+Date: Sat, 04 Jun 2016 19:45:57 -0400
+Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+Message-ID: <592x8fc6j0nc8b9hjpgl51ww.1465083957973@email.android.com>
+
+A little correction... the velocity of the cells is 15 μm/min, not /sec, meaning that the desired imaging speed would be on the order of 2-3 volumes/min, which should be a bit more manageable!
+Mel
+-------- Original message --------From: Menelaos Symeonides <msymeoni at uvm.edu> Date: 6/2/16  7:48 AM  (GMT-05:00) To: openspim at openspim.org Subject: [OpenSPIM]  Planning an appropriate SPIM build for my experiments 
+Hello OpenSPIM,
+
+I've been following this list and reading papers in the field for about 
+a year. In our lab, we've come to a point where we need to carry out 
+long term fast nontoxic imaging of cell cultures that is only possible 
+with SPIM, and have just obtained funding to build our own microscope to 
+do these experiments. I was hoping to pick the brains of this mailing 
+list to hopefully design an appropriate setup, perhaps based on the 
+OpenSPIM platform, so that we can carry out these experiments.
+
+In general, the experiment involves imaging HIV-infected T cells 
+embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+spread the infection to other cells and do various other things related 
+to the infection, e.g. bystander cell killing. Here are some of the 
+considerations:
+
+1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+apoptosis sensor in the iRFP channel, and will also need to somehow 
+label nuclei and perhaps also membranes. That would be a maximum of 4 
+channels, with 3 channels being "acceptable".
+
+2. The cells will need to be imaged for 2 to 3 days, with a time 
+resolution on the order of 2 Hz (for the full volume). T cells migrate 
+at about 15 μm/sec, and we would like sufficient time resolution to 
+capture each cell at least twice during each body length movement (body 
+length is about 10 μm, hence needing around 2 Hz).
+
+3. The entire volume (or close to that) of the hydrogel will need to be 
+imaged at each timepoint. The volume of the hydrogel is up to our 
+discretion, but generally it is on the order of 150 to 300 μL.
+
+4. Spatial resolution is not of particular concern, as we are more 
+interested in the cells as whole entities rather than e.g. the details 
+of virus assembly in each cell. However, we would like comparable 
+resolution in all three dimensions, as there is no real "plane" we are 
+interested in and the cells can go in any direction.
+
+5. The hydrogel can be fairly optically dense, and we experience 
+prohibitive distortion at anything deeper than ~100 μm with widefield 
+single photon imaging.
+
+6. Of course, temperature control and media perfusion will be required. 
+Given the nature of the pathogen, we will need to be able to fully 
+decontaminate the sample chamber and anything that has come into contact 
+with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+ideas for the tissue culture chamber. We have access to a fabrication 
+service at our institute that can help us design and build the chamber.
+
+
+Just to give you a general idea, we have about $100K available to us to 
+purchase parts for this, not including the fabrication fee for the 
+culture chamber for which we have other money set aside.
+
+Other than general ideas of what direction we should be heading in, or 
+links to papers for setups we could emulate, I also have some more 
+specific questions:
+
+A. Would two-photon imaging be an inevitable requirement given the 
+density of the sample?
+
+B. If the sort of speed of acquisition we are looking for is beyond 
+reach for any system we could feasibly build ourselves (especially given 
+the need for exposing in multiple fluorescence channels at each 
+position), what should we sacrifice in our experimental plan to make it 
+more within reach?
+
+C. Does anyone know of any labs in the Northeast US/Quebec that have 
+implemented a similar setup that we could go see in person? We are based 
+in Vermont.
+
+
+I appreciate the work everyone on this list puts in for newcomers, so 
+thank you!
+
+Best regards,
+Mel
+
+
+-- 
+Menelaos Symeonides
+Post-Doctoral Associate, Thali Lab
+Department of Microbiology and Molecular Genetics
+University of Vermont
+318 Stafford Hall
+95 Carrigan Dr
+Burlington, VT 05405
+msymeoni at uvm.edu
+Phone: 802-656-1161
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160604/c415483e/attachment-0002.html>
+
+From weber at mpi-cbg.de  Mon Jun  6 08:50:03 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Mon, 6 Jun 2016 09:50:03 -0400
+Subject: [OpenSPIM] Nikon vs Olympus
+In-Reply-To: <CAC+J2jmOPNX-meovUMOR3-WxH+6HWOFOE7vPKRMr7Qyih6oUKg@mail.gmail.com>
+References: <CALni9aUS76CkL0kH3zwA=-JwVGNv3u+X5Thi+ptJ8zCB_2QE1g@mail.gmail.com>
+	<CAC+J2jmOPNX-meovUMOR3-WxH+6HWOFOE7vPKRMr7Qyih6oUKg@mail.gmail.com>
+Message-ID: <F089D9FC-FD48-43EE-9615-47B428F4739C@mpi-cbg.de>
+
+Hi Leon,
+
+you can get a 200 mm Nikon tube lens on Thorlabs (ITL200). They also have the appropriate adapters and mounts.
+
+Best,
+Michael
+
+> On Jun 4, 2016, at 12:48 AM, Nikita Vladimirov <nvladimus at gmail.com> wrote:
+> 
+> Hi,
+> My guess that Nikon objective will work with Olympus tube lens, but if you want to know your magnification, you will need to correct it. Say, Nikon x16 objective has x16 mag assuming 200 mm Nikon tube lens. Olympus tube lens has f=180 mm, so magnification will be proportionally smaller: 16 * 180/200 = 14.4. Please correct me if I am wrong.
+> Nikita
+> 
+> On Fri, Jun 3, 2016 at 5:21 PM, Leon Islas <leon.islas at gmail.com <mailto:leon.islas at gmail.com>> wrote:
+> Hello
+> I am gathering pieces to build an openSPIM. I have two Nikon water immersion objectives and I am wondering if they will work with the Olympus lens tube ? 
+> 
+> -- 
+> León Islas, PhD
+> Departamento de Fisiología
+> Facultad de Medicina, UNAM
+> México DF, México
+> Tel: 56232132
+> http://canales.facmed.unam.mx/ <http://canales.facmed.unam.mx/>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160606/7f17eb58/attachment-0002.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Mon Jun  6 11:02:09 2016
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Mon, 06 Jun 2016 17:02:09 +0100
+Subject: [OpenSPIM] defining interest points fails
+Message-ID: <c8fef2152327b71ca332d635bb0071c0@cam.ac.uk>
+
+
+Dear All,
+
+Has anyone recently had trouble with the registration of multi-view SPIM
+data? If you encountered the problem described below I'll write a bug
+report, but I first wanted to know if I'm just forgetting something:
+
+I have been trying to register z-stacks from 3 angles at a single time
+point with the old fiji plugin (SPIM Registration) and the new one
+(Multiview Reconstruction). In each case when I try to choose a z-stack
+for finding interest points I get the following error message:
+
+(Fiji Is Just) ImageJ 2.0.0-rc-43/1.51a; Java 1.6.0_24 [64-bit]; Windows
+7 6.1; 428MB of 490870MB (<1%)
+
+java.lang.IllegalArgumentException: STACK IS EMPTY
+     at ij.ImagePlus.setStack(ImagePlus.java:642)
+     at ij.ImagePlus.<init>(ImagePlus.java:149)
+     at
+net.imglib2.img.display.imagej.ImageJFunctions.makeImagePlus(ImageJFunctions.java:245)
+     at
+net.imglib2.img.display.imagej.ImageJFunctions.wrapFloat(ImageJFunctions.java:240)
+     at
+spim.fiji.plugin.interestpointdetection.DifferenceOfGaussian.setInteractiveValues(DifferenceOfGaussian.java:238)
+     at
+spim.fiji.plugin.interestpointdetection.DifferenceOf.queryParameters(DifferenceOf.java:225)
+     at
+spim.fiji.plugin.Interest_Point_Detection.detectInterestPoints(Interest_Point_Detection.java:161)
+     at
+spim.fiji.plugin.Interest_Point_Detection.run(Interest_Point_Detection.java:67)
+     at ij.IJ.runUserPlugIn(IJ.java:216)
+     at ij.IJ.runPlugIn(IJ.java:180)
+     at ij.Executer.runCommand(Executer.java:137)
+     at ij.Executer.run(Executer.java:66)
+     at java.lang.Thread.run(Thread.java:662)
+
+I attached the z-stacks I wanted to register and fuse (as Google Drive
+links, below). I chose the first one to find beads.​
+  spim_TL01_Angle2.tif [1]​​
+  spim_TL01_Angle0.tif [2]​​
+  spim_TL01_Angle1.tif [3]​
+
+With the old SPIM Registration a window opens showing the first image of
+the stack (instead of the entire z-stack) and it doesn't show any green
+or red circles around beads, no matter where I set the threshold.
+
+Would anyone have any ideas what's going wrong?
+
+Thanks a lot!
+
+Best wishes,
+Stephanie
+
+-- 
+
+Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+OFFICE TEL: 01223 337859
+Office: H0.03
+
+-- 
+
+Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+OFFICE TEL: 01223 337859
+Office: H0.03
+
+Links:
+------
+[1] 
+https://drive.google.com/file/d/0B7_ptH2Tf_XdcEowRDJncF9mekE/view?usp=drive_web
+[2] 
+https://drive.google.com/file/d/0B7_ptH2Tf_XdazFFRlBYSXp5YzA/view?usp=drive_web
+[3] 
+https://drive.google.com/file/d/0B7_ptH2Tf_XdWkV2cGtGQU1yUDQ/view?usp=drive_web
+
+
+
+From weber at mpi-cbg.de  Mon Jun  6 14:48:51 2016
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Mon, 6 Jun 2016 15:48:51 -0400
+Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+In-Reply-To: <592x8fc6j0nc8b9hjpgl51ww.1465083957973@email.android.com>
+References: <592x8fc6j0nc8b9hjpgl51ww.1465083957973@email.android.com>
+Message-ID: <91E32B1C-9BDC-4BD8-A564-906E40C448C1@mpi-cbg.de>
+
+Hi Mel,
+
+that’s a long list of requirements. Here are some thoughts:
+
+- test your samples on existing light sheet setups
+- also test/consider a diSPIM-like configuration
+- 2-Photon is beyond reach for $100k - and hard to do for 3-4 channels
+- a fiber-coupled laser launch with 4 lines will be expensive - you might want to start with less lines and upgrade later
+- a feasible detection combination would be a single sCMOS camera plus a filter wheel
+
+Best,
+Michael
+
+> On Jun 4, 2016, at 7:45 PM, Menelaos Symeonides <msymeoni at UVM.EDU> wrote:
+> 
+> A little correction... the velocity of the cells is 15 μm/min, not /sec, meaning that the desired imaging speed would be on the order of 2-3 volumes/min, which should be a bit more manageable!
+> 
+> Mel
+> 
+> -------- Original message --------
+> From: Menelaos Symeonides <msymeoni at uvm.edu>
+> Date: 6/2/16 7:48 AM (GMT-05:00)
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+> 
+> Hello OpenSPIM,
+> 
+> I've been following this list and reading papers in the field for about 
+> a year. In our lab, we've come to a point where we need to carry out 
+> long term fast nontoxic imaging of cell cultures that is only possible 
+> with SPIM, and have just obtained funding to build our own microscope to 
+> do these experiments. I was hoping to pick the brains of this mailing 
+> list to hopefully design an appropriate setup, perhaps based on the 
+> OpenSPIM platform, so that we can carry out these experiments.
+> 
+> In general, the experiment involves imaging HIV-infected T cells 
+> embedded in a 3D collagen hydrogel as they migrate through the ECM and 
+> spread the infection to other cells and do various other things related 
+> to the infection, e.g. bystander cell killing. Here are some of the 
+> considerations:
+> 
+> 1. We have fluorescently-tagged viruses in the FITC channel, a live cell 
+> apoptosis sensor in the iRFP channel, and will also need to somehow 
+> label nuclei and perhaps also membranes. That would be a maximum of 4 
+> channels, with 3 channels being "acceptable".
+> 
+> 2. The cells will need to be imaged for 2 to 3 days, with a time 
+> resolution on the order of 2 Hz (for the full volume). T cells migrate 
+> at about 15 μm/sec, and we would like sufficient time resolution to 
+> capture each cell at least twice during each body length movement (body 
+> length is about 10 μm, hence needing around 2 Hz).
+> 
+> 3. The entire volume (or close to that) of the hydrogel will need to be 
+> imaged at each timepoint. The volume of the hydrogel is up to our 
+> discretion, but generally it is on the order of 150 to 300 μL.
+> 
+> 4. Spatial resolution is not of particular concern, as we are more 
+> interested in the cells as whole entities rather than e.g. the details 
+> of virus assembly in each cell. However, we would like comparable 
+> resolution in all three dimensions, as there is no real "plane" we are 
+> interested in and the cells can go in any direction.
+> 
+> 5. The hydrogel can be fairly optically dense, and we experience 
+> prohibitive distortion at anything deeper than ~100 μm with widefield 
+> single photon imaging.
+> 
+> 6. Of course, temperature control and media perfusion will be required. 
+> Given the nature of the pathogen, we will need to be able to fully 
+> decontaminate the sample chamber and anything that has come into contact 
+> with the media. We've been looking at Ernst Stelzer's TC-LSFM to get 
+> ideas for the tissue culture chamber. We have access to a fabrication 
+> service at our institute that can help us design and build the chamber.
+> 
+> 
+> Just to give you a general idea, we have about $100K available to us to 
+> purchase parts for this, not including the fabrication fee for the 
+> culture chamber for which we have other money set aside.
+> 
+> Other than general ideas of what direction we should be heading in, or 
+> links to papers for setups we could emulate, I also have some more 
+> specific questions:
+> 
+> A. Would two-photon imaging be an inevitable requirement given the 
+> density of the sample?
+> 
+> B. If the sort of speed of acquisition we are looking for is beyond 
+> reach for any system we could feasibly build ourselves (especially given 
+> the need for exposing in multiple fluorescence channels at each 
+> position), what should we sacrifice in our experimental plan to make it 
+> more within reach?
+> 
+> C. Does anyone know of any labs in the Northeast US/Quebec that have 
+> implemented a similar setup that we could go see in person? We are based 
+> in Vermont.
+> 
+> 
+> I appreciate the work everyone on this list puts in for newcomers, so 
+> thank you!
+> 
+> Best regards,
+> Mel
+> 
+> 
+> -- 
+> Menelaos Symeonides
+> Post-Doctoral Associate, Thali Lab
+> Department of Microbiology and Molecular Genetics
+> University of Vermont
+> 318 Stafford Hall
+> 95 Carrigan Dr
+> Burlington, VT 05405
+> msymeoni at uvm.edu
+> Phone: 802-656-1161
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+
+From jon at asiimaging.com  Mon Jun  6 15:28:52 2016
+From: jon at asiimaging.com (Jon Daniels)
+Date: Mon, 6 Jun 2016 13:28:52 -0700
+Subject: [OpenSPIM] Planning an appropriate SPIM build for my experiments
+In-Reply-To: <91E32B1C-9BDC-4BD8-A564-906E40C448C1@mpi-cbg.de>
+Message-ID: <SjVQWFdETyowTltJJCtSMTAyNzAzMzE3NQ@Jonio>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160606/3853c93a/attachment-0002.html>
+
+From robert.hauschild at ist.ac.at  Wed Jun  8 07:17:26 2016
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Wed, 8 Jun 2016 14:17:26 +0200
+Subject: [OpenSPIM] Fwd: Open SPIM- Cube laser problems
+In-Reply-To: <C30EB83099EDD444B88CFB31D841FE8A3288710E@W1521107.ist.local>
+References: <C30EB83099EDD444B88CFB31D841FE8A3288710E@W1521107.ist.local>
+Message-ID: <718cc935-e2df-994a-b5b2-2658a6c0dd3d@ist.ac.at>
+
+
+*From:*Ekaterina PAPUSHEVA
+*Sent:* Wednesday, June 08, 2016 10:28 AM
+*To:* 'openspim at openspim.org'
+*Subject:* Open SPIM- Cube laser problems
+
+Dear listers,
+
+We need a good advice regarding OpenSPIM laser. We used the Cube, as 
+recommended. And it died twice by now, after 50-60 hours of use. Talking 
+with Coherent, we realized that the reason might lie on the OpenSPIM 
+software. It repeatedly sends commands “power?" "power=x" at each slice, 
+and this command seems to wearing out EEPROM of the cube after a million 
+cycles (which is about 50 hours of continuous imaging…)
+
+I wonder- are you familiar with this  Cube issue? How do you work around 
+it? did you remove the "power?" "power=x" commands out of the OpenSpim 
+software, or do you use other type of laser?
+
+Would be grateful for any tip!
+
+Katja
+
+___
+
+Ekaterina Papusheva
+
+Manager of Bioimaging Facility
+
+Institute of Science and Technology Austria
+
+Phone +43-(0)2243 9000-1043;
+
+Mobile +43-(0)664 88509130
+
+Fax +43-(0)2243 9000-2000
+
+Am Campus 1
+
+A-3400 Klosterneuburg
+
+Visit our website: www.ist.ac.at <http://www.ist.ac.at>
+
+This message and any attachment (together "the Message") are 
+confidential and intended only for the individual named. If you have 
+received the Message in error you should not distribute or copy this 
+Message. Please notify the sender immediately by e-mail if you have 
+received this Message in error and delete the Message from your system. 
+Correspondence via e-mail is for information purposes. IST Austria 
+neither makes nor accepts legally binding statements unless explicitly 
+otherwise agreed to the contrary.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160608/537a787e/attachment-0002.html>
+
+From Ann.Wheeler at igmm.ed.ac.uk  Thu Jun  9 15:48:29 2016
+From: Ann.Wheeler at igmm.ed.ac.uk (WHEELER Ann)
+Date: Thu, 9 Jun 2016 20:48:29 +0000
+Subject: [OpenSPIM] auotcad files for 3D printing
+Message-ID: <AM4PR05MB15567C18EF788C4BEB50BE4FEC5F0@AM4PR05MB1556.eurprd05.prod.outlook.com>
+
+Dear OpenSPIM list
+
+
+I want to make a mock up of the sample chamber by 3D printing as we're testing our system. Has anyone tried this and does anyone have any AtuoCAD files we can have for this? There are some files on the website which are helpful but no in the format our 3D printer likes.
+
+
+Alternatively if anyone has had any experience in converting the files on the OPENSpim website into an autocad friendly format that would helpful.
+
+
+Ann
+
+
+Dr Ann Wheeler
+
+Head of IGMM Advanced Imaging Resource
+
+IGMM, Edinburgh EH4 2XU, UK
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160609/a35356ae/attachment-0002.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160609/a35356ae/attachment-0002.ksh>
+
+From Ann.Wheeler at igmm.ed.ac.uk  Fri Jun 10 03:51:46 2016
+From: Ann.Wheeler at igmm.ed.ac.uk (WHEELER Ann)
+Date: Fri, 10 Jun 2016 08:51:46 +0000
+Subject: [OpenSPIM] auotcad files for 3D printing
+In-Reply-To: <1998CE00-9974-48FF-A280-8E0BEC4B4F66@live.unc.edu>
+References: <AM4PR05MB15567C18EF788C4BEB50BE4FEC5F0@AM4PR05MB1556.eurprd05.prod.outlook.com>,
+	<1998CE00-9974-48FF-A280-8E0BEC4B4F66@live.unc.edu>
+Message-ID: <DB5PR05MB1559B5056D35E632BB267096EC500@DB5PR05MB1559.eurprd05.prod.outlook.com>
+
+Hi Tanner
+
+
+Many thanks for that helpful explanation. We do need to edit the autocad file because our objectives are from different manufacturers to those used by the Dresden team. Its also why I want to 3D print as I suspect we mayn't get it right first time. I'll have a go at converting the stl to a dwg and go from there.
+
+
+Ann
+
+
+Dr Ann Wheeler
+
+Head of IGMM Advanced Imaging Resource
+
+IGMM, Edinburgh EH4 2XU, UK
+
+________________________________
+From: fadero <fadero at live.unc.edu>
+Sent: 09 June 2016 22:50:09
+To: WHEELER Ann
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] auotcad files for 3D printing
+
+Hi Ann,
+
+The sample chamber has an stl format on the openspim website, which is the normal file for most 3D printers. You won't be able to edit this file in autocad though. If you want to edit it before printing it, you'll have to use an online stl to .dwg converter to open it in autocad. Then, after editing, you'll have to re-export it as an stl file again for printing.
+
+If you just want to test print it, the provided stl file will do fine.
+
+Tanner
+
+Tanner Fadero
+Research Technician/Lab Manager
+Maddox Labs
+250 Bell Tower Drive<x-apple-data-detectors://1>
+Genome Sciences Building 4434<x-apple-data-detectors://1>
+Department of Biology, UNC-Chapel Hill
+Chapel Hill, NC 27599<x-apple-data-detectors://2/0>
+fadero at ad.unc.edu<mailto:fadero at ad.unc.edu>
+work: 919-962-4571<tel:919-962-4571>
+
+On Jun 9, 2016, at 16:48, WHEELER Ann <Ann.Wheeler at igmm.ed.ac.uk<mailto:Ann.Wheeler at igmm.ed.ac.uk>> wrote:
+
+
+Dear OpenSPIM list
+
+
+I want to make a mock up of the sample chamber by 3D printing as we're testing our system. Has anyone tried this and does anyone have any AtuoCAD files we can have for this? There are some files on the website which are helpful but no in the format our 3D printer likes.
+
+
+Alternatively if anyone has had any experience in converting the files on the OPENSpim website into an autocad friendly format that would helpful.
+
+
+Ann
+
+
+Dr Ann Wheeler
+
+Head of IGMM Advanced Imaging Resource
+
+IGMM, Edinburgh EH4 2XU, UK
+
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160610/7f803671/attachment-0002.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160610/7f803671/attachment-0002.ksh>
+
+From ctrueden at wisc.edu  Wed Jun 29 10:21:39 2016
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Wed, 29 Jun 2016 10:21:39 -0500
+Subject: [OpenSPIM] Wiki read-only for a while
+Message-ID: <CADN69ynqv7psaLtri__Rwy4Yhwr3hvZPYSUxuzvjCSvdBg=njQ@mail.gmail.com>
+
+Hi OpenSPIMers!
+
+In the coming days, we will be upgrading the OpenSPIM wiki to the latest
+MediaWiki components. So for the moment, to avoid data loss, the wiki has
+been set to read-only. Apologies for the inconvenience. I will make another
+announcement as soon as the upgrade is complete.
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - http://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160629/f2f04868/attachment-0002.html>
+
+From ctrueden at wisc.edu  Thu Jun 30 16:31:01 2016
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Thu, 30 Jun 2016 16:31:01 -0500
+Subject: [OpenSPIM] Wiki read-only for a while
+In-Reply-To: <CADN69ykjLaOwda5vzOoHXzCYrVg1jgatwCRqRV3Y521Jok17CA@mail.gmail.com>
+References: <CADN69ynqv7psaLtri__Rwy4Yhwr3hvZPYSUxuzvjCSvdBg=njQ@mail.gmail.com>
+ <CADN69ykjLaOwda5vzOoHXzCYrVg1jgatwCRqRV3Y521Jok17CA@mail.gmail.com>
+Message-ID: <CADN69y=z+uQTAXqOxx7Co3Hvz0o_f-OrUWkdybs7sZfnHksCFg@mail.gmail.com>
+
+Hi all,
+
+We resolved the issue with mails not being sent, as well as the twitter
+feed ;-)
+
+However, now we are going to upgrade the web server to the latest version
+of Ubuntu. So there may be a small amount of downtime in a short while. We
+will email again if there is any reason for continuing concern. Otherwise,
+assume all is well!
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - http://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+
+
+On Thu, Jun 30, 2016 at 3:14 PM, Curtis Rueden <ctrueden at wisc.edu> wrote:
+
+> Hi everyone,
+>
+> The migration to the new web server is complete.
+>
+> The site http://openspim.org/ has been updated to MediaWiki 1.27.0. We
+> have done a full audit of all installed extensions, pruning out the ones
+> which were not being used, and upgrading the rest. There were quite a few
+> changes on the technical side; e.g., the OggHandler extension was
+> discontinued in favor of TimedMediaHandler. Videos on the wiki seem to be
+> working fine with this new extension, but please speak up if you notice
+> otherwise.
+>
+> We also upgraded the MantisBT bug tracker to the latest version 1.2.19,
+> which went smoothly.
+>
+> Loose ends still to resolve:
+>
+> * Disappearance of "openspim.org" title at the top of each page.
+> * Twitter feed embedded on
+> http://openspim.org/EMBO_practical_course_Light_sheet_microscopy
+> * "Array" text shown in footer instead of creative commons logo
+> * Possible issue with wiki no longer sending emails (e.g., for password
+> resets)
+>
+> We will continue to investigate and fix the above issues as time allows.
+>
+> Let us know if you notice any other weirdness or brokenness.
+>
+> Regards,
+> Curtis
+>
+> --
+> Curtis Rueden
+> LOCI software architect - http://loci.wisc.edu/software
+> ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+> Did you know ImageJ has a forum? http://forum.imagej.net/
+>
+>
+> On Wed, Jun 29, 2016 at 10:21 AM, Curtis Rueden <ctrueden at wisc.edu> wrote:
+>
+>> Hi OpenSPIMers!
+>>
+>> In the coming days, we will be upgrading the OpenSPIM wiki to the latest
+>> MediaWiki components. So for the moment, to avoid data loss, the wiki has
+>> been set to read-only. Apologies for the inconvenience. I will make another
+>> announcement as soon as the upgrade is complete.
+>>
+>> Regards,
+>> Curtis
+>>
+>> --
+>> Curtis Rueden
+>> LOCI software architect - http://loci.wisc.edu/software
+>> ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+>> Did you know ImageJ has a forum? http://forum.imagej.net/
+>>
+>>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160630/75e81e00/attachment.html>
+
+From ctrueden at wisc.edu  Thu Jun 30 15:14:08 2016
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Thu, 30 Jun 2016 15:14:08 -0500
+Subject: [OpenSPIM] Wiki read-only for a while
+In-Reply-To: <CADN69ynqv7psaLtri__Rwy4Yhwr3hvZPYSUxuzvjCSvdBg=njQ@mail.gmail.com>
+References: <CADN69ynqv7psaLtri__Rwy4Yhwr3hvZPYSUxuzvjCSvdBg=njQ@mail.gmail.com>
+Message-ID: <CADN69ykjLaOwda5vzOoHXzCYrVg1jgatwCRqRV3Y521Jok17CA@mail.gmail.com>
+
+Hi everyone,
+
+The migration to the new web server is complete.
+
+The site http://openspim.org/ has been updated to MediaWiki 1.27.0. We have
+done a full audit of all installed extensions, pruning out the ones which
+were not being used, and upgrading the rest. There were quite a few changes
+on the technical side; e.g., the OggHandler extension was discontinued in
+favor of TimedMediaHandler. Videos on the wiki seem to be working fine with
+this new extension, but please speak up if you notice otherwise.
+
+We also upgraded the MantisBT bug tracker to the latest version 1.2.19,
+which went smoothly.
+
+Loose ends still to resolve:
+
+* Disappearance of "openspim.org" title at the top of each page.
+* Twitter feed embedded on
+http://openspim.org/EMBO_practical_course_Light_sheet_microscopy
+* "Array" text shown in footer instead of creative commons logo
+* Possible issue with wiki no longer sending emails (e.g., for password
+resets)
+
+We will continue to investigate and fix the above issues as time allows.
+
+Let us know if you notice any other weirdness or brokenness.
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - http://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+
+
+On Wed, Jun 29, 2016 at 10:21 AM, Curtis Rueden <ctrueden at wisc.edu> wrote:
+
+> Hi OpenSPIMers!
+>
+> In the coming days, we will be upgrading the OpenSPIM wiki to the latest
+> MediaWiki components. So for the moment, to avoid data loss, the wiki has
+> been set to read-only. Apologies for the inconvenience. I will make another
+> announcement as soon as the upgrade is complete.
+>
+> Regards,
+> Curtis
+>
+> --
+> Curtis Rueden
+> LOCI software architect - http://loci.wisc.edu/software
+> ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+> Did you know ImageJ has a forum? http://forum.imagej.net/
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160630/57f8086b/attachment.html>
+

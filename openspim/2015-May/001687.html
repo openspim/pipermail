@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] New Micro-Manager API: Home()
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20Micro-Manager%20API%3A%20Home%28%29&In-Reply-To=%3Cd551ed95dc93c8e98d53d560336b288e%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001682.html">
+   <LINK REL="Next"  HREF="001688.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] New Micro-Manager API: Home()</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20Micro-Manager%20API%3A%20Home%28%29&In-Reply-To=%3Cd551ed95dc93c8e98d53d560336b288e%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] New Micro-Manager API: Home()">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Thu May  7 12:11:23 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001682.html">[OpenSPIM] New Micro-Manager API: Home(), was Fwd: Re: [micro-manager-general] Joystick
+</A></li>
+        <LI>Next message: <A HREF="001688.html">[OpenSPIM] New Micro-Manager API: Home()
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1687">[ date ]</a>
+              <a href="thread.html#1687">[ thread ]</a>
+              <a href="subject.html#1687">[ subject ]</a>
+              <a href="author.html#1687">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I tried to do it, just to see whether I can, but I can't and I feel that 
+again the problem is not having sufficient information :/ How can I find 
+out how this &quot;SVN r15408&quot; relates to the version available via 
+Micro-Manager-Dev update site? Because in this version (the mysterious 
+MM Studio version: 1.4.22 20150430) calling core.home(label) for the Z 
+stage, just like it's done for the X/Y stage, throws exception.
+
+Regards,
+Monika
+
+---
+2015-05-07T18:49:23.194887 tid5692 [dbg,Core] Will home xy stage Picard 
+XY Stage
+2015-05-07T18:49:23.208887 tid5692 [dbg,Core] Did home xy stage Picard 
+XY Stage
+2015-05-07T18:49:23.208887 tid5692 [dbg,Core] Will home xy stage Picard 
+XY Stage
+2015-05-07T18:49:23.224888 tid5692 [dbg,Core] Did home xy stage Picard 
+XY Stage
+2015-05-07T18:49:23.224888 tid5692 [IFO,App] Could not home Z stage.
+                                    [       ] java.lang.Exception: Device 
+&quot;Picard Z Stage&quot; is of the wrong type for the requested operation in 
+Thread[AWT-EventQueue-0,6,main]
+                                    [       ]   at 
+mmcorej.MMCoreJJNI.CMMCore_home(Native Method)
+                                    [       ]   at 
+mmcorej.CMMCore.home(CMMCore.java:1202)
+                                    [       ]   at 
+spim.setup.Stage.home(Stage.java:152)
+                                    [       ]   at 
+spim.SPIMAcquisition$6.actionPerformed(SPIMAcquisition.java:429)
+                                    [       ]   at 
+javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+                                    [       ]   at 
+javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+                                    [       ]   at 
+javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+                                    [       ]   at 
+javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+                                    [       ]   at 
+javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+                                    [       ]   at 
+java.awt.Component.processMouseEvent(Component.java:6289)
+                                    [       ]   at 
+javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+                                    [       ]   at 
+java.awt.Component.processEvent(Component.java:6054)
+                                    [       ]   at 
+java.awt.Container.processEvent(Container.java:2041)
+                                    [       ]   at 
+java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                    [       ]   at 
+java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                    [       ]   at 
+java.awt.Component.dispatchEvent(Component.java:4482)
+                                    [       ]   at 
+java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+                                    [       ]   at 
+java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+                                    [       ]   at 
+java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+                                    [       ]   at 
+java.awt.Container.dispatchEventImpl(Container.java:2085)
+                                    [       ]   at 
+java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                    [       ]   at 
+java.awt.Component.dispatchEvent(Component.java:4482)
+                                    [       ]   at 
+java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                    [       ]   at 
+java.awt.EventQueue.access$000(EventQueue.java:85)
+                                    [       ]   at 
+java.awt.EventQueue$1.run(EventQueue.java:603)
+                                    [       ]   at 
+java.awt.EventQueue$1.run(EventQueue.java:601)
+                                    [       ]   at 
+java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at 
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                    [       ]   at 
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                    [       ]   at 
+java.awt.EventQueue$2.run(EventQueue.java:617)
+                                    [       ]   at 
+java.awt.EventQueue$2.run(EventQueue.java:615)
+                                    [       ]   at 
+java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at 
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                    [       ]   at 
+java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                    [       ]   at 
+java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                    [       ]   at 
+java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                    [       ]   at 
+java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                    [       ]   at 
+java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                    [       ]   at 
+java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                    [       ]   at 
+java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+&gt;<i> Message: 2
+</I>&gt;<i> Date: Wed, 06 May 2015 08:15:40 +0200
+</I>&gt;<i> From: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">schindelin at wisc.edu</A>&gt;
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: [OpenSPIM] New Micro-Manager API: Home(), was Fwd: Re:
+</I>&gt;<i> 	[micro-manager-general] Joystick
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">b96cc9f412568dc18b038dc5ccd8d11b at www.dscho.org</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; CHARSET=US-ASCII; format=flowed
+</I>&gt;<i> 
+</I>&gt;<i> Hello fellow OpenSPIMoids, especially of the software developing
+</I>&gt;<i> variety,
+</I>&gt;<i> 
+</I>&gt;<i> I just stumbled over this mail that implies that we need to adjust the
+</I>&gt;<i> code of the SPIMAcquisition plugin. Takers?
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i> 
+</I>&gt;<i> -------- Original Message --------
+</I>&gt;<i> Subject: Re: [micro-manager-general] Joystick
+</I>&gt;<i> Date: 2015-05-05 22:55
+</I>&gt;<i>  From: Mark Tsuchida &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt;
+</I>&gt;<i> To: Micro-Manager General &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>&gt;
+</I>&gt;<i> Reply-To: Micro-Manager General
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> On Mon, Apr 27, 2015 at 3:37 PM, Mark Tsuchida &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;&gt;&gt;<i> One more thing, MM::Stage  (in MMDevice.h) does not have a home call.
+</I>&gt;&gt;&gt;<i> Is this by design?
+</I>&gt;&gt;&gt;<i> My Zstage needs to be homed. I believe I need to implement it as a
+</I>&gt;&gt;&gt;<i> property??
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> We should add this, but for now you will need to use a property.
+</I>&gt;<i> 
+</I>&gt;<i> Z stages can now implement Home(), as of SVN r15408.
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> Mark
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------------------------
+</I>&gt;<i> One dashboard for servers and applications across 
+</I>&gt;<i> Physical-Virtual-Cloud
+</I>&gt;<i> Widest out-of-the-box monitoring support with 50+ applications
+</I>&gt;<i> Performance metrics, stats and reports that give you Actionable 
+</I>&gt;<i> Insights
+</I>&gt;<i> Deep dive visibility with transaction tracing using APM Insight.
+</I>&gt;<i> <A HREF="http://ad.doubleclick.net/ddm/clk/290420510;117567292;y">http://ad.doubleclick.net/ddm/clk/290420510;117567292;y</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> micro-manager-general mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>
+</I>&gt;<i> <A HREF="https://lists.sourceforge.net/lists/listinfo/micro-manager-general">https://lists.sourceforge.net/lists/listinfo/micro-manager-general</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 3
+</I>&gt;<i> Date: Wed, 06 May 2015 08:27:51 +0200
+</I>&gt;<i> From: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt;
+</I>&gt;<i> To: Monika Paw?owska &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt;
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: [OpenSPIM] About metadata and SPIM reconstruction, was Re:
+</I>&gt;<i> 	OpenSPIM update site
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">a6dc74c3bbefb641dfe50884651fdf78 at www.dscho.org</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=UTF-8; format=flowed
+</I>&gt;<i> 
+</I>&gt;<i> Hi Monika,
+</I>&gt;<i> 
+</I>&gt;<i> [I hope you do not mind that I Cc:ed the mailing list; I believe that
+</I>&gt;<i> other OpenSPIM people will be interested/helpful]
+</I>&gt;<i> 
+</I>&gt;<i> On 2015-05-05 16:16, Johannes Schindelin wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> On 2015-05-05 16:13, Monika Paw?owska wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Now that I figured out how to use maven I wouldn't mind helping a bit
+</I>&gt;&gt;&gt;<i> more  with the plugin. For instance I would like to figure out what
+</I>&gt;&gt;&gt;<i> would it  take to remove this step: 
+</I>&gt;&gt;&gt;<i> <A HREF="http://openspim.org/Pre-processing">http://openspim.org/Pre-processing</A>
+</I>&gt;&gt;&gt;<i> . Do you have  any idea what these &quot;metadata conflicts&quot; are?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I do not remember, I just found out recently that we (= the lab I am
+</I>&gt;&gt;<i> working in) are not writing OME Tiffs at all :-( As far as I can tell,
+</I>&gt;&gt;<i> this is the class that *should* do it:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> <A HREF="https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/progacq/OMETIFFHandler.java">https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/progacq/OMETIFFHandler.java</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> But I have no idea what the metadata conflicts are, and as far as I
+</I>&gt;&gt;<i> can tell, nobody recorded the conflicts, either. I guess we will just
+</I>&gt;&gt;<i> have to reproduce them, and I half expect the conflicts to have gone
+</I>&gt;&gt;<i> away in the meantime, anyway.
+</I>&gt;<i> 
+</I>&gt;<i> There was a bug report yesterday:
+</I>&gt;<i> <A HREF="https://github.com/bigdataviewer/SPIM_Registration/issues/41">https://github.com/bigdataviewer/SPIM_Registration/issues/41</A>
+</I>&gt;<i> 
+</I>&gt;<i> While it concerned CZI files, I imagine that OME Tiff files might 
+</I>&gt;<i> expose
+</I>&gt;<i> similar problems. If you stumble over such problems, I would suggest
+</I>&gt;<i> doing exactly the same as Mario: report the problem on GitHub. Steffi 
+</I>&gt;<i> is
+</I>&gt;<i> always busy, of course, as we all are, yet he is always helpful.
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Dscho
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 4
+</I>&gt;<i> Date: Wed, 6 May 2015 16:42:12 +0200 (CEST)
+</I>&gt;<i> From: &quot;Peter Gabriel Pitrone&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">pitrone at mpi-cbg.de</A>&gt;
+</I>&gt;<i> To: &quot;Johannes Schindelin&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt;
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] OpenSPIM update site
+</I>&gt;<i> Message-ID:
+</I>&gt;<i> 	&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">13038.128.128.250.98.1430923332.squirrel at webmail.mpi-cbg.de</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;iso-8859-1&quot;
+</I>&gt;<i> 
+</I>&gt;<i> Howdy Johannes,
+</I>&gt;<i> 
+</I>&gt;<i> Here's what I got from the Debug console, along with another core log. 
+</I>&gt;<i> I
+</I>&gt;<i> hope it helps... BTW, the console kept on making more and more errors
+</I>&gt;<i> after I homed the stage, but I assume that they are the same message.
+</I>&gt;<i> 
+</I>&gt;<i> The motors completely disconnect (go red) from the device manager after
+</I>&gt;<i> the procedure, so I have to unplug the hub and reconnect to get them
+</I>&gt;<i> back.
+</I>&gt;<i> 
+</I>&gt;<i> Best Regards,
+</I>&gt;<i> Pete
+</I>&gt;<i> 
+</I>&gt;<i> Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+</I>&gt;<i> Light Sheet Fluorescence Microscopist and Imaging Specialist
+</I>&gt;<i> for Dr. Pavel Tomancak's research group at the
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstra?e 108
+</I>&gt;<i> 01307 Dresden, Saxony
+</I>&gt;<i> Germany
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &amp;
+</I>&gt;<i> <A HREF="http://www.openspim.org">http://www.openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> &quot;I KEEP six honest serving-men (they taught me all I knew); their names
+</I>&gt;<i> are What and Why and When and How and Where and Who.&quot; Rudyard Kipling -
+</I>&gt;<i> The Elephant's Child
+</I>&gt;<i> 
+</I>&gt;<i> On Tue, May 5, 2015 14:13, Johannes Schindelin wrote:
+</I>&gt;<i> &lt;|&gt; Hi Pete,
+</I>&gt;<i> &lt;|&gt;
+</I>&gt;<i> &lt;|&gt; On 2015-05-05 14:10, Peter Gabriel Pitrone wrote:
+</I>&gt;<i> &lt;|&gt;
+</I>&gt;<i> &lt;|&gt;&gt; I updated the fiji with OpenSPIM, and after the restart it works 
+</I>&gt;<i> just
+</I>&gt;<i> &lt;|&gt;&gt; like you say. However, afterwards when homes the the 4D-stage 
+</I>&gt;<i> (with
+</I>&gt;<i> &lt;|&gt;&gt; the USB-Slide-II motors), the motors lose connection and I need to
+</I>&gt;<i> &lt;|&gt;&gt; pull the connection out of the USB hub and restart.
+</I>&gt;<i> &lt;|&gt;
+</I>&gt;<i> &lt;|&gt; Console output &amp; CoreLog.txt, please?
+</I>&gt;<i> &lt;|&gt;
+</I>&gt;<i> &lt;|&gt; Ciao,
+</I>&gt;<i> &lt;|&gt; Johannes
+</I>&gt;<i> &lt;|&gt;
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An embedded and charset-unspecified text was scrubbed...
+</I>&gt;<i> Name: Error-Console.txt
+</I>&gt;<i> URL:
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150506/d8f712f9/attachment.txt">http://openspim.org/pipermail/openspim/attachments/20150506/d8f712f9/attachment.txt</A>&gt;
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An embedded and charset-unspecified text was scrubbed...
+</I>&gt;<i> Name: CoreLog20150506T103259_pid1368.txt
+</I>&gt;<i> URL:
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150506/d8f712f9/attachment-0001.txt">http://openspim.org/pipermail/openspim/attachments/20150506/d8f712f9/attachment-0001.txt</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> End of OpenSPIM Digest, Vol 25, Issue 5
+</I>&gt;<i> ***************************************
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001682.html">[OpenSPIM] New Micro-Manager API: Home(), was Fwd: Re: [micro-manager-general] Joystick
+</A></li>
+	<LI>Next message: <A HREF="001688.html">[OpenSPIM] New Micro-Manager API: Home()
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1687">[ date ]</a>
+              <a href="thread.html#1687">[ thread ]</a>
+              <a href="subject.html#1687">[ subject ]</a>
+              <a href="author.html#1687">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard hi-res stage
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20hi-res%20stage&In-Reply-To=%3C41996ca8918edfb69f81be7b6c3a5104%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000632.html">
+   <LINK REL="Next"  HREF="000631.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard hi-res stage</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20hi-res%20stage&In-Reply-To=%3C41996ca8918edfb69f81be7b6c3a5104%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] Picard hi-res stage">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Mon Feb 16 05:59:09 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000632.html">[OpenSPIM] Picard hi-res stage
+</A></li>
+        <LI>Next message: <A HREF="000631.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#633">[ date ]</a>
+              <a href="thread.html#633">[ thread ]</a>
+              <a href="subject.html#633">[ subject ]</a>
+              <a href="author.html#633">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Monika,
+
+On 2015-02-16 12:02, Monika Paw&#322;owska wrote:
+&gt;<i> W dniu .02.2015 o 12:33 Johannes Schindelin 
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt;  pisze:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> The Picard stage driver in Micro-Manager is the only part of the  
+</I>&gt;&gt;<i> OpenSPIM software we managed to contribute so far. Therefore: no, it  
+</I>&gt;&gt;<i> does not need to be changed.
+</I>&gt;<i> 
+</I>&gt;<i> the reason I am asking about the Picard stage driver is the following:
+</I>&gt;<i> 
+</I>&gt;<i> the OpenSPIM plugin should make it possible to move the stage up to 9
+</I>&gt;<i> mm.  However, when I set the step size 0.25 um and max number of steps
+</I>&gt;<i> 45000 in  the Hardware Configuration, I can only go up to 8191.75 um,
+</I>&gt;<i> or 32767  steps. This happens both in the OpenSPIM plugin and when
+</I>&gt;<i> using the  MicroManager &quot;Stage control&quot; plugin (see attachement).
+</I>
+This looks like an arbitrary limit, however, I could only see an 
+arbitrary limit of 8000 in the source code: 
+<A HREF="https://github.com/openspim/micromanager/blob/5f1c8d2079aa2d354820b82faae57e6ce53047d0/DeviceAdapters/PicardStage/PicardStage.cpp#L716">https://github.com/openspim/micromanager/blob/5f1c8d2079aa2d354820b82faae57e6ce53047d0/DeviceAdapters/PicardStage/PicardStage.cpp#L716</A>
+
+&gt;<i> I use the mFiji  version provided by Ulrik.
+</I>
+I have not the faintest idea from what source code Ulrik has built this 
+version &#8211; I am still waiting for his Pull Request(s)... ;-)
+
+&gt;<i> Using the software provided by Picard I can go up to 45000 steps.
+</I>&gt;<i> 
+</I>&gt;<i> Any ideas why this is so?
+</I>
+As I said, I think there are some very arbitrary limits in the source 
+code which should be turned into properties that can be set in the 
+hardware configuration wizard (with sensible default values, of 
+course!), also indicated by the `TODO` I linked above.
+
+Ciao,
+Johannes
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000632.html">[OpenSPIM] Picard hi-res stage
+</A></li>
+	<LI>Next message: <A HREF="000631.html">[OpenSPIM] SPIMAcquisition plugin installation fails
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#633">[ date ]</a>
+              <a href="thread.html#633">[ thread ]</a>
+              <a href="subject.html#633">[ subject ]</a>
+              <a href="author.html#633">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

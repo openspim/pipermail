@@ -1,0 +1,67 @@
+2014-08-18T09:21:48.303537 tid860 [IFO,LogManager] Enabled primary log file C:\Users\Admin\Desktop\Fiji.app\CoreLogs\CoreLog20140818T092148_pid3156.txt
+2014-08-18T09:21:48.303537 tid860 [IFO,App] User: Admin
+2014-08-18T09:21:48.303537 tid860 [IFO,App] Host: bco237100
+2014-08-18T09:21:48.303537 tid860 [IFO,App] MM Studio version: 1.4.x dev
+2014-08-18T09:21:48.303537 tid860 [IFO,App] MMCore version 4.0.4
+2014-08-18T09:21:48.303537 tid860 [IFO,App] Device API version 60, Module API version 10
+2014-08-18T09:21:48.303537 tid860 [IFO,App] Operating System: Windows 7 (x86) 6.1
+2014-08-18T09:21:48.303537 tid860 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.6.0_24, 32-bit
+2014-08-18T09:21:48.412737 tid1772 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+2014-08-18T09:21:48.412737 tid1772 [IFO,App] Attempting to install autofocus plugin Autofocus
+2014-08-18T09:21:48.412737 tid1772 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2014-08-18T09:21:48.412737 tid1772 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2014-08-18T09:21:48.412737 tid1772 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2014-08-18T09:21:57.897554 tid860 [IFO,Core] Did update system state cache
+2014-08-18T09:21:57.897554 tid860 [IFO,App] Startup script file (C:\Users\Admin\Desktop\Fiji.app\MMStartup.bsh) not present.
+2014-08-18T09:26:56.649240 tid860 [IFO,Core] Did unload all devices
+2014-08-18T09:26:56.649240 tid860 [IFO,Core] System reset
+2014-08-18T09:26:56.711640 tid860 [IFO,App] CoherentCube
+2014-08-18T09:26:56.758441 tid860 [IFO,App]    CoherentCube, CoherentCube Laser
+2014-08-18T09:26:56.758441 tid860 [IFO,App] DemoCamera
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DCam, Demo camera
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DWheel, Demo filter wheel
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DStateDevice, Demo State Device
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DObjective, Demo objective turret
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DStage, Demo stage
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DXYStage, Demo XY stage
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DLightPath, Demo light path
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DAutoFocus, Demo auto focus
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DShutter, Demo shutter
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    D-DA, Demo DA
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DOptovar, Demo Optovar
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    TransposeProcessor, TransposeProcessor
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    ImageFlipX, ImageFlipX
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    ImageFlipY, ImageFlipY
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    MedianFilter, MedianFilter
+2014-08-18T09:26:56.789641 tid860 [IFO,App]    DHub, DHub
+2014-08-18T09:26:56.789641 tid860 [IFO,App] Hamamatsu
+2014-08-18T09:26:56.820841 tid860 [IFO,App] Error: Unable to load Hamamatsu library: Failed to load device adapter "Hamamatsu" from "C:\Users\Admin\Desktop\Fiji.app\mm\win32\mmgr_dal_Hamamatsu.dll" [ Incompatible module interface version (required = 10; found = 8) ]
+2014-08-18T09:26:56.820841 tid860 [IFO,App] HamamatsuHam
+2014-08-18T09:26:56.852041 tid860 [IFO,App]    HamamatsuHam_DCAM, Universal adapter using Hamamatsu DCAM interface
+2014-08-18T09:26:56.852041 tid860 [IFO,App] PicardStage
+2014-08-18T09:26:56.914441 tid860 [IFO,App]    Picard Twister, Twister
+2014-08-18T09:26:56.914441 tid860 [IFO,App]    Picard Z Stage, Z stage
+2014-08-18T09:26:56.914441 tid860 [IFO,App]    Picard XY Stage, XY stage
+2014-08-18T09:26:56.914441 tid860 [IFO,App] QCam
+2014-08-18T09:26:57.054841 tid860 [IFO,App]    QCamera, QImaging universal camera adapter
+2014-08-18T09:26:57.054841 tid860 [IFO,App] SerialManager
+2014-08-18T09:26:57.054841 tid860 [IFO,App]    COM5, Serial communication port
+2014-08-18T09:26:57.054841 tid860 [IFO,App]    COM1, Serial communication port
+2014-08-18T09:26:57.054841 tid860 [IFO,App]    COM4, Serial communication port
+2014-08-18T09:26:57.054841 tid860 [IFO,App] Stradus
+2014-08-18T09:26:57.054841 tid860 [IFO,App]    VLTStradus, VLTStradus
+2014-08-18T09:26:57.054841 tid860 [IFO,App] TIScam
+2014-08-18T09:26:57.148441 tid860 [IFO,App]    TIS_DCAM, The Imaging Source
+2014-08-18T09:27:02.046850 tid860 [IFO,Core] Did load device COM5 from SerialManager; label = COM5
+2014-08-18T09:27:02.046850 tid860 [IFO,Core] Did load device COM1 from SerialManager; label = COM1
+2014-08-18T09:27:02.046850 tid860 [IFO,Core] Did load device COM4 from SerialManager; label = COM4
+2014-08-18T09:27:18.536079 tid860 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2014-08-18T09:27:18.536079 tid860 [IFO,dev:Picard Twister] Pinging motors...
+2014-08-18T09:27:19.082080 tid860 [IFO,dev:Picard Twister] Found 0 motors and 1 twisters.
+2014-08-18T09:27:25.150490 tid860 [IFO,Core] Will initialize device Picard Twister
+2014-08-18T09:27:25.181690 tid860 [IFO,Core] Did initialize device Picard Twister
+2014-08-18T09:27:31.172101 tid860 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2014-08-18T09:27:33.855306 tid860 [IFO,Core] Will initialize device Picard XY Stage
+2014-08-18T09:27:33.855306 tid860 [IFO,Core] Did initialize device Picard XY Stage
+2014-08-18T09:27:36.850511 tid860 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2014-08-18T09:27:36.866111 tid860 [IFO,dev:Picard Z Stage] Could not initialize motor -1 (PiUsb error code 1)

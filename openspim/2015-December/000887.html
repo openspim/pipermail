@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Running%20SPIMAcquisition%20Code%20in%20Netbeans&In-Reply-To=%3CCO2PR05MB681F529BB001DE1FC43539FECE50%40CO2PR05MB681.namprd05.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000883.html">
+   <LINK REL="Next"  HREF="000889.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Running SPIMAcquisition Code in Netbeans</H1>
+    <B>Anthony, Neil</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Running%20SPIMAcquisition%20Code%20in%20Netbeans&In-Reply-To=%3CCO2PR05MB681F529BB001DE1FC43539FECE50%40CO2PR05MB681.namprd05.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] Running SPIMAcquisition Code in Netbeans">nantho2 at emory.edu
+       </A><BR>
+    <I>Mon Dec 21 22:38:43 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000883.html">[OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</A></li>
+        <LI>Next message: <A HREF="000889.html">[OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#887">[ date ]</a>
+              <a href="thread.html#887">[ thread ]</a>
+              <a href="subject.html#887">[ subject ]</a>
+              <a href="author.html#887">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all.  I understand this is a very specific area, and as such understand the support for which will be limited.  I'll continue to post my steps and progress for future reference.
+
+I realized that I needed to right click and run the SPIMtestDrive file (newb trying to run the main acquisition part of the code).
+
+It runs, pops up the &quot;Welcome to Micro-Manager&quot; window to fill out my details, after which it throws a &quot;Micro-Manager Error&quot; of:
+Error: Failed to load the MMCoreJ_wrap native library
+Mmcorj.MMCoreJJNI.swig_module_init()V
+
+In the output window I see the text pasted below.  I've read that it might be a 32 to 64 bit issue, but not sure how to proceed.  I have JDK 32 and 64 bit installed.  I've tried creating an environment parameter for JAVA_HOME as C:\Program Files (x86)\Java\jre7 as suggested in a really old post, but still no joy.
+
+Any help would be much appreciated.
+Thanks
+Neil
+
+
+
+Netbeans Output Window:
+
+cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; &quot;JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80&quot; cmd /c &quot;\&quot;\&quot;C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\&quot; -Dexec.args=\&quot;-classpath %classpath SPIMTestDrive\&quot; -Dexec.executable=\&quot;C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\&quot; -Dexec.classpathScope=test -Dmaven.ext.class.path=\&quot;C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\&quot; -Dfile.encoding=UTF-8 --errors -e org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\&quot;&quot;
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Error stacktraces are turned on.
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building SPIMAcquisition 1.0.1-SNAPSHOT
+------------------------------------------------------------------------
+
+--- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target
+
+java.lang.ClassNotFoundException: org.micromanager.AcquisitionEngine2010 in Thread[Pipeline Class loading thread,6,main]
+... (let me know if you need the extra &quot;at&quot; lines)
+
+Failed to load the MMCoreJ_wrap native library
+java.lang.UnsatisfiedLinkError: mmcorej.MMCoreJJNI.swig_module_init()V in Thread[AWT-EventQueue-0,6,main]
+...
+
+java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+...
+
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 10.078s
+Finished at: Mon Dec 21 23:31:26 EST 2015
+Final Memory: 11M/222M
+------------------------------------------------------------------------
+
+
+
+-----Original Message-----
+From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Anthony, Neil
+Sent: Thursday, December 17, 2015 10:46 PM
+To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+
+Hi guys,
+
+I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+- Netbeans 8.1
+- JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+-  OpenSPIM-20150427 extracted
+
+I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+
+Exception in thread &quot;main&quot; java.lang.NoClassDefFoundError: bsh/EvalError at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+
+I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+
+I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+I'm using the git options via Netbeans.
+
+Thanks in advance for your time.
+Neil
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000883.html">[OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</A></li>
+	<LI>Next message: <A HREF="000889.html">[OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#887">[ date ]</a>
+              <a href="thread.html#887">[ thread ]</a>
+              <a href="subject.html#887">[ subject ]</a>
+              <a href="author.html#887">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

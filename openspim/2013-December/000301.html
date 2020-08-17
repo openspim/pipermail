@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Cobolt lasers in OpenSPIM?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Cobolt%20lasers%20in%20OpenSPIM%3F&In-Reply-To=%3C52B2E261.3000405%40dkfz-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000300.html">
+   <LINK REL="Next"  HREF="000303.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Cobolt lasers in OpenSPIM?</H1>
+    <B>Jan Krieger</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Cobolt%20lasers%20in%20OpenSPIM%3F&In-Reply-To=%3C52B2E261.3000405%40dkfz-heidelberg.de%3E"
+       TITLE="[OpenSPIM] Cobolt lasers in OpenSPIM?">j.krieger at dkfz-heidelberg.de
+       </A><BR>
+    <I>Thu Dec 19 06:11:13 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000300.html">[OpenSPIM] Cobolt lasers in OpenSPIM?
+</A></li>
+        <LI>Next message: <A HREF="000303.html">[OpenSPIM] Cobolt lasers in OpenSPIM?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#301">[ date ]</a>
+              <a href="thread.html#301">[ thread ]</a>
+              <a href="subject.html#301">[ subject ]</a>
+              <a href="author.html#301">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi!
+
+we are using Cobolt DPSS lasers in a dual-color SPIM setup (not an 
+openSPIM, but a comparable design: 
+<A HREF="http://www.dkfz.de/Macromol/research/spim.html">http://www.dkfz.de/Macromol/research/spim.html</A> and a new publication to 
+appear in a few days/weeks: Krieger, Singh etal. (2013): &quot;Dual-Color 
+Fluorescence Cross-Correlation Spectroscopy on a Single Plane 
+Illumination Microscope (SPIM-FCCS)&quot;, OPtics Express, accepted). The 
+lasers are generally good, but you should care for a few things:
+
+1. As most DPSS lasers they are stable at the specified output power, 
+but might get instable if you go below 10% of that power (our 25mW 
+lasers typically show a TEM20 or TEM10 mode, when driven at 1mW output 
+power instead of 25mW, where they have a nice TEM00) ... but thats 
+generally true for all DPSS lasers, so in oder to reduce the laser 
+power, you should use neutral-density filters or waveplate+ polarizer cube.
+
+2. The Cobolt 491nm laser is good, but has a little green light coming 
+out of the cavity (a few microwatt @ ~530nm), so I would strongly advice 
+a cleanup-filter. On the 561nm laser I haven't noticed anything yet.
+
+3. A general thing on two-color illumination on a SPIM: We had some 
+problems, when combining the two beams immediately behind the lasers. 
+The focal points of the lasers were not overlapping (distance ~10&#181;m), 
+but then we have a very thin lightsheet (~1.5&#181;m FWHM, i.e. NA0.3 
+overilluminated) and accordingly small depth of focus. Depending on your 
+application that may not be that much of a problem. Anyways we're using 
+two beam expanders and combine the expanded beams. This also allows us 
+to independently move the focal points along the lightsheet axis. I'm 
+attatching a sketch of the setup (5x-beam expanders, 100mm/300mm relais 
+telescope, 100mm cylindrical lens, 10x/NA0.3 Nikon air objective).
+
+4. As we just replaced a ArKr laser by two DPSS lasers, I talked to a 
+lot of different companies ... all the DPSS lasers are more or less 
+comparable. Some are maybe spectrally a bit cleaner or slightly more 
+stable, but Cobolt offers good value for the price and we are very happy 
+with those guys ;-)
+
+5. About the beam-combiner I would also have second thoughts: On the one 
+hand see point 3 above and the other problem is that you can realign the 
+beamcombiner (it's glued internally, so if it's missaligned at some 
+point, you cannot do much), so I would simply buy a dichroic and a 
+second mirror. Then you can use these two to fully align the second 
+laser beam:
+
++---------+                \
+|<i> LASER 2 |-----------------\ mirror
+</I>+---------+                 |\
+                             |
+                             |
++---------+                \| dichroic
+|<i> LASER 1 |-----------------\==============&gt; SPIM
+</I>+---------+                  \
+
+Here you can align the SPIM first with laser 1 and then use the mirror 
+and dichroic (both on kinematic mirror mounts) to align the second laser.
+
+Hope that helps,
+JAN
+
+
+
+Am 19.12.2013 11:17, schrieb Veli-Pekka Ronkainen:
+&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> Has anyone used Cobolt DPSS lasers in OpenSPIM? There is a nice
+</I>&gt;<i> selection of lasers with different wavelengths and output powers listed
+</I>&gt;<i> on their catalogue. Moreover, micro-manager seems to have device support
+</I>&gt;<i> for Cobolts (Cobolt Laser Controller by name). We&#8217;d be interested
+</I>&gt;<i> especially in Cobolt Dual Combiner, which allows a permanently aligned
+</I>&gt;<i> combination of any 2 wavelengths to one single output. That would be
+</I>&gt;<i> very handy in multi-color imaging. So, can anyone comment on the Cobolts
+</I>&gt;<i> and the functionality in OpenSPIM?
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i> Veli-Pekka Ronkainen
+</I>&gt;<i>
+</I>&gt;<i> Biocenter Oulu, Finland
+</I>&gt;<i>
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: spim_schematic.pdf
+Type: application/pdf
+Size: 177011 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0001.pdf">http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0001.pdf</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 408 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0001.vcf">http://openspim.org/pipermail/openspim/attachments/20131219/a88e3506/attachment-0001.vcf</A>&gt;
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000300.html">[OpenSPIM] Cobolt lasers in OpenSPIM?
+</A></li>
+	<LI>Next message: <A HREF="000303.html">[OpenSPIM] Cobolt lasers in OpenSPIM?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#301">[ date ]</a>
+              <a href="thread.html#301">[ thread ]</a>
+              <a href="subject.html#301">[ subject ]</a>
+              <a href="author.html#301">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

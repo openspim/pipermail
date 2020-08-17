@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20WG%3A%20Re%3A%20WG%3A%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%20plus%22%0A%09problem%20persisting&In-Reply-To=%3C76a0f8113c47f.527a57ab%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001227.html">
+   <LINK REL="Next"  HREF="001230.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20WG%3A%20Re%3A%20WG%3A%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%20plus%22%0A%09problem%20persisting&In-Reply-To=%3C76a0f8113c47f.527a57ab%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Nov  6 14:52:27 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001227.html">[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+</A></li>
+        <LI>Next message: <A HREF="001230.html">[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1229">[ date ]</a>
+              <a href="thread.html#1229">[ thread ]</a>
+              <a href="subject.html#1229">[ subject ]</a>
+              <a href="author.html#1229">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Edgar,
+
+On 11/04/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> I attach the corelog and the error file although they don't say too much about what is the cause of the problem.
+</I>
+
+Curiouser and curiouser -- not a single error is produced by the plugin launch, and yet it isn't displayed? It certainly seems to be a much deeper issue than I initially suspected.
+
+
+On 11/04/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> Now that I update Fiji again I am not able to start the plugin SPIMage Acquisition. It is so strange because
+</I>&gt;<i> even using different hardware configurations (D_cam instead of TIS_cam) it doesn't work. :-/
+</I>
+
+A different camera adapter had no better luck? Did it too produce an hs_err file that might be different from the others?
+
+
+Since you aren't using the Cube, you might try enabling the further debug output, if it's not already turned on: From Micro-Manager, click Tools -&gt; Options, and check Debug Log Enabled. This will produce significantly more output in the Core Log. (I say the absence of a Cube is an advantage in this situation; the laser is queried once per second, and in debug logging mode, the messages become difficult to sift through.) With luck, this might provide more detailed information.
+
+
+Thank you again,
+Luke
+
+On 11/04/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> Now that I update Fiji again I am not able to start the plugin SPIMage Acquisition. It is so strange because
+</I>&gt;<i> even using different hardware configurations (D_cam instead of TIS_cam) it doesn't work. :-/
+</I>&gt;<i> 
+</I>&gt;<i> I tried also in the other computer (Win 7, 64 bit) and didn't work as well.
+</I>&gt;<i> 
+</I>&gt;<i> I attach the corelog and the error file although they don't say too much about what is the cause of the problem.
+</I>&gt;<i> 
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> Edgar
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> Edgar Escobar Nieto 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Steinbachstraße 17 
+</I>&gt;<i> 52074 Aachen 
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> <A HREF="http://www.ipt.fraunhofer.de(http://www.ipt.fraunhofer.de/(http://www.ipt.fraunhofer.de/">http://www.ipt.fraunhofer.de(http://www.ipt.fraunhofer.de/(http://www.ipt.fraunhofer.de/</A>&quot; target=&quot;1&quot;&gt; <A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A> 
+</I>&gt;<i> _________________________________________________________________________ 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Weitergeleitet von Edgar Escobar Nieto/Fraunhofer IPT am 04.11.2013 14:39 ----- An: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+</I>&gt;<i> Von: Edgar Escobar Nieto/Fraunhofer IPT
+</I>&gt;<i> Datum: 01.11.2013 17:34
+</I>&gt;<i> Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Betreff: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting
+</I>&gt;<i> 
+</I>&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> Yes, the issue happens, at least to me, regardless of the operating system and of the architecture.
+</I>&gt;<i> I don't know if someone else is facing this issue as well.
+</I>&gt;<i> 
+</I>&gt;<i> I did check the plugin using the no shutter configuration, now any message that the setup
+</I>&gt;<i> is not complete appears when starting the plugin, but the problem persists.
+</I>&gt;<i> 
+</I>&gt;<i> Yes, the 4 motors are fully functional and all they report the actual position correctly.
+</I>&gt;<i> 
+</I>&gt;<i> I will update Fiji again on monday, and I will let you know what happen. 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks to you,
+</I>&gt;<i> Edgar
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> Edgar Escobar Nieto 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Steinbachstraße 17 
+</I>&gt;<i> 52074 Aachen 
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> <A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A> 
+</I>&gt;<i> _________________________________________________________________________ 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; schrieb: ----- An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+</I>&gt;<i> Von: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+</I>&gt;<i> Datum: 31.10.2013 20:48
+</I>&gt;<i> Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Betreff: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting
+</I>&gt;<i> 
+</I>&gt;<i> Hi Edgar,
+</I>&gt;<i> 
+</I>&gt;<i> So the issue appears regardless of operating system (Windows XP versus Windows 7) and architecture (32-bit versus 64-bit)? Did you try going back to the no-shutter configuration? (It shouldn't have a problem now that I've added some checks for an absent laser.)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I take it all the motor controls are fully functional? That is, the sliders all report the current position correctly, and let you change the position without trouble, for all four stage axes?
+</I>&gt;<i> 
+</I>&gt;<i> I've uploaded another version of the plugin which is a little more direct about its error reporting; please try updating once more -- although this may not fix the issue, it might produce useful error output.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks again,
+</I>&gt;<i> Luke
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On 10/31/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; Hi Luke,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; About the error files, you are right, they appear as long as I close µManager/Fiji. The &quot;Stack at this Z plus&quot; button is the only problem, I can
+</I>&gt;<i> &gt; still made everthing else as I menctioned before. I just updated Fiji and the problem persist. The button is unstucked as long as I move the mouse
+</I>&gt;<i> &gt; cursor outside the area of the button and I am able to click it again. The problem is comparable as if I place the cursor over a normal button e.g.
+</I>&gt;<i> &gt; Oh Snap!, then click the mouse and move the cursor outside Oh Snap! and finally release the mouse outside Oh Snap! 
+</I>&gt;<i> &gt; If you do that simply nothing happens. That is just the way the &quot;Stack at this Z plus&quot; button behaves.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I also thought that the problem was related with the TIS cam but I already test Fiji in a different computer (Windows 7 64 bits). In that computer
+</I>&gt;<i> &gt; is not installed any driver or software from the camera. I made a test using only the Picard Stage, a demo shutter and a demo camera
+</I>&gt;<i> &gt; and the problem about &quot;Stack at this Z plus&quot; remains, the only difference I noticed is that when I close µManager/Fiji there is no error files.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Hope this information is useful. Have a happy longweekend. 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Kind regards,
+</I>&gt;<i> &gt; Edgar
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; _________________________________________________________________________
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> &gt; Edgar Escobar Nieto 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Steinbachstraße 17 
+</I>&gt;<i> &gt; 52074 Aachen 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> &gt;
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001227.html">[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+</A></li>
+	<LI>Next message: <A HREF="001230.html">[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1229">[ date ]</a>
+              <a href="thread.html#1229">[ thread ]</a>
+              <a href="subject.html#1229">[ subject ]</a>
+              <a href="author.html#1229">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

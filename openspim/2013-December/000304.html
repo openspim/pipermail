@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM-related stuff
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM-related%20stuff&In-Reply-To=%3C742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6%40nippu1.univ.yo.oulu.fi%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000298.html">
+   <LINK REL="Next"  HREF="000305.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM-related stuff</H1>
+    <B>Veli-Pekka Ronkainen</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM-related%20stuff&In-Reply-To=%3C742E1E88D2F8D44AAA2E700C6BB4FA98AFECB6%40nippu1.univ.yo.oulu.fi%3E"
+       TITLE="[OpenSPIM] OpenSPIM-related stuff">veli-pekka.ronkainen at oulu.fi
+       </A><BR>
+    <I>Fri Dec 20 03:14:17 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000298.html">[OpenSPIM] OpenSPIM-related stuff
+</A></li>
+        <LI>Next message: <A HREF="000305.html">[OpenSPIM] OpenSPIM-related stuff
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#304">[ date ]</a>
+              <a href="thread.html#304">[ thread ]</a>
+              <a href="subject.html#304">[ subject ]</a>
+              <a href="author.html#304">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+FYI, I just got an email from Coherent: &#8220;Unfortunately the Obis cannot be controlled  with the MicroManager up to now. There are plans to make it work but this will be out at least 6 more months.&#8221;
+
+Regards,
+Veli-Pekka
+
+From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Veli-Pekka Ronkainen
+Sent: 13. joulukuuta 2013 11:30
+To: Michael Weber
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: [OpenSPIM] OpenSPIM-related stuff
+
+Thanks Michael for the answers and cc&#8217;ing!
+
+Our initial plan is to build up a SPIM with a dual side simultaneous excitation by one laser wavelength at the time, and image colors sequentially. Laser (either 488nm or 561nm) is divided into two identical illumination pathways to reduce shading and the need of rotation. So at least in the first version we have to replace the laser head between the channels. Maybe later we&#8217;ll try to modify it so that we could use two lasers installed at the same time and control the excitation wavelength with &#181;Manager, if that appears to be possible. Do you think it is generally worth building a two sided illumination set-up compared to single sided illumination, or can we assume some unexpected problems arising from reflections or difficulties in aligning overlapping lightsheets etc.?
+
+So anyone please, do you have any further information about controlling Coherent OBIS lasers with OpenSpim &#181;Manager? I haven&#8217;t got any answers from Coherent. Would you like to share your experiences with sCMOS cameras as well?
+
+Regards,
+Veli-Pekka Ronkainen
+Biocenter Oulu, University of Oulu
+Finland
+
+From: Michael Weber [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">weber at mpi-cbg.de</A>]
+Sent: 12. joulukuuta 2013 11:49
+To: Veli-Pekka Ronkainen
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+Subject: Re: OpenSPIM-related stuff
+
+Dear Veli-Pekka,
+
+it was my pleasure to give the lecture in Oulu and I enjoyed my time in Finland! It's great to hear that you are moving into the SPIM field as well and I am happy to answer part of your questions. However, when it comes to software integration, I rather leave that to the guys on the mailing list, which is why I also put them on CC.
+
+So if I get it right you want to build a two-color setup with double-sided illumination? Do you want to detect both colors simultaneously or sequentially? And how do you plan to use the double-sided illumination, also simultaneously or sequentially?
+
+Using a camera with a bigger sensor like sCMOS is possible and should not be limited by the microscope objective or the emission filter, so no optical redesign is necessary here. However, additional components could be problematic and block light from reaching the edges of your chip. Those components are namely camera adapters with additional (de)magnification or image splitter. On the other hand, an image splitter is a neat way to capture two colors simultaneously, especially on a big camera chip which has plenty of pixels to share. Some companies are now also modifying their splitters for sCMOS chips.
+Compared to a camera with a smaller chip, you lower your effective magnification (or in other words, you increase your field of view) if you use the entire chip of an sCMOS camera. If there are components which limit the field of view (adapters, splitters), you end up with smaller useable area. But maybe that does not matter and you simply crop to the center of the chip, which would also increase your maximum frame rate. It really depends on what you want to image and which spatial and temporal resolution you wish to get.
+
+Regarding the integration of camera and laser into the software, as I said, I am not up to date. But probably someone else from the mailing list can help here?!
+
+Best regards,
+Michael
+
+
+On Dec 12, 2013, at 10:05 AM, Veli-Pekka Ronkainen &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">veli-pekka.ronkainen at oulu.fi</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">veli-pekka.ronkainen at oulu.fi</A>&gt;&gt; wrote:
+
+Hi Michael!
+
+I still want to thank you for your visit here in Oulu in June. Your lecture was confirming our researchers that we need SPIM here as well, and happily we just got nice funding for the build-up costs of OpenSPIM!
+
+We are planning the set-up now, and it we&#8217;d like to have some laser and camera modifications to the dual side illumination version of OpenSPIM. Our plan is mainly clear with a few unsolved issues and I&#8217;d appreciate if you had time to answer couple of my questions? I&#8217;ve browsed through the mailing list archives (and &#181;Manager discussions too), but have not find clear answers yet. So we&#8217;d like to use Coherent OBIS-series lasers instead of CUBE (to get the 561 nm laser as well), and in one mailing list thread you and Peter Pitrone discussed that OBIS and other series have been used successfully in OpenSPIM. &#181;Manager has drivers for CUBE, but not a clear support for OBIS, so do you know how replacing the lasers should work? Another question is related on the camera. We&#8217;d like to use Orca-Flash 4 (or Andor Zyla 5.5) camera and we are mainly aware of the camera-drivers-computer &#8211;related things, but do you know how people have fitted this larger sensor type camera to the detection pathway? Do we need some optical redesign to fill the whole sensor area, or is that smaller sensor size Orca-ER just &#8220;cropping&#8221; the signal and the original pathway design would fill the larger chip as well? Of course I could reform and write these questions to the mailing list if you prefer?
+
+Best Regards,
+Veli-Pekka
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+<A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131220/74c008d4/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20131220/74c008d4/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000298.html">[OpenSPIM] OpenSPIM-related stuff
+</A></li>
+	<LI>Next message: <A HREF="000305.html">[OpenSPIM] OpenSPIM-related stuff
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#304">[ date ]</a>
+              <a href="thread.html#304">[ thread ]</a>
+              <a href="subject.html#304">[ subject ]</a>
+              <a href="author.html#304">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &#22238;&#22797;&#65306;  The update error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Fgb18030%3Fb%3Fu9i4tKO6ICBUaGUgdXBkYXRlIGVycm9y%3F%3D&In-Reply-To=%3Ctencent_510314105498518B519EB8D3%40qq.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000927.html">
+   <LINK REL="Next"  HREF="000924.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &#22238;&#22797;&#65306;  The update error</H1>
+    <B>&#25919;</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Fgb18030%3Fb%3Fu9i4tKO6ICBUaGUgdXBkYXRlIGVycm9y%3F%3D&In-Reply-To=%3Ctencent_510314105498518B519EB8D3%40qq.com%3E"
+       TITLE="[OpenSPIM] &#22238;&#22797;&#65306;  The update error">709314090 at qq.com
+       </A><BR>
+    <I>Mon Feb 29 07:27:09 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000927.html">[OpenSPIM] The update error
+</A></li>
+        <LI>Next message: <A HREF="000924.html">[OpenSPIM] MicroManager error when configure an andor camera
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#928">[ date ]</a>
+              <a href="thread.html#928">[ thread ]</a>
+              <a href="subject.html#928">[ subject ]</a>
+              <a href="author.html#928">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, HongKee
+     Thank you for your reply. And your method worked well.
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+
+
+ 
+
+
+
+
+------------------ &#21407;&#22987;&#37038;&#20214; ------------------
+&#21457;&#20214;&#20154;: &quot;HongKee Moon&quot;;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">moon at mpi-cbg.de</A>&gt;;
+&#21457;&#36865;&#26102;&#38388;: 2016&#24180;2&#26376;29&#26085;(&#26143;&#26399;&#19968;) &#26202;&#19978;9:20
+&#25910;&#20214;&#20154;: &quot;&#25919;&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt;; 
+&#25220;&#36865;: &quot;openspim&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;; 
+&#20027;&#39064;: Re: [OpenSPIM] The update error
+
+
+
+Hi Zheng,
+
+Curtis and I have found the bug and I thought we managed it.
+Please, refer <A HREF="http://fiji.sc/bugzilla/show_bug.cgi?id=1214.">http://fiji.sc/bugzilla/show_bug.cgi?id=1214.</A>
+
+
+&quot;To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.&#8221;
+
+
+Cheers,
+HongKee
+
+On Feb 29, 2016, at 7:09 AM, &#25919; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt; wrote:
+
+Hi, all
+     I just updated OpenSPIM(64bit) at Help-&gt;update. And the error happened when you restart the OpenSPIM. 
+
+
+[ERROR] Module threw exception
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+
+
+
+     If try the update again, it reported
+
+
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+
+
+
+
+
+     Does anyone has this error ?
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+
+
+ 
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+
+
+ 
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160229/9a624744/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20160229/9a624744/attachment-0001.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000927.html">[OpenSPIM] The update error
+</A></li>
+	<LI>Next message: <A HREF="000924.html">[OpenSPIM] MicroManager error when configure an andor camera
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#928">[ date ]</a>
+              <a href="thread.html#928">[ thread ]</a>
+              <a href="subject.html#928">[ subject ]</a>
+              <a href="author.html#928">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

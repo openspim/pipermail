@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C12EEF5BD-10F2-4328-9929-7C8CDAAFEF9E%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000131.html">
+   <LINK REL="Next"  HREF="000134.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C12EEF5BD-10F2-4328-9929-7C8CDAAFEF9E%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Wed Aug 14 03:20:58 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000131.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+        <LI>Next message: <A HREF="000134.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#133">[ date ]</a>
+              <a href="thread.html#133">[ thread ]</a>
+              <a href="subject.html#133">[ subject ]</a>
+              <a href="author.html#133">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jan,
+
+&gt;<i> BTW the images are not in focus and you seem to collect quite a bit of laser speckles. Clearly a sign for a bad emission filter or that your laser needs a clean-up filter.
+</I>
+Yes, the laser does need a clean up filter quite a bit of green light in it, especially at low power; it is ordered. The emission filter (<A HREF="http://www.semrock.com/FilterDetails.aspx?id=FF03-525/50-25">http://www.semrock.com/FilterDetails.aspx?id=FF03-525/50-25</A>) seems right, no? 
+
+As for focus, this is the best we could get so far :-/
+Our LS is ~10&#181;m thick and nicely shaped. The excitation lens is a Nikon CFI FLUOR 10x/0.30.
+Do you have suggestions to improve the focus?
+
+With my best regards,
+
+Alexis
+
+
+On 14 Aug 2013, at 10:11, Jan Huisken &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A>&gt; wrote:
+
+&gt;<i> Hi Alexis,
+</I>&gt;<i> 
+</I>&gt;<i> this is clearly a camera issue. Sometimes this goes along with missing or partial frames. We have seen it happening when something goes wrong with the spooling, e.g. when the hard drive is too slow or too full or too many files in one folder.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Best
+</I>&gt;<i> Jan
+</I>&gt;<i> 
+</I>&gt;<i> Dr. Jan Huisken
+</I>&gt;<i> MPI of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108, 01307 Dresden, Germany
+</I>&gt;<i> 
+</I>&gt;<i> On Aug 13, 2013, at 8:14 PM, Alexis Maizel wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Hi,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I have noticed that when acquiring stacks during a time lapse and writing them to disk, using the 'asynchronous writing' option, the order in which the individual images are laid into the stack is imprecise. What I mean is that an image obviously in the middle of the stack is shifted toward the end. I did not observed a fixed pattern, except that usually the first 15-20 planes are in the right order and the mess is a the end.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I have carefully observed and the problem does not come from the stage 'going back and forth' during acquisition. It is upon writing to the disk that the problem seems to occur. Also I have noticed that it takes quite a long time (up to 3 minutes) to write to disk a ~400Mb stack. 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> You can see more precisely what I am talking about by looking at two representative stacks: <A HREF="http://dl.dropbox.com/u/484859/Stacks.zip">http://dl.dropbox.com/u/484859/Stacks.zip</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> With my best regards,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Alexis
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130814/02b2c788/attachment.pgp">http://openspim.org/pipermail/openspim/attachments/20130814/02b2c788/attachment.pgp</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000131.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+	<LI>Next message: <A HREF="000134.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#133">[ date ]</a>
+              <a href="thread.html#133">[ thread ]</a>
+              <a href="subject.html#133">[ subject ]</a>
+              <a href="author.html#133">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

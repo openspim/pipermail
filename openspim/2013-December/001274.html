@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Cobolt lasers in OpenSPIM?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Cobolt%20lasers%20in%20OpenSPIM%3F&In-Reply-To=%3C52B442C3.8050203%40dkfz-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001270.html">
+   <LINK REL="Next"  HREF="001269.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Cobolt lasers in OpenSPIM?</H1>
+    <B>Jan Krieger</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Cobolt%20lasers%20in%20OpenSPIM%3F&In-Reply-To=%3C52B442C3.8050203%40dkfz-heidelberg.de%3E"
+       TITLE="[OpenSPIM] Cobolt lasers in OpenSPIM?">j.krieger at dkfz-heidelberg.de
+       </A><BR>
+    <I>Fri Dec 20 07:14:43 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001270.html">[OpenSPIM] Cobolt lasers in OpenSPIM?
+</A></li>
+        <LI>Next message: <A HREF="001269.html">[OpenSPIM] Lasers for SPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1274">[ date ]</a>
+              <a href="thread.html#1274">[ thread ]</a>
+              <a href="subject.html#1274">[ subject ]</a>
+              <a href="author.html#1274">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi!
+
+ &gt; This helps a lot and gives many aspects to think about. What is the
+ &gt; operating software you are using? µManager or something else, and how
+ &gt; well these lasers integrate with the software?
+
+We use our own software QuickFit 3 
+(<A HREF="http://www.dkfz.de/Macromol/quickfit/">http://www.dkfz.de/Macromol/quickfit/</A>), which is kind of optimized for 
+our setup and application (SPIM-FCS). There are drivers for the CObolt 
+lasers, and Andor EMCCD cameras (NOT for the sCMOS, as they use the SDK 
+3), but new drivers can always be written in C++. The whole application 
+is multi-platform, i.e. we run our instrument on Linux and the data eval 
+typically on windows. It's written in C++ and uses Qt 4.8 for the GUI.
+
+But I think that using µManager may probably be easier for you ... also 
+the community is larger ;-)
+
+One more thing on the beam expanders: As first beam expanders, we use 
+commercial units (one is a zoom expander 1x-8x from sill optics, the 
+other one is a fixed 5x from Qioptic/Linos), which are both NOT 
+achromatically corrected. So this might be part of our problem ... but 
+then having the possibility to tune both lasers independently might be 
+worth thinking about. At least for our application (single-cell imaging 
+with a thin lightsheet) it helps a lot!
+
+Best,
+JAN
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 408 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131220/eaa09422/attachment-0002.vcf">http://openspim.org/pipermail/openspim/attachments/20131220/eaa09422/attachment-0002.vcf</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001270.html">[OpenSPIM] Cobolt lasers in OpenSPIM?
+</A></li>
+	<LI>Next message: <A HREF="001269.html">[OpenSPIM] Lasers for SPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1274">[ date ]</a>
+              <a href="thread.html#1274">[ thread ]</a>
+              <a href="subject.html#1274">[ subject ]</a>
+              <a href="author.html#1274">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] open SPIM acquisition error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20open%20SPIM%20acquisition%20error&In-Reply-To=%3CCAHAw%2B8ZmFJSNqps%2B%3DxF%3DFBhXp02SJhZy8wjpKdOFPMTyX6Kcfw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001651.html">
+   <LINK REL="Next"  HREF="001653.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] open SPIM acquisition error</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20open%20SPIM%20acquisition%20error&In-Reply-To=%3CCAHAw%2B8ZmFJSNqps%2B%3DxF%3DFBhXp02SJhZy8wjpKdOFPMTyX6Kcfw%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] open SPIM acquisition error">aureliaomega at gmail.com
+       </A><BR>
+    <I>Fri Apr 17 06:42:48 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001651.html">[OpenSPIM] T-SPIM and L-SPIM configuration
+</A></li>
+        <LI>Next message: <A HREF="001653.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1652">[ date ]</a>
+              <a href="thread.html#1652">[ thread ]</a>
+              <a href="subject.html#1652">[ subject ]</a>
+              <a href="author.html#1652">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+I have a new error this morning.  When I try to start multi-angle
+acquisition, I get the following Java console error:
+
+[WARNING] Couldd not load legacy launcher config file
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\ImageJ.cfg
+MMCoreJ.jar path =
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins\MMCoreJ.jar
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32
+C:\Users\ah659\Desktop\OPENSP~1
+C:\Users\ah659\Desktop\OPENSP~1\mm\win32
+java.lang.NoSuchMethodError:
+loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+    at spim.progacq.OMETIFFHandler.&lt;init&gt;(OMETIFFHandler.java:95)
+    at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1731)
+    at
+javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+    at
+javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+    at
+javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+    at
+javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+    at
+javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+    at java.awt.Component.processMouseEvent(Component.java:6289)
+    at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+    at java.awt.Component.processEvent(Component.java:6054)
+    at java.awt.Container.processEvent(Container.java:2041)
+    at java.awt.Component.dispatchEventImpl(Component.java:4652)
+    at java.awt.Container.dispatchEventImpl(Container.java:2099)
+    at java.awt.Component.dispatchEvent(Component.java:4482)
+    at
+java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+    at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+    at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+    at java.awt.Container.dispatchEventImpl(Container.java:2085)
+    at java.awt.Window.dispatchEventImpl(Window.java:2478)
+    at java.awt.Component.dispatchEvent(Component.java:4482)
+    at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+    at java.awt.EventQueue.access$000(EventQueue.java:85)
+    at java.awt.EventQueue$1.run(EventQueue.java:603)
+    at java.awt.EventQueue$1.run(EventQueue.java:601)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+    at java.awt.EventQueue$2.run(EventQueue.java:617)
+    at java.awt.EventQueue$2.run(EventQueue.java:615)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+    at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+    at
+java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+    at
+java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+    at
+java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+    at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+Live view works, but Snap does not complete.
+Anyone have an idea?
+Thanks,
+Aurelia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150417/d9d74c70/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150417/d9d74c70/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001651.html">[OpenSPIM] T-SPIM and L-SPIM configuration
+</A></li>
+	<LI>Next message: <A HREF="001653.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1652">[ date ]</a>
+              <a href="thread.html#1652">[ thread ]</a>
+              <a href="subject.html#1652">[ subject ]</a>
+              <a href="author.html#1652">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

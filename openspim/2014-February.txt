@@ -1,0 +1,2497 @@
+From robert.hauschild at ist.ac.at  Mon Feb  3 02:51:23 2014
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Mon, 03 Feb 2014 09:51:23 +0100
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <0064F14F-24DF-4A40-91E1-5DE43E9E55D6@ucsf.edu>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>	<alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+	<0064F14F-24DF-4A40-91E1-5DE43E9E55D6@ucsf.edu>
+Message-ID: <52EF588B.7000305@ist.ac.at>
+
+Ni Nico,
+
+I have a running version of "
+
+  Windows 7, 64-bit machine, but running the 32-bit version of the executable
+
+"
+(I copied different versions of mm and fiji and OpenSpim together to 
+make it work)
+If you like that then I can put a zip file of the entire directory on a 
+public folder.
+
+Robert
+
+On 31.01.2014 22:56, Nico Stuurman wrote:
+> HI Johannes,
+>
+>>> Trying to have a look at the OpenSPIM application in action.  Downloaded
+>>> the zip and updated as directed.  Ran the 32 bit version as well as 64
+>>> bit (which appeared after running the Fiji updater).  In both cases,
+>>> starting Micro-Manager from the Fiji plugin menu throws an error stating
+>>> that libMMCoreJ_wrap is not found.
+>> Thanks for trying! Did you do that on a MacOSX computer? So far, we only
+>> support 32-bit Windows, but 64-bit Windows is on the list...
+> Ona Windows 7, 64-bit machine, but running the 32-bit version of the executable.
+>
+> Best,
+>
+> Nico
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A ? 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   robert.hauschild at ist.ac.at
+
+
+
+From nikul at ee.columbia.edu  Mon Feb  3 10:19:57 2014
+From: nikul at ee.columbia.edu (Nikul)
+Date: Mon, 3 Feb 2014 11:19:57 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+Message-ID: <8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+
+Hi Luke and Johannes,
+
+I was able to figure out what the problem was. MMCoreJJNI.java lists
+the root directory and mm/Win64 as the search directories for a 64-bit
+build while openspim.build.xml was staging the files to mm/x64. Changing
+the staging directory in  openspim.build.xml solved the problem!
+
+On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+and am using a RAID0 array of four ssd drives. The write speed I get through 
+OpenSPIM (or micromanager) is at the moment only able to handle about 
+50 fps. Before I dig into the code to see if there is something I can optimize for 
+the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+to get full frame rate capture from the camera.
+
+Thanks,
+---
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+
+> I'll look into it and get back. If it works, it will be great to have some resource
+> on the OpenSPIM website for compiling it in 64-bit.
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> http://www.bionet.ee.columbia.edu/
+> 
+> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+> 
+>> Hi Nikul,
+>> 
+>> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+>> 
+>> 
+>> Hope this helps,
+>> Luke
+>> 
+>> On 01/31/14, Nikul Ukani  wrote:
+>>> Hi Johannes,
+>>> 
+>>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>>> 
+>>> Thanks,
+>>> Nikul
+>>> 
+>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>>> 
+>>>> Hi Nikul,
+>>>> 
+>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>>> 
+>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>>> error
+>>>>> 
+>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>>> 
+>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>>> library. Possible?
+>>>> 
+>>>> Ciao,
+>>>> Johannes
+>>>> 
+>>> 
+>>> 
+>>> _______________________________________________
+>>> OpenSPIM mailing list
+>>> OpenSPIM at openspim.org
+>>> http://openspim.org/mailman/listinfo/openspim
+>> 
+> 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140203/32acb35f/attachment.html>
+
+From tomancak at mpi-cbg.de  Mon Feb  3 14:41:25 2014
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Mon, 3 Feb 2014 21:41:25 +0100
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+Message-ID: <F946CA48-AA2C-430D-B622-47B0166B5339@mpi-cbg.de>
+
+Hi Nikul,
+
+I see, you are really pushing the performance of OpenSPIM to the limit. That's great!
+
+When you a re ready, please describe your set-up on the wiki. Are you working with Brian McCabe? If yes, say hi to him. 
+
+All the best
+
+PAvel
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: tomancak at mpi-cbg.de
+homepage: http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+
+
+
+On Feb 3, 2014, at 5:19 PM, Nikul <nikul at ee.columbia.edu> wrote:
+
+> Hi Luke and Johannes,
+> 
+> I was able to figure out what the problem was. MMCoreJJNI.java lists
+> the root directory and mm/Win64 as the search directories for a 64-bit
+> build while openspim.build.xml was staging the files to mm/x64. Changing
+> the staging directory in  openspim.build.xml solved the problem!
+> 
+> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+> and am using a RAID0 array of four ssd drives. The write speed I get through 
+> OpenSPIM (or micromanager) is at the moment only able to handle about 
+> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+> to get full frame rate capture from the camera.
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> http://www.bionet.ee.columbia.edu/
+> 
+> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+> 
+>> I'll look into it and get back. If it works, it will be great to have some resource
+>> on the OpenSPIM website for compiling it in 64-bit.
+>> 
+>> Thanks,
+>> ---
+>> Nikul Ukani
+>> 
+>> Doctoral Candidate,
+>> Dept. of Electrical Engineering,
+>> Columbia University.
+>> http://www.bionet.ee.columbia.edu/
+>> 
+>> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+>> 
+>>> Hi Nikul,
+>>> 
+>>> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+>>> 
+>>> 
+>>> Hope this helps,
+>>> Luke
+>>> 
+>>> On 01/31/14, Nikul Ukani  wrote:
+>>>> Hi Johannes,
+>>>> 
+>>>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>>>> 
+>>>> Thanks,
+>>>> Nikul
+>>>> 
+>>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>>>> 
+>>>>> Hi Nikul,
+>>>>> 
+>>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>>>> 
+>>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>>>> error
+>>>>>> 
+>>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>>>> 
+>>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>>>> library. Possible?
+>>>>> 
+>>>>> Ciao,
+>>>>> Johannes
+>>>>> 
+>>>> 
+>>>> 
+>>>> _______________________________________________
+>>>> OpenSPIM mailing list
+>>>> OpenSPIM at openspim.org
+>>>> http://openspim.org/mailman/listinfo/openspim
+>>> 
+>> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140203/e4541f90/attachment.html>
+
+From pitrone at mpi-cbg.de  Mon Feb  3 15:59:39 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Mon, 3 Feb 2014 22:59:39 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <F946CA48-AA2C-430D-B622-47B0166B5339@mpi-cbg.de>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<F946CA48-AA2C-430D-B622-47B0166B5339@mpi-cbg.de>
+Message-ID: <55233.10.1.191.65.1391464779.squirrel@webmail.mpi-cbg.de>
+
+Howdy Nikul,
+
+I would love to see this work, and agree with Pavel that this is great!!
+May I ask how you plan to handle the data once it is acquired at this
+rate?! This is no small feat... I'm also interested in what you will
+image.
+
+Have a great evening!
+Pete
+
+
+
+-- 
+Peter Gabriel Pitrone - FRMS TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Mon, February 3, 2014 21:41, Pavel Tomancak wrote:
+<|> Hi Nikul,
+<|>
+<|> I see, you are really pushing the performance of OpenSPIM to the limit.
+<|> That's great!
+<|>
+<|> When you a re ready, please describe your set-up on the wiki. Are you
+<|> working with Brian McCabe? If yes, say hi to him.
+<|>
+<|> All the best
+<|>
+<|> PAvel
+<|>
+<|>
+-----------------------------------------------------------------------------------
+<|> Pavel Tomancak, Ph.D.
+<|>
+<|> Group Leader
+<|> Max Planck Institute of Molecular Cell Biology and Genetics
+<|> Pfotenhauerstr. 108
+<|> D-01307 Dresden				Tel.: +49 351 210 2670
+<|> Germany						Fax: +49 351 210 2020
+<|> email: tomancak at mpi-cbg.de
+<|> homepage:
+<|> http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+<|> twitter: @PavelTomancak
+<|>
+-----------------------------------------------------------------------------------
+<|>
+<|>
+<|>
+<|>
+<|>
+<|> On Feb 3, 2014, at 5:19 PM, Nikul <nikul at ee.columbia.edu> wrote:
+<|>
+<|>> Hi Luke and Johannes,
+<|>>
+<|>> I was able to figure out what the problem was. MMCoreJJNI.java lists
+<|>> the root directory and mm/Win64 as the search directories for a 64-bit
+<|>> build while openspim.build.xml was staging the files to mm/x64.
+<|>> Changing
+<|>> the staging directory in  openspim.build.xml solved the problem!
+<|>>
+<|>> On another note, I am trying to interface a 100 fps 5.5mp camera with
+<|>> OpenSPIM
+<|>> and am using a RAID0 array of four ssd drives. The write speed I get
+<|>> through
+<|>> OpenSPIM (or micromanager) is at the moment only able to handle about
+<|>> 50 fps. Before I dig into the code to see if there is something I can
+<|>> optimize for
+<|>> the particular setup, I wanted to check if anyone has any tips to
+<|>> achieve write speeds
+<|>> to get full frame rate capture from the camera.
+<|>>
+<|>> Thanks,
+<|>> ---
+<|>> Nikul Ukani
+<|>>
+<|>> Doctoral Candidate,
+<|>> Dept. of Electrical Engineering,
+<|>> Columbia University.
+<|>> http://www.bionet.ee.columbia.edu/
+<|>>
+<|>> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+<|>>
+<|>>> I'll look into it and get back. If it works, it will be great to have
+<|>>> some resource
+<|>>> on the OpenSPIM website for compiling it in 64-bit.
+<|>>>
+<|>>> Thanks,
+<|>>> ---
+<|>>> Nikul Ukani
+<|>>>
+<|>>> Doctoral Candidate,
+<|>>> Dept. of Electrical Engineering,
+<|>>> Columbia University.
+<|>>> http://www.bionet.ee.columbia.edu/
+<|>>>
+<|>>> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu>
+<|>>> wrote:
+<|>>>
+<|>>>> Hi Nikul,
+<|>>>>
+<|>>>> --x64 is supposed to change "mm.architecture" to "x64" before calling
+<|>>>> Micro-Manager's build scripts; this should build MM in 64-bit.
+<|>>>> However, it's entirely probable that "build.sh" and/or
+<|>>>> "openspim.build.xml" do not copy the 64-bit files -- I would check
+<|>>>> first to see if the relevant binaries exist in "stage" or "build"
+<|>>>> subdirectories. If so, you'll have to look through the build system
+<|>>>> to see where we stage this files (I believe the relevant target is
+<|>>>> near the end of "openspim.build.xml") and make sure the correct
+<|>>>> architecture is copied from.
+<|>>>>
+<|>>>>
+<|>>>> Hope this helps,
+<|>>>> Luke
+<|>>>>
+<|>>>> On 01/31/14, Nikul Ukani  wrote:
+<|>>>>> Hi Johannes,
+<|>>>>>
+<|>>>>> That's possible as all I did was to change the platform to x64 in
+<|>>>>> the build script. Can you point me to which project does that
+<|>>>>> library correspond to so I can investigate whether the correct flag
+<|>>>>> is being passed while compiling it?
+<|>>>>>
+<|>>>>> Thanks,
+<|>>>>> Nikul
+<|>>>>>
+<|>>>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin
+<|>>>>>> <Johannes.Schindelin at gmx.de> wrote:
+<|>>>>>>
+<|>>>>>> Hi Nikul,
+<|>>>>>>
+<|>>>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+<|>>>>>>>
+<|>>>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine
+<|>>>>>>> running
+<|>>>>>>> Windows 7. While I was able to get it to compile by modifying some
+<|>>>>>>> of
+<|>>>>>>> the build scripts; upon trying to open it from Fiji, I get the
+<|>>>>>>> following
+<|>>>>>>> error
+<|>>>>>>>
+<|>>>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+<|>>>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+<|>>>>>>
+<|>>>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+<|>>>>>> library. Possible?
+<|>>>>>>
+<|>>>>>> Ciao,
+<|>>>>>> Johannes
+<|>>>>>>
+<|>>>>>
+<|>>>>>
+<|>>>>> _______________________________________________
+<|>>>>> OpenSPIM mailing list
+<|>>>>> OpenSPIM at openspim.org
+<|>>>>> http://openspim.org/mailman/listinfo/openspim
+<|>>>>
+<|>>>
+<|>>
+<|>> _______________________________________________
+<|>> OpenSPIM mailing list
+<|>> OpenSPIM at openspim.org
+<|>> http://openspim.org/mailman/listinfo/openspim
+<|>
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+From stuyvenberg at wisc.edu  Mon Feb  3 16:47:57 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 03 Feb 2014 16:47:57 -0600
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7670d64b2de94.52f01c8f@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<7600eaac2f46a.52f01b9c@wiscmail.wisc.edu>
+	<761085f82937a.52f01bd9@wiscmail.wisc.edu>
+	<7790e15e2edf6.52f01c15@wiscmail.wisc.edu>
+	<7490977c2ae0b.52f01c53@wiscmail.wisc.edu>
+	<7670d64b2de94.52f01c8f@wiscmail.wisc.edu>
+Message-ID: <7670f32b2fd36.52efc83d@wiscmail.wisc.edu>
+
+Hi Nikul,
+
+I'm not sure about actually improving the write speed, but if you haven't already, and your computer has a significant amount of memory, try enabling Asynchronous Output (a checkbox next to the destination directory) in OpenSPIM. With this setting on, the software will grab frames as quickly as it can capture them (until your RAM fills up, anyway). Bear in mind also that if you aren't recording video, getting 100 fps suggests that all inter-frame actions complete in 10 ms. Since the default Z-stage settle delay (see "More Options") is 10 ms, achieving this may be quite difficult.
+
+
+Thanks for working through all these issues! If possible, could you document any necessary changes? I'd love to include a 64-bit OpenSPIM version in the near future.
+
+
+Hope this helps,
+Luke
+
+On 02/03/14, Nikul  wrote:
+> 
+> 
+> 
+> Hi Luke and Johannes,
+> 
+> I was able to figure out what the problem was. MMCoreJJNI.java lists
+> the root directory and mm/Win64 as the search directories for a 64-bit
+> build while openspim.build.xml was staging the files to mm/x64. Changing
+> the staging directory in openspim.build.xml solved the problem!
+> 
+> 
+> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+> and am using a RAID0 array of four ssd drives. The write speed I get through 
+> OpenSPIM (or micromanager) is at the moment only able to handle about 
+> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+> to get full frame rate capture from the camera.
+> 
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> 
+> http://www.bionet.ee.columbia.edu/
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu <nikul at ee.columbia.edu>> wrote:
+> 
+> 
+> > I'll look into it and get back. If it works, it will be great to have some resourceon the OpenSPIM website for compiling it in 64-bit.
+> > 
+> > 
+> > Thanks,
+> > ---
+> > Nikul Ukani
+> > 
+> > 
+> > Doctoral Candidate,
+> > Dept. of Electrical Engineering,
+> > Columbia University.
+> > 
+> > http://www.bionet.ee.columbia.edu/
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu <stuyvenberg at wisc.edu>> wrote:
+> > 
+> > 
+> > > Hi Nikul,
+> > > 
+> > > --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+> > > 
+> > > 
+> > > Hope this helps,
+> > > Luke
+> > > 
+> > > On 01/31/14, Nikul Ukani wrote:
+> > > 
+> > > > Hi Johannes,
+> > > > 
+> > > > That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+> > > > 
+> > > > Thanks,
+> > > > Nikul
+> > > > 
+> > > > 
+> > > > > On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de <Johannes.Schindelin at gmx.de>> wrote:
+> > > > > 
+> > > > > Hi Nikul,
+> > > > > 
+> > > > > 
+> > > > > > On Fri, 31 Jan 2014, Nikul Ukani wrote:
+> > > > > > 
+> > > > > > I am currently trying to compile OpenSPIM on a 64 bit machine running
+> > > > > > Windows 7. While I was able to get it to compile by modifying some of
+> > > > > > the build scripts; upon trying to open it from Fiji, I get the following
+> > > > > > error
+> > > > > > 
+> > > > > > Error: Failed to open libMMCoreJ_wrap.jnilib
+> > > > > > mmcorej.MMCoreJJNI.swig_module_init()V
+> > > > > > 
+> > > > > 
+> > > > > My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+> > > > > library. Possible?
+> > > > > 
+> > > > > Ciao,
+> > > > > Johannes
+> > > > > 
+> > > > > 
+> > > > 
+> > > > 
+> > > > _______________________________________________
+> > > > OpenSPIM mailing list
+> > > > OpenSPIM at openspim.org <OpenSPIM at openspim.org>
+> > > > http://openspim.org/mailman/listinfo/openspim
+> > > > 
+> > > 
+> > > 
+> > 
+> > 
+> > 
+> > 
+> >
+
+
+From weber at mpi-cbg.de  Tue Feb  4 08:20:10 2014
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Tue, 4 Feb 2014 15:20:10 +0100
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+Message-ID: <32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+
+Hey Nikul,
+
+a couple of thoughts regarding the speed:
+
+- Writing a lot of small files takes a lot more time than a single big one. You might want to test your RAID system with something like ATTO Disk Benchmark, which measures data rates for different files sizes.
+- Buffering the data in the RAM before writing to SSD could help, or streaming everything to RAM. Requires a lot of RAM, though.
+- If you intend to run z-stacks at 100 fps and the step speed of the z-motor is limiting, you could potentially run the motor continuously while streaming data.
+
+Michael
+
+
+On Feb 3, 2014, at 5:19 PM, Nikul <nikul at ee.columbia.edu> wrote:
+
+> Hi Luke and Johannes,
+> 
+> I was able to figure out what the problem was. MMCoreJJNI.java lists
+> the root directory and mm/Win64 as the search directories for a 64-bit
+> build while openspim.build.xml was staging the files to mm/x64. Changing
+> the staging directory in  openspim.build.xml solved the problem!
+> 
+> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+> and am using a RAID0 array of four ssd drives. The write speed I get through 
+> OpenSPIM (or micromanager) is at the moment only able to handle about 
+> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+> to get full frame rate capture from the camera.
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> http://www.bionet.ee.columbia.edu/
+> 
+> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+> 
+>> I'll look into it and get back. If it works, it will be great to have some resource
+>> on the OpenSPIM website for compiling it in 64-bit.
+>> 
+>> Thanks,
+>> ---
+>> Nikul Ukani
+>> 
+>> Doctoral Candidate,
+>> Dept. of Electrical Engineering,
+>> Columbia University.
+>> http://www.bionet.ee.columbia.edu/
+>> 
+>> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+>> 
+>>> Hi Nikul,
+>>> 
+>>> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+>>> 
+>>> 
+>>> Hope this helps,
+>>> Luke
+>>> 
+>>> On 01/31/14, Nikul Ukani  wrote:
+>>>> Hi Johannes,
+>>>> 
+>>>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>>>> 
+>>>> Thanks,
+>>>> Nikul
+>>>> 
+>>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>>>> 
+>>>>> Hi Nikul,
+>>>>> 
+>>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>>>> 
+>>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>>>> error
+>>>>>> 
+>>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>>>> 
+>>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>>>> library. Possible?
+>>>>> 
+>>>>> Ciao,
+>>>>> Johannes
+>>>>> 
+>>>> 
+>>>> 
+>>>> _______________________________________________
+>>>> OpenSPIM mailing list
+>>>> OpenSPIM at openspim.org
+>>>> http://openspim.org/mailman/listinfo/openspim
+>>> 
+>> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140204/c01a883d/attachment.html>
+
+From nhu2001 at columbia.edu  Wed Feb  5 10:29:45 2014
+From: nhu2001 at columbia.edu (Nikul)
+Date: Wed, 5 Feb 2014 11:29:45 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+Message-ID: <CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+
+Hi everyone,
+
+Thanks for the replies!
+
+> Are you working with Brian McCabe? If yes, say hi to him. 
+
+I work in the lab of Prof. Lazar, but we do collaborate with Brian. I'll
+make sure to pass the greetings!
+
+
+
+
+> May I ask how you plan to handle the data once it is acquired at this
+> rate?! This is no small feat... I'm also interested in what you will
+> image
+
+We will be imaging drosophila larvae. For now, I am just dumping the 
+data to a 4 TB raid array. Still working on the eventual data storage framework :)
+
+
+
+
+> I'm not sure about actually improving the write speed, but if you haven't already, and your computer has a significant amount of memory, try enabling Asynchronous Output (a checkbox next to the destination directory) in OpenSPIM. With this setting on, the software will grab frames as quickly as it can capture them (until your RAM fills up, anyway).
+
+Hi Luke, I am using the asynchronous output option and have been running some profiling tests.
+Disabling all stage movements and calls to get positions from the stage, I am able to
+get a 20fps capture from the camera. I suspect this is due to the use of software triggering.
+Will investigate further
+
+The write speed to the RAID array through openspim is really bad at this point(2-3 fps). I suspect
+this is due to the use of the BioFormats writer., which somehow doesn't perform well
+in this scenario. I will try to interface the TaggedImageStorageMultiPageTiff class from
+MM with the openspim AsyncOutputWrapper to see if that improves things. (I am able to 
+get 50 fps writes through micromanager) 
+
+> Bear in mind also that if you aren't recording video, getting 100 fps suggests that all inter-frame actions complete in 10 ms. Since the default Z-stage settle delay (see "More Options") is 10 ms, achieving this may be quite difficult.
+> 
+
+Right now, I am just trying to ensure that the acquisition and output operations aren't a bottleneck.
+I understand that the speed will be less once I include the stage movements. I am trying to take
+a modular approach to maximize throughput. I have commented all calls to the
+stage(even getPosition) to run acquisition/output benchmarks. 
+
+> 
+> Thanks for working through all these issues! If possible, could you document any necessary changes? I'd love to include a 64-bit OpenSPIM version in the near future.
+
+If you could send me the code you used to produce the 32 bit self extracting archive, I can try
+modifying it to have a 64 bit version in the coming weeks. On a related note, references to
+commons-math3-3.2.jar might be necessary in the build xml files for 32 bit as well. I see that
+the switch to commons math 3 was made recently but I wasn't able to find it included in the 
+build files.
+
+
+
+
+
+
+
+> - Writing a lot of small files takes a lot more time than a single big one. You might want to test your RAID system with something like ATTO Disk Benchmark, which measures data rates for different files sizes.
+
+Hi Michael, I am getting a write speed of 1.4GBps for 16kb writes and more than 2GBps for 
+anything more than 32kb writes through benchmarks,.
+I will investigate further by writing a standalone program in Java using Java's I/O module and
+another one using the BioFormats class to test their respective speeds.
+
+> - Buffering the data in the RAM before writing to SSD could help, or streaming everything to RAM. Requires a lot of RAM, though.
+
+I currently have 128 GB of DDR3-1600 ram. But even acquisition to ram at this point
+seems to be slow(20fps) through openspim. 
+
+In the video mode, I am able to get 50 fps in openspim, so it seems to be stemming from 
+repeated calls to snapImage() as opposed to initiating a sequence acquisition.
+
+----------------------------------------------
+Nikul Ukani
+
+Research assistant,
+Bionet lab,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140205/04b935fd/attachment.html>
+
+From Johannes.Schindelin at gmx.de  Wed Feb  5 11:02:41 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 5 Feb 2014 18:02:41 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+Message-ID: <alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Wed, 5 Feb 2014, Nikul wrote:
+
+> The write speed to the RAID array through openspim is really bad at this
+> point(2-3 fps). I suspect this is due to the use of the BioFormats
+> writer.
+
+And you would be correct. We identified quite a few bottlenecks in
+BioFormats (actually on the reader side, but some of them extend to the
+writer, too) and the improvements are hopefully coming with a future
+BioFormats version.
+
+In the concrete case of writing data to a RAID as fast as possible, I
+would suggest writing *raw* data, though. You can always stitch back the
+metadata. The only metadata you have to store at the same time as the
+frames you are writing out are the metadata that *do* change with the
+frame, i.e. z position and time. All the other metadata can be written out
+at a much, much slower pace, some of them actually need to be written only
+once per experiment.
+
+That should save a *ton* of time.
+
+Ciao,
+Johannes
+
+P.S.: It might make sense to experiment with a low-impact compression
+scheme such as LZO (e.g. via https://github.com/Karmasphere/lzo-java)
+because it can reduce a large chunk of the redundancies at the cost of CPU
+but at the benefit of the network or processor bus. If you find time to
+experiment with this, I would be very much interested in hearing how you
+fared!
+
+
+From nikul at ee.columbia.edu  Wed Feb  5 16:49:22 2014
+From: nikul at ee.columbia.edu (Nikul)
+Date: Wed, 5 Feb 2014 17:49:22 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+	<alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+Message-ID: <7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8@ee.columbia.edu>
+
+
+> In the concrete case of writing data to a RAID as fast as possible, I
+> would suggest writing *raw* data, though. You can always stitch back the
+> metadata. The only metadata you have to store at the same time as the
+> frames you are writing out are the metadata that *do* change with the
+> frame, i.e. z position and time. All the other metadata can be written out
+> at a much, much slower pace, some of them actually need to be written only
+> once per experiment.
+
+That's a good idea! I will try that out as well.
+
+> P.S.: It might make sense to experiment with a low-impact compression
+> scheme such as LZO (e.g. via https://github.com/Karmasphere/lzo-java)
+> because it can reduce a large chunk of the redundancies at the cost of CPU
+> but at the benefit of the network or processor bus. If you find time to
+> experiment with this, I would be very much interested in hearing how you
+> fared!
+
+We might look at some sort of compression later, but for now I am going
+to concentrate on trying to maximize throughput.
+
+---------------------------------------------
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140205/9050395d/attachment.html>
+
+From stuyvenberg at wisc.edu  Wed Feb  5 19:01:40 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 05 Feb 2014 19:01:40 -0600
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <75a0ec6a3404b.52f2ded2@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+	<762090ab33268.52f2dbff@wiscmail.wisc.edu>
+	<76a0ba5535fb6.52f2dda3@wiscmail.wisc.edu>
+	<76a0de513499e.52f2dde0@wiscmail.wisc.edu>
+	<76f0ef7f3351f.52f2de1c@wiscmail.wisc.edu>
+	<7650859c370d0.52f2de59@wiscmail.wisc.edu>
+	<7620b7d431a92.52f2de96@wiscmail.wisc.edu>
+	<75a0ec6a3404b.52f2ded2@wiscmail.wisc.edu>
+Message-ID: <76f0879f36385.52f28a94@wiscmail.wisc.edu>
+
+Hey Nikul,
+
+On 02/05/14, Nikul  wrote:
+> If you could send me the code you used to produce the 32 bit self extracting archive, I can try
+> modifying it to have a 64 bit version in the coming weeks. On a related note, references to
+> commons-math3-3.2.jar might be necessary in the build xml files for 32 bit as well. I see that
+> the switch to commons math 3 was made recently but I wasn't able to find it included in the 
+> build files.
+
+The self-extracting archive is produced by make-dev-env.sh in the main directory, but I hasten to point out that it doesn't include any of the actual code -- rather, it contains instructions to download the code from github (in fact, the development environment it sets up has the git source code management software very well-integrated.) Github is probably the best way to get the changed code to us, though it would involve deep familiarization with the SCM software (and an account/fork of our project on github to which to upload, followed by a pull request...).
+
+Meanwhile, I added the reference to commons-math3-3.2.jar some time ago, but not on the main openspim branch -- it's there now, so executing 'git pull' will technically bring in that change (but it will probably also create some annoying merge conflicts...).
+
+> In the video mode, I am able to get 50 fps in openspim, so it seems to be stemming from 
+> repeated calls to snapImage() as opposed to initiating a sequence acquisition.
+
+
+
+I suspected this might be the case. The main problem I've had is wanting to be sure that the motors had stopped at the correct position and grabbing a frame there. Continuous drive, as suggested by Michael Webber, makes for an excellent workaround to this concern; however, it has a bit of a shaky standing in the OpenSPIM software at present. There's some issues involved in it that I haven't had the opportunity to sort out yet; given the interest, I'll plan to give it a second look in the future.
+
+
+Luke
+
+
+From Johannes.Schindelin at gmx.de  Thu Feb  6 08:39:03 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 6 Feb 2014 15:39:03 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+	<alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+	<7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8@ee.columbia.edu>
+Message-ID: <alpine.DEB.1.00.1402061533400.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Wed, 5 Feb 2014, Nikul wrote:
+
+> > P.S.: It might make sense to experiment with a low-impact compression
+> > scheme such as LZO (e.g. via https://github.com/Karmasphere/lzo-java)
+> > because it can reduce a large chunk of the redundancies at the cost of
+> > CPU but at the benefit of the network or processor bus. If you find
+> > time to experiment with this, I would be very much interested in
+> > hearing how you fared!
+> 
+> We might look at some sort of compression later, but for now I am going
+> to concentrate on trying to maximize throughput.
+
+To be clear, my suggestion of LZO was trying to maximize throughput. The
+bottleneck is most likely the storage -- even if you would use SSD or a
+super-parallel RAID, the data transport between RAM and the storage device
+is very, very slow compared to the transport between the RAM and the CPU.
+
+That is why I suggested giving LZO a try: it might very well turn out that
+throughput is *higher* because your CPU is unlikely to be highly impacted
+by the use of it (I expect it still to be used less than 50% maximum even
+if Micro-Manager is recording *and* LZO is used to compress the data
+stream) and at the same time, the bottleneck -- the data transport to the
+storage device -- is used to the same extent. Only that it would now
+transport between 20-50% more data (depending on your exact data, of
+course, but should be in that ball park given that fluorescence images
+have a histogram very favorable to even simplistic compression).
+
+Ciao,
+Johannes
+
+
+From Johannes.Schindelin at gmx.de  Thu Feb  6 17:05:50 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 7 Feb 2014 00:05:50 +0100 (CET)
+Subject: [OpenSPIM] Paperduino
+Message-ID: <alpine.DEB.1.00.1402070004030.14982@s15462909.onlinehome-server.info>
+
+Hi all,
+
+this is probably unsuitable for our OpenSPIM but inspirational
+nevertheless:
+
+	http://youtu.be/_xv2w2AFxl8
+
+Ciao,
+Johannes
+
+
+From pitrone at mpi-cbg.de  Thu Feb 20 16:22:33 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Thu, 20 Feb 2014 23:22:33 +0100
+Subject: [OpenSPIM] Open Source camera!!
+Message-ID: <B550B2C6-4521-4DEB-A2D5-1D57B758B66C@mpi-cbg.de>
+
+Hello all, 
+
+I was at a cool conference in Berlin today and met people behind an open source film camera made with a 4k (12 mpix 4000 x 3000 5.5 um pixel size) chip capable of 300 fps!! It called the Axiom from a start up named Apertus (http://www.apertus.com)
+
+They already have a functioning prototype, but they need funding...
+
+The pointman on this project is Sebastian Pichelhofer (CC:ed to this post)
+
+I hope you all are excited as I am about this...
+Pete
+
+From pitrone at mpi-cbg.de  Fri Feb 21 03:40:53 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Fri, 21 Feb 2014 10:40:53 +0100 (CET)
+Subject: [OpenSPIM] Correction (was:  Open Source camera!!)
+In-Reply-To: <B550B2C6-4521-4DEB-A2D5-1D57B758B66C@mpi-cbg.de>
+References: <B550B2C6-4521-4DEB-A2D5-1D57B758B66C@mpi-cbg.de>
+Message-ID: <58728.10.1.191.65.1392975653.squirrel@webmail.mpi-cbg.de>
+
+Hello all,
+
+I made a mistake in the domain name of the website, the extension is .org
+instead of .com.
+
+Sorry for the confusion, and have a nice weekend!
+Pete
+
+-- 
+Peter Gabriel Pitrone - FRMS TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Thu, February 20, 2014 23:22, Peter Gabriel Pitrone wrote:
+<|> Hello all,
+<|>
+<|> I was at a cool conference in Berlin today and met people behind an open
+<|> source film camera made with a 4k (12 mpix 4000 x 3000 5.5 um pixel
+size)
+<|> chip capable of 300 fps!! It called the Axiom from a start up named
+<|> Apertus (http://www.apertus.com)
+<|>
+<|> They already have a functioning prototype, but they need funding...
+<|>
+<|> The pointman on this project is Sebastian Pichelhofer (CC:ed to this
+<|> post)
+<|>
+<|> I hope you all are excited as I am about this...
+<|> Pete
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+From Johannes.Schindelin at gmx.de  Mon Feb 24 12:38:16 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 24 Feb 2014 19:38:16 +0100 (CET)
+Subject: [OpenSPIM] [micro-manager-general] Position open on the
+ Micro-Manager team (fwd)
+Message-ID: <alpine.DEB.1.00.1402241937000.14982@s15462909.onlinehome-server.info>
+
+Hi all,
+
+I only forward this because I cannot go do it myself ;-) Please spread the
+word, especially to talented microscopers with a programming background
+who are awesome (so they fit into the Micro-Manager team).
+
+Ciao,
+Johannes
+
+---------- Forwarded message ----------
+Date: Mon, 24 Feb 2014 10:14:40 -0800
+From: Nico Stuurman <nico.stuurman at ucsf.edu>
+Reply-To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Subject: [micro-manager-general] Position open on the Micro-Manager team
+
+Dear Micro-Manager list members,
+
+We have a Research Specialist Position open on the Micro-Manager team.  We are looking for someone with a strong background in microscopy as well as software coding.  This is a full time position at the Mission Bay campus of UCSF in San Francisco.  If you are interested, please apply through https://aprecruit.ucsf.edu/apply/JPF00089.  If you know someone who may be interested, can you please forward this email?  If you would like more information, please contact us: info at micro-manager.org.
+
+Full text of the job announcement:
+
+
+A Research Specialist position is open on the Micro-Manager development team.  Micro-Manager (http://micro-manager.org) is Open Source software for microscope control that is used in thousands of laboratories world-wide and has more than 50 code contributors.  We are looking for a person with strong programming skills (C++, Java), who understands light microscopy (preferably has extensive experience with microscopes), can write documentation, and enjoys helping/teaching scientists work with microscopes.  The Micro-Manager project is part of Ron Vale?s laboratory at UCSF and has about 2 more years of NIH funding.  We plan to transition Micro-Manager to an independent (possibly non-profit) organization that will continue the core mission of Micro-Manager (to provide open source software tools for microscopists) but be financed more directly by those who benefit from its existence.  The position requires a minimum of a Bachelor?s degree or equivalent (preferably in life sciences, physics, engineering or computer sciences)  and demonstrable programming experience in Java and/or C++ as well as preferably one or more years experience with scientific imaging using light microscopes.  In addition, the position requires excellent communication skills, great problem-solving abilities, and a detail oriented personality.
+
+To Apply:  Please submit cover letter, CV, and contact information for two professional references to https://aprecruit.ucsf.edu/apply/JPF00089.
+
+UCSF seeks candidates whose experience, teaching, research, or community service has prepared them to contribute to our commitment to diversity and excellence. UCSF is an Equal Opportunity/Affirmative Action Employer.
+
+
+Best regards,
+
+
+Nico Stuurman
+
+------------------------------------------------------------------------------
+Flow-based real-time traffic analytics software. Cisco certified tool.
+Monitor traffic, SLAs, QoS, Medianet, WAAS etc. with NetFlow Analyzer
+Customize your own dashboards, set traffic alerts and generate reports.
+Network behavioral analysis & security monitoring. All-in-one tool.
+http://pubads.g.doubleclick.net/gampad/clk?id=126839071&iu=/4140/ostg.clktrk
+_______________________________________________
+micro-manager-general mailing list
+micro-manager-general at lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+From robert.hauschild at ist.ac.at  Mon Feb  3 02:51:23 2014
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Mon, 03 Feb 2014 09:51:23 +0100
+Subject: [OpenSPIM] Crash on startup
+In-Reply-To: <0064F14F-24DF-4A40-91E1-5DE43E9E55D6@ucsf.edu>
+References: <C19E588C-9E10-4C89-99B6-E314309C6F57@ucsf.edu>	<alpine.DEB.1.00.1401312027190.14982@s15462909.onlinehome-server.info>
+	<0064F14F-24DF-4A40-91E1-5DE43E9E55D6@ucsf.edu>
+Message-ID: <52EF588B.7000305@ist.ac.at>
+
+Ni Nico,
+
+I have a running version of "
+
+  Windows 7, 64-bit machine, but running the 32-bit version of the executable
+
+"
+(I copied different versions of mm and fiji and OpenSpim together to 
+make it work)
+If you like that then I can put a zip file of the entire directory on a 
+public folder.
+
+Robert
+
+On 31.01.2014 22:56, Nico Stuurman wrote:
+> HI Johannes,
+>
+>>> Trying to have a look at the OpenSPIM application in action.  Downloaded
+>>> the zip and updated as directed.  Ran the 32 bit version as well as 64
+>>> bit (which appeared after running the Fiji updater).  In both cases,
+>>> starting Micro-Manager from the Fiji plugin menu throws an error stating
+>>> that libMMCoreJ_wrap is not found.
+>> Thanks for trying! Did you do that on a MacOSX computer? So far, we only
+>> support 32-bit Windows, but 64-bit Windows is on the list...
+> Ona Windows 7, 64-bit machine, but running the 32-bit version of the executable.
+>
+> Best,
+>
+> Nico
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A – 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   robert.hauschild at ist.ac.at
+
+
+
+
+From nikul at ee.columbia.edu  Mon Feb  3 10:19:57 2014
+From: nikul at ee.columbia.edu (Nikul)
+Date: Mon, 3 Feb 2014 11:19:57 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+Message-ID: <8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+
+Hi Luke and Johannes,
+
+I was able to figure out what the problem was. MMCoreJJNI.java lists
+the root directory and mm/Win64 as the search directories for a 64-bit
+build while openspim.build.xml was staging the files to mm/x64. Changing
+the staging directory in  openspim.build.xml solved the problem!
+
+On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+and am using a RAID0 array of four ssd drives. The write speed I get through 
+OpenSPIM (or micromanager) is at the moment only able to handle about 
+50 fps. Before I dig into the code to see if there is something I can optimize for 
+the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+to get full frame rate capture from the camera.
+
+Thanks,
+---
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+
+> I'll look into it and get back. If it works, it will be great to have some resource
+> on the OpenSPIM website for compiling it in 64-bit.
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> http://www.bionet.ee.columbia.edu/
+> 
+> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+> 
+>> Hi Nikul,
+>> 
+>> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+>> 
+>> 
+>> Hope this helps,
+>> Luke
+>> 
+>> On 01/31/14, Nikul Ukani  wrote:
+>>> Hi Johannes,
+>>> 
+>>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>>> 
+>>> Thanks,
+>>> Nikul
+>>> 
+>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>>> 
+>>>> Hi Nikul,
+>>>> 
+>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>>> 
+>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>>> error
+>>>>> 
+>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>>> 
+>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>>> library. Possible?
+>>>> 
+>>>> Ciao,
+>>>> Johannes
+>>>> 
+>>> 
+>>> 
+>>> _______________________________________________
+>>> OpenSPIM mailing list
+>>> OpenSPIM at openspim.org
+>>> http://openspim.org/mailman/listinfo/openspim
+>> 
+> 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140203/32acb35f/attachment-0002.html>
+
+From tomancak at mpi-cbg.de  Mon Feb  3 14:41:25 2014
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Mon, 3 Feb 2014 21:41:25 +0100
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+Message-ID: <F946CA48-AA2C-430D-B622-47B0166B5339@mpi-cbg.de>
+
+Hi Nikul,
+
+I see, you are really pushing the performance of OpenSPIM to the limit. That's great!
+
+When you a re ready, please describe your set-up on the wiki. Are you working with Brian McCabe? If yes, say hi to him. 
+
+All the best
+
+PAvel
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: tomancak at mpi-cbg.de
+homepage: http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+
+
+
+On Feb 3, 2014, at 5:19 PM, Nikul <nikul at ee.columbia.edu> wrote:
+
+> Hi Luke and Johannes,
+> 
+> I was able to figure out what the problem was. MMCoreJJNI.java lists
+> the root directory and mm/Win64 as the search directories for a 64-bit
+> build while openspim.build.xml was staging the files to mm/x64. Changing
+> the staging directory in  openspim.build.xml solved the problem!
+> 
+> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+> and am using a RAID0 array of four ssd drives. The write speed I get through 
+> OpenSPIM (or micromanager) is at the moment only able to handle about 
+> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+> to get full frame rate capture from the camera.
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> http://www.bionet.ee.columbia.edu/
+> 
+> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+> 
+>> I'll look into it and get back. If it works, it will be great to have some resource
+>> on the OpenSPIM website for compiling it in 64-bit.
+>> 
+>> Thanks,
+>> ---
+>> Nikul Ukani
+>> 
+>> Doctoral Candidate,
+>> Dept. of Electrical Engineering,
+>> Columbia University.
+>> http://www.bionet.ee.columbia.edu/
+>> 
+>> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+>> 
+>>> Hi Nikul,
+>>> 
+>>> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+>>> 
+>>> 
+>>> Hope this helps,
+>>> Luke
+>>> 
+>>> On 01/31/14, Nikul Ukani  wrote:
+>>>> Hi Johannes,
+>>>> 
+>>>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>>>> 
+>>>> Thanks,
+>>>> Nikul
+>>>> 
+>>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>>>> 
+>>>>> Hi Nikul,
+>>>>> 
+>>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>>>> 
+>>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>>>> error
+>>>>>> 
+>>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>>>> 
+>>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>>>> library. Possible?
+>>>>> 
+>>>>> Ciao,
+>>>>> Johannes
+>>>>> 
+>>>> 
+>>>> 
+>>>> _______________________________________________
+>>>> OpenSPIM mailing list
+>>>> OpenSPIM at openspim.org
+>>>> http://openspim.org/mailman/listinfo/openspim
+>>> 
+>> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140203/e4541f90/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Mon Feb  3 15:59:39 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Mon, 3 Feb 2014 22:59:39 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <F946CA48-AA2C-430D-B622-47B0166B5339@mpi-cbg.de>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<F946CA48-AA2C-430D-B622-47B0166B5339@mpi-cbg.de>
+Message-ID: <55233.10.1.191.65.1391464779.squirrel@webmail.mpi-cbg.de>
+
+Howdy Nikul,
+
+I would love to see this work, and agree with Pavel that this is great!!
+May I ask how you plan to handle the data once it is acquired at this
+rate?! This is no small feat... I'm also interested in what you will
+image.
+
+Have a great evening!
+Pete
+
+
+
+-- 
+Peter Gabriel Pitrone - FRMS TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Mon, February 3, 2014 21:41, Pavel Tomancak wrote:
+<|> Hi Nikul,
+<|>
+<|> I see, you are really pushing the performance of OpenSPIM to the limit.
+<|> That's great!
+<|>
+<|> When you a re ready, please describe your set-up on the wiki. Are you
+<|> working with Brian McCabe? If yes, say hi to him.
+<|>
+<|> All the best
+<|>
+<|> PAvel
+<|>
+<|>
+-----------------------------------------------------------------------------------
+<|> Pavel Tomancak, Ph.D.
+<|>
+<|> Group Leader
+<|> Max Planck Institute of Molecular Cell Biology and Genetics
+<|> Pfotenhauerstr. 108
+<|> D-01307 Dresden				Tel.: +49 351 210 2670
+<|> Germany						Fax: +49 351 210 2020
+<|> email: tomancak at mpi-cbg.de
+<|> homepage:
+<|> http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+<|> twitter: @PavelTomancak
+<|>
+-----------------------------------------------------------------------------------
+<|>
+<|>
+<|>
+<|>
+<|>
+<|> On Feb 3, 2014, at 5:19 PM, Nikul <nikul at ee.columbia.edu> wrote:
+<|>
+<|>> Hi Luke and Johannes,
+<|>>
+<|>> I was able to figure out what the problem was. MMCoreJJNI.java lists
+<|>> the root directory and mm/Win64 as the search directories for a 64-bit
+<|>> build while openspim.build.xml was staging the files to mm/x64.
+<|>> Changing
+<|>> the staging directory in  openspim.build.xml solved the problem!
+<|>>
+<|>> On another note, I am trying to interface a 100 fps 5.5mp camera with
+<|>> OpenSPIM
+<|>> and am using a RAID0 array of four ssd drives. The write speed I get
+<|>> through
+<|>> OpenSPIM (or micromanager) is at the moment only able to handle about
+<|>> 50 fps. Before I dig into the code to see if there is something I can
+<|>> optimize for
+<|>> the particular setup, I wanted to check if anyone has any tips to
+<|>> achieve write speeds
+<|>> to get full frame rate capture from the camera.
+<|>>
+<|>> Thanks,
+<|>> ---
+<|>> Nikul Ukani
+<|>>
+<|>> Doctoral Candidate,
+<|>> Dept. of Electrical Engineering,
+<|>> Columbia University.
+<|>> http://www.bionet.ee.columbia.edu/
+<|>>
+<|>> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+<|>>
+<|>>> I'll look into it and get back. If it works, it will be great to have
+<|>>> some resource
+<|>>> on the OpenSPIM website for compiling it in 64-bit.
+<|>>>
+<|>>> Thanks,
+<|>>> ---
+<|>>> Nikul Ukani
+<|>>>
+<|>>> Doctoral Candidate,
+<|>>> Dept. of Electrical Engineering,
+<|>>> Columbia University.
+<|>>> http://www.bionet.ee.columbia.edu/
+<|>>>
+<|>>> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu>
+<|>>> wrote:
+<|>>>
+<|>>>> Hi Nikul,
+<|>>>>
+<|>>>> --x64 is supposed to change "mm.architecture" to "x64" before calling
+<|>>>> Micro-Manager's build scripts; this should build MM in 64-bit.
+<|>>>> However, it's entirely probable that "build.sh" and/or
+<|>>>> "openspim.build.xml" do not copy the 64-bit files -- I would check
+<|>>>> first to see if the relevant binaries exist in "stage" or "build"
+<|>>>> subdirectories. If so, you'll have to look through the build system
+<|>>>> to see where we stage this files (I believe the relevant target is
+<|>>>> near the end of "openspim.build.xml") and make sure the correct
+<|>>>> architecture is copied from.
+<|>>>>
+<|>>>>
+<|>>>> Hope this helps,
+<|>>>> Luke
+<|>>>>
+<|>>>> On 01/31/14, Nikul Ukani  wrote:
+<|>>>>> Hi Johannes,
+<|>>>>>
+<|>>>>> That's possible as all I did was to change the platform to x64 in
+<|>>>>> the build script. Can you point me to which project does that
+<|>>>>> library correspond to so I can investigate whether the correct flag
+<|>>>>> is being passed while compiling it?
+<|>>>>>
+<|>>>>> Thanks,
+<|>>>>> Nikul
+<|>>>>>
+<|>>>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin
+<|>>>>>> <Johannes.Schindelin at gmx.de> wrote:
+<|>>>>>>
+<|>>>>>> Hi Nikul,
+<|>>>>>>
+<|>>>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+<|>>>>>>>
+<|>>>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine
+<|>>>>>>> running
+<|>>>>>>> Windows 7. While I was able to get it to compile by modifying some
+<|>>>>>>> of
+<|>>>>>>> the build scripts; upon trying to open it from Fiji, I get the
+<|>>>>>>> following
+<|>>>>>>> error
+<|>>>>>>>
+<|>>>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+<|>>>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+<|>>>>>>
+<|>>>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+<|>>>>>> library. Possible?
+<|>>>>>>
+<|>>>>>> Ciao,
+<|>>>>>> Johannes
+<|>>>>>>
+<|>>>>>
+<|>>>>>
+<|>>>>> _______________________________________________
+<|>>>>> OpenSPIM mailing list
+<|>>>>> OpenSPIM at openspim.org
+<|>>>>> http://openspim.org/mailman/listinfo/openspim
+<|>>>>
+<|>>>
+<|>>
+<|>> _______________________________________________
+<|>> OpenSPIM mailing list
+<|>> OpenSPIM at openspim.org
+<|>> http://openspim.org/mailman/listinfo/openspim
+<|>
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+
+From stuyvenberg at wisc.edu  Mon Feb  3 16:47:57 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 03 Feb 2014 16:47:57 -0600
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7670d64b2de94.52f01c8f@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<7600eaac2f46a.52f01b9c@wiscmail.wisc.edu>
+	<761085f82937a.52f01bd9@wiscmail.wisc.edu>
+	<7790e15e2edf6.52f01c15@wiscmail.wisc.edu>
+	<7490977c2ae0b.52f01c53@wiscmail.wisc.edu>
+	<7670d64b2de94.52f01c8f@wiscmail.wisc.edu>
+Message-ID: <7670f32b2fd36.52efc83d@wiscmail.wisc.edu>
+
+Hi Nikul,
+
+I'm not sure about actually improving the write speed, but if you haven't already, and your computer has a significant amount of memory, try enabling Asynchronous Output (a checkbox next to the destination directory) in OpenSPIM. With this setting on, the software will grab frames as quickly as it can capture them (until your RAM fills up, anyway). Bear in mind also that if you aren't recording video, getting 100 fps suggests that all inter-frame actions complete in 10 ms. Since the default Z-stage settle delay (see "More Options") is 10 ms, achieving this may be quite difficult.
+
+
+Thanks for working through all these issues! If possible, could you document any necessary changes? I'd love to include a 64-bit OpenSPIM version in the near future.
+
+
+Hope this helps,
+Luke
+
+On 02/03/14, Nikul  wrote:
+> 
+> 
+> 
+> Hi Luke and Johannes,
+> 
+> I was able to figure out what the problem was. MMCoreJJNI.java lists
+> the root directory and mm/Win64 as the search directories for a 64-bit
+> build while openspim.build.xml was staging the files to mm/x64. Changing
+> the staging directory in openspim.build.xml solved the problem!
+> 
+> 
+> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+> and am using a RAID0 array of four ssd drives. The write speed I get through 
+> OpenSPIM (or micromanager) is at the moment only able to handle about 
+> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+> to get full frame rate capture from the camera.
+> 
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> 
+> http://www.bionet.ee.columbia.edu/
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu <nikul at ee.columbia.edu>> wrote:
+> 
+> 
+> > I'll look into it and get back. If it works, it will be great to have some resourceon the OpenSPIM website for compiling it in 64-bit.
+> > 
+> > 
+> > Thanks,
+> > ---
+> > Nikul Ukani
+> > 
+> > 
+> > Doctoral Candidate,
+> > Dept. of Electrical Engineering,
+> > Columbia University.
+> > 
+> > http://www.bionet.ee.columbia.edu/
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > 
+> > On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu <stuyvenberg at wisc.edu>> wrote:
+> > 
+> > 
+> > > Hi Nikul,
+> > > 
+> > > --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+> > > 
+> > > 
+> > > Hope this helps,
+> > > Luke
+> > > 
+> > > On 01/31/14, Nikul Ukani wrote:
+> > > 
+> > > > Hi Johannes,
+> > > > 
+> > > > That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+> > > > 
+> > > > Thanks,
+> > > > Nikul
+> > > > 
+> > > > 
+> > > > > On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de <Johannes.Schindelin at gmx.de>> wrote:
+> > > > > 
+> > > > > Hi Nikul,
+> > > > > 
+> > > > > 
+> > > > > > On Fri, 31 Jan 2014, Nikul Ukani wrote:
+> > > > > > 
+> > > > > > I am currently trying to compile OpenSPIM on a 64 bit machine running
+> > > > > > Windows 7. While I was able to get it to compile by modifying some of
+> > > > > > the build scripts; upon trying to open it from Fiji, I get the following
+> > > > > > error
+> > > > > > 
+> > > > > > Error: Failed to open libMMCoreJ_wrap.jnilib
+> > > > > > mmcorej.MMCoreJJNI.swig_module_init()V
+> > > > > > 
+> > > > > 
+> > > > > My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+> > > > > library. Possible?
+> > > > > 
+> > > > > Ciao,
+> > > > > Johannes
+> > > > > 
+> > > > > 
+> > > > 
+> > > > 
+> > > > _______________________________________________
+> > > > OpenSPIM mailing list
+> > > > OpenSPIM at openspim.org <OpenSPIM at openspim.org>
+> > > > http://openspim.org/mailman/listinfo/openspim
+> > > > 
+> > > 
+> > > 
+> > 
+> > 
+> > 
+> > 
+> >
+
+
+
+From weber at mpi-cbg.de  Tue Feb  4 08:20:10 2014
+From: weber at mpi-cbg.de (Michael Weber)
+Date: Tue, 4 Feb 2014 15:20:10 +0100
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+Message-ID: <32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+
+Hey Nikul,
+
+a couple of thoughts regarding the speed:
+
+- Writing a lot of small files takes a lot more time than a single big one. You might want to test your RAID system with something like ATTO Disk Benchmark, which measures data rates for different files sizes.
+- Buffering the data in the RAM before writing to SSD could help, or streaming everything to RAM. Requires a lot of RAM, though.
+- If you intend to run z-stacks at 100 fps and the step speed of the z-motor is limiting, you could potentially run the motor continuously while streaming data.
+
+Michael
+
+
+On Feb 3, 2014, at 5:19 PM, Nikul <nikul at ee.columbia.edu> wrote:
+
+> Hi Luke and Johannes,
+> 
+> I was able to figure out what the problem was. MMCoreJJNI.java lists
+> the root directory and mm/Win64 as the search directories for a 64-bit
+> build while openspim.build.xml was staging the files to mm/x64. Changing
+> the staging directory in  openspim.build.xml solved the problem!
+> 
+> On another note, I am trying to interface a 100 fps 5.5mp camera with OpenSPIM 
+> and am using a RAID0 array of four ssd drives. The write speed I get through 
+> OpenSPIM (or micromanager) is at the moment only able to handle about 
+> 50 fps. Before I dig into the code to see if there is something I can optimize for 
+> the particular setup, I wanted to check if anyone has any tips to achieve write speeds 
+> to get full frame rate capture from the camera.
+> 
+> Thanks,
+> ---
+> Nikul Ukani
+> 
+> Doctoral Candidate,
+> Dept. of Electrical Engineering,
+> Columbia University.
+> http://www.bionet.ee.columbia.edu/
+> 
+> On Jan 31, 2014, at 4:42 PM, Nikul <nikul at ee.columbia.edu> wrote:
+> 
+>> I'll look into it and get back. If it works, it will be great to have some resource
+>> on the OpenSPIM website for compiling it in 64-bit.
+>> 
+>> Thanks,
+>> ---
+>> Nikul Ukani
+>> 
+>> Doctoral Candidate,
+>> Dept. of Electrical Engineering,
+>> Columbia University.
+>> http://www.bionet.ee.columbia.edu/
+>> 
+>> On Jan 31, 2014, at 4:29 PM, Luke Stuyvenberg <stuyvenberg at wisc.edu> wrote:
+>> 
+>>> Hi Nikul,
+>>> 
+>>> --x64 is supposed to change "mm.architecture" to "x64" before calling Micro-Manager's build scripts; this should build MM in 64-bit. However, it's entirely probable that "build.sh" and/or "openspim.build.xml" do not copy the 64-bit files -- I would check first to see if the relevant binaries exist in "stage" or "build" subdirectories. If so, you'll have to look through the build system to see where we stage this files (I believe the relevant target is near the end of "openspim.build.xml") and make sure the correct architecture is copied from.
+>>> 
+>>> 
+>>> Hope this helps,
+>>> Luke
+>>> 
+>>> On 01/31/14, Nikul Ukani  wrote:
+>>>> Hi Johannes,
+>>>> 
+>>>> That's possible as all I did was to change the platform to x64 in the build script. Can you point me to which project does that library correspond to so I can investigate whether the correct flag is being passed while compiling it?
+>>>> 
+>>>> Thanks,
+>>>> Nikul
+>>>> 
+>>>>> On Jan 31, 2014, at 2:21 PM, Johannes Schindelin <Johannes.Schindelin at gmx.de> wrote:
+>>>>> 
+>>>>> Hi Nikul,
+>>>>> 
+>>>>>> On Fri, 31 Jan 2014, Nikul Ukani wrote:
+>>>>>> 
+>>>>>> I am currently trying to compile OpenSPIM on a 64 bit machine running
+>>>>>> Windows 7. While I was able to get it to compile by modifying some of
+>>>>>> the build scripts; upon trying to open it from Fiji, I get the following
+>>>>>> error
+>>>>>> 
+>>>>>> Error: Failed to open libMMCoreJ_wrap.jnilib
+>>>>>> mmcorej.MMCoreJJNI.swig_module_init()V
+>>>>> 
+>>>>> My guess is that the libMMCoreJ_wrap.jnilib is compiled as a 32-bit
+>>>>> library. Possible?
+>>>>> 
+>>>>> Ciao,
+>>>>> Johannes
+>>>>> 
+>>>> 
+>>>> 
+>>>> _______________________________________________
+>>>> OpenSPIM mailing list
+>>>> OpenSPIM at openspim.org
+>>>> http://openspim.org/mailman/listinfo/openspim
+>>> 
+>> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140204/c01a883d/attachment-0002.html>
+
+From nhu2001 at columbia.edu  Wed Feb  5 10:29:45 2014
+From: nhu2001 at columbia.edu (Nikul)
+Date: Wed, 5 Feb 2014 11:29:45 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+Message-ID: <CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+
+Hi everyone,
+
+Thanks for the replies!
+
+> Are you working with Brian McCabe? If yes, say hi to him. 
+
+I work in the lab of Prof. Lazar, but we do collaborate with Brian. I'll
+make sure to pass the greetings!
+
+
+
+
+> May I ask how you plan to handle the data once it is acquired at this
+> rate?! This is no small feat... I'm also interested in what you will
+> image
+
+We will be imaging drosophila larvae. For now, I am just dumping the 
+data to a 4 TB raid array. Still working on the eventual data storage framework :)
+
+
+
+
+> I'm not sure about actually improving the write speed, but if you haven't already, and your computer has a significant amount of memory, try enabling Asynchronous Output (a checkbox next to the destination directory) in OpenSPIM. With this setting on, the software will grab frames as quickly as it can capture them (until your RAM fills up, anyway).
+
+Hi Luke, I am using the asynchronous output option and have been running some profiling tests.
+Disabling all stage movements and calls to get positions from the stage, I am able to
+get a 20fps capture from the camera. I suspect this is due to the use of software triggering.
+Will investigate further
+
+The write speed to the RAID array through openspim is really bad at this point(2-3 fps). I suspect
+this is due to the use of the BioFormats writer., which somehow doesn't perform well
+in this scenario. I will try to interface the TaggedImageStorageMultiPageTiff class from
+MM with the openspim AsyncOutputWrapper to see if that improves things. (I am able to 
+get 50 fps writes through micromanager) 
+
+> Bear in mind also that if you aren't recording video, getting 100 fps suggests that all inter-frame actions complete in 10 ms. Since the default Z-stage settle delay (see "More Options") is 10 ms, achieving this may be quite difficult.
+> 
+
+Right now, I am just trying to ensure that the acquisition and output operations aren't a bottleneck.
+I understand that the speed will be less once I include the stage movements. I am trying to take
+a modular approach to maximize throughput. I have commented all calls to the
+stage(even getPosition) to run acquisition/output benchmarks. 
+
+> 
+> Thanks for working through all these issues! If possible, could you document any necessary changes? I'd love to include a 64-bit OpenSPIM version in the near future.
+
+If you could send me the code you used to produce the 32 bit self extracting archive, I can try
+modifying it to have a 64 bit version in the coming weeks. On a related note, references to
+commons-math3-3.2.jar might be necessary in the build xml files for 32 bit as well. I see that
+the switch to commons math 3 was made recently but I wasn't able to find it included in the 
+build files.
+
+
+
+
+
+
+
+> - Writing a lot of small files takes a lot more time than a single big one. You might want to test your RAID system with something like ATTO Disk Benchmark, which measures data rates for different files sizes.
+
+Hi Michael, I am getting a write speed of 1.4GBps for 16kb writes and more than 2GBps for 
+anything more than 32kb writes through benchmarks,.
+I will investigate further by writing a standalone program in Java using Java's I/O module and
+another one using the BioFormats class to test their respective speeds.
+
+> - Buffering the data in the RAM before writing to SSD could help, or streaming everything to RAM. Requires a lot of RAM, though.
+
+I currently have 128 GB of DDR3-1600 ram. But even acquisition to ram at this point
+seems to be slow(20fps) through openspim. 
+
+In the video mode, I am able to get 50 fps in openspim, so it seems to be stemming from 
+repeated calls to snapImage() as opposed to initiating a sequence acquisition.
+
+----------------------------------------------
+Nikul Ukani
+
+Research assistant,
+Bionet lab,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140205/04b935fd/attachment-0002.html>
+
+From Johannes.Schindelin at gmx.de  Wed Feb  5 11:02:41 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 5 Feb 2014 18:02:41 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+Message-ID: <alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Wed, 5 Feb 2014, Nikul wrote:
+
+> The write speed to the RAID array through openspim is really bad at this
+> point(2-3 fps). I suspect this is due to the use of the BioFormats
+> writer.
+
+And you would be correct. We identified quite a few bottlenecks in
+BioFormats (actually on the reader side, but some of them extend to the
+writer, too) and the improvements are hopefully coming with a future
+BioFormats version.
+
+In the concrete case of writing data to a RAID as fast as possible, I
+would suggest writing *raw* data, though. You can always stitch back the
+metadata. The only metadata you have to store at the same time as the
+frames you are writing out are the metadata that *do* change with the
+frame, i.e. z position and time. All the other metadata can be written out
+at a much, much slower pace, some of them actually need to be written only
+once per experiment.
+
+That should save a *ton* of time.
+
+Ciao,
+Johannes
+
+P.S.: It might make sense to experiment with a low-impact compression
+scheme such as LZO (e.g. via https://github.com/Karmasphere/lzo-java)
+because it can reduce a large chunk of the redundancies at the cost of CPU
+but at the benefit of the network or processor bus. If you find time to
+experiment with this, I would be very much interested in hearing how you
+fared!
+
+
+
+From nikul at ee.columbia.edu  Wed Feb  5 16:49:22 2014
+From: nikul at ee.columbia.edu (Nikul)
+Date: Wed, 5 Feb 2014 17:49:22 -0500
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+	<alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+Message-ID: <7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8@ee.columbia.edu>
+
+
+> In the concrete case of writing data to a RAID as fast as possible, I
+> would suggest writing *raw* data, though. You can always stitch back the
+> metadata. The only metadata you have to store at the same time as the
+> frames you are writing out are the metadata that *do* change with the
+> frame, i.e. z position and time. All the other metadata can be written out
+> at a much, much slower pace, some of them actually need to be written only
+> once per experiment.
+
+That's a good idea! I will try that out as well.
+
+> P.S.: It might make sense to experiment with a low-impact compression
+> scheme such as LZO (e.g. via https://github.com/Karmasphere/lzo-java)
+> because it can reduce a large chunk of the redundancies at the cost of CPU
+> but at the benefit of the network or processor bus. If you find time to
+> experiment with this, I would be very much interested in hearing how you
+> fared!
+
+We might look at some sort of compression later, but for now I am going
+to concentrate on trying to maximize throughput.
+
+---------------------------------------------
+Nikul Ukani
+
+Doctoral Candidate,
+Dept. of Electrical Engineering,
+Columbia University.
+http://www.bionet.ee.columbia.edu/
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140205/9050395d/attachment-0002.html>
+
+From stuyvenberg at wisc.edu  Wed Feb  5 19:01:40 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 05 Feb 2014 19:01:40 -0600
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <75a0ec6a3404b.52f2ded2@wiscmail.wisc.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+	<762090ab33268.52f2dbff@wiscmail.wisc.edu>
+	<76a0ba5535fb6.52f2dda3@wiscmail.wisc.edu>
+	<76a0de513499e.52f2dde0@wiscmail.wisc.edu>
+	<76f0ef7f3351f.52f2de1c@wiscmail.wisc.edu>
+	<7650859c370d0.52f2de59@wiscmail.wisc.edu>
+	<7620b7d431a92.52f2de96@wiscmail.wisc.edu>
+	<75a0ec6a3404b.52f2ded2@wiscmail.wisc.edu>
+Message-ID: <76f0879f36385.52f28a94@wiscmail.wisc.edu>
+
+Hey Nikul,
+
+On 02/05/14, Nikul  wrote:
+> If you could send me the code you used to produce the 32 bit self extracting archive, I can try
+> modifying it to have a 64 bit version in the coming weeks. On a related note, references to
+> commons-math3-3.2.jar might be necessary in the build xml files for 32 bit as well. I see that
+> the switch to commons math 3 was made recently but I wasn't able to find it included in the 
+> build files.
+
+The self-extracting archive is produced by make-dev-env.sh in the main directory, but I hasten to point out that it doesn't include any of the actual code -- rather, it contains instructions to download the code from github (in fact, the development environment it sets up has the git source code management software very well-integrated.) Github is probably the best way to get the changed code to us, though it would involve deep familiarization with the SCM software (and an account/fork of our project on github to which to upload, followed by a pull request...).
+
+Meanwhile, I added the reference to commons-math3-3.2.jar some time ago, but not on the main openspim branch -- it's there now, so executing 'git pull' will technically bring in that change (but it will probably also create some annoying merge conflicts...).
+
+> In the video mode, I am able to get 50 fps in openspim, so it seems to be stemming from 
+> repeated calls to snapImage() as opposed to initiating a sequence acquisition.
+
+
+
+I suspected this might be the case. The main problem I've had is wanting to be sure that the motors had stopped at the correct position and grabbing a frame there. Continuous drive, as suggested by Michael Webber, makes for an excellent workaround to this concern; however, it has a bit of a shaky standing in the OpenSPIM software at present. There's some issues involved in it that I haven't had the opportunity to sort out yet; given the interest, I'll plan to give it a second look in the future.
+
+
+Luke
+
+
+
+From Johannes.Schindelin at gmx.de  Thu Feb  6 08:39:03 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 6 Feb 2014 15:39:03 +0100 (CET)
+Subject: [OpenSPIM] OpenSPIM 64-bit [0000129]
+In-Reply-To: <7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8@ee.columbia.edu>
+References: <20140131022421.5wu62ak3kw0sw408@cubmail.cc.columbia.edu>
+	<alpine.DEB.1.00.1401312020210.14982@s15462909.onlinehome-server.info>
+	<67392F44-722D-416D-83ED-9BC18A034ACB@columbia.edu>
+	<7670d8572af79.52ec1516@wiscmail.wisc.edu>
+	<7660cbb32bfba.52ec1552@wiscmail.wisc.edu>
+	<7560d0402ee12.52ec158e@wiscmail.wisc.edu>
+	<7560ba822bb5e.52ebc161@wiscmail.wisc.edu>
+	<3DEFE4B8-6863-45B3-9813-4E06AAEDAED3@ee.columbia.edu>
+	<8ED230A8-7BA9-4F76-954F-ECB1D3CD8515@ee.columbia.edu>
+	<32F08D98-B2D6-4A90-AFEA-68CF77B6A9D4@mpi-cbg.de>
+	<CE820091-E2BE-4E0F-A872-5995FF83FCC6@columbia.edu>
+	<alpine.DEB.1.00.1402051755400.14982@s15462909.onlinehome-server.info>
+	<7DC3B8F9-4055-4AA0-82DA-9840B52E1BC8@ee.columbia.edu>
+Message-ID: <alpine.DEB.1.00.1402061533400.14982@s15462909.onlinehome-server.info>
+
+Hi Nikul,
+
+On Wed, 5 Feb 2014, Nikul wrote:
+
+> > P.S.: It might make sense to experiment with a low-impact compression
+> > scheme such as LZO (e.g. via https://github.com/Karmasphere/lzo-java)
+> > because it can reduce a large chunk of the redundancies at the cost of
+> > CPU but at the benefit of the network or processor bus. If you find
+> > time to experiment with this, I would be very much interested in
+> > hearing how you fared!
+> 
+> We might look at some sort of compression later, but for now I am going
+> to concentrate on trying to maximize throughput.
+
+To be clear, my suggestion of LZO was trying to maximize throughput. The
+bottleneck is most likely the storage -- even if you would use SSD or a
+super-parallel RAID, the data transport between RAM and the storage device
+is very, very slow compared to the transport between the RAM and the CPU.
+
+That is why I suggested giving LZO a try: it might very well turn out that
+throughput is *higher* because your CPU is unlikely to be highly impacted
+by the use of it (I expect it still to be used less than 50% maximum even
+if Micro-Manager is recording *and* LZO is used to compress the data
+stream) and at the same time, the bottleneck -- the data transport to the
+storage device -- is used to the same extent. Only that it would now
+transport between 20-50% more data (depending on your exact data, of
+course, but should be in that ball park given that fluorescence images
+have a histogram very favorable to even simplistic compression).
+
+Ciao,
+Johannes
+
+
+
+From Johannes.Schindelin at gmx.de  Thu Feb  6 17:05:50 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 7 Feb 2014 00:05:50 +0100 (CET)
+Subject: [OpenSPIM] Paperduino
+Message-ID: <alpine.DEB.1.00.1402070004030.14982@s15462909.onlinehome-server.info>
+
+Hi all,
+
+this is probably unsuitable for our OpenSPIM but inspirational
+nevertheless:
+
+	http://youtu.be/_xv2w2AFxl8
+
+Ciao,
+Johannes
+
+
+
+From pitrone at mpi-cbg.de  Thu Feb 20 16:22:33 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Thu, 20 Feb 2014 23:22:33 +0100
+Subject: [OpenSPIM] Open Source camera!!
+Message-ID: <B550B2C6-4521-4DEB-A2D5-1D57B758B66C@mpi-cbg.de>
+
+Hello all, 
+
+I was at a cool conference in Berlin today and met people behind an open source film camera made with a 4k (12 mpix 4000 x 3000 5.5 um pixel size) chip capable of 300 fps!! It called the Axiom from a start up named Apertus (http://www.apertus.com)
+
+They already have a functioning prototype, but they need funding...
+
+The pointman on this project is Sebastian Pichelhofer (CC:ed to this post)
+
+I hope you all are excited as I am about this...
+Pete
+
+
+From pitrone at mpi-cbg.de  Fri Feb 21 03:40:53 2014
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Fri, 21 Feb 2014 10:40:53 +0100 (CET)
+Subject: [OpenSPIM] Correction (was:  Open Source camera!!)
+In-Reply-To: <B550B2C6-4521-4DEB-A2D5-1D57B758B66C@mpi-cbg.de>
+References: <B550B2C6-4521-4DEB-A2D5-1D57B758B66C@mpi-cbg.de>
+Message-ID: <58728.10.1.191.65.1392975653.squirrel@webmail.mpi-cbg.de>
+
+Hello all,
+
+I made a mistake in the domain name of the website, the extension is .org
+instead of .com.
+
+Sorry for the confusion, and have a nice weekend!
+Pete
+
+-- 
+Peter Gabriel Pitrone - FRMS TechRMS
+Microscopy/Imaging Specialist
+Prof. Dr. Pavel Tomancak group
+Max Planck Institute for
+Molecular Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+
+"If a straight line fit is required, obtain only two data points." - Anon.
+
+
+On Thu, February 20, 2014 23:22, Peter Gabriel Pitrone wrote:
+<|> Hello all,
+<|>
+<|> I was at a cool conference in Berlin today and met people behind an open
+<|> source film camera made with a 4k (12 mpix 4000 x 3000 5.5 um pixel
+size)
+<|> chip capable of 300 fps!! It called the Axiom from a start up named
+<|> Apertus (http://www.apertus.com)
+<|>
+<|> They already have a functioning prototype, but they need funding...
+<|>
+<|> The pointman on this project is Sebastian Pichelhofer (CC:ed to this
+<|> post)
+<|>
+<|> I hope you all are excited as I am about this...
+<|> Pete
+<|> _______________________________________________
+<|> OpenSPIM mailing list
+<|> OpenSPIM at openspim.org
+<|> http://openspim.org/mailman/listinfo/openspim
+<|>
+
+
+
+
+
+From Johannes.Schindelin at gmx.de  Mon Feb 24 12:38:16 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 24 Feb 2014 19:38:16 +0100 (CET)
+Subject: [OpenSPIM] [micro-manager-general] Position open on the
+ Micro-Manager team (fwd)
+Message-ID: <alpine.DEB.1.00.1402241937000.14982@s15462909.onlinehome-server.info>
+
+Hi all,
+
+I only forward this because I cannot go do it myself ;-) Please spread the
+word, especially to talented microscopers with a programming background
+who are awesome (so they fit into the Micro-Manager team).
+
+Ciao,
+Johannes
+
+---------- Forwarded message ----------
+Date: Mon, 24 Feb 2014 10:14:40 -0800
+From: Nico Stuurman <nico.stuurman at ucsf.edu>
+Reply-To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Subject: [micro-manager-general] Position open on the Micro-Manager team
+
+Dear Micro-Manager list members,
+
+We have a Research Specialist Position open on the Micro-Manager team.  We are looking for someone with a strong background in microscopy as well as software coding.  This is a full time position at the Mission Bay campus of UCSF in San Francisco.  If you are interested, please apply through https://aprecruit.ucsf.edu/apply/JPF00089.  If you know someone who may be interested, can you please forward this email?  If you would like more information, please contact us: info at micro-manager.org.
+
+Full text of the job announcement:
+
+
+A Research Specialist position is open on the Micro-Manager development team.  Micro-Manager (http://micro-manager.org) is Open Source software for microscope control that is used in thousands of laboratories world-wide and has more than 50 code contributors.  We are looking for a person with strong programming skills (C++, Java), who understands light microscopy (preferably has extensive experience with microscopes), can write documentation, and enjoys helping/teaching scientists work with microscopes.  The Micro-Manager project is part of Ron Vale’s laboratory at UCSF and has about 2 more years of NIH funding.  We plan to transition Micro-Manager to an independent (possibly non-profit) organization that will continue the core mission of Micro-Manager (to provide open source software tools for microscopists) but be financed more directly by those who benefit from its existence.  The position requires a minimum of a Bachelor’s degree or equivalent (preferably in life sciences, physics, engineering or computer sciences)  and demonstrable programming experience in Java and/or C++ as well as preferably one or more years experience with scientific imaging using light microscopes.  In addition, the position requires excellent communication skills, great problem-solving abilities, and a detail oriented personality.
+
+To Apply:  Please submit cover letter, CV, and contact information for two professional references to https://aprecruit.ucsf.edu/apply/JPF00089.
+
+UCSF seeks candidates whose experience, teaching, research, or community service has prepared them to contribute to our commitment to diversity and excellence. UCSF is an Equal Opportunity/Affirmative Action Employer.
+
+
+Best regards,
+
+
+Nico Stuurman
+
+------------------------------------------------------------------------------
+Flow-based real-time traffic analytics software. Cisco certified tool.
+Monitor traffic, SLAs, QoS, Medianet, WAAS etc. with NetFlow Analyzer
+Customize your own dashboards, set traffic alerts and generate reports.
+Network behavioral analysis & security monitoring. All-in-one tool.
+http://pubads.g.doubleclick.net/gampad/clk?id=126839071&iu=/4140/ostg.clktrk
+_______________________________________________
+micro-manager-general mailing list
+micro-manager-general at lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+

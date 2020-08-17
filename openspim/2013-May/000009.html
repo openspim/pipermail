@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20laser%20questions%2C%20About%20the%20OpenSPIM/Fiji%20package%2C%0A%20Getting%20the%20code%20back%20on%20track&In-Reply-To=%3C519B77F8.2080405%40buffalo.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000008.html">
+   <LINK REL="Next"  HREF="000010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track</H1>
+    <B>Wade Sigurdson</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20laser%20questions%2C%20About%20the%20OpenSPIM/Fiji%20package%2C%0A%20Getting%20the%20code%20back%20on%20track&In-Reply-To=%3C519B77F8.2080405%40buffalo.edu%3E"
+       TITLE="[OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track">wjs at buffalo.edu
+       </A><BR>
+    <I>Tue May 21 08:34:48 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000008.html">[OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+</A></li>
+        <LI>Next message: <A HREF="000010.html">[OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+Tried the new, updated version and all seems to be working.  No error 
+messages and I was able to start the hardware wizard and configure the 
+stage and camera.
+
+Only caveat is that I had to delete the OPEN_SPIM folder where the 
+download zip had been extracted and re-extract the zip. Then after doing 
+the FIJI upgrade the MM Studio plugin worked. Trying to simply upgrade 
+the previously installed version resulted in the same error. I'm not 
+sure if there was something that I had done in trying to get MM Studio 
+to function before your modifications or if the software needs to have 
+all the upgrades applied in a specific order.
+
+Still waiting on our machine shop to finish a few items, but will keep 
+the list updated once we get the system assembled, aligned and imaging.
+
+Thanks to all.
+
+Wade
+On 05/20/2013 05:55 PM, Luke Stuyvenberg wrote:
+&gt;<i> Hey Johannes (and Wade and Edgar -- hang on to the end of this e-mail, I have an aside for you two),
+</I>&gt;<i>
+</I>&gt;<i> We believe we have a solution for the &quot;Error: Failed to open libMMCoreJ_wrap.jnilibmmcorej:MMCoreJJNI.swig_module_init()V&quot; bug.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> First, a reply to Johannes' e-mail:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regarding the things we have to ship:
+</I>&gt;<i> - Obviously the old runtime and manifest are already included.
+</I>&gt;<i> - The new runtime has been uploaded: msvcr100.dll, msvcp100.dll.
+</I>&gt;<i> However, MMCoreJ_wrap.dll has the manifest (identical to the intermediate manifest, which, I believe, is why it is called 'intermediate') embedded; this is per Microsoft's wishes that DLLs have the manifest embedded (otherwise it won't be read by LoadLibrary calls).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Based on certain sources, it seems Microsoft does not want us to load the runtime libraries as side-by-side assemblies. With that in mind:
+</I>&gt;<i> - The recompile you made works -- the last part of the search path for DLLs is the PATH environment variable, so including mm/Win32 will find the runtime DLLs.
+</I>&gt;<i> - Removing the runtime DLLs does break it again. They have to be present.
+</I>&gt;<i> - As I said above, I think intermediate is so-called because it is later embedded into the DLL (you can open it with a text editor and search for 'manifest' if you like).
+</I>&gt;<i> You mentioned on IRC that you would upload the new launcher version to the ImageJ update site, so...
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Now, the promised aside to Edgar and Wade:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The main problem is that we forgot to include the new Microsoft Visual C Runtime libraries. Thanks to Johannes' effort, this should be rectified -- all you need to do now is launch Fiji and update it!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> You should get a few things:
+</I>&gt;<i> - A new ImageJ-win32.exe that will find the right files.
+</I>&gt;<i> - Newer, slimmer versions of the OpenSPIM DLLs: MMCoreJ_wrap.dll as well as several mmgr_dal_*.dll files.
+</I>&gt;<i> - msvcr100.dll and msvcp100.dll, the new runtime.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> After updating, please try launching Micro-Manager again!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thank you,
+</I>&gt;<i> Luke Stuyvenberg
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 05/20/13, Johannes Schindelin  wrote:
+</I>&gt;&gt;<i> Hi Luke,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> thank you for taking on the task to address the UnsatisfiedLlinkErrors. I
+</I>&gt;&gt;<i> will summarize a few points to keep everybody interested in the loop:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - since Microsoft does not allow redistribution of the debug libraries, we
+</I>&gt;&gt;<i> had to recompile everything in release mode
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - there was a bug that would prevent release mode from working correctly:
+</I>&gt;&gt;<i> it still included debug information
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - the old redistributable libraries (i.e. Visual Studio 2008's) required a
+</I>&gt;&gt;<i> manifest to be loaded (a small .xml file)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - some setting in Micro-Manager enforces compatibility with the old
+</I>&gt;&gt;<i> runtime libraries (as can be seen in
+</I>&gt;&gt;<i> MMCoreJ_wrap.dll.intermediate.manifest)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - we therefore need to ship
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - the old runtime libraries
+</I>&gt;&gt;<i> - the old runtime manifest
+</I>&gt;&gt;<i> - the new runtime
+</I>&gt;&gt;<i> - the manifest for MMCoreJ_wrap.dll
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Now, in my tests on the VM (you have credentials to log in), I could start
+</I>&gt;&gt;<i> Micro-Manager again, without getting thos unsatisfied links.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> May I ask you to check a couple of things, still?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - I recompiled a debug.exe that also adds mm/win32/ to the PATH. Could you
+</I>&gt;&gt;<i> retry with ImageJ-win32.exe? I think the change was not actually needed.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - Could you try without 2010 runtime libraries in mm/Win32/? I think they
+</I>&gt;&gt;<i> are needed, but it would be nice to know.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - The name &quot;intermediate&quot; suggests that Micro-Manager's build process does
+</I>&gt;&gt;<i> something funny to that manifest. Could you please check that? &quot;git grep
+</I>&gt;&gt;<i> intermediate&quot; should tell
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thank you!
+</I>&gt;&gt;<i> Dscho
+</I>&gt;<i>
+</I>
+-- 
+*Wade J. Sigurdson, Ph.D.
+Director, Confocal Microscope and Flow Cytometry Facility
+School of Medicine and Biomedical Sciences
+University at Buffalo
+*
+Voice - 716-829-3589
+FAX - 716-829-3589
+<A HREF="http://openspim.org/mailman/listinfo/openspim">wjs at buffalo.edu</A>
+www.smbs.buffalo.edu/confocal
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130521/9fd05b96/attachment.html">http://openspim.org/pipermail/openspim/attachments/20130521/9fd05b96/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000008.html">[OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+</A></li>
+	<LI>Next message: <A HREF="000010.html">[OpenSPIM] laser questions, About the OpenSPIM/Fiji package, Getting the code back on track
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM Digest, Vol 46, Issue 2
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2046%2C%20Issue%202&In-Reply-To=%3CCAHmtN7nvE8y7UvW-ijc-7kvoaBiqPZ4hjVy%2Bx%2BT78NwmkL_P4w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002018.html">
+   <LINK REL="Next"  HREF="002020.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM Digest, Vol 46, Issue 2</H1>
+    <B>David Potter</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2046%2C%20Issue%202&In-Reply-To=%3CCAHmtN7nvE8y7UvW-ijc-7kvoaBiqPZ4hjVy%2Bx%2BT78NwmkL_P4w%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] OpenSPIM Digest, Vol 46, Issue 2">david.potter at monash.edu
+       </A><BR>
+    <I>Sat Jun 10 00:10:33 CDT 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002018.html">[OpenSPIM] distance telescope illumination objective
+</A></li>
+        <LI>Next message (by thread): <A HREF="002020.html">[OpenSPIM] Zebrafish embryo sample preparation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2019">[ date ]</a>
+              <a href="thread.html#2019">[ thread ]</a>
+              <a href="subject.html#2019">[ subject ]</a>
+              <a href="author.html#2019">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Stephanie,
+
+You are correct. The tube lens (the 25mm) of the 2nd telescope needs to be
+focused at the back focal plane (BFP) of the illumination objective. Move
+the focus from the BFP and the light sheet exiting the objective will
+either converge or diverge i.e. the sheet won't be collimated in the XY
+plane and it'll look fan shaped. Conversely, even if you do move the
+objective/chamber along the axis of the objective, the XZ plane will remain
+in focus at 3.5 mm from the nose of the objective as the laser is
+collimated in that plane at the BFP. Of course this behavior assumes all of
+the upstream optics are in proper relationship to each other. You could
+have the upstream alignments wrong and still get a visibly collimated sheet
+with the 25 mm tube lens not focused in the BFP but your light sheet
+quality will be somewhere between slightly off to just plain crap as well
+as potentially being tilted out of and/or within the detection plane. The
+final four optical elements are indeed functionally tied together. The
+cylindrical lens shares a focal plane with the following 50mm which shares
+a focal plane with the 25mm which shares a focal plane with the objective
+all of which only work if the laser coming into the cylindrical is
+collimated and enters into the center and is on axis.
+
+Your next question might well be: where is the BFP of an objective? As most
+objective houses won't tell you, you have to find it experimentally. This
+can be done pretty easily. Assuming your system is assembled, mirror align
+the laser, all lenses removed from their mounts, to the center and along
+the axis of the illumination objective. Fill the sample chamber with water
+containing a fluorophore appropriate to your laser. With the laser and
+camera on and the objectives correctly placed with respect to each other,
+you should see the laser focal point more or less in the center of the
+camera image. Please note that your alignment could be pure genius and
+still look stuffed up if your camera and tube lens aren't aligned with and
+centered on the detection objective axis. Move the illumination objective
+to center the laser focal point in the FOV and move the detection objective
+to bring the beam into best focus. Try using profile plot with live update
+in Fiji while dragging the ROI around to find the highest intensity point
+i.e the center. If the beam is tilted within or out the FOV plane, the
+laser is entering the objective at an angle to the axis (or the objectives
+aren't square to each other). Too high or too low, and the beam is parallel
+to the objective axis but not _on_ the axis. The laser back reflection off
+a properly aligned objective should line up with the laser spot on the
+mirror face. It's also fair to note that the sample chamber may be poorly
+mounted and the objective ports not be perfectly in plane and at 90 degrees
+to each other. This is important to consider because if you start with a
+well aligned beam i.e. in plane, 50 mm from the optics board and centered
+through the lens mounts, and then tilt the beam to match a poorly placed or
+built chamber, which is certainly an optical element in this build, you'll
+never get a really good alignment after putting the optics back in the
+system as they are all mounted on fixed height posts and now might not
+co-axially align with the new beam path.
+
+Once you're satisfied with the location of the beam and chamber, place a
+point reference either on the monitor (a Post-It corner works) or an ROI on
+the live imaging window to mark the center point of focus for later use.
+Place the 25 mm lens in question on the rail. Turn the laser back on and
+live image while you slide the lens back and forth; you are in the BFP when
+the light sheet exiting the objective is collimated. It really helps if you
+have a thin object in the beam path as the shadows cast are very good
+indicators of collimation and the expanded beam will be much fainter (and
+possibly impossible to resolve clearly) than the focused beam. Look for
+zero convergence/divergence of the shadows. Measure the distance from the
+lens mount to the objective for your future reference. Note: if your lens
+mount is rotated about the pillar mount axis or tipped at some small angle,
+you won't be able to discern the issue until you mount the 50 mm lens.
+Which then leaves you with a two variable question but...
+
+When you place the 50 mm telescope lens onto the rail you can co-localize
+its focal point with the 25 mm lens focal point by sliding it along until
+the laser is in focus and located at your previously marked center point.
+The center will be harder to find as the NA of the beam will be smaller
+than the raw laser and thus the Rayleigh length longer. Again Fiji profile
+can help. If the beam is tilted in the plane and/or out of plane, the laser
+and the lens or lens pair don't share an axis. Adjust the lens, actually
+more likely both lenses, as best as you can and move the beam via the
+mirrors only as a last resort. This is the fiddly frustrating bit of
+putting together a base level OpenSPIM as finding the right set of
+sub-optimal alignments of mostly fixed optics that will work in the end is
+a deeply iterative process.You can continue the alignment from this point
+by working backwards through the remaining optics though I would leave the
+cylindrical for last and you'll need to place the beam expander lens pair
+as a group. Using a 1&quot; 50mm achromat lens in place of the cylindrical for
+initial alignment can be useful to get mounting angles close because
+cylindrical lenses can be very difficult to center properly.
+
+Finish up your alignment with a fine tune of light sheet planar and focal
+parameters via imaging the center of an agarose cylinder sample containing
+fluoro beads or simply dumping enough beads into chamber water (without
+fluorophore of course). It'll be very obvious if your sheet is tipped out
+of the detection focal plane. This is really the only way to get
+cylindrical rotation correct. While you're at it, fine focus the detection
+objective. A large number of out of focus beads in front of and/or behind
+the focal plane indicates a loss of optical confinement and can mean your
+sheet is badly formed. Take the opportunity to adjust the corner mirror to
+understand what changes are reflected in light sheet propagation. You can
+also use the airy discs of out of focus beads to tell you if your detection
+objective, tube lens and camera are well aligned. I don't recommend using
+an agarose cylinder for the initial build process as the agarose cylinder
+will steer the beam potentially leaving your baseline alignment crooked. Of
+course you're correct if you think the same issue is at work during sample
+imaging. Nature of the beast.
+
+Well it isn't a short answer but hopefully it's a useful one. Have a good
+weekend.
+
+Cheers,
+
+- David
+
+David Potter
+Lattice Light Sheet Microscopy Manager
+Monash Micro Imaging - Advanced Optical Microscopy
+Monash University Clayton, VIC 3800, Australia
+
+
+
+On 10 June 2017 at 03:00, &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>&gt; wrote:
+
+&gt;<i> Send OpenSPIM mailing list submissions to
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i>         <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>
+</I>&gt;<i>
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i>
+</I>&gt;<i>    1. distance telescope illumination objective (Dr S. Hoehn)
+</I>&gt;<i>    2. Re: distance telescope illumination objective (Weber, Michael)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 1
+</I>&gt;<i> Date: Fri, 09 Jun 2017 14:42:58 +0100
+</I>&gt;<i> From: &quot;Dr S. Hoehn&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">S.Hoehn at damtp.cam.ac.uk</A>&gt;
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> Subject: [OpenSPIM] distance telescope illumination objective
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">a76138ed3fecf6377274c4ef4de4b2db at cam.ac.uk</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=US-ASCII; format=flowed
+</I>&gt;<i>
+</I>&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> do I understand correctly that there has to be a specific distance
+</I>&gt;<i> between the last telescope lens and the illumination objective?
+</I>&gt;<i>
+</I>&gt;<i> So I could NOT move the sample chamber further away from the telescope?
+</I>&gt;<i> I was thinking about doing this since we have a wider bread board and a
+</I>&gt;<i> longer path would make it easier to align the laser.
+</I>&gt;<i>
+</I>&gt;<i> Thank you,
+</I>&gt;<i>
+</I>&gt;<i> Stephanie
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Dr. Stephanie Hoehn
+</I>&gt;<i> DAMTP, Biological Physics
+</I>&gt;<i> Centre for Mathematical Sciences
+</I>&gt;<i> Wilberforce Road
+</I>&gt;<i> Cambridge
+</I>&gt;<i> CB3 0WA
+</I>&gt;<i> United Kingdom
+</I>&gt;<i> Office Tel: 01223 337859
+</I>&gt;<i> Office: H0.03
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Message: 2
+</I>&gt;<i> Date: Fri, 9 Jun 2017 14:15:14 +0000
+</I>&gt;<i> From: &quot;Weber, Michael&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Michael_Weber at hms.harvard.edu</A>&gt;
+</I>&gt;<i> To: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> Subject: Re: [OpenSPIM] distance telescope illumination objective
+</I>&gt;<i> Message-ID:
+</I>&gt;<i>         &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">BLUPR0701MB17450275AAC2BBB12FDF1062DDCE0 at BLUPR0701MB1745.</A>
+</I>&gt;<i> namprd07.prod.outlook.com&gt;
+</I>&gt;<i>
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;utf-8&quot;
+</I>&gt;<i>
+</I>&gt;<i> Hi Stephanie,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Every distance after the cylindrical lens is critical. Moving the sample
+</I>&gt;<i> chamber with respect to the telescope will shift the position of the light
+</I>&gt;<i> sheet waist. If you want to increase the distance between telescope and
+</I>&gt;<i> chamber you could build the telescope out of two lenses with longer focal
+</I>&gt;<i> lengths but the same ratio.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Best,
+</I>&gt;<i>
+</I>&gt;<i> Michael
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> From: Dr S. Hoehn&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">S.Hoehn at damtp.cam.ac.uk</A>&gt;
+</I>&gt;<i> Sent: Friday, June 9, 2017 9:43 AM
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i> Subject: [OpenSPIM] distance telescope illumination objective
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> do I understand correctly that there has to be a specific distance
+</I>&gt;<i> between the last telescope lens and the illumination objective?
+</I>&gt;<i>
+</I>&gt;<i> So I could NOT move the sample chamber further away from the telescope?
+</I>&gt;<i> I was thinking about doing this since we have a wider bread board and a
+</I>&gt;<i> longer path would make it easier to align the laser.
+</I>&gt;<i>
+</I>&gt;<i> Thank you,
+</I>&gt;<i>
+</I>&gt;<i> Stephanie
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Dr. Stephanie Hoehn
+</I>&gt;<i> DAMTP, Biological Physics
+</I>&gt;<i> Centre for Mathematical Sciences
+</I>&gt;<i> Wilberforce Road
+</I>&gt;<i> Cambridge
+</I>&gt;<i> CB3 0WA
+</I>&gt;<i> United Kingdom
+</I>&gt;<i> Office Tel: 01223 337859
+</I>&gt;<i> Office: H0.03
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An HTML attachment was scrubbed...
+</I>&gt;<i> URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/">http://openspim.org/pipermail/openspim/</A>
+</I>&gt;<i> attachments/20170609/e5eae151/attachment-0001.html&gt;
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> Subject: Digest Footer
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> End of OpenSPIM Digest, Vol 46, Issue 2
+</I>&gt;<i> ***************************************
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20170610/cdd3d8f0/attachment.html">http://openspim.org/pipermail/openspim/attachments/20170610/cdd3d8f0/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002018.html">[OpenSPIM] distance telescope illumination objective
+</A></li>
+	<LI>Next message (by thread): <A HREF="002020.html">[OpenSPIM] Zebrafish embryo sample preparation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2019">[ date ]</a>
+              <a href="thread.html#2019">[ thread ]</a>
+              <a href="subject.html#2019">[ subject ]</a>
+              <a href="author.html#2019">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

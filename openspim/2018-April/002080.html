@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] ThorlabsAPTStage 64bit issues
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20ThorlabsAPTStage%2064bit%20issues&In-Reply-To=%3C5C886E6B-9606-43B3-B695-1B54DBC77DF1%40mrc-lmb.cam.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002076.html">
+   <LINK REL="Next"  HREF="002083.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] ThorlabsAPTStage 64bit issues</H1>
+    <B>Ben Sutcliffe</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20ThorlabsAPTStage%2064bit%20issues&In-Reply-To=%3C5C886E6B-9606-43B3-B695-1B54DBC77DF1%40mrc-lmb.cam.ac.uk%3E"
+       TITLE="[OpenSPIM] ThorlabsAPTStage 64bit issues">sutcliff at mrc-lmb.cam.ac.uk
+       </A><BR>
+    <I>Tue Apr 10 09:50:06 CDT 2018</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002076.html">[OpenSPIM] ThorlabsAPTStage 64bit issues
+</A></li>
+        <LI>Next message (by thread): <A HREF="002083.html">[OpenSPIM] Problems adding a new Z drive to &quot;Aquire SPIM Image&quot; plugin
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2080">[ date ]</a>
+              <a href="thread.html#2080">[ thread ]</a>
+              <a href="subject.html#2080">[ subject ]</a>
+              <a href="author.html#2080">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, 
+
+I have managed to configure a ThorlabsAPTStage in my 64bit OpenSPIM asetup.
+This was fixed by doing the following with great assistance from Jerome Boulanger:
+1. Downloading the micro-manager source code as instructed here (<A HREF="https://micro-manager.org/wiki/Micro-Manager_Source_Code">https://micro-manager.org/wiki/Micro-Manager_Source_Code</A>).
+2. Installing all the relevant programs for building micro-manager as instructed here (<A HREF="https://micro-manager.org/wiki/Building_MM_on_Windows">https://micro-manager.org/wiki/Building_MM_on_Windows</A>).
+3. Setting up Visual C++ 2010 Express as here (<A HREF="https://micro-manager.org/wiki/Visual_Studio_project_settings_for_device_adapters">https://micro-manager.org/wiki/Visual_Studio_project_settings_for_device_adapters</A>).
+4. Installing the 64bit APT software from Thorlabs (<A HREF="https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=Motion_Control">https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=Motion_Control</A>).
+5. Downloading and unzipping the APTx64 form here (<A HREF="https://micro-manager.org/wiki/File:APT_x64.zip">https://micro-manager.org/wiki/File:APT_x64.zip</A>).
+6. Then building the ThorlabsAPTStage Device Adapter in 64bit on a 64bit Windows 7 machine, using the ‘APT.lib’ downloaded in point 5.
+7. The resulting .dll file was renamed to 'mmgr_dal_ThorlabAPTStage.dll' then placed into the OpenSPIM.app folder along with the ‘APT.dll’ downloaded in point 5.
+8. The OpenSPIM Fiji/MM bundle was then restarted and a ThorlabAPTStage could be configured as described for a 32bit system here (<A HREF="https://micro-manager.org/wiki/ThorlabsAPTStage">https://micro-manager.org/wiki/ThorlabsAPTStage</A>).
+
+If you want to try this 64bit ThorlabsAPTStage Device Adapter then download the .zip file here (<A HREF="https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip">https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip</A>) and unzip into the OpenSPIM or Micro-Manager main folder.
+
+Best, 
+Ben
+
+&gt;<i> On 5 Apr 2018, at 13:07, Ben Sutcliffe &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">sutcliff at mrc-lmb.cam.ac.uk</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi,
+</I>&gt;<i> Has anyone had success in implementing the ThorlabsAPTStage with their
+</I>&gt;<i> OpenSPIM setup?
+</I>&gt;<i> I have a Thorlabs BSC201 controller and would like to implement a DRV001
+</I>&gt;<i> stepper motor as my Z drive for improved Z stepping. I have however hit a
+</I>&gt;<i> wall when trying to add the ThorlabsAPTStage to my configuration. I have
+</I>&gt;<i> followed the instructions here
+</I>&gt;<i> (<A HREF="https://micro-manager.org/wiki/ThorlabsAPTStage">https://micro-manager.org/wiki/ThorlabsAPTStage</A>) but never get the option
+</I>&gt;<i> of the ThorlabsAPTStage in the Hardware Configuration Wizard.
+</I>&gt;<i> I am running a 64bit version of the OpenSPIM/Fiji package on Windows 7.
+</I>&gt;<i> Any help would be gratefully received.
+</I>&gt;<i> Best,
+</I>&gt;<i> Ben
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> Dr Ben Sutcliffe,
+</I>&gt;<i> Light Microscopy Facility,
+</I>&gt;<i> Division of Cell Biology, Room 2S459
+</I>&gt;<i> MRC Laboratory of Molecular Biology,
+</I>&gt;<i> Francis Crick Avenue,
+</I>&gt;<i> Cambridge Biomedical Campus,
+</I>&gt;<i> Cambridge,
+</I>&gt;<i> CB2 0QH, UK.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002076.html">[OpenSPIM] ThorlabsAPTStage 64bit issues
+</A></li>
+	<LI>Next message (by thread): <A HREF="002083.html">[OpenSPIM] Problems adding a new Z drive to &quot;Aquire SPIM Image&quot; plugin
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2080">[ date ]</a>
+              <a href="thread.html#2080">[ thread ]</a>
+              <a href="subject.html#2080">[ subject ]</a>
+              <a href="author.html#2080">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

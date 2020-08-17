@@ -1,0 +1,40 @@
+From sutcliff at mrc-lmb.cam.ac.uk  Thu May 17 11:56:42 2018
+From: sutcliff at mrc-lmb.cam.ac.uk (Ben Sutcliffe)
+Date: Thu, 17 May 2018 17:56:42 +0100
+Subject: [OpenSPIM]  SOLVED: ThorlabsAPTStage 64bit issues
+Message-ID: <338D38FF-AB2F-434B-8AC8-23A088624C01@mrc-lmb.cam.ac.uk>
+
+Hi,
+
+I was having issues with running a Thorlabs DRV001 connected via a Thorlabs BSC201 controller on a 64bit OpenSPIM setup. 
+
+These issues have now been resolved by doing the following with great help from Jerome Boulanger, MRC LMB, Cambridge, UK:
+
+1. Downloading the micro-manager source code as instructed here (https://micro-manager.org/wiki/Micro-Manager_Source_Code).
+2. Installing all the relevant programs for building micro-manager as instructed here (https://micro-manager.org/wiki/Building_MM_on_Windows).
+3. Setting up Visual C++ 2010 Express as here (https://micro-manager.org/wiki/Visual_Studio_project_settings_for_device_adapters).
+4. Installing the 64bit APT software from Thorlabs (https://www.thorlabs.com/software_pages/ViewSoftwarePage.cfm?Code=Motion_Control&viewtab=1).
+5. Downloading and unzipping the APTx64 form here (https://micro-manager.org/wiki/File:APT_x64.zip).
+6. Then building the ThorlabsAPTStage Device Adapter in 64bit on a 64bit Windows 7 machine, using the 'APT.lib' downloaded in point 5.
+7. The resulting .dll file was renamed to 'mmgr_dal_ThorlabAPTStage.dll' then placed into the OpenSPIM.app folder along with the 'APT.dll' downloaded in point 5.
+8. The OpenSPIM Fiji/MM bundle was then restarted and a ThorlabAPTStage could be configured as described for a 32bit system here (https://micro-manager.org/wiki/ThorlabsAPTStage).
+
+If you want to try this 64bit ThorlabsAPTStage Device Adapter then download the .zip file here (https://www.dropbox.com/s/9ewwtxe1k2elmft/ThorlabsAPTStage_64bit.zip) and unzip into the OpenSPIM or Micro-Manager main folder.
+
+I am still yet to implement this new Z drive in the 'Acquire SPIM Image' plugin. 
+
+Best,
+Ben
+
+--
+Dr Ben Sutcliffe
+Cell Biology Division / Light Microscopy
+MRC Laboratory of Molecular Biology
+Francis Crick Avenue
+Cambridge Biomedical Campus
+Cambridge CB2 0QH, UK
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180517/8774144c/attachment.html>
+

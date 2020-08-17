@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] MultiChannel Acquisition Implementation
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20MultiChannel%20Acquisition%20Implementation&In-Reply-To=%3C0BB84AC4E46D2D4AB1AE4C111324E8D63DBAB5A5%40IU-MSSG-MBX107.ads.iu.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001620.html">
+   <LINK REL="Next"  HREF="001624.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] MultiChannel Acquisition Implementation</H1>
+    <B>Winfree, Seth</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20MultiChannel%20Acquisition%20Implementation&In-Reply-To=%3C0BB84AC4E46D2D4AB1AE4C111324E8D63DBAB5A5%40IU-MSSG-MBX107.ads.iu.edu%3E"
+       TITLE="[OpenSPIM] MultiChannel Acquisition Implementation">winfrees at iu.edu
+       </A><BR>
+    <I>Wed Feb 25 15:51:33 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001620.html">[OpenSPIM] Fwd: [micro-manager-general] Survey on the Future of	Micro-Manager
+</A></li>
+        <LI>Next message: <A HREF="001624.html">[OpenSPIM] MultiChannel Acquisition Implementation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1623">[ date ]</a>
+              <a href="thread.html#1623">[ thread ]</a>
+              <a href="subject.html#1623">[ subject ]</a>
+              <a href="author.html#1623">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Johannes and list,
+
+I've made pretty good progress on the hardware implementation of multiple channels for our L-SPIM.  On the software side I've adapted drivers and firmware to control my homebuilt DAC (6ch for now) and NEOS-AOTF setup in micromanager and pulled everything into the SPIMAcquisition plugin with the Device abstraction, a new DAC class and DAC voltage GUI.  Eventually there will be a wattage calibration.  I also have a Sutter 10-2 implemented in the SPIMAcquisition plugin via Device and a FilterWheel class.  Right now these new devices can be accessed and controlled through SPIMsetup.  I do need to push all these changes to a new branch... getting there.
+
+I'm now thinking through the acquisition side of things and before I get to far down a particular path I wanted to see if there were any strong opinions about the implementation of multiple channels.  I believe I understand how you've implemented acquisition and haven't found a simple way to add the extra dimension of channels (DAC and filter wheel).  This could be because I'm missing something in the implementation though.
+
+Thanks in advance for your thoughts!
+
+Seth
+
+Seth Winfree
+Indiana Center for Biological Microscopy
+Indiana University Medical Center
+950 West Walnut St, R2-202
+Indianapolis, IN  46202-5116
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150225/a1fc716b/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150225/a1fc716b/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001620.html">[OpenSPIM] Fwd: [micro-manager-general] Survey on the Future of	Micro-Manager
+</A></li>
+	<LI>Next message: <A HREF="001624.html">[OpenSPIM] MultiChannel Acquisition Implementation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1623">[ date ]</a>
+              <a href="thread.html#1623">[ thread ]</a>
+              <a href="subject.html#1623">[ subject ]</a>
+              <a href="author.html#1623">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

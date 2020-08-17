@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] rotational calibration
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20rotational%20calibration&In-Reply-To=%3C03f116cdf4a4afe7dcc9e65e57088902%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001546.html">
+   <LINK REL="Next"  HREF="001554.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] rotational calibration</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20rotational%20calibration&In-Reply-To=%3C03f116cdf4a4afe7dcc9e65e57088902%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] rotational calibration">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Sat Jan 17 11:33:11 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001546.html">[OpenSPIM] rotational calibration
+</A></li>
+        <LI>Next message: <A HREF="001554.html">[OpenSPIM] OpenSPIM Digest, Vol 21, Issue 8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1547">[ date ]</a>
+              <a href="thread.html#1547">[ thread ]</a>
+              <a href="subject.html#1547">[ subject ]</a>
+              <a href="author.html#1547">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Michael,
+
+On 2015-01-17 00:17, Michael Redd wrote:
+&gt;<i> I am struggling with the rotational calibration tool. It doesn't
+</I>&gt;<i> appear to function at all on my machine (Windows 7 32bit). After
+</I>&gt;<i> calibrating pixel size, I can open up the rotational calibration
+</I>&gt;<i> window, but that is as far as I get. Pushing the&quot;obtain next&quot; button
+</I>&gt;<i> doesn't appear to do anything. Futhermore, I  can't find good
+</I>&gt;<i> instructions on  how to rotationally calibrate the Openspim. Any
+</I>&gt;<i> advice would be welcome.
+</I>
+Unfortunately, this is a part of the OpenSPIM software that was affected 
+by a backwards-incompatible update in one of the libraries shipped with 
+Fiji. I hope to find some time on Monday to prepare an updated OpenSPIM 
+plugin that copes with that change, but in the meantime you could maybe 
+verify that my suspicion is correct, by following the steps described in 
+<A HREF="http://fiji.sc/Command-Line_Debugging">http://fiji.sc/Command-Line_Debugging</A> to obtain the console output (if I 
+am right, there should be a ClassNotFound or MethodNotFound exception in 
+the log).
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001546.html">[OpenSPIM] rotational calibration
+</A></li>
+	<LI>Next message: <A HREF="001554.html">[OpenSPIM] OpenSPIM Digest, Vol 21, Issue 8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1547">[ date ]</a>
+              <a href="thread.html#1547">[ thread ]</a>
+              <a href="subject.html#1547">[ subject ]</a>
+              <a href="author.html#1547">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

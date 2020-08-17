@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] stitching of OpenSPIM data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20stitching%20of%20OpenSPIM%20data&In-Reply-To=%3Cop.xt7qbwhkahhlbl%40monika-thinkpad.rz.uni-wuerzburg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000637.html">
+   <LINK REL="Next"  HREF="000638.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] stitching of OpenSPIM data</H1>
+    <B>Monika Paw&#322;owska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20stitching%20of%20OpenSPIM%20data&In-Reply-To=%3Cop.xt7qbwhkahhlbl%40monika-thinkpad.rz.uni-wuerzburg.de%3E"
+       TITLE="[OpenSPIM] stitching of OpenSPIM data">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Tue Feb 17 11:46:34 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000637.html">[OpenSPIM] stitching of OpenSPIM data
+</A></li>
+        <LI>Next message: <A HREF="000638.html">[OpenSPIM] stitching of OpenSPIM data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#642">[ date ]</a>
+              <a href="thread.html#642">[ thread ]</a>
+              <a href="subject.html#642">[ subject ]</a>
+              <a href="author.html#642">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks, I didn't realize that stitching is possible with SPIM plugins as  
+well.
+
+It turns out that the problem was the ome.tiff format - Fiji was reading  
+all the files and starting the calculation, but never getting the right  
+result, after conversion to .tif my test images worked.
+
+Regards,
+Monika
+
+W dniu .02.2015 o 12:28 Pavel Tomancak &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt; pisze:
+
+&gt;<i> Dear Monika,
+</I>&gt;<i>
+</I>&gt;<i> If you have enough overlap between the tiles and enough memory on your  
+</I>&gt;<i> computer you can probably just do it with the SPIM registration plugins.  
+</I>&gt;<i> &gt;Potentially, better with the new pipeline which is less well documented  
+</I>&gt;<i> <A HREF="http://fiji.sc/Multiview-Reconstruction.">http://fiji.sc/Multiview-Reconstruction.</A>
+</I>&gt;<i>
+</I>&gt;<i> Otherwise, register the multi view in one vertical position, fuse. Then  
+</I>&gt;<i> do the same in the other vertical position and try stitching this in  
+</I>&gt;<i> Fiji (with the &gt;Grid/Collection stitching). We did that with LZ1 data,  
+</I>&gt;<i> it should work with OpenSPIM too. Note that stitching only makes sense  
+</I>&gt;<i> when your images are &gt;shifted/translated only. It will not work if they  
+</I>&gt;<i> are rotated.
+</I>&gt;<i>
+</I>&gt;<i> All the best
+</I>&gt;<i>
+</I>&gt;<i> PAvel
+</I>&gt;<i> --------------------------------------------------------------------------------------------------
+</I>&gt;<i> Pavel Tomancak, Ph.D.
+</I>&gt;<i>
+</I>&gt;<i> Research Group Leader
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics in Dresden
+</I>&gt;<i> Pfotenhauerstr. 108
+</I>&gt;<i> D-01307 Dresden							Tel.: +49 351 210 2670
+</I>&gt;<i> Germany									Fax: +49 351 210 2020
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>
+</I>&gt;<i> twitter: @PavelTomancak
+</I>&gt;<i> --------------------------------------------------------------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Feb 17, 2015, at 12:01 PM, Monika Paw&#322;owska  
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I was wondering if anybody made some experience with stitching of  
+</I>&gt;&gt;<i> OpenSPIM data? In the wiki only time lapses and angles are &gt;&gt;described,  
+</I>&gt;&gt;<i> and I'm interested with stitching tiles at different XY positions. I  
+</I>&gt;&gt;<i> made some attempts with the Grid/Collection stitching &gt;&gt;plugin of Fiji,  
+</I>&gt;&gt;<i> but no success so far. Maybe my images are simply not good enough.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> It would be cool to collect the experience about it and made a  
+</I>&gt;&gt;<i> correspoding wiki page.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --Monika Paw&#322;owska
+</I>&gt;&gt;<i> Nencki Institute
+</I>&gt;&gt;<i> Laboratory of Neurobiology
+</I>&gt;&gt;<i> 3, Pasteur Street
+</I>&gt;&gt;<i> 02-093 Warsaw, Poland
+</I>&gt;&gt;<i> phone: (+48) 22 5892 427
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>
+
+
+-- 
+Monika Paw&#322;owska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 382
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150217/999b72f0/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150217/999b72f0/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000637.html">[OpenSPIM] stitching of OpenSPIM data
+</A></li>
+	<LI>Next message: <A HREF="000638.html">[OpenSPIM] stitching of OpenSPIM data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#642">[ date ]</a>
+              <a href="thread.html#642">[ thread ]</a>
+              <a href="subject.html#642">[ subject ]</a>
+              <a href="author.html#642">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

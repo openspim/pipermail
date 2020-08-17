@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &#22238;&#22797;:  Re: [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Futf-8%3Fb%3F5Zue5aSNOiAgUmU6IFttaWNyby1tYW5hZ2VyLWdlbmVy%3F%3D%0A%09%3D%3Futf-8%3Fq%3Fal%3D5D_Error_in_using_HAMAMATSU_flash_4%3D2E0_with_umanager%3F%3D%0A%09%3D%3Futf-8%3Fq%3F_in_winxp%3F%3D&In-Reply-To=%3C2ffb733d.78d.142b5f34552.Coremail.zongweijianzwj%40163.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000291.html">
+   <LINK REL="Next"  HREF="000293.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &#22238;&#22797;:  Re: [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp</H1>
+    <B>zongweijianzwj</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%3D%3Futf-8%3Fb%3F5Zue5aSNOiAgUmU6IFttaWNyby1tYW5hZ2VyLWdlbmVy%3F%3D%0A%09%3D%3Futf-8%3Fq%3Fal%3D5D_Error_in_using_HAMAMATSU_flash_4%3D2E0_with_umanager%3F%3D%0A%09%3D%3Futf-8%3Fq%3F_in_winxp%3F%3D&In-Reply-To=%3C2ffb733d.78d.142b5f34552.Coremail.zongweijianzwj%40163.com%3E"
+       TITLE="[OpenSPIM] &#22238;&#22797;:  Re: [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp">zongweijianzwj at 163.com
+       </A><BR>
+    <I>Mon Dec  2 18:54:36 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000291.html">[OpenSPIM] [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp
+</A></li>
+        <LI>Next message: <A HREF="000293.html">[OpenSPIM] About the lightsheet
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#292">[ date ]</a>
+              <a href="thread.html#292">[ thread ]</a>
+              <a href="subject.html#292">[ subject ]</a>
+              <a href="author.html#292">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello Luke Stuyvenberg :
+  Thanks a lot for your reply. I believe you are right cos I could use mmanager to control the flash 4 in Win7 with no trouble. But I havent try what you propose to do in XP because I think using orca Flash4.0 in WinXP is a really bad choice. That is bacause XP does not supply for USB3.0. So I have to use the firebird board to control the Flash 4.0. Somehow that discourage the whole system to be partible and portable! Right now I have successful controlled the Flash 4 and installed the acquisitonSPIM plugin with mmanager 64bit in Win7. I am waiting for the 4d-stage to assemble the whole system. I will make you informed as soon as my project make any progress!
+Best,
+Zong
+2013-12-03
+
+
+
+Zong, Weijian
+Laboratory of Cell Secretion &amp; Metabolism 
+Institute of Molecular Medicine 
+Peking University 
+Beijing, China, 100871 
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">zongweijianzwj at 163.com</A> ;
+
+
+
+&#21457;&#20214;&#20154;&#65306;Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+&#21457;&#36865;&#26102;&#38388;&#65306;2013-12-03 08:38
+&#20027;&#39064;&#65306;Re: [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp
+&#25910;&#20214;&#20154;&#65306;&quot;zongweijianzwj&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">zongweijianzwj at 163.com</A>&gt;
+&#25220;&#36865;&#65306;&quot;micro-manager-general&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A>&gt;,&quot;openspim&quot;&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+
+Hello WIKIZONG, 
+
+I'm one of the software developers on the OpenSPIM project; the good news is that the Orca Flash4 is successfully being used for the OpenSPIM project, in Heidelberg -- see <A HREF="http://openspim.org/Who_has_an_OpenSPIM%3F">http://openspim.org/Who_has_an_OpenSPIM%3F</A> . 
+
+
+We have also encountered this error message with Hamamatsu cameras before, usually because Fiji is taking up too much of the system's memory. Please try limiting Fiji's memory (Edit &gt; Options &gt; Memory &amp; Threads...) to 1 GB or so. Additionally, this error message sometimes appears only on the first startup of Micro-Manager after booting the computer -- please try restarting Micro-Manager and see if the error message still appears. 
+
+
+Hope this helps, 
+Luke Stuyvenberg 
+
+
+P.S. The OpenSPIM project has a mailing list -- <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> -- please feel free to contact me there if you have any more trouble! :-) Additionally, the Heidelberg lab is subscribed to that mailing list, so they might be able to provide more direct and useful advice if the Flash4 is still problematic for you. 
+
+On 11/26/13, WIKIZONG  wrote: 
+&gt;<i> Dear all: 
+</I>&gt;<i> Recently I am trying to use a Hamamatsu flash 4.0 carema with umanager in 
+</I>&gt;<i> window XP system (somehow I have to use this system for the requirements of 
+</I>&gt;<i> some devices). I think I have installed the right driver for the camera 
+</I>&gt;<i> because I can sanp in DCAM-API ExCAP.But when I try to add the device to the 
+</I>&gt;<i> umanager hardware configration wizard, an error came out  
+</I>&gt;<i> &lt;<A HREF="http://micro-manager.3463995.n2.nabble.com/file/n7581608/error_flash_4.bmp">http://micro-manager.3463995.n2.nabble.com/file/n7581608/error_flash_4.bmp</A>&gt; 
+</I>&gt;<i> . And I could never add it to the software. I wonder if anyone else has met 
+</I>&gt;<i> the same problem and can help me with it. My umanager is the newest version 
+</I>&gt;<i> (1.1.15) and my DCAM-API is the June 2013 version. 
+</I>&gt;<i> PS: I am trying to use this camera and umanager to build a lightsheet 
+</I>&gt;<i> microscope. So I also used a FIGI plugin type umianager and its mmplkugin 
+</I>&gt;<i> &quot;spimacquisition&quot; sited in <A HREF="http://openspim.org/">http://openspim.org/</A> .Has anyone ever used suchi 
+</I>&gt;<i> thing with Flash 4? Need yoour succussful experiments! Thank you! 
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> -- 
+</I>&gt;<i> View this message in context: <A HREF="http://micro-manager.3463995.n2.nabble.com/Error-in-using-HAMAMATSU-flash-4-0-with-umanager-in-winxp-tp7581608.html">http://micro-manager.3463995.n2.nabble.com/Error-in-using-HAMAMATSU-flash-4-0-with-umanager-in-winxp-tp7581608.html</A> 
+</I>&gt;<i> Sent from the Micro-Manager mailing list archive at Nabble.com. 
+</I>&gt;<i>  
+</I>&gt;<i> ------------------------------------------------------------------------------ 
+</I>&gt;<i> Rapidly troubleshoot problems before they affect your business. Most IT  
+</I>&gt;<i> organizations don't have a clear picture of how application performance  
+</I>&gt;<i> affects their revenue. With AppDynamics, you get 100% visibility into your  
+</I>&gt;<i> Java,.NET, &amp; PHP application. Start your 15-day FREE TRIAL of AppDynamics Pro! 
+</I>&gt;<i> <A HREF="http://pubads.g.doubleclick.net/gampad/clk?id=84349351&amp;iu=/4140/ostg.clktrk">http://pubads.g.doubleclick.net/gampad/clk?id=84349351&amp;iu=/4140/ostg.clktrk</A> 
+</I>&gt;<i> _______________________________________________ 
+</I>&gt;<i> micro-manager-general mailing list 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">micro-manager-general at lists.sourceforge.net</A> 
+</I>&gt;<i> <A HREF="https://lists.sourceforge.net/lists/listinfo/micro-manager-general">https://lists.sourceforge.net/lists/listinfo/micro-manager-general</A> 
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131203/efcb90fc/attachment.html">http://openspim.org/pipermail/openspim/attachments/20131203/efcb90fc/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000291.html">[OpenSPIM] [micro-manager-general] Error in using HAMAMATSU flash 4.0 with umanager in winxp
+</A></li>
+	<LI>Next message: <A HREF="000293.html">[OpenSPIM] About the lightsheet
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#292">[ date ]</a>
+              <a href="thread.html#292">[ thread ]</a>
+              <a href="subject.html#292">[ subject ]</a>
+              <a href="author.html#292">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

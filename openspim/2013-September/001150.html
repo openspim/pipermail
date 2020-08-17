@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard Stage Adapter problem (Luke Stuyvenberg) and	light sheet thickness
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20Stage%20Adapter%20problem%20%28Luke%20Stuyvenberg%29%20and%0A%09light%20sheet%20thickness&In-Reply-To=%3CCAHAw%2B8Yb%3DUOBdEFUB%2Bb%2BHAoE2UzHVa9BfHhs3CYTnyFAd1BHfw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001147.html">
+   <LINK REL="Next"  HREF="001151.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard Stage Adapter problem (Luke Stuyvenberg) and	light sheet thickness</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20Stage%20Adapter%20problem%20%28Luke%20Stuyvenberg%29%20and%0A%09light%20sheet%20thickness&In-Reply-To=%3CCAHAw%2B8Yb%3DUOBdEFUB%2Bb%2BHAoE2UzHVa9BfHhs3CYTnyFAd1BHfw%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Picard Stage Adapter problem (Luke Stuyvenberg) and	light sheet thickness">aureliaomega at gmail.com
+       </A><BR>
+    <I>Thu Sep 26 09:48:24 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001147.html">[OpenSPIM] new member of the family
+</A></li>
+        <LI>Next message: <A HREF="001151.html">[OpenSPIM] Picard Stage Adapter problem (Luke Stuyvenberg) and light sheet thickness
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1150">[ date ]</a>
+              <a href="thread.html#1150">[ thread ]</a>
+              <a href="subject.html#1150">[ subject ]</a>
+              <a href="author.html#1150">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+
+Thanks for this latest update: it has almost fixed my PVCAM problem.  Now I
+can load the camera, and since the last update I no longer get a time-out
+error message when I use the live view.  But, the live window opens and
+displays an image, then it doesn't refresh, so I see the same image until I
+stop and start live view again.  I can now run the Open SPIM plugin, but
+have to keep stopping and starting live view in order to see what is going
+on with my calibration sample.  I'm so close!  Any suggestions for fixing
+this?  Live view through my camera works fine in a plain, non-Fiji and
+non-OpenSPIM installation of Micromanager, so I can align and take pictures
+at the moment, but I want to use your lovely plugin.
+
+And another thing... I remember some discussion from earlier this summer
+about optimizing the optics.  I have made a light sheet that's about 10
+microns thick, minimizing its thickness by adjusting the second telescope
+lens as described on the website.  Can I get it thinner than that?  What
+should I move to do so?
+
+Thanks again,
+
+Aurelia
+
+
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -----Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; schrieb: -----
+</I>&gt;<i> An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>, Johannes Schindelin &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt;
+</I>&gt;<i> Von: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+</I>&gt;<i> Datum: 26.09.2013 00:21
+</I>&gt;<i> Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Betreff: Re: [OpenSPIM] WG: Re:  Picard Stage Adapter problem
+</I>&gt;<i>
+</I>&gt;<i> Hi Edgar and everyone,
+</I>&gt;<i>
+</I>&gt;<i> With regards to the DLL problems that recent updates have generated:
+</I>&gt;<i> - It seems I accidentally built PicardStage in debug mode (hence the 'D'
+</I>&gt;<i> on the end of the DLL names it became dependent on) -- I've since fixed
+</I>&gt;<i> that issue, uploaded the correct version of the DLL, and taken steps to
+</I>&gt;<i> ensure it won't happen again.
+</I>&gt;<i> - The troubles with TIScam (and some other device adapters) was an
+</I>&gt;<i> artifact of our Visual Studio upgrade: the device adapters became dependent
+</I>&gt;<i> on the '100' (VS2010) versions of the files. Since Micro-Manager does not
+</I>&gt;<i> yet come bundled with the VS2010 runtime environment, most users will be
+</I>&gt;<i> missing those files. I've fixed these issues and uploaded correct versions
+</I>&gt;<i> to the update site as well.
+</I>&gt;<i> If you are having trouble with device adapters not loading, please try
+</I>&gt;<i> updating through Fiji again and let me know if the problems persist.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 09/25/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; I just downloaded this files from internet and copied to
+</I>&gt;<i> C:\WINDOWS\system32 and now I am able to use the Picard Stage
+</I>&gt;<i> &gt; using the updated version of Fiji.
+</I>&gt;<i> I strongly recommend against downloading and installing DLLs from the
+</I>&gt;<i> internet unless they are from the authoritative source (in the case of
+</I>&gt;<i> these 'MSVC' files, Microsoft) -- I would suggest instead downloading the
+</I>&gt;<i> Microsoft Visual C++ Redistributable Package --?
+</I>&gt;<i> <A HREF="http://www.microsoft.com/en-us/download/details.aspx?id=5555?for">http://www.microsoft.com/en-us/download/details.aspx?id=5555?for</A> 32-bit
+</I>&gt;<i> computers?-- which contains the necessary files.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Sorry about all the trouble! If there are any more problems, please e-mail
+</I>&gt;<i> Johannes, myself, and/or the list.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Luke Stuyvenberg
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130926/ca22127c/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20130926/ca22127c/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001147.html">[OpenSPIM] new member of the family
+</A></li>
+	<LI>Next message: <A HREF="001151.html">[OpenSPIM] Picard Stage Adapter problem (Luke Stuyvenberg) and light sheet thickness
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1150">[ date ]</a>
+              <a href="thread.html#1150">[ thread ]</a>
+              <a href="subject.html#1150">[ subject ]</a>
+              <a href="author.html#1150">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

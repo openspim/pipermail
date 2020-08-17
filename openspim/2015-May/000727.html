@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] 64-bit Fiji Memory Limit Issue
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%2064-bit%20Fiji%20Memory%20Limit%20Issue&In-Reply-To=%3Ca88c576f3ff07f4d01e577487451809b%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000728.html">
+   <LINK REL="Next"  HREF="000729.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] 64-bit Fiji Memory Limit Issue</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%2064-bit%20Fiji%20Memory%20Limit%20Issue&In-Reply-To=%3Ca88c576f3ff07f4d01e577487451809b%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] 64-bit Fiji Memory Limit Issue">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Wed May 13 04:59:00 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000728.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+        <LI>Next message: <A HREF="000729.html">[OpenSPIM] OpenSPIM Digest, Vol 25, Issue 11
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#727">[ date ]</a>
+              <a href="thread.html#727">[ thread ]</a>
+              <a href="subject.html#727">[ subject ]</a>
+              <a href="author.html#727">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Thomas,
+
+please note that while it is convenient for you to take this problem to 
+a private mail exchange with me, it is really inconvenient for me: I 
+have nothing to gain from a private mail exchange solving this issue -- 
+it is taking my time, to solve a problem that is not mine, in a plugin 
+that is not mine, and the warm and fuzzy feeling of solving a single 
+problem for a single person when nobody else knows what I managed to 
+accomplish does not further my career nor does it pay my bills -- while 
+a public discussion not only offers the possibility that other people 
+than you might benefit from my advice (which would in turn help me), but 
+also offers the possibility that other people might help you, relieving 
+me.
+
+I really wish that more people were trying to help the OpenSPIM 
+community thrive as a publicly visible community. There are some 
+laudable examples on the OpenSPIM mailing list recently, and I am very 
+thankful for that.
+
+On 2015-05-11 16:11, Roberts, Thomas wrote:
+
+&gt;<i> I am still encountering this memory issue, unfortunately.
+</I>&gt;<i> 
+</I>&gt;<i> I downloaded the latest version of the OpenSPIM software that you sent
+</I>&gt;<i> a link to a few weeks ago
+</I>&gt;<i> (<A HREF="http://openspim.org/downloads/OpenSPIM-20150427.zip">http://openspim.org/downloads/OpenSPIM-20150427.zip</A>).
+</I>
+Please note that it is not obvious from your screenshots what amount of 
+memory Fiji *actually* reserves. Two Fiji instances running side by 
+side, for example, will not have the same amount of memory available 
+because Java works by reserving the memory at start-up, and that memory 
+is then not available to a second Fiji instance. The ImageJ launcher 
+will detect that less memory is available than it was asked to ask for 
+and fall back to try with a lesser amount. That is my guess regarding 
+what happens on your computer.
+
+By clicking on the status bar, you will see how much memory Fiji's Java 
+VM thinks is available. Clicking on the status bar will also trigger a 
+so-called &quot;garbage collection&quot;, i.e. it will ask the Java VM to 
+re-organize its memory consumption. Therefore, sporadically clicking on 
+the status bar while the plugin is running might even work around the 
+memory issue.
+
+&gt;<i> However, I still can't open large images in Fiji. I am trying to run
+</I>&gt;<i> through the Bead Based Registration tutorial on OpenSPIM.org, but I
+</I>&gt;<i> encounter the Memory Limit issue - I've attached some PNGs showing the
+</I>&gt;<i> error messages.
+</I>&gt;<i> 
+</I>&gt;<i> I tried your suggestion of opening the memory monitor, but it doesn't
+</I>&gt;<i> really tell me much - just that the program spikes and stops once it
+</I>&gt;<i> reaches the 494MB memory limit (see image1.png).
+</I>&gt;<i> 
+</I>&gt;<i> I still don't understand why Fiji thinks it has 5000MB of memory
+</I>&gt;<i> available, but crashes at 500MB (see image2.png).
+</I>
+You really scared me when you said that it crashed. You see, &quot;to crash&quot; 
+means one very specific thing, and that thing only, when you talk about 
+computer programs: it means that the entire application just stopped to 
+run, all its windows vanished, without any error message nor a chance to 
+store so-far unsaved data.
+
+That is distinctly not what happened. What you saw is an 
+OutOfMemoryException which stopped the plugin but nothing else.
+
+&gt;<i> Also, I have tried running the registration tutorial on my office
+</I>&gt;<i> computer, and this works, but the machine is very slow for such large
+</I>&gt;<i> datasets.
+</I>
+It might make sense to open large images in that Fiji instance first, 
+until it runs out of memory, in order to determine whether the problem 
+lies with the Java VM in general, or with the plugin you are trying to 
+run. I am getting the impression that something is wrong with your Fiji 
+installation rather than with the SPIM Registration plugin.
+
+Ciao,
+Johannes
+
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000728.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+	<LI>Next message: <A HREF="000729.html">[OpenSPIM] OpenSPIM Digest, Vol 25, Issue 11
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#727">[ date ]</a>
+              <a href="thread.html#727">[ thread ]</a>
+              <a href="subject.html#727">[ subject ]</a>
+              <a href="author.html#727">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

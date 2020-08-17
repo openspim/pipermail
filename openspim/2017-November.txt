@@ -1,0 +1,1453 @@
+From christoph.sommer at ist.ac.at  Mon Nov  6 03:43:29 2017
+From: christoph.sommer at ist.ac.at (Christoph Sommer)
+Date: Mon, 6 Nov 2017 10:43:29 +0100
+Subject: [OpenSPIM] ome-tiff output
+Message-ID: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+
+Dear OpenSpim folks,
+
+thanks for creating such a great resource!
+
+We are currently using an OpenSpim setup and the created output is a 
+multi-file ome-tiff. For many applications (e.g. the MVR from Stephan 
+Preibisch et al.) we need to convert the ome-tiff to normal tiff.
+
+Unfortunately, for long time-lapse the conversion takes forever, since 
+for each conversion step all meta-data is parsed from each single time 
+point. My script uses the Bioformats ImporterOptions class, but I can't 
+see how I can bypass the meta-data parsing. I also tried the 'bvconvert' 
+command line script but also got issues there. Also reading from Python 
+(e.g. with the module 'tifffile' only return always the first angle 
+image-stack...)
+
+Would you have any idea?
+
+Cheers,
+
+Chris
+
+
+
+From moon at mpi-cbg.de  Mon Nov  6 11:20:02 2017
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Mon, 6 Nov 2017 18:20:02 +0100
+Subject: [OpenSPIM] ome-tiff output
+In-Reply-To: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+References: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+Message-ID: <4E099AE3-253B-4B13-8C7F-995E35B5A6B1@mpi-cbg.de>
+
+Dear Christoph,
+
+We have also faced those problems because the default image opener is trying to get the metadata for every file.
+I really recommend you to make own ImageStack class for reading the metadata just once for your whole series.
+
+We had to create our version of VirtualStack class based on https://imagej.nih.gov/ij/plugins/virtual-opener.html <https://imagej.nih.gov/ij/plugins/virtual-opener.html> to avoid redundant metadata reading. The below code is not a perfect version, please, use it as a reference.
+
+Hopefully, it will help you.
+
+Cheers,
+HongKee
+
+———————————————————
+
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.plugins.util.ImageProcessorReader;
+
+import loci.common.services.DependencyException;
+import loci.common.services.ServiceException;
+import loci.common.services.ServiceFactory;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.formats.meta.IMetadata;
+import loci.formats.services.OMEXMLService;
+
+public class MyImageStack extends ImageStack
+{
+	private int bitDepth;
+	private int width, height;
+	ImageProcessorReader imageProcessorReader;
+	private int zSize = 1, tSize = 1, cSize = 1;
+	private int cEffectiveSize = 1;
+
+	public void addSlice( String path )
+	{
+		if(path != null)
+		{
+			if(width == 0)
+			{
+				// create format reader
+				ImageReader reader = getImageReader( path );
+
+				// output dimensional information
+				int sizeX = reader.getSizeX();
+				this.width = sizeX;
+
+				int sizeY = reader.getSizeY();
+				this.height = sizeY;
+
+				// System.out.println("Effective C" + reader.getEffectiveSizeC());
+				setcEffectiveSize( reader.getEffectiveSizeC() );
+
+				int sizeC = reader.getSizeC();
+				int sizeZ = reader.getSizeZ();
+				int sizeT = reader.getSizeT();
+
+				// System.out.println( "C=" + sizeC + " Z=" + sizeZ + " T=" + sizeT );
+
+				setcSize( sizeC );
+				setzSize( sizeZ );
+				settSize( sizeT );
+
+				this.bitDepth = reader.getBitsPerPixel();
+				this.imageProcessorReader = new ImageProcessorReader( reader );
+			}
+		}
+	}
+
+	public ImageProcessor getProcessor(int n) 
+	{
+		// properly implement to get ImageProcessor based on n
+	}
+
+	public static ImageReader getImageReader( String path )
+	{
+		ImageReader reader = null;
+
+		try
+		{
+			ServiceFactory factory = new ServiceFactory();
+			OMEXMLService service = factory.getInstance(OMEXMLService.class);
+			IMetadata meta = service.createOMEXMLMetadata();
+
+			// create format reader
+			reader = new ImageReader();
+			reader.setMetadataStore(meta);
+
+			// initialize file
+//			System.out.println(path);
+			reader.setId( path );
+		}
+		catch ( DependencyException e )
+		{
+			e.printStackTrace();
+		}
+		catch ( ServiceException e )
+		{
+			e.printStackTrace();
+		}
+		catch ( IOException e )
+		{
+			e.printStackTrace();
+		}
+		catch ( FormatException e )
+		{
+			e.printStackTrace();
+		}
+
+		return reader;
+	}
+}
+
+———————————————
+
+
+> On Nov 6, 2017, at 10:43 AM, Christoph Sommer <christoph.sommer at ist.ac.at> wrote:
+> 
+> Dear OpenSpim folks,
+> 
+> thanks for creating such a great resource!
+> 
+> We are currently using an OpenSpim setup and the created output is a multi-file ome-tiff. For many applications (e.g. the MVR from Stephan Preibisch et al.) we need to convert the ome-tiff to normal tiff.
+> 
+> Unfortunately, for long time-lapse the conversion takes forever, since for each conversion step all meta-data is parsed from each single time point. My script uses the Bioformats ImporterOptions class, but I can't see how I can bypass the meta-data parsing. I also tried the 'bvconvert' command line script but also got issues there. Also reading from Python (e.g. with the module 'tifffile' only return always the first angle image-stack...)
+> 
+> Would you have any idea?
+> 
+> Cheers,
+> 
+> Chris
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Scientific Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 1923
+fax: +49 351 210 1907
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171106/b445dc2d/attachment.html>
+
+From christoph.sommer at ist.ac.at  Tue Nov  7 12:13:06 2017
+From: christoph.sommer at ist.ac.at (Christoph Sommer)
+Date: Tue, 7 Nov 2017 19:13:06 +0100
+Subject: [OpenSPIM] ome-tiff output
+In-Reply-To: <4E099AE3-253B-4B13-8C7F-995E35B5A6B1@mpi-cbg.de>
+References: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+ <4E099AE3-253B-4B13-8C7F-995E35B5A6B1@mpi-cbg.de>
+Message-ID: <e123e3f8-69a1-2e4f-5baa-23d478e0cf9c@ist.ac.at>
+
+Dear HongKee,
+
+thank so much for your recommendation and code. When I understand 
+correctly, it would require the deployment of this VirtualStack class to 
+all ImageJ instances of potential users. I was hoping for a solution, 
+which does not need adaptions of ImageJ.
+
+Alternatively, we could create a different output format in the 
+acquisition (no multi-file OMETiff). I saw that there's already a 
+"IndividualImagesHandler" or an HDF5 handler in "spim.io". Does someone 
+have experience with alternative output formats?
+
+Cheers,
+Chris
+
+
+> We have also faced those problems because the default image opener is 
+> trying to get the metadata for every file.
+> I really recommend you to make own ImageStack class for reading the 
+> metadata just once for your whole series.
+>
+> We had to create our version of VirtualStack class based on 
+> https://imagej.nih.gov/ij/plugins/virtual-opener.html to avoid 
+> redundant metadata reading. The below code is not a perfect version, 
+> please, use it as a reference.
+>
+> Hopefully, it will help you.
+>
+> Cheers,
+> HongKee
+>
+> ———————————————————
+>
+> import ij.ImageStack;
+> import ij.process.ByteProcessor;
+> import ij.process.ImageProcessor;
+> import loci.formats.FormatException;
+> import loci.formats.ImageReader;
+> import loci.plugins.util.ImageProcessorReader;
+>
+> import loci.common.services.DependencyException;
+> import loci.common.services.ServiceException;
+> import loci.common.services.ServiceFactory;
+> import loci.formats.FormatException;
+> import loci.formats.ImageReader;
+> import loci.formats.meta.IMetadata;
+> import loci.formats.services.OMEXMLService;
+>
+> public class MyImageStack extends ImageStack
+> {
+> private int bitDepth;
+> private int width, height;
+> ImageProcessorReader imageProcessorReader;
+> private int zSize = 1, tSize = 1, cSize = 1;
+> private int cEffectiveSize = 1;
+>
+> public void addSlice( String path )
+> {
+> if(path != null)
+> {
+> if(width == 0)
+> {
+> // create format reader
+> ImageReader reader = getImageReader( path );
+>
+> // output dimensional information
+> int sizeX = reader.getSizeX();
+> this.width = sizeX;
+>
+> int sizeY = reader.getSizeY();
+> this.height = sizeY;
+>
+> // System.out.println("Effective C" + reader.getEffectiveSizeC());
+> setcEffectiveSize( reader.getEffectiveSizeC() );
+>
+> int sizeC = reader.getSizeC();
+> int sizeZ = reader.getSizeZ();
+> int sizeT = reader.getSizeT();
+>
+> // System.out.println( "C=" + sizeC + " Z=" + sizeZ + " T=" + sizeT );
+>
+> setcSize( sizeC );
+> setzSize( sizeZ );
+> settSize( sizeT );
+>
+> this.bitDepth = reader.getBitsPerPixel();
+> this.imageProcessorReader = new ImageProcessorReader( reader );
+> }
+> }
+> }
+>
+> public ImageProcessor getProcessor(int n)
+> {
+> // properly implement to get ImageProcessor based on n
+> }
+>
+> public static ImageReader getImageReader( String path )
+> {
+> ImageReader reader = null;
+>
+> try
+> {
+> ServiceFactory factory = new ServiceFactory();
+> OMEXMLService service = factory.getInstance(OMEXMLService.class);
+> IMetadata meta = service.createOMEXMLMetadata();
+>
+> // create format reader
+> reader = new ImageReader();
+> reader.setMetadataStore(meta);
+>
+> // initialize file
+> //System.out.println(path);
+> reader.setId( path );
+> }
+> catch ( DependencyException e )
+> {
+> e.printStackTrace();
+> }
+> catch ( ServiceException e )
+> {
+> e.printStackTrace();
+> }
+> catch ( IOException e )
+> {
+> e.printStackTrace();
+> }
+> catch ( FormatException e )
+> {
+> e.printStackTrace();
+> }
+>
+> return reader;
+> }
+> }
+>
+> ———————————————
+>
+>
+>> On Nov 6, 2017, at 10:43 AM, Christoph Sommer 
+>> <christoph.sommer at ist.ac.at <mailto:christoph.sommer at ist.ac.at>> wrote:
+>>
+>> Dear OpenSpim folks,
+>>
+>> thanks for creating such a great resource!
+>>
+>> We are currently using an OpenSpim setup and the created output is a 
+>> multi-file ome-tiff. For many applications (e.g. the MVR from Stephan 
+>> Preibisch et al.) we need to convert the ome-tiff to normal tiff.
+>>
+>> Unfortunately, for long time-lapse the conversion takes forever, 
+>> since for each conversion step all meta-data is parsed from each 
+>> single time point. My script uses the Bioformats ImporterOptions 
+>> class, but I can't see how I can bypass the meta-data parsing. I also 
+>> tried the 'bvconvert' command line script but also got issues there. 
+>> Also reading from Python (e.g. with the module 'tifffile' only return 
+>> always the first angle image-stack...)
+>>
+>> Would you have any idea?
+>>
+>> Cheers,
+>>
+>> Chris
+>>
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+>> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> --
+> HongKee Moon
+> Scientific Software Engineer
+> Scientific Computing Facility
+>
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108
+> 01307 Dresden
+> Germany
+>
+> fon: +49 351 210 1923
+> fax: +49 351 210 1907
+> www.mpi-cbg.de <http://www.mpi-cbg.de>
+>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171107/a6e71df8/attachment.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Tue Nov  7 13:17:48 2017
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Tue, 7 Nov 2017 19:17:48 +0000
+Subject: [OpenSPIM] ome-tiff output
+In-Reply-To: <e123e3f8-69a1-2e4f-5baa-23d478e0cf9c@ist.ac.at>
+References: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+ <4E099AE3-253B-4B13-8C7F-995E35B5A6B1@mpi-cbg.de>,
+ <e123e3f8-69a1-2e4f-5baa-23d478e0cf9c@ist.ac.at>
+Message-ID: <60858A62-F207-4ED3-8837-DA7A9774127C@mdc-berlin.de>
+
+Hi, did you try using the Autoloader of the MVR/BigStitcher (it’s basically the same now) for import? Activate the BigStitcher update site first to get the newest code. It should handle OME-TIff ... if not, send us a small example and we’ll fix it.
+
+Cheers,
+Stephan
+
+Sent from my iPhone
+
+On Nov 7, 2017, at 16:17, Christoph Sommer <christoph.sommer at ist.ac.at<mailto:christoph.sommer at ist.ac.at>> wrote:
+
+
+Dear HongKee,
+
+thank so much for your recommendation and code. When I understand correctly, it would require the deployment of this VirtualStack class to all ImageJ instances of potential users. I was hoping for a solution, which does not need adaptions of ImageJ.
+
+Alternatively, we could create a different output format in the acquisition (no multi-file OMETiff). I saw that there's already a "IndividualImagesHandler" or an HDF5 handler in "spim.io<http://spim.io>". Does someone have experience with alternative output formats?
+
+Cheers,
+Chris
+
+
+We have also faced those problems because the default image opener is trying to get the metadata for every file.
+I really recommend you to make own ImageStack class for reading the metadata just once for your whole series.
+
+We had to create our version of VirtualStack class based on https://imagej.nih.gov/ij/plugins/virtual-opener.html to avoid redundant metadata reading. The below code is not a perfect version, please, use it as a reference.
+
+Hopefully, it will help you.
+
+Cheers,
+HongKee
+
+———————————————————
+
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.plugins.util.ImageProcessorReader;
+
+import loci.common.services.DependencyException;
+import loci.common.services.ServiceException;
+import loci.common.services.ServiceFactory;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.formats.meta.IMetadata;
+import loci.formats.services.OMEXMLService;
+
+public class MyImageStack extends ImageStack
+{
+private int bitDepth;
+private int width, height;
+ImageProcessorReader imageProcessorReader;
+private int zSize = 1, tSize = 1, cSize = 1;
+private int cEffectiveSize = 1;
+
+public void addSlice( String path )
+{
+if(path != null)
+{
+if(width == 0)
+{
+// create format reader
+ImageReader reader = getImageReader( path );
+
+// output dimensional information
+int sizeX = reader.getSizeX();
+this.width = sizeX;
+
+int sizeY = reader.getSizeY();
+this.height = sizeY;
+
+// System.out.println("Effective C" + reader.getEffectiveSizeC());
+setcEffectiveSize( reader.getEffectiveSizeC() );
+
+int sizeC = reader.getSizeC();
+int sizeZ = reader.getSizeZ();
+int sizeT = reader.getSizeT();
+
+// System.out.println( "C=" + sizeC + " Z=" + sizeZ + " T=" + sizeT );
+
+setcSize( sizeC );
+setzSize( sizeZ );
+settSize( sizeT );
+
+this.bitDepth = reader.getBitsPerPixel();
+this.imageProcessorReader = new ImageProcessorReader( reader );
+}
+}
+}
+
+public ImageProcessor getProcessor(int n)
+{
+// properly implement to get ImageProcessor based on n
+}
+
+public static ImageReader getImageReader( String path )
+{
+ImageReader reader = null;
+
+try
+{
+ServiceFactory factory = new ServiceFactory();
+OMEXMLService service = factory.getInstance(OMEXMLService.class);
+IMetadata meta = service.createOMEXMLMetadata();
+
+// create format reader
+reader = new ImageReader();
+reader.setMetadataStore(meta);
+
+// initialize file
+// System.out.println(path);
+reader.setId( path );
+}
+catch ( DependencyException e )
+{
+e.printStackTrace();
+}
+catch ( ServiceException e )
+{
+e.printStackTrace();
+}
+catch ( IOException e )
+{
+e.printStackTrace();
+}
+catch ( FormatException e )
+{
+e.printStackTrace();
+}
+
+return reader;
+}
+}
+
+———————————————
+
+
+On Nov 6, 2017, at 10:43 AM, Christoph Sommer <christoph.sommer at ist.ac.at<mailto:christoph.sommer at ist.ac.at>> wrote:
+
+Dear OpenSpim folks,
+
+thanks for creating such a great resource!
+
+We are currently using an OpenSpim setup and the created output is a multi-file ome-tiff. For many applications (e.g. the MVR from Stephan Preibisch et al.) we need to convert the ome-tiff to normal tiff.
+
+Unfortunately, for long time-lapse the conversion takes forever, since for each conversion step all meta-data is parsed from each single time point. My script uses the Bioformats ImporterOptions class, but I can't see how I can bypass the meta-data parsing. I also tried the 'bvconvert' command line script but also got issues there. Also reading from Python (e.g. with the module 'tifffile' only return always the first angle image-stack...)
+
+Would you have any idea?
+
+Cheers,
+
+Chris
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Scientific Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 1923
+fax: +49 351 210 1907
+www.mpi-cbg.de<http://www.mpi-cbg.de>
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171107/836a280f/attachment-0001.html>
+
+From christoph.sommer at ist.ac.at  Fri Nov 10 04:05:05 2017
+From: christoph.sommer at ist.ac.at (Christoph Sommer)
+Date: Fri, 10 Nov 2017 11:05:05 +0100
+Subject: [OpenSPIM] ome-tiff output
+In-Reply-To: <60858A62-F207-4ED3-8837-DA7A9774127C@mdc-berlin.de>
+References: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+ <4E099AE3-253B-4B13-8C7F-995E35B5A6B1@mpi-cbg.de>
+ <e123e3f8-69a1-2e4f-5baa-23d478e0cf9c@ist.ac.at>
+ <60858A62-F207-4ED3-8837-DA7A9774127C@mdc-berlin.de>
+Message-ID: <81048510-f025-056b-7b6d-8b731893e70c@ist.ac.at>
+
+Dear Stephan and OpenSpim users,
+
+thanks for pointing me to the autoloader. I tested it on our data and 
+technically it works! It seems tiles and angles are still mistaken, but 
+this seems to be a problem of the wrong meta data... I now work on 
+automating the MVR process for our setup.
+
+Also, we found a way to truncate the containing ome-xml data, to make 
+each output files 'stand-alone' for specific cases. Yet, the autoloader 
+is my preferred solution.
+
+Thanks to all for your help!
+
+Cheers,
+
+Chris
+
+
+Am 11/7/2017 um 8:17 PM schrieb Stephan.Preibisch at mdc-berlin.de:
+> Hi, did you try using the Autoloader of the MVR/BigStitcher (it’s 
+> basically the same now) for import? Activate the BigStitcher update 
+> site first to get the newest code. It should handle OME-TIff ... if 
+> not, send us a small example and we’ll fix it.
+>
+> Cheers,
+> Stephan
+>
+> Sent from my iPhone
+>
+> On Nov 7, 2017, at 16:17, Christoph Sommer <christoph.sommer at ist.ac.at 
+> <mailto:christoph.sommer at ist.ac.at>> wrote:
+>
+>> Dear HongKee,
+>>
+>> thank so much for your recommendation and code. When I understand 
+>> correctly, it would require the deployment of this VirtualStack class 
+>> to all ImageJ instances of potential users. I was hoping for a 
+>> solution, which does not need adaptions of ImageJ.
+>>
+>> Alternatively, we could create a different output format in the 
+>> acquisition (no multi-file OMETiff). I saw that there's already a 
+>> "IndividualImagesHandler" or an HDF5 handler in "spim.io 
+>> <http://spim.io>". Does someone have experience with alternative 
+>> output formats?
+>>
+>> Cheers,
+>> Chris
+>>
+>>
+>>> We have also faced those problems because the default image opener 
+>>> is trying to get the metadata for every file.
+>>> I really recommend you to make own ImageStack class for reading the 
+>>> metadata just once for your whole series.
+>>>
+>>> We had to create our version of VirtualStack class based on 
+>>> https://imagej.nih.gov/ij/plugins/virtual-opener.html 
+>>> <https://imagej.nih.gov/ij/plugins/virtual-opener.html> to avoid 
+>>> redundant metadata reading. The below code is not a perfect version, 
+>>> please, use it as a reference.
+>>>
+>>> Hopefully, it will help you.
+>>>
+>>> Cheers,
+>>> HongKee
+>>>
+>>> ———————————————————
+>>>
+>>> import ij.ImageStack;
+>>> import ij.process.ByteProcessor;
+>>> import ij.process.ImageProcessor;
+>>> import loci.formats.FormatException;
+>>> import loci.formats.ImageReader;
+>>> import loci.plugins.util.ImageProcessorReader;
+>>>
+>>> import loci.common.services.DependencyException;
+>>> import loci.common.services.ServiceException;
+>>> import loci.common.services.ServiceFactory;
+>>> import loci.formats.FormatException;
+>>> import loci.formats.ImageReader;
+>>> import loci.formats.meta.IMetadata;
+>>> import loci.formats.services.OMEXMLService;
+>>>
+>>> public class MyImageStack extends ImageStack
+>>> {
+>>> private int bitDepth;
+>>> private int width, height;
+>>> ImageProcessorReader imageProcessorReader;
+>>> private int zSize = 1, tSize = 1, cSize = 1;
+>>> private int cEffectiveSize = 1;
+>>>
+>>> public void addSlice( String path )
+>>> {
+>>> if(path != null)
+>>> {
+>>> if(width == 0)
+>>> {
+>>> // create format reader
+>>> ImageReader reader = getImageReader( path );
+>>>
+>>> // output dimensional information
+>>> int sizeX = reader.getSizeX();
+>>> this.width = sizeX;
+>>>
+>>> int sizeY = reader.getSizeY();
+>>> this.height = sizeY;
+>>>
+>>> // System.out.println("Effective C" + reader.getEffectiveSizeC());
+>>> setcEffectiveSize( reader.getEffectiveSizeC() );
+>>>
+>>> int sizeC = reader.getSizeC();
+>>> int sizeZ = reader.getSizeZ();
+>>> int sizeT = reader.getSizeT();
+>>>
+>>> // System.out.println( "C=" + sizeC + " Z=" + sizeZ + " T=" + sizeT );
+>>>
+>>> setcSize( sizeC );
+>>> setzSize( sizeZ );
+>>> settSize( sizeT );
+>>>
+>>> this.bitDepth = reader.getBitsPerPixel();
+>>> this.imageProcessorReader = new ImageProcessorReader( reader );
+>>> }
+>>> }
+>>> }
+>>>
+>>> public ImageProcessor getProcessor(int n)
+>>> {
+>>> // properly implement to get ImageProcessor based on n
+>>> }
+>>>
+>>> public static ImageReader getImageReader( String path )
+>>> {
+>>> ImageReader reader = null;
+>>>
+>>> try
+>>> {
+>>> ServiceFactory factory = new ServiceFactory();
+>>> OMEXMLService service = factory.getInstance(OMEXMLService.class);
+>>> IMetadata meta = service.createOMEXMLMetadata();
+>>>
+>>> // create format reader
+>>> reader = new ImageReader();
+>>> reader.setMetadataStore(meta);
+>>>
+>>> // initialize file
+>>> //System.out.println(path);
+>>> reader.setId( path );
+>>> }
+>>> catch ( DependencyException e )
+>>> {
+>>> e.printStackTrace();
+>>> }
+>>> catch ( ServiceException e )
+>>> {
+>>> e.printStackTrace();
+>>> }
+>>> catch ( IOException e )
+>>> {
+>>> e.printStackTrace();
+>>> }
+>>> catch ( FormatException e )
+>>> {
+>>> e.printStackTrace();
+>>> }
+>>>
+>>> return reader;
+>>> }
+>>> }
+>>>
+>>> ———————————————
+>>>
+>>>
+>>>> On Nov 6, 2017, at 10:43 AM, Christoph Sommer 
+>>>> <christoph.sommer at ist.ac.at <mailto:christoph.sommer at ist.ac.at>> wrote:
+>>>>
+>>>> Dear OpenSpim folks,
+>>>>
+>>>> thanks for creating such a great resource!
+>>>>
+>>>> We are currently using an OpenSpim setup and the created output is 
+>>>> a multi-file ome-tiff. For many applications (e.g. the MVR from 
+>>>> Stephan Preibisch et al.) we need to convert the ome-tiff to normal 
+>>>> tiff.
+>>>>
+>>>> Unfortunately, for long time-lapse the conversion takes forever, 
+>>>> since for each conversion step all meta-data is parsed from each 
+>>>> single time point. My script uses the Bioformats ImporterOptions 
+>>>> class, but I can't see how I can bypass the meta-data parsing. I 
+>>>> also tried the 'bvconvert' command line script but also got issues 
+>>>> there. Also reading from Python (e.g. with the module 'tifffile' 
+>>>> only return always the first angle image-stack...)
+>>>>
+>>>> Would you have any idea?
+>>>>
+>>>> Cheers,
+>>>>
+>>>> Chris
+>>>>
+>>>>
+>>>> _______________________________________________
+>>>> OpenSPIM mailing list
+>>>> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+>>>> http://openspim.org/mailman/listinfo/openspim
+>>>
+>>>
+>>> --
+>>> HongKee Moon
+>>> Scientific Software Engineer
+>>> Scientific Computing Facility
+>>>
+>>> Max Planck Institute of Molecular Cell Biology and Genetics
+>>> Pfotenhauerstr. 108
+>>> 01307 Dresden
+>>> Germany
+>>>
+>>> fon: +49 351 210 1923
+>>> fax: +49 351 210 1907
+>>> www.mpi-cbg.de <http://www.mpi-cbg.de>
+>>>
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+>> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171110/d400b7fc/attachment-0001.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Fri Nov 10 08:56:49 2017
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Fri, 10 Nov 2017 14:56:49 +0000
+Subject: [OpenSPIM] ome-tiff output
+In-Reply-To: <81048510-f025-056b-7b6d-8b731893e70c@ist.ac.at>
+References: <494ee92a-e11e-1a1c-d4ed-0b2f466ed548@ist.ac.at>
+ <4E099AE3-253B-4B13-8C7F-995E35B5A6B1@mpi-cbg.de>
+ <e123e3f8-69a1-2e4f-5baa-23d478e0cf9c@ist.ac.at>
+ <60858A62-F207-4ED3-8837-DA7A9774127C@mdc-berlin.de>,
+ <81048510-f025-056b-7b6d-8b731893e70c@ist.ac.at>
+Message-ID: <9BA08565-12A4-4C9C-A5C1-9E1D4C8CC477@mdc-berlin.de>
+
+Great to hear! If we can make it even more intuitive or compatible just let us know!
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Nov 10, 2017, at 08:10, Christoph Sommer <christoph.sommer at ist.ac.at<mailto:christoph.sommer at ist.ac.at>> wrote:
+
+
+Dear Stephan and OpenSpim users,
+
+thanks for pointing me to the autoloader. I tested it on our data and technically it works! It seems tiles and angles are still mistaken, but this seems to be a problem of the wrong meta data... I now work on automating the MVR process for our setup.
+
+Also, we found a way to truncate the containing ome-xml data, to make each output files 'stand-alone' for specific cases. Yet, the autoloader is my preferred solution.
+
+Thanks to all for your help!
+
+Cheers,
+
+Chris
+
+Am 11/7/2017 um 8:17 PM schrieb Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>:
+Hi, did you try using the Autoloader of the MVR/BigStitcher (it’s basically the same now) for import? Activate the BigStitcher update site first to get the newest code. It should handle OME-TIff ... if not, send us a small example and we’ll fix it.
+
+Cheers,
+Stephan
+
+Sent from my iPhone
+
+On Nov 7, 2017, at 16:17, Christoph Sommer <christoph.sommer at ist.ac.at<mailto:christoph.sommer at ist.ac.at>> wrote:
+
+
+Dear HongKee,
+
+thank so much for your recommendation and code. When I understand correctly, it would require the deployment of this VirtualStack class to all ImageJ instances of potential users. I was hoping for a solution, which does not need adaptions of ImageJ.
+
+Alternatively, we could create a different output format in the acquisition (no multi-file OMETiff). I saw that there's already a "IndividualImagesHandler" or an HDF5 handler in "spim.io<http://spim.io>". Does someone have experience with alternative output formats?
+
+Cheers,
+Chris
+
+
+We have also faced those problems because the default image opener is trying to get the metadata for every file.
+I really recommend you to make own ImageStack class for reading the metadata just once for your whole series.
+
+We had to create our version of VirtualStack class based on https://imagej.nih.gov/ij/plugins/virtual-opener.html to avoid redundant metadata reading. The below code is not a perfect version, please, use it as a reference.
+
+Hopefully, it will help you.
+
+Cheers,
+HongKee
+
+———————————————————
+
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.plugins.util.ImageProcessorReader;
+
+import loci.common.services.DependencyException;
+import loci.common.services.ServiceException;
+import loci.common.services.ServiceFactory;
+import loci.formats.FormatException;
+import loci.formats.ImageReader;
+import loci.formats.meta.IMetadata;
+import loci.formats.services.OMEXMLService;
+
+public class MyImageStack extends ImageStack
+{
+private int bitDepth;
+private int width, height;
+ImageProcessorReader imageProcessorReader;
+private int zSize = 1, tSize = 1, cSize = 1;
+private int cEffectiveSize = 1;
+
+public void addSlice( String path )
+{
+if(path != null)
+{
+if(width == 0)
+{
+// create format reader
+ImageReader reader = getImageReader( path );
+
+// output dimensional information
+int sizeX = reader.getSizeX();
+this.width = sizeX;
+
+int sizeY = reader.getSizeY();
+this.height = sizeY;
+
+// System.out.println("Effective C" + reader.getEffectiveSizeC());
+setcEffectiveSize( reader.getEffectiveSizeC() );
+
+int sizeC = reader.getSizeC();
+int sizeZ = reader.getSizeZ();
+int sizeT = reader.getSizeT();
+
+// System.out.println( "C=" + sizeC + " Z=" + sizeZ + " T=" + sizeT );
+
+setcSize( sizeC );
+setzSize( sizeZ );
+settSize( sizeT );
+
+this.bitDepth = reader.getBitsPerPixel();
+this.imageProcessorReader = new ImageProcessorReader( reader );
+}
+}
+}
+
+public ImageProcessor getProcessor(int n)
+{
+// properly implement to get ImageProcessor based on n
+}
+
+public static ImageReader getImageReader( String path )
+{
+ImageReader reader = null;
+
+try
+{
+ServiceFactory factory = new ServiceFactory();
+OMEXMLService service = factory.getInstance(OMEXMLService.class);
+IMetadata meta = service.createOMEXMLMetadata();
+
+// create format reader
+reader = new ImageReader();
+reader.setMetadataStore(meta);
+
+// initialize file
+// System.out.println(path);
+reader.setId( path );
+}
+catch ( DependencyException e )
+{
+e.printStackTrace();
+}
+catch ( ServiceException e )
+{
+e.printStackTrace();
+}
+catch ( IOException e )
+{
+e.printStackTrace();
+}
+catch ( FormatException e )
+{
+e.printStackTrace();
+}
+
+return reader;
+}
+}
+
+———————————————
+
+
+On Nov 6, 2017, at 10:43 AM, Christoph Sommer <christoph.sommer at ist.ac.at<mailto:christoph.sommer at ist.ac.at>> wrote:
+
+Dear OpenSpim folks,
+
+thanks for creating such a great resource!
+
+We are currently using an OpenSpim setup and the created output is a multi-file ome-tiff. For many applications (e.g. the MVR from Stephan Preibisch et al.) we need to convert the ome-tiff to normal tiff.
+
+Unfortunately, for long time-lapse the conversion takes forever, since for each conversion step all meta-data is parsed from each single time point. My script uses the Bioformats ImporterOptions class, but I can't see how I can bypass the meta-data parsing. I also tried the 'bvconvert' command line script but also got issues there. Also reading from Python (e.g. with the module 'tifffile' only return always the first angle image-stack...)
+
+Would you have any idea?
+
+Cheers,
+
+Chris
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Scientific Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 1923
+fax: +49 351 210 1907
+www.mpi-cbg.de<http://www.mpi-cbg.de>
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171110/e4e48e3f/attachment.html>
+
+From huyan1020 at sjtu.edu.cn  Mon Nov 20 21:06:39 2017
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Tue, 21 Nov 2017 11:06:39 +0800 (CST)
+Subject: [OpenSPIM] no structure in brain tissue image
+Message-ID: <518797962.6913891.1511233599253.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, everyone.
+
+This is Yan.
+
+I used my openSPIM to take images for CLARITY brain tissue,
+and the results as shown in the attachment.
+I cannot find any structure in these images.
+
+Is there anyone knowing such condition?
+What can I do to improve this condition?
+
+I am looking forward for your reply.
+Best regards,
+Yan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_13.tif
+Type: image/tiff
+Size: 4196104 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171121/7ae1ca48/attachment-0003.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_14.tif
+Type: image/tiff
+Size: 4196104 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171121/7ae1ca48/attachment-0004.tif>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_15.tif
+Type: image/tiff
+Size: 4196104 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171121/7ae1ca48/attachment-0005.tif>
+
+From Stephan.Preibisch at mdc-berlin.de  Mon Nov 20 23:18:29 2017
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Tue, 21 Nov 2017 05:18:29 +0000
+Subject: [OpenSPIM] no structure in brain tissue image
+In-Reply-To: <518797962.6913891.1511233599253.JavaMail.zimbra@sjtu.edu.cn>
+References: <518797962.6913891.1511233599253.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <442E9396-A6C6-437D-B308-620442C5BD97@mdc-berlin.de>
+
+Hi, just a few questions which may help:
+
+- are you sure your light sheet is aligned well?
+- are you imaging too deep inside the sample?
+- did the clearing actually work well, it almost looks like it is just not well cleared?
+
+All the best, hope it helps,
+Stephan
+
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute for Medical Systems Biology (BIMSB), Max Delbrück Center for Molecular Medicine (MDC)
+Building 89, 1.08b
+Robert-Rössle-Str. 10
+13125 Berlin
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://preibischlab.mdc-berlin.de
+twitter: http://twitter.com/preibischs
+
+On Nov 20, 2017, at 7:06 PM, 胡衍 <huyan1020 at sjtu.edu.cn<mailto:huyan1020 at sjtu.edu.cn>> wrote:
+
+Hello, everyone.
+
+This is Yan.
+
+I used my openSPIM to take images for CLARITY brain tissue,
+and the results as shown in the attachment.
+I cannot find any structure in these images.
+
+Is there anyone knowing such condition?
+What can I do to improve this condition?
+
+I am looking forward for your reply.
+Best regards,
+Yan<img_13.tif><img_14.tif><img_15.tif>_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171121/547075ea/attachment.html>
+
+From ddowless at gmail.com  Wed Nov 29 09:08:05 2017
+From: ddowless at gmail.com (dave dowless)
+Date: Wed, 29 Nov 2017 10:08:05 -0500
+Subject: [OpenSPIM] How do you mount the sample syringe so that it fits
+	tight?
+Message-ID: <CAM=c-cCL=emfpcCJho-URAQo0jUr2Ao=UQznLmGoAqC7jEJn6w@mail.gmail.com>
+
+Hi,
+
+This is my first build. How do folks mount the sample syringe itself?
+
+My syringe isn't tight. It rocks and slips.
+
+Here's a pic of my hybrid Picard Industries stages
+<https://i.imgur.com/9xkyyFS.jpg>
+
+That's a standard Picard twister set up to spin the syringe.
+
+How do you lock down the syringe?
+
+They use foam
+<http://openspim.org/images/thumb/f/fc/Light_Sheet_Calibration-1.jpg/800px-Light_Sheet_Calibration-1.jpg>for
+the calibration mirror in the OpenSpim manual.
+
+Is that what folks do? Foam?
+
+Specific syringes?
+
+Any help?
+
+Dave
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171129/9a4f1fed/attachment.html>
+
+From david.potter at monash.edu  Wed Nov 29 18:58:58 2017
+From: david.potter at monash.edu (David Potter)
+Date: Thu, 30 Nov 2017 11:58:58 +1100
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 51, Issue 7
+In-Reply-To: <mailman.1.1511978401.141917.openspim@openspim.org>
+References: <mailman.1.1511978401.141917.openspim@openspim.org>
+Message-ID: <CAHmtN7=uUD03W_Y00=dVAUVJ=rOBYP8iXQKnj_jx6U=bn2OSWg@mail.gmail.com>
+
+Dave,
+
+I cut a spacer from shim stock (thin sheet of metal; find at a hobby store)
+that took up the empty space. Brass is probably best as the copper in the
+brass is a bit anti-bacterial. You can see I didn't follow my own advice
+and made mine out of "stainless" steel. It's what I had at the time. Cut
+the right length. Roll it into a tube that'll fit the holder. Perhaps put a
+crimp at the top so it doesn't fall through. Cheap and cheerful.
+
+I also use a foam stopper like you have in your image though I only use it
+for replacing the syringe in the same location if I remove it for any
+reason.
+
+Nice job on the belt drive.
+
+Cheers,
+
+- David
+
+David Potter
+Lattice Light Sheet Microscopy Manager
+Monash Micro Imaging - Advanced Optical Microscopy
+Monash University Clayton, VIC 3800, Australia
+
+
+
+On 30 November 2017 at 05:00, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. How do you mount the sample syringe so that it fits       tight?
+>       (dave dowless)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Wed, 29 Nov 2017 10:08:05 -0500
+> From: dave dowless <ddowless at gmail.com>
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] How do you mount the sample syringe so that it
+>         fits    tight?
+> Message-ID:
+>         <CAM=c-cCL=emfpcCJho-URAQo0jUr2Ao=UQznLmGoAqC7jEJn6
+> w at mail.gmail.com>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Hi,
+>
+> This is my first build. How do folks mount the sample syringe itself?
+>
+> My syringe isn't tight. It rocks and slips.
+>
+> Here's a pic of my hybrid Picard Industries stages
+> <https://i.imgur.com/9xkyyFS.jpg>
+>
+> That's a standard Picard twister set up to spin the syringe.
+>
+> How do you lock down the syringe?
+>
+> They use foam
+> <http://openspim.org/images/thumb/f/fc/Light_Sheet_
+> Calibration-1.jpg/800px-Light_Sheet_Calibration-1.jpg>for
+> the calibration mirror in the OpenSpim manual.
+>
+> Is that what folks do? Foam?
+>
+> Specific syringes?
+>
+> Any help?
+>
+> Dave
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20171129/9a4f1fed/attachment-0001.html>
+>
+> ------------------------------
+>
+> Subject: Digest Footer
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> ------------------------------
+>
+> End of OpenSPIM Digest, Vol 51, Issue 7
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171130/19b52ee9/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: cap in syringe - sm.jpg
+Type: image/jpeg
+Size: 193773 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171130/19b52ee9/attachment-0002.jpg>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: rusty shim - sm.jpg
+Type: image/jpeg
+Size: 211095 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20171130/19b52ee9/attachment-0003.jpg>
+
+From ddowless at gmail.com  Wed Nov 29 20:17:32 2017
+From: ddowless at gmail.com (dave dowless)
+Date: Wed, 29 Nov 2017 21:17:32 -0500
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 51, Issue 7
+In-Reply-To: <CAHmtN7=uUD03W_Y00=dVAUVJ=rOBYP8iXQKnj_jx6U=bn2OSWg@mail.gmail.com>
+References: <mailman.1.1511978401.141917.openspim@openspim.org>
+ <CAHmtN7=uUD03W_Y00=dVAUVJ=rOBYP8iXQKnj_jx6U=bn2OSWg@mail.gmail.com>
+Message-ID: <CAM=c-cBPqxn9DamuVF3E+Nv2HWARVQC8K_cT4RdqbtW9hKOQVQ@mail.gmail.com>
+
+Thanks David. I like it. Very resourceful and Cheap-n-Easy! I might have to
+copy your design!
+
+Thanks!
+
+On Wed, Nov 29, 2017 at 7:58 PM, David Potter <david.potter at monash.edu>
+wrote:
+
+> Dave,
+>
+> I cut a spacer from shim stock (thin sheet of metal; find at a hobby
+> store) that took up the empty space. Brass is probably best as the copper
+> in the brass is a bit anti-bacterial. You can see I didn't follow my own
+> advice and made mine out of "stainless" steel. It's what I had at the time.
+> Cut the right length. Roll it into a tube that'll fit the holder. Perhaps
+> put a crimp at the top so it doesn't fall through. Cheap and cheerful.
+>
+> I also use a foam stopper like you have in your image though I only use it
+> for replacing the syringe in the same location if I remove it for any
+> reason.
+>
+> Nice job on the belt drive.
+>
+> Cheers,
+>
+> - David
+>
+> David Potter
+> Lattice Light Sheet Microscopy Manager
+> Monash Micro Imaging - Advanced Optical Microscopy
+> Monash University Clayton, VIC 3800, Australia
+>
+>
+>
+> On 30 November 2017 at 05:00, <openspim-request at openspim.org> wrote:
+>
+>> Send OpenSPIM mailing list submissions to
+>>         openspim at openspim.org
+>>
+>> To subscribe or unsubscribe via the World Wide Web, visit
+>>         http://openspim.org/mailman/listinfo/openspim
+>> or, via email, send a message with subject or body 'help' to
+>>         openspim-request at openspim.org
+>>
+>> You can reach the person managing the list at
+>>         openspim-owner at openspim.org
+>>
+>> When replying, please edit your Subject line so it is more specific
+>> than "Re: Contents of OpenSPIM digest..."
+>>
+>>
+>> Today's Topics:
+>>
+>>    1. How do you mount the sample syringe so that it fits       tight?
+>>       (dave dowless)
+>>
+>>
+>> ----------------------------------------------------------------------
+>>
+>> Message: 1
+>> Date: Wed, 29 Nov 2017 10:08:05 -0500
+>> From: dave dowless <ddowless at gmail.com>
+>> To: openspim at openspim.org
+>> Subject: [OpenSPIM] How do you mount the sample syringe so that it
+>>         fits    tight?
+>> Message-ID:
+>>         <CAM=c-cCL=emfpcCJho-URAQo0jUr2Ao=UQznLmGoAqC7jEJn6w at mail.
+>> gmail.com>
+>> Content-Type: text/plain; charset="utf-8"
+>>
+>> Hi,
+>>
+>> This is my first build. How do folks mount the sample syringe itself?
+>>
+>> My syringe isn't tight. It rocks and slips.
+>>
+>> Here's a pic of my hybrid Picard Industries stages
+>> <https://i.imgur.com/9xkyyFS.jpg>
+>>
+>> That's a standard Picard twister set up to spin the syringe.
+>>
+>> How do you lock down the syringe?
+>>
+>> They use foam
+>> <http://openspim.org/images/thumb/f/fc/Light_Sheet_Calibrati
+>> on-1.jpg/800px-Light_Sheet_Calibration-1.jpg>for
+>> the calibration mirror in the OpenSpim manual.
+>>
+>> Is that what folks do? Foam?
+>>
+>> Specific syringes?
+>>
+>> Any help?
+>>
+>> Dave
+>> -------------- next part --------------
+>> An HTML attachment was scrubbed...
+>> URL: <http://openspim.org/pipermail/openspim/attachments/
+>> 20171129/9a4f1fed/attachment-0001.html>
+>>
+>> ------------------------------
+>>
+>> Subject: Digest Footer
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>>
+>> ------------------------------
+>>
+>> End of OpenSPIM Digest, Vol 51, Issue 7
+>> ***************************************
+>>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20171129/872bbb65/attachment.html>
+

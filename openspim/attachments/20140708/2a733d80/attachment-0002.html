@@ -1,0 +1,94 @@
+<tt>
+&lt;div&nbsp;dir=&quot;ltr&quot;&gt;For&nbsp;base&nbsp;installation,&nbsp;you&nbsp;mean&nbsp;install&nbsp;the&nbsp;OpenSPIM/Fiji&nbsp;package&nbsp;here:&lt;a&nbsp;href=&quot;http://openspim.org/Downloads&quot;&gt;http://openspim.org/Downloads&lt;/a&gt;&nbsp;again? &lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;I&nbsp;followed&nbsp;the&nbsp;troubleshooting&nbsp;instructions&nbsp;in&nbsp;the&nbsp;compatibility&nbsp;tab&nbsp;and&nbsp;the&nbsp;result&nbsp;is&nbsp;&quot;its&nbsp;an&nbsp;incompatible&nbsp;application&quot;.&nbsp;  &lt;/div&gt;<br>
+&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;I&nbsp;did&nbsp;the&nbsp;following&nbsp;steps&nbsp;to&nbsp;open&nbsp;the&nbsp;uManager&nbsp;studio: &lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt; &nbsp; 1.&nbsp;Download&nbsp;the&nbsp;Fiji&nbsp;package&nbsp;of&nbsp;the&nbsp;continuous&nbsp;release&nbsp;version&nbsp;for&nbsp;Windows&nbsp;7(64bit)&nbsp;from&nbsp; : &lt;a&nbsp;href=&quot;http://fiji.sc/Fiji&quot;&gt;http://fiji.sc/Fiji&lt;/a&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt; &nbsp; 2.&nbsp;Download&nbsp;the&nbsp;OpenSPIM&nbsp;package&nbsp;(&lt;i&gt;OpenSPIM-20140207.zip&lt;/i&gt;)&nbsp;from&nbsp;:&lt;a&nbsp;href=&quot;http://openspim.org/Downloads&quot;&gt;http://openspim.org/Downloads&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt; &nbsp; 3.&nbsp;Launch&nbsp;Fiji:&nbsp;in&nbsp;the&nbsp;Fiji.app/folder,&nbsp;open&nbsp;&lt;i&gt;ImageJ-win64.exe&lt;/i&gt; &lt;/div&gt;<br>
+&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt; &nbsp; 4.&nbsp;Update&nbsp;Fiji&nbsp;(and&nbsp;OpenSPIM&nbsp;and&nbsp;uManager):&lt;i&gt;&nbsp;Help-&gt;Update&nbsp;Fiji &lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt; &nbsp; 5.&nbsp;Run&nbsp;Micromanager&nbsp;Studio:&nbsp;In&nbsp;the&nbsp;&lt;i&gt;OpenSPIM.app&lt;/i&gt;&nbsp;folder,&nbsp;open&nbsp;&lt;i&gt;ImageJ-win32.exe&lt;/i&gt;,&nbsp;then&nbsp;&lt;i&gt;plugins-&gt;Micro-manager-&gt;Micro-manager&nbsp;studio&lt;/i&gt;&nbsp;(Before&nbsp;this&nbsp;step,&nbsp;I&nbsp;have&nbsp;followed&nbsp;your&nbsp;steps&nbsp;and&nbsp;set&nbsp;the&nbsp;compatibility&nbsp;mode&nbsp;of&nbsp;the&nbsp;&lt;i&gt;ImageJ-win32.exe&lt;/i&gt;&nbsp;as&nbsp;Windows&nbsp;XP&nbsp;(&lt;span&nbsp;style=&quot;font-family:arial,sans-serif;font-size:12.727272033691406px&quot;&gt;Service&nbsp;Pack&nbsp;3))&nbsp; &lt;/span&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;span&nbsp;style=&quot;font-family:arial,sans-serif;font-size:12.727272033691406px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;After&nbsp;Step&nbsp;5,&nbsp;an&nbsp;error&nbsp;shows&nbsp;as&nbsp;follows: &lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#ff0000&quot;&gt;&lt;i&gt; &nbsp; &nbsp;Error:Failed&nbsp;to&nbsp;load&nbsp;the&nbsp;MMCoreJ_wrap&nbsp;native&nbsp;library&nbsp;mmcorej.MMCoreJJNI.swig_module_init()V&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#ff0000&quot;&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;color=&quot;#000000&quot;&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;To&nbsp;solve&nbsp;this&nbsp;error,&nbsp;I&nbsp;copied&nbsp;the&nbsp;file&nbsp;&lt;i&gt;MMCoreJ_wrap.dll&lt;/i&gt;&nbsp;in&nbsp;the&nbsp;&lt;i&gt;mm&lt;/i&gt;&nbsp;folder&nbsp;of&nbsp;the&nbsp;&lt;i&gt;OpenSPIM.app&lt;/i&gt;&nbsp;folder&nbsp;into&nbsp;the&nbsp;same&nbsp;directory&nbsp;of&nbsp;the&nbsp;&lt;i&gt;ImageJ-win32.exe.&nbsp;&lt;/i&gt;Then&nbsp;when&nbsp;I&nbsp;reloaded&nbsp;the&nbsp;uManager&nbsp;studio&nbsp;from&nbsp;the&nbsp;ImageJ&nbsp;(32bit),&nbsp;the&nbsp;error&nbsp;was&nbsp;as&nbsp;follows: &lt;/font&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;&lt;font&nbsp;color=&quot;#000000&quot;&gt; &nbsp; &lt;/font&gt;&lt;i&gt;&lt;font&nbsp;color=&quot;#ff0000&quot;&gt;Error:Failed&nbsp;to&nbsp;load&nbsp;the&nbsp;MMcoreJ_wrap&nbsp;native&nbsp;library &lt;/font&gt;&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#ff0000&quot;&gt;&lt;i&gt; &nbsp; C:\Users\Kuolab\Downloads\SPIM\OpenSPIM-20140207\OpenSPIM.app\MMCoreJ_wrap.dll:&nbsp;Can&#39;t&nbsp;load&nbsp;IA&nbsp;32-bit.&nbsp;dll&nbsp;on&nbsp;a&nbsp;AMD&nbsp;64-bit&nbsp;platform. &lt;/i&gt;&lt;/font&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#ff0000&quot;&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#000000&quot;&gt; &nbsp; &nbsp;I&nbsp;tried&nbsp;to&nbsp;open&nbsp;the&nbsp;uManager&nbsp;studio&nbsp;from &lt;i&gt;ImageJ-win32.exe&nbsp;and&lt;/i&gt; &lt;i&gt;ImageJ-win64.exe&lt;/i&gt;,&nbsp;while&nbsp;the&nbsp;second&nbsp;error&nbsp;above&nbsp;happened&nbsp;all&nbsp;the&nbsp;time&nbsp;in&nbsp;the&nbsp;two&nbsp;cases. &lt;/font&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#000000&quot;&gt; &nbsp;  &lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#000000&quot;&gt; &nbsp; The&nbsp;camera&nbsp;driver&nbsp;has&nbsp;been&nbsp;installed&nbsp;correctly&nbsp;before&nbsp;based&nbsp;on&nbsp;the&nbsp;test&nbsp;image&nbsp;results. &lt;/font&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;font&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&nbsp;color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;color=&quot;#000000&quot;&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;Is&nbsp;there&nbsp;any&nbsp;step&nbsp;I&nbsp;misconducted?&nbsp;(Maybe&nbsp;copying&nbsp;the&nbsp;&lt;i&gt;MMCoreJ_warp.dll&lt;/i&gt;&nbsp;into&nbsp;the&nbsp;same&nbsp;directory&nbsp;of&nbsp;the&nbsp;&lt;i&gt;ImageJ-win32.exe&lt;/i&gt;&nbsp;is&nbsp;not&nbsp;correct?) &lt;/font&gt;&lt;/div&gt;<br>
+&lt;div&gt;&lt;font&nbsp;color=&quot;#000000&quot;&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;color=&quot;#000000&quot;&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;Thanks,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&nbsp;color=&quot;#000000&quot;&nbsp;face=&quot;arial,&nbsp;sans-serif&quot;&gt;Ke&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&nbsp;class=&quot;gmail_extra&quot;&gt;<br>
+&lt;br&nbsp;clear=&quot;all&quot;&gt;&lt;div&gt;&lt;div&nbsp;dir=&quot;ltr&quot;&gt;Ke&nbsp;Li&lt;div&gt;Research&nbsp;Assistant &lt;/div&gt;&lt;div&gt;Biomedical&nbsp;Engineering&lt;/div&gt;&lt;div&gt;Johns&nbsp;Hopkins&nbsp;University&lt;/div&gt;&lt;div&gt;Phone:&nbsp;410-934-9802&lt;/div&gt;&lt;div&gt;Email:&nbsp;&lt;a&nbsp;href=&quot;mailto:kli26@jhu.edu&quot;&nbsp;target=&quot;_blank&quot;&gt;kli26@jhu.edu&lt;/a&gt;&lt;/div&gt;<br>
+&lt;/div&gt;&lt;/div&gt;<br>
+&lt;br&gt;&lt;br&gt;&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;On&nbsp;Tue,&nbsp;Jul&nbsp;8,&nbsp;2014&nbsp;at&nbsp;5:16&nbsp;PM,&nbsp;Kieran&nbsp;Short&nbsp;&lt;span&nbsp;dir=&quot;ltr&quot;&gt;&lt;&lt;a&nbsp;href=&quot;mailto:kieran.short@gmail.com&quot;&nbsp;target=&quot;_blank&quot;&gt;kieran.short@gmail.com&lt;/a&gt;&gt;&lt;/span&gt;&nbsp;wrote:&lt;br&gt;&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;This&nbsp;is&nbsp;strange.&nbsp;I&#39;m&nbsp;not&nbsp;sure&nbsp;what&nbsp;OpenSPIM&nbsp;fiji&nbsp;build&nbsp;we&nbsp;are&nbsp;running&nbsp;but&nbsp;it&nbsp;works&nbsp;here.&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;Have&nbsp;you&nbsp;tried&nbsp;going&nbsp;back&nbsp;to&nbsp;a&nbsp;base&nbsp;installation?&nbsp;&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;It&nbsp;sounds&nbsp;odd&nbsp;that&nbsp;uManager&nbsp;can&nbsp;even&nbsp;detect&nbsp;your&nbsp;pc&nbsp;as&nbsp;a&nbsp;&quot;amd64&quot;&nbsp;system&nbsp;as&nbsp;compatibility&nbsp;mode&nbsp;should&nbsp;mask&nbsp;that&nbsp;as&nbsp;32bit.&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;What&nbsp;says&nbsp;&quot;its&nbsp;an&nbsp;incompatible&nbsp;application&quot;?&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;Of&nbsp;course,&nbsp;mm&nbsp;*should*&nbsp;be&nbsp;able&nbsp;to&nbsp;load&nbsp;a&nbsp;32bit&nbsp;dll&nbsp;on&nbsp;64bit&nbsp;architecture.&nbsp;I&nbsp;don&#39;t&nbsp;understand&nbsp;why&nbsp;that&nbsp;should&nbsp;be&nbsp;a&nbsp;problem&nbsp;for&nbsp;mm&nbsp;in&nbsp;the&nbsp;first&nbsp;place.&nbsp;The&nbsp;whole&nbsp;x86&nbsp;instruction&nbsp;set&nbsp;is&nbsp;encapsulated&nbsp;within&nbsp;the&nbsp;x64&nbsp;set.&nbsp;To&nbsp;Johannes/Mark&nbsp;is&nbsp;this&nbsp;directly&nbsp;related&nbsp;to&nbsp;the&nbsp;available&nbsp;jre?&lt;/p&gt;<br>
+&lt;div&nbsp;class=&quot;HOEnZb&quot;&gt;&lt;div&nbsp;class=&quot;h5&quot;&gt;<br>
+<br>
+&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;On&nbsp;09/07/2014&nbsp;5:18&nbsp;AM,&nbsp;&quot;Ke&nbsp;Li&quot;&nbsp;&lt;&lt;a&nbsp;href=&quot;mailto:tianlankeke@gmail.com&quot;&nbsp;target=&quot;_blank&quot;&gt;tianlankeke@gmail.com&lt;/a&gt;&gt;&nbsp;wrote:&lt;br&nbsp;type=&quot;attribution&quot;&gt;&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;<br>
+<br>
+&lt;div&nbsp;dir=&quot;ltr&quot;&gt;Hi&nbsp;Kieran,&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;I&nbsp;followed&nbsp;your&nbsp;suggestion.&nbsp;While the&nbsp;problem&nbsp;still&nbsp;existed.&nbsp;When&nbsp;I&nbsp;tried&nbsp;to&nbsp;launch&nbsp;the&nbsp;uManager&nbsp;studio&nbsp;from&nbsp;the&nbsp;ImageJ(ImageJ-win32.exe)&nbsp;in&nbsp;the&nbsp;OpenSPIM.app&nbsp;folder,&nbsp;an&nbsp;error:&nbsp;&lt;i&gt;&lt;font&nbsp;color=&quot;#0000ff&quot;&gt;Failed&nbsp;to&nbsp;load&nbsp;the&nbsp;MMCoreJ_wrap&nbsp;native&nbsp;library&lt;/font&gt;&lt;/i&gt; (&lt;i&gt;&lt;font&nbsp;color=&quot;#0000ff&quot;&gt;Can&#39;t&nbsp;load&nbsp;IA&nbsp;32-bit.dll&nbsp;on&nbsp;a&nbsp;AMD&nbsp;64-bit&nbsp;platform&lt;/font&gt;&lt;/i&gt;)&nbsp;showed&nbsp;every&nbsp;time.&nbsp;I&nbsp;did&nbsp;the&nbsp;troubleshooting&nbsp;and&nbsp;the&nbsp;result&nbsp;showed&nbsp;that&nbsp;it&#39;s&nbsp;a&nbsp;incompatible&nbsp;application. &lt;/div&gt;<br>
+<br>
+<br>
+&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Is&nbsp;there&nbsp;any&nbsp;other&nbsp;way&nbsp;to&nbsp;solve&nbsp;this&nbsp;problem? &lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Thanks,&lt;/div&gt;&lt;div&gt;Ke &lt;/div&gt;&lt;/div&gt;&lt;div&nbsp;class=&quot;gmail_extra&quot;&gt;&lt;br&nbsp;clear=&quot;all&quot;&gt;&lt;div&gt;&lt;div&nbsp;dir=&quot;ltr&quot;&gt;Ke&nbsp;Li&lt;div&gt;Research&nbsp;Assistant &lt;/div&gt;<br>
+<br>
+<br>
+&lt;div&gt;Biomedical&nbsp;Engineering&lt;/div&gt;&lt;div&gt;Johns&nbsp;Hopkins&nbsp;University&lt;/div&gt;&lt;div&gt;Phone:&nbsp;&lt;a&nbsp;href=&quot;tel:410-934-9802&quot;&nbsp;value=&quot;+14109349802&quot;&nbsp;target=&quot;_blank&quot;&gt;410-934-9802&lt;/a&gt;&lt;/div&gt;&lt;div&gt;Email:&nbsp;&lt;a&nbsp;href=&quot;mailto:kli26@jhu.edu&quot;&nbsp;target=&quot;_blank&quot;&gt;kli26@jhu.edu&lt;/a&gt;&lt;/div&gt;<br>
+<br>
+&lt;/div&gt;&lt;/div&gt;<br>
+&lt;br&gt;&lt;br&gt;&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;On&nbsp;Mon,&nbsp;Jul&nbsp;7,&nbsp;2014&nbsp;at&nbsp;9:03&nbsp;PM,&nbsp;Ke&nbsp;Li&nbsp;&lt;span&nbsp;dir=&quot;ltr&quot;&gt;&lt;&lt;a&nbsp;href=&quot;mailto:tianlankeke@gmail.com&quot;&nbsp;target=&quot;_blank&quot;&gt;tianlankeke@gmail.com&lt;/a&gt;&gt;&lt;/span&gt;&nbsp;wrote:&lt;br&gt;&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;<br>
+<br>
+<br>
+Hi&nbsp;Kieran,&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Thanks&nbsp;so&nbsp;much for&nbsp;your&nbsp;solution&lt;span&gt;&lt;/span&gt;.&nbsp;I&#39;ll&nbsp;try&nbsp;it&nbsp;tomorrow.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Best,&lt;/div&gt;&lt;div&gt;Ke&lt;br&gt;&lt;br&gt;Kieran&nbsp;Short&nbsp;&lt;&lt;a&nbsp;href=&quot;mailto:kieran.short@gmail.com&quot;&nbsp;target=&quot;_blank&quot;&gt;kieran.short@gmail.com&lt;/a&gt;&gt;于2014年7月7日星期一写道：&lt;div&gt;<br>
+<br>
+<br>
+&lt;div&gt;&lt;br&gt;<br>
+&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;&lt;p&nbsp;dir=&quot;ltr&quot;&gt;Run&nbsp;it&nbsp;in&nbsp;compatibility&nbsp;mode.&nbsp;&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;To&nbsp;do&nbsp;this,&nbsp;do&nbsp;the&nbsp;following.&nbsp;&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;Right&nbsp;click&nbsp;imagej/fiji.&lt;br&gt;<br>
+Select&nbsp;properties.&lt;br&gt;<br>
+Go&nbsp;to&nbsp;the&nbsp;Compatibility&nbsp;tab.&lt;br&gt;<br>
+Check&nbsp;the&nbsp;&quot;run&nbsp;this&nbsp;program&nbsp;in&nbsp;compatibility&nbsp;mode&nbsp;for:&quot;&nbsp;box.&lt;br&gt;<br>
+Select&nbsp;Windows&nbsp;XP&nbsp;(Service&nbsp;Pack&nbsp;3).&lt;br&gt;<br>
+Click&nbsp;Apply.&lt;br&gt;<br>
+Click&nbsp;OK.&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;Then&nbsp;try&nbsp;and&nbsp;run&nbsp;it.&lt;/p&gt;<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;When&nbsp;I&nbsp;can&nbsp;work&nbsp;out&nbsp;how&nbsp;to&nbsp;include&nbsp;plugins&nbsp;during&nbsp;compilation&nbsp;I&nbsp;will&nbsp;try&nbsp;to&nbsp;compile.a&nbsp;win64&nbsp;version.&nbsp;At&nbsp;such&nbsp;q&nbsp;time&nbsp;i&#39;d&nbsp;happily&nbsp;provide&nbsp;binaries.&nbsp;Im&nbsp;only&nbsp;a&nbsp;part&nbsp;time&nbsp;python&nbsp;progammer&nbsp;though&nbsp;and&nbsp;therefore&nbsp;have&nbsp;little&nbsp;experience&nbsp;with&nbsp;debugging&nbsp;compilation&nbsp;issues.&nbsp;Since&nbsp;Compatibility&nbsp;Mode&nbsp;&#39;just&nbsp;works&#39;&nbsp;for&nbsp;us,&nbsp;it&nbsp;isn&#39;t&nbsp;a&nbsp;high&nbsp;priority&nbsp;for&nbsp;me.&nbsp;&lt;/p&gt;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&lt;p&nbsp;dir=&quot;ltr&quot;&gt;Cheers&nbsp;Kieran&lt;/p&gt;<br>
+&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;On&nbsp;08/07/2014&nbsp;10:32&nbsp;AM,&nbsp;&quot;Ke&nbsp;Li&quot;&nbsp;&lt;&lt;a&gt;tianlankeke@gmail.com&lt;/a&gt;&gt;&nbsp;wrote:&lt;br&nbsp;type=&quot;attribution&quot;&gt;<br>
+&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;<br>
+&lt;div&nbsp;dir=&quot;ltr&quot;&gt;Hi&nbsp;Mark&nbsp;&amp;&nbsp;Luke,&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;I&#39;m&nbsp;writing&nbsp;to&nbsp;ask&nbsp;whether&nbsp;there&nbsp;is&nbsp;a&nbsp;solution&nbsp;for&nbsp;running&nbsp;the&nbsp;openSPIM&nbsp;software&nbsp;in&nbsp;the&nbsp;64bit&nbsp;system?&nbsp;(The&nbsp;uManager&nbsp;studio&nbsp;can&#39;t&nbsp;be&nbsp;loaded&nbsp;normally&nbsp;in&nbsp;my&nbsp;64&nbsp;bit&nbsp;system)&nbsp;Can&nbsp;I&nbsp;get&nbsp;access&nbsp;to&nbsp;the&nbsp;source&nbsp;code&nbsp;for&nbsp;modification? &lt;/div&gt;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;img&nbsp;src=&quot;cid:ii_147135c1636c2da0&quot;&nbsp;alt=&quot;Inline&nbsp;image&nbsp;1&quot;&nbsp;width=&quot;455.00000000000006&quot;&nbsp;height=&quot;42.59132420091325&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Thanks,&lt;/div&gt;&lt;div&gt;Ke&lt;/div&gt;&lt;div&gt;&lt;br&nbsp;clear=&quot;all&quot;&gt;&lt;div&gt;&lt;div&nbsp;dir=&quot;ltr&quot;&gt;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Ke&nbsp;Li&lt;div&gt;Research&nbsp;Assistant &lt;/div&gt;&lt;div&gt;Biomedical&nbsp;Engineering&lt;/div&gt;&lt;div&gt;Johns&nbsp;Hopkins&nbsp;University&lt;/div&gt;&lt;div&gt;Phone:&nbsp;&lt;a&nbsp;href=&quot;tel:410-934-9802&quot;&nbsp;value=&quot;+14109349802&quot;&nbsp;target=&quot;_blank&quot;&gt;410-934-9802&lt;/a&gt;&lt;/div&gt;&lt;div&gt;Email:&nbsp;&lt;a&gt;kli26@jhu.edu&lt;/a&gt;&lt;/div&gt;<br>
+<br>
+<br>
+<br>
+<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;&lt;/div&gt;<br>
+&lt;br&gt;_______________________________________________&lt;br&gt;<br>
+OpenSPIM&nbsp;mailing&nbsp;list&lt;br&gt;<br>
+&lt;a&gt;OpenSPIM@openspim.org&lt;/a&gt;&lt;br&gt;<br>
+&lt;a&nbsp;href=&quot;http://openspim.org/mailman/listinfo/openspim&quot;&nbsp;target=&quot;_blank&quot;&gt;http://openspim.org/mailman/listinfo/openspim&lt;/a&gt;&lt;br&gt;<br>
+&lt;br&gt;&lt;/blockquote&gt;&lt;/div&gt;<br>
+&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;--&nbsp;&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;div&nbsp;dir=&quot;ltr&quot;&gt;Ke&nbsp;Li&lt;div&gt;Research&nbsp;Assistant &lt;/div&gt;&lt;div&gt;Biomedical&nbsp;Engineering&lt;/div&gt;&lt;div&gt;Johns&nbsp;Hopkins&nbsp;University&lt;/div&gt;&lt;div&gt;Phone:&nbsp;&lt;a&nbsp;href=&quot;tel:410-934-9802&quot;&nbsp;value=&quot;+14109349802&quot;&nbsp;target=&quot;_blank&quot;&gt;410-934-9802&lt;/a&gt;&lt;/div&gt;<br>
+<br>
+<br>
+&lt;div&gt;Email:&nbsp;&lt;a&nbsp;href=&quot;mailto:kli26@jhu.edu&quot;&nbsp;target=&quot;_blank&quot;&gt;kli26@jhu.edu&lt;/a&gt;&lt;/div&gt;<br>
+&lt;/div&gt;&lt;br&gt;<br>
+&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;<br>
+&lt;/blockquote&gt;&lt;/div&gt;<br>
+&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;<br>
+
+</tt>

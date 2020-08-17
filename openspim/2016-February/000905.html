@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fwd: [Bug 1214] java.lang.IllegalStateException when trying to open new script
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20%5BBug%201214%5D%20java.lang.IllegalStateException%20when%0A%20trying%20to%20open%20new%20script&In-Reply-To=%3C67f4ccd6438d22c242c368770f35cdd3%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000906.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fwd: [Bug 1214] java.lang.IllegalStateException when trying to open new script</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20%5BBug%201214%5D%20java.lang.IllegalStateException%20when%0A%20trying%20to%20open%20new%20script&In-Reply-To=%3C67f4ccd6438d22c242c368770f35cdd3%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] Fwd: [Bug 1214] java.lang.IllegalStateException when trying to open new script">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Mon Feb  8 05:03:57 CST 2016</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000906.html">[OpenSPIM] what shutter would you recommend?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#905">[ date ]</a>
+              <a href="thread.html#905">[ thread ]</a>
+              <a href="subject.html#905">[ subject ]</a>
+              <a href="author.html#905">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>To anybody who was using Fiji with OpenSPIM update site and was 
+experiencing java.lang.IllegalStateException errors lately (when 
+starting fiji and at some other times): it's fixed now, but you need to 
+remove some files manually, see below.
+
+Regards,
+Monika
+
+
+-------- Wiadomo&#347;&#263; oryginalna --------
+Temat: [Bug 1214] java.lang.IllegalStateException when trying to open 
+new script
+Data: 2016-02-04 17:12
+Od: <A HREF="http://openspim.org/mailman/listinfo/openspim">bugzilla at fiji.sc</A>
+Do: <A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>
+
+  Curtis Rueden changed bug 1214 [1]
+
+  		WHAT
+  		REMOVED
+  		ADDED
+
+  		Status
+  		CONFIRMED
+  		RESOLVED
+
+  		Resolution
+  		---
+  		FIXED
+
+  COMMENT # 4 [2] ON BUG 1214 [1] FROM CURTIS RUEDEN
+
+After consulting with Hongkee Moon, we discovered that the
+Micro-Manager-dev
+update site, used by the OpenSPIM update site, had many invalid/obsolete
+duplicate libraries present in the plugins/Micro-Manager subfolder.
+
+These duplicates interfered with the normal operations of ImageJ.
+
+I have removed all the duplicates from the Micro-Manager-dev update
+site, so
+this problem should not bite others using OpenSPIM anymore -- at least
+for now.
+
+To repair your local installation, remove all
+plugins/Micro-Manager/scijava-common-*.jar files from your installation.
+Then
+launch OpenSPIM and run the updater (which should now launch
+successfully) to
+update everything else.
+
+And please feel free to reopen this issue if the problem recurs.
+
+-------------------------
+  You are receiving this mail because:
+
+  	* You are on the CC list for the bug.
+  	* You reported the bug.
+
+
+
+Links:
+------
+[1] <A HREF="http://fiji.sc/bugzilla/show_bug.cgi?id=1214">http://fiji.sc/bugzilla/show_bug.cgi?id=1214</A>
+[2] <A HREF="http://fiji.sc/bugzilla/show_bug.cgi?id=1214#c4">http://fiji.sc/bugzilla/show_bug.cgi?id=1214#c4</A>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000906.html">[OpenSPIM] what shutter would you recommend?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#905">[ date ]</a>
+              <a href="thread.html#905">[ thread ]</a>
+              <a href="subject.html#905">[ subject ]</a>
+              <a href="author.html#905">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

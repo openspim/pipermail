@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] A question about the Light Sheet software
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20A%20question%20about%20the%20Light%20Sheet%20software&In-Reply-To=%3C7780ed8613d590.533f02ab%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001343.html">
+   <LINK REL="Next"  HREF="001349.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] A question about the Light Sheet software</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20A%20question%20about%20the%20Light%20Sheet%20software&In-Reply-To=%3C7780ed8613d590.533f02ab%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] A question about the Light Sheet software">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Apr  4 19:06:19 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001343.html">[OpenSPIM] Linux Support for The Imaging Source Cameras (Open	Source) (fwd)
+</A></li>
+        <LI>Next message: <A HREF="001349.html">[OpenSPIM] A question about the Light Sheet software
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1344">[ date ]</a>
+              <a href="thread.html#1344">[ thread ]</a>
+              <a href="subject.html#1344">[ subject ]</a>
+              <a href="author.html#1344">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Cristian,
+
+&gt;<i> I Updated the Fiji (just Help-&gt;Update Fiji) and had many files to update, I accepted all.
+</I>&gt;<i> Now is running ImageJ 1.48t and Java 1.6.0_24, and the MicroManager 1.4.x dev (Picture 1), but when I start the OpenSpim.app, appeared the message of &quot;Picture2&quot;, and doesn`t recognize the Cobolt device.
+</I>Well, somewhere, Alexis is shaking his head. ;-) He did, after all, warn us about this...
+
+
+Please try the following:
+1. Check that the file &quot;C:\Users\User\Desktop\OpenSPIM.app\mm\win32\mmgr_dal_Cobolt.dll&quot; exists (it probably does).
+2. Send a new CoreLog (from a day when this error was encountered) to me.
+3. Download a new, 32-bit version of Micro-Manager from the website[1] and install it.
+4. Copy the file &quot;C:\Program Files\Micro-Manager 1.4\mmgr_dal_Cobolt.dll&quot; [2] to &quot;C:\Users\User\Desktop\OpenSPIM.app\mm\win32\&quot; (and overwrite the file that exists there).
+5. Try launching the software again. If it still fails, send me yet another CoreLog.
+
+
+Thanks again, and I'm sorry for the trouble!
+Luke
+
+
+P.S. Please use reply-all, to keep the mailing list CC'd. :-)
+
+
+[1] <A HREF="https://micro-manager.org/wiki/Download_Micro-Manager_Latest_Release">https://micro-manager.org/wiki/Download_Micro-Manager_Latest_Release</A>
+[2] If your computer is 64-bit Windows 7, it will be under &quot;Program Files (x86)&quot; instead.
+
+On 04/01/14, Cristian Undurraga  wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> What`s could gone wrong?
+</I>&gt;<i> Best,
+</I>&gt;<i> 
+</I>&gt;<i> Cristian
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----- Picture1.jpg -----
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----- Picture2.jpg -----
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> El 31-03-2014, a las 547, Luke Stuyvenberg escribió:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; Hi Christian,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 03/31/14, Cristian Undurraga wrote:
+</I>&gt;<i> &gt;&gt; Hi Luke,
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I`m sending the file that you asked after to try to start a time lapse, specified a new directory in the desktop (new folder named &quot;1&quot; in the desktop).Thank you very much. The file seems to indicate that a necessary JAR file is missing for OME-TIFF output -- the most likely candidate is OpenSPIM.app/jars/bio-formats/formats-api-5.0.0.jar (the latest version available through the Fiji Updater).
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Did you download the OpenSPIM package from our website? If you run the Fiji Updater (Help -&gt; Update Fiji), it should give you a list of files that need to be updated. Most likely, you can accept the Updater's proposal by clicking &quot;Accept changes&quot; at the bottom; this should fix your issue.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I should be clear that this is different from updating Micro-Manager. Our plugin does not currently come with Micro-Manager, so if you download Micro-Manager's latest version from their website, you won't be able to control an OpenSPIM. The Fiji updater, on the other hand, downloads newer versions of the files OpenSPIM relies on.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; If you have any questions, or if this doesn't resolve your issue, please don't hesitate to mail me and/or the list (<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>) again!
+</I>&gt;<i> &gt; Thanks,
+</I>&gt;<i> &gt; Luke
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001343.html">[OpenSPIM] Linux Support for The Imaging Source Cameras (Open	Source) (fwd)
+</A></li>
+	<LI>Next message: <A HREF="001349.html">[OpenSPIM] A question about the Light Sheet software
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1344">[ date ]</a>
+              <a href="thread.html#1344">[ thread ]</a>
+              <a href="subject.html#1344">[ subject ]</a>
+              <a href="author.html#1344">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

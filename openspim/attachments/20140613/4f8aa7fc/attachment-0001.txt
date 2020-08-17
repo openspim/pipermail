@@ -1,0 +1,90 @@
+
+
+2014-06-13T10:28:25.246076 p:4460 t:2196 [dbg] Finished waiting.
+2014-06-13T10:28:25.246076 p:4460 t:2196 [dbg] Waiting for device Picard Twister...
+2014-06-13T10:28:25.277078 p:4460 t:2196 [dbg] Finished waiting.
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Waiting for device Picard Z Stage...
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Finished waiting.
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Waiting for device Picard XY Stage...
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Finished waiting.
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Waiting for device HamamatsuHam_DCAM...
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Finished waiting.
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Waiting for device CoherentCube...
+2014-06-13T10:28:25.278078 p:4460 t:2196 [dbg] Finished waiting.
+2014-06-13T10:28:25.306080 p:4460 t:2196 [dbg] attempt to set Picard Z Stage ÿto 0 um
+2014-06-13T10:28:25.325081 p:4460 t:4940 [LOG] > Beginning stack along dimension 0
+2014-06-13T10:28:25.327081 p:4460 t:4940 [LOG] > Non-exception throwable java.lang.NoClassDefFoundError: com/esotericsoftware/kryo/KryoSerializable caught from writer thread. Wrapping.
+2014-06-13T10:28:25.328081 p:4460 t:4940 [LOG] > java.lang.NoClassDefFoundError: com/esotericsoftware/kryo/KryoSerializable
+
+	at java.lang.ClassLoader.defineClass1(Native Method)
+
+	at java.lang.ClassLoader.defineClassCond(Unknown Source)
+
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+
+	at java.net.URLClassLoader.access$000(Unknown Source)
+
+	at java.net.URLClassLoader$1.run(Unknown Source)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+	at java.net.URLClassLoader.findClass(Unknown Source)
+
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+
+	at loci.common.Location.getHandle(Location.java:308)
+
+	at loci.common.Location.getHandle(Location.java:293)
+
+	at loci.common.Location.getHandle(Location.java:283)
+
+	at loci.common.RandomAccessOutputStream.<init>(RandomAccessOutputStream.java:64)
+
+	at loci.formats.FormatWriter.setId(FormatWriter.java:283)
+
+	at loci.formats.out.TiffWriter.setId(TiffWriter.java:139)
+
+	at loci.formats.out.OMETiffWriter.setId(OMETiffWriter.java:216)
+
+	at loci.formats.FormatWriter.changeOutputFile(FormatWriter.java:118)
+
+	at spim.progacq.OMETIFFHandler.openWriter(OMETIFFHandler.java:119)
+
+	at spim.progacq.OMETIFFHandler.beginStack(OMETIFFHandler.java:137)
+
+	at spim.progacq.AsyncOutputWrapper.handleNext(AsyncOutputWrapper.java:229)
+
+	at spim.progacq.AsyncOutputWrapper.access$300(AsyncOutputWrapper.java:18)
+
+	at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:98)
+
+	at java.lang.Thread.run(Unknown Source)
+
+Caused by: java.lang.ClassNotFoundException: com.esotericsoftware.kryo.KryoSerializable
+
+	at java.net.URLClassLoader$1.run(Unknown Source)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+	at java.net.URLClassLoader.findClass(Unknown Source)
+
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+
+	... 25 more
+2014-06-13T10:28:25.348082 p:4460 t:2196 [dbg] Device CoherentCube debug message: CoherentCube::Send ÿ ÿ ÿ ÿ ÿ L=1
+2014-06-13T10:28:25.348082 p:4460 t:2196 [dbg] Device COM4 debug message: SetCommand -> L=1\r
+2014-06-13T10:28:25.401085 p:4460 t:2196 [dbg] Device COM4 debug message: GetAnswer # retries = 54
+2014-06-13T10:28:25.401085 p:4460 t:2196 [dbg] Device COM4 debug message: GetAnswer <- L=1\r\n
+2014-06-13T10:28:25.401085 p:4460 t:2196 [dbg] Device CoherentCube debug message: CoherentCube::ReceiveOneLine L=1
+2014-06-13T10:28:25.519092 p:4460 t:4104 [dbg] Device CoherentCube debug message: CoherentCube::Send ÿ ÿ ÿ ÿ ÿ ?SP
+2014-06-13T10:28:25.519092 p:4460 t:4104 [dbg] Device COM4 debug message: SetCommand -> ?SP\r
+
+

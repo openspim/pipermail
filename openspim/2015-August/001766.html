@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Open Spim Questions
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Open%20Spim%20Questions&In-Reply-To=%3Cfaeedb39361dab7872777f6f8752d36d%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001765.html">
+   <LINK REL="Next"  HREF="001767.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Open Spim Questions</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Open%20Spim%20Questions&In-Reply-To=%3Cfaeedb39361dab7872777f6f8752d36d%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] Open Spim Questions">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Thu Aug 27 03:18:19 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001765.html">[OpenSPIM] 回复： An error occured when click the &quot;Acquire SPIM image&quot;menu button
+</A></li>
+        <LI>Next message: <A HREF="001767.html">[OpenSPIM] Open Spim Questions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1766">[ date ]</a>
+              <a href="thread.html#1766">[ thread ]</a>
+              <a href="subject.html#1766">[ subject ]</a>
+              <a href="author.html#1766">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Evangelos,
+
+I am replacing the obsolete OpenSPIM mailing list address with the one 
+that we use since May 2013, so that the OpenSPIM mailing list 
+subscribers can see it.
+
+Ciao,
+Johannes
+
+On 2015-08-26 20:29, Evangelos G. Gatzogiannis wrote:
+&gt;<i> Dear Peter and OpenSpim team,
+</I>&gt;<i> 
+</I>&gt;<i> In brief, I have built a custom light-sheet microscope based off of
+</I>&gt;<i> micromanager.  Future experiment will focus on early embryos and need
+</I>&gt;<i> high speed imaging and fast rotation with 2 cameras.
+</I>&gt;<i> 
+</I>&gt;<i> I have a few detailed questions that could help make OpenSpim even
+</I>&gt;<i> more versatile by supporting faster Physik Instrumente hardware, such
+</I>&gt;<i> as for early embryos and fast developing small organisms.
+</I>&gt;<i> 
+</I>&gt;<i> I appreciate any comments and help, as described below.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Is it  possible that OpenSPIM only needs minor enhancement to allow
+</I>&gt;<i> the use of Physik Instrumente hardware for 4-D positioning? I would
+</I>&gt;<i> like to use PI Hera piezos PI-Hera P-629.1CD and PI U-628.03 rotation
+</I>&gt;<i> for moving sample through the sheet, and rotating the sample, in
+</I>&gt;<i> addition to an x stage PI Z-522.040 for repositioning the sample in z.
+</I>&gt;<i> These are faster, more precise and have less hysteresis and backlash
+</I>&gt;<i> than existing motors.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----
+</I>&gt;<i> 
+</I>&gt;<i> We are using Micro-Manager on a 64-bit Windows 7 platform to build a
+</I>&gt;<i> light sheet microscope. We are interested in trying OpenSPIM since its
+</I>&gt;<i> write-up indicates that it addresses issues that face us. One issue is
+</I>&gt;<i> handling loss of focus when rotating a specimen. The other is drift.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Our application positioning the specimen in X, Y, and Z, and rotating
+</I>&gt;<i> it (in axis Theta). The mount for our specimen requires that we treat
+</I>&gt;<i> the Y axis a Z, and the Z axis as Y.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Our goal is dual-camera acquisition of Z-series at multiple angles of 
+</I>&gt;<i> rotation.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> For proof of concept with Micro-Manager, we are using a Physik
+</I>&gt;<i> Instrumente C-884.4D stepper motor controller with the Physik
+</I>&gt;<i> Instrumente GCS-2 device adapter, which we have configured to work
+</I>&gt;<i> specifically with the C-884.4D controller. The result works, but (a)
+</I>&gt;<i> rotation is too slow, and (b) slewing in our &quot;Z&quot; axis is too slow. We
+</I>&gt;<i> must replace that controller and the stepper motors. Physik
+</I>&gt;<i> Instrumente has offered us a (fill in) controller.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> To our knowledge, we face these problems:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 1. Constraint in choice of hardware. Micro-Manager (and therefor
+</I>&gt;<i> OpenSPIM) does not allow one to treat two linear stages as an X-Y
+</I>&gt;<i> stage using arbitrary single-axis controllers or using one axis of a
+</I>&gt;<i> multi-axis controller. Unless that is changed, our choices of vendor
+</I>&gt;<i> are limited. Physik Instrumente implements a scheme in which for the X
+</I>&gt;<i> and Y axes one specifies the controller that is used. If we do not use
+</I>&gt;<i> a Physik Instrumente controller, we are restricted to a controller
+</I>&gt;<i> that implements a similar scheme, or we must use a controller that
+</I>&gt;<i> implements all the axes.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 2. We know that OpenSPIM is written for a Picard Industries
+</I>&gt;<i> USB-4D-Stage. It appears that the SpimAcquisition plugin includes
+</I>&gt;<i> specific code for interfacing the Picard USB-4D's Z-Stage, X-Y Stage
+</I>&gt;<i> and Rotator (its Theta axis). We would need analogous code to allow us
+</I>&gt;<i> to use the controller or controllers on which we settle. Links below
+</I>&gt;<i> show the specific code for the Picard USB-4D, written in Java.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> How complicated would it be for us to extend OpenSPIM to allow us to
+</I>&gt;<i> use four axes of Physik Instrumente devices for our purpose?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 3. We would try modifying the SPIMAcquisition plug-in ourselves, but
+</I>&gt;<i> the documentation for OpenSPIM leaves us wondering about the version
+</I>&gt;<i> of the Java SE Development Kit that is required. The documentation for
+</I>&gt;<i> Micro-Manager indicates that OpenSPIM is built with the Version 1.6
+</I>&gt;<i> Development Kit, which is outdated at this point - the latest release
+</I>&gt;<i> is version 6u45. Would we run into trouble using the Version 1.8 ?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I greatly appreciate your comments and help.
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> Evangelos
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001765.html">[OpenSPIM] 回复： An error occured when click the &quot;Acquire SPIM image&quot;menu button
+</A></li>
+	<LI>Next message: <A HREF="001767.html">[OpenSPIM] Open Spim Questions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1766">[ date ]</a>
+              <a href="thread.html#1766">[ thread ]</a>
+              <a href="subject.html#1766">[ subject ]</a>
+              <a href="author.html#1766">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

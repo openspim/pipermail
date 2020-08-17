@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Flash4.0 with openspim?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Flash4.0%20with%20openspim%3F&In-Reply-To=%3C7740ea97180ef3.534edb59%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001360.html">
+   <LINK REL="Next"  HREF="001365.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Flash4.0 with openspim?</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Flash4.0%20with%20openspim%3F&In-Reply-To=%3C7740ea97180ef3.534edb59%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Flash4.0 with openspim?">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Apr 16 19:34:49 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001360.html">[OpenSPIM] Flash4.0 with openspim?
+</A></li>
+        <LI>Next message: <A HREF="001365.html">[OpenSPIM] Flash4.0 with openspim?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1364">[ date ]</a>
+              <a href="thread.html#1364">[ thread ]</a>
+              <a href="subject.html#1364">[ subject ]</a>
+              <a href="author.html#1364">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Peter,
+
+On 04/14/14, Peter Pellionisz 
+ wrote:
+&gt;<i> Hi Openspim community!
+</I>&gt;<i> 
+</I>&gt;<i> I am assembling a system at UCLA and would like to know if anyone is successfully using the openspim software with a flash4.0 camera? If so, what may I ask what is the specific method to connect and control the Flash4.0 with a 32bit computer running windows XP? I did not think this was possible but according to other posts, some may have solved this issue.
+</I>
+
+There seems to be a lot of interest in this camera! Do you know, does it work with ordinary Micro-Manager on Windows XP 32-bit? If so, it should work without issue in OpenSPIM as well, since we use the same code...
+
+
+But I gather the problem might be the first part -- according to the DCAM-API website, the Flash4.0 requires hardware (a capture card) that does not support Windows XP. However, it claims to support Windows 7 32-bit; I believe OpenSPIM will run on that operating system as well...
+
+
+
+
+
+The Hiedelberg Group has apparently used this camera successfully: <A HREF="http://openspim.org/Who_has_an_OpenSPIM%3F">http://openspim.org/Who_has_an_OpenSPIM%3F</A> Although I do not know if they are using 32- or 64-bit.
+
+
+
+
+
+
+&gt;<i> Also, is there any update with using this system for Windows 7 (64-bit), or even just connecting the PICARD stage with micromanager running on Windows 7? I have not yet been able to achieve either objective.
+</I>
+
+
+
+We're working on cleaning up the PicardStage device adapter. Once we have, we hope to submit it upstream, to Micro-Manager, to be included in their future builds -- both 32- and 64-bit. However, since we aren't there just yet, I will provide some more detailed answers to these questions:
+
+
+To the first part of your question, yes -- in a sense, this is our active goal. The device adapter can already build in 64-bit[1], and since the OpenSPIM plugin is Java (and will run anywhere), our biggest obstacle is making the 64-bit device adapter available. Some people who have contacted this list have built the device adapter for themselves and gotten it working, so it's certainly possible!
+
+
+I hope this answers some of your questions; if you have more, feel free to send another e-mail to the list!
+
+
+Thanks,
+Luke
+
+
+[1] If you're feeling daring, and have some programming experience, see <A HREF="http://openspim.org/How_to_build_the_software#The_easy_way">http://openspim.org/How_to_build_the_software#The_easy_way</A> for details on setting up the development environment we use to advance the OpenSPIM software. From there, you should be able to build our device adapter in the Release x64 configuration. If you want to go this route and have some time to invest, please e-mail me again, and I can try to provide more detailed instructions!
+
+
+
+
+
+&gt;<i> 
+</I>&gt;<i> Any help or advice is much appreciated!
+</I>&gt;<i> 
+</I>&gt;<i> Thanks!
+</I>&gt;<i> -Peter Pellionisz
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001360.html">[OpenSPIM] Flash4.0 with openspim?
+</A></li>
+	<LI>Next message: <A HREF="001365.html">[OpenSPIM] Flash4.0 with openspim?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1364">[ date ]</a>
+              <a href="thread.html#1364">[ thread ]</a>
+              <a href="subject.html#1364">[ subject ]</a>
+              <a href="author.html#1364">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

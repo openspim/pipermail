@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Windows 7 write to disk error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Windows%207%20write%20to%20disk%20error&In-Reply-To=%3C7F15EEAA7E1C0146BF395C97120488FF12ADEA08%40mlbxv14.nih.gov%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001399.html">
+   <LINK REL="Next"  HREF="001397.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Windows 7 write to disk error</H1>
+    <B>Dalle Nogare, Damian (NIH/NICHD) [E]</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Windows%207%20write%20to%20disk%20error&In-Reply-To=%3C7F15EEAA7E1C0146BF395C97120488FF12ADEA08%40mlbxv14.nih.gov%3E"
+       TITLE="[OpenSPIM] Windows 7 write to disk error">damian.dallenogare at nih.gov
+       </A><BR>
+    <I>Thu Jun 19 10:35:34 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001399.html">[OpenSPIM] Windows 7 write to disk error
+</A></li>
+        <LI>Next message: <A HREF="001397.html">[OpenSPIM] Input data for SPIM Registration PlugIn
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1402">[ date ]</a>
+              <a href="thread.html#1402">[ thread ]</a>
+              <a href="subject.html#1402">[ subject ]</a>
+              <a href="author.html#1402">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+It turns out using the advanced mode updater as described in the FIJI FAQ did the trick. Everything seems to be working normally now and the asynchronous write-to-disk works as expected. We must have had something out of date in the Bio-Formats writer.
+
+Thanks for your help,
+
+damian
+
+________________________________________
+From: Luke Stuyvenberg [<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>]
+Sent: Monday, June 16, 2014 1:21 PM
+To: Castranova, Daniel (NIH/NICHD) [C]; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Cc: Dalle Nogare, Damian (NIH/NICHD) [E]
+Subject: Re: [OpenSPIM] Windows 7 write to disk error
+
+Hi Dan,
+On 06/13/14, &quot;Castranova, Daniel (NIH/NICHD) [C]&quot; wrote:
+&gt;<i> Hi Everyone,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> We recently moved our open-SPIM set up from a Windows XP machine to a Windows 7 machine. Everything is working except when we try to save our stacks to disk instead of RAM. If Asynchronous Output is not selected nothing happens - Oh-Snap changes to “Abort” and the bar underneath says “Not Acquiring”. If Asynchronous Output is selected the laser flashes once and we get the following message:
+</I>&gt;<i> 
+</I>&gt;<i> “Wrapped throwable; see core log for details: com/esotericsoftware/kryo/KryoSerialable”
+</I>
+
+This is certainly new. The Bio-Formats writer seems to be loading that serialization class when it attempts to open the first OME-TIFF file for writing. Some questions:
+- Are you saving the images anywhere unusual (i.e. a network drive), as opposed to a local disk?
+- Have you updated Bio-Formats on the new machine? Are you using the daily build or the release version?
+- Do you have other update sites enabled that might also be using this library?
+- Does the following file exist: &lt;OpenSPIM.app&gt;/jars/kryo-2.21-shaded.jar?
+Please make sure your installation is totally up to do date (have a look at the Fiji FAQ[1] to be completely sure).
+
+
+&gt;<i> The Log is attached.
+</I>
+
+Would it be possible to get a more complete log file, i.e. one of the CoreLogYYYYMMDD files from the application directory? It's possible there are details near the start of the program that could shed some light on this.
+
+
+Thanks!
+Luke
+
+
+[1] <A HREF="http://fiji.sc/FAQ#How_can_I_verify_that_my_Fiji_is_really_100.25_up_to_date.3F">http://fiji.sc/FAQ#How_can_I_verify_that_my_Fiji_is_really_100.25_up_to_date.3F</A> contains an in-depth guide to making sure every file is up to date.
+
+
+On 06/13/14, &quot;Castranova, Daniel (NIH/NICHD) [C]&quot;  wrote:
+&gt;<i> Hi Everyone,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> We recently moved our open-SPIM set up from a Windows XP machine to a Windows 7 machine. Everything is working except when we try to save our stacks to disk instead of RAM. If Asynchronous Output is not selected nothing happens - Oh-Snap changes to “Abort” and the bar underneath says “Not Acquiring”. If Asynchronous Output is selected the laser flashes once and we get the following message:
+</I>&gt;<i>
+</I>&gt;<i> “Wrapped throwable; see core log for details: com/esotericsoftware/kryo/KryoSerialable”
+</I>&gt;<i>
+</I>&gt;<i> The Log is attached.
+</I>&gt;<i>
+</I>&gt;<i> Any help would be greatly appreciated.
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i>
+</I>&gt;<i> Dan
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Daniel Castranova
+</I>&gt;<i> Aquatic Research Specialist
+</I>&gt;<i> Charles River Laboratories - Contractor
+</I>&gt;<i> Unit on Vertebrate Organogenesis
+</I>&gt;<i> Program in Genomics of Differentiation, NICHD, NIH
+</I>&gt;<i> Building 6B, Room 322, 6 Center Drive
+</I>&gt;<i> Bethesda, MD 20892
+</I>&gt;<i> (301)594-0904
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">castrand at mail.nih.gov</A>
+</I>&gt;<i>
+</I>&gt;<i> &lt;&quot;`DDD&gt;&lt;
+</I>&gt;<i> &lt;&quot;`CCC&gt;&lt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+
+----------------------------------
+Damian Dalle Nogare
+Section on Neural Developmental Dynamics
+Program in the Genomics of Differentiation
+Eunice Kennedy Shriver National Institute of Child Health and Human Development
+National Institutes of Health
+Bethesda, MD 20892
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001399.html">[OpenSPIM] Windows 7 write to disk error
+</A></li>
+	<LI>Next message: <A HREF="001397.html">[OpenSPIM] Input data for SPIM Registration PlugIn
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1402">[ date ]</a>
+              <a href="thread.html#1402">[ thread ]</a>
+              <a href="subject.html#1402">[ subject ]</a>
+              <a href="author.html#1402">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

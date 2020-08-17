@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20WG%3A%20Re%3A%20WG%3A%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%0A%20plus%22%09problem%20persisting&In-Reply-To=%3C74e0cd4342b7a.527ba551%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001232.html">
+   <LINK REL="Next"  HREF="001228.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20WG%3A%20Re%3A%20WG%3A%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%0A%20plus%22%09problem%20persisting&In-Reply-To=%3C74e0cd4342b7a.527ba551%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Thu Nov  7 14:36:01 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001232.html">[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting
+</A></li>
+        <LI>Next message: <A HREF="001228.html">[OpenSPIM] openspim question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1233">[ date ]</a>
+              <a href="thread.html#1233">[ thread ]</a>
+              <a href="subject.html#1233">[ subject ]</a>
+              <a href="author.html#1233">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Edgar,
+
+I just finished uploading a new version of the plugin that should be considerably more locale-conscious. I've checked most of the obvious features under both the German (de-DE) and United States (en-US) locales and noticed no issues. Please let me know if your troubles persist after updating Fiji!
+
+
+Thanks,
+Luke
+
+On 11/07/13, Luke Stuyvenberg  wrote:
+&gt;<i> Hi Edgar,
+</I>&gt;<i> 
+</I>&gt;<i> I believe you're correct; this is doubtless a result of the move to actual micrometer units, but to be more precise, I think I'm dealing with the strings in a non-localizable way. Somewhere, I'm trying to parse a floating point number and expecting (demanding) that the delimiter be a period -- which is blatantly unfair of me; I seem to have forgotten that this is far from an international standard! :-) I'll hopefully put out a fix before I leave today, providing I can find the source of the mistake; now that I know what I'm looking for, things should proceed much more smoothly.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thank you for your patience!
+</I>&gt;<i> Luke
+</I>&gt;<i> 
+</I>&gt;<i> On 11/07/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; Hi Luke,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; There was not message error and no response when launching the SPIMage acquisition plugin, that was the most surprising.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; About the hs_err file all were the same even if I was using the Demo Camera configuration. Only using the Windows 7 64 bit PC I didn't
+</I>&gt;<i> &gt; get any hs_err file.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Today I launch the plugin and it works again, I really don't know why it was not working on monday (even in two different PCs).
+</I>&gt;<i> &gt; Surprisingly I got a message window when pressing &quot;Stack at this Z plus&quot; button. The message was: Couldn't create stack: For input string &quot;3493,500&quot;, 
+</I>&gt;<i> &gt; for this case 3493,500 was the currently Z position when pressing the &quot;Stack at this Z plus&quot; button.
+</I>&gt;<i> &gt; Today I didn't get any hs_err file by the way. :-)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I attach two corelog files, in one the debug log option is enabled. In both corelog files the first attempt is using the demo cam hardware configuration,
+</I>&gt;<i> &gt; the secon attempt is using the TIS CAM hardware configuration.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; What I could guess from the corelog file is that the problem could be the way the value of the Z position is handled. I am not sure but I think
+</I>&gt;<i> &gt; that this issue started since the resolution in the stage position values are managed as 1,5 um instead of 1 um.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Hope this information is useful. Thanks again.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Kind regards,
+</I>&gt;<i> &gt; Edgar
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; _________________________________________________________________________
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> &gt; Edgar Escobar Nieto 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Steinbachstraße 17 
+</I>&gt;<i> &gt; 52074 Aachen 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> &gt; <A HREF="http://www.ipt.fraunhofer.de(http://www.ipt.fraunhofer.de/(http://www.ipt.fraunhofer.de/(http://www.ipt.fraunhofer.de/">http://www.ipt.fraunhofer.de(http://www.ipt.fraunhofer.de/(http://www.ipt.fraunhofer.de/(http://www.ipt.fraunhofer.de/</A>&quot; target=&quot;1&quot;&gt; <A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A> 
+</I>&gt;<i> &gt; _________________________________________________________________________ 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; -----Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; schrieb: ----- An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+</I>&gt;<i> &gt; Von: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+</I>&gt;<i> &gt; Datum: 06.11.2013 21:52
+</I>&gt;<i> &gt; Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> &gt; Betreff: Re: WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Hi Edgar,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 11/04/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; &gt; I attach the corelog and the error file although they don't say too much about what is the cause of the problem.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Curiouser and curiouser -- not a single error is produced by the plugin launch, and yet it isn't displayed? It certainly seems to be a much deeper issue than I initially suspected.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 11/04/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; &gt; Now that I update Fiji again I am not able to start the plugin SPIMage Acquisition. It is so strange because
+</I>&gt;<i> &gt; &gt; even using different hardware configurations (D_cam instead of TIS_cam) it doesn't work. :-/
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; A different camera adapter had no better luck? Did it too produce an hs_err file that might be different from the others?
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Since you aren't using the Cube, you might try enabling the further debug output, if it's not already turned on: From Micro-Manager, click Tools -&gt; Options, and check Debug Log Enabled. This will produce significantly more output in the Core Log. (I say the absence of a Cube is an advantage in this situation; the laser is queried once per second, and in debug logging mode, the messages become difficult to sift through.) With luck, this might provide more detailed information.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Thank you again,
+</I>&gt;<i> &gt; Luke
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 11/04/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+</I>&gt;<i> &gt; &gt; Hi Luke,
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Now that I update Fiji again I am not able to start the plugin SPIMage Acquisition. It is so strange because
+</I>&gt;<i> &gt; &gt; even using different hardware configurations (D_cam instead of TIS_cam) it doesn't work. :-/
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; I tried also in the other computer (Win 7, 64 bit) and didn't work as well.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; I attach the corelog and the error file although they don't say too much about what is the cause of the problem.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Kind regards,
+</I>&gt;<i> &gt; &gt; Edgar
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; _________________________________________________________________________
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> &gt; &gt; Edgar Escobar Nieto 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Steinbachstraße 17 
+</I>&gt;<i> &gt; &gt; 52074 Aachen 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001232.html">[OpenSPIM] WG: Re: WG: Antwort: Re: &quot;Stack at this Z plus&quot;	problem persisting
+</A></li>
+	<LI>Next message: <A HREF="001228.html">[OpenSPIM] openspim question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1233">[ date ]</a>
+              <a href="thread.html#1233">[ thread ]</a>
+              <a href="subject.html#1233">[ subject ]</a>
+              <a href="author.html#1233">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

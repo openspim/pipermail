@@ -1,0 +1,332 @@
+From huyan1020 at sjtu.edu.cn  Wed Jan 11 19:45:48 2017
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Thu, 12 Jan 2017 09:45:48 +0800 (CST)
+Subject: [OpenSPIM] High background in the light sheet microscopy images
+Message-ID: <808745243.10626583.1484185548098.JavaMail.zimbra@sjtu.edu.cn>
+
+Hello, everyone.
+
+I built a light sheet microscopy followed as the openSPIM.
+But I got the images with high background as shown in the attachment.
+The exposure time is 80ms.
+The fluorescent beads, which are embedded in 6% PAGE gel, are in a cuvette.
+
+Will anyone know the reason for such high background?
+What can I do to reduce the background?
+
+Thank you so much.
+
+Best regards,
+Yan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: img_8_2.tif
+Type: image/tiff
+Size: 4200168 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20170112/3cfbe44d/attachment-0001.tif>
+
+From Michael_Weber at hms.harvard.edu  Wed Jan 11 20:16:52 2017
+From: Michael_Weber at hms.harvard.edu (Weber, Michael)
+Date: Thu, 12 Jan 2017 02:16:52 +0000
+Subject: [OpenSPIM] High background in the light sheet microscopy images
+In-Reply-To: <808745243.10626583.1484185548098.JavaMail.zimbra@sjtu.edu.cn>
+References: <808745243.10626583.1484185548098.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <BLUPR0701MB1745BB0C561FC91E37562038DD790@BLUPR0701MB1745.namprd07.prod.outlook.com>
+
+Hi Yan,
+
+
+
+The beads in the left part of your image look suspicious, are you illuminating and/or detecting through the cuvette?
+
+
+
+Best,
+
+Michael
+
+
+
+From: 胡衍<mailto:huyan1020 at sjtu.edu.cn>
+Sent: Wednesday, January 11, 2017 8:46 PM
+To: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: [OpenSPIM] High background in the light sheet microscopy images
+
+
+
+Hello, everyone.
+
+I built a light sheet microscopy followed as the openSPIM.
+But I got the images with high background as shown in the attachment.
+The exposure time is 80ms.
+The fluorescent beads, which are embedded in 6% PAGE gel, are in a cuvette.
+
+Will anyone know the reason for such high background?
+What can I do to reduce the background?
+
+Thank you so much.
+
+Best regards,
+Yan
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170112/6a1eae59/attachment.html>
+
+From ctr26 at cam.ac.uk  Mon Jan 16 12:30:00 2017
+From: ctr26 at cam.ac.uk (Craig Russell)
+Date: Mon, 16 Jan 2017 18:30:00 +0000
+Subject: [OpenSPIM] High background in the light sheet microscopy images
+In-Reply-To: <BLUPR0701MB1745BB0C561FC91E37562038DD790@BLUPR0701MB1745.namprd07.prod.outlook.com>
+References: <808745243.10626583.1484185548098.JavaMail.zimbra@sjtu.edu.cn>
+ <BLUPR0701MB1745BB0C561FC91E37562038DD790@BLUPR0701MB1745.namprd07.prod.outlook.com>
+Message-ID: <59c74fb7-6c5e-c942-a1f5-01f1b1d3f14e@cam.ac.uk>
+
+You're also saturating your image with your beads, feel free to reduce
+the power/exposure time.
+
+Craig Russell, PhD Candidate
+Dept. Chemical Engineering and Biotechnology, Cambridge
++44 (0)7521650931 | laser.ceb.cam.ac.uk <http://laser.ceb.cam.ac.uk/>
+Weber, Michael:
+>
+> Hi Yan,
+>
+>  
+>
+> The beads in the left part of your image look suspicious, are you
+> illuminating and/or detecting through the cuvette?
+>
+>  
+>
+> Best,
+>
+> Michael
+>
+>  
+>
+> *From: *胡衍 <mailto:huyan1020 at sjtu.edu.cn>
+> *Sent: *Wednesday, January 11, 2017 8:46 PM
+> *To: *openspim at openspim.org <mailto:openspim at openspim.org>
+> *Subject: *[OpenSPIM] High background in the light sheet microscopy images
+>
+>  
+>
+> Hello, everyone.
+>
+> I built a light sheet microscopy followed as the openSPIM.
+> But I got the images with high background as shown in the attachment.
+> The exposure time is 80ms.
+> The fluorescent beads, which are embedded in 6% PAGE gel, are in a
+> cuvette.
+>
+> Will anyone know the reason for such high background?
+> What can I do to reduce the background?
+>
+> Thank you so much.
+>
+> Best regards,
+> Yan
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From m.pawlowska at nencki.gov.pl  Fri Jan 20 07:34:49 2017
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 20 Jan 2017 14:34:49 +0100
+Subject: [OpenSPIM] variable PSF across light sheet
+Message-ID: <op.yuc9cb2dahhlbl@pc507-99ff.ibd>
+
+Hi all,
+
+maybe somebody know a paper on dealing with variable PSF across the image,  
+resulting from the changing light-sheet thickness (i.e. light sheet  
+getting thicker further away from the centre)? For bigger samples, as the  
+ones I image, keeping the light sheet thickness uniform would result in a  
+very thick light sheet, so I was wondering if there is another method,  
+given that PSF changes in a predictable way.
+
+Best regards,
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From dthevalingam at gmail.com  Mon Jan 23 17:14:11 2017
+From: dthevalingam at gmail.com (Donald Thevalingam)
+Date: Mon, 23 Jan 2017 18:14:11 -0500
+Subject: [OpenSPIM] =?utf-8?q?OpenSPIM_-_=C3=981=22_Filter_Holder_Base_scr?=
+	=?utf-8?q?ew_dimensions?=
+Message-ID: <CAPN20VTtG2RPAYd+xBGuUHcvPUw=kCL6O5K8cML1umf9YdO+2Q@mail.gmail.com>
+
+Hi,
+
+Just had a quick question regarding the specs for the M3 screws used to
+clamp together the base and the top pieces.
+According to the design file, the the clearance holes are spec'd for M3
+screws but the drawing specify a 2.4 mm clearance at the base.  Should that
+be 3.0 mm or am I missing something?
+
+
+Thanks
+Donald
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170123/0f04a33c/attachment.html>
+
+From chens18 at rpi.edu  Wed Jan 25 09:58:00 2017
+From: chens18 at rpi.edu (Kathleen Chen)
+Date: Wed, 25 Jan 2017 10:58:00 -0500
+Subject: [OpenSPIM] Manufacturing of parts
+Message-ID: <CAGv7iOjmYpPUxc1bGnO-Pi56eORQ4q0o76=XEfOhtBK9vbcbAw@mail.gmail.com>
+
+Hello,
+
+Does anyone have any insight on the best materials to use for manufacturing
+of the "self-made" parts? We were planning to make manufacture most of the
+parts out of aluminum but will that cause reflection within the system
+during acquisition? Additionally, can the sample chamber in the wiki be
+made of aluminum as well or is acrylic a better option?
+
+Thanks,
+Kathleen Chen
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170125/6b25febe/attachment.html>
+
+From brau at ipmc.cnrs.fr  Wed Jan 25 10:59:38 2017
+From: brau at ipmc.cnrs.fr (=?UTF-8?B?RnLDqWTDqXJpYyBCUkFV?=)
+Date: Wed, 25 Jan 2017 17:59:38 +0100
+Subject: [OpenSPIM] Manufacturing of parts
+In-Reply-To: <CAGv7iOjmYpPUxc1bGnO-Pi56eORQ4q0o76=XEfOhtBK9vbcbAw@mail.gmail.com>
+References: <CAGv7iOjmYpPUxc1bGnO-Pi56eORQ4q0o76=XEfOhtBK9vbcbAw@mail.gmail.com>
+Message-ID: <57663f84-0e02-1d86-e64a-cb91458134c2@ipmc.cnrs.fr>
+
+Dear Kathleen,
+
+You could ask for anodisation of these self-made parts in aluminium : 
+many differents films exists to coat the aluminium in black to prevent 
+reflections and protect the aluminium from agressive buffers.
+
+Best regards,
+
+Frédéric Brau
+
+
+Le 25/01/2017 à 16:58, Kathleen Chen a écrit :
+> Hello,
+>
+> Does anyone have any insight on the best materials to use for 
+> manufacturing of the "self-made" parts? We were planning to make 
+> manufacture most of the parts out of aluminum but will that cause 
+> reflection within the system during acquisition? Additionally, can the 
+> sample chamber in the wiki be made of aluminum as well or is acrylic a 
+> better option?
+>
+> Thanks,
+> Kathleen Chen
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Frédéric Brau <mailto:%20brau at ipmc.cnrs.fr>
+Institut de Pharmacologie Moléculaire et Cellulaire - UMR7275 CNRS/UNS 
+<http://www.ipmc.cnrs.fr>
+660, Route des Lucioles
+06560 VALBONNE
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme MICA: Microscopie Imagerie Côte d'Azur <http://mica.unice.fr>
+Réseau Technologique de Microscopie de Fluorescence Multidimensionnelle 
+<http://rtmfm.cnrs.fr>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170125/be3a1a27/attachment.html>
+
+From S.Hoehn at damtp.cam.ac.uk  Sun Jan 29 11:57:09 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Sun, 29 Jan 2017 17:57:09 +0000
+Subject: [OpenSPIM] real time projections, batch processing
+Message-ID: <5323a90decc7cf83cae1477172d2d8a1@cam.ac.uk>
+
+Dear OpenSPIMers,
+
+I have two questions:
+
+1. How can 3D projections be created in real time (does that mean during 
+acquisition?) as it sais in Reynaud et al. (2014):
+
+"Nowadays, plug-ins developed for the Fiji
+platform15,16 allow for the transformation
+of a massive time-lapse, multiview data set
+into a dynamic 3D-rendered movie in real
+time."
+
+
+2. Where can I find informatin/documentation on how to use a cluster 
+computer for registration/fusion/deconvolution?
+
+The information I found seems to be obsolete: 
+http://imagej.net/SPIM_Registration_on_cluster_(deprecated)
+
+Many thanks for your time and input!
+
+Best wishes,
+Stephanie
+
+
+
+From guenther at mpi-cbg.de  Sun Jan 29 12:14:10 2017
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 29 Jan 2017 19:14:10 +0100
+Subject: [OpenSPIM] real time projections, batch processing
+In-Reply-To: <5323a90decc7cf83cae1477172d2d8a1@cam.ac.uk>
+References: <5323a90decc7cf83cae1477172d2d8a1@cam.ac.uk>
+Message-ID: <9A59AC6A-381B-4EBB-84AA-70A5BC1797E5@mpi-cbg.de>
+
+Hi Stephanie,
+
+
+Regarding your first question, you can use ClearVolume (http://imagej.net/ClearVolume). We originally had a version of the OpenSPIM acquisition plugin with ClearVolume directly integrated, but as ClearVolume is a Fiji plugin on its own now, we have to handle this in a different way. We’ll have an updated version of that ready soon(ish).
+
+
+Regarding your second question, Christopher Schmied created an updated and automated version of the workflow. The guide is available at http://imagej.net/Automated_workflow_for_parallel_Multiview_Reconstruction, with source code on GitHub: https://github.com/mpicbg-scicomp/snakemake-workflows
+
+
+I hope this is helpful for you!
+
+
+cheers!
+
+
+ulrik
+
+
+
+
+  —
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170129/602855b7/attachment.html>
+

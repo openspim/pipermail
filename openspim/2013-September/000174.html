@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard Stage Adapter problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20Stage%20Adapter%20problem&In-Reply-To=%3COFC35F9FD4.84E56E52-ONC1257BF0.00543B0F-C1257BF0.00543B21%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000173.html">
+   <LINK REL="Next"  HREF="000175.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard Stage Adapter problem</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20Stage%20Adapter%20problem&In-Reply-To=%3COFC35F9FD4.84E56E52-ONC1257BF0.00543B0F-C1257BF0.00543B21%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] Picard Stage Adapter problem">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Tue Sep 24 10:20:01 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000173.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+        <LI>Next message: <A HREF="000175.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> Hi Johannes,
+
+I found this in the corelog file before aplying the update:
+
+LOG(2013-09-24T15:21:57.181068, 4668, 00275F50:): &gt; OpenSPIM
+LOG(2013-09-24T15:22:08.160593, 4668, 00275F50:): &gt;&#160;&#160;&#160; Picard Twister, Twister
+LOG(2013-09-24T15:22:08.160593, 4668, 00275F50:): &gt;&#160;&#160;&#160; Picard Z Stage, Z stage
+LOG(2013-09-24T15:22:08.160593, 4668, 00275F50:): &gt;&#160;&#160;&#160; Picard XY Stage, XY stage
+LOG(2013-09-24T15:22:08.160593, 4668, 00275F50:): &gt; QCam
+LOG(2013-09-24T15:22:08.363628, 4668, 00275F50:): &gt;&#160;&#160;&#160; QCamera, QImaging universal camera adapter
+LOG(2013-09-24T15:22:08.363628, 4668, 00275F50:): &gt; SerialManager
+LOG(2013-09-24T15:22:08.394864, 4668, 00275F50:): &gt;&#160;&#160;&#160; COM4, Serial communication port
+LOG(2013-09-24T15:22:08.394864, 4668, 00275F50:): &gt;&#160;&#160;&#160; COM5, Serial communication port
+LOG(2013-09-24T15:22:08.394864, 4668, 00275F50:): &gt; TIScam
+LOG(2013-09-24T15:22:08.629136, 4668, 00275F50:): &gt;&#160;&#160;&#160; TIS_DCAM, The Imaging Source
+
+and this after the update
+
+LOG(2013-09-24T15:30:41.409766, 5656, 00279590:): &gt; PicardStage
+LOG(2013-09-24T15:30:41.534859, 5656, 00279590:): &gt; Error: Unable to load PicardStage library.
+LOG(2013-09-24T15:30:41.534859, 5656, 00279590:): &gt; QCam
+LOG(2013-09-24T15:30:41.581769, 5656, 00279590:): &gt;&#160;&#160;&#160; QCamera, QImaging universal camera adapter
+LOG(2013-09-24T15:30:41.581769, 5656, 00279590:): &gt; SerialManager
+LOG(2013-09-24T15:30:41.659952, 5656, 00279590:): &gt;&#160;&#160;&#160; COM4, Serial communication port
+LOG(2013-09-24T15:30:41.659952, 5656, 00279590:): &gt;&#160;&#160;&#160; COM5, Serial communication port
+LOG(2013-09-24T15:30:41.659952, 5656, 00279590:): &gt; TIScam
+LOG(2013-09-24T15:30:41.706861, 5656, 00279590:): &gt; Error: Unable to load TIScam library.
+
+I attach the corelog file anyway.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut f&#252;r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra&#223;e 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; schrieb: -----
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+Von: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt;
+Datum: 24.09.2013 16:35
+Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: Re: [OpenSPIM] Picard Stage Adapter problem
+
+Hi Edgar,
+
+On Tue, 24 Sep 2013, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+
+&gt;<i> I am not able to configure the Picard Stage, it appears as
+</I>&gt;<i> PicardStage(unavailable).
+</I>
+Do you find any hint in the CoreLog file what might cause it to be
+unavailable?
+
+Ciao,
+Johannes
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130924/176eef44/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20130924/176eef44/attachment-0001.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: CoreLog20130924.txt
+Type: application/octet-stream
+Size: 35580 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130924/176eef44/attachment-0001.obj">http://openspim.org/pipermail/openspim/attachments/20130924/176eef44/attachment-0001.obj</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000173.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+	<LI>Next message: <A HREF="000175.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] computer configuration
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20computer%20configuration&In-Reply-To=%3CCAN7f6o_MO%2BXZ8R8WDNyhY-SNPDB31q1uVZT%3DQY3okxykZT8a6Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001867.html">
+   <LINK REL="Next"  HREF="001864.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] computer configuration</H1>
+    <B>Thomas Pujol</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20computer%20configuration&In-Reply-To=%3CCAN7f6o_MO%2BXZ8R8WDNyhY-SNPDB31q1uVZT%3DQY3okxykZT8a6Q%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] computer configuration">thomas.pujol at crg.eu
+       </A><BR>
+    <I>Thu Jan 28 07:36:19 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001867.html">[OpenSPIM] computer configuration
+</A></li>
+        <LI>Next message: <A HREF="001864.html">[OpenSPIM] survival FEP Tubes
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1869">[ date ]</a>
+              <a href="thread.html#1869">[ thread ]</a>
+              <a href="subject.html#1869">[ subject ]</a>
+              <a href="author.html#1869">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks guys,
+
+so I already have a pipeline working on the cluster but our problem is that
+the priority rules for the jobs have been establish many years ago without
+taking into account the needs of image analyst (lot of ram for a short
+time) which lead to unexpected and unpleasant delays in the processing
+(wait 2 weeks for a 2h job is a bit excessive). Two solutions make a
+smarter pipeline or buy a big computer, I would rather go for option number
+two.
+
+I the end I will push for a workstation more than a private node on the
+cluster because you can do the maintenance yourself  and even thought we
+don't use GPU calculation at the moment it would be nice to keep this door
+open.
+
+I will ask for a quote to HP for the configuration below if someone is
+interested.
+
+Small question, linux kind of have a repulsive effect on brave biologist
+exploring biophysics, is there any downside to use windows 8.1 instead of
+linux ?
+
+thanks
+
+thomas
+
+
+*OS *: Windows 8.1 Pro 64 or Ubuntu Linux 64
+
+*Processor :* Intel® Xeon® E5-2680 v3 (2.5 GHz, 30 MB cache, 12 cores,
+Intel® vPro™)
+
+*Graphic card :* NVIDIA® Quadro® K6000 (12 GB) High Performance GPU
+Computing: NVIDIA® Tesla® K40
+
+*RAM :* 128 GB DDR4-2133 ECC
+
+*Main storage :* 1 TB SATA SSHD11 (may be less)
+
+*Storage :* mucho To at 7200 rpm or more
+
+
+
+2016-01-27 17:28 GMT+01:00 Ulrik Günther &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>&gt;:
+
+&gt;<i> Hey Thomas,
+</I>&gt;<i>
+</I>&gt;<i> in addition to Michael’s remarks, I’d like to add that the graphics cards
+</I>&gt;<i> in your listing are quite dated, but anyway still expensive — I found them
+</I>&gt;<i> for around 1000EUR online.
+</I>&gt;<i>
+</I>&gt;<i> If you plan on running things like Multiview Deconvolution (
+</I>&gt;<i> <A HREF="http://fiji.sc/Multi-View_Deconvolution">http://fiji.sc/Multi-View_Deconvolution</A>) on the GPU, you’d probably be
+</I>&gt;<i> better off getting a more recent card, like a GeForce Titan X with 12 GB
+</I>&gt;<i> RAM, instead. That card also costs around 1000EUR.
+</I>&gt;<i>
+</I>&gt;<i> The main difference (apart from the Titan X having a much more recent
+</I>&gt;<i> architecture) between the two is the double precision calculation speed:
+</I>&gt;<i> The consumer (read non-Quadro) cards are artificially capped at 1/8th of
+</I>&gt;<i> the single precision processing speed. For most image processing tasks
+</I>&gt;<i> however, double precision is not necessary, but more RAM on the GPU helps
+</I>&gt;<i> tremendously.
+</I>&gt;<i>
+</I>&gt;<i> Hope that helped :)
+</I>&gt;<i>
+</I>&gt;<i> cheers!
+</I>&gt;<i>
+</I>&gt;<i> ulrik
+</I>&gt;<i>
+</I>&gt;<i> —
+</I>&gt;<i> Ulrik Günther, Dipl.-Phys.
+</I>&gt;<i> PhD Student
+</I>&gt;<i> MOSAIC Group &amp; Tomancak Lab, Center of Systems Biology Dresden
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+</I>&gt;<i>
+</I>&gt;<i> E-Mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+</I>&gt;<i>
+</I>&gt;<i> On Jan 26, 2016, at 6:04 PM, Thomas Pujol &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">thomas.pujol at crg.eu</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hello dear light sheet enthousiaste.
+</I>&gt;<i>
+</I>&gt;<i> An email to fish advices regarding computer configuration.
+</I>&gt;<i>
+</I>&gt;<i> I convince my boss that we need a super duper computer to process the spim
+</I>&gt;<i> data that we are producing and I want to know if the configuration advice
+</I>&gt;<i> by the open spim website is up to date(description below) or if I
+</I>&gt;<i> should/could aim for even bigger machine. Online, I also found the HP Z840
+</I>&gt;<i> that can accomodate a tremendous amount of ram, any recommandation?
+</I>&gt;<i>
+</I>&gt;<i> We have to choose between buying a work station with massive a amount ram
+</I>&gt;<i> or our private node on the institute cluster, does anyone has advice or
+</I>&gt;<i> feedback on previous expererience ?
+</I>&gt;<i>
+</I>&gt;<i> thank you and may the light sheet be with you
+</I>&gt;<i>
+</I>&gt;<i> cheers
+</I>&gt;<i>
+</I>&gt;<i> thomas pujol
+</I>&gt;<i>
+</I>&gt;<i> Processor : *Two Intel Xeon Processor E5-2630* (*Six Core, 2.30GHz Turbo*, 15MB, 7.2 GT/s)
+</I>&gt;<i> Memory : *128GB* (16x8GB) 1600MHz DDR3 ECC RDIMM
+</I>&gt;<i> Hard Drive : *4x2TB* 3.5inch Serial ATA (7.200 Rpm) Hard Drive
+</I>&gt;<i> HDD Controller : PERC H310 SATA/SAS Controller for Dell Precision
+</I>&gt;<i> HDD Configuration : C1 SATA 3.5inch, 1-4 Hard Drives
+</I>&gt;<i> Graphics : *Dual 2 GB NVIDIA Quadro 4000* (2cards w/ 2DP &amp; 1DVI-I each) (2DP-DVI &amp; 2DVI-VGA adapter) (MRGA17H)
+</I>&gt;<i> Network : Intel X520-T2 Dual Port *10GbE Network Interface Card*
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160128/e8eaf387/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20160128/e8eaf387/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001867.html">[OpenSPIM] computer configuration
+</A></li>
+	<LI>Next message: <A HREF="001864.html">[OpenSPIM] survival FEP Tubes
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1869">[ date ]</a>
+              <a href="thread.html#1869">[ thread ]</a>
+              <a href="subject.html#1869">[ subject ]</a>
+              <a href="author.html#1869">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

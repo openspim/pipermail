@@ -1,0 +1,588 @@
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] -------->>
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] Core session started by Imaging on DSTORM
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] Debug logging disabled
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] Debug logging disabled
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] > MM Studio version: 1.4.x dev
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] > MMCore version 2.3.2
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] > Device API version 57, Module API version 8
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] > Operating System: Windows 7 (x86) 6.1
+2014-03-19T09:33:17.956493 p:4792 t:1852 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.7.0_21, 32-bit
+2014-03-19T09:33:17.956493 p:4792 t:1852 [dbg] Circular buffer set to 150 MB.
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > #uManager plugins: 119
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.util.Comparator
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.io.FilenameFilter
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.WindowListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.FocusListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.lang.Iterable
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: java.util.EventListener
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.112495 p:4792 t:3928 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:33:18.128095 p:4792 t:3928 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-03-19T09:33:18.128095 p:4792 t:3928 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-03-19T09:33:18.143696 p:4792 t:3928 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-03-19T09:33:18.143696 p:4792 t:3928 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-03-19T09:33:18.143696 p:4792 t:3928 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-03-19T09:33:20.156121 p:4792 t:1852 [dbg] Will set property: "Core"-"Initialize" = "0"
+2014-03-19T09:33:20.156121 p:4792 t:1852 [LOG] All devices unloaded.
+2014-03-19T09:33:20.156121 p:4792 t:1852 [dbg] > Notification for Device: Core Property: Initialize changed to value: 0
+2014-03-19T09:33:20.156121 p:4792 t:1852 [dbg] Did set property: "Core"-"Initialize" = "0"
+2014-03-19T09:33:20.171722 p:4792 t:1852 [LOG] Device HamamatsuHam_DCAM loaded from HamamatsuHam and labeled as Camera
+2014-03-19T09:33:20.733329 p:4792 t:1852 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-03-19T09:33:20.733329 p:4792 t:1852 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-03-19T09:33:20.733329 p:4792 t:1852 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-03-19T09:33:20.733329 p:4792 t:1852 [dbg] Will set property: "Picard XY Stage"-"Serial Number (X)" = "160"
+2014-03-19T09:33:20.748929 p:4792 t:1852 [dbg] Did set property: "Picard XY Stage"-"Serial Number (X)" = "160"
+2014-03-19T09:33:20.748929 p:4792 t:1852 [dbg] Will set property: "Picard XY Stage"-"Serial Number (Y)" = "162"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Did set property: "Picard XY Stage"-"Serial Number (Y)" = "162"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Will set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Did set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Will set property: "Picard XY Stage"-"X-Min" = "1"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Did set property: "Picard XY Stage"-"X-Min" = "1"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Will set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Did set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Will set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Did set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Will set property: "Picard Z Stage"-"Serial Number" = "161"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Did set property: "Picard Z Stage"-"Serial Number" = "161"
+2014-03-19T09:33:20.780129 p:4792 t:1852 [dbg] Will set property: "Picard Twister"-"Serial Number" = "50"
+2014-03-19T09:33:20.811330 p:4792 t:1852 [dbg] Did set property: "Picard Twister"-"Serial Number" = "50"
+2014-03-19T09:33:20.811330 p:4792 t:1852 [dbg] Will set property: "Core"-"Initialize" = "1"
+2014-03-19T09:33:20.811330 p:4792 t:1852 [LOG] Starting initialization sequence for 4 devices...
+2014-03-19T09:33:22.157464 p:4792 t:1852 [LOG] Device Camera set as default camera.
+2014-03-19T09:33:22.157464 p:4792 t:1852 [LOG] Device Camera initialized.
+2014-03-19T09:33:22.190468 p:4792 t:1852 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-19T09:33:22.190468 p:4792 t:1852 [LOG] Device Picard XY Stage initialized.
+2014-03-19T09:33:22.202469 p:4792 t:1852 [LOG] Device Picard Z Stage initialized.
+2014-03-19T09:33:22.230472 p:4792 t:1852 [LOG] Device Picard Twister initialized.
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] > Notification for Device: Core Property: Initialize changed to value: 1
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Did set property: "Core"-"Initialize" = "1"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Will set property: "Core"-"Camera" = "Camera"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [LOG] Camera device set to Camera
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] > Notification for Device: Core Property: Camera changed to value: Camera
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Did set property: "Core"-"Camera" = "Camera"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Will set property: "Core"-"Focus" = "Picard Z Stage"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [LOG] Focus device set to Picard Z Stage
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Did set property: "Core"-"Focus" = "Picard Z Stage"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Will set property: "Core"-"AutoShutter" = "1"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [LOG] Auto shutter ON.
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] > Notification for Device: Core Property: AutoShutter changed to value: 1
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Did set property: "Core"-"AutoShutter" = "1"
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Waiting for device Camera...
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Finished waiting.
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Waiting for device Picard XY Stage...
+2014-03-19T09:33:22.230472 p:4792 t:1852 [dbg] Finished waiting.
+2014-03-19T09:33:22.231472 p:4792 t:1852 [dbg] Waiting for device Picard Z Stage...
+2014-03-19T09:33:22.234472 p:4792 t:1852 [dbg] Finished waiting.
+2014-03-19T09:33:22.234472 p:4792 t:1852 [dbg] Waiting for device Picard Twister...
+2014-03-19T09:33:22.262475 p:4792 t:1852 [dbg] Finished waiting.
+2014-03-19T09:33:22.263475 p:4792 t:1852 [LOG] System state cache updated.
+2014-03-19T09:33:22.322481 p:4792 t:1852 [LOG] System state cache updated.
+2014-03-19T09:33:22.357484 p:4792 t:1852 [LOG] > Startup script file (C:\Open_SPIM_25102013\OpenSPIM.app/MMStartup.bsh) not present.
+2014-03-19T09:33:25.176766 p:4792 t:1852 [dbg] Will set property: "Camera"-"Binning" = "2x2"
+2014-03-19T09:33:25.244773 p:4792 t:1852 [dbg] Did set property: "Camera"-"Binning" = "2x2"
+2014-03-19T09:33:29.482197 p:4792 t:1852 [LOG] > Plugin command: Acquire SPIM image
+2014-03-19T09:33:29.491198 p:4792 t:1852 [LOG] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-03-19T09:33:29.491198 p:4792 t:1852 [LOG] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-03-19T09:33:29.491198 p:4792 t:1852 [LOG] Starting initialization sequence for 4 devices...
+2014-03-19T09:33:29.491198 p:4792 t:1852 [LOG] Device Camera set as default camera.
+2014-03-19T09:33:29.491198 p:4792 t:1852 [LOG] Device Camera initialized.
+2014-03-19T09:33:29.551204 p:4792 t:1852 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-19T09:33:29.551204 p:4792 t:1852 [LOG] Device Picard XY Stage initialized.
+2014-03-19T09:33:29.563205 p:4792 t:1852 [LOG] Device Picard Z Stage initialized.
+2014-03-19T09:33:29.591208 p:4792 t:1852 [LOG] Device Picard Twister initialized.
+2014-03-19T09:33:29.591208 p:4792 t:1852 [dbg] > Notification for Device: Core Property: Initialize changed to value: 1
+2014-03-19T09:33:29.591208 p:4792 t:1852 [dbg] Pixel Size Configuration Uncalibrated applied.
+2014-03-19T09:33:29.591208 p:4792 t:1852 [LOG] > Defined uncalibrated pixel size (1:1).
+2014-03-19T09:33:29.625211 p:4792 t:1852 [LOG] > Thread 19 (AWT-EventQueue-0) terminated with uncaught exception
+2014-03-19T09:33:29.625211 p:4792 t:1852 [LOG] > java.lang.IllegalArgumentException: invalid range properties
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:102)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.JSlider.<init>(JSlider.java:274)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.JSlider.<init>(JSlider.java:241)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition$19.<init>(SPIMAcquisition.java:1042)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1042)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:367)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.show(SPIMAcquisition.java:221)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Component.processMouseEvent(Component.java:6505)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Component.processEvent(Component.java:6270)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Container.processEvent(Container.java:2229)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2273)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:688)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:686)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:702)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:700)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2014-03-19T09:33:29.626211 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] > Plugin command: Acquire SPIM image
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] > Thread 19 (AWT-EventQueue-0) terminated with uncaught exception
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] > java.lang.NullPointerException
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.updateUI(SPIMAcquisition.java:1175)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.configurationChanged(SPIMAcquisition.java:307)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.show(SPIMAcquisition.java:222)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2014-03-19T09:33:32.033452 p:4792 t:1852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Component.processMouseEvent(Component.java:6505)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Component.processEvent(Component.java:6270)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Container.processEvent(Container.java:2229)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2273)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:688)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:686)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:702)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:700)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2014-03-19T09:33:32.034452 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2014-03-19T09:34:30.147263 p:4792 t:1852 [LOG] > Plugin command: Acquire SPIM image
+2014-03-19T09:34:30.147263 p:4792 t:1852 [LOG] > Thread 19 (AWT-EventQueue-0) terminated with uncaught exception
+2014-03-19T09:34:30.147263 p:4792 t:1852 [LOG] > java.lang.NullPointerException
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.updateUI(SPIMAcquisition.java:1175)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.configurationChanged(SPIMAcquisition.java:307)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at spim.SPIMAcquisition.show(SPIMAcquisition.java:222)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Component.processMouseEvent(Component.java:6505)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Component.processEvent(Component.java:6270)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Container.processEvent(Container.java:2229)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2273)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:688)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:686)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:702)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:700)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2014-03-19T09:34:30.148263 p:4792 t:1852 [LOG] >   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2014-03-19T09:34:36.357884 p:4792 t:1852 [LOG] > Thread 19 (AWT-EventQueue-0) terminated with uncaught exception
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Waiting for device Camera...
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Finished waiting.
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Waiting for device Picard XY Stage...
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Finished waiting.
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Waiting for device Picard Z Stage...
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Finished waiting.
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Waiting for device Picard Twister...
+2014-03-19T09:34:36.357884 p:4792 t:4344 [dbg] Finished waiting.
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] -------->>
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] Core session started by Imaging on DSTORM
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] Debug logging disabled
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] Debug logging disabled
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] > MM Studio version: 1.4.x dev
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] > MMCore version 2.3.2
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] > Device API version 57, Module API version 8
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] > Operating System: Windows 7 (x86) 6.1
+2014-03-19T09:38:01.550331 p:2296 t:3852 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.7.0_21, 32-bit
+2014-03-19T09:38:01.550331 p:2296 t:3852 [dbg] Circular buffer set to 150 MB.
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > #uManager plugins: 119
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.util.Comparator
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.io.FilenameFilter
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.WindowListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.FocusListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Runnable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.lang.Iterable
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: java.util.EventListener
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.706333 p:2296 t:1940 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-19T09:38:01.721933 p:2296 t:1940 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-03-19T09:38:01.737533 p:2296 t:1940 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-03-19T09:38:01.737533 p:2296 t:1940 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-03-19T09:38:01.737533 p:2296 t:1940 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-03-19T09:38:01.737533 p:2296 t:1940 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-03-19T09:38:03.827960 p:2296 t:3852 [dbg] Will set property: "Core"-"Initialize" = "0"
+2014-03-19T09:38:03.827960 p:2296 t:3852 [LOG] All devices unloaded.
+2014-03-19T09:38:03.827960 p:2296 t:3852 [dbg] > Notification for Device: Core Property: Initialize changed to value: 0
+2014-03-19T09:38:03.827960 p:2296 t:3852 [dbg] Did set property: "Core"-"Initialize" = "0"
+2014-03-19T09:38:03.827960 p:2296 t:3852 [LOG] Device HamamatsuHam_DCAM loaded from HamamatsuHam and labeled as Camera
+2014-03-19T09:38:04.373967 p:2296 t:3852 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-03-19T09:38:04.373967 p:2296 t:3852 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-03-19T09:38:04.373967 p:2296 t:3852 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-03-19T09:38:04.373967 p:2296 t:3852 [dbg] Will set property: "Picard XY Stage"-"Serial Number (X)" = "160"
+2014-03-19T09:38:04.389567 p:2296 t:3852 [dbg] Did set property: "Picard XY Stage"-"Serial Number (X)" = "160"
+2014-03-19T09:38:04.389567 p:2296 t:3852 [dbg] Will set property: "Picard XY Stage"-"Serial Number (Y)" = "162"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Did set property: "Picard XY Stage"-"Serial Number (Y)" = "162"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Will set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Did set property: "Picard XY Stage"-"X-Max" = "8000"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Will set property: "Picard XY Stage"-"X-Min" = "1"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Did set property: "Picard XY Stage"-"X-Min" = "1"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Will set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Did set property: "Picard XY Stage"-"Y-Max" = "8000"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Will set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Did set property: "Picard XY Stage"-"Y-Min" = "1"
+2014-03-19T09:38:04.420768 p:2296 t:3852 [dbg] Will set property: "Picard Z Stage"-"Serial Number" = "161"
+2014-03-19T09:38:04.436368 p:2296 t:3852 [dbg] Did set property: "Picard Z Stage"-"Serial Number" = "161"
+2014-03-19T09:38:04.436368 p:2296 t:3852 [dbg] Will set property: "Picard Twister"-"Serial Number" = "50"
+2014-03-19T09:38:04.467568 p:2296 t:3852 [dbg] Did set property: "Picard Twister"-"Serial Number" = "50"
+2014-03-19T09:38:04.467568 p:2296 t:3852 [dbg] Will set property: "Core"-"Initialize" = "1"
+2014-03-19T09:38:04.467568 p:2296 t:3852 [LOG] Starting initialization sequence for 4 devices...
+2014-03-19T09:38:05.808702 p:2296 t:3852 [LOG] Device Camera set as default camera.
+2014-03-19T09:38:05.808702 p:2296 t:3852 [LOG] Device Camera initialized.
+2014-03-19T09:38:05.841706 p:2296 t:3852 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-19T09:38:05.841706 p:2296 t:3852 [LOG] Device Picard XY Stage initialized.
+2014-03-19T09:38:05.853707 p:2296 t:3852 [LOG] Device Picard Z Stage initialized.
+2014-03-19T09:38:05.881710 p:2296 t:3852 [LOG] Device Picard Twister initialized.
+2014-03-19T09:38:05.881710 p:2296 t:3852 [dbg] > Notification for Device: Core Property: Initialize changed to value: 1
+2014-03-19T09:38:05.881710 p:2296 t:3852 [dbg] Did set property: "Core"-"Initialize" = "1"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Will set property: "Core"-"Camera" = "Camera"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [LOG] Camera device set to Camera
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] > Notification for Device: Core Property: Camera changed to value: Camera
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Did set property: "Core"-"Camera" = "Camera"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Will set property: "Core"-"Focus" = "Picard Z Stage"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [LOG] Focus device set to Picard Z Stage
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] > Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Did set property: "Core"-"Focus" = "Picard Z Stage"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Will set property: "Core"-"AutoShutter" = "1"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [LOG] Auto shutter ON.
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] > Notification for Device: Core Property: AutoShutter changed to value: 1
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Did set property: "Core"-"AutoShutter" = "1"
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Waiting for device Camera...
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Finished waiting.
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Waiting for device Picard XY Stage...
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Finished waiting.
+2014-03-19T09:38:05.882710 p:2296 t:3852 [dbg] Waiting for device Picard Z Stage...
+2014-03-19T09:38:05.885710 p:2296 t:3852 [dbg] Finished waiting.
+2014-03-19T09:38:05.885710 p:2296 t:3852 [dbg] Waiting for device Picard Twister...
+2014-03-19T09:38:05.913713 p:2296 t:3852 [dbg] Finished waiting.
+2014-03-19T09:38:05.914713 p:2296 t:3852 [LOG] System state cache updated.
+2014-03-19T09:38:05.973719 p:2296 t:3852 [LOG] System state cache updated.
+2014-03-19T09:38:06.009723 p:2296 t:3852 [LOG] > Startup script file (C:\Open_SPIM_25102013\OpenSPIM.app/MMStartup.bsh) not present.
+2014-03-19T09:38:08.700992 p:2296 t:3852 [dbg] Will set property: "Camera"-"Binning" = "2x2"
+2014-03-19T09:38:08.767998 p:2296 t:3852 [dbg] Did set property: "Camera"-"Binning" = "2x2"
+2014-03-19T09:38:11.629284 p:2296 t:3852 [LOG] > Plugin command: Acquire SPIM image
+2014-03-19T09:38:11.638285 p:2296 t:3852 [LOG] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-03-19T09:38:11.638285 p:2296 t:3852 [LOG] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-03-19T09:38:11.638285 p:2296 t:3852 [LOG] Starting initialization sequence for 4 devices...
+2014-03-19T09:38:11.638285 p:2296 t:3852 [LOG] Device Camera set as default camera.
+2014-03-19T09:38:11.638285 p:2296 t:3852 [LOG] Device Camera initialized.
+2014-03-19T09:38:11.698291 p:2296 t:3852 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-19T09:38:11.698291 p:2296 t:3852 [LOG] Device Picard XY Stage initialized.
+2014-03-19T09:38:11.710293 p:2296 t:3852 [LOG] Device Picard Z Stage initialized.
+2014-03-19T09:38:11.738295 p:2296 t:3852 [LOG] Device Picard Twister initialized.
+2014-03-19T09:38:11.738295 p:2296 t:3852 [dbg] > Notification for Device: Core Property: Initialize changed to value: 1
+2014-03-19T09:38:11.738295 p:2296 t:3852 [dbg] Pixel Size Configuration Uncalibrated applied.
+2014-03-19T09:38:11.738295 p:2296 t:3852 [LOG] > Defined uncalibrated pixel size (1:1).
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] > Thread 20 (AWT-EventQueue-0) terminated with uncaught exception
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] > java.lang.IllegalArgumentException: invalid range properties
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:102)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.JSlider.<init>(JSlider.java:274)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.JSlider.<init>(JSlider.java:241)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition$19.<init>(SPIMAcquisition.java:1042)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1042)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:367)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition.show(SPIMAcquisition.java:221)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Component.processMouseEvent(Component.java:6505)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Component.processEvent(Component.java:6270)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Container.processEvent(Container.java:2229)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2273)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:688)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:686)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:38:11.772299 p:2296 t:3852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:702)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:700)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2014-03-19T09:38:11.773299 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2014-03-19T09:38:12.863408 p:2296 t:3852 [dbg] Sequence acquisition started.
+2014-03-19T09:38:14.583580 p:2296 t:4244 [LOG] > 
+org.micromanager.utils.MMScriptException: MMScript error: Undefined acquisition name: Snap/Live Window in Thread[Display thread,6,main]
+  at org.micromanager.acquisition.AcquisitionManager.getAcquisition(AcquisitionManager.java:134)
+  at org.micromanager.MMStudioMainFrame.addImage(MMStudioMainFrame.java:3953)
+  at org.micromanager.acquisition.LiveModeTimer$1.show(LiveModeTimer.java:104)
+  at org.micromanager.MMStudioMainFrame$47.run(MMStudioMainFrame.java:1255)
+2014-03-19T09:38:14.602582 p:2296 t:4232 [LOG] > Stop called in LivemodeTimer, true
+2014-03-19T09:38:14.628584 p:2296 t:4232 [dbg] Sequence acquisition stopped.
+2014-03-19T09:38:44.617583 p:2296 t:3852 [dbg] Sequence acquisition started.
+2014-03-19T09:38:46.201741 p:2296 t:3852 [LOG] > Stop called in LivemodeTimer, true
+2014-03-19T09:38:46.231744 p:2296 t:3852 [dbg] Sequence acquisition stopped.
+2014-03-19T09:39:00.590180 p:2296 t:3852 [LOG] > Plugin command: Acquire SPIM image
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] > Thread 20 (AWT-EventQueue-0) terminated with uncaught exception
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] > java.lang.NullPointerException
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition.updateUI(SPIMAcquisition.java:1175)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition.configurationChanged(SPIMAcquisition.java:307)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at spim.SPIMAcquisition.show(SPIMAcquisition.java:222)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at org.micromanager.MMStudioMainFrame$50.run(MMStudioMainFrame.java:2909)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:285)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Component.processMouseEvent(Component.java:6505)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Component.processEvent(Component.java:6270)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Container.processEvent(Container.java:2229)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Container.dispatchEventImpl(Container.java:2273)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.Component.dispatchEvent(Component.java:4687)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:688)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$3.run(EventQueue.java:686)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:702)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue$4.run(EventQueue.java:700)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.security.AccessController.doPrivileged(Native Method)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2014-03-19T09:39:00.591180 p:2296 t:3852 [LOG] >   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)

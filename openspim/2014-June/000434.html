@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Input data for SPIM Registration PlugIn
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Input%20data%20for%20SPIM%20Registration%20PlugIn&In-Reply-To=%3CB479B325-58AA-4281-9679-F8F77EE21280%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000431.html">
+   <LINK REL="Next"  HREF="000432.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Input data for SPIM Registration PlugIn</H1>
+    <B>Pavel Tomancak</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Input%20data%20for%20SPIM%20Registration%20PlugIn&In-Reply-To=%3CB479B325-58AA-4281-9679-F8F77EE21280%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Input data for SPIM Registration PlugIn">tomancak at mpi-cbg.de
+       </A><BR>
+    <I>Tue Jun 17 01:48:38 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000431.html">[OpenSPIM] Input data for SPIM Registration PlugIn
+</A></li>
+        <LI>Next message: <A HREF="000432.html">[OpenSPIM] Windows 7 write to disk error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#434">[ date ]</a>
+              <a href="thread.html#434">[ thread ]</a>
+              <a href="subject.html#434">[ subject ]</a>
+              <a href="author.html#434">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Douglas,
+
+This is what we do as well. Its not perfect, but it works. I guess we should document it on the wiki, but better Fiji then OpenSPIM since this is a LZ1 specific issue.
+
+I have something like that here, but it deals exclusively with headless operation on a cluster <A HREF="http://fiji.sc/SPIM_Registration_on_cluster">http://fiji.sc/SPIM_Registration_on_cluster</A>
+
+Sending data to bioformats is a great idea, they are working on it.
+
+All the best
+
+PAvel
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: <A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+homepage: <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A>
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+
+
+
+On Jun 16, 2014, at 5:32 PM, &quot;Richardson, Douglas&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">drichardson at fas.harvard.edu</A>&gt; wrote:
+
+&gt;<i> Here is what I have found to work with our Z1 data:
+</I>&gt;<i>  
+</I>&gt;<i> The newest version of Bioformats can read and open the .CZI file off the microscope.  As Bioformats opens the file, it opens each view as a separate stack and gives you the option of which ones you want to open.  As long as your system has enough RAM, you can open individual, or all views, and then convert to .tif using Fiji.  If any of the views exceed your RAM, you will have to open them as a virtual stack, convert to .tif and downsample before running the registration/fusion plugins.
+</I>&gt;<i>  
+</I>&gt;<i> If your data was subsetted in ZEN by anything other than time (channel/view/etc) during acquisition, it will not open in Bioformats.
+</I>&gt;<i> Bioformats still seems to have problems reading certain multi-channel files.  I have sent them some test data sets, but haven&#8217;t heard back yet.
+</I>&gt;<i>  
+</I>&gt;<i> When all-else fails, the following protocol seems to work:
+</I>&gt;<i>  
+</I>&gt;<i> 1)      Subset your original file into individual .czi files for channel and view (don&#8217;t worry about time point).  Do this using the Processing&lt;Copy&lt;File Subset command in ZEN, NOT File&lt;New File Browser.
+</I>&gt;<i> 2)      You can then batch convert these .CZI files to .tif files using Fiji.
+</I>&gt;<i> 3)      These files can then be registered/fused/deconvolved
+</I>&gt;<i>  
+</I>&gt;<i> If anyone has other/better suggestions, I&#8217;d be happy to hear them.
+</I>&gt;<i>  
+</I>&gt;<i> -Doug
+</I>&gt;<i>  
+</I>&gt;<i> From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Selchow, Olaf
+</I>&gt;<i> Sent: Sunday, June 15, 2014 12:35 PM
+</I>&gt;<i> To: Kieran Short; <A HREF="http://openspim.org/mailman/listinfo/openspim">Shugi at gmx.de</A>
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] Input data for SPIM Registration PlugIn
+</I>&gt;<i>  
+</I>&gt;<i> Dear Kieran and Ricarda,
+</I>&gt;<i>  
+</I>&gt;<i> To my knowledge, the export of .czi data from the ZEISS Lightsheet Z.1 should be not necessary any more.
+</I>&gt;<i> The .czi data  can be read directly by Bioformats reader into Fiji &#8230;
+</I>&gt;<i>  
+</I>&gt;<i> Kevin Eliceiri and Stephan Preibisch are the experts in this &#8230;
+</I>&gt;<i>  
+</I>&gt;<i> Pls let me know if I can help in that data from ZEISS microscopes can be opened in the software where you need it.
+</I>&gt;<i>  
+</I>&gt;<i> With best regards,
+</I>&gt;<i> Olaf
+</I>&gt;<i>  
+</I>&gt;<i> __________________________
+</I>&gt;<i> 
+</I>&gt;<i> Carl Zeiss Microscopy GmbH
+</I>&gt;<i> Gesch&#228;ftsbereich BioSciences / BioSciences Division
+</I>&gt;<i> Produktmanager / Product Manager
+</I>&gt;<i> 
+</I>&gt;<i> D r.   O l a f   S e l c h o w
+</I>&gt;<i> 
+</I>&gt;<i> Carl-Zeiss-Promenade 10, 07745 Jena
+</I>&gt;<i> Telefon/Phone: +49 3641 64-2089
+</I>&gt;<i> Cell Phone: +49 151 4615 8629
+</I>&gt;<i> Fax: +49 3641 64-3144
+</I>&gt;<i> mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">olaf.selchow at zeiss.com</A>
+</I>&gt;<i> <A HREF="http://www.zeiss.com/microscopy">http://www.zeiss.com/microscopy</A>
+</I>&gt;<i> 
+</I>&gt;<i> __________________________
+</I>&gt;<i> 
+</I>&gt;<i> Carl Zeiss Microscopy GmbH
+</I>&gt;<i> Vorsitzender des Aufsichtsrates: Dr. Michael Kaschke 
+</I>&gt;<i> Gesch&#228;ftsf&#252;hrung: Dr. Ulrich Simon, Wilhelm N&#246;rthemann, Dr. Frank Stietz
+</I>&gt;<i> Sitz der Gesellschaft: 07740 Jena, Deutschland 
+</I>&gt;<i> Amtsgericht Jena, HRB 210.536, USt-IdNr: DE 814 503 774
+</I>&gt;<i>  
+</I>&gt;<i> Von: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] Im Auftrag von Kieran Short
+</I>&gt;<i> Gesendet: Dienstag, 27. Mai 2014 23:19
+</I>&gt;<i> An: <A HREF="http://openspim.org/mailman/listinfo/openspim">Shugi at gmx.de</A>
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Betreff: Re: [OpenSPIM] Input data for SPIM Registration PlugIn
+</I>&gt;<i>  
+</I>&gt;<i> Richard,
+</I>&gt;<i>  
+</I>&gt;<i> The endianness of the TIFF data might be wrong (wrong byte order). Try switching to intel-byte order (or if it already is, switch it to big endian).
+</I>&gt;<i>  
+</I>&gt;<i> fyi: <A HREF="http://en.wikipedia.org/wiki/Endianness">http://en.wikipedia.org/wiki/Endianness</A>
+</I>&gt;<i>  
+</I>&gt;<i> cheers,
+</I>&gt;<i> Kieran
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> On Tue, May 27, 2014 at 8:19 PM, &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Shugi at gmx.de</A>&gt; wrote:
+</I>&gt;<i> Hello,
+</I>&gt;<i>  
+</I>&gt;<i> I read about your tool for registration and fusion of multiple view images. It is the topic of my intership to find a way doing this with our data and I would like to try your tool. But it seems to have a problem with our data. The original data from a Z1 are present as czi file. I extract them as ome.tif file with the ZEN2012 Software. Like in the tutorial the extension was changed from ome.tif to tif. I was following the tutorial and when to interactivlly choosing the threshold for the beads and click &quot;Done&quot; the following Messages occure in the Log:
+</I>&gt;<i>  
+</I>&gt;<i> Opening first image to determine z-stretching.
+</I>&gt;<i> Cannot open fie: ...
+</I>&gt;<i>  
+</I>&gt;<i> The path and the filename are correct. Maybe it is something about the formate? Do you need special tags in the tiff file or does the bit depth has influence?
+</I>&gt;<i> Hope you can help me, because your tool seems to be very promising.
+</I>&gt;<i>  
+</I>&gt;<i> Kind regardas
+</I>&gt;<i> Ricarda Br&#228;uniger
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140617/369f7594/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20140617/369f7594/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000431.html">[OpenSPIM] Input data for SPIM Registration PlugIn
+</A></li>
+	<LI>Next message: <A HREF="000432.html">[OpenSPIM] Windows 7 write to disk error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#434">[ date ]</a>
+              <a href="thread.html#434">[ thread ]</a>
+              <a href="subject.html#434">[ subject ]</a>
+              <a href="author.html#434">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

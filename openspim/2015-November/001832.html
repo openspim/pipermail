@@ -1,0 +1,636 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &quot;Acquire SPIM image&quot; crash
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Acquire%20SPIM%20image%22%20crash&In-Reply-To=%3C56422C00.2070600%40fgu.cas.cz%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001828.html">
+   <LINK REL="Next"  HREF="001833.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &quot;Acquire SPIM image&quot; crash</H1>
+    <B>Martin Capek</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Acquire%20SPIM%20image%22%20crash&In-Reply-To=%3C56422C00.2070600%40fgu.cas.cz%3E"
+       TITLE="[OpenSPIM] &quot;Acquire SPIM image&quot; crash">martin.capek at fgu.cas.cz
+       </A><BR>
+    <I>Tue Nov 10 11:40:16 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001828.html">[OpenSPIM] 3D Reconstruction
+</A></li>
+        <LI>Next message: <A HREF="001833.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1832">[ date ]</a>
+              <a href="thread.html#1832">[ thread ]</a>
+              <a href="subject.html#1832">[ subject ]</a>
+              <a href="author.html#1832">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+could anybody help me with the following software problem?
+
+Micromanager knows all components of our SPIM system: CUBE laser, Picard stage, Andor camera. I can use all of them independently without troubles in MM: opening and closing laser shutter, moving with the stage in &quot;Stage Control&quot;, seeing images in &quot;Live&quot; view. However, when opening &quot;Acquire SPIM image&quot;, nothing happens and the Java exceptions are then in the corelog,  please, see the attachments.
+
+Thank you very much for your help and comments!
+Martin
+
+
+----------------------
+
+Martin Capek, Ph.D.
+Dpt. Biomathematics
+
+Institute of Physiology ASCR, v.v.i.
+Videnska 1083
+142 20 Praha 4
+
+Tel. +420 241 062 334
+<A HREF="http://fgu.cas.cz">http://fgu.cas.cz</A>
+
+
+
+
+Upozornění: Není-li v této zprávě výslovně uvedeno jinak, má tato E-mailová zpráva nebo její přílohy pouze informativní charakter. Tato zpráva ani její přílohy v žádném ohledu Fyziologický ústav AV ČR, v. v. i. k ničemu nezavazují. Text této zprávy nebo jejích příloh není návrhem na uzavření smlouvy, ani přijetím případného návrhu na uzavření smlouvy, ani jiným právním jednáním směřujícím k uzavření jakékoliv smlouvy a nezakládá předsmluvní odpovědnost Fyziologického ústavu AV ČR, v. v. i.
+
+Disclaimer: If not expressly stated otherwise, this e-mail message (including any attached files) is intended purely for informational purposes and does not represent a binding agreement on the part of Institute of Physiology AS CR. The text of this message and its attachments cannot be considered as a proposal to conclude a contract, nor the acceptance of a proposal to conclude a contract, nor any other legal act leading to concluding any contract; nor does it create any pre-contractual liability on the part of Institute of Physiology AS CR.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151110/d2693a44/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20151110/d2693a44/attachment-0002.html</A>&gt;
+-------------- next part --------------
+2015-11-10T16:48:02.076680 tid2136 [IFO,LogManager] Enabled primary log file D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\CoreLogs\CoreLog20151110T164802_pid5508.txt
+2015-11-10T16:48:02.076680 tid2136 [IFO,LogManager] Switching primary log level from info to trace
+2015-11-10T16:48:02.092280 tid2136 [IFO,LogManager] Switched primary log level from info to trace
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] User: fgu060lab115
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] Host: BM360MC
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] MM Studio version: 1.4.23 20151007
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] MMCore version 8.1.1
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] Device API version 65, Module API version 10
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] Operating System: Windows 7 (amd64) 6.1
+2015-11-10T16:48:02.092280 tid2136 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_45, 64-bit
+2015-11-10T16:48:02.092280 tid2136 [dbg,Core] Will set circular buffer size to 25 MB
+2015-11-10T16:48:02.092280 tid2136 [dbg,Core] Did set circular buffer size to 25 MB
+2015-11-10T16:48:02.092280 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmplugins/
+2015-11-10T16:48:02.092280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Big.jar!/
+2015-11-10T16:48:02.107880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\DataBrowser.jar!/
+2015-11-10T16:48:02.560280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\PixelCalibrator.jar!/
+2015-11-10T16:48:02.591480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Recall.jar!/
+2015-11-10T16:48:02.591480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\SPIMAcquisition-1.0.0-SNAPSHOT.jar!/
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Installing plugin org.micromanager.browser.Data_Browser...
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Error: Plugin [org.micromanager.browser.Data_Browser] has no menuName field
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] org.micromanager.browser.Data_Browser fails to implement static String tooltipDescription.
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Installing plugin org.micromanager.pixelcalibrator.PixelCalibratorPlugin...
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Installing plugin org.micromanager.recall.RecallPlugin...
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Installing plugin spim.SPIMAcquisition...
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmplugins/Acquisition_Tools/
+2015-11-10T16:48:02.778680 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\AcquireMultipleRegions.jar!/
+2015-11-10T16:48:02.825480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\Gaussian.jar!/
+2015-11-10T16:48:03.137480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\HCS.jar!/
+2015-11-10T16:48:03.184280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\IntelligentAcquisition.jar!/
+2015-11-10T16:48:03.231080 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\MMTracker.jar!/
+2015-11-10T16:48:03.246680 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\PatternOverlay.jar!/
+2015-11-10T16:48:03.262280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Acquisition_Tools\SlideExplorer.jar!/
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin org.micromanager.acquiremultipleregions.AcquireMultipleRegions...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin GaussianTrack_...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin org.micromanager.hcs.SiteGenerator...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin org.micromanager.intelligentacquisition.IntelligentAcquisition...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin com.imaging100x.tracker.TrackerControl...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin org.micromanager.patternoverlay.PatternOverlayPlugin...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Installing plugin org.micromanager.slideexplorer.SlideExplorerPlugin...
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmplugins/Beta/
+2015-11-10T16:48:03.324680 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Beta\CRISPv2.jar!/
+2015-11-10T16:48:03.355880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Beta\SlideExplorer2.jar!/
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] Installing plugin com.asiimaging.CRISPv2.ASI_CRISP_V2...
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] Installing plugin org.micromanager.SlideExplorer2...
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] Error: Plugin [org.micromanager.SlideExplorer2] has no menuName field
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] org.micromanager.SlideExplorer2 fails to implement static String tooltipDescription.
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmplugins/Developer_Tools/
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Developer_Tools\ClojureEditor.jar!/
+2015-11-10T16:48:04.993880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Developer_Tools\DLLAutoReloader.jar!/
+2015-11-10T16:48:05.103080 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Developer_Tools\SequenceBufferMonitor.jar!/
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] Installing plugin org.micromanager.clojureeditor.ClojureEditorPlugin...
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] Installing plugin org.micromanager.DLLAutoReloader...
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] Error: Plugin [org.micromanager.DLLAutoReloader] has no menuName field
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] org.micromanager.DLLAutoReloader fails to implement static String tooltipDescription.
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] Installing plugin org.micromanager.plugins.sequencebuffermonitor.SequenceBufferMonitor...
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmplugins/Device_Control/
+2015-11-10T16:48:05.118680 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\ASIdiSPIM.jar!/
+2015-11-10T16:48:05.368280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\AutoLase.jar!/
+2015-11-10T16:48:05.399480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\CRISP.jar!/
+2015-11-10T16:48:05.430680 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\MightexPolygon.jar!/
+2015-11-10T16:48:05.524280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\MultiCamera.jar!/
+2015-11-10T16:48:05.555480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\pgFocus.jar!/
+2015-11-10T16:48:05.571080 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\Projector.jar!/
+2015-11-10T16:48:05.680280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\StageControl.jar!/
+2015-11-10T16:48:05.727080 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\Device_Control\WhiteBalance.jar!/
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin org.micromanager.asidispim.ASIdiSPIM...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin ch.epfl.leb.autolase.AutoLasePlugin...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin org.micromanager.CRISP.CRISP...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin org.micromanager.polygon.PolygonPlugin...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin org.micromanager.multicamera.MultiCamera...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin edu.umassmed.pgfocus.pgFocus...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin org.micromanager.projector.ProjectorPlugin...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin org.micromanager.stagecontrol.StageControl...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Installing plugin PMQI.AutoWB...
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmplugins/On-The-Fly_Processors/
+2015-11-10T16:48:05.742680 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\On-The-Fly_Processors\ImageFlipper.jar!/
+2015-11-10T16:48:05.758280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\On-The-Fly_Processors\MultiChannelShading.jar!/
+2015-11-10T16:48:05.789480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmplugins\On-The-Fly_Processors\SplitView.jar!/
+2015-11-10T16:48:05.805080 tid5720 [IFO,App] Installing plugin org.micromanager.newimageflipper.NewTaggedImageFlipper...
+2015-11-10T16:48:05.805080 tid5720 [IFO,App] Installing plugin org.micromanager.multichannelshading.MultiChannelShading...
+2015-11-10T16:48:05.805080 tid5720 [IFO,App] Installing plugin org.micromanager.splitview.SplitView...
+2015-11-10T16:48:05.836280 tid5720 [IFO,App] Added URL to system class loader: file:/D:/Install/2015.OpenSPIM.new/OpenSPIM.app.64bit/mmautofocus/
+2015-11-10T16:48:05.836280 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmautofocus\HardwareFocusExtender.jar!/
+2015-11-10T16:48:05.851880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmautofocus\MMAutofocus.jar!/
+2015-11-10T16:48:05.851880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmautofocus\MMAutofocusDuo.jar!/
+2015-11-10T16:48:05.851880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmautofocus\MMAutofocusTB.jar!/
+2015-11-10T16:48:05.851880 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmautofocus\MMNullAutofocus.jar!/
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Added URL to system class loader: jar:file:D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\mmautofocus\MMOughtaFocus.jar!/
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Attempting to install autofocus plugin HardwareFocusExtender
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Attempting to install autofocus plugin Autofocus
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Attempting to install autofocus plugin NullAutofocus
+2015-11-10T16:48:05.867480 tid5720 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2015-11-10T16:48:09.439880 tid2136 [IFO,App] Finished waiting for plugins to load
+2015-11-10T16:48:09.455480 tid2136 [dbg,Core] Will set Core property: Initialize = 0
+2015-11-10T16:48:09.455480 tid2136 [dbg,Core] Will unload all devices
+2015-11-10T16:48:09.455480 tid2136 [IFO,Core] Did unload all devices
+2015-11-10T16:48:09.455480 tid2136 [dbg,App] Notification for Device: Core Property: Initialize changed to value: 0
+2015-11-10T16:48:09.455480 tid2136 [dbg,Core] Did set Core property: Initialize = 0
+2015-11-10T16:48:09.455480 tid2136 [dbg,Core] Will load device COM3 from SerialManager
+2015-11-10T16:48:09.455480 tid2136 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2015-11-10T16:48:09.455480 tid2136 [dbg,Core] Will load device Andor from Andor
+2015-11-10T16:48:11.077880 tid2136 [IFO,Core] Did load device Andor from Andor; label = Andor
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core] Will load device Picard Twister from PicardStage
+2015-11-10T16:48:11.077880 tid2136 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core] Will load device Picard Z Stage from PicardStage
+2015-11-10T16:48:11.077880 tid2136 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core] Will load device Picard XY Stage from PicardStage
+2015-11-10T16:48:11.077880 tid2136 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core] Will load device CoherentCube from CoherentCube
+2015-11-10T16:48:11.077880 tid2136 [IFO,Core] Did load device CoherentCube from CoherentCube; label = CoherentCube
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core:dev:Andor] Will set property &quot;Camera&quot; to &quot;| iXon | DU897_BV | 6169 |&quot;
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core:dev:Andor] Did set property &quot;Camera&quot; to &quot;| iXon | DU897_BV | 6169 |&quot;
+2015-11-10T16:48:11.077880 tid2136 [dbg,Core:dev:Picard Twister] Will set property &quot;Serial Number&quot; to &quot;83&quot;
+2015-11-10T16:48:11.109080 tid2136 [dbg,Core:dev:Picard Twister] Did set property &quot;Serial Number&quot; to &quot;83&quot;
+2015-11-10T16:48:11.109080 tid2136 [dbg,Core:dev:Picard Z Stage] Will set property &quot;Serial Number&quot; to &quot;240&quot;
+2015-11-10T16:48:11.109080 tid2136 [dbg,Core:dev:Picard Z Stage] Did set property &quot;Serial Number&quot; to &quot;240&quot;
+2015-11-10T16:48:11.109080 tid2136 [dbg,Core:dev:Picard XY Stage] Will set property &quot;Serial Number (X)&quot; to &quot;241&quot;
+2015-11-10T16:48:11.124680 tid2136 [dbg,Core:dev:Picard XY Stage] Did set property &quot;Serial Number (X)&quot; to &quot;241&quot;
+2015-11-10T16:48:11.124680 tid2136 [dbg,Core:dev:Picard XY Stage] Will set property &quot;Serial Number (Y)&quot; to &quot;242&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Did set property &quot;Serial Number (Y)&quot; to &quot;242&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Will set property &quot;X-Max&quot; to &quot;8000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Did set property &quot;X-Max&quot; to &quot;8000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Will set property &quot;X-Min&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Did set property &quot;X-Min&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Will set property &quot;Y-Max&quot; to &quot;8000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Did set property &quot;Y-Max&quot; to &quot;8000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Will set property &quot;Y-Min&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:Picard XY Stage] Did set property &quot;Y-Min&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:CoherentCube] Will set property &quot;Port&quot; to &quot;COM3&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:CoherentCube] Did set property &quot;Port&quot; to &quot;COM3&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;AnswerTimeout&quot; to &quot;5000.0000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;AnswerTimeout&quot; to &quot;5000.0000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;BaudRate&quot; to &quot;19200&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;BaudRate&quot; to &quot;19200&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;DelayBetweenCharsMs&quot; to &quot;0.0000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;DelayBetweenCharsMs&quot; to &quot;0.0000&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;Handshaking&quot; to &quot;Off&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;Handshaking&quot; to &quot;Off&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;Parity&quot; to &quot;None&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;Parity&quot; to &quot;None&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;StopBits&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;StopBits&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Will set property &quot;Verbose&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core:dev:COM3] Did set property &quot;Verbose&quot; to &quot;1&quot;
+2015-11-10T16:48:11.171480 tid2136 [dbg,Core] Will set Core property: Initialize = 1
+2015-11-10T16:48:11.171480 tid2136 [IFO,Core] Will initialize 6 devices
+2015-11-10T16:48:11.171480 tid2136 [IFO,Core] Will initialize device COM3
+2015-11-10T16:48:11.405480 tid2136 [dbg,dev:COM3] Attempting to set baud of COM3 to 19200
+2015-11-10T16:48:11.436680 tid2136 [dbg,dev:COM3] Attempting to set flow of COM3 to none
+2015-11-10T16:48:11.467880 tid2136 [dbg,dev:COM3] Attempting to set parity of COM3 to none
+2015-11-10T16:48:11.499080 tid2136 [dbg,dev:COM3] Attempting to set stopBits of COM3 to 1
+2015-11-10T16:48:11.561480 tid2136 [IFO,Core] Did initialize device COM3
+2015-11-10T16:48:11.561480 tid2136 [IFO,Core] Will initialize device Andor
+2015-11-10T16:48:11.561480 tid2136 [IFO,dev:Andor] Camera version info: 
+                                   [             ] EPROM: 0
+                                   [             ] COF File: 438
+                                   [             ] Driver: 4.31
+                                   [             ] DLL: 2.97
+2015-11-10T16:48:11.592680 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:11.592680 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:11.592680 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 35.55
+2015-11-10T16:48:11.623880 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:11.623880 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:11.623880 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 35.55
+2015-11-10T16:48:11.623880 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:11.623880 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:11.623880 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 35.55
+2015-11-10T16:48:11.639480 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:11.639480 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:11.639480 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 35.55
+2015-11-10T16:48:11.998280 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:11.998280 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:11.998280 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 35.55
+2015-11-10T16:48:12.013880 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:12.013880 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:12.013880 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 45.54
+2015-11-10T16:48:12.029480 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:12.029480 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:12.029480 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 45.54
+2015-11-10T16:48:12.357080 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.04
+2015-11-10T16:48:12.357080 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.50
+2015-11-10T16:48:12.357080 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 45.54
+2015-11-10T16:48:12.357080 tid2136 [IFO,dev:Andor] PrepareSnap();
+2015-11-10T16:48:12.388280 tid2136 [dbg,App] Notification for Device: Andor Property: ReadoutTime changed to value: 32.03
+2015-11-10T16:48:12.388280 tid2136 [dbg,App] Notification for Device: Andor Property: KeepCleanTime changed to value: 3.57
+2015-11-10T16:48:12.388280 tid2136 [dbg,App] Notification for Device: Andor Property: ActualInterval-ms changed to value: 45.60
+2015-11-10T16:48:12.762680 tid2136 [IFO,Core] Did initialize device Andor
+2015-11-10T16:48:12.762680 tid2136 [IFO,Core] Default camera set to Andor
+2015-11-10T16:48:12.762680 tid2136 [IFO,Core] Will initialize device Picard Twister
+2015-11-10T16:48:12.778280 tid2136 [IFO,Core] Did initialize device Picard Twister
+2015-11-10T16:48:12.778280 tid2136 [IFO,Core] Will initialize device Picard Z Stage
+2015-11-10T16:48:12.778280 tid2136 [IFO,Core] Did initialize device Picard Z Stage
+2015-11-10T16:48:12.778280 tid2136 [IFO,Core] Will initialize device Picard XY Stage
+2015-11-10T16:48:12.809480 tid2136 [IFO,Core] Did initialize device Picard XY Stage
+2015-11-10T16:48:12.809480 tid2136 [IFO,Core] Default xy stage set to Picard XY Stage
+2015-11-10T16:48:12.809480 tid2136 [IFO,Core] Will initialize device CoherentCube
+2015-11-10T16:48:12.809480 tid2136 [IFO,dev:CoherentCube] CoherentCube::Initialize()
+2015-11-10T16:48:17.817080 tid2136 [IFO,dev:COM3] TERM_TIMEOUT error occured!
+2015-11-10T16:48:17.817080 tid2136 [ERR,Core] Error occurred in device COM3: Error in device &quot;COM3&quot;: (Error message unavailable) (107)
+2015-11-10T16:48:17.817080 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           E=0
+2015-11-10T16:48:17.817080 tid2136 [dbg,dev:COM3] SetCommand -&gt; E=0\r
+2015-11-10T16:48:17.848280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- E=0\r\n
+2015-11-10T16:48:17.848280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine E=0
+2015-11-10T16:48:17.848280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           &gt;=0
+2015-11-10T16:48:17.848280 tid2136 [dbg,dev:COM3] SetCommand -&gt; &gt;=0\r
+2015-11-10T16:48:17.910680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- &gt;=0\r\n
+2015-11-10T16:48:17.910680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine &gt;=0
+2015-11-10T16:48:17.910680 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           CDRH=0
+2015-11-10T16:48:17.910680 tid2136 [dbg,dev:COM3] SetCommand -&gt; CDRH=0\r
+2015-11-10T16:48:17.957480 tid2136 [dbg,dev:COM3] GetAnswer &lt;- CDRH=0\r\n
+2015-11-10T16:48:17.957480 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine CDRH=0
+2015-11-10T16:48:17.957480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           T=1
+2015-11-10T16:48:17.957480 tid2136 [dbg,dev:COM3] SetCommand -&gt; T=1\r
+2015-11-10T16:48:18.004280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- T=1\r\n
+2015-11-10T16:48:18.004280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine T=1
+2015-11-10T16:48:18.004280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           EXT=0
+2015-11-10T16:48:18.004280 tid2136 [dbg,dev:COM3] SetCommand -&gt; EXT=0\r
+2015-11-10T16:48:18.051080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- EXT=0\r\n
+2015-11-10T16:48:18.051080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine EXT=0
+2015-11-10T16:48:18.051080 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MINLP
+2015-11-10T16:48:18.051080 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MINLP\r
+2015-11-10T16:48:18.082280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MINLP=0.05\r\n
+2015-11-10T16:48:18.082280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MINLP=0.05
+2015-11-10T16:48:18.082280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MAXLP
+2015-11-10T16:48:18.082280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MAXLP\r
+2015-11-10T16:48:18.144680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MAXLP=52.50\r\n
+2015-11-10T16:48:18.144680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MAXLP=52.50
+2015-11-10T16:48:18.144680 tid2136 [IFO,Core] Did initialize device CoherentCube
+2015-11-10T16:48:18.144680 tid2136 [IFO,Core] Default shutter set to CoherentCube
+2015-11-10T16:48:18.144680 tid2136 [IFO,Core] Finished initializing 6 devices
+2015-11-10T16:48:18.144680 tid2136 [dbg,App] Notification for Device: Core Property: Initialize changed to value: 1
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Did set Core property: Initialize = 1
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Will set Core property: Camera = Andor
+2015-11-10T16:48:18.144680 tid2136 [IFO,Core] Default camera set to Andor
+2015-11-10T16:48:18.144680 tid2136 [dbg,App] Notification for Device: Core Property: Camera changed to value: Andor
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Did set Core property: Camera = Andor
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Will set Core property: Shutter = CoherentCube
+2015-11-10T16:48:18.144680 tid2136 [dbg,App] Notification for Device: Core Property: Shutter changed to value: CoherentCube
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Did set Core property: Shutter = CoherentCube
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Will set Core property: Focus = Picard Z Stage
+2015-11-10T16:48:18.144680 tid2136 [IFO,Core] Default stage set to Picard Z Stage
+2015-11-10T16:48:18.144680 tid2136 [dbg,App] Notification for Device: Core Property: Focus changed to value: Picard Z Stage
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Did set Core property: Focus = Picard Z Stage
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Will set Core property: AutoShutter = 1
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Autoshutter turned on
+2015-11-10T16:48:18.144680 tid2136 [dbg,App] Notification for Device: Core Property: AutoShutter changed to value: 1
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Did set Core property: AutoShutter = 1
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Waiting for device COM3...
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Finished waiting for device COM3
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Waiting for device Andor...
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Finished waiting for device Andor
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Waiting for device Picard Twister...
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Finished waiting for device Picard Twister
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Waiting for device Picard Z Stage...
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Finished waiting for device Picard Z Stage
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Waiting for device Picard XY Stage...
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Finished waiting for device Picard XY Stage
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Waiting for device CoherentCube...
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Finished waiting for device CoherentCube
+2015-11-10T16:48:18.144680 tid2136 [dbg,Core] Will update system state cache
+2015-11-10T16:48:18.160280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?CW
+2015-11-10T16:48:18.160280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?CW\r
+2015-11-10T16:48:18.222680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- CW=1\r\n
+2015-11-10T16:48:18.222680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine CW=1
+2015-11-10T16:48:18.222680 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?EXT
+2015-11-10T16:48:18.222680 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?EXT\r
+2015-11-10T16:48:18.253880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- EXT=0\r\n
+2015-11-10T16:48:18.253880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine EXT=0
+2015-11-10T16:48:18.253880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?HH
+2015-11-10T16:48:18.253880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?HH\r
+2015-11-10T16:48:18.316280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- HH=48.08\r\n
+2015-11-10T16:48:18.316280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine HH=48.08
+2015-11-10T16:48:18.316280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?HID
+2015-11-10T16:48:18.316280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?HID\r
+2015-11-10T16:48:18.378680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L40403001 1174040 490\r\n
+2015-11-10T16:48:18.378680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L40403001 1174040 490
+2015-11-10T16:48:18.378680 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MAXLP
+2015-11-10T16:48:18.378680 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MAXLP\r
+2015-11-10T16:48:18.441080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MAXLP=52.50\r\n
+2015-11-10T16:48:18.441080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MAXLP=52.50
+2015-11-10T16:48:18.441080 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MINLP
+2015-11-10T16:48:18.441080 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MINLP\r
+2015-11-10T16:48:18.487880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MINLP=0.05\r\n
+2015-11-10T16:48:18.487880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MINLP=0.05
+2015-11-10T16:48:18.487880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?P
+2015-11-10T16:48:18.487880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?P\r
+2015-11-10T16:48:18.565880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- P=0.00\r\n
+2015-11-10T16:48:18.565880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine P=0.00
+2015-11-10T16:48:18.565880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?SP
+2015-11-10T16:48:18.565880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?SP\r
+2015-11-10T16:48:18.612680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- SP=1.00\r\n
+2015-11-10T16:48:18.612680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine SP=1.00
+2015-11-10T16:48:18.612680 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?L
+2015-11-10T16:48:18.612680 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?L\r
+2015-11-10T16:48:18.643880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:18.643880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:18.643880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?WAVE
+2015-11-10T16:48:18.643880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?WAVE\r
+2015-11-10T16:48:18.706280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- WAVE=490\r\n
+2015-11-10T16:48:18.706280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine WAVE=490
+2015-11-10T16:48:18.706280 tid2136 [IFO,Core] Did update system state cache
+2015-11-10T16:48:18.706280 tid2136 [IFO,App] Updating GUI; config pad = true; from cache = false
+2015-11-10T16:48:18.737480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?L
+2015-11-10T16:48:18.737480 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?L\r
+2015-11-10T16:48:18.784280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:18.784280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:18.784280 tid2136 [dbg,Core] Will update system state cache
+2015-11-10T16:48:18.784280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?CW
+2015-11-10T16:48:18.784280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?CW\r
+2015-11-10T16:48:18.815480 tid2136 [dbg,dev:COM3] GetAnswer &lt;- CW=1\r\n
+2015-11-10T16:48:18.815480 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine CW=1
+2015-11-10T16:48:18.815480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?EXT
+2015-11-10T16:48:18.815480 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?EXT\r
+2015-11-10T16:48:18.877880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- EXT=0\r\n
+2015-11-10T16:48:18.877880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine EXT=0
+2015-11-10T16:48:18.877880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?HH
+2015-11-10T16:48:18.877880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?HH\r
+2015-11-10T16:48:18.940280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- HH=48.08\r\n
+2015-11-10T16:48:18.940280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine HH=48.08
+2015-11-10T16:48:18.940280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?HID
+2015-11-10T16:48:18.940280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?HID\r
+2015-11-10T16:48:19.002680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L40403001 1174040 490\r\n
+2015-11-10T16:48:19.002680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L40403001 1174040 490
+2015-11-10T16:48:19.002680 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MAXLP
+2015-11-10T16:48:19.002680 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MAXLP\r
+2015-11-10T16:48:19.065080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MAXLP=52.50\r\n
+2015-11-10T16:48:19.065080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MAXLP=52.50
+2015-11-10T16:48:19.065080 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MINLP
+2015-11-10T16:48:19.065080 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MINLP\r
+2015-11-10T16:48:19.127480 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MINLP=0.05\r\n
+2015-11-10T16:48:19.127480 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MINLP=0.05
+2015-11-10T16:48:19.127480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?P
+2015-11-10T16:48:19.127480 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?P\r
+2015-11-10T16:48:19.174280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- P=0.00\r\n
+2015-11-10T16:48:19.174280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine P=0.00
+2015-11-10T16:48:19.174280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?SP
+2015-11-10T16:48:19.174280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?SP\r
+2015-11-10T16:48:19.221080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- SP=1.00\r\n
+2015-11-10T16:48:19.221080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine SP=1.00
+2015-11-10T16:48:19.221080 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?L
+2015-11-10T16:48:19.221080 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?L\r
+2015-11-10T16:48:19.267880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:19.267880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:19.267880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?WAVE
+2015-11-10T16:48:19.267880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?WAVE\r
+2015-11-10T16:48:19.314680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- WAVE=490\r\n
+2015-11-10T16:48:19.314680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine WAVE=490
+2015-11-10T16:48:19.314680 tid2136 [IFO,Core] Did update system state cache
+2015-11-10T16:48:19.314680 tid2136 [IFO,App] Finished updating GUI
+2015-11-10T16:48:19.314680 tid2136 [IFO,App] Startup script file (D:\Install\2015.OpenSPIM.new\OpenSPIM.app.64bit\MMStartup.bsh) not present.
+2015-11-10T16:48:19.501880 tid2136 [IFO,App] Rebuilding config group table
+2015-11-10T16:48:19.501880 tid2136 [IFO,App] Finished rebuilding config group table
+2015-11-10T16:48:19.533080 tid2136 [IFO,App] [UI] JButton &quot;OK&quot; clicked in MMIntroDlg.
+2015-11-10T16:48:32.371880 tid2136 [dbg,Core] Autoshutter turned off
+2015-11-10T16:48:32.371880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           L=0
+2015-11-10T16:48:32.371880 tid2136 [dbg,dev:COM3] SetCommand -&gt; L=0\r
+2015-11-10T16:48:32.449880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:32.449880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:32.449880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?L
+2015-11-10T16:48:32.449880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?L\r
+2015-11-10T16:48:32.496680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:32.496680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:32.496680 tid2136 [IFO,App] [UI] JCheckBox &quot;Auto shutter&quot; toggled off in MainFrame.
+2015-11-10T16:48:33.557480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           L=1
+2015-11-10T16:48:33.557480 tid2136 [dbg,dev:COM3] SetCommand -&gt; L=1\r
+2015-11-10T16:48:33.651080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=1\r\n
+2015-11-10T16:48:33.651080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=1
+2015-11-10T16:48:33.651080 tid2136 [IFO,App] [UI] JToggleButton &quot;toggleShutterButton&quot; toggled on in MainFrame.
+2015-11-10T16:48:34.306280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           L=0
+2015-11-10T16:48:34.306280 tid2136 [dbg,dev:COM3] SetCommand -&gt; L=0\r
+2015-11-10T16:48:34.415480 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:34.415480 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:34.415480 tid2136 [IFO,App] [UI] JToggleButton &quot;toggleShutterButton&quot; toggled off in MainFrame.
+2015-11-10T16:48:34.961480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           L=1
+2015-11-10T16:48:34.961480 tid2136 [dbg,dev:COM3] SetCommand -&gt; L=1\r
+2015-11-10T16:48:35.055080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=1\r\n
+2015-11-10T16:48:35.055080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=1
+2015-11-10T16:48:35.055080 tid2136 [IFO,App] [UI] JToggleButton &quot;toggleShutterButton&quot; toggled on in MainFrame.
+2015-11-10T16:48:35.725880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           L=0
+2015-11-10T16:48:35.725880 tid2136 [dbg,dev:COM3] SetCommand -&gt; L=0\r
+2015-11-10T16:48:35.819480 tid2136 [dbg,dev:COM3] GetAnswer &lt;- L=0\r\n
+2015-11-10T16:48:35.819480 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine L=0
+2015-11-10T16:48:35.819480 tid2136 [IFO,App] [UI] JToggleButton &quot;toggleShutterButton&quot; toggled off in MainFrame.
+2015-11-10T16:48:37.909880 tid2136 [IFO,App] [UI] JMenu &quot;Plugins&quot; clicked in MainFrame.
+2015-11-10T16:48:46.115480 tid2136 [IFO,App] Plugin command: Acquire SPIM image
+2015-11-10T16:48:46.131080 tid2136 [dbg,Core] Pixel size config: preset Uncalibrated: added setting : Core-Initialize = 1
+2015-11-10T16:48:46.131080 tid2136 [dbg,Core] Pixel size config: preset Uncalibrated: set resolution to 1.00000 um/px
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Will initialize 6 devices
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Will initialize device COM3
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Did initialize device COM3
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Will initialize device Andor
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Did initialize device Andor
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Default camera set to Andor
+2015-11-10T16:48:46.131080 tid2136 [IFO,Core] Will initialize device Picard Twister
+2015-11-10T16:48:46.146680 tid2136 [IFO,Core] Did initialize device Picard Twister
+2015-11-10T16:48:46.146680 tid2136 [IFO,Core] Will initialize device Picard Z Stage
+2015-11-10T16:48:46.162280 tid2136 [IFO,Core] Did initialize device Picard Z Stage
+2015-11-10T16:48:46.162280 tid2136 [IFO,Core] Will initialize device Picard XY Stage
+2015-11-10T16:48:46.177880 tid2136 [IFO,Core] Did initialize device Picard XY Stage
+2015-11-10T16:48:46.177880 tid2136 [IFO,Core] Default xy stage set to Picard XY Stage
+2015-11-10T16:48:46.177880 tid2136 [IFO,Core] Will initialize device CoherentCube
+2015-11-10T16:48:46.177880 tid2136 [IFO,dev:CoherentCube] CoherentCube::Initialize()
+2015-11-10T16:48:51.185480 tid2136 [IFO,dev:COM3] TERM_TIMEOUT error occured!
+2015-11-10T16:48:51.185480 tid2136 [ERR,Core] Error occurred in device COM3: Error in device &quot;COM3&quot;: (Error message unavailable) (107)
+2015-11-10T16:48:51.185480 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           E=0
+2015-11-10T16:48:51.185480 tid2136 [dbg,dev:COM3] SetCommand -&gt; E=0\r
+2015-11-10T16:48:51.232280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- E=0\r\n
+2015-11-10T16:48:51.232280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine E=0
+2015-11-10T16:48:51.232280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           &gt;=0
+2015-11-10T16:48:51.232280 tid2136 [dbg,dev:COM3] SetCommand -&gt; &gt;=0\r
+2015-11-10T16:48:51.279080 tid2136 [dbg,dev:COM3] GetAnswer &lt;- &gt;=0\r\n
+2015-11-10T16:48:51.279080 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine &gt;=0
+2015-11-10T16:48:51.279080 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           CDRH=0
+2015-11-10T16:48:51.279080 tid2136 [dbg,dev:COM3] SetCommand -&gt; CDRH=0\r
+2015-11-10T16:48:51.325880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- CDRH=0\r\n
+2015-11-10T16:48:51.325880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine CDRH=0
+2015-11-10T16:48:51.325880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           T=1
+2015-11-10T16:48:51.325880 tid2136 [dbg,dev:COM3] SetCommand -&gt; T=1\r
+2015-11-10T16:48:51.372680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- T=1\r\n
+2015-11-10T16:48:51.372680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine T=1
+2015-11-10T16:48:51.372680 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           EXT=0
+2015-11-10T16:48:51.372680 tid2136 [dbg,dev:COM3] SetCommand -&gt; EXT=0\r
+2015-11-10T16:48:51.403880 tid2136 [dbg,dev:COM3] GetAnswer &lt;- EXT=0\r\n
+2015-11-10T16:48:51.403880 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine EXT=0
+2015-11-10T16:48:51.403880 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MINLP
+2015-11-10T16:48:51.403880 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MINLP\r
+2015-11-10T16:48:51.466280 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MINLP=0.05\r\n
+2015-11-10T16:48:51.466280 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MINLP=0.05
+2015-11-10T16:48:51.466280 tid2136 [dbg,dev:CoherentCube] CoherentCube::Send           ?MAXLP
+2015-11-10T16:48:51.466280 tid2136 [dbg,dev:COM3] SetCommand -&gt; ?MAXLP\r
+2015-11-10T16:48:51.528680 tid2136 [dbg,dev:COM3] GetAnswer &lt;- MAXLP=52.50\r\n
+2015-11-10T16:48:51.528680 tid2136 [dbg,dev:CoherentCube] CoherentCube::ReceiveOneLine MAXLP=52.50
+2015-11-10T16:48:51.528680 tid2136 [IFO,Core] Did initialize device CoherentCube
+2015-11-10T16:48:51.528680 tid2136 [IFO,Core] Default shutter set to CoherentCube
+2015-11-10T16:48:51.528680 tid2136 [IFO,Core] Finished initializing 6 devices
+2015-11-10T16:48:51.528680 tid2136 [dbg,App] Notification for Device: Core Property: Initialize changed to value: 1
+2015-11-10T16:48:51.528680 tid2136 [dbg,Core] Applied pixel size configuration preset Uncalibrated
+2015-11-10T16:48:51.528680 tid2136 [IFO,App] Defined uncalibrated pixel size (1:1).
+2015-11-10T16:48:51.528680 tid2136 [IFO,App] Thread 14 (AWT-EventQueue-0) terminated with uncaught exception
+2015-11-10T16:48:51.528680 tid2136 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.&lt;init&gt;(DefaultBoundedRangeModel.java:102)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.JSlider.&lt;init&gt;(JSlider.java:274)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.JSlider.&lt;init&gt;(JSlider.java:241)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at spim.SteppedSlider.&lt;init&gt;(SteppedSlider.java:63)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at spim.SPIMAcquisition$20.&lt;init&gt;(SPIMAcquisition.java:1058)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1058)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:355)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:218)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager.displayPlugin(PluginManager.java:114)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager.access$100(PluginManager.java:22)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager$2.run(PluginManager.java:64)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:362)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Component.processMouseEvent(Component.java:6505)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3320)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Component.processEvent(Component.java:6270)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Container.processEvent(Container.java:2229)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4687)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2273)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4687)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue$3.run(EventQueue.java:694)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue$3.run(EventQueue.java:692)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue$4.run(EventQueue.java:708)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue$4.run(EventQueue.java:706)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2015-11-10T16:48:51.528680 tid2136 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App] Thread 14 (AWT-EventQueue-0) terminated with uncaught exception
+2015-11-10T16:49:27.611480 tid2136 [IFO,App] java.lang.NullPointerException
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at spim.SPIMAcquisition.dispose(SPIMAcquisition.java:189)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at org.micromanager.pluginmanagement.PluginItem.dispose(PluginItem.java:111)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at org.micromanager.pluginmanagement.PluginLoader.disposePlugins(PluginLoader.java:248)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager.disposePlugins(PluginManager.java:143)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at org.micromanager.MMStudio.cleanupOnClose(MMStudio.java:1565)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at org.micromanager.MMStudio.closeSequence(MMStudio.java:1626)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at org.micromanager.MainFrame$1.windowClosing(MainFrame.java:159)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:349)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:349)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.Window.processWindowEvent(Window.java:2051)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at javax.swing.JFrame.processWindowEvent(JFrame.java:296)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.Window.processEvent(Window.java:2009)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4861)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2287)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2719)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4687)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue.access$200(EventQueue.java:103)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue$3.run(EventQueue.java:694)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue$3.run(EventQueue.java:692)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue$4.run(EventQueue.java:708)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue$4.run(EventQueue.java:706)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+2015-11-10T16:49:27.611480 tid2136 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Waiting for device COM3...
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Finished waiting for device COM3
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Waiting for device Andor...
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Finished waiting for device Andor
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Waiting for device Picard Twister...
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Finished waiting for device Picard Twister
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Waiting for device Picard Z Stage...
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Finished waiting for device Picard Z Stage
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Waiting for device Picard XY Stage...
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Finished waiting for device Picard XY Stage
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Waiting for device CoherentCube...
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Finished waiting for device CoherentCube
+2015-11-10T16:49:48.187880 tid2136 [dbg,Core] Will unload all devices
+2015-11-10T16:49:48.733880 tid2136 [IFO,Core] Did unload all devices
+2015-11-10T16:49:48.733880 tid2136 [IFO,Core] System reset
+2015-11-10T16:49:48.733880 tid2136 [IFO,Core] Core session ended
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001828.html">[OpenSPIM] 3D Reconstruction
+</A></li>
+	<LI>Next message: <A HREF="001833.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1832">[ date ]</a>
+              <a href="thread.html#1832">[ thread ]</a>
+              <a href="subject.html#1832">[ subject ]</a>
+              <a href="author.html#1832">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

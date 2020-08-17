@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] storage strategies for SPIM datasets?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20storage%20strategies%20for%20SPIM%20datasets%3F&In-Reply-To=%3CD6DEE6AE-7157-442D-9864-6E0F26F94F4C%40uni-koeln.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001731.html">
+   <LINK REL="Next"  HREF="001725.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] storage strategies for SPIM datasets?</H1>
+    <B>Maarten Hilbrant</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20storage%20strategies%20for%20SPIM%20datasets%3F&In-Reply-To=%3CD6DEE6AE-7157-442D-9864-6E0F26F94F4C%40uni-koeln.de%3E"
+       TITLE="[OpenSPIM] storage strategies for SPIM datasets?">m.hilbrant at uni-koeln.de
+       </A><BR>
+    <I>Wed Jun 17 07:47:47 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001731.html">[OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF
+</A></li>
+        <LI>Next message: <A HREF="001725.html">[OpenSPIM] storage strategies for SPIM datasets?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1724">[ date ]</a>
+              <a href="thread.html#1724">[ thread ]</a>
+              <a href="subject.html#1724">[ subject ]</a>
+              <a href="author.html#1724">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+our SPIM (which in fact is an mDSLM) is up and running -wonderful.
+
+This also means that we're producing a lot of data very quickly (typically about 500GB per time lapse recording, about one recording per week). In an attempt to streamline our data analysis and storage workflow, I wondered what your experiences are.
+
+I currently just dump our data on our two 13.5TB NAS servers (a second set of NAS servers is used as a backup). Whenever I want to analyse a dataset, I first copy it to the 5TB internal hd of a reasonably powerful workstation, as reading/writing is often the limiting step for most analysis procedures. After cropping, making Z-projections, 3D registration/fusion etc I copy the results back to subfolders of the original data on the NAS server, creating an ever-growing swamp of data. Until I've finally convinced myself that it's ok to delete the raw data:-)
+
+This &quot;workflow&quot; has worked for me reasonably well, but it is rather difficult to keep an overview of all the data and I just know I'm occupying much more storage space than strictly necessary to answer our biological questions. So I'm investigating the possibilities for setting up a relational database to at least keep track of all the metadata, analyses performed etc. Ideally, such a database would include thumbnails of the imaging data and allow for easy import of metadata. Any ideas? Of course not very &quot;open&quot;, but I'm tempted to use Filemaker Pro. Anything else seems like re-inventing the OMERO wheel. Does any one have experience with using OMERO for storing all data from large SPIM datasets? Or would you just store projections and keep the raw data somewhere else? Any ideas appreciated!
+
+cheers,
+Maarten
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001731.html">[OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF
+</A></li>
+	<LI>Next message: <A HREF="001725.html">[OpenSPIM] storage strategies for SPIM datasets?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1724">[ date ]</a>
+              <a href="thread.html#1724">[ thread ]</a>
+              <a href="subject.html#1724">[ subject ]</a>
+              <a href="author.html#1724">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

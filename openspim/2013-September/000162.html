@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Temperature control for the SPIM chamber
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3C52389843.4010701%40dkfz-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000161.html">
+   <LINK REL="Next"  HREF="000163.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Temperature control for the SPIM chamber</H1>
+    <B>Jan Krieger</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3C52389843.4010701%40dkfz-heidelberg.de%3E"
+       TITLE="[OpenSPIM] Temperature control for the SPIM chamber">j.krieger at dkfz-heidelberg.de
+       </A><BR>
+    <I>Tue Sep 17 12:58:27 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000161.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+        <LI>Next message: <A HREF="000163.html">[OpenSPIM] Picard stage adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#162">[ date ]</a>
+              <a href="thread.html#162">[ thread ]</a>
+              <a href="subject.html#162">[ subject ]</a>
+              <a href="author.html#162">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+
+Hi Johannes &amp; all!
+
+  &gt; Depending how fast your temperature control needs to react (i.e. do you
+&gt;<i> need to keep the temperature just stable? In that case, a big peltier
+</I>&gt;<i> underneath the plexi glass chamber should be good enough), you might need
+</I>&gt;<i> to anodize the side of the chamber, or put in a window as you say.
+</I>&gt;<i>
+</I>&gt;<i> Another idea would be to embed the peltier *inside* the chamber rather
+</I>&gt;<i> than underneath, so that you do not have to go through the complete
+</I>&gt;<i> centimeter or so of plexi glass.
+</I>
+We tried it with a Peltier, BUT: THe problem is a Peltier is a
+Heat-PUMP, not a heater, so one side will be cooled, the other will get
+hot. This is convenient for cooling, as you can simply put a big cooler
+or a water-tube on the hot side to remove the heat (the efficiency
+mostly depends on the temperature gradient over the Peltier). For
+heating you have the problem that you have to get the heat somehow TO
+the war side: A water-tube might again be a good solution, but as long
+as you only want to heat, a simple resistor is much easier:
+1. controling it with a microcontroller or a computer is very simple
+(for a Peltier you need much more electronics here)
+2. you don't need to worry about the heat-pump-thing, as the resistor
+with resitance R and current I will simply have a heating power of
+P=R*I^2 (or if you use PWM with a duty cycle p: P=U^2*p^2/R)
+
+
+&gt;<i> Also keep in mind that you need to have a precise temperature sensor
+</I>&gt;<i> inside the chamber, preferably two: one close to the peltier, one as far
+</I>&gt;<i> from it as possible, to account for temperature gradients.
+</I>Yes that's really true: We use one PT100 close to the resistor which is
+used for a PI loop and a second one inside the sample chamber to measure
+the medium temperature. Typically we set the set point ~1&#176;C above the
+desired final temperature. We use PT100 with a 4-wire readout, which is
+very precise.
+
+Here are some links on PT100 and Peltier-temperature control:
+<A HREF="http://www.ti.com/general/docs/lit/getliterature.tsp?literatureNumber=snoa481b&amp;fileType=pdf">http://www.ti.com/general/docs/lit/getliterature.tsp?literatureNumber=snoa481b&amp;fileType=pdf</A>
+<A HREF="http://www.linear.com/product/LTC1923">http://www.linear.com/product/LTC1923</A>
+<A HREF="http://www.maximintegrated.com/datasheet/index.mvp/id/3377">http://www.maximintegrated.com/datasheet/index.mvp/id/3377</A>
+<A HREF="http://redlum.xohp.pagesperso-orange.fr/electronics/315M/TEC.html">http://redlum.xohp.pagesperso-orange.fr/electronics/315M/TEC.html</A>
+
+cu
+JAN
+
+PS: I had a student working on this project with a peltier and whoever
+is interested: I can give you the report he wrote. Just drop me a
+message ;-)
+
+&gt;<i>
+</I>&gt;<i> But please keep in mind, too, that I am a software guy, not a hardware
+</I>&gt;<i> guy, so hopefully scientists with more experience in the matters at hand
+</I>&gt;<i> will respond soon (I know that PAvel is at a workshop these days,
+</I>&gt;<i> introducing the OpenSPIM to yet another crowd of scientists, so he'll be
+</I>&gt;<i> busy, I suspect).
+</I>&gt;<i>
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>
+
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: j_krieger.vcf
+Type: text/x-vcard
+Size: 421 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130917/dbcf2eec/attachment.vcf">http://openspim.org/pipermail/openspim/attachments/20130917/dbcf2eec/attachment.vcf</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000161.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+	<LI>Next message: <A HREF="000163.html">[OpenSPIM] Picard stage adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#162">[ date ]</a>
+              <a href="thread.html#162">[ thread ]</a>
+              <a href="subject.html#162">[ subject ]</a>
+              <a href="author.html#162">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

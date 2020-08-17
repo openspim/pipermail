@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] The update error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20The%20update%20error&In-Reply-To=%3C6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000923.html">
+   <LINK REL="Next"  HREF="000928.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] The update error</H1>
+    <B>HongKee Moon</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20The%20update%20error&In-Reply-To=%3C6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] The update error">moon at mpi-cbg.de
+       </A><BR>
+    <I>Mon Feb 29 07:20:11 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000923.html">[OpenSPIM] The update error
+</A></li>
+        <LI>Next message: <A HREF="000928.html">[OpenSPIM] &#22238;&#22797;&#65306;  The update error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#927">[ date ]</a>
+              <a href="thread.html#927">[ thread ]</a>
+              <a href="subject.html#927">[ subject ]</a>
+              <a href="author.html#927">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Zheng,
+
+Curtis and I have found the bug and I thought we managed it.
+Please, refer <A HREF="http://fiji.sc/bugzilla/show_bug.cgi?id=1214">http://fiji.sc/bugzilla/show_bug.cgi?id=1214</A> &lt;<A HREF="http://fiji.sc/bugzilla/show_bug.cgi?id=1214">http://fiji.sc/bugzilla/show_bug.cgi?id=1214</A>&gt;.
+
+&quot;To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.&#8221;
+
+Cheers,
+HongKee
+
+&gt;<i> On Feb 29, 2016, at 7:09 AM, &#25919; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi, all
+</I>&gt;<i>      I just updated OpenSPIM(64bit) at Help-&gt;update. And the error happened when you restart the OpenSPIM. 
+</I>&gt;<i> 
+</I>&gt;<i> [ERROR] Module threw exception
+</I>&gt;<i> java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+</I>&gt;<i> 
+</I>&gt;<i>      If try the update again, it reported
+</I>&gt;<i> 
+</I>&gt;<i> java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+</I>&gt;<i> 	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i>      Does anyone has this error ?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------
+</I>&gt;<i> Zheng Huang
+</I>&gt;<i> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+</I>&gt;<i> Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+</I>&gt;<i> Tel: 13120836853
+</I>&gt;<i> E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+</I>&gt;<i>  
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160229/2ca0266b/attachment.html">http://openspim.org/pipermail/openspim/attachments/20160229/2ca0266b/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000923.html">[OpenSPIM] The update error
+</A></li>
+	<LI>Next message: <A HREF="000928.html">[OpenSPIM] &#22238;&#22797;&#65306;  The update error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#927">[ date ]</a>
+              <a href="thread.html#927">[ thread ]</a>
+              <a href="subject.html#927">[ subject ]</a>
+              <a href="author.html#927">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

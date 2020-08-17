@@ -1,0 +1,795 @@
+2015-05-04T12:15:01.929029 tid384 [IFO,LogManager] Enabled primary log file C:\Users\HCFlashDemo\Desktop\Fiji.app\CoreLogs\CoreLog20150504T121501_pid2056.txt
+2015-05-04T12:15:01.929029 tid384 [IFO,App] User: HCFlashDemo
+2015-05-04T12:15:01.929029 tid384 [IFO,App] Host: HCFlashDemo-T36
+2015-05-04T12:15:01.929029 tid384 [IFO,App] MM Studio version: 1.4.22 20150430
+2015-05-04T12:15:01.929029 tid384 [IFO,App] MMCore version 7.0.2
+2015-05-04T12:15:01.929029 tid384 [IFO,App] Device API version 61, Module API version 10
+2015-05-04T12:15:01.929029 tid384 [IFO,App] Operating System: Windows 7 (amd64) 6.1
+2015-05-04T12:15:01.930029 tid384 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.6.0_24, 64-bit
+2015-05-04T12:15:01.936029 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmplugins/
+2015-05-04T12:15:01.936029 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Big.jar!/
+2015-05-04T12:15:01.943029 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\DataBrowser.jar!/
+2015-05-04T12:15:02.744075 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\PixelCalibrator.jar!/
+2015-05-04T12:15:02.754076 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Recall.jar!/
+2015-05-04T12:15:02.756076 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\SPIMAcquisition-1.0.0-SNAPSHOT.jar!/
+2015-05-04T12:15:02.863082 tid3328 [IFO,App] Installing plugin org.micromanager.browser.Data_Browser...
+2015-05-04T12:15:02.863082 tid3328 [IFO,App] Error: Plugin [org.micromanager.browser.Data_Browser] has no menuName field
+2015-05-04T12:15:02.863082 tid3328 [IFO,App] org.micromanager.browser.Data_Browser fails to implement static String tooltipDescription.
+2015-05-04T12:15:02.864082 tid3328 [IFO,App] Installing plugin org.micromanager.pixelcalibrator.PixelCalibratorPlugin...
+2015-05-04T12:15:02.864082 tid3328 [IFO,App] Installing plugin org.micromanager.recall.RecallPlugin...
+2015-05-04T12:15:02.864082 tid3328 [IFO,App] Installing plugin spim.SPIMAcquisition...
+2015-05-04T12:15:02.865082 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmplugins/Acquisition_Tools/
+2015-05-04T12:15:02.865082 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\AcquireMultipleRegions.jar!/
+2015-05-04T12:15:02.888083 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\Gaussian.jar!/
+2015-05-04T12:15:03.054093 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\HCS.jar!/
+2015-05-04T12:15:03.078094 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\IntelligentAcquisition.jar!/
+2015-05-04T12:15:03.098095 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\MMTracker.jar!/
+2015-05-04T12:15:03.110096 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\PatternOverlay.jar!/
+2015-05-04T12:15:03.128097 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Acquisition_Tools\SlideExplorer.jar!/
+2015-05-04T12:15:03.178100 tid3328 [IFO,App] Installing plugin org.micromanager.acquiremultipleregions.AcquireMultipleRegions...
+2015-05-04T12:15:03.179100 tid3328 [IFO,App] Installing plugin GaussianTrack_...
+2015-05-04T12:15:03.179100 tid3328 [IFO,App] Installing plugin org.micromanager.hcs.SiteGenerator...
+2015-05-04T12:15:03.179100 tid3328 [IFO,App] Installing plugin org.micromanager.intelligentacquisition.IntelligentAcquisition...
+2015-05-04T12:15:03.179100 tid3328 [IFO,App] Installing plugin com.imaging100x.tracker.TrackerControl...
+2015-05-04T12:15:03.180100 tid3328 [IFO,App] Installing plugin org.micromanager.patternoverlay.PatternOverlayPlugin...
+2015-05-04T12:15:03.180100 tid3328 [IFO,App] Installing plugin org.micromanager.slideexplorer.SlideExplorerPlugin...
+2015-05-04T12:15:03.180100 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmplugins/Beta/
+2015-05-04T12:15:03.181100 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Beta\CRISPv2.jar!/
+2015-05-04T12:15:03.198101 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Beta\SlideExplorer2.jar!/
+2015-05-04T12:15:04.331166 tid3328 [IFO,App] Installing plugin com.asiimaging.CRISPv2.ASI_CRISP_V2...
+2015-05-04T12:15:04.331166 tid3328 [IFO,App] Installing plugin org.micromanager.SlideExplorer2...
+2015-05-04T12:15:04.331166 tid3328 [IFO,App] Error: Plugin [org.micromanager.SlideExplorer2] has no menuName field
+2015-05-04T12:15:04.331166 tid3328 [IFO,App] org.micromanager.SlideExplorer2 fails to implement static String tooltipDescription.
+2015-05-04T12:15:04.331166 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmplugins/Developer_Tools/
+2015-05-04T12:15:04.331166 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Developer_Tools\ClojureEditor.jar!/
+2015-05-04T12:15:04.334166 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Developer_Tools\DLLAutoReloader.jar!/
+2015-05-04T12:15:04.413171 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Developer_Tools\SequenceBufferMonitor.jar!/
+2015-05-04T12:15:04.417171 tid3328 [IFO,App] Installing plugin org.micromanager.clojureeditor.ClojureEditorPlugin...
+2015-05-04T12:15:04.417171 tid3328 [IFO,App] Installing plugin org.micromanager.DLLAutoReloader...
+2015-05-04T12:15:04.418171 tid3328 [IFO,App] Error: Plugin [org.micromanager.DLLAutoReloader] has no menuName field
+2015-05-04T12:15:04.418171 tid3328 [IFO,App] org.micromanager.DLLAutoReloader fails to implement static String tooltipDescription.
+2015-05-04T12:15:04.418171 tid3328 [IFO,App] Installing plugin org.micromanager.plugins.sequencebuffermonitor.SequenceBufferMonitor...
+2015-05-04T12:15:04.418171 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmplugins/Device_Control/
+2015-05-04T12:15:04.418171 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\ASIdiSPIM.jar!/
+2015-05-04T12:15:04.584180 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\AutoLase.jar!/
+2015-05-04T12:15:04.616182 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\CRISP.jar!/
+2015-05-04T12:15:04.627183 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\MultiCamera.jar!/
+2015-05-04T12:15:04.642184 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\pgFocus.jar!/
+2015-05-04T12:15:04.661185 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\Projector.jar!/
+2015-05-04T12:15:04.730189 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\StageControl.jar!/
+2015-05-04T12:15:04.767191 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\Device_Control\WhiteBalance.jar!/
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin org.micromanager.asidispim.ASIdiSPIM...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin ch.epfl.leb.autolase.AutoLasePlugin...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin org.micromanager.CRISP.CRISP...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin org.micromanager.multicamera.MultiCamera...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin edu.umassmed.pgfocus.pgFocus...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin org.micromanager.projector.ProjectorPlugin...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin org.micromanager.stagecontrol.StageControl...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Installing plugin PMQI.AutoWB...
+2015-05-04T12:15:04.776191 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmplugins/On-The-Fly_Processors/
+2015-05-04T12:15:04.777191 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\On-The-Fly_Processors\ImageFlipper.jar!/
+2015-05-04T12:15:04.784192 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\On-The-Fly_Processors\MultiChannelShading.jar!/
+2015-05-04T12:15:04.807193 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmplugins\On-The-Fly_Processors\SplitView.jar!/
+2015-05-04T12:15:04.818194 tid3328 [IFO,App] Installing plugin org.micromanager.newimageflipper.NewTaggedImageFlipper...
+2015-05-04T12:15:04.821194 tid3328 [IFO,App] Installing plugin org.micromanager.multichannelshading.MultiChannelShading...
+2015-05-04T12:15:04.821194 tid3328 [IFO,App] Installing plugin org.micromanager.splitview.SplitView...
+2015-05-04T12:15:04.847195 tid3328 [IFO,App] Added URL to system class loader: file:/C:/Users/HCFLAS~1/Desktop/Fiji.app/mmautofocus/
+2015-05-04T12:15:04.847195 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmautofocus\HardwareFocusExtender.jar!/
+2015-05-04T12:15:04.850196 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmautofocus\MMAutofocus.jar!/
+2015-05-04T12:15:04.852196 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmautofocus\MMAutofocusDuo.jar!/
+2015-05-04T12:15:04.853196 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmautofocus\MMAutofocusTB.jar!/
+2015-05-04T12:15:04.855196 tid3328 [IFO,App] Added URL to system class loader: jar:file:C:\Users\HCFLAS~1\Desktop\Fiji.app\mmautofocus\MMOughtaFocus.jar!/
+2015-05-04T12:15:04.859196 tid3328 [IFO,App] Attempting to install autofocus plugin HardwareFocusExtender
+2015-05-04T12:15:04.860196 tid3328 [IFO,App] Attempting to install autofocus plugin Autofocus
+2015-05-04T12:15:04.861196 tid3328 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2015-05-04T12:15:04.861196 tid3328 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2015-05-04T12:15:04.862196 tid3328 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2015-05-04T12:15:04.863196 tid384 [IFO,App] Finished waiting for plugins to load
+2015-05-04T12:15:04.871197 tid384 [IFO,Core] Did unload all devices
+2015-05-04T12:15:04.873197 tid384 [IFO,Core] Did load device COM6 from SerialManager; label = COM6
+2015-05-04T12:15:04.875197 tid384 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = Flash 4.0
+2015-05-04T12:15:04.876197 tid384 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2015-05-04T12:15:04.876197 tid384 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2015-05-04T12:15:04.876197 tid384 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2015-05-04T12:15:04.876197 tid384 [IFO,Core] Did load device CoherentObis from CoherentOBIS; label = 488nm/60mW
+2015-05-04T12:15:04.957202 tid384 [IFO,Core] Will initialize 6 devices
+2015-05-04T12:15:04.957202 tid384 [IFO,Core] Will initialize device COM6
+2015-05-04T12:15:05.118211 tid384 [IFO,Core] Did initialize device COM6
+2015-05-04T12:15:05.118211 tid384 [IFO,Core] Will initialize device Flash 4.0
+2015-05-04T12:15:06.288278 tid384 [IFO,Core] Did initialize device Flash 4.0
+2015-05-04T12:15:06.288278 tid384 [IFO,Core] Default camera set to Flash 4.0
+2015-05-04T12:15:06.288278 tid384 [IFO,Core] Will initialize device Picard Twister
+2015-05-04T12:15:06.299279 tid384 [IFO,Core] Did initialize device Picard Twister
+2015-05-04T12:15:06.299279 tid384 [IFO,Core] Will initialize device Picard Z Stage
+2015-05-04T12:15:06.300279 tid384 [IFO,Core] Did initialize device Picard Z Stage
+2015-05-04T12:15:06.300279 tid384 [IFO,Core] Will initialize device Picard XY Stage
+2015-05-04T12:15:06.333280 tid384 [IFO,Core] Did initialize device Picard XY Stage
+2015-05-04T12:15:06.333280 tid384 [IFO,Core] Default xy stage set to Picard XY Stage
+2015-05-04T12:15:06.333280 tid384 [IFO,Core] Will initialize device 488nm/60mW
+2015-05-04T12:15:06.333280 tid384 [IFO,dev:488nm/60mW] CoherentObis::Initialize()yes??
+2015-05-04T12:15:06.409285 tid384 [IFO,Core] Did initialize device 488nm/60mW
+2015-05-04T12:15:06.409285 tid384 [IFO,Core] Default shutter set to 488nm/60mW
+2015-05-04T12:15:06.409285 tid384 [IFO,Core] Finished initializing 6 devices
+2015-05-04T12:15:06.409285 tid384 [IFO,Core] Default camera set to Flash 4.0
+2015-05-04T12:15:06.409285 tid384 [IFO,Core] Default stage set to Picard Z Stage
+2015-05-04T12:15:06.465288 tid384 [IFO,Core] Did update system state cache
+2015-05-04T12:15:06.470288 tid384 [IFO,App] Updating GUI; config pad = true; from cache = false
+2015-05-04T12:15:06.561294 tid384 [IFO,Core] Did update system state cache
+2015-05-04T12:15:06.561294 tid384 [IFO,App] Finished updating GUI
+2015-05-04T12:15:06.561294 tid384 [IFO,App] Startup script file (C:\Users\HCFlashDemo\Desktop\Fiji.app\MMStartup.bsh) not present.
+2015-05-04T12:15:06.667300 tid384 [IFO,App] Rebuilding config group table
+2015-05-04T12:15:06.667300 tid384 [IFO,App] Finished rebuilding config group table
+2015-05-04T12:15:09.336452 tid384 [IFO,App] Plugin command: Acquire SPIM image
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Will initialize 6 devices
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Will initialize device COM6
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Did initialize device COM6
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Will initialize device Flash 4.0
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Did initialize device Flash 4.0
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Default camera set to Flash 4.0
+2015-05-04T12:15:09.341453 tid384 [IFO,Core] Will initialize device Picard Twister
+2015-05-04T12:15:09.370454 tid384 [IFO,Core] Did initialize device Picard Twister
+2015-05-04T12:15:09.370454 tid384 [IFO,Core] Will initialize device Picard Z Stage
+2015-05-04T12:15:09.371454 tid384 [IFO,Core] Did initialize device Picard Z Stage
+2015-05-04T12:15:09.371454 tid384 [IFO,Core] Will initialize device Picard XY Stage
+2015-05-04T12:15:09.404456 tid384 [IFO,Core] Did initialize device Picard XY Stage
+2015-05-04T12:15:09.404456 tid384 [IFO,Core] Default xy stage set to Picard XY Stage
+2015-05-04T12:15:09.404456 tid384 [IFO,Core] Will initialize device 488nm/60mW
+2015-05-04T12:15:09.404456 tid384 [IFO,dev:488nm/60mW] CoherentObis::Initialize()yes??
+2015-05-04T12:15:09.476460 tid384 [IFO,Core] Did initialize device 488nm/60mW
+2015-05-04T12:15:09.476460 tid384 [IFO,Core] Default shutter set to 488nm/60mW
+2015-05-04T12:15:09.476460 tid384 [IFO,Core] Finished initializing 6 devices
+2015-05-04T12:15:09.476460 tid384 [IFO,App] Defined uncalibrated pixel size (1:1).
+2015-05-04T12:15:36.718018 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T12:17:45.469383 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T12:17:45.620391 tid3872 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T12:18:31.154996 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T12:18:31.253001 tid2588 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T12:18:31.864036 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T12:18:31.958042 tid6844 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T12:18:38.220400 tid384 [IFO,dev:488nm/60mW] requested setpoint: 5 but echo setpoint is: 5
+2015-05-04T12:21:13.554284 tid3944 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T12:21:13.652290 tid3924 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T13:02:02.239341 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T13:02:02.385349 tid6012 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T13:58:42.396819 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T13:58:42.493825 tid6948 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T14:03:53.583618 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T14:03:53.733626 tid1100 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T14:31:50.023505 tid384 [IFO,dev:488nm/60mW] requested setpoint: 1.5 but echo setpoint is: 1.5
+2015-05-04T14:37:10.041809 tid384 [IFO,dev:488nm/60mW] requested setpoint: 7.5 but echo setpoint is: 7.5
+2015-05-04T14:38:32.810543 tid6828 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T14:38:32.961551 tid3068 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T14:39:51.946069 tid6828 [IFO,App] Behind schedule! (next seq in -18.88928460799798s)
+2015-05-04T14:41:11.362611 tid6828 [IFO,App] Behind schedule! (next seq in -38.304711035001674s)
+2015-05-04T14:41:40.726291 tid1460 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T14:41:40.825297 tid1208 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T14:43:00.505854 tid1460 [IFO,App] Behind schedule! (next seq in -19.61160194699187s)
+2015-05-04T14:44:20.883451 tid1460 [IFO,App] Behind schedule! (next seq in -39.986658548994455s)
+2015-05-04T15:52:52.318612 tid384 [IFO,dev:488nm/60mW] requested setpoint: 2 but echo setpoint is: 2
+2015-05-04T15:57:43.421262 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T15:57:43.563270 tid7404 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T16:30:46.771703 tid384 [IFO,dev:488nm/60mW] requested setpoint: 7.5 but echo setpoint is: 7.5
+2015-05-04T16:41:33.196677 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T16:41:33.346685 tid8032 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T16:41:44.351315 tid384 [IFO,dev:488nm/60mW] requested setpoint: 1.5 but echo setpoint is: 1.5
+2015-05-04T16:42:17.789227 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T16:42:17.883233 tid7156 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T16:44:06.528447 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T16:44:06.627452 tid8152 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T16:44:16.170998 tid384 [IFO,dev:488nm/60mW] requested setpoint: 1.1 but echo setpoint is: 1.1
+2015-05-04T16:45:11.788179 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T16:45:11.882185 tid3620 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T16:48:33.417712 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T16:48:33.562720 tid5840 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T16:58:26.637642 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-04T16:58:26.637642 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-04T17:03:03.135457 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T17:03:03.229462 tid5144 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T17:31:15.193237 tid384 [IFO,dev:488nm/60mW] requested setpoint: 7.5 but echo setpoint is: 7.5
+2015-05-04T17:34:10.413259 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T17:34:10.562268 tid7560 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T19:35:36.410994 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T19:35:36.505000 tid8420 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T19:49:09.123479 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T19:49:09.221485 tid9024 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T20:02:43.308048 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T20:02:43.406053 tid3552 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T20:23:35.897692 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T20:23:36.047700 tid8852 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T20:25:42.049907 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T20:26:50.638830 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T20:26:50.736836 tid8664 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T20:58:54.902892 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T20:58:54.996897 tid7244 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:11:57.614660 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-04T21:11:57.614660 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-04T21:11:58.126690 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-04T21:11:58.126690 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-04T21:12:37.152922 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:12:37.250927 tid8472 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:24:21.598214 tid384 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-05-04T21:24:21.598214 tid384 [IFO,App] java.lang.ClassCastException: org.micromanager.imagedisplay.DisplayWindow$3 cannot be cast to org.micromanager.navigation.CenterAndDragListener
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at spim.LiveWindowMouseControls.attach(LiveWindowMouseControls.java:101)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at spim.SPIMAcquisition.hookLiveControls(SPIMAcquisition.java:245)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at spim.SPIMAcquisition$4.actionPerformed(SPIMAcquisition.java:415)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:291)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Component.processMouseEvent(Component.java:6289)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Component.processEvent(Component.java:6054)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Container.processEvent(Container.java:2041)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2085)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4482)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2015-05-04T21:24:21.598214 tid384 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-04T21:34:48.446067 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:34:48.588076 tid9196 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:42:26.902290 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:42:27.048298 tid1020 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:42:36.534841 tid384 [IFO,dev:488nm/60mW] requested setpoint: 1.1 but echo setpoint is: 1.1
+2015-05-04T21:43:02.171307 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:43:02.273313 tid8856 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:45:25.470503 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:45:25.564509 tid8496 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:45:35.238062 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:45:35.332067 tid2392 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:45:50.720947 tid384 [IFO,dev:488nm/60mW] requested setpoint: 1.5 but echo setpoint is: 1.5
+2015-05-04T21:45:53.988134 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:45:54.086140 tid8860 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:45:58.887414 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T21:46:55.876674 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:46:55.974680 tid8364 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T21:46:57.694778 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T21:47:15.426792 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:47:18.929993 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T21:47:19.030998 tid6780 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:35:38.936864 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:35:39.083872 tid5192 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:35:47.683364 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T22:35:56.564872 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:35:56.659877 tid8148 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:41:20.550403 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:41:20.644408 tid7996 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:41:45.838849 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:41:45.940855 tid6764 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:48:46.500910 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:48:46.594915 tid7488 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:48:48.317014 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T22:49:53.344733 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:49:53.443739 tid5528 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:50:33.382023 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:50:33.528031 tid6636 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:50:40.531432 tid384 [IFO,App] Error: Coercing position count to 1
+2015-05-04T22:51:15.066407 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-04T22:51:15.165413 tid2352 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-04T22:52:01.426059 tid8232 [IFO,App] Beginning stack along dimension 0
+2015-05-04T22:53:35.129418 tid8232 [IFO,App] Finished stack along dimension 0
+2015-05-04T22:54:43.664338 tid384 [IFO,App] Plugin command: Pixel Calibrator
+2015-05-04T22:57:24.133517 tid384 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-05-04T22:57:24.133517 tid384 [IFO,App] java.lang.NullPointerException
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at fiji.plugin.volumeviewer.Pic$RenderCalculations.done(Pic.java:710)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at javax.swing.SwingWorker$5.run(SwingWorker.java:717)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at javax.swing.SwingWorker$DoSubmitAccumulativeRunnable.run(SwingWorker.java:814)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at sun.swing.AccumulativeRunnable.run(AccumulativeRunnable.java:95)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at javax.swing.SwingWorker$DoSubmitAccumulativeRunnable.actionPerformed(SwingWorker.java:824)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at javax.swing.Timer.fireActionPerformed(Timer.java:291)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at javax.swing.Timer$DoPostEvent.run(Timer.java:221)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:642)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:612)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2015-05-04T22:57:24.133517 tid384 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-04T23:02:39.184536 tid384 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-05-04T23:02:39.184536 tid384 [IFO,App] java.lang.NullPointerException
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at fiji.plugin.volumeviewer.Pic$RenderCalculations.done(Pic.java:710)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at javax.swing.SwingWorker$5.run(SwingWorker.java:717)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at javax.swing.SwingWorker$DoSubmitAccumulativeRunnable.run(SwingWorker.java:814)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at sun.swing.AccumulativeRunnable.run(AccumulativeRunnable.java:95)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at javax.swing.SwingWorker$DoSubmitAccumulativeRunnable.actionPerformed(SwingWorker.java:824)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at javax.swing.Timer.fireActionPerformed(Timer.java:291)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at javax.swing.Timer$DoPostEvent.run(Timer.java:221)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:642)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:612)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+2015-05-04T23:02:39.184536 tid384 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-05T00:16:50.608143 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T00:16:50.608143 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T05:44:03.627088 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T05:44:03.627088 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T05:44:04.139117 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T05:44:04.139117 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T06:57:57.130670 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T06:57:57.130670 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T06:57:57.642699 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T06:57:57.642699 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T08:36:13.610929 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T08:36:13.610929 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T08:36:14.122958 tid240 [IFO,dev:COM6] TERM_TIMEOUT error occured!
+2015-05-05T08:36:14.122958 tid240 [ERR,Core] Error occurred in device COM6: Error in device "COM6": (Error message unavailable) (107)
+2015-05-05T09:06:14.584939 tid384 [IFO,App] Stop called in LivemodeTimer, true
+2015-05-05T09:06:14.679944 tid4028 [IFO,dev:Flash 4.0] Error encountered during sequence acquisition: 1
+2015-05-05T09:07:17.076513 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:17.076513 tid240 [IFO,App] Couldn't get Y position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getYPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getYPosition(CMMCore.java:1186)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1263)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:17.576542 tid384 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:17.576542 tid240 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:17.576542 tid240 [IFO,App] Couldn't get stage position for Picard Z Stage
+                                  [       ] java.lang.Exception: Error in device "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1266)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:17.576542 tid384 [IFO,App] Couldn't get X position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[AWT-EventQueue-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getXPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getXPosition(CMMCore.java:1182)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:76)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1260)
+                                  [       ]   at spim.SPIMAcquisition.tryUpdateSliderPositions(SPIMAcquisition.java:1245)
+                                  [       ]   at spim.SPIMAcquisition$18.windowGainedFocus(SPIMAcquisition.java:1028)
+                                  [       ]   at java.awt.Window.processWindowFocusEvent(Window.java:1912)
+                                  [       ]   at java.awt.Window.processEvent(Window.java:1827)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1850)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:910)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:371)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4524)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.SequencedEvent.dispatch(SequencedEvent.java:101)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:642)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                  [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-05T09:07:18.076570 tid240 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:18.076570 tid240 [IFO,App] Couldn't get stage position for Picard Twister
+                                  [       ] java.lang.Exception: Error in device "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                  [       ]   at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1269)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:18.576599 tid384 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:18.576599 tid384 [IFO,App] Couldn't get Y position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[AWT-EventQueue-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getYPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getYPosition(CMMCore.java:1186)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1263)
+                                  [       ]   at spim.SPIMAcquisition.tryUpdateSliderPositions(SPIMAcquisition.java:1245)
+                                  [       ]   at spim.SPIMAcquisition$18.windowGainedFocus(SPIMAcquisition.java:1028)
+                                  [       ]   at java.awt.Window.processWindowFocusEvent(Window.java:1912)
+                                  [       ]   at java.awt.Window.processEvent(Window.java:1827)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1850)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:910)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:371)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4524)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.SequencedEvent.dispatch(SequencedEvent.java:101)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:642)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                  [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-05T09:07:19.076628 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:19.076628 tid384 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:19.076628 tid240 [IFO,App] Couldn't get X position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getXPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getXPosition(CMMCore.java:1182)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:76)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1260)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:19.076628 tid384 [IFO,App] Couldn't get stage position for Picard Z Stage
+                                  [       ] java.lang.Exception: Error in device "Picard Z Stage": Unable to communicate with the device. (35) in Thread[AWT-EventQueue-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1266)
+                                  [       ]   at spim.SPIMAcquisition.tryUpdateSliderPositions(SPIMAcquisition.java:1245)
+                                  [       ]   at spim.SPIMAcquisition$18.windowGainedFocus(SPIMAcquisition.java:1028)
+                                  [       ]   at java.awt.Window.processWindowFocusEvent(Window.java:1912)
+                                  [       ]   at java.awt.Window.processEvent(Window.java:1827)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1850)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:910)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:371)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4524)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.SequencedEvent.dispatch(SequencedEvent.java:101)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:642)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                  [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-05T09:07:19.576656 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:19.576656 tid240 [IFO,App] Couldn't get Y position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getYPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getYPosition(CMMCore.java:1186)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1263)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:20.076685 tid384 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:20.076685 tid240 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:20.076685 tid240 [IFO,App] Couldn't get stage position for Picard Z Stage
+                                  [       ] java.lang.Exception: Error in device "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1266)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:20.076685 tid384 [IFO,App] Couldn't get stage position for Picard Twister
+                                  [       ] java.lang.Exception: Error in device "Picard Twister": Unable to communicate with the device. (35) in Thread[AWT-EventQueue-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                  [       ]   at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1269)
+                                  [       ]   at spim.SPIMAcquisition.tryUpdateSliderPositions(SPIMAcquisition.java:1245)
+                                  [       ]   at spim.SPIMAcquisition$18.windowGainedFocus(SPIMAcquisition.java:1028)
+                                  [       ]   at java.awt.Window.processWindowFocusEvent(Window.java:1912)
+                                  [       ]   at java.awt.Window.processEvent(Window.java:1827)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4652)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1850)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:910)
+                                  [       ]   at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:371)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Component.java:4524)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Container.java:2099)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Window.java:2478)
+                                  [       ]   at java.awt.Component.dispatchEvent(Component.java:4482)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.SequencedEvent.dispatch(SequencedEvent.java:101)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:642)
+                                  [       ]   at java.awt.EventQueue.access$000(EventQueue.java:85)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:603)
+                                  [       ]   at java.awt.EventQueue$1.run(EventQueue.java:601)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:617)
+                                  [       ]   at java.awt.EventQueue$2.run(EventQueue.java:615)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+                                  [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+                                  [       ]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+2015-05-05T09:07:20.576713 tid240 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:20.576713 tid240 [IFO,App] Couldn't get stage position for Picard Twister
+                                  [       ] java.lang.Exception: Error in device "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                  [       ]   at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1269)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:21.081742 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:21.081742 tid240 [IFO,App] Couldn't get X position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getXPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getXPosition(CMMCore.java:1182)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:76)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1260)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:21.581771 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:21.581771 tid240 [IFO,App] Couldn't get Y position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getYPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getYPosition(CMMCore.java:1186)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1263)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:21.581771 tid240 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:21.581771 tid240 [IFO,App] Couldn't get stage position for Picard Z Stage
+                                  [       ] java.lang.Exception: Error in device "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1266)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:22.081799 tid240 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:22.081799 tid240 [IFO,App] Couldn't get stage position for Picard Twister
+                                  [       ] java.lang.Exception: Error in device "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                  [       ]   at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1269)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:22.585828 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:22.585828 tid240 [IFO,App] Couldn't get X position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getXPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getXPosition(CMMCore.java:1182)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:76)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1260)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:23.085857 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:23.085857 tid240 [IFO,App] Couldn't get Y position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getYPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getYPosition(CMMCore.java:1186)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1263)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:23.085857 tid240 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:23.085857 tid240 [IFO,App] Couldn't get stage position for Picard Z Stage
+                                  [       ] java.lang.Exception: Error in device "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1266)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:23.585885 tid240 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:23.585885 tid240 [IFO,App] Couldn't get stage position for Picard Twister
+                                  [       ] java.lang.Exception: Error in device "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                  [       ]   at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1269)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:24.090914 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:24.090914 tid240 [IFO,App] Couldn't get X position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getXPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getXPosition(CMMCore.java:1182)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:76)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1260)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:24.590943 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:24.590943 tid240 [IFO,App] Couldn't get Y position on Picard XY Stage
+                                  [       ] java.lang.Exception: Error in device "Picard XY Stage": Unknown error in the device (1) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getYPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getYPosition(CMMCore.java:1186)
+                                  [       ]   at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1263)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:24.590943 tid240 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:24.590943 tid240 [IFO,App] Couldn't get stage position for Picard Z Stage
+                                  [       ] java.lang.Exception: Error in device "Picard Z Stage": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1266)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:25.090972 tid240 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:25.090972 tid240 [IFO,App] Couldn't get stage position for Picard Twister
+                                  [       ] java.lang.Exception: Error in device "Picard Twister": Unable to communicate with the device. (35) in Thread[Timer-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1106)
+                                  [       ]   at spim.setup.Stage.getPosition(Stage.java:35)
+                                  [       ]   at spim.setup.PicardTwister.getPosition(PicardTwister.java:27)
+                                  [       ]   at spim.setup.SPIMSetup.getAngle(SPIMSetup.java:222)
+                                  [       ]   at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1269)
+                                  [       ]   at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:91)
+                                  [       ]   at spim.SPIMAcquisition$19.run(SPIMAcquisition.java:1038)
+                                  [       ]   at java.util.TimerThread.mainLoop(Timer.java:512)
+                                  [       ]   at java.util.TimerThread.run(Timer.java:462)
+2015-05-05T09:07:25.595000 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:26.595058 tid240 [ERR,Core] Error occurred in device Picard XY Stage: Error in device "Picard XY Stage": Unknown error in the device (1)
+2015-05-05T09:07:27.095086 tid240 [ERR,Core] Error occurred in device Picard Z Stage: Error in device "Picard Z Stage": Unable to communicate with the device. (35)
+2015-05-05T09:07:27.096086 tid240 [ERR,Core] Error occurred in device Picard Twister: Error in device "Picard Twister": Unable to communicate with the device. (35)
+2015-05-05T09:07:27.421493 tid384 [IFO,Core] Did unload all devices
+2015-05-05T09:07:27.421493 tid384 [IFO,Core] System reset
+2015-05-05T09:07:27.437093 tid384 [IFO,Core] Core session ended

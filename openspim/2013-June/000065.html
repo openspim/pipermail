@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20Building%20MM%20in%20VS2012%20on%0A%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3C7720ec241aba6.51bb022d%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000076.html">
+   <LINK REL="Next"  HREF="000066.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bmicro-manager-general%5D%20Building%20MM%20in%20VS2012%20on%0A%20Win8%20Issues%20and%20fixes%20%28and%20understanding%20why%29&In-Reply-To=%3C7720ec241aba6.51bb022d%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Jun 14 11:44:45 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000076.html">[OpenSPIM] Some early images
+</A></li>
+        <LI>Next message: <A HREF="000066.html">[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#65">[ date ]</a>
+              <a href="thread.html#65">[ thread ]</a>
+              <a href="subject.html#65">[ subject ]</a>
+              <a href="author.html#65">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+
+My name is Luke Stuyvenberg; I'm a programmer for the OpenSPIM project (<A HREF="http://www.openspim.org">http://www.openspim.org</A> and the <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> mailing list).
+
+On 06/13/13, Mark Tsuchida  wrote:
+&gt;<i> As I have mentioned on this list recently, I&#39;m working on migrating Micro-Manager to VS2010, and will hopefully be able to make the new project files available soon.
+</I>
+
+We've actually been working on this task separately as well, and I was thinking some of our work might be of use to you. You can see the current state of our code at <A HREF="http://github.com/openspim/micromanager">http://github.com/openspim/micromanager</A> -- I believe the project files are based off of Micro-Manager 1.4.13 or so (from the source code available roughly 2 months ago). I should note that our directory structure is somewhat different from vanilla Micro-Manager; for instance, we copy our device adapters to Fiji.app/mm/$(Platform) rather than the executable directory; additionally, because of our basis in Fiji, some other paths may not be entirely accurate.
+
+
+At present, I've successfully built MMCore, MMCoreJ_wrap, and mmstudio (using the ant build file) from VS2010 Express (and also using msbuild from the command line), as well as several of the device adapters needed for our project -- CoherentCube and PicardStage specifically; also SerialManager and DemoCamera for good measure. (I've also built many of the other device adapters, but the aforementioned ones are most commonly built, being central to our project.) If you'd like to incorporate any of our work, or if we can be of any other assistance in this task, please don't hesitate to let us know!
+
+
+Sincerely,
+Luke Stuyvenberg
+
+
+P.S. I have a few plans to work on VS2012 support as time arises; if in the future that work may also be helpful, feel free to write myself and our mailing list.
+
+</PRE>
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000076.html">[OpenSPIM] Some early images
+</A></li>
+	<LI>Next message: <A HREF="000066.html">[OpenSPIM] [micro-manager-general] Building MM in VS2012 on Win8 Issues and fixes (and understanding why)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#65">[ date ]</a>
+              <a href="thread.html#65">[ thread ]</a>
+              <a href="subject.html#65">[ subject ]</a>
+              <a href="author.html#65">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] multi-angle acquisition
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20multi-angle%20acquisition&In-Reply-To=%3C75a0a3584c2f3.5379dcf5%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001378.html">
+   <LINK REL="Next"  HREF="001379.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] multi-angle acquisition</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20multi-angle%20acquisition&In-Reply-To=%3C75a0a3584c2f3.5379dcf5%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] multi-angle acquisition">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Mon May 19 10:29:09 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001378.html">[OpenSPIM] multi-angle acquisition
+</A></li>
+        <LI>Next message: <A HREF="001379.html">[OpenSPIM] openSPIM for core facility and is optical table	necessary?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1381">[ date ]</a>
+              <a href="thread.html#1381">[ thread ]</a>
+              <a href="subject.html#1381">[ subject ]</a>
+              <a href="author.html#1381">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Aurelia,
+
+On 05/14/14, Aurelia Honerkamp-Smith wrote:
+&gt;<i> I'm having an issue with acquisition that I wonder if anyone else has experienced. When I assign several positions, it frequently happens that when the stage moves to the next position, it will not complete the movement. Usually, it rotates and moves in the z direction but not y. I can observe the problem when acquisition is not running; if I double-click the row in the position list, the stage will move partially; then if I double-click it again, it finally moves to the correct position.Very odd. I've not heard of this or seen it, unfortunately, so I can only guess. First, a few questions:
+</I>- Does this issue only happen with acquisition? That is, when you set the position with the stage controls tab, does the motor go to that location immediately?
+
+- Is your pixel size calibration set? (To 1.0, or to the actual value?)
+- Does the system produce any error messages? (These may not be visible normally; they should show up in a recent core log, though -- could you please attach one?)
+
+
+And now are a few ideas:
+- Are the thumbscrews on the stage slides all very lose? Each linear stage has one to hold it still while packing; the screw should be loosened or removed before using the stage.
+- Are the stage wires clear of any obstructions?
+- Try zeroing all the stages:
+ - First, remove any sample.
+ - From Micro-Manager, click Tools -&gt; Script Panel
+ - In the bottom panel, type (pressing enter after each line):
+
+
+mmc.setPosition(mmc.getFocusDevice(), 0);
+mmc.setXYPosition(mmc.getXYStageDevice(), 0, 0);
+mmc.setPosition(&quot;Picard Twister&quot;, 0);
+
+
+ (The third one might fail if the twister has a different label.)
+
+
+Please let me know if this helps, or if there's any new developments!
+Thanks,
+Luke Stuyvenberg
+
+
+On 05/14/14, Aurelia Honerkamp-Smith  wrote:
+&gt;<i> Hello everyone, 
+</I>&gt;<i> 
+</I>&gt;<i> I'm having an issue with acquisition that I wonder if anyone else has experienced. When I assign several positions, it frequently happens that when the stage moves to the next position, it will not complete the movement. Usually, it rotates and moves in the z direction but not y. I can observe the problem when acquisition is not running; if I double-click the row in the position list, the stage will move partially; then if I double-click it again, it finally moves to the correct position.
+</I>&gt;<i> I can get around this problem by adding a single frame at the start position for each stack before the stack is taken; then the stage moves to the correct position when it starts the stack. However, this is annoying because I record a lot of unnecessary frames and I think it might make the anti-drift function behave oddly. Anyone have a suggestion? 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks, 
+</I>&gt;<i> 
+</I>&gt;<i> Aurelia
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001378.html">[OpenSPIM] multi-angle acquisition
+</A></li>
+	<LI>Next message: <A HREF="001379.html">[OpenSPIM] openSPIM for core facility and is optical table	necessary?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1381">[ date ]</a>
+              <a href="thread.html#1381">[ thread ]</a>
+              <a href="subject.html#1381">[ subject ]</a>
+              <a href="author.html#1381">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

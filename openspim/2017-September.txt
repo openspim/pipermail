@@ -1,0 +1,98 @@
+From S.Hoehn at damtp.cam.ac.uk  Tue Sep  5 08:24:32 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Tue, 05 Sep 2017 14:24:32 +0100
+Subject: [OpenSPIM] Windows10
+Message-ID: <d6bbec5e15061459a9a76db3daf77bef@cam.ac.uk>
+
+Hello,
+
+is anyone running the OpenSPIM software on Windows10 or knows if there 
+is a reason that wouldn't work?
+
+Thank you!
+
+Stephanie
+
+
+----------------------------------------
+Dr. Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+Office Tel: 01223 337859
+Office: H0.03
+
+
+From guenther at mpi-cbg.de  Tue Sep  5 08:31:41 2017
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 05 Sep 2017 15:31:41 +0200
+Subject: [OpenSPIM] Windows10
+In-Reply-To: <d6bbec5e15061459a9a76db3daf77bef@cam.ac.uk>
+References: <d6bbec5e15061459a9a76db3daf77bef@cam.ac.uk>
+Message-ID: <3038FB46-3C1B-4842-9040-E452B6DD48A2@mpi-cbg.de>
+
+Hi Stephanie,
+
+
+we’ve been using it on Windows 10 for a bit now, so far no issues. Just be careful that there are Windows 10-ready drivers available for e.g. the camera.
+
+
+cheers!
+
+
+ulrik
+
+
+  —
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+
+> On Sep 5, 2017, at 3:24 PM, Dr S. Hoehn <s.hoehn at damtp.cam.ac.uk> wrote:
+> 
+> 
+> Hello,
+> 
+> 
+> is anyone running the OpenSPIM software on Windows10 or knows if there 
+> is a reason that wouldn't work?
+> 
+> 
+> Thank you!
+> 
+> 
+> Stephanie
+> 
+> 
+> 
+> 
+> 
+> ----------------------------------------
+> Dr. Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> Office Tel: 01223 337859
+> Office: H0.03
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170905/ed4b9e8c/attachment.html>
+

@@ -1,0 +1,2413 @@
+From tnf8 at pitt.edu  Wed Dec  9 11:31:51 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 9 Dec 2015 17:31:51 +0000
+Subject: [OpenSPIM] A new type of sharper beam?
+Message-ID: <D28DCFB6.72DD%tnf8@pitt.edu>
+
+Hi folks,
+
+The following paper struck me as potentially very useful.  It seems that a simple(ish) array of slits in front of the cylinder lens can create a narrow, subdiffraction-sized sheet of light via interference which propagates without broadening.  Kind of a 2D Bessel beam.
+"Toward the optical "magic carpet": reducing the divergence of a light sheet below the diffraction limit
+In 3D, diffraction-free or Bessel beams are well known and have found applications in diverse fields. An analog in 2D, or pseudonondiffracting (PND) beams, is a nontrivial problem, and existing methods suffer from deficiencies. For example, Airy beams are not highly localized, some PND beams have significant side lobes, and a cosine beam has to be truncated by a very narrow aperture thus discarding most of the energy. We show, both theoretically and experimentally, that it is possible to generate a quasi-nondiffracting 2D light beam in a simple and efficient fashion. This is achieved by placing a mask consisting of a pair of double slits on a cylindrical lens. The applications include light sheet microscopy/optical sectioning and particle manipulation."
+
+https://www.osapublishing.org/ol/abstract.cfm?uri=ol-40-21-5121
+
+That sounds like a subdiffraction-width plane that almost anyone could make.  That is interesting to me as the extra complexity and cost of Bessel beams have led me to put off exploring more precise illumination methods for now.  As far as I can tell you just need to fabricate a sufficiently precise mask, and you might need a different mask for each wavelength.  What do you think?
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20151209/68d80cd2/attachment.html>
+
+From nantho2 at emory.edu  Mon Dec 14 22:15:08 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 15 Dec 2015 04:15:08 +0000
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+Message-ID: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all, I hope the science is treating you well.
+
+I have been looking at getting started with getting into the code, which I see is here:
+http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+but I'm a little lost about how to get started, and how to be part of the open source effort vs. just making my own version.
+
+I'm a semi experienced programmer (a little Java, Pascal, C, Matlab, Igor Pro, LabView, NIDAQ to varying levels) and I have all the applications in place (Netbeans, Eclipse, Visual Studio Express 2010, 2015, and all the java SDKs I might need).  Where I get lost is how to incorporate anything I do into the existing code?  What parts should I, can I work on?  Do these changes need to be vetted before being incorporated?  How do I get started with version control?  Etc. etc.  I feel this is, for me, the biggest hurdle in open source coding:  Not being able to code, but being able to 'open source'.  I've always been a lone coder up until this point, so please excuse my ignorance to these details.
+
+Also, I think maybe I'm stuck on the Maven thing.  I see in the README.md that it's Maven, drawing on SciJava, and I can import into Netbeans for example.  Does anybody have any good links to help me get started with that?
+
+Thanks in advance for your time.
+
+Neil
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From moon at mpi-cbg.de  Tue Dec 15 03:12:47 2015
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Tue, 15 Dec 2015 10:12:47 +0100
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+In-Reply-To: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <E88FF6A5-CB98-48EA-9003-E84726FCA8F2@mpi-cbg.de>
+
+Dear Neil,
+
+It is great to have you as a contributor in OpenSPIM.
+Simply, you can visit https://github.com/openspim/SPIMAcquisition <https://github.com/openspim/SPIMAcquisition> where all the SPIMAcquisition codes are located.
+Jenkins compiles/packages these source codes and upload it to the OpenSPIM update site.
+
+Please, use fork this repository for having your own version of the code. Some git knowledge is required to work with.
+When you think your source codes are ready, you can simply create a pull request.
+We will evaluate your changes and guide you to merge it to the production master branch.
+
+Please, let me know if you need more help. I will try to help you as much as I can.
+
+Best Regards,
+HongKee
+
+> On Dec 15, 2015, at 5:15 AM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi all, I hope the science is treating you well.
+> 
+> I have been looking at getting started with getting into the code, which I see is here:
+> http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+> but I'm a little lost about how to get started, and how to be part of the open source effort vs. just making my own version.
+> 
+> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab, Igor Pro, LabView, NIDAQ to varying levels) and I have all the applications in place (Netbeans, Eclipse, Visual Studio Express 2010, 2015, and all the java SDKs I might need).  Where I get lost is how to incorporate anything I do into the existing code?  What parts should I, can I work on?  Do these changes need to be vetted before being incorporated?  How do I get started with version control?  Etc. etc.  I feel this is, for me, the biggest hurdle in open source coding:  Not being able to code, but being able to 'open source'.  I've always been a lone coder up until this point, so please excuse my ignorance to these details.
+> 
+> Also, I think maybe I'm stuck on the Maven thing.  I see in the README.md that it's Maven, drawing on SciJava, and I can import into Netbeans for example.  Does anybody have any good links to help me get started with that?
+> 
+> Thanks in advance for your time.
+> 
+> Neil
+> 
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20151215/ff3b0cac/attachment.html>
+
+From Johannes.Schindelin at gmx.de  Tue Dec 15 09:50:03 2015
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 15 Dec 2015 16:50:03 +0100 (CET)
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+In-Reply-To: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <alpine.DEB.2.20.1512151615200.6483@virtualbox>
+
+Hi Neil,
+
+On Tue, 15 Dec 2015, Anthony, Neil wrote:
+
+> I hope the science is treating you well.
+
+Nah. It does not matter anymore, though, as I moved on ;-)
+
+> I have been looking at getting started with getting into the code, which
+> I see is here:
+> http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+
+What you found here is actually not the source code, but a so-called
+"Continuous Integration Server". Essentially it means that this is a web
+server that also watches the source code in the background and builds it
+whenever it gets updated.
+
+Theoretically, it also runs all the regression tests (i.e. small snippets
+of code that verify that what the programmer expected to work, ahem,
+actually works). Practically, there is preciously little in the way of
+regression tests because the student who wrote most of the SPIMAcquisition
+code based a lot of faith in the code he wrote and skipped writing tests.
+
+The only regression test, in fact, was written by HongKee, long after the
+original author moved on to other pastures.
+
+As pointed out by HongKee, the source code can be found at
+
+	https://github.com/openspim/SPIMAcquisition
+
+The most important thing about the source code is that it is in a source
+code "repository", i.e. a place where the code can not only be shared, but
+contributions can be integrated easily. This is possible by the use of the
+version control software called "Git". I encourage you to take 15 minutes
+to learn how to use it (and why it improves your life) at:
+
+	https://try.github.com/
+
+More about integrating contributions below.
+
+> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab,
+> Igor Pro, LabView, NIDAQ to varying levels) and I have all the
+> applications in place (Netbeans, Eclipse, Visual Studio Express 2010,
+> 2015, and all the java SDKs I might need).
+
+Good. They all have support for Git (actually, VS Express does not, but VS
+2015 does, I am actually working on that ;-)). So all you need to do is
+"clone" the repository mentioned above into your workspace.
+
+You can then give the code a test run using the SPIMTestDrive class:
+
+	https://github.com/openspim/SPIMAcquisition/blob/master/src/test/java/SPIMTestDrive.java
+
+> Where I get lost is how to incorporate anything I do into the existing
+> code?
+
+Yeah, unfortunately this is my mistake. I was supposed to manage the
+student writing the code and I failed to convince him to document things
+so that the next person has a chance to dive in, too. So things are pretty
+much undocumented.
+
+I do not have enough time to answer questions, but I managed to give
+HongKee an introduction into the code base before switching jobs, so maybe
+you want to ask concrete questions on this list? (On this list so that the
+impact of the answers is maximized and HongKee won't have to repeat
+himself.)
+
+> What parts should I, can I work on?
+
+The Open Source idea is that you work on those parts that you need to see
+improved. I am sure you have a couple of pet peeves that you would love to
+see addressed. Those are good places to start from.
+
+And again, if you have no idea where to start "scratching your itch", just
+ask away, on this list.
+
+> Do these changes need to be vetted before being incorporated?
+
+The common process is that you create a copy of the repository on GitHub
+(for historical reasons, this is called "forking"). In this copy, you can
+do *everything* you like.
+
+Then you will start improving the code. Once you have an improvement you
+think is valuable also for others, you open a so-called "Pull Request" on
+GitHub:
+
+	https://help.github.com/articles/using-pull-requests/
+
+HongKee will review the changes, possibly make suggestions how to improve
+or otherwise change the code, and eventually "merge" the changes.
+
+Depending how polished you want your contribution to look, you might want
+to go to the full distance and follow the advice in:
+
+	https://github.com/maven-nar/nar-maven-plugin/wiki/How-to-contribute
+
+(This is from a related project, but the advice applies to pretty much all
+Open Source projects.)
+
+> How do I get started with version control?
+
+My recommendation is https://try.github.com/, but depending how visual you
+work, http://eagain.net/articles/git-for-computer-scientists/ might be
+better. Or read the Pro Git book: http://git-scm.com/book/en/v2. There are
+tons of good resources available, my favorite being Git For Teams
+(disclaimer: I reviewed this book before publication), but that one will
+keep you occupied for a couple of evenings.
+
+> feel this is, for me, the biggest hurdle in open source coding:  Not
+> being able to code, but being able to 'open source'.  I've always been a
+> lone coder up until this point, so please excuse my ignorance to these
+> details.
+
+You might find it slightly challenging at first, because collaboration
+always requires clearer communication than "lone coding", and also the
+occasional compromise. I found that this requirement was most challenging
+to most scientists, who are basically used (even encouraged!!!) to work
+against each other all the time.
+
+The advantage of Open Source coding is that you do not need to duplicate
+work. You put in that extra effort to make the code work not only for you,
+but for others, and then you can benefit from others' contributions just
+the same as they can benefit from yours'.
+
+This concept is very closely related to Isaac Newton's famous words: "If I
+could see so far, it was only because I was standing on the shoulders of
+giants". It is strange how far away science has deviated from that world
+view.
+
+> Also, I think maybe I'm stuck on the Maven thing.
+
+Oh, Maven. Yep, it looks a little complex in the beginning, I agree.
+
+Think of Maven as the system that allows programmers to stand on each
+others' shoulders. It allows you to define what other software components
+your software depends on ("dependencies"). For example, OpenSPIM depends
+on Micro-Manager, which in turn depends on ImageJ. And the closer you
+look, the more fine-grained things become. More details can be found here:
+
+	http://imagej.net/Maven
+
+Welcome on board,
+Johannes
+
+
+From nantho2 at emory.edu  Tue Dec 15 19:01:04 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 16 Dec 2015 01:01:04 +0000
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+In-Reply-To: <alpine.DEB.2.20.1512151615200.6483@virtualbox>
+References: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+	<alpine.DEB.2.20.1512151615200.6483@virtualbox>
+Message-ID: <CO2PR05MB681BFE6CFB950BAFDCD24AEECEF0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Thanks Johannes, HongKee, I appreciate your time taken to get me started.
+
+I'll check out all the links, bang my head against a few of the main starting points, and get back to the list once I get rolling.
+
+Neil
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de]
+Sent: Tuesday, December 15, 2015 10:50 AM
+To: Anthony, Neil
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Getting started with SPIM plugin code
+
+Hi Neil,
+
+On Tue, 15 Dec 2015, Anthony, Neil wrote:
+
+> I hope the science is treating you well.
+
+Nah. It does not matter anymore, though, as I moved on ;-)
+
+> I have been looking at getting started with getting into the code,
+> which I see is here:
+> http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+
+What you found here is actually not the source code, but a so-called "Continuous Integration Server". Essentially it means that this is a web server that also watches the source code in the background and builds it whenever it gets updated.
+
+Theoretically, it also runs all the regression tests (i.e. small snippets of code that verify that what the programmer expected to work, ahem, actually works). Practically, there is preciously little in the way of regression tests because the student who wrote most of the SPIMAcquisition code based a lot of faith in the code he wrote and skipped writing tests.
+
+The only regression test, in fact, was written by HongKee, long after the original author moved on to other pastures.
+
+As pointed out by HongKee, the source code can be found at
+
+https://github.com/openspim/SPIMAcquisition
+
+The most important thing about the source code is that it is in a source code "repository", i.e. a place where the code can not only be shared, but contributions can be integrated easily. This is possible by the use of the version control software called "Git". I encourage you to take 15 minutes to learn how to use it (and why it improves your life) at:
+
+https://try.github.com/
+
+More about integrating contributions below.
+
+> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab,
+> Igor Pro, LabView, NIDAQ to varying levels) and I have all the
+> applications in place (Netbeans, Eclipse, Visual Studio Express 2010,
+> 2015, and all the java SDKs I might need).
+
+Good. They all have support for Git (actually, VS Express does not, but VS
+2015 does, I am actually working on that ;-)). So all you need to do is "clone" the repository mentioned above into your workspace.
+
+You can then give the code a test run using the SPIMTestDrive class:
+
+https://github.com/openspim/SPIMAcquisition/blob/master/src/test/java/SPIMTestDrive.java
+
+> Where I get lost is how to incorporate anything I do into the existing
+> code?
+
+Yeah, unfortunately this is my mistake. I was supposed to manage the student writing the code and I failed to convince him to document things so that the next person has a chance to dive in, too. So things are pretty much undocumented.
+
+I do not have enough time to answer questions, but I managed to give HongKee an introduction into the code base before switching jobs, so maybe you want to ask concrete questions on this list? (On this list so that the impact of the answers is maximized and HongKee won't have to repeat
+himself.)
+
+> What parts should I, can I work on?
+
+The Open Source idea is that you work on those parts that you need to see improved. I am sure you have a couple of pet peeves that you would love to see addressed. Those are good places to start from.
+
+And again, if you have no idea where to start "scratching your itch", just ask away, on this list.
+
+> Do these changes need to be vetted before being incorporated?
+
+The common process is that you create a copy of the repository on GitHub (for historical reasons, this is called "forking"). In this copy, you can do *everything* you like.
+
+Then you will start improving the code. Once you have an improvement you think is valuable also for others, you open a so-called "Pull Request" on
+GitHub:
+
+https://help.github.com/articles/using-pull-requests/
+
+HongKee will review the changes, possibly make suggestions how to improve or otherwise change the code, and eventually "merge" the changes.
+
+Depending how polished you want your contribution to look, you might want to go to the full distance and follow the advice in:
+
+https://github.com/maven-nar/nar-maven-plugin/wiki/How-to-contribute
+
+(This is from a related project, but the advice applies to pretty much all Open Source projects.)
+
+> How do I get started with version control?
+
+My recommendation is https://try.github.com/, but depending how visual you work, http://eagain.net/articles/git-for-computer-scientists/ might be better. Or read the Pro Git book: http://git-scm.com/book/en/v2. There are tons of good resources available, my favorite being Git For Teams
+(disclaimer: I reviewed this book before publication), but that one will keep you occupied for a couple of evenings.
+
+> feel this is, for me, the biggest hurdle in open source coding:  Not
+> being able to code, but being able to 'open source'.  I've always been
+> a lone coder up until this point, so please excuse my ignorance to
+> these details.
+
+You might find it slightly challenging at first, because collaboration always requires clearer communication than "lone coding", and also the occasional compromise. I found that this requirement was most challenging to most scientists, who are basically used (even encouraged!!!) to work against each other all the time.
+
+The advantage of Open Source coding is that you do not need to duplicate work. You put in that extra effort to make the code work not only for you, but for others, and then you can benefit from others' contributions just the same as they can benefit from yours'.
+
+This concept is very closely related to Isaac Newton's famous words: "If I could see so far, it was only because I was standing on the shoulders of giants". It is strange how far away science has deviated from that world view.
+
+> Also, I think maybe I'm stuck on the Maven thing.
+
+Oh, Maven. Yep, it looks a little complex in the beginning, I agree.
+
+Think of Maven as the system that allows programmers to stand on each others' shoulders. It allows you to define what other software components your software depends on ("dependencies"). For example, OpenSPIM depends on Micro-Manager, which in turn depends on ImageJ. And the closer you look, the more fine-grained things become. More details can be found here:
+
+http://imagej.net/Maven
+
+Welcome on board,
+Johannes
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From nantho2 at emory.edu  Thu Dec 17 21:45:49 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 18 Dec 2015 03:45:49 +0000
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+Message-ID: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi guys,
+
+I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+- Netbeans 8.1
+- JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+-  OpenSPIM-20150427 extracted
+
+I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+
+Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError
+at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+
+I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+
+I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+I'm using the git options via Netbeans.
+
+Thanks in advance for your time.
+Neil
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: full_output.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20151218/3c558b25/attachment-0001.txt>
+
+From nantho2 at emory.edu  Fri Dec 18 12:42:21 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 18 Dec 2015 18:42:21 +0000
+Subject: [OpenSPIM] Plugin Power Control
+Message-ID: <CO2PR05MB681C3681C7F827CCDA4BF8FECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all,
+
+Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+https://www.youtube.com/watch?v=2JEiMHxS69w
+
+Key points:
+
+-          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+
+-          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+
+-          At certain values the slider value jumps back and forth, which is strange
+
+-          It only works for one of the lasers.
+
+Any thoughts would be much appreciated.
+
+Thanks
+Neil
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/attachment.html>
+
+From mredd at cores.utah.edu  Mon Dec 21 10:19:40 2015
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Mon, 21 Dec 2015 16:19:40 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+In-Reply-To: <mailman.5.1450548002.12534.openspim@openspim.org>
+References: <mailman.5.1450548002.12534.openspim@openspim.org>
+Message-ID: <F6110B83-8F60-443D-B410-74FB264744B8@cores.utah.edu>
+
+The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+
+cheers
+mike
+> On Dec 19, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+> 
+> Send OpenSPIM mailing list submissions to
+> 	openspim at openspim.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> 	openspim-request at openspim.org
+> 
+> You can reach the person managing the list at
+> 	openspim-owner at openspim.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+> 
+> 
+> Today's Topics:
+> 
+>   1. Plugin Power Control (Anthony, Neil)
+> 
+> 
+> ----------------------------------------------------------------------
+> 
+> Message: 1
+> Date: Fri, 18 Dec 2015 18:42:21 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] Plugin Power Control
+> Message-ID:
+> 	<CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi all,
+> 
+> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+> https://www.youtube.com/watch?v=2JEiMHxS69w
+> 
+> Key points:
+> 
+> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+> 
+> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+> 
+> -          At certain values the slider value jumps back and forth, which is strange
+> 
+> -          It only works for one of the lasers.
+> 
+> Any thoughts would be much appreciated.
+> 
+> Thanks
+> Neil
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/attachment-0001.html>
+> 
+> ------------------------------
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> End of OpenSPIM Digest, Vol 32, Issue 5
+> ***************************************
+
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48, 
+30 N 2030 E, Salt Lake City, UT 84112
+
+michael.redd at hci.utah.edu
+
+
+
+From nantho2 at emory.edu  Mon Dec 21 22:11:33 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 22 Dec 2015 04:11:33 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+In-Reply-To: <F6110B83-8F60-443D-B410-74FB264744B8@cores.utah.edu>
+References: <mailman.5.1450548002.12534.openspim@openspim.org>
+	<F6110B83-8F60-443D-B410-74FB264744B8@cores.utah.edu>
+Message-ID: <CO2PR05MB681FC11314FA37BD36762CAECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Mike, thanks for that info.
+
+Can you please tell me if it's possible to use the presets in the OpenSPIM plugin?  For example, can I setup some presets for red channel and green channel and then get OpenSPIM switch between during the acquisition?
+
+Thanks
+Neil
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Michael Redd
+Sent: Monday, December 21, 2015 11:20 AM
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+
+The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+
+cheers
+mike
+> On Dec 19, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+>
+> Send OpenSPIM mailing list submissions to
+> openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+> openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>   1. Plugin Power Control (Anthony, Neil)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Fri, 18 Dec 2015 18:42:21 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] Plugin Power Control
+> Message-ID:
+>
+> <CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outl
+> ook.com>
+>
+> Content-Type: text/plain; charset="us-ascii"
+>
+> Hi all,
+>
+> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+> https://www.youtube.com/watch?v=2JEiMHxS69w
+>
+> Key points:
+>
+> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+>
+> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+>
+> -          At certain values the slider value jumps back and forth, which is strange
+>
+> -          It only works for one of the lasers.
+>
+> Any thoughts would be much appreciated.
+>
+> Thanks
+> Neil
+>
+>
+>
+> ________________________________
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination,
+> distribution or copying of this message (including any attachments) is
+> strictly prohibited.
+>
+> If you have received this message in error, please contact the sender
+> by reply e-mail message and destroy all copies of the original message
+> (including attachments).
+> -------------- next part -------------- An HTML attachment was
+> scrubbed...
+> URL:
+> <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/
+> attachment-0001.html>
+>
+> ------------------------------
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> End of OpenSPIM Digest, Vol 32, Issue 5
+> ***************************************
+
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48,
+30 N 2030 E, Salt Lake City, UT 84112
+
+michael.redd at hci.utah.edu
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From nantho2 at emory.edu  Mon Dec 21 22:38:43 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 22 Dec 2015 04:38:43 +0000
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+In-Reply-To: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <CO2PR05MB681F529BB001DE1FC43539FECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all.  I understand this is a very specific area, and as such understand the support for which will be limited.  I'll continue to post my steps and progress for future reference.
+
+I realized that I needed to right click and run the SPIMtestDrive file (newb trying to run the main acquisition part of the code).
+
+It runs, pops up the "Welcome to Micro-Manager" window to fill out my details, after which it throws a "Micro-Manager Error" of:
+Error: Failed to load the MMCoreJ_wrap native library
+Mmcorj.MMCoreJJNI.swig_module_init()V
+
+In the output window I see the text pasted below.  I've read that it might be a 32 to 64 bit issue, but not sure how to proceed.  I have JDK 32 and 64 bit installed.  I've tried creating an environment parameter for JAVA_HOME as C:\Program Files (x86)\Java\jre7 as suggested in a really old post, but still no joy.
+
+Any help would be much appreciated.
+Thanks
+Neil
+
+
+
+Netbeans Output Window:
+
+cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; "JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80" cmd /c "\"\"C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\" -Dexec.args=\"-classpath %classpath SPIMTestDrive\" -Dexec.executable=\"C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\" -Dexec.classpathScope=test -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 --errors -e org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\""
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Error stacktraces are turned on.
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building SPIMAcquisition 1.0.1-SNAPSHOT
+------------------------------------------------------------------------
+
+--- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target
+
+java.lang.ClassNotFoundException: org.micromanager.AcquisitionEngine2010 in Thread[Pipeline Class loading thread,6,main]
+... (let me know if you need the extra "at" lines)
+
+Failed to load the MMCoreJ_wrap native library
+java.lang.UnsatisfiedLinkError: mmcorej.MMCoreJJNI.swig_module_init()V in Thread[AWT-EventQueue-0,6,main]
+...
+
+java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+...
+
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 10.078s
+Finished at: Mon Dec 21 23:31:26 EST 2015
+Final Memory: 11M/222M
+------------------------------------------------------------------------
+
+
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+Sent: Thursday, December 17, 2015 10:46 PM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+
+Hi guys,
+
+I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+- Netbeans 8.1
+- JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+-  OpenSPIM-20150427 extracted
+
+I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+
+Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+
+I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+
+I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+I'm using the git options via Netbeans.
+
+Thanks in advance for your time.
+Neil
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+
+From mredd at cores.utah.edu  Tue Dec 22 12:45:46 2015
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Tue, 22 Dec 2015 18:45:46 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 7
+In-Reply-To: <mailman.9.1450807201.8757.openspim@openspim.org>
+References: <mailman.9.1450807201.8757.openspim@openspim.org>
+Message-ID: <63350934-79C8-43C1-99ED-AE15664008A1@cores.utah.edu>
+
+I don?t think that the Openspim plugin is capable of two channels. If it is I would like to know how. I use the Multidimensional acquisition window from micro-manager to handle my two channel, z stack, time-lapse acquisitions. You set up the channels?red and green? in the configuration settings of micro-manager. The group can be called channels and consists of two presets?red and green. The important parameter for the group is the core shutter. For the red channel it is your green laser and for the green channel it is your blue laser. When you open the multi-dimensional acquisition window there will be a channel section of the window. There is a drop down tab called ?channel group? which you need to specify the channel configuration group that you set up. Then press the new button on the right to add the red and green channels. You can add the color in the table and the exposure time for each channel. It is a really straightforward multi-dimensional acquisition window once you learn how to use it. I hope this helps. I could send you screen shots if necessary.
+
+cheers
+mike
+> On Dec 22, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+> 
+> Send OpenSPIM mailing list submissions to
+> 	openspim at openspim.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> 	openspim-request at openspim.org
+> 
+> You can reach the person managing the list at
+> 	openspim-owner at openspim.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+> 
+> 
+> Today's Topics:
+> 
+>   1. Re: OpenSPIM Digest, Vol 32, Issue 5 (Anthony, Neil)
+>   2. Re: Running SPIMAcquisition Code in Netbeans (Anthony, Neil)
+> 
+> 
+> ----------------------------------------------------------------------
+> 
+> Message: 1
+> Date: Tue, 22 Dec 2015 04:11:33 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: Michael Redd <mredd at cores.utah.edu>, "openspim at openspim.org"
+> 	<openspim at openspim.org>
+> Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+> Message-ID:
+> 	<CO2PR05MB681FC11314FA37BD36762CAECE50 at CO2PR05MB681.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi Mike, thanks for that info.
+> 
+> Can you please tell me if it's possible to use the presets in the OpenSPIM plugin?  For example, can I setup some presets for red channel and green channel and then get OpenSPIM switch between during the acquisition?
+> 
+> Thanks
+> Neil
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Michael Redd
+> Sent: Monday, December 21, 2015 11:20 AM
+> To: openspim at openspim.org
+> Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+> 
+> The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+> 
+> cheers
+> mike
+>> On Dec 19, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+>> 
+>> Send OpenSPIM mailing list submissions to
+>> openspim at openspim.org
+>> 
+>> To subscribe or unsubscribe via the World Wide Web, visit
+>> http://openspim.org/mailman/listinfo/openspim
+>> or, via email, send a message with subject or body 'help' to
+>> openspim-request at openspim.org
+>> 
+>> You can reach the person managing the list at
+>> openspim-owner at openspim.org
+>> 
+>> When replying, please edit your Subject line so it is more specific
+>> than "Re: Contents of OpenSPIM digest..."
+>> 
+>> 
+>> Today's Topics:
+>> 
+>>  1. Plugin Power Control (Anthony, Neil)
+>> 
+>> 
+>> ----------------------------------------------------------------------
+>> 
+>> Message: 1
+>> Date: Fri, 18 Dec 2015 18:42:21 +0000
+>> From: "Anthony, Neil" <nantho2 at emory.edu>
+>> To: "openspim at openspim.org" <openspim at openspim.org>
+>> Subject: [OpenSPIM] Plugin Power Control
+>> Message-ID:
+>> 
+>> <CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outl
+>> ook.com>
+>> 
+>> Content-Type: text/plain; charset="us-ascii"
+>> 
+>> Hi all,
+>> 
+>> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+>> https://www.youtube.com/watch?v=2JEiMHxS69w
+>> 
+>> Key points:
+>> 
+>> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+>> 
+>> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+>> 
+>> -          At certain values the slider value jumps back and forth, which is strange
+>> 
+>> -          It only works for one of the lasers.
+>> 
+>> Any thoughts would be much appreciated.
+>> 
+>> Thanks
+>> Neil
+>> 
+>> 
+>> 
+>> ________________________________
+>> 
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination,
+>> distribution or copying of this message (including any attachments) is
+>> strictly prohibited.
+>> 
+>> If you have received this message in error, please contact the sender
+>> by reply e-mail message and destroy all copies of the original message
+>> (including attachments).
+>> -------------- next part -------------- An HTML attachment was
+>> scrubbed...
+>> URL:
+>> <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/
+>> attachment-0001.html>
+>> 
+>> ------------------------------
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>> 
+>> 
+>> End of OpenSPIM Digest, Vol 32, Issue 5
+>> ***************************************
+> 
+> Michael Redd
+> Imaging Specialist
+> Cell Imaging Core Facility
+> University of Utah
+> Radiobiology Bldg, Room 48,
+> 30 N 2030 E, Salt Lake City, UT 84112
+> 
+> michael.redd at hci.utah.edu
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> 
+> 
+> 
+> ------------------------------
+> 
+> Message: 2
+> Date: Tue, 22 Dec 2015 04:38:43 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "Anthony, Neil" <nantho2 at emory.edu>, "openspim at openspim.org"
+> 	<openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+> Message-ID:
+> 	<CO2PR05MB681F529BB001DE1FC43539FECE50 at CO2PR05MB681.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi all.  I understand this is a very specific area, and as such understand the support for which will be limited.  I'll continue to post my steps and progress for future reference.
+> 
+> I realized that I needed to right click and run the SPIMtestDrive file (newb trying to run the main acquisition part of the code).
+> 
+> It runs, pops up the "Welcome to Micro-Manager" window to fill out my details, after which it throws a "Micro-Manager Error" of:
+> Error: Failed to load the MMCoreJ_wrap native library
+> Mmcorj.MMCoreJJNI.swig_module_init()V
+> 
+> In the output window I see the text pasted below.  I've read that it might be a 32 to 64 bit issue, but not sure how to proceed.  I have JDK 32 and 64 bit installed.  I've tried creating an environment parameter for JAVA_HOME as C:\Program Files (x86)\Java\jre7 as suggested in a really old post, but still no joy.
+> 
+> Any help would be much appreciated.
+> Thanks
+> Neil
+> 
+> 
+> 
+> Netbeans Output Window:
+> 
+> cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; "JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80" cmd /c "\"\"C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\" -Dexec.args=\"-classpath %classpath SPIMTestDrive\" -Dexec.executable=\"C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\" -Dexec.classpathScope=test -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 --errors -e org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\""
+> Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+> Error stacktraces are turned on.
+> Scanning for projects...
+> 
+> ------------------------------------------------------------------------
+> Building SPIMAcquisition 1.0.1-SNAPSHOT
+> ------------------------------------------------------------------------
+> 
+> --- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+> C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target
+> 
+> java.lang.ClassNotFoundException: org.micromanager.AcquisitionEngine2010 in Thread[Pipeline Class loading thread,6,main]
+> ... (let me know if you need the extra "at" lines)
+> 
+> Failed to load the MMCoreJ_wrap native library
+> java.lang.UnsatisfiedLinkError: mmcorej.MMCoreJJNI.swig_module_init()V in Thread[AWT-EventQueue-0,6,main]
+> ...
+> 
+> java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+> ...
+> 
+> ------------------------------------------------------------------------
+> BUILD SUCCESS
+> ------------------------------------------------------------------------
+> Total time: 10.078s
+> Finished at: Mon Dec 21 23:31:26 EST 2015
+> Final Memory: 11M/222M
+> ------------------------------------------------------------------------
+> 
+> 
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+> Sent: Thursday, December 17, 2015 10:46 PM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+> 
+> Hi guys,
+> 
+> I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+> - Netbeans 8.1
+> - JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+> -  OpenSPIM-20150427 extracted
+> 
+> I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+> 
+> Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+> 
+> I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+> 
+> I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+> I'm using the git options via Netbeans.
+> 
+> Thanks in advance for your time.
+> Neil
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+> 
+> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+> 
+> 
+> 
+> ------------------------------
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> End of OpenSPIM Digest, Vol 32, Issue 7
+> ***************************************
+
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48, 
+30 N 2030 E, Salt Lake City, UT 84112
+
+michael.redd at hci.utah.edu
+
+
+From Johannes.Schindelin at gmx.de  Wed Dec 30 08:56:19 2015
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 30 Dec 2015 15:56:19 +0100 (CET)
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+In-Reply-To: <CO2PR05MB681F529BB001DE1FC43539FECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+	<CO2PR05MB681F529BB001DE1FC43539FECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <alpine.DEB.2.20.1512301551220.14434@virtualbox>
+
+Hi Neil,
+
+On Tue, 22 Dec 2015, Anthony, Neil wrote:
+
+> I realized that I needed to right click and run the SPIMtestDrive file
+> (newb trying to run the main acquisition part of the code).
+> 
+> It runs, pops up the "Welcome to Micro-Manager" window to fill out my details, after which it throws a "Micro-Manager Error" of:
+> Error: Failed to load the MMCoreJ_wrap native library
+> Mmcorj.MMCoreJJNI.swig_module_init()V
+
+This means that it cannot find the DLL that implements the
+hardware-specific parts of Micro-Manager.
+
+I believe that you can fix this problem by telling Netbeans to start
+SPIMTestDrive with the environment variable PATH adjusted to point to the
+directory of your installed Micro-Manager that contains the MMCoreJ.dll
+file. I might be wrong, though :-(
+
+Ciao,
+Johannes
+
+
+From tnf8 at pitt.edu  Wed Dec  9 11:31:51 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 9 Dec 2015 17:31:51 +0000
+Subject: [OpenSPIM] A new type of sharper beam?
+Message-ID: <D28DCFB6.72DD%tnf8@pitt.edu>
+
+Hi folks,
+
+The following paper struck me as potentially very useful.  It seems that a simple(ish) array of slits in front of the cylinder lens can create a narrow, subdiffraction-sized sheet of light via interference which propagates without broadening.  Kind of a 2D Bessel beam.
+"Toward the optical "magic carpet": reducing the divergence of a light sheet below the diffraction limit
+In 3D, diffraction-free or Bessel beams are well known and have found applications in diverse fields. An analog in 2D, or pseudonondiffracting (PND) beams, is a nontrivial problem, and existing methods suffer from deficiencies. For example, Airy beams are not highly localized, some PND beams have significant side lobes, and a cosine beam has to be truncated by a very narrow aperture thus discarding most of the energy. We show, both theoretically and experimentally, that it is possible to generate a quasi-nondiffracting 2D light beam in a simple and efficient fashion. This is achieved by placing a mask consisting of a pair of double slits on a cylindrical lens. The applications include light sheet microscopy/optical sectioning and particle manipulation."
+
+https://www.osapublishing.org/ol/abstract.cfm?uri=ol-40-21-5121
+
+That sounds like a subdiffraction-width plane that almost anyone could make.  That is interesting to me as the extra complexity and cost of Bessel beams have led me to put off exploring more precise illumination methods for now.  As far as I can tell you just need to fabricate a sufficiently precise mask, and you might need a different mask for each wavelength.  What do you think?
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20151209/68d80cd2/attachment-0002.html>
+
+From nantho2 at emory.edu  Mon Dec 14 22:15:08 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 15 Dec 2015 04:15:08 +0000
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+Message-ID: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all, I hope the science is treating you well.
+
+I have been looking at getting started with getting into the code, which I see is here:
+http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+but I'm a little lost about how to get started, and how to be part of the open source effort vs. just making my own version.
+
+I'm a semi experienced programmer (a little Java, Pascal, C, Matlab, Igor Pro, LabView, NIDAQ to varying levels) and I have all the applications in place (Netbeans, Eclipse, Visual Studio Express 2010, 2015, and all the java SDKs I might need).  Where I get lost is how to incorporate anything I do into the existing code?  What parts should I, can I work on?  Do these changes need to be vetted before being incorporated?  How do I get started with version control?  Etc. etc.  I feel this is, for me, the biggest hurdle in open source coding:  Not being able to code, but being able to 'open source'.  I've always been a lone coder up until this point, so please excuse my ignorance to these details.
+
+Also, I think maybe I'm stuck on the Maven thing.  I see in the README.md that it's Maven, drawing on SciJava, and I can import into Netbeans for example.  Does anybody have any good links to help me get started with that?
+
+Thanks in advance for your time.
+
+Neil
+
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From moon at mpi-cbg.de  Tue Dec 15 03:12:47 2015
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Tue, 15 Dec 2015 10:12:47 +0100
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+In-Reply-To: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <E88FF6A5-CB98-48EA-9003-E84726FCA8F2@mpi-cbg.de>
+
+Dear Neil,
+
+It is great to have you as a contributor in OpenSPIM.
+Simply, you can visit https://github.com/openspim/SPIMAcquisition <https://github.com/openspim/SPIMAcquisition> where all the SPIMAcquisition codes are located.
+Jenkins compiles/packages these source codes and upload it to the OpenSPIM update site.
+
+Please, use fork this repository for having your own version of the code. Some git knowledge is required to work with.
+When you think your source codes are ready, you can simply create a pull request.
+We will evaluate your changes and guide you to merge it to the production master branch.
+
+Please, let me know if you need more help. I will try to help you as much as I can.
+
+Best Regards,
+HongKee
+
+> On Dec 15, 2015, at 5:15 AM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi all, I hope the science is treating you well.
+> 
+> I have been looking at getting started with getting into the code, which I see is here:
+> http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+> but I'm a little lost about how to get started, and how to be part of the open source effort vs. just making my own version.
+> 
+> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab, Igor Pro, LabView, NIDAQ to varying levels) and I have all the applications in place (Netbeans, Eclipse, Visual Studio Express 2010, 2015, and all the java SDKs I might need).  Where I get lost is how to incorporate anything I do into the existing code?  What parts should I, can I work on?  Do these changes need to be vetted before being incorporated?  How do I get started with version control?  Etc. etc.  I feel this is, for me, the biggest hurdle in open source coding:  Not being able to code, but being able to 'open source'.  I've always been a lone coder up until this point, so please excuse my ignorance to these details.
+> 
+> Also, I think maybe I'm stuck on the Maven thing.  I see in the README.md that it's Maven, drawing on SciJava, and I can import into Netbeans for example.  Does anybody have any good links to help me get started with that?
+> 
+> Thanks in advance for your time.
+> 
+> Neil
+> 
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20151215/ff3b0cac/attachment-0002.html>
+
+From Johannes.Schindelin at gmx.de  Tue Dec 15 09:50:03 2015
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 15 Dec 2015 16:50:03 +0100 (CET)
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+In-Reply-To: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <alpine.DEB.2.20.1512151615200.6483@virtualbox>
+
+Hi Neil,
+
+On Tue, 15 Dec 2015, Anthony, Neil wrote:
+
+> I hope the science is treating you well.
+
+Nah. It does not matter anymore, though, as I moved on ;-)
+
+> I have been looking at getting started with getting into the code, which
+> I see is here:
+> http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+
+What you found here is actually not the source code, but a so-called
+"Continuous Integration Server". Essentially it means that this is a web
+server that also watches the source code in the background and builds it
+whenever it gets updated.
+
+Theoretically, it also runs all the regression tests (i.e. small snippets
+of code that verify that what the programmer expected to work, ahem,
+actually works). Practically, there is preciously little in the way of
+regression tests because the student who wrote most of the SPIMAcquisition
+code based a lot of faith in the code he wrote and skipped writing tests.
+
+The only regression test, in fact, was written by HongKee, long after the
+original author moved on to other pastures.
+
+As pointed out by HongKee, the source code can be found at
+
+	https://github.com/openspim/SPIMAcquisition
+
+The most important thing about the source code is that it is in a source
+code "repository", i.e. a place where the code can not only be shared, but
+contributions can be integrated easily. This is possible by the use of the
+version control software called "Git". I encourage you to take 15 minutes
+to learn how to use it (and why it improves your life) at:
+
+	https://try.github.com/
+
+More about integrating contributions below.
+
+> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab,
+> Igor Pro, LabView, NIDAQ to varying levels) and I have all the
+> applications in place (Netbeans, Eclipse, Visual Studio Express 2010,
+> 2015, and all the java SDKs I might need).
+
+Good. They all have support for Git (actually, VS Express does not, but VS
+2015 does, I am actually working on that ;-)). So all you need to do is
+"clone" the repository mentioned above into your workspace.
+
+You can then give the code a test run using the SPIMTestDrive class:
+
+	https://github.com/openspim/SPIMAcquisition/blob/master/src/test/java/SPIMTestDrive.java
+
+> Where I get lost is how to incorporate anything I do into the existing
+> code?
+
+Yeah, unfortunately this is my mistake. I was supposed to manage the
+student writing the code and I failed to convince him to document things
+so that the next person has a chance to dive in, too. So things are pretty
+much undocumented.
+
+I do not have enough time to answer questions, but I managed to give
+HongKee an introduction into the code base before switching jobs, so maybe
+you want to ask concrete questions on this list? (On this list so that the
+impact of the answers is maximized and HongKee won't have to repeat
+himself.)
+
+> What parts should I, can I work on?
+
+The Open Source idea is that you work on those parts that you need to see
+improved. I am sure you have a couple of pet peeves that you would love to
+see addressed. Those are good places to start from.
+
+And again, if you have no idea where to start "scratching your itch", just
+ask away, on this list.
+
+> Do these changes need to be vetted before being incorporated?
+
+The common process is that you create a copy of the repository on GitHub
+(for historical reasons, this is called "forking"). In this copy, you can
+do *everything* you like.
+
+Then you will start improving the code. Once you have an improvement you
+think is valuable also for others, you open a so-called "Pull Request" on
+GitHub:
+
+	https://help.github.com/articles/using-pull-requests/
+
+HongKee will review the changes, possibly make suggestions how to improve
+or otherwise change the code, and eventually "merge" the changes.
+
+Depending how polished you want your contribution to look, you might want
+to go to the full distance and follow the advice in:
+
+	https://github.com/maven-nar/nar-maven-plugin/wiki/How-to-contribute
+
+(This is from a related project, but the advice applies to pretty much all
+Open Source projects.)
+
+> How do I get started with version control?
+
+My recommendation is https://try.github.com/, but depending how visual you
+work, http://eagain.net/articles/git-for-computer-scientists/ might be
+better. Or read the Pro Git book: http://git-scm.com/book/en/v2. There are
+tons of good resources available, my favorite being Git For Teams
+(disclaimer: I reviewed this book before publication), but that one will
+keep you occupied for a couple of evenings.
+
+> feel this is, for me, the biggest hurdle in open source coding:  Not
+> being able to code, but being able to 'open source'.  I've always been a
+> lone coder up until this point, so please excuse my ignorance to these
+> details.
+
+You might find it slightly challenging at first, because collaboration
+always requires clearer communication than "lone coding", and also the
+occasional compromise. I found that this requirement was most challenging
+to most scientists, who are basically used (even encouraged!!!) to work
+against each other all the time.
+
+The advantage of Open Source coding is that you do not need to duplicate
+work. You put in that extra effort to make the code work not only for you,
+but for others, and then you can benefit from others' contributions just
+the same as they can benefit from yours'.
+
+This concept is very closely related to Isaac Newton's famous words: "If I
+could see so far, it was only because I was standing on the shoulders of
+giants". It is strange how far away science has deviated from that world
+view.
+
+> Also, I think maybe I'm stuck on the Maven thing.
+
+Oh, Maven. Yep, it looks a little complex in the beginning, I agree.
+
+Think of Maven as the system that allows programmers to stand on each
+others' shoulders. It allows you to define what other software components
+your software depends on ("dependencies"). For example, OpenSPIM depends
+on Micro-Manager, which in turn depends on ImageJ. And the closer you
+look, the more fine-grained things become. More details can be found here:
+
+	http://imagej.net/Maven
+
+Welcome on board,
+Johannes
+
+
+
+From nantho2 at emory.edu  Tue Dec 15 19:01:04 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 16 Dec 2015 01:01:04 +0000
+Subject: [OpenSPIM] Getting started with SPIM plugin code
+In-Reply-To: <alpine.DEB.2.20.1512151615200.6483@virtualbox>
+References: <CO2PR05MB681D562C66930ACD4B3FC29ECEE0@CO2PR05MB681.namprd05.prod.outlook.com>
+	<alpine.DEB.2.20.1512151615200.6483@virtualbox>
+Message-ID: <CO2PR05MB681BFE6CFB950BAFDCD24AEECEF0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Thanks Johannes, HongKee, I appreciate your time taken to get me started.
+
+I'll check out all the links, bang my head against a few of the main starting points, and get back to the list once I get rolling.
+
+Neil
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:Johannes.Schindelin at gmx.de]
+Sent: Tuesday, December 15, 2015 10:50 AM
+To: Anthony, Neil
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Getting started with SPIM plugin code
+
+Hi Neil,
+
+On Tue, 15 Dec 2015, Anthony, Neil wrote:
+
+> I hope the science is treating you well.
+
+Nah. It does not matter anymore, though, as I moved on ;-)
+
+> I have been looking at getting started with getting into the code,
+> which I see is here:
+> http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+
+What you found here is actually not the source code, but a so-called "Continuous Integration Server". Essentially it means that this is a web server that also watches the source code in the background and builds it whenever it gets updated.
+
+Theoretically, it also runs all the regression tests (i.e. small snippets of code that verify that what the programmer expected to work, ahem, actually works). Practically, there is preciously little in the way of regression tests because the student who wrote most of the SPIMAcquisition code based a lot of faith in the code he wrote and skipped writing tests.
+
+The only regression test, in fact, was written by HongKee, long after the original author moved on to other pastures.
+
+As pointed out by HongKee, the source code can be found at
+
+https://github.com/openspim/SPIMAcquisition
+
+The most important thing about the source code is that it is in a source code "repository", i.e. a place where the code can not only be shared, but contributions can be integrated easily. This is possible by the use of the version control software called "Git". I encourage you to take 15 minutes to learn how to use it (and why it improves your life) at:
+
+https://try.github.com/
+
+More about integrating contributions below.
+
+> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab,
+> Igor Pro, LabView, NIDAQ to varying levels) and I have all the
+> applications in place (Netbeans, Eclipse, Visual Studio Express 2010,
+> 2015, and all the java SDKs I might need).
+
+Good. They all have support for Git (actually, VS Express does not, but VS
+2015 does, I am actually working on that ;-)). So all you need to do is "clone" the repository mentioned above into your workspace.
+
+You can then give the code a test run using the SPIMTestDrive class:
+
+https://github.com/openspim/SPIMAcquisition/blob/master/src/test/java/SPIMTestDrive.java
+
+> Where I get lost is how to incorporate anything I do into the existing
+> code?
+
+Yeah, unfortunately this is my mistake. I was supposed to manage the student writing the code and I failed to convince him to document things so that the next person has a chance to dive in, too. So things are pretty much undocumented.
+
+I do not have enough time to answer questions, but I managed to give HongKee an introduction into the code base before switching jobs, so maybe you want to ask concrete questions on this list? (On this list so that the impact of the answers is maximized and HongKee won't have to repeat
+himself.)
+
+> What parts should I, can I work on?
+
+The Open Source idea is that you work on those parts that you need to see improved. I am sure you have a couple of pet peeves that you would love to see addressed. Those are good places to start from.
+
+And again, if you have no idea where to start "scratching your itch", just ask away, on this list.
+
+> Do these changes need to be vetted before being incorporated?
+
+The common process is that you create a copy of the repository on GitHub (for historical reasons, this is called "forking"). In this copy, you can do *everything* you like.
+
+Then you will start improving the code. Once you have an improvement you think is valuable also for others, you open a so-called "Pull Request" on
+GitHub:
+
+https://help.github.com/articles/using-pull-requests/
+
+HongKee will review the changes, possibly make suggestions how to improve or otherwise change the code, and eventually "merge" the changes.
+
+Depending how polished you want your contribution to look, you might want to go to the full distance and follow the advice in:
+
+https://github.com/maven-nar/nar-maven-plugin/wiki/How-to-contribute
+
+(This is from a related project, but the advice applies to pretty much all Open Source projects.)
+
+> How do I get started with version control?
+
+My recommendation is https://try.github.com/, but depending how visual you work, http://eagain.net/articles/git-for-computer-scientists/ might be better. Or read the Pro Git book: http://git-scm.com/book/en/v2. There are tons of good resources available, my favorite being Git For Teams
+(disclaimer: I reviewed this book before publication), but that one will keep you occupied for a couple of evenings.
+
+> feel this is, for me, the biggest hurdle in open source coding:  Not
+> being able to code, but being able to 'open source'.  I've always been
+> a lone coder up until this point, so please excuse my ignorance to
+> these details.
+
+You might find it slightly challenging at first, because collaboration always requires clearer communication than "lone coding", and also the occasional compromise. I found that this requirement was most challenging to most scientists, who are basically used (even encouraged!!!) to work against each other all the time.
+
+The advantage of Open Source coding is that you do not need to duplicate work. You put in that extra effort to make the code work not only for you, but for others, and then you can benefit from others' contributions just the same as they can benefit from yours'.
+
+This concept is very closely related to Isaac Newton's famous words: "If I could see so far, it was only because I was standing on the shoulders of giants". It is strange how far away science has deviated from that world view.
+
+> Also, I think maybe I'm stuck on the Maven thing.
+
+Oh, Maven. Yep, it looks a little complex in the beginning, I agree.
+
+Think of Maven as the system that allows programmers to stand on each others' shoulders. It allows you to define what other software components your software depends on ("dependencies"). For example, OpenSPIM depends on Micro-Manager, which in turn depends on ImageJ. And the closer you look, the more fine-grained things become. More details can be found here:
+
+http://imagej.net/Maven
+
+Welcome on board,
+Johannes
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From nantho2 at emory.edu  Thu Dec 17 21:45:49 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 18 Dec 2015 03:45:49 +0000
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+Message-ID: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi guys,
+
+I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+- Netbeans 8.1
+- JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+-  OpenSPIM-20150427 extracted
+
+I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+
+Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError
+at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+
+I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+
+I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+I'm using the git options via Netbeans.
+
+Thanks in advance for your time.
+Neil
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: full_output.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20151218/3c558b25/attachment-0002.txt>
+
+From nantho2 at emory.edu  Fri Dec 18 12:42:21 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 18 Dec 2015 18:42:21 +0000
+Subject: [OpenSPIM] Plugin Power Control
+Message-ID: <CO2PR05MB681C3681C7F827CCDA4BF8FECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all,
+
+Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+https://www.youtube.com/watch?v=2JEiMHxS69w
+
+Key points:
+
+-          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+
+-          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+
+-          At certain values the slider value jumps back and forth, which is strange
+
+-          It only works for one of the lasers.
+
+Any thoughts would be much appreciated.
+
+Thanks
+Neil
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/attachment-0002.html>
+
+From mredd at cores.utah.edu  Mon Dec 21 10:19:40 2015
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Mon, 21 Dec 2015 16:19:40 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+In-Reply-To: <mailman.5.1450548002.12534.openspim@openspim.org>
+References: <mailman.5.1450548002.12534.openspim@openspim.org>
+Message-ID: <F6110B83-8F60-443D-B410-74FB264744B8@cores.utah.edu>
+
+The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+
+cheers
+mike
+> On Dec 19, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+> 
+> Send OpenSPIM mailing list submissions to
+> 	openspim at openspim.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> 	openspim-request at openspim.org
+> 
+> You can reach the person managing the list at
+> 	openspim-owner at openspim.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+> 
+> 
+> Today's Topics:
+> 
+>   1. Plugin Power Control (Anthony, Neil)
+> 
+> 
+> ----------------------------------------------------------------------
+> 
+> Message: 1
+> Date: Fri, 18 Dec 2015 18:42:21 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] Plugin Power Control
+> Message-ID:
+> 	<CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi all,
+> 
+> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+> https://www.youtube.com/watch?v=2JEiMHxS69w
+> 
+> Key points:
+> 
+> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+> 
+> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+> 
+> -          At certain values the slider value jumps back and forth, which is strange
+> 
+> -          It only works for one of the lasers.
+> 
+> Any thoughts would be much appreciated.
+> 
+> Thanks
+> Neil
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/attachment-0001.html>
+> 
+> ------------------------------
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> End of OpenSPIM Digest, Vol 32, Issue 5
+> ***************************************
+
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48, 
+30 N 2030 E, Salt Lake City, UT 84112
+
+michael.redd at hci.utah.edu
+
+
+
+
+From nantho2 at emory.edu  Mon Dec 21 22:11:33 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 22 Dec 2015 04:11:33 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+In-Reply-To: <F6110B83-8F60-443D-B410-74FB264744B8@cores.utah.edu>
+References: <mailman.5.1450548002.12534.openspim@openspim.org>
+	<F6110B83-8F60-443D-B410-74FB264744B8@cores.utah.edu>
+Message-ID: <CO2PR05MB681FC11314FA37BD36762CAECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Mike, thanks for that info.
+
+Can you please tell me if it's possible to use the presets in the OpenSPIM plugin?  For example, can I setup some presets for red channel and green channel and then get OpenSPIM switch between during the acquisition?
+
+Thanks
+Neil
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Michael Redd
+Sent: Monday, December 21, 2015 11:20 AM
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+
+The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+
+cheers
+mike
+> On Dec 19, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+>
+> Send OpenSPIM mailing list submissions to
+> openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+> openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>   1. Plugin Power Control (Anthony, Neil)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Fri, 18 Dec 2015 18:42:21 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] Plugin Power Control
+> Message-ID:
+>
+> <CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outl
+> ook.com>
+>
+> Content-Type: text/plain; charset="us-ascii"
+>
+> Hi all,
+>
+> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+> https://www.youtube.com/watch?v=2JEiMHxS69w
+>
+> Key points:
+>
+> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+>
+> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+>
+> -          At certain values the slider value jumps back and forth, which is strange
+>
+> -          It only works for one of the lasers.
+>
+> Any thoughts would be much appreciated.
+>
+> Thanks
+> Neil
+>
+>
+>
+> ________________________________
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination,
+> distribution or copying of this message (including any attachments) is
+> strictly prohibited.
+>
+> If you have received this message in error, please contact the sender
+> by reply e-mail message and destroy all copies of the original message
+> (including attachments).
+> -------------- next part -------------- An HTML attachment was
+> scrubbed...
+> URL:
+> <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/
+> attachment-0001.html>
+>
+> ------------------------------
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> End of OpenSPIM Digest, Vol 32, Issue 5
+> ***************************************
+
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48,
+30 N 2030 E, Salt Lake City, UT 84112
+
+michael.redd at hci.utah.edu
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From nantho2 at emory.edu  Mon Dec 21 22:38:43 2015
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 22 Dec 2015 04:38:43 +0000
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+In-Reply-To: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <CO2PR05MB681F529BB001DE1FC43539FECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all.  I understand this is a very specific area, and as such understand the support for which will be limited.  I'll continue to post my steps and progress for future reference.
+
+I realized that I needed to right click and run the SPIMtestDrive file (newb trying to run the main acquisition part of the code).
+
+It runs, pops up the "Welcome to Micro-Manager" window to fill out my details, after which it throws a "Micro-Manager Error" of:
+Error: Failed to load the MMCoreJ_wrap native library
+Mmcorj.MMCoreJJNI.swig_module_init()V
+
+In the output window I see the text pasted below.  I've read that it might be a 32 to 64 bit issue, but not sure how to proceed.  I have JDK 32 and 64 bit installed.  I've tried creating an environment parameter for JAVA_HOME as C:\Program Files (x86)\Java\jre7 as suggested in a really old post, but still no joy.
+
+Any help would be much appreciated.
+Thanks
+Neil
+
+
+
+Netbeans Output Window:
+
+cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; "JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80" cmd /c "\"\"C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\" -Dexec.args=\"-classpath %classpath SPIMTestDrive\" -Dexec.executable=\"C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\" -Dexec.classpathScope=test -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 --errors -e org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\""
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Error stacktraces are turned on.
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building SPIMAcquisition 1.0.1-SNAPSHOT
+------------------------------------------------------------------------
+
+--- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target
+
+java.lang.ClassNotFoundException: org.micromanager.AcquisitionEngine2010 in Thread[Pipeline Class loading thread,6,main]
+... (let me know if you need the extra "at" lines)
+
+Failed to load the MMCoreJ_wrap native library
+java.lang.UnsatisfiedLinkError: mmcorej.MMCoreJJNI.swig_module_init()V in Thread[AWT-EventQueue-0,6,main]
+...
+
+java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+...
+
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 10.078s
+Finished at: Mon Dec 21 23:31:26 EST 2015
+Final Memory: 11M/222M
+------------------------------------------------------------------------
+
+
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+Sent: Thursday, December 17, 2015 10:46 PM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+
+Hi guys,
+
+I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+- Netbeans 8.1
+- JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+-  OpenSPIM-20150427 extracted
+
+I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+
+Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+
+I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+
+I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+I'm using the git options via Netbeans.
+
+Thanks in advance for your time.
+Neil
+
+
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+
+If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+
+
+
+From mredd at cores.utah.edu  Tue Dec 22 12:45:46 2015
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Tue, 22 Dec 2015 18:45:46 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 7
+In-Reply-To: <mailman.9.1450807201.8757.openspim@openspim.org>
+References: <mailman.9.1450807201.8757.openspim@openspim.org>
+Message-ID: <63350934-79C8-43C1-99ED-AE15664008A1@cores.utah.edu>
+
+I don’t think that the Openspim plugin is capable of two channels. If it is I would like to know how. I use the Multidimensional acquisition window from micro-manager to handle my two channel, z stack, time-lapse acquisitions. You set up the channels—red and green— in the configuration settings of micro-manager. The group can be called channels and consists of two presets—red and green. The important parameter for the group is the core shutter. For the red channel it is your green laser and for the green channel it is your blue laser. When you open the multi-dimensional acquisition window there will be a channel section of the window. There is a drop down tab called “channel group” which you need to specify the channel configuration group that you set up. Then press the new button on the right to add the red and green channels. You can add the color in the table and the exposure time for each channel. It is a really straightforward multi-dimensional acquisition window once you learn how to use it. I hope this helps. I could send you screen shots if necessary.
+
+cheers
+mike
+> On Dec 22, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+> 
+> Send OpenSPIM mailing list submissions to
+> 	openspim at openspim.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+> 	openspim-request at openspim.org
+> 
+> You can reach the person managing the list at
+> 	openspim-owner at openspim.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+> 
+> 
+> Today's Topics:
+> 
+>   1. Re: OpenSPIM Digest, Vol 32, Issue 5 (Anthony, Neil)
+>   2. Re: Running SPIMAcquisition Code in Netbeans (Anthony, Neil)
+> 
+> 
+> ----------------------------------------------------------------------
+> 
+> Message: 1
+> Date: Tue, 22 Dec 2015 04:11:33 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: Michael Redd <mredd at cores.utah.edu>, "openspim at openspim.org"
+> 	<openspim at openspim.org>
+> Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+> Message-ID:
+> 	<CO2PR05MB681FC11314FA37BD36762CAECE50 at CO2PR05MB681.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi Mike, thanks for that info.
+> 
+> Can you please tell me if it's possible to use the presets in the OpenSPIM plugin?  For example, can I setup some presets for red channel and green channel and then get OpenSPIM switch between during the acquisition?
+> 
+> Thanks
+> Neil
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Michael Redd
+> Sent: Monday, December 21, 2015 11:20 AM
+> To: openspim at openspim.org
+> Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+> 
+> The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+> 
+> cheers
+> mike
+>> On Dec 19, 2015, at 11:00 AM, openspim-request at openspim.org wrote:
+>> 
+>> Send OpenSPIM mailing list submissions to
+>> openspim at openspim.org
+>> 
+>> To subscribe or unsubscribe via the World Wide Web, visit
+>> http://openspim.org/mailman/listinfo/openspim
+>> or, via email, send a message with subject or body 'help' to
+>> openspim-request at openspim.org
+>> 
+>> You can reach the person managing the list at
+>> openspim-owner at openspim.org
+>> 
+>> When replying, please edit your Subject line so it is more specific
+>> than "Re: Contents of OpenSPIM digest..."
+>> 
+>> 
+>> Today's Topics:
+>> 
+>>  1. Plugin Power Control (Anthony, Neil)
+>> 
+>> 
+>> ----------------------------------------------------------------------
+>> 
+>> Message: 1
+>> Date: Fri, 18 Dec 2015 18:42:21 +0000
+>> From: "Anthony, Neil" <nantho2 at emory.edu>
+>> To: "openspim at openspim.org" <openspim at openspim.org>
+>> Subject: [OpenSPIM] Plugin Power Control
+>> Message-ID:
+>> 
+>> <CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outl
+>> ook.com>
+>> 
+>> Content-Type: text/plain; charset="us-ascii"
+>> 
+>> Hi all,
+>> 
+>> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+>> https://www.youtube.com/watch?v=2JEiMHxS69w
+>> 
+>> Key points:
+>> 
+>> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+>> 
+>> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+>> 
+>> -          At certain values the slider value jumps back and forth, which is strange
+>> 
+>> -          It only works for one of the lasers.
+>> 
+>> Any thoughts would be much appreciated.
+>> 
+>> Thanks
+>> Neil
+>> 
+>> 
+>> 
+>> ________________________________
+>> 
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination,
+>> distribution or copying of this message (including any attachments) is
+>> strictly prohibited.
+>> 
+>> If you have received this message in error, please contact the sender
+>> by reply e-mail message and destroy all copies of the original message
+>> (including attachments).
+>> -------------- next part -------------- An HTML attachment was
+>> scrubbed...
+>> URL:
+>> <http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/
+>> attachment-0001.html>
+>> 
+>> ------------------------------
+>> 
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>> 
+>> 
+>> End of OpenSPIM Digest, Vol 32, Issue 5
+>> ***************************************
+> 
+> Michael Redd
+> Imaging Specialist
+> Cell Imaging Core Facility
+> University of Utah
+> Radiobiology Bldg, Room 48,
+> 30 N 2030 E, Salt Lake City, UT 84112
+> 
+> michael.redd at hci.utah.edu
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> 
+> 
+> 
+> ------------------------------
+> 
+> Message: 2
+> Date: Tue, 22 Dec 2015 04:38:43 +0000
+> From: "Anthony, Neil" <nantho2 at emory.edu>
+> To: "Anthony, Neil" <nantho2 at emory.edu>, "openspim at openspim.org"
+> 	<openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+> Message-ID:
+> 	<CO2PR05MB681F529BB001DE1FC43539FECE50 at CO2PR05MB681.namprd05.prod.outlook.com>
+> 	
+> Content-Type: text/plain; charset="us-ascii"
+> 
+> Hi all.  I understand this is a very specific area, and as such understand the support for which will be limited.  I'll continue to post my steps and progress for future reference.
+> 
+> I realized that I needed to right click and run the SPIMtestDrive file (newb trying to run the main acquisition part of the code).
+> 
+> It runs, pops up the "Welcome to Micro-Manager" window to fill out my details, after which it throws a "Micro-Manager Error" of:
+> Error: Failed to load the MMCoreJ_wrap native library
+> Mmcorj.MMCoreJJNI.swig_module_init()V
+> 
+> In the output window I see the text pasted below.  I've read that it might be a 32 to 64 bit issue, but not sure how to proceed.  I have JDK 32 and 64 bit installed.  I've tried creating an environment parameter for JAVA_HOME as C:\Program Files (x86)\Java\jre7 as suggested in a really old post, but still no joy.
+> 
+> Any help would be much appreciated.
+> Thanks
+> Neil
+> 
+> 
+> 
+> Netbeans Output Window:
+> 
+> cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; "JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80" cmd /c "\"\"C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\" -Dexec.args=\"-classpath %classpath SPIMTestDrive\" -Dexec.executable=\"C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\" -Dexec.classpathScope=test -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 --errors -e org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\""
+> Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+> Error stacktraces are turned on.
+> Scanning for projects...
+> 
+> ------------------------------------------------------------------------
+> Building SPIMAcquisition 1.0.1-SNAPSHOT
+> ------------------------------------------------------------------------
+> 
+> --- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+> C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target
+> 
+> java.lang.ClassNotFoundException: org.micromanager.AcquisitionEngine2010 in Thread[Pipeline Class loading thread,6,main]
+> ... (let me know if you need the extra "at" lines)
+> 
+> Failed to load the MMCoreJ_wrap native library
+> java.lang.UnsatisfiedLinkError: mmcorej.MMCoreJJNI.swig_module_init()V in Thread[AWT-EventQueue-0,6,main]
+> ...
+> 
+> java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+> ...
+> 
+> ------------------------------------------------------------------------
+> BUILD SUCCESS
+> ------------------------------------------------------------------------
+> Total time: 10.078s
+> Finished at: Mon Dec 21 23:31:26 EST 2015
+> Final Memory: 11M/222M
+> ------------------------------------------------------------------------
+> 
+> 
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Anthony, Neil
+> Sent: Thursday, December 17, 2015 10:46 PM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+> 
+> Hi guys,
+> 
+> I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+> - Netbeans 8.1
+> - JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+> -  OpenSPIM-20150427 extracted
+> 
+> I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+> 
+> Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+> 
+> I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+> 
+> I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+> I'm using the git options via Netbeans.
+> 
+> Thanks in advance for your time.
+> Neil
+> 
+> 
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+> 
+> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+> 
+> 
+> 
+> ------------------------------
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> End of OpenSPIM Digest, Vol 32, Issue 7
+> ***************************************
+
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48, 
+30 N 2030 E, Salt Lake City, UT 84112
+
+michael.redd at hci.utah.edu
+
+
+From Johannes.Schindelin at gmx.de  Wed Dec 30 08:56:19 2015
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 30 Dec 2015 15:56:19 +0100 (CET)
+Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+In-Reply-To: <CO2PR05MB681F529BB001DE1FC43539FECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6819EA9AEFA951A6CD7CC21ECE10@CO2PR05MB681.namprd05.prod.outlook.com>
+	<CO2PR05MB681F529BB001DE1FC43539FECE50@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <alpine.DEB.2.20.1512301551220.14434@virtualbox>
+
+Hi Neil,
+
+On Tue, 22 Dec 2015, Anthony, Neil wrote:
+
+> I realized that I needed to right click and run the SPIMtestDrive file
+> (newb trying to run the main acquisition part of the code).
+> 
+> It runs, pops up the "Welcome to Micro-Manager" window to fill out my details, after which it throws a "Micro-Manager Error" of:
+> Error: Failed to load the MMCoreJ_wrap native library
+> Mmcorj.MMCoreJJNI.swig_module_init()V
+
+This means that it cannot find the DLL that implements the
+hardware-specific parts of Micro-Manager.
+
+I believe that you can fix this problem by telling Netbeans to start
+SPIMTestDrive with the environment variable PATH adjusted to point to the
+directory of your installed Micro-Manager that contains the MMCoreJ.dll
+file. I might be wrong, though :-(
+
+Ciao,
+Johannes
+
+
+

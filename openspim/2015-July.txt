@@ -1,0 +1,2044 @@
+From 000generic at gmail.com  Wed Jul  1 10:05:59 2015
+From: 000generic at gmail.com (Eric Edsinger)
+Date: Thu, 2 Jul 2015 00:05:59 +0900
+Subject: [OpenSPIM] Alternative to Agarose
+In-Reply-To: <C545DA3CAED98741AAFAB27C8790BF29BE6DC8D4@CHEXMBX2.livad.liv.ac.uk>
+References: <FEFFB72B93A1D845AD4F36B32158C8400DF50796@urz-mbx-4.urz.unibas.ch>
+	<CAPTjnjCzN4v3hFgDiereJTpv79wXOQ29sinff8YO25kigcQghA@mail.gmail.com>
+	<C545DA3CAED98741AAFAB27C8790BF29BE6DC8D4@CHEXMBX2.livad.liv.ac.uk>
+Message-ID: <CAPTjnjBQKq9N-6V35Jtnh-7txxFSQLjryhzNczaeKwDPh_SLiA@mail.gmail.com>
+
+Hi Marco,
+
+That's great - I would love to hear about how CyGel works for you for
+OpenSPIM/lightsheet - and I'm very curious about the two-component hydrogel
+for live samples that does not require a temperature trigger.  It would be
+great to hear about it on OpenSPIM if and when you can share details :)
+
+Good luck!
+Eric
+
+
+On Wed, Jul 1, 2015 at 11:08 PM, Marcello, Marco <M.Marcello at liverpool.ac.uk
+> wrote:
+
+>  Hi,
+>
+>
+>
+> I am planning to use CyGel soon, I will let you know how it goes.
+> Meanwhile with some colleagues in Chemistry we are working on a two
+> components hydrogel that does not use temperature as gelifying  factor.
+>
+> It could be useful for live samples that do not tolerate well  variations
+> in temperature. I also used Matrigel in the past.
+>
+>
+>
+>
+>
+> Best,
+>
+>
+>
+> Marco
+>
+>
+>
+> Dr. Marco Marcello
+>
+> Light Microscopy Facility Manager
+>
+> Institute of Integrative Biology
+>
+> University of Liverpool
+>
+> L69 7ZB
+>
+> Liverpool
+>
+> UK
+>
+> tel +44 (0) 151 7955154
+>
+> http://pcwww.liv.ac.uk/~cci/
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> *From:* openspim-bounces at openspim.org [mailto:
+> openspim-bounces at openspim.org] *On Behalf Of *Eric Edsinger
+> *Sent:* 30 June 2015 15:24
+> *To:* Arnaud Monnard
+> *Cc:* OpenSPIM at openspim.org
+> *Subject:* Re: [OpenSPIM] Alternative to Agarose
+>
+>
+>
+> Hi Arnaud,
+>
+>
+>
+> I've never used it with OpenSPIM, or on a lightsheet system having a
+> similar design for mounting, but CyGel or CyGel Sustain from BioStatus
+> might work.  It offers improved optical clarity over agarose.  Also, it is
+> a liquid at cold and becomes a solid at room temperature or higher, making
+> it easy to recover live samples.  Its main drawback is cost but otherwise I
+> really liked it when I tried it on a confocal and on a lattice lightsheet
+> with live squid embryos and hatchlings.
+>
+> I'd be curious to know how it goes, if you or others give it a try - or
+> have tried it.
+>
+>
+> Good luck!
+>
+> Eric Edsinger
+>
+> Postdoctoral researcher
+> OIST Molecular Genetics Unit
+>
+>
+>
+>
+>
+>
+>
+> On Tue, Jun 30, 2015 at 11:07 PM, Arnaud Monnard <arnaud.monnard at unibas.ch>
+> wrote:
+>
+> Dear all,
+>
+>
+>
+> I wanted to know if anyone would have experience with any alternative to
+> agarose or FEP tube for embedding and imaging samples?
+>
+> I am currently thinking of using Gelrite, but any suggestion would be more
+> than welcome.
+>
+>
+>
+> Thanks!
+>
+>
+>
+> Kind regards
+>
+>
+>
+> Arnaud Monnard
+>
+> PhD student
+>
+> Biozentrum, Basel
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150702/d5212995/attachment.html>
+
+From arnaud.monnard at unibas.ch  Wed Jul  1 11:53:14 2015
+From: arnaud.monnard at unibas.ch (Arnaud Monnard)
+Date: Wed, 1 Jul 2015 16:53:14 +0000
+Subject: [OpenSPIM] Alternative to Agarose
+In-Reply-To: <CAPTjnjBQKq9N-6V35Jtnh-7txxFSQLjryhzNczaeKwDPh_SLiA@mail.gmail.com>
+References: <FEFFB72B93A1D845AD4F36B32158C8400DF50796@urz-mbx-4.urz.unibas.ch>
+	<CAPTjnjCzN4v3hFgDiereJTpv79wXOQ29sinff8YO25kigcQghA@mail.gmail.com>
+	<C545DA3CAED98741AAFAB27C8790BF29BE6DC8D4@CHEXMBX2.livad.liv.ac.uk>,
+	<CAPTjnjBQKq9N-6V35Jtnh-7txxFSQLjryhzNczaeKwDPh_SLiA@mail.gmail.com>
+Message-ID: <E9A3AAAD-488D-44D0-AF97-859027E8B2A4@unibas.ch>
+
+Hi guys,
+
+Thanks for the replies.
+
+I will order the cygel and could let you know how I get on.
+I had some inconclusive experiences with matrigel in the past too and would definitely be extremely interested by a gel that would polymerise by another route than temperature change.
+
+Have a nice evening.
+
+Best regards,
+Arnaud Monnard.
+
+Le 1 juil. 2015 ? 17:06, Eric Edsinger <000generic at gmail.com<mailto:000generic at gmail.com>> a ?crit :
+
+Hi Marco,
+
+That's great - I would love to hear about how CyGel works for you for OpenSPIM/lightsheet - and I'm very curious about the two-component hydrogel for live samples that does not require a temperature trigger.  It would be great to hear about it on OpenSPIM if and when you can share details :)
+
+Good luck!
+Eric
+
+
+On Wed, Jul 1, 2015 at 11:08 PM, Marcello, Marco <M.Marcello at liverpool.ac.uk<mailto:M.Marcello at liverpool.ac.uk>> wrote:
+Hi,
+
+I am planning to use CyGel soon, I will let you know how it goes. Meanwhile with some colleagues in Chemistry we are working on a two components hydrogel that does not use temperature as gelifying  factor.
+It could be useful for live samples that do not tolerate well  variations in temperature. I also used Matrigel in the past.
+
+
+Best,
+
+Marco
+
+Dr. Marco Marcello
+Light Microscopy Facility Manager
+Institute of Integrative Biology
+University of Liverpool
+L69 7ZB
+Liverpool
+UK
+tel +44 (0) 151 7955154<tel:%2B44%20%280%29%20151%207955154>
+http://pcwww.liv.ac.uk/~cci/
+
+
+
+
+From: openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>] On Behalf Of Eric Edsinger
+Sent: 30 June 2015 15:24
+To: Arnaud Monnard
+Cc: OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+Subject: Re: [OpenSPIM] Alternative to Agarose
+
+Hi Arnaud,
+
+I've never used it with OpenSPIM, or on a lightsheet system having a similar design for mounting, but CyGel or CyGel Sustain from BioStatus might work.  It offers improved optical clarity over agarose.  Also, it is a liquid at cold and becomes a solid at room temperature or higher, making it easy to recover live samples.  Its main drawback is cost but otherwise I really liked it when I tried it on a confocal and on a lattice lightsheet with live squid embryos and hatchlings.
+
+I'd be curious to know how it goes, if you or others give it a try - or have tried it.
+
+Good luck!
+Eric Edsinger
+Postdoctoral researcher
+OIST Molecular Genetics Unit
+
+
+
+On Tue, Jun 30, 2015 at 11:07 PM, Arnaud Monnard <arnaud.monnard at unibas.ch<mailto:arnaud.monnard at unibas.ch>> wrote:
+Dear all,
+
+I wanted to know if anyone would have experience with any alternative to agarose or FEP tube for embedding and imaging samples?
+I am currently thinking of using Gelrite, but any suggestion would be more than welcome.
+
+Thanks!
+
+Kind regards
+
+Arnaud Monnard
+PhD student
+Biozentrum, Basel
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150701/c13879a8/attachment.html>
+
+From johannes.schindelin at gmx.de  Tue Jul  7 15:30:10 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 07 Jul 2015 22:30:10 +0200
+Subject: [OpenSPIM] Fwd: [micro-manager-general] Announcement: Micro-Manager
+	2.0 Alpha
+In-Reply-To: <CABHB1j+2vQ3hLh3gt_5MNkppz5pq87NPtoY5zL6Lw49G62mcHQ@mail.gmail.com>
+References: <CABHB1j+2vQ3hLh3gt_5MNkppz5pq87NPtoY5zL6Lw49G62mcHQ@mail.gmail.com>
+Message-ID: <792970e135ca4a28046b4cbd06850d5d@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] Announcement: Micro-Manager 2.0 Alpha
+Date: 2015-07-07 21:06
+ From: Chris Weisiger <cweisiger at msg.ucsf.edu>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Reply-To: Micro-Manager General 
+<micro-manager-general at lists.sourceforge.net>
+
+Folks, I'm pleased to announce that the first alpha build of 
+Micro-Manager
+2.0 is now available. Version 2.0 will be a major overhaul of
+Micro-Manager's user interface (UI) and of the way the Java layer 
+organizes
+image data. It's designed to be easier to use than 1.4 (i.e. the current
+official releases), while remaining backwards compatible with it. We'd
+appreciate your assistance in testing it; while we've done a heck of a 
+lot
+of testing already, there's always the potential for bugs to sneak in
+unnoticed.
+
+Support for Micro-Manager 1.4 is going to continue for the foreseeable
+future; we aren't going to shift all of our development focus to 2.0 
+until
+it's ready. Still, we believe that 2.0 is a major improvement over 1.4.
+We've worked really hard to make this version of Micro-Manager the best 
+it
+can be. Examples of some of the many new features in the UI include:
+
+  * An overhauled image display window with controls readily at hand
+  * "Inspector" windows for easy access to histograms, metadata, and 
+more,
+allowing for side-by-side comparisons of multiple datasets
+  * The ability to synchronize aspects of the display across multiple
+windows, so windows can share histogram scalings, always show the same Z
+slice, etc.
+  * A user profile system so each user of the program can have their own
+saved settings
+  * Timestamp and scale bar overlays
+  * A much better "day/night" system for more pleasant use in darkrooms
+
+Here's a screenshot of the new UI:
+http://i.imgur.com/PSqB8jJ.jpg
+
+Additionally, the Java API has been vastly expanded and simplified (the
+Core API is untouched). If you're a developer who works with 
+Micro-Manager,
+you should appreciate easy access to image data and metadata, control 
+and
+customization of image display windows, access to events, and more. On 
+the
+flip side, many old methods in the API are unfortunately no longer
+available, so your plugins that depend on those methods will need to be
+updated. We hope to keep this version of the API stable for many years 
+to
+come. For more information on the API, please see our wiki 
+documentation:
+https://micro-manager.org/wiki/Version_2.0
+
+NOTE: as this is an alpha build, we cannot promise that it is "safe". It
+does not modify the hardware control systems or the MDA, but data files 
+it
+generates will differ from data files generated in 1.4, if only in the
+metadata. While I would love for people to try acquiring data with 2.0, 
+I
+can't recommend that you do serious, high-stakes science with it just 
+yet.
+Additionally, while 2.0 can read data files generated with 1.4, the 
+reverse
+may not be the case. Be careful about mixing files from 1.4 and 2.0.
+
+You can download the most recent version of the alpha build from here:
+http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Mac/
+http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Windows/
+
+If you find bugs, please let us know! If you have comments or feedback,
+please let us know! If you have questions or requests, please let us 
+know!
+You can email the main mailing list (
+micro-manager-general at lists.sourceforge.net) or our internal email 
+address (
+info at micro-manager.org) for more private reports. Either way, please put
+"[2.0]" in the email subject line so we can easily recognize that your
+email relates to the alpha.
+
+Additionally, we are moving our development towards using GitHub. Our
+GitHub account is here:
+https://github.com/micro-manager/micro-manager
+
+You can file bug reports via the "Issues" link in the top-right. If you
+want to download the source code for 2.0, use the "mm2" branch, not the
+"master" branch.
+
+Thank you for your time, and thanks for using Micro-Manager!
+
+-Chris and the rest of the Micro-Manager team
+
+------------------------------------------------------------------------------
+Don't Limit Your Business. Reach for the Cloud.
+GigeNET's Cloud Solutions provide you with the tools and support that
+you need to offload your IT needs and focus on growing your business.
+Configured For All Businesses. Start Your Cloud Today.
+https://www.gigenetcloud.com/
+_______________________________________________
+micro-manager-general mailing list
+micro-manager-general at lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+
+From 709314090 at qq.com  Thu Jul 16 10:06:01 2015
+From: 709314090 at qq.com (=?utf-8?B?5pS/?=)
+Date: Thu, 16 Jul 2015 23:06:01 +0800
+Subject: [OpenSPIM] A trouble in initial hardware configuration of the laser
+Message-ID: <tencent_4ABEA4450697CC43251C5CFC@qq.com>
+
+Dear all,
+   Today, I just did the initial hardware configuration, but there was something worng with the laser configuration. 
+   The laser I used is LuxX? 488-60 Omicron and is connected to PC with USB line, and the laser can be controlled by the software provided by the manufacturer. When I add the laser in the hardware configuration wizard, it present a window but nothing in the list of the RS232 settings(the below pictrue, I don't know whether the pictrue can be show). And I try to click the "Scan" button, then alert a window tells that the port should be choosen manually. Also, when click the "OK" button, a window show and alert that "Serial command failed. Is the device connected to the serial port?". Therefore, the laser can not be added.
+   Is there anyone else meet the trouble?  I hope for your help. Thank you!
+   Best wishes!
+
+
+   
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150716/ffc4b766/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: B4C4CE81 at 6C3E404C.59C8A755.jpg
+Type: image/jpeg
+Size: 58595 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20150716/ffc4b766/attachment-0001.jpg>
+
+From stephen.firth at monash.edu  Fri Jul 17 00:26:59 2015
+From: stephen.firth at monash.edu (Stephen Firth)
+Date: Fri, 17 Jul 2015 15:26:59 +1000
+Subject: [OpenSPIM] Lightsheet Microscopy position at Monash University
+Message-ID: <CAKGPxi9d8Qu4jZRwJm+X_nA_wRC5xdFQMsa_EBb_bQJN49FqpQ@mail.gmail.com>
+
+Monash Micro Imaging, a core Optical Imaging Facility at Monash University,
+has established a new Technical Research Officer position to develop
+lightsheet microscopy at its Clayton campus in Melbourne, Australia.  The
+role will be responsible for LightSheet Microscopy, including SPIM and the
+newly developed Lattice LightSheet Microscope, to be commissioned later
+this year. The Technical Research Officer will manage and operate the
+instruments, develop and optimise imaging protocols and research
+applications, train users and take part in collaborative research with
+scientists in the biomedical and life sciences. This is a great opportunity
+to work in a dymanic imaging group and to contribute to world class science
+in the areas of cell signalling, cancer research, host-pathogen
+interactions, stem cells and regenerative medicine, cell and developmental
+biology, using cell lines, embryos and zebrafish/drosophila models.
+
+*EDUCATION/EXPERIENCE REQUIREMENTS *
+?    a PhD in biology/science/engineering with extensive experience in
+optical microscopy or equivalent combination of relevant experience and
+skills
+?    extensive experience and high level skills in optical fluorescence
+microscopy using Lightsheet modalities
+?    expertise in morphological and/or functional analysis using
+fluorescence imaging and quantitative image analysis
+?    experience in managing instruments, including responsibility for
+technical correspondence with manufacturers.
+
+*Employment Type*     Full-time
+
+*Duration*     Two year fixed-term appointment
+*(Start date:  1 October 2015).*
+
+*Remuneration*     $84,888 - $93,107 pa HEW Level 07
+(includes 9.50% employer superannuation)
+
+*To Apply*, go to the URL below:
+http://jobs.monash.edu.au/jobDetails.asp?sJobIDs=536473
+
+*Closing Date*  Sunday 2 August 2015, 11:55pm Aus. Eastern Standard Time
+
+*Enquiries*  Assoc/Prof Ian Harper
+(email: Ian.Harper at monash.edu)
+
+
+-- 
+*Stephen Firth* | Manager | Monash Micro Imaging - Advanced Optical
+Microscopy
+15 Innovation Walk, STRIP 1 Monash Biotechnology, Monash University,
+Clayton, VIC 3800, Australia
+Email: stephen.firth at monash.edu | TEL: +61 03 9902 0877 | MOB: 0400 695 425
+*http://platforms.monash.edu/mmi <http://platforms.monash.edu/mmi>*
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150717/43bd7b4b/attachment.html>
+
+From 709314090 at qq.com  Fri Jul 17 04:14:15 2015
+From: 709314090 at qq.com (=?utf-8?B?5pS/?=)
+Date: Fri, 17 Jul 2015 17:14:15 +0800
+Subject: [OpenSPIM] =?utf-8?b?5Zue5aSN77yaICBBIHRyb3VibGUgaW4gaW5pdGlhbCBo?=
+ =?utf-8?q?ardware_configuration_of_thelaser?=
+Message-ID: <tencent_4C7DD1564F5BCDBA34C689BD@qq.com>
+
+Dear Peter,
+   Thank you for your help! I have found the field to input the port of the laser. But the shutter of the laser can not be recognize in the next page, and there is no option in the shutter listbox. I hope this would not affect the experiment.
+
+
+All well! 
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ ???? ------------------
+???: "Peter Pitrone";<pitrone at mpi-cbg.de>;
+????: 2015?7?16?(???) ??11:29
+???: "?"<709314090 at qq.com>; 
+
+??: Re: [OpenSPIM] A trouble in initial hardware configuration of thelaser
+
+
+
+Dear Zheng,
+
+The chances are that you need to input the info yourself. Although we dod not have a Omicron laser, my gut feeling is that it is very similar to the Coherent lasers (CUBE and Obis) in that it uses a a 19,200 baud rate on a COM-port. I've never successfully used the "scan" button while creating a harware configuration.
+
+Maybe there are other out there that can help you out more.
+
+Regards,
+Pete
+
+----- Urspr?ngliche Mail -----
+Von: "?" <709314090 at qq.com>
+An: "OpenSPIM" <OpenSPIM at openspim.org>
+Gesendet: Donnerstag, 16. Juli 2015 17:06:01
+Betreff: [OpenSPIM] A trouble in initial hardware configuration of the laser
+
+Dear all, 
+Today, I just did the i nitial hardware configuration, but there was something worng with the laser configuration. 
+The laser I used is LuxX ? 488-60 Omicron and is connected to PC with USB line, and t he laser can be controlled by the software provided by the manufacturer. When I add the laser in the hardware c onfiguration wizard, it present a window but nothing in the list of the RS232 settings(the below pictrue, I don't know whether the pictrue can be show). And I try to click the "Scan" button, then alert a window tells that the port should be choosen manually. Also, when click the "OK" button, a window show and alert that "Serial command failed. Is the device connected to the serial port?". Therefore, the laser can not be added. 
+Is there anyone else meet the trouble? I hope for your help. Thank you! 
+Best wishes! 
+
+
+
+------------------ 
+Zheng Huang 
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China 
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800 , China 
+Tel: 13120836853 
+E-mail: 709314090 at qq.com 
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150717/22521a48/attachment.html>
+
+From nantho2 at emory.edu  Sat Jul 18 10:34:06 2015
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Sat, 18 Jul 2015 11:34:06 -0400
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+Message-ID: <55AA71EE.104@emory.edu>
+
+Hi all, I hope the science treats you well.
+
+I was wondering if anybody has a list of publications (and/or websites)
+using the OpenSPIM or similar setup.  I'm pleased to say that I've
+started to order parts for our build and I was curious to see more of
+the data sets taken with this kind of setup.  I'm presenting to my
+department in the week and need some representative data sets and
+experiments.
+
+I know of the PLOS paper from last year that investigates Ca sensing in
+plant roots, but can't seem to find anything else.
+
+I hope there are plenty more in the pipeline given that there are more
+OpenSPIM setups out there.  I see 8 on the website, but are there more?
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From johannes.schindelin at gmx.de  Sat Jul 18 13:36:18 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Sat, 18 Jul 2015 20:36:18 +0200
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+In-Reply-To: <55AA71EE.104@emory.edu>
+References: <55AA71EE.104@emory.edu>
+Message-ID: <1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+
+Hi Neil,
+
+On 2015-07-18 17:34, Neil Anthony wrote:
+
+> I was wondering if anybody has a list of publications (and/or websites)
+> using the OpenSPIM or similar setup.
+
+I started a page on the OpenSPIM wiki:
+
+     http://openspim.org/Publications
+
+However, I feel a wiki should be edited by more than one person, so I 
+did not do all that much on that page myself, still waiting for others 
+to simply go and add their papers or papers related to OpenSPIM that 
+they know about.
+
+To answer your question, I turned to Google Scholar 
+(https://scholar.google.com/) and searched for the term "OpenSPIM". 
+Among the many reviews, there seem to be a couple of interesting "real" 
+biology papers, e.g.:
+
+     
+http://biomedicaloptics.spiedigitallibrary.org/article.aspx?articleid=2241619
+
+     http://www.damtp.cam.ac.uk/user/gold/pdfs/inversion.pdf
+
+> I hope there are plenty more in the pipeline given that there are more
+> OpenSPIM setups out there.  I see 8 on the website, but are there more?
+
+According to Picard systems (I asked a while ago), they have delivered 
+at least 45 stages, so that is my conservative guess. Of course it would 
+be nice to hear back from more people, given that our main aim was to 
+start a collaborative community when we invested that insane amount of 
+time and effort to make all of this IKEA grade instructions and a wiki 
+and a mailing list.
+
+So here is drinking to a vibrant community in the future!
+Johannes
+
+
+From tnf8 at pitt.edu  Mon Jul 20 08:30:04 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 20 Jul 2015 13:30:04 +0000
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+In-Reply-To: <1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+References: <55AA71EE.104@emory.edu>
+	<1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+Message-ID: <D1D26F1E.3D0C%tnf8@pitt.edu>
+
+Of the three systems I know personally, including my own: one will likely
+be used as a tech testbed, one has just started gathering data or will
+start very soon and I have just started putting screws to the breadboard
+on mine.  Between backordered parts and troubleshooting it should take
+about a month (optimistically) for ours to start gathering data.
+
+If my small circle is representative I predict a very steep increase in
+publications in the next year or so.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 7/18/15, 2:36 PM, "Johannes Schindelin" <johannes.schindelin at gmx.de>
+wrote:
+
+>Hi Neil,
+>
+>On 2015-07-18 17:34, Neil Anthony wrote:
+>
+>> I was wondering if anybody has a list of publications (and/or websites)
+>> using the OpenSPIM or similar setup.
+>
+>I started a page on the OpenSPIM wiki:
+>
+>     http://openspim.org/Publications
+>
+>However, I feel a wiki should be edited by more than one person, so I
+>did not do all that much on that page myself, still waiting for others
+>to simply go and add their papers or papers related to OpenSPIM that
+>they know about.
+>
+>To answer your question, I turned to Google Scholar
+>(https://scholar.google.com/) and searched for the term "OpenSPIM".
+>Among the many reviews, there seem to be a couple of interesting "real"
+>biology papers, e.g.:
+>
+>     
+>http://biomedicaloptics.spiedigitallibrary.org/article.aspx?articleid=2241
+>619
+>
+>     http://www.damtp.cam.ac.uk/user/gold/pdfs/inversion.pdf
+>
+>> I hope there are plenty more in the pipeline given that there are more
+>> OpenSPIM setups out there.  I see 8 on the website, but are there more?
+>
+>According to Picard systems (I asked a while ago), they have delivered
+>at least 45 stages, so that is my conservative guess. Of course it would
+>be nice to hear back from more people, given that our main aim was to
+>start a collaborative community when we invested that insane amount of
+>time and effort to make all of this IKEA grade instructions and a wiki
+>and a mailing list.
+>
+>So here is drinking to a vibrant community in the future!
+>Johannes
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+
+From winfrees at iu.edu  Mon Jul 20 09:10:04 2015
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Mon, 20 Jul 2015 14:10:04 +0000
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+In-Reply-To: <D1D26F1E.3D0C%tnf8@pitt.edu>
+References: <55AA71EE.104@emory.edu>
+	<1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+	<D1D26F1E.3D0C%tnf8@pitt.edu>
+Message-ID: <d3f718b43c604c9eac0b1a03467ce892@bl-cci-exch04.ads.iu.edu>
+
+Ditto on our end.  I doubt Tim and I are counting the same machines!
+
+Seth
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Monday, July 20, 2015 9:30 AM
+To: Johannes Schindelin; openspim at openspim.org
+Subject: Re: [OpenSPIM] OpenSPIM (or very similar) publications
+
+Of the three systems I know personally, including my own: one will likely be used as a tech testbed, one has just started gathering data or will start very soon and I have just started putting screws to the breadboard on mine.  Between backordered parts and troubleshooting it should take about a month (optimistically) for ours to start gathering data.
+
+If my small circle is representative I predict a very steep increase in publications in the next year or so.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 7/18/15, 2:36 PM, "Johannes Schindelin" <johannes.schindelin at gmx.de>
+wrote:
+
+>Hi Neil,
+>
+>On 2015-07-18 17:34, Neil Anthony wrote:
+>
+>> I was wondering if anybody has a list of publications (and/or 
+>> websites) using the OpenSPIM or similar setup.
+>
+>I started a page on the OpenSPIM wiki:
+>
+>     http://openspim.org/Publications
+>
+>However, I feel a wiki should be edited by more than one person, so I 
+>did not do all that much on that page myself, still waiting for others 
+>to simply go and add their papers or papers related to OpenSPIM that 
+>they know about.
+>
+>To answer your question, I turned to Google Scholar
+>(https://scholar.google.com/) and searched for the term "OpenSPIM".
+>Among the many reviews, there seem to be a couple of interesting "real"
+>biology papers, e.g.:
+>
+>     
+>http://biomedicaloptics.spiedigitallibrary.org/article.aspx?articleid=2
+>241
+>619
+>
+>     http://www.damtp.cam.ac.uk/user/gold/pdfs/inversion.pdf
+>
+>> I hope there are plenty more in the pipeline given that there are 
+>> more OpenSPIM setups out there.  I see 8 on the website, but are there more?
+>
+>According to Picard systems (I asked a while ago), they have delivered 
+>at least 45 stages, so that is my conservative guess. Of course it 
+>would be nice to hear back from more people, given that our main aim 
+>was to start a collaborative community when we invested that insane 
+>amount of time and effort to make all of this IKEA grade instructions 
+>and a wiki and a mailing list.
+>
+>So here is drinking to a vibrant community in the future!
+>Johannes
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From m.pawlowska at nencki.gov.pl  Thu Jul 23 04:46:23 2015
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Thu, 23 Jul 2015 11:46:23 +0200
+Subject: [OpenSPIM] opening SPIM data with Bio-formats plugin
+Message-ID: <3ae2f566cfac7070863073cc2583bfa1@nencki.gov.pl>
+
+Hi,
+
+recently some people were writing about some issues when opening 
+acquired images with Bio-formats. It seems that the super-slowness was 
+at leats partly the fault of the Bio-formats: at least in my case, after 
+the recent Fiji update that included Bio-formats 5.1.3, speed improved.
+
+There is another issue though. When I open data that consists of several 
+files, the Bio-formats plugin asks me which sries to open, but no matter 
+what I choose, ALL the open files have the same header: 
+spim_TL01_Angle0.ome . Always Angle0. This makes opening all files and 
+doing something with them impossible because the info which is which is 
+lost. Also, in the metadata there is a line: " Series 2 Name	null" or 
+similar. When collecting images directly with micromanager, this line 
+looks more like " Series 0 Name	XYseries_1_MMStack_Pos1" and then the 
+open windows have collect headers. So the metadata is not saved 
+correctly.
+
+If somebody knows how to fix quickly, I'll be grateful for a hint, 
+otherwise I'll try myself.
+
+Regards,
+Monika
+
+
+From johannes.schindelin at gmx.de  Fri Jul 24 02:34:28 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 24 Jul 2015 09:34:28 +0200
+Subject: [OpenSPIM] Fwd: Open Imaging: Micro-Manager's new home
+In-Reply-To: <127807c7306171ababea968c891db95b688.20150723184825@mail27.wdc03.rsgsv.net>
+References: <127807c7306171ababea968c891db95b688.20150723184825@mail27.wdc03.rsgsv.net>
+Message-ID: <a8fa09e1f7a7b7527c3918d3572bf383@www.dscho.org>
+
+For your interest: this is important.
+
+-------- Original Message --------
+Subject: Open Imaging: Micro-Manager's new home
+Date: 2015-07-23 20:48
+ From: Mark Tsuchida (Open Imaging) <mark at open-imaging.com>
+To: Johannes Schindelin <johannes.schindelin at gmx.de>
+
+Open Imaging is the new ?Manager company.
+
+View this email in your browser 
+(http://us11.campaign-archive1.com/?u=127807c7306171ababea968c8&id=4c004c580a&e=91db95b688)
+
+http://open-imaging.us11.list-manage1.com/track/click?u=127807c7306171ababea968c8&id=96b3670d81&e=91db95b688
+
+
+** The Future Home for ?Manager
+------------------------------------------------------------
+
+
+** User Service Program subscriptions available for pre-order
+------------------------------------------------------------
+
+Dear Johannes,
+
+As we previously announced, the ?Manager team is moving to a new company 
+this fall. That new company is Open Imaging 
+(http://open-imaging.us11.list-manage2.com/track/click?u=127807c7306171ababea968c8&id=025d0ebbe9&e=91db95b688) 
+.
+
+Open Imaging's ?Manager User Service Program 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=b0e7f3e0c0&e=91db95b688) 
+is now available for signup. The User Service Program is a 
+subscription-based service that includes technical support and access to 
+the latest pre-release versions of ?Manager. It will also be how we 
+primarily finance future ?Manager development, so I hope you will 
+consider subscribing if you use and like ?Manager. Service will begin on 
+October 1, 2015, but you will get a discount for ordering early! Please 
+see our website for details. 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=50a68584f2&e=91db95b688)
+
+Yours sincerely,
+Mark Tsuchida
+CEO & Co-CTO
+Open Imaging, Inc.
+
+============================================================
+Copyright ? 2015 Open Imaging, Inc., All rights reserved.
+  You are receiving this email because you opted in at our website 
+(https://open-imaging.com) or asked us to notify you about our User 
+Service Program.
+
+Our mailing address is:
+Open Imaging, Inc.
+1030 El Monte Ave #12
+Mountain View, CA 94040-2350
+USA
+** unsubscribe from this list 
+(http://open-imaging.us11.list-manage.com/unsubscribe?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688&c=4c004c580a)
+** update subscription preferences 
+(http://open-imaging.us11.list-manage1.com/profile?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688)
+  Email Marketing Powered by MailChimp
+http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=127807c7306171ababea968c8&afl=1
+
+
+From gabriel.jones at florey.edu.au  Sun Jul 26 18:37:35 2015
+From: gabriel.jones at florey.edu.au (Gabriel Davis Jones)
+Date: Sun, 26 Jul 2015 23:37:35 +0000
+Subject: [OpenSPIM] Acquisition Error (setBigTIff)
+Message-ID: <005022868505164C94291D8DD2D8EBAA788808E3@000S-EX-MBX-QS4.unimelb.edu.au>
+
+Hi All,
+
+I'm constantly receiving this error when I try and acquire an image >4GB:
+
+java.lang.RuntimeException: loci.formats.FormatException: File is too large; call setBigTiff(true)
+at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:113)
+at java.lang.Thread.run(Thread.java:745)
+Caused by: loci.formats.FormatException: File is too large; call setBigTiff(true)
+at loci.formats.out.TiffWriter.prepareToWriteImage(TiffWriter.java:343)
+at loci.formats.out.TiffWriter.saveBytes(TiffWriter.java:221)
+at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:190)
+at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:180)
+at loci.formats.FormatWriter.saveBytes(FormatWriter.java:124)
+at spim.progacq.OMETIFFHandler.processSlice(OMETIFFHandler.java:175)
+at spim.progacq.AsyncOutputWrapper.handleNext(AsyncOutputWrapper.java:232)
+at spim.progacq.AsyncOutputWrapper.access$300(AsyncOutputWrapper.java:18)
+at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:98)
+
+Any ideas how I may get around it, or are we restricted to image sizes <4GB for now?
+
+
+Kind regards,
+
+
+Gabriel Davis Jones
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150726/4a7b51fa/attachment.html>
+
+From johannes.schindelin at gmx.de  Tue Jul 28 09:05:06 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 28 Jul 2015 16:05:06 +0200
+Subject: [OpenSPIM] Fwd: [micro-manager-general] 1.4.22 Release schedule
+	(Aug 14)
+In-Reply-To: <CAKGYTB=-HpnGUJvdi6kmpAF=kemOOoqJ_ORy1ez3G_brfpOhMQ@mail.gmail.com>
+References: <CAKGYTB=-HpnGUJvdi6kmpAF=kemOOoqJ_ORy1ez3G_brfpOhMQ@mail.gmail.com>
+Message-ID: <466d0da118e6663e291c08c603922efc@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] 1.4.22 Release schedule (Aug 14)
+Date: 2015-07-27 23:39
+ From: Mark Tsuchida <marktsuchida at gmail.com>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Reply-To: Micro-Manager General 
+<micro-manager-general at lists.sourceforge.net>
+
+Hi Developers,
+
+We plan to release Micro-Manager 1.4.22 on Friday, August 14 (slightly
+later than our regular schedule).
+
+In all likelyhood, this will be the last official release version from
+the UCSF Micro-Manager Team. Starting in October, Open Imaging will be
+providing annual releases as free downloads (see [1]). We'll continue
+to publish nightly builds until Sept 30.
+
+If you have SVN write access and are working on untested changes, it
+will be a good idea to avoid committing them to SVN during the week
+before the release. If you need to commit a last-minute fix on the day
+of the release, please contact us by email first.
+
+
+[1] 
+http://micro-manager.3463995.n2.nabble.com/Open-Imaging-the-new-home-for-Micro-Manager-tp7585647.html
+
+
+Best regards,
+Mark
+
+
+From pitrone at mpi-cbg.de  Thu Jul 30 04:50:59 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Thu, 30 Jul 2015 11:50:59 +0200
+Subject: [OpenSPIM] The future is around the corner...
+Message-ID: <C44AB17D-7B17-403B-98BA-C1772088C238@mpi-cbg.de>
+
+Hey OpenSPIM listers,
+
+A recent technology breakthrough in storage memory read/write speed will help with high-speed sCMOS camera chips, check it out!!:
+
+http://www.cnet.com/news/intel-and-micron-debut-3d-xpoint-storage-technology-thats-1000-times-faster-than-existing-drives/
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra?e 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who." Rudyard Kipling - The Elephant's Child
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150730/216455ea/attachment.html>
+
+From 000generic at gmail.com  Wed Jul  1 10:05:59 2015
+From: 000generic at gmail.com (Eric Edsinger)
+Date: Thu, 2 Jul 2015 00:05:59 +0900
+Subject: [OpenSPIM] Alternative to Agarose
+In-Reply-To: <C545DA3CAED98741AAFAB27C8790BF29BE6DC8D4@CHEXMBX2.livad.liv.ac.uk>
+References: <FEFFB72B93A1D845AD4F36B32158C8400DF50796@urz-mbx-4.urz.unibas.ch>
+	<CAPTjnjCzN4v3hFgDiereJTpv79wXOQ29sinff8YO25kigcQghA@mail.gmail.com>
+	<C545DA3CAED98741AAFAB27C8790BF29BE6DC8D4@CHEXMBX2.livad.liv.ac.uk>
+Message-ID: <CAPTjnjBQKq9N-6V35Jtnh-7txxFSQLjryhzNczaeKwDPh_SLiA@mail.gmail.com>
+
+Hi Marco,
+
+That's great - I would love to hear about how CyGel works for you for
+OpenSPIM/lightsheet - and I'm very curious about the two-component hydrogel
+for live samples that does not require a temperature trigger.  It would be
+great to hear about it on OpenSPIM if and when you can share details :)
+
+Good luck!
+Eric
+
+
+On Wed, Jul 1, 2015 at 11:08 PM, Marcello, Marco <M.Marcello at liverpool.ac.uk
+> wrote:
+
+>  Hi,
+>
+>
+>
+> I am planning to use CyGel soon, I will let you know how it goes.
+> Meanwhile with some colleagues in Chemistry we are working on a two
+> components hydrogel that does not use temperature as gelifying  factor.
+>
+> It could be useful for live samples that do not tolerate well  variations
+> in temperature. I also used Matrigel in the past.
+>
+>
+>
+>
+>
+> Best,
+>
+>
+>
+> Marco
+>
+>
+>
+> Dr. Marco Marcello
+>
+> Light Microscopy Facility Manager
+>
+> Institute of Integrative Biology
+>
+> University of Liverpool
+>
+> L69 7ZB
+>
+> Liverpool
+>
+> UK
+>
+> tel +44 (0) 151 7955154
+>
+> http://pcwww.liv.ac.uk/~cci/
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> *From:* openspim-bounces at openspim.org [mailto:
+> openspim-bounces at openspim.org] *On Behalf Of *Eric Edsinger
+> *Sent:* 30 June 2015 15:24
+> *To:* Arnaud Monnard
+> *Cc:* OpenSPIM at openspim.org
+> *Subject:* Re: [OpenSPIM] Alternative to Agarose
+>
+>
+>
+> Hi Arnaud,
+>
+>
+>
+> I've never used it with OpenSPIM, or on a lightsheet system having a
+> similar design for mounting, but CyGel or CyGel Sustain from BioStatus
+> might work.  It offers improved optical clarity over agarose.  Also, it is
+> a liquid at cold and becomes a solid at room temperature or higher, making
+> it easy to recover live samples.  Its main drawback is cost but otherwise I
+> really liked it when I tried it on a confocal and on a lattice lightsheet
+> with live squid embryos and hatchlings.
+>
+> I'd be curious to know how it goes, if you or others give it a try - or
+> have tried it.
+>
+>
+> Good luck!
+>
+> Eric Edsinger
+>
+> Postdoctoral researcher
+> OIST Molecular Genetics Unit
+>
+>
+>
+>
+>
+>
+>
+> On Tue, Jun 30, 2015 at 11:07 PM, Arnaud Monnard <arnaud.monnard at unibas.ch>
+> wrote:
+>
+> Dear all,
+>
+>
+>
+> I wanted to know if anyone would have experience with any alternative to
+> agarose or FEP tube for embedding and imaging samples?
+>
+> I am currently thinking of using Gelrite, but any suggestion would be more
+> than welcome.
+>
+>
+>
+> Thanks!
+>
+>
+>
+> Kind regards
+>
+>
+>
+> Arnaud Monnard
+>
+> PhD student
+>
+> Biozentrum, Basel
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150702/d5212995/attachment-0002.html>
+
+From arnaud.monnard at unibas.ch  Wed Jul  1 11:53:14 2015
+From: arnaud.monnard at unibas.ch (Arnaud Monnard)
+Date: Wed, 1 Jul 2015 16:53:14 +0000
+Subject: [OpenSPIM] Alternative to Agarose
+In-Reply-To: <CAPTjnjBQKq9N-6V35Jtnh-7txxFSQLjryhzNczaeKwDPh_SLiA@mail.gmail.com>
+References: <FEFFB72B93A1D845AD4F36B32158C8400DF50796@urz-mbx-4.urz.unibas.ch>
+	<CAPTjnjCzN4v3hFgDiereJTpv79wXOQ29sinff8YO25kigcQghA@mail.gmail.com>
+	<C545DA3CAED98741AAFAB27C8790BF29BE6DC8D4@CHEXMBX2.livad.liv.ac.uk>,
+	<CAPTjnjBQKq9N-6V35Jtnh-7txxFSQLjryhzNczaeKwDPh_SLiA@mail.gmail.com>
+Message-ID: <E9A3AAAD-488D-44D0-AF97-859027E8B2A4@unibas.ch>
+
+Hi guys,
+
+Thanks for the replies.
+
+I will order the cygel and could let you know how I get on.
+I had some inconclusive experiences with matrigel in the past too and would definitely be extremely interested by a gel that would polymerise by another route than temperature change.
+
+Have a nice evening.
+
+Best regards,
+Arnaud Monnard.
+
+Le 1 juil. 2015 à 17:06, Eric Edsinger <000generic at gmail.com<mailto:000generic at gmail.com>> a écrit :
+
+Hi Marco,
+
+That's great - I would love to hear about how CyGel works for you for OpenSPIM/lightsheet - and I'm very curious about the two-component hydrogel for live samples that does not require a temperature trigger.  It would be great to hear about it on OpenSPIM if and when you can share details :)
+
+Good luck!
+Eric
+
+
+On Wed, Jul 1, 2015 at 11:08 PM, Marcello, Marco <M.Marcello at liverpool.ac.uk<mailto:M.Marcello at liverpool.ac.uk>> wrote:
+Hi,
+
+I am planning to use CyGel soon, I will let you know how it goes. Meanwhile with some colleagues in Chemistry we are working on a two components hydrogel that does not use temperature as gelifying  factor.
+It could be useful for live samples that do not tolerate well  variations in temperature. I also used Matrigel in the past.
+
+
+Best,
+
+Marco
+
+Dr. Marco Marcello
+Light Microscopy Facility Manager
+Institute of Integrative Biology
+University of Liverpool
+L69 7ZB
+Liverpool
+UK
+tel +44 (0) 151 7955154<tel:%2B44%20%280%29%20151%207955154>
+http://pcwww.liv.ac.uk/~cci/
+
+
+
+
+From: openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org> [mailto:openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>] On Behalf Of Eric Edsinger
+Sent: 30 June 2015 15:24
+To: Arnaud Monnard
+Cc: OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+Subject: Re: [OpenSPIM] Alternative to Agarose
+
+Hi Arnaud,
+
+I've never used it with OpenSPIM, or on a lightsheet system having a similar design for mounting, but CyGel or CyGel Sustain from BioStatus might work.  It offers improved optical clarity over agarose.  Also, it is a liquid at cold and becomes a solid at room temperature or higher, making it easy to recover live samples.  Its main drawback is cost but otherwise I really liked it when I tried it on a confocal and on a lattice lightsheet with live squid embryos and hatchlings.
+
+I'd be curious to know how it goes, if you or others give it a try - or have tried it.
+
+Good luck!
+Eric Edsinger
+Postdoctoral researcher
+OIST Molecular Genetics Unit
+
+
+
+On Tue, Jun 30, 2015 at 11:07 PM, Arnaud Monnard <arnaud.monnard at unibas.ch<mailto:arnaud.monnard at unibas.ch>> wrote:
+Dear all,
+
+I wanted to know if anyone would have experience with any alternative to agarose or FEP tube for embedding and imaging samples?
+I am currently thinking of using Gelrite, but any suggestion would be more than welcome.
+
+Thanks!
+
+Kind regards
+
+Arnaud Monnard
+PhD student
+Biozentrum, Basel
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150701/c13879a8/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Tue Jul  7 15:30:10 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 07 Jul 2015 22:30:10 +0200
+Subject: [OpenSPIM] Fwd: [micro-manager-general] Announcement: Micro-Manager
+	2.0 Alpha
+In-Reply-To: <CABHB1j+2vQ3hLh3gt_5MNkppz5pq87NPtoY5zL6Lw49G62mcHQ@mail.gmail.com>
+References: <CABHB1j+2vQ3hLh3gt_5MNkppz5pq87NPtoY5zL6Lw49G62mcHQ@mail.gmail.com>
+Message-ID: <792970e135ca4a28046b4cbd06850d5d@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] Announcement: Micro-Manager 2.0 Alpha
+Date: 2015-07-07 21:06
+ From: Chris Weisiger <cweisiger at msg.ucsf.edu>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Reply-To: Micro-Manager General 
+<micro-manager-general at lists.sourceforge.net>
+
+Folks, I'm pleased to announce that the first alpha build of 
+Micro-Manager
+2.0 is now available. Version 2.0 will be a major overhaul of
+Micro-Manager's user interface (UI) and of the way the Java layer 
+organizes
+image data. It's designed to be easier to use than 1.4 (i.e. the current
+official releases), while remaining backwards compatible with it. We'd
+appreciate your assistance in testing it; while we've done a heck of a 
+lot
+of testing already, there's always the potential for bugs to sneak in
+unnoticed.
+
+Support for Micro-Manager 1.4 is going to continue for the foreseeable
+future; we aren't going to shift all of our development focus to 2.0 
+until
+it's ready. Still, we believe that 2.0 is a major improvement over 1.4.
+We've worked really hard to make this version of Micro-Manager the best 
+it
+can be. Examples of some of the many new features in the UI include:
+
+  * An overhauled image display window with controls readily at hand
+  * "Inspector" windows for easy access to histograms, metadata, and 
+more,
+allowing for side-by-side comparisons of multiple datasets
+  * The ability to synchronize aspects of the display across multiple
+windows, so windows can share histogram scalings, always show the same Z
+slice, etc.
+  * A user profile system so each user of the program can have their own
+saved settings
+  * Timestamp and scale bar overlays
+  * A much better "day/night" system for more pleasant use in darkrooms
+
+Here's a screenshot of the new UI:
+http://i.imgur.com/PSqB8jJ.jpg
+
+Additionally, the Java API has been vastly expanded and simplified (the
+Core API is untouched). If you're a developer who works with 
+Micro-Manager,
+you should appreciate easy access to image data and metadata, control 
+and
+customization of image display windows, access to events, and more. On 
+the
+flip side, many old methods in the API are unfortunately no longer
+available, so your plugins that depend on those methods will need to be
+updated. We hope to keep this version of the API stable for many years 
+to
+come. For more information on the API, please see our wiki 
+documentation:
+https://micro-manager.org/wiki/Version_2.0
+
+NOTE: as this is an alpha build, we cannot promise that it is "safe". It
+does not modify the hardware control systems or the MDA, but data files 
+it
+generates will differ from data files generated in 1.4, if only in the
+metadata. While I would love for people to try acquiring data with 2.0, 
+I
+can't recommend that you do serious, high-stakes science with it just 
+yet.
+Additionally, while 2.0 can read data files generated with 1.4, the 
+reverse
+may not be the case. Be careful about mixing files from 1.4 and 2.0.
+
+You can download the most recent version of the alpha build from here:
+http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Mac/
+http://valelab.ucsf.edu/~MM/nightlyBuilds/2.0.0-alpha/Windows/
+
+If you find bugs, please let us know! If you have comments or feedback,
+please let us know! If you have questions or requests, please let us 
+know!
+You can email the main mailing list (
+micro-manager-general at lists.sourceforge.net) or our internal email 
+address (
+info at micro-manager.org) for more private reports. Either way, please put
+"[2.0]" in the email subject line so we can easily recognize that your
+email relates to the alpha.
+
+Additionally, we are moving our development towards using GitHub. Our
+GitHub account is here:
+https://github.com/micro-manager/micro-manager
+
+You can file bug reports via the "Issues" link in the top-right. If you
+want to download the source code for 2.0, use the "mm2" branch, not the
+"master" branch.
+
+Thank you for your time, and thanks for using Micro-Manager!
+
+-Chris and the rest of the Micro-Manager team
+
+------------------------------------------------------------------------------
+Don't Limit Your Business. Reach for the Cloud.
+GigeNET's Cloud Solutions provide you with the tools and support that
+you need to offload your IT needs and focus on growing your business.
+Configured For All Businesses. Start Your Cloud Today.
+https://www.gigenetcloud.com/
+_______________________________________________
+micro-manager-general mailing list
+micro-manager-general at lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+
+
+From 709314090 at qq.com  Thu Jul 16 10:06:01 2015
+From: 709314090 at qq.com (=?utf-8?B?5pS/?=)
+Date: Thu, 16 Jul 2015 23:06:01 +0800
+Subject: [OpenSPIM] A trouble in initial hardware configuration of the laser
+Message-ID: <tencent_4ABEA4450697CC43251C5CFC@qq.com>
+
+Dear all,
+   Today, I just did the initial hardware configuration, but there was something worng with the laser configuration. 
+   The laser I used is LuxX® 488-60 Omicron and is connected to PC with USB line, and the laser can be controlled by the software provided by the manufacturer. When I add the laser in the hardware configuration wizard, it present a window but nothing in the list of the RS232 settings(the below pictrue, I don't know whether the pictrue can be show). And I try to click the "Scan" button, then alert a window tells that the port should be choosen manually. Also, when click the "OK" button, a window show and alert that "Serial command failed. Is the device connected to the serial port?". Therefore, the laser can not be added.
+   Is there anyone else meet the trouble?  I hope for your help. Thank you!
+   Best wishes!
+
+
+   
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150716/ffc4b766/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: B4C4CE81 at 6C3E404C.59C8A755.jpg
+Type: image/jpeg
+Size: 58595 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20150716/ffc4b766/attachment-0002.jpg>
+
+From stephen.firth at monash.edu  Fri Jul 17 00:26:59 2015
+From: stephen.firth at monash.edu (Stephen Firth)
+Date: Fri, 17 Jul 2015 15:26:59 +1000
+Subject: [OpenSPIM] Lightsheet Microscopy position at Monash University
+Message-ID: <CAKGPxi9d8Qu4jZRwJm+X_nA_wRC5xdFQMsa_EBb_bQJN49FqpQ@mail.gmail.com>
+
+Monash Micro Imaging, a core Optical Imaging Facility at Monash University,
+has established a new Technical Research Officer position to develop
+lightsheet microscopy at its Clayton campus in Melbourne, Australia.  The
+role will be responsible for LightSheet Microscopy, including SPIM and the
+newly developed Lattice LightSheet Microscope, to be commissioned later
+this year. The Technical Research Officer will manage and operate the
+instruments, develop and optimise imaging protocols and research
+applications, train users and take part in collaborative research with
+scientists in the biomedical and life sciences. This is a great opportunity
+to work in a dymanic imaging group and to contribute to world class science
+in the areas of cell signalling, cancer research, host-pathogen
+interactions, stem cells and regenerative medicine, cell and developmental
+biology, using cell lines, embryos and zebrafish/drosophila models.
+
+*EDUCATION/EXPERIENCE REQUIREMENTS *
+•    a PhD in biology/science/engineering with extensive experience in
+optical microscopy or equivalent combination of relevant experience and
+skills
+•    extensive experience and high level skills in optical fluorescence
+microscopy using Lightsheet modalities
+•    expertise in morphological and/or functional analysis using
+fluorescence imaging and quantitative image analysis
+•    experience in managing instruments, including responsibility for
+technical correspondence with manufacturers.
+
+*Employment Type*     Full-time
+
+*Duration*     Two year fixed-term appointment
+*(Start date:  1 October 2015).*
+
+*Remuneration*     $84,888 - $93,107 pa HEW Level 07
+(includes 9.50% employer superannuation)
+
+*To Apply*, go to the URL below:
+http://jobs.monash.edu.au/jobDetails.asp?sJobIDs=536473
+
+*Closing Date*  Sunday 2 August 2015, 11:55pm Aus. Eastern Standard Time
+
+*Enquiries*  Assoc/Prof Ian Harper
+(email: Ian.Harper at monash.edu)
+
+
+-- 
+*Stephen Firth* | Manager | Monash Micro Imaging - Advanced Optical
+Microscopy
+15 Innovation Walk, STRIP 1 Monash Biotechnology, Monash University,
+Clayton, VIC 3800, Australia
+Email: stephen.firth at monash.edu | TEL: +61 03 9902 0877 | MOB: 0400 695 425
+*http://platforms.monash.edu/mmi <http://platforms.monash.edu/mmi>*
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150717/43bd7b4b/attachment-0002.html>
+
+From 709314090 at qq.com  Fri Jul 17 04:14:15 2015
+From: 709314090 at qq.com (=?utf-8?B?5pS/?=)
+Date: Fri, 17 Jul 2015 17:14:15 +0800
+Subject: [OpenSPIM] =?utf-8?b?5Zue5aSN77yaICBBIHRyb3VibGUgaW4gaW5pdGlhbCBo?=
+ =?utf-8?q?ardware_configuration_of_thelaser?=
+Message-ID: <tencent_4C7DD1564F5BCDBA34C689BD@qq.com>
+
+Dear Peter,
+   Thank you for your help! I have found the field to input the port of the laser. But the shutter of the laser can not be recognize in the next page, and there is no option in the shutter listbox. I hope this would not affect the experiment.
+
+
+All well! 
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ 原始邮件 ------------------
+发件人: "Peter Pitrone";<pitrone at mpi-cbg.de>;
+发送时间: 2015年7月16日(星期四) 晚上11:29
+收件人: "政"<709314090 at qq.com>; 
+
+主题: Re: [OpenSPIM] A trouble in initial hardware configuration of thelaser
+
+
+
+Dear Zheng,
+
+The chances are that you need to input the info yourself. Although we dod not have a Omicron laser, my gut feeling is that it is very similar to the Coherent lasers (CUBE and Obis) in that it uses a a 19,200 baud rate on a COM-port. I've never successfully used the "scan" button while creating a harware configuration.
+
+Maybe there are other out there that can help you out more.
+
+Regards,
+Pete
+
+----- Ursprüngliche Mail -----
+Von: "政" <709314090 at qq.com>
+An: "OpenSPIM" <OpenSPIM at openspim.org>
+Gesendet: Donnerstag, 16. Juli 2015 17:06:01
+Betreff: [OpenSPIM] A trouble in initial hardware configuration of the laser
+
+Dear all, 
+Today, I just did the i nitial hardware configuration, but there was something worng with the laser configuration. 
+The laser I used is LuxX ® 488-60 Omicron and is connected to PC with USB line, and t he laser can be controlled by the software provided by the manufacturer. When I add the laser in the hardware c onfiguration wizard, it present a window but nothing in the list of the RS232 settings(the below pictrue, I don't know whether the pictrue can be show). And I try to click the "Scan" button, then alert a window tells that the port should be choosen manually. Also, when click the "OK" button, a window show and alert that "Serial command failed. Is the device connected to the serial port?". Therefore, the laser can not be added. 
+Is there anyone else meet the trouble? I hope for your help. Thank you! 
+Best wishes! 
+
+
+
+------------------ 
+Zheng Huang 
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China 
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800 , China 
+Tel: 13120836853 
+E-mail: 709314090 at qq.com 
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150717/22521a48/attachment-0002.html>
+
+From nantho2 at emory.edu  Sat Jul 18 10:34:06 2015
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Sat, 18 Jul 2015 11:34:06 -0400
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+Message-ID: <55AA71EE.104@emory.edu>
+
+Hi all, I hope the science treats you well.
+
+I was wondering if anybody has a list of publications (and/or websites)
+using the OpenSPIM or similar setup.  I'm pleased to say that I've
+started to order parts for our build and I was curious to see more of
+the data sets taken with this kind of setup.  I'm presenting to my
+department in the week and need some representative data sets and
+experiments.
+
+I know of the PLOS paper from last year that investigates Ca sensing in
+plant roots, but can't seem to find anything else.
+
+I hope there are plenty more in the pipeline given that there are more
+OpenSPIM setups out there.  I see 8 on the website, but are there more?
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From johannes.schindelin at gmx.de  Sat Jul 18 13:36:18 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Sat, 18 Jul 2015 20:36:18 +0200
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+In-Reply-To: <55AA71EE.104@emory.edu>
+References: <55AA71EE.104@emory.edu>
+Message-ID: <1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+
+Hi Neil,
+
+On 2015-07-18 17:34, Neil Anthony wrote:
+
+> I was wondering if anybody has a list of publications (and/or websites)
+> using the OpenSPIM or similar setup.
+
+I started a page on the OpenSPIM wiki:
+
+     http://openspim.org/Publications
+
+However, I feel a wiki should be edited by more than one person, so I 
+did not do all that much on that page myself, still waiting for others 
+to simply go and add their papers or papers related to OpenSPIM that 
+they know about.
+
+To answer your question, I turned to Google Scholar 
+(https://scholar.google.com/) and searched for the term "OpenSPIM". 
+Among the many reviews, there seem to be a couple of interesting "real" 
+biology papers, e.g.:
+
+     
+http://biomedicaloptics.spiedigitallibrary.org/article.aspx?articleid=2241619
+
+     http://www.damtp.cam.ac.uk/user/gold/pdfs/inversion.pdf
+
+> I hope there are plenty more in the pipeline given that there are more
+> OpenSPIM setups out there.  I see 8 on the website, but are there more?
+
+According to Picard systems (I asked a while ago), they have delivered 
+at least 45 stages, so that is my conservative guess. Of course it would 
+be nice to hear back from more people, given that our main aim was to 
+start a collaborative community when we invested that insane amount of 
+time and effort to make all of this IKEA grade instructions and a wiki 
+and a mailing list.
+
+So here is drinking to a vibrant community in the future!
+Johannes
+
+
+
+From tnf8 at pitt.edu  Mon Jul 20 08:30:04 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 20 Jul 2015 13:30:04 +0000
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+In-Reply-To: <1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+References: <55AA71EE.104@emory.edu>
+	<1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+Message-ID: <D1D26F1E.3D0C%tnf8@pitt.edu>
+
+Of the three systems I know personally, including my own: one will likely
+be used as a tech testbed, one has just started gathering data or will
+start very soon and I have just started putting screws to the breadboard
+on mine.  Between backordered parts and troubleshooting it should take
+about a month (optimistically) for ours to start gathering data.
+
+If my small circle is representative I predict a very steep increase in
+publications in the next year or so.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 7/18/15, 2:36 PM, "Johannes Schindelin" <johannes.schindelin at gmx.de>
+wrote:
+
+>Hi Neil,
+>
+>On 2015-07-18 17:34, Neil Anthony wrote:
+>
+>> I was wondering if anybody has a list of publications (and/or websites)
+>> using the OpenSPIM or similar setup.
+>
+>I started a page on the OpenSPIM wiki:
+>
+>     http://openspim.org/Publications
+>
+>However, I feel a wiki should be edited by more than one person, so I
+>did not do all that much on that page myself, still waiting for others
+>to simply go and add their papers or papers related to OpenSPIM that
+>they know about.
+>
+>To answer your question, I turned to Google Scholar
+>(https://scholar.google.com/) and searched for the term "OpenSPIM".
+>Among the many reviews, there seem to be a couple of interesting "real"
+>biology papers, e.g.:
+>
+>     
+>http://biomedicaloptics.spiedigitallibrary.org/article.aspx?articleid=2241
+>619
+>
+>     http://www.damtp.cam.ac.uk/user/gold/pdfs/inversion.pdf
+>
+>> I hope there are plenty more in the pipeline given that there are more
+>> OpenSPIM setups out there.  I see 8 on the website, but are there more?
+>
+>According to Picard systems (I asked a while ago), they have delivered
+>at least 45 stages, so that is my conservative guess. Of course it would
+>be nice to hear back from more people, given that our main aim was to
+>start a collaborative community when we invested that insane amount of
+>time and effort to make all of this IKEA grade instructions and a wiki
+>and a mailing list.
+>
+>So here is drinking to a vibrant community in the future!
+>Johannes
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+
+
+From winfrees at iu.edu  Mon Jul 20 09:10:04 2015
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Mon, 20 Jul 2015 14:10:04 +0000
+Subject: [OpenSPIM] OpenSPIM (or very similar) publications
+In-Reply-To: <D1D26F1E.3D0C%tnf8@pitt.edu>
+References: <55AA71EE.104@emory.edu>
+	<1c663dd6e0178b75d9594117a35e36d6@www.dscho.org>
+	<D1D26F1E.3D0C%tnf8@pitt.edu>
+Message-ID: <d3f718b43c604c9eac0b1a03467ce892@bl-cci-exch04.ads.iu.edu>
+
+Ditto on our end.  I doubt Tim and I are counting the same machines!
+
+Seth
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Monday, July 20, 2015 9:30 AM
+To: Johannes Schindelin; openspim at openspim.org
+Subject: Re: [OpenSPIM] OpenSPIM (or very similar) publications
+
+Of the three systems I know personally, including my own: one will likely be used as a tech testbed, one has just started gathering data or will start very soon and I have just started putting screws to the breadboard on mine.  Between backordered parts and troubleshooting it should take about a month (optimistically) for ours to start gathering data.
+
+If my small circle is representative I predict a very steep increase in publications in the next year or so.
+
+Best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 7/18/15, 2:36 PM, "Johannes Schindelin" <johannes.schindelin at gmx.de>
+wrote:
+
+>Hi Neil,
+>
+>On 2015-07-18 17:34, Neil Anthony wrote:
+>
+>> I was wondering if anybody has a list of publications (and/or 
+>> websites) using the OpenSPIM or similar setup.
+>
+>I started a page on the OpenSPIM wiki:
+>
+>     http://openspim.org/Publications
+>
+>However, I feel a wiki should be edited by more than one person, so I 
+>did not do all that much on that page myself, still waiting for others 
+>to simply go and add their papers or papers related to OpenSPIM that 
+>they know about.
+>
+>To answer your question, I turned to Google Scholar
+>(https://scholar.google.com/) and searched for the term "OpenSPIM".
+>Among the many reviews, there seem to be a couple of interesting "real"
+>biology papers, e.g.:
+>
+>     
+>http://biomedicaloptics.spiedigitallibrary.org/article.aspx?articleid=2
+>241
+>619
+>
+>     http://www.damtp.cam.ac.uk/user/gold/pdfs/inversion.pdf
+>
+>> I hope there are plenty more in the pipeline given that there are 
+>> more OpenSPIM setups out there.  I see 8 on the website, but are there more?
+>
+>According to Picard systems (I asked a while ago), they have delivered 
+>at least 45 stages, so that is my conservative guess. Of course it 
+>would be nice to hear back from more people, given that our main aim 
+>was to start a collaborative community when we invested that insane 
+>amount of time and effort to make all of this IKEA grade instructions 
+>and a wiki and a mailing list.
+>
+>So here is drinking to a vibrant community in the future!
+>Johannes
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From m.pawlowska at nencki.gov.pl  Thu Jul 23 04:46:23 2015
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Thu, 23 Jul 2015 11:46:23 +0200
+Subject: [OpenSPIM] opening SPIM data with Bio-formats plugin
+Message-ID: <3ae2f566cfac7070863073cc2583bfa1@nencki.gov.pl>
+
+Hi,
+
+recently some people were writing about some issues when opening 
+acquired images with Bio-formats. It seems that the super-slowness was 
+at leats partly the fault of the Bio-formats: at least in my case, after 
+the recent Fiji update that included Bio-formats 5.1.3, speed improved.
+
+There is another issue though. When I open data that consists of several 
+files, the Bio-formats plugin asks me which sries to open, but no matter 
+what I choose, ALL the open files have the same header: 
+spim_TL01_Angle0.ome . Always Angle0. This makes opening all files and 
+doing something with them impossible because the info which is which is 
+lost. Also, in the metadata there is a line: " Series 2 Name	null" or 
+similar. When collecting images directly with micromanager, this line 
+looks more like " Series 0 Name	XYseries_1_MMStack_Pos1" and then the 
+open windows have collect headers. So the metadata is not saved 
+correctly.
+
+If somebody knows how to fix quickly, I'll be grateful for a hint, 
+otherwise I'll try myself.
+
+Regards,
+Monika
+
+
+
+From johannes.schindelin at gmx.de  Fri Jul 24 02:34:28 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 24 Jul 2015 09:34:28 +0200
+Subject: [OpenSPIM] Fwd: Open Imaging: Micro-Manager's new home
+In-Reply-To: <127807c7306171ababea968c891db95b688.20150723184825@mail27.wdc03.rsgsv.net>
+References: <127807c7306171ababea968c891db95b688.20150723184825@mail27.wdc03.rsgsv.net>
+Message-ID: <a8fa09e1f7a7b7527c3918d3572bf383@www.dscho.org>
+
+For your interest: this is important.
+
+-------- Original Message --------
+Subject: Open Imaging: Micro-Manager's new home
+Date: 2015-07-23 20:48
+ From: Mark Tsuchida (Open Imaging) <mark at open-imaging.com>
+To: Johannes Schindelin <johannes.schindelin at gmx.de>
+
+Open Imaging is the new µManager company.
+
+View this email in your browser 
+(http://us11.campaign-archive1.com/?u=127807c7306171ababea968c8&id=4c004c580a&e=91db95b688)
+
+http://open-imaging.us11.list-manage1.com/track/click?u=127807c7306171ababea968c8&id=96b3670d81&e=91db95b688
+
+
+** The Future Home for µManager
+------------------------------------------------------------
+
+
+** User Service Program subscriptions available for pre-order
+------------------------------------------------------------
+
+Dear Johannes,
+
+As we previously announced, the µManager team is moving to a new company 
+this fall. That new company is Open Imaging 
+(http://open-imaging.us11.list-manage2.com/track/click?u=127807c7306171ababea968c8&id=025d0ebbe9&e=91db95b688) 
+.
+
+Open Imaging's µManager User Service Program 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=b0e7f3e0c0&e=91db95b688) 
+is now available for signup. The User Service Program is a 
+subscription-based service that includes technical support and access to 
+the latest pre-release versions of µManager. It will also be how we 
+primarily finance future µManager development, so I hope you will 
+consider subscribing if you use and like µManager. Service will begin on 
+October 1, 2015, but you will get a discount for ordering early! Please 
+see our website for details. 
+(http://open-imaging.us11.list-manage.com/track/click?u=127807c7306171ababea968c8&id=50a68584f2&e=91db95b688)
+
+Yours sincerely,
+Mark Tsuchida
+CEO & Co-CTO
+Open Imaging, Inc.
+
+============================================================
+Copyright © 2015 Open Imaging, Inc., All rights reserved.
+  You are receiving this email because you opted in at our website 
+(https://open-imaging.com) or asked us to notify you about our User 
+Service Program.
+
+Our mailing address is:
+Open Imaging, Inc.
+1030 El Monte Ave #12
+Mountain View, CA 94040-2350
+USA
+** unsubscribe from this list 
+(http://open-imaging.us11.list-manage.com/unsubscribe?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688&c=4c004c580a)
+** update subscription preferences 
+(http://open-imaging.us11.list-manage1.com/profile?u=127807c7306171ababea968c8&id=eafbc4e3df&e=91db95b688)
+  Email Marketing Powered by MailChimp
+http://www.mailchimp.com/monkey-rewards/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=monkey_rewards&aid=127807c7306171ababea968c8&afl=1
+
+
+
+From gabriel.jones at florey.edu.au  Sun Jul 26 18:37:35 2015
+From: gabriel.jones at florey.edu.au (Gabriel Davis Jones)
+Date: Sun, 26 Jul 2015 23:37:35 +0000
+Subject: [OpenSPIM] Acquisition Error (setBigTIff)
+Message-ID: <005022868505164C94291D8DD2D8EBAA788808E3@000S-EX-MBX-QS4.unimelb.edu.au>
+
+Hi All,
+
+I'm constantly receiving this error when I try and acquire an image >4GB:
+
+java.lang.RuntimeException: loci.formats.FormatException: File is too large; call setBigTiff(true)
+at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:113)
+at java.lang.Thread.run(Thread.java:745)
+Caused by: loci.formats.FormatException: File is too large; call setBigTiff(true)
+at loci.formats.out.TiffWriter.prepareToWriteImage(TiffWriter.java:343)
+at loci.formats.out.TiffWriter.saveBytes(TiffWriter.java:221)
+at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:190)
+at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:180)
+at loci.formats.FormatWriter.saveBytes(FormatWriter.java:124)
+at spim.progacq.OMETIFFHandler.processSlice(OMETIFFHandler.java:175)
+at spim.progacq.AsyncOutputWrapper.handleNext(AsyncOutputWrapper.java:232)
+at spim.progacq.AsyncOutputWrapper.access$300(AsyncOutputWrapper.java:18)
+at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:98)
+
+Any ideas how I may get around it, or are we restricted to image sizes <4GB for now?
+
+
+Kind regards,
+
+
+Gabriel Davis Jones
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150726/4a7b51fa/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Tue Jul 28 09:05:06 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 28 Jul 2015 16:05:06 +0200
+Subject: [OpenSPIM] Fwd: [micro-manager-general] 1.4.22 Release schedule
+	(Aug 14)
+In-Reply-To: <CAKGYTB=-HpnGUJvdi6kmpAF=kemOOoqJ_ORy1ez3G_brfpOhMQ@mail.gmail.com>
+References: <CAKGYTB=-HpnGUJvdi6kmpAF=kemOOoqJ_ORy1ez3G_brfpOhMQ@mail.gmail.com>
+Message-ID: <466d0da118e6663e291c08c603922efc@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] 1.4.22 Release schedule (Aug 14)
+Date: 2015-07-27 23:39
+ From: Mark Tsuchida <marktsuchida at gmail.com>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Reply-To: Micro-Manager General 
+<micro-manager-general at lists.sourceforge.net>
+
+Hi Developers,
+
+We plan to release Micro-Manager 1.4.22 on Friday, August 14 (slightly
+later than our regular schedule).
+
+In all likelyhood, this will be the last official release version from
+the UCSF Micro-Manager Team. Starting in October, Open Imaging will be
+providing annual releases as free downloads (see [1]). We'll continue
+to publish nightly builds until Sept 30.
+
+If you have SVN write access and are working on untested changes, it
+will be a good idea to avoid committing them to SVN during the week
+before the release. If you need to commit a last-minute fix on the day
+of the release, please contact us by email first.
+
+
+[1] 
+http://micro-manager.3463995.n2.nabble.com/Open-Imaging-the-new-home-for-Micro-Manager-tp7585647.html
+
+
+Best regards,
+Mark
+
+
+
+From pitrone at mpi-cbg.de  Thu Jul 30 04:50:59 2015
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Thu, 30 Jul 2015 11:50:59 +0200
+Subject: [OpenSPIM] The future is around the corner...
+Message-ID: <C44AB17D-7B17-403B-98BA-C1772088C238@mpi-cbg.de>
+
+Hey OpenSPIM listers,
+
+A recent technology breakthrough in storage memory read/write speed will help with high-speed sCMOS camera chips, check it out!!:
+
+http://www.cnet.com/news/intel-and-micron-debut-3d-xpoint-storage-technology-thats-1000-times-faster-than-existing-drives/
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who." Rudyard Kipling - The Elephant's Child
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150730/216455ea/attachment-0002.html>
+

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SPIM Acquisition Java plugin
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIM%20Acquisition%20Java%20plugin&In-Reply-To=%3CCO2PR05MB6819C3ED359F32F901ADDD1ECBD0%40CO2PR05MB681.namprd05.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001899.html">
+   <LINK REL="Next"  HREF="001901.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SPIM Acquisition Java plugin</H1>
+    <B>Anthony, Neil</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIM%20Acquisition%20Java%20plugin&In-Reply-To=%3CCO2PR05MB6819C3ED359F32F901ADDD1ECBD0%40CO2PR05MB681.namprd05.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] SPIM Acquisition Java plugin">nantho2 at emory.edu
+       </A><BR>
+    <I>Thu Mar  3 12:33:17 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001899.html">[OpenSPIM] Z axis wheel
+</A></li>
+        <LI>Next message: <A HREF="001901.html">[OpenSPIM] Suboptimal acquisition speed
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1900">[ date ]</a>
+              <a href="thread.html#1900">[ thread ]</a>
+              <a href="subject.html#1900">[ subject ]</a>
+              <a href="author.html#1900">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi HongKee, no worries on the delayed replies.  It kinda matches the pace at which I’m able to get to these things anyway.
+
+I found the section on the GUI, and I’ll take a look at those details as things progress.
+
+If you happen to draw or create and graphical representations of the code on your travels through its overhaul I’d be very interested in seeing those.  I think a block diagram of the basic steps needed to perform an acquisition might help us to implement the different and varying aspects of the MMCore for multiple hardware setups.  Just a thought, if that’s something that might help for you.
+
+I’ll keep you posted. Thanks for your time and your help.
+Neil
+
+
+
+
+From: HongKee Moon [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">moon at mpi-cbg.de</A>]
+Sent: Monday, February 29, 2016 8:15 AM
+To: Anthony, Neil
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: SPIM Acquisition Java plugin
+
+Dear Neil,
+
+First of all, I have to say that I am so sorry for the late reply.
+
+I am trying to explain as possible as I can.
+
+On Feb 18, 2016, at 6:31 PM, Anthony, Neil &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt;&gt; wrote:
+
+Hi HongKee, I hope the code is treating you well.
+
+Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called &quot;Why do SPIM and Micro-Manager use different TIFF packages?&quot; that I hijacked at the start of the year.
+
+Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+Unfortunately, SPIMAcquisition builds GUI programmatically and lack of comments on this part. Personally, I would like to remove all the unnecessary GUI parts except “Acquisition”. However, I cannot check whether all those things are still being used by users or not, and there are differently associated tasks(video recording, etc) depending on which tab selected. My idea to handle your case is that you can build your own Tab including your controls or add “Customize” button to open your customized panel by “clicking” event. Then, you can manage to implement your logics there.
+
+
+
+You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+The first thing for you to look at is &quot;spim.SPIMAcquisition#initUI()” part, which contains long lines of codes for initializing GUI controls. I tried to make it little bit readable by “//“ and following short description for only small parts. Let me know if you have complicated codes in the file. I will explain it.
+
+
+My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+That would be a really good idea if we can bring the modularity from the implemented MM parts and reuse them inside the plugin context. Actually, I have not investigated MM codes enough to be able to judge. However, it would be much nicer and compact if we can reuse the components from the MM packages. It will involve that I need study MM codes more. It is hard to tell you how much time it could be expected.
+
+
+
+Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+No problem! I will be always on your side. Please, let me know whenever you have questions/feedbacks regarding SPIMAcquisition plugin. I try to do my best to answer you as much as I can.
+
+Best Regards,
+
+HongKee
+
+
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de&lt;<A HREF="http://www.mpi-cbg.de">http://www.mpi-cbg.de</A>&gt;
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160303/ad13d208/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20160303/ad13d208/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001899.html">[OpenSPIM] Z axis wheel
+</A></li>
+	<LI>Next message: <A HREF="001901.html">[OpenSPIM] Suboptimal acquisition speed
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1900">[ date ]</a>
+              <a href="thread.html#1900">[ thread ]</a>
+              <a href="subject.html#1900">[ subject ]</a>
+              <a href="author.html#1900">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,42 @@
+<tt>
+&lt;div&nbsp;dir=&quot;ltr&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Hi&nbsp;Luke,&nbsp;&lt;br&gt;&lt;/div&gt;Now&nbsp;that&nbsp;I&nbsp;have&nbsp;added&nbsp;the&nbsp;Thorlabs&nbsp;shutter&nbsp;to&nbsp;the&nbsp;configuration&nbsp;as&nbsp;the&nbsp;default&nbsp;shutter,&nbsp;I&nbsp;don&#39;t&nbsp;get&nbsp;the&nbsp;error&nbsp;message&nbsp;about&nbsp;the&nbsp;configuration&nbsp;being&nbsp;invalid,&nbsp;and&nbsp;the&nbsp;OpenSPIM&nbsp;window&nbsp;never&nbsp;opens&nbsp;at&nbsp;all. &nbsp;A&nbsp;corelog&nbsp;is&nbsp;attached&nbsp;in&nbsp;case&nbsp;it&#39;s&nbsp;helpful. &nbsp;&lt;br&gt;<br>
+<br>
+&lt;/div&gt;I&nbsp;had&nbsp;a&nbsp;problem&nbsp;with&nbsp;the&nbsp;development&nbsp;environment&nbsp;self-installer&nbsp;-&nbsp;it&nbsp;seems&nbsp;upset&nbsp;that&nbsp;I&nbsp;don&#39;t&nbsp;have&nbsp;Visual&nbsp;Studio&nbsp;2008&nbsp;(I&nbsp;have&nbsp;2010;&nbsp;a&nbsp;screen&nbsp;grab&nbsp;of&nbsp;the&nbsp;error&nbsp;message&nbsp;is&nbsp;attached)&nbsp;but&nbsp;it&nbsp;looks&nbsp;as&nbsp;though&nbsp;all&nbsp;the&nbsp;source&nbsp;files&nbsp;ended&nbsp;up&nbsp;where&nbsp;they&nbsp;should&nbsp;be&nbsp;anyway,&nbsp;so&nbsp;I&#39;ll&nbsp;start&nbsp;having&nbsp;a&nbsp;look.&nbsp;&lt;br&gt;<br>
+<br>
+&lt;/div&gt;Thank&nbsp;you&nbsp;again! &nbsp;&lt;br&gt;Aurelia&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;<br>
+&lt;br&gt;&lt;div&nbsp;class=&quot;gmail_extra&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;div&nbsp;class=&quot;gmail_quote&quot;&gt;On&nbsp;Wed,&nbsp;Oct&nbsp;2,&nbsp;2013&nbsp;at&nbsp;10:48&nbsp;PM,&nbsp;Luke&nbsp;Stuyvenberg&nbsp;&lt;span&nbsp;dir=&quot;ltr&quot;&gt;&lt;&lt;a&nbsp;href=&quot;mailto:stuyvenberg@wisc.edu&quot;&nbsp;target=&quot;_blank&quot;&gt;stuyvenberg@wisc.edu&lt;/a&gt;&gt;&lt;/span&gt;&nbsp;wrote:&lt;br&gt;<br>
+<br>
+<br>
+&lt;blockquote&nbsp;class=&quot;gmail_quote&quot;&nbsp;style=&quot;margin:0&nbsp;0&nbsp;0&nbsp;.8ex;border-left:1px&nbsp;#ccc&nbsp;solid;padding-left:1ex&quot;&gt;Aurelia,&lt;br&gt;<br>
+&lt;br&gt;<br>
+Is&nbsp;the&nbsp;ThorLabs&nbsp;shutter&nbsp;set&nbsp;as&nbsp;the&nbsp;default&nbsp;shutter&nbsp;for&nbsp;your&nbsp;setup?&nbsp;(i.e.&nbsp;does&nbsp;it&nbsp;respond&nbsp;to&nbsp;Micro-Manager&#39;s&nbsp;auto-shutter&nbsp;functionality?)&nbsp;This&nbsp;is&nbsp;specified&nbsp;during&nbsp;hardware&nbsp;configuration.&nbsp;If&nbsp;so,&nbsp;please&nbsp;attach&nbsp;a&nbsp;core&nbsp;log&nbsp;(any&nbsp;should&nbsp;do,&nbsp;as&nbsp;long&nbsp;as&nbsp;you&nbsp;got&nbsp;the&nbsp;&#39;setup&nbsp;is&nbsp;invalid&#39;&nbsp;warning)&nbsp;--&nbsp;the&nbsp;SPIM&nbsp;device&nbsp;manager&nbsp;should&nbsp;be&nbsp;trying&nbsp;to&nbsp;use&nbsp;it&nbsp;as&nbsp;a&nbsp;laser;&nbsp;if&nbsp;this&nbsp;isn&#39;t&nbsp;happening,&nbsp;an&nbsp;exception&nbsp;may&nbsp;be&nbsp;appearing&nbsp;in&nbsp;the&nbsp;core&nbsp;log.&nbsp;If&nbsp;the&nbsp;issue&nbsp;is&nbsp;as&nbsp;simple&nbsp;as&nbsp;this,&nbsp;I&nbsp;may&nbsp;be&nbsp;able&nbsp;to&nbsp;fix&nbsp;it&nbsp;with&nbsp;minimal&nbsp;work,&nbsp;which&nbsp;is&nbsp;arguably&nbsp;preferable&nbsp;to&nbsp;the&nbsp;alternative.&lt;br&gt;<br>
+<br>
+<br>
+<br>
+&lt;br&gt;<br>
+&lt;br&gt;<br>
+The&nbsp;alternative:&nbsp;Although&nbsp;the&nbsp;ThorLabs&nbsp;shutter&nbsp;*should*&nbsp;be&nbsp;supported&nbsp;as&nbsp;a&nbsp;&#39;generic&nbsp;laser&#39;,&nbsp;it&nbsp;is&nbsp;possible&nbsp;to&nbsp;specifically&nbsp;add&nbsp;support&nbsp;for&nbsp;the&nbsp;device,&nbsp;though&nbsp;it&nbsp;requires&nbsp;some&nbsp;Java&nbsp;programming.&nbsp;If&nbsp;you&#39;re&nbsp;already&nbsp;familiar&nbsp;with&nbsp;our&nbsp;development&nbsp;environment&nbsp;(see &lt;a&nbsp;href=&quot;http://openspim.org/How_to_build_the_software&quot;&nbsp;target=&quot;_blank&quot;&gt;http://openspim.org/How_to_build_the_software&lt;/a&gt; --&nbsp;fair&nbsp;warning:&nbsp;setting&nbsp;up&nbsp;the&nbsp;development&nbsp;environment&nbsp;can&nbsp;take&nbsp;some&nbsp;time),&nbsp;the&nbsp;place&nbsp;to&nbsp;start&nbsp;is&nbsp;plugins/SPIMAcquisition/src/main/java/;&nbsp;in&nbsp;here&nbsp;are&nbsp;various&nbsp;files&nbsp;like&nbsp;PicardStage.java&nbsp;and&nbsp;CoherentCube.java.&nbsp;I&nbsp;recommend&nbsp;reading&nbsp;the&nbsp;top&nbsp;of&nbsp;PicardStage.java&nbsp;for&nbsp;an&nbsp;explanation&nbsp;of&nbsp;the&nbsp;block&nbsp;at&nbsp;the&nbsp;top&nbsp;of&nbsp;the&nbsp;class,&nbsp;then&nbsp;copying&nbsp;and&nbsp;renaming&nbsp;CoherentCube.java&nbsp;to&nbsp;i.e.&nbsp;ThorLabsShutter.java.&nbsp;Rename&nbsp;the&nbsp;contained&nbsp;class&nbsp;and&nbsp;change&nbsp;the&nbsp;string&nbsp;&quot;CoherentCube&quot;&nbsp;to&nbsp;the&nbsp;appropriate&nbsp;device&nbsp;name&nbsp;--&nbsp;according&nbsp;to&nbsp;the&nbsp;device&nbsp;adapter&nbsp;source&nbsp;code&nbsp;in&nbsp;DeviceAdapters/ThorlabsSC10/,&nbsp;the&nbsp;right&nbsp;string&nbsp;is&nbsp;&quot;SC10&quot;&nbsp;--&nbsp;and&nbsp;change&nbsp;the&nbsp;rest&nbsp;of&nbsp;the&nbsp;functions&nbsp;however&nbsp;you&nbsp;see&nbsp;fit.&lt;br&gt;<br>
+<br>
+<br>
+<br>
+&lt;br&gt;<br>
+&lt;br&gt;<br>
+Thanks,&lt;br&gt;<br>
+Luke&lt;br&gt;<br>
+&lt;div&gt;&lt;br&gt;<br>
+On&nbsp;10/01/13,&nbsp;Aurelia&nbsp;Honerkamp-Smith&nbsp; wrote:&lt;br&gt;<br>
+&gt;&nbsp;Hi&nbsp;everyone,&lt;br&gt;<br>
+&gt;&lt;br&gt;<br>
+&gt;&lt;br&gt;<br>
+&lt;/div&gt;&gt;&nbsp;I&nbsp;guess&nbsp;now&nbsp;is&nbsp;a&nbsp;good&nbsp;time&nbsp;to&nbsp;mention&nbsp;that&nbsp;I&nbsp;built&nbsp;my&nbsp;SPIM&nbsp;using&nbsp;a&nbsp;laser&nbsp;line&nbsp;we&nbsp;already&nbsp;had&nbsp;instead&nbsp;of&nbsp;purchasing&nbsp;the&nbsp;Coherent&nbsp;Cube,&nbsp;by&nbsp;diverting&nbsp;the&nbsp;existing&nbsp;line&nbsp;to&nbsp;the&nbsp;SPIM&nbsp;with&nbsp;a&nbsp;flip&nbsp;mirror&nbsp;and&nbsp;a&nbsp;periscope.&nbsp;Laser&nbsp;power&nbsp;control&nbsp;is&nbsp;manual.&nbsp;The&nbsp;fact&nbsp;that&nbsp;I&nbsp;have&nbsp;no&nbsp;laser&nbsp;connected&nbsp;is&nbsp;causing&nbsp;a&nbsp;problem&nbsp;for&nbsp;SPIM&nbsp;acquisition,&nbsp;though.&nbsp;I&nbsp;get&nbsp;an&nbsp;error&nbsp;message&nbsp;that&nbsp;my&nbsp;setup&nbsp;is&nbsp;invalid&nbsp;when&nbsp;I&nbsp;first&nbsp;start&nbsp;the&nbsp;plugin;&nbsp;then,&nbsp;although&nbsp;acquisition&nbsp;through&nbsp;the&nbsp;Video&nbsp;tab&nbsp;works&nbsp;OK,&nbsp;I&nbsp;can&amp;#39;t&nbsp;acquire&nbsp;a&nbsp;regular&nbsp;stack&nbsp;or&nbsp;timelapse:&nbsp;I&nbsp;get&nbsp;&quot;Error&nbsp;acquiring:&nbsp;null&quot;&nbsp;when&nbsp;I&nbsp;push&nbsp;the&nbsp;Oh&nbsp;Snap&nbsp;button.&nbsp;I&nbsp;need&nbsp;to&nbsp;change&nbsp;the&nbsp;plugin&nbsp;so&nbsp;that&nbsp;it&nbsp;ignores&nbsp;the&nbsp;laser&nbsp;power&nbsp;control,&nbsp;and&nbsp;uses&nbsp;a&nbsp;Thorlabs&nbsp;shutter&nbsp;for&nbsp;blinking&nbsp;instead&nbsp;of&nbsp;the&nbsp;laser.&nbsp;I&nbsp;realize&nbsp;this&nbsp;might&nbsp;be&nbsp;a&nbsp;tall&nbsp;order,&nbsp;so&nbsp;I&amp;#39;m&nbsp;ready&nbsp;to&nbsp;start&nbsp;working&nbsp;on&nbsp;it&nbsp;myself,&nbsp;but&nbsp;I&nbsp;would&nbsp;appreciate&nbsp;being&nbsp;pointed&nbsp;in&nbsp;the&nbsp;right&nbsp;direction&nbsp;for&nbsp;how&nbsp;to&nbsp;do&nbsp;this&nbsp;most&nbsp;efficiently.&lt;br&gt;<br>
+<br>
+<br>
+<br>
+&gt;&lt;br&gt;<br>
+&gt;&lt;br&gt;<br>
+&gt;&nbsp;Thanks&nbsp;again,&lt;br&gt;<br>
+&gt;&nbsp;Aurelia&lt;br&gt;<br>
+&lt;div&gt;&gt;&lt;br&gt;<br>
+&gt;&lt;br&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br>
+
+</tt>

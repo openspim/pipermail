@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%20plus%22%20problem%20persisting&In-Reply-To=%3COF8E946504.FA4186EA-ONC1257C0F.006C0D8E-C1257C0F.006C0D97%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001218.html">
+   <LINK REL="Next"  HREF="001221.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Antwort%3A%20Re%3A%20%22Stack%20at%20this%20Z%20plus%22%20problem%20persisting&In-Reply-To=%3COF8E946504.FA4186EA-ONC1257C0F.006C0D8E-C1257C0F.006C0D97%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] Antwort: Re: &quot;Stack at this Z plus&quot; problem persisting">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Fri Oct 25 14:40:13 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001218.html">[OpenSPIM] &quot;Stack at this Z plus&quot; problem persisting
+</A></li>
+        <LI>Next message: <A HREF="001221.html">[OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1220">[ date ]</a>
+              <a href="thread.html#1220">[ thread ]</a>
+              <a href="subject.html#1220">[ subject ]</a>
+              <a href="author.html#1220">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> Hi Luke,
+
+I will send you all the information requested on monday, since now I am not at the
+institute. Hopefully with the no laser patch the problem could be solved, but we have
+to try first. 
+
+About the &quot;Stack at this Z plus&quot; button, it is the only problem, it looks that it sticks. I can still
+move the stage, change the tabs, add a new single position in the position list, use snap
+images and save them in RAM or directly in disk. In resume, I can do everything except set a 
+stack of positions in the position list.
+
+Thanks to you!! and see you on monday.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; schrieb: -----
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+Von: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+Datum: 25.10.2013 20:14
+Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: Re: &quot;Stack at this Z plus&quot; problem persisting
+
+Hi Edgar,
+
+Please don't worry about disturbing me; it's what I am here for, after all!
+
+You are absolutely correct about the missing TIScam DLLs; I forgot to include them in the new version. I will head to LOCI and correct that in two hours or so.
+
+I'm still at a loss with regards to the errors you are encountering, however. I will have a patch for the 'no laser' problem early next week, hopefully alongside the autostart fix, but until we can diagnose the acquisition bug, I won't know how to fix it.
+
+With that in mind, I have some more information to request:
+- Please attach to your reply all core logs, hs error files, and configuration files (your active one, in particular), compressed with your file archiver of choice.
+- Please list a) all hardware involved in the setup (with model numbers, if you have them), and b) all devices you set up in the hardware configuration.
+- When you click the 'insert stack' button, you say it sticks down and nothing happens -- is the rest of the UI still responsive? Can you change tabs? Move the stage?
+
+I'm casting a pretty wide net, here, but hopefully somewhere in there will be a vital clue.
+
+Thanks,
+Luke
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+
+ Dear Luke,
+
+I am sorry to disturb you again but I have been struggling a lot with SPIM acquisiton plugin :(. Hopefully I made some discoveries.
+ 
+I updated Fiji and again had the problem again about the TIScam (The Imaging Source camera). But I discover that 
+ mmgr_dal_TIScam.dll depends on TIS_DShowLib10.dll and  TIS_UDSHL10.dll but in the mm\Win32 location are
+TIS_UDSHL09_vc9d.dll  and TIS_DShowLib09.dll. I got the version 10 of the DLLs from the 1.14.16 version of a plain 
+ installation of MicroManager and just copied them to  mm\Win32. Maybe you can solve that from the Fiji updater: to uninstall 
+ the version 9 of the DLLs and to install the version 10. Anayway the problem about the camera is fixed now. I attach the
+ version 10 of the DLLs to this mail.
+
+About the &quot;Stack at this Z plus&quot; button I still have the problem when using the updated version of Fiji. I also discover that if I don't 
+ use the demo shuter I can't write the images direclty to disk, the message &quot;Error acquiring: null&quot; appears and in the output directory is saved a .ome.tiff
+ empty image (0 byte). So for the moment I have to use the no updated version of Fiji in order to perform SPIM acquisiton.
+ 
+The problem about using the no updated version of Fiji is that the plugin don't respond when pressing &quot;Oh Snap&quot; (as
+ it happens when pressing &quot;Stack at this Z plus&quot; in the Fiji updated version) when I want to write the images directly to disk.
+ 
+So at the end if I want to perform SPIM image acquisition (the way I have done that until now), I have to use the no updated version 
+ of Fiji and save the images to RAM no specifying an ouput directory. The problem is that I am limited by the RAM and all the images
+ are saved in the same stack even if different positions are specified in the position list.
+ 
+Finally to be sure that the problem about the &quot;Stack at this Z plus&quot; button is not related to the computer I am using (Windows XP 32 bit)
+ I tried Fiji in a different computer (Windows 7 64 bit).
+
+I really would like to use the SPIM image acquisition plugin and benefit from all his capabilities.
+ 
+Thanks in advance for your comments.
+
+Kind regards,
+Edgar
+ 
+
+
+
+
+  _________________________________________________________________________
+ 
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+  
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>  
+ <A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A> 
+_________________________________________________________________________ 
+ 
+  
+ 
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131025/ea551a27/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20131025/ea551a27/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001218.html">[OpenSPIM] &quot;Stack at this Z plus&quot; problem persisting
+</A></li>
+	<LI>Next message: <A HREF="001221.html">[OpenSPIM] WG: Antwort: Re: &quot;Stack at this Z plus&quot; problem	persisting
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1220">[ date ]</a>
+              <a href="thread.html#1220">[ thread ]</a>
+              <a href="subject.html#1220">[ subject ]</a>
+              <a href="author.html#1220">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

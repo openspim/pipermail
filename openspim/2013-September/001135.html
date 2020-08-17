@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Temperature control for the SPIM chamber
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3COF3321603E.DC8BD617-ONC1257BEC.00476907-C1257BEC.0047690D%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001133.html">
+   <LINK REL="Next"  HREF="001136.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Temperature control for the SPIM chamber</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3COF3321603E.DC8BD617-ONC1257BEC.00476907-C1257BEC.0047690D%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] Temperature control for the SPIM chamber">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Fri Sep 20 07:59:59 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001133.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+        <LI>Next message: <A HREF="001136.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1135">[ date ]</a>
+              <a href="thread.html#1135">[ thread ]</a>
+              <a href="subject.html#1135">[ subject ]</a>
+              <a href="author.html#1135">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Jan,
+
+Thanks a lot for the information, it is very helpful.
+
+I have seen that there are on internet some temperature controllers for ca. $25 
+<A HREF="http://www.ebay.de/itm/All-purpose-Temperature-Controller-STC-1000-Whit-sensor-/320628773067">http://www.ebay.de/itm/All-purpose-Temperature-Controller-STC-1000-Whit-sensor-/320628773067</A>
+<A HREF="http://www.autospeed.com/cms/A_112617/article.html">http://www.autospeed.com/cms/A_112617/article.html</A>
+
+or this one that looks more complex
+<A HREF="http://www.auberins.com/index.php?main_page=product_info&amp;cPath=1&amp;products_id=14">http://www.auberins.com/index.php?main_page=product_info&amp;cPath=1&amp;products_id=14</A>
+
+but I don't know if these kind of controllers are suitable for our application.
+
+The advantage of this ones is that I wouldn't need to build the circuit for conditioning the
+signal for the PT100 sensor and avoid writting a program for controlling the temperature.
+So the temperature control would be independent.
+
+What's your opinion?
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Jan Krieger &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">j.krieger at dkfz-heidelberg.de</A>&gt; schrieb: -----
+An: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>&gt;
+Von: Jan Krieger &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">j.krieger at dkfz-heidelberg.de</A>&gt;
+Datum: 19.09.2013 18:12
+Betreff: Re: Temperature control for the SPIM chamber
+
+Hi!
+
+I'm attatching a picture of our chamber ... if that helps ;-) ... Have 
+you already decided on a temperature controller? As I mentioned before, 
+we have a homebuilt one and I'm using these PT100 to embed into the 
+sample chamber: 
+<A HREF="http://www.conrad.biz/ce/de/product/171961/Platin-Temperatursensor-in-Keramikhuelse-Heraeus-MR828-Heraeus-Nr-32-209-340-70-500-C-Keramikhuelse">http://www.conrad.biz/ce/de/product/171961/Platin-Temperatursensor-in-Keramikhuelse-Heraeus-MR828-Heraeus-Nr-32-209-340-70-500-C-Keramikhuelse</A>
+
+For measurement in the chamber I found thin PT100 from stainless steel: 
+<A HREF="http://www.temperaturmesstechnik.de/fileadmin/user_upload/pdf/tmh-mantelwiderstandsthermometer-001.pdf&#160;">http://www.temperaturmesstechnik.de/fileadmin/user_upload/pdf/tmh-mantelwiderstandsthermometer-001.pdf </A>
+... but they are rather expensive (~55EUR+VAT)
+
+About the foil: The ones I found a few years ago were all very large ... 
+if you find a small one, please let me know ;-)
+
+Best,
+JAN
+
+
+
+
+Am 19.09.2013 13:49, schrieb <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>:
+&gt;<i> Dear Jan,
+</I>&gt;<i>
+</I>&gt;<i> Thanks for your feedback. So I will use the TO22 housing resistor
+</I>&gt;<i> and the PT100 temperature sensor. Or maybe instead of the
+</I>&gt;<i> TO22 housing resistor I will use a heating foil (also a resistor).
+</I>&gt;<i>
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> Edgar
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Fraunhofer-Institut für Produktionstechnologie IPT
+</I>&gt;<i> Edgar Escobar Nieto
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Steinbachstraße 17
+</I>&gt;<i> 52074 Aachen
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> _
+</I>&gt;<i> __<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>_ &lt;<A HREF="http://www.ipt.fraunhofer.de/">http://www.ipt.fraunhofer.de/</A>&gt;
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>
+
+
+[Anhang 'SPIM_manual_poster.pdf' entfernt von Edgar Escobar Nieto/Fraunhofer IPT]
+[Anhang 'j_krieger.vcf' entfernt von Edgar Escobar Nieto/Fraunhofer IPT]
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130920/e5066a2d/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20130920/e5066a2d/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001133.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+	<LI>Next message: <A HREF="001136.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1135">[ date ]</a>
+              <a href="thread.html#1135">[ thread ]</a>
+              <a href="subject.html#1135">[ subject ]</a>
+              <a href="author.html#1135">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

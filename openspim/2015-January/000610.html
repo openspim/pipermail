@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SCAPE
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE&In-Reply-To=%3C7A513BCE-3AA6-4626-8480-C992F408E127%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000609.html">
+   <LINK REL="Next"  HREF="000611.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SCAPE</H1>
+    <B>Michael Weber</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE&In-Reply-To=%3C7A513BCE-3AA6-4626-8480-C992F408E127%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] SCAPE">weber at mpi-cbg.de
+       </A><BR>
+    <I>Fri Jan 23 09:31:08 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000609.html">[OpenSPIM] Low Magnification SPIM Chamber Concept&#8230; (Was:  SCAPE)
+</A></li>
+        <LI>Next message: <A HREF="000611.html">[OpenSPIM] Multiview Deconvolution CUDA dll
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#610">[ date ]</a>
+              <a href="thread.html#610">[ thread ]</a>
+              <a href="subject.html#610">[ subject ]</a>
+              <a href="author.html#610">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+Figure 1 might be misleading, as only a subset of the entire system is shown. The full optical path of the SCAPE system can be found in Supplementary Figure 1:
+<A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/extref/nphoton.2014.323-s1.pdf">http://www.nature.com/nphoton/journal/vaop/ncurrent/extref/nphoton.2014.323-s1.pdf</A>
+
+This system is very similar to the oblique plane microscopy setup published by Chris Dunsby in 2008: Dunsby, C. Optically sectioned imaging by oblique plane microscopy. Opt Express 16, 20306&#8211;20316 (2008).
+
+If you cannot access any of the linked papers, try Dunsby's patent:
+<A HREF="https://www.google.de/patents/US8582203">https://www.google.de/patents/US8582203</A>
+
+And in there, specifically Figure 4:
+<A HREF="https://patentimages.storage.googleapis.com/US8582203B2/US08582203-20131112-D00004.png">https://patentimages.storage.googleapis.com/US8582203B2/US08582203-20131112-D00004.png</A>
+
+As you can see, the oblique plane is correct for by introducing another oblique plane&#8230; a clever concept, based on what Tony Wilson demonstrated earlier in his remote focussing microscope. So you don't get oblique planes in your final stack, but the images are skewed. Plus, by sending tilted beams through lenses on multiple positions in the path, you introduce aberrations. Moreover, you cannot use the full aperture of your detection objective, as you need some space to bring in your light sheet. And you need 3 objectives&#8230; So I don't agree with the author's statement that the setup is simpler than other light sheet setups. It is true that you don't need the 90 deg access to your sample. However, if you can afford that, I think you are still better off with a setup based on piezo scanning or electrically tunable lenses.
+
+Best,
+Michael
+
+On Jan 23, 2015, at 12:59 PM, Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> On 2015-01-23 10:08, Balki K wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> You were saying that it requires a sophisticated reconstruction algorithm
+</I>&gt;&gt;<i> because of the non-uniform pixel spacings.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Yes. As you can see from the figure I linked to earlier:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Please keep in mind that I bring the software engineering expertise to
+</I>&gt;&gt;<i> the OpenSPIM project in our lab, not the optics expertise (you probably
+</I>&gt;&gt;<i> have much more knowledge of optics, given that you are tasked to build a
+</I>&gt;&gt;<i> microscope). And please keep in mind that I form the following
+</I>&gt;&gt;<i> understanding only from reading the abstract of the article, supported
+</I>&gt;&gt;<i> only by the figure at
+</I>&gt;&gt;<i> <A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/">http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/</A>
+</I>&gt;&gt;<i> nphoton.2014.323_F1.html.
+</I>&gt;<i> 
+</I>&gt;<i> ... you can actually see for yourself how the pixel spacing differs between planes (and possibly between the pixels in each plane).
+</I>&gt;<i> 
+</I>&gt;<i> Now, I am not an optical expert, but I assume you are. So you should be in a better position to answer the question how the pixel spacings (often called &quot;pixel dimensions&quot;) differ.
+</I>&gt;<i> 
+</I>&gt;<i> In practice, it might be that the differences are negligible, both within and between planes. If that is the case, you do not need that &quot;sophisticated algorithm&quot; I referred to. In that case, you would only need to compensate for the obliqueness of the planes, i.e. the fact that the planes are *not* perpendicular to the axis along which the plane is moved. It will require a little bit of coding and you should make sure to have some colleague or employee who can do that for you (I would probably use the interpolation algorithms of ImgLib2 to reconstruct the volume stacks).
+</I>&gt;<i> 
+</I>&gt;<i> As stated above, you should not take my hunches at face value. It is really important that you understand the intrinsic properties of the acquisition to reconstruct the images in software. I would be interested in that analysis, too, so if you would share it with this mailing list, that would be really cool.
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+<A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150123/6d41cecb/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20150123/6d41cecb/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000609.html">[OpenSPIM] Low Magnification SPIM Chamber Concept&#8230; (Was:  SCAPE)
+</A></li>
+	<LI>Next message: <A HREF="000611.html">[OpenSPIM] Multiview Deconvolution CUDA dll
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#610">[ date ]</a>
+              <a href="thread.html#610">[ thread ]</a>
+              <a href="subject.html#610">[ subject ]</a>
+              <a href="author.html#610">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

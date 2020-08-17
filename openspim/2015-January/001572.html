@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Best practices for using a different camera?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%0A%20%3D%3Futf-8%3Fq%3FBest_practices_for_using_a_different_camera%3F%3D%0A%20%3D%3Futf-8%3Fq%3F%3D3F%3F%3D&In-Reply-To=%3Cbfe1ba9568144e6bc5fba274539d41bc%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001570.html">
+   <LINK REL="Next"  HREF="001565.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Best practices for using a different camera?</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%0A%20%3D%3Futf-8%3Fq%3FBest_practices_for_using_a_different_camera%3F%3D%0A%20%3D%3Futf-8%3Fq%3F%3D3F%3F%3D&In-Reply-To=%3Cbfe1ba9568144e6bc5fba274539d41bc%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] Best practices for using a different camera?">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Thu Jan 22 08:03:52 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001570.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+        <LI>Next message: <A HREF="001565.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1572">[ date ]</a>
+              <a href="thread.html#1572">[ thread ]</a>
+              <a href="subject.html#1572">[ subject ]</a>
+              <a href="author.html#1572">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ulrik,
+
+On 2015-01-22 14:57, Ulrik Günther wrote:
+
+&gt;&gt;<i> On Jan 22, 2015, at 2:51 PM, Johannes Schindelin 
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt; wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> We could (for lurkers, Ulrik speaks about a server dedicated to 
+</I>&gt;&gt;<i> building 
+</I>&gt;&gt;<i> and testing the software, say, every night). There is a Jenkins CI at 
+</I>&gt;&gt;<i> <A HREF="http://jenkins.imagej.net/">http://jenkins.imagej.net/</A> that Fiji and ImageJ use. We could easily 
+</I>&gt;&gt;<i> set 
+</I>&gt;&gt;<i> something up there.
+</I>&gt;&gt;<i> &gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> But we do not have any regression tests; therefore, the usefulness of 
+</I>&gt;&gt;<i> such a continuous integration is not yet large enough to merit the 
+</I>&gt;&gt;<i> huge 
+</I>&gt;&gt;<i> amount of work to get the continuous integration up and running *and* 
+</I>&gt;&gt;<i> to 
+</I>&gt;&gt;<i> keep it running.
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Well, until we have actual tests we could at least see whether it
+</I>&gt;<i> builds against the latest MicroManager, that’d be helpful to spot
+</I>&gt;<i> problems early on. For testing we could later add tests.
+</I>
+Sure. On the other hand, what we *really* need to test against is the 
+user installation as per the update site. And that requires regression 
+tests, otherwise we think all is right when it might well be thoroughly 
+broken.
+
+&gt;<i> I haven’t used Jenkins too deeply so far, but the setup of a
+</I>&gt;<i> Maven build with Travis is quite easy.
+</I>
+I know that. The same is true for Maven projects in Jenkins: New job, 
+type in the Git URL, build step &quot;Maven&quot;, done.
+
+So why do I say it is complicated?
+
+Because we depend on stuff that is not available via Maven repositories. 
+And worse, that stuff that is on Maven repositories is not necessarily 
+what is present on the OpenSPIM update site. And all that needs to be 
+cobbled together and... yep, you guessed it: regression-tested.
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001570.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+	<LI>Next message: <A HREF="001565.html">[OpenSPIM] Best practices for using a different camera?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1572">[ date ]</a>
+              <a href="thread.html#1572">[ thread ]</a>
+              <a href="subject.html#1572">[ subject ]</a>
+              <a href="author.html#1572">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

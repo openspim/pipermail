@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Stack%20at%20this%20Z%20plus%22%20SOLVED%21%21%21&In-Reply-To=%3COFC77A2144.C1602362-ONC1257C21.0041813C-C1257C21.0041814A%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001235.html">
+   <LINK REL="Next"  HREF="001237.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Stack%20at%20this%20Z%20plus%22%20SOLVED%21%21%21&In-Reply-To=%3COFC77A2144.C1602362-ONC1257C21.0041813C-C1257C21.0041814A%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Tue Nov 12 05:55:29 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001235.html">[OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!
+</A></li>
+        <LI>Next message: <A HREF="001237.html">[OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1236">[ date ]</a>
+              <a href="thread.html#1236">[ thread ]</a>
+              <a href="subject.html#1236">[ subject ]</a>
+              <a href="author.html#1236">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+I have tried to set the velocity of the Picard XY Stage-X/Y-Velocity using the Device/Property browser and I set the values to 10, but then when 
+I change the stage position using the SPIM plugin the actual velocity is 1 (if I click Refresh on the Device/Property browser then the values are updated
+to 1). Looks like the plugin set the properties Picard XY Stage-X-Velocity and Picard XY Stage-Y-Velocity to 1. That doesn't happen with the Picard Z Stage-Velocity
+since this property can be set from inside the plugin.
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; schrieb: -----
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+Von: Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+Datum: 11.11.2013 23:07
+Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: Re: &quot;Stack at this Z plus&quot; SOLVED!!!
+
+Hi Edgar,
+
+On 11/08/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> I am very glad to tell you that the problem was solved. Now everything works perfectly and no error files
+</I>&gt;<i> are generated.
+</I>I'm thrilled to hear it!
+
+
+On 11/08/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> I only would like to know how can I set the speed for the X and Y motors. I already
+</I>&gt;<i> tried using configuration settings in Micro-Manager adding a Group where I use the Picard XY Stage-X-Velocity
+</I>&gt;<i> and Picard XY Stage-Y-Velocity and set them to 10 but when moving the X and Y stage, the speed is always
+</I>&gt;<i> 1 so I don't know if this is right the way that the speed should be set.
+</I>As far as I know, the appropriate way to set the stage velocity is to click, from Micro-Manager: Tools -&gt; Device/Property Browser, scroll through the list looking for those two properties -- Picard XY Stage-X/Y-Velocity -- and set them as desired. (The mention of groups sounds like you might be specifying them as criteria in a pixel size configuration.) If this isn't working, it may be another localization glitch; please let me know.
+
+
+Thanks,
+Luke
+
+On 11/08/13, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> I am very glad to tell you that the problem was solved. Now everything works perfectly and no error files
+</I>&gt;<i> are generated. I only would like to know how can I set the speed for the X and Y motors. I already
+</I>&gt;<i> tried using configuration settings in Micro-Manager adding a Group where I use the Picard XY Stage-X-Velocity
+</I>&gt;<i> and Picard XY Stage-Y-Velocity and set them to 10 but when moving the X and Y stage, the speed is always
+</I>&gt;<i> 1 so I don't know if this is right the way that the speed should be set.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks a lot. :-)
+</I>&gt;<i> 
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> Edgar
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Fraunhofer-Institut für Produktionstechnologie IPT 
+</I>&gt;<i> Edgar Escobar Nieto 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Steinbachstraße 17 
+</I>&gt;<i> 52074 Aachen 
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> <A HREF="http://www.ipt.fraunhofer.de&#160;">http://www.ipt.fraunhofer.de </A>
+</I>&gt;<i> _________________________________________________________________________
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131112/3037629d/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20131112/3037629d/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001235.html">[OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!
+</A></li>
+	<LI>Next message: <A HREF="001237.html">[OpenSPIM] &quot;Stack at this Z plus&quot; SOLVED!!!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1236">[ date ]</a>
+              <a href="thread.html#1236">[ thread ]</a>
+              <a href="subject.html#1236">[ subject ]</a>
+              <a href="author.html#1236">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

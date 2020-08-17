@@ -1,0 +1,191 @@
+2016-11-17T15:21:35.608012 tid304 [IFO,LogManager] Enabled primary log file D:\mFiji\CoreLogs\CoreLog20161117T152135_pid2360.txt
+2016-11-17T15:21:35.608012 tid304 [IFO,App] User: Admin
+2016-11-17T15:21:35.608012 tid304 [IFO,App] Host: SPIM
+2016-11-17T15:21:35.608012 tid304 [IFO,App] MM Studio version: 1.4.18
+2016-11-17T15:21:35.608012 tid304 [IFO,App] MMCore version 5.0.3
+2016-11-17T15:21:35.608012 tid304 [IFO,App] Device API version 60, Module API version 10
+2016-11-17T15:21:35.608012 tid304 [IFO,App] Operating System: Windows 7 (amd64) 6.1
+2016-11-17T15:21:35.608012 tid304 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.6.0_31, 64-bit
+2016-11-17T15:21:35.639212 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmplugins/
+2016-11-17T15:21:35.639212 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Big.jar!/
+2016-11-17T15:21:35.701612 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\DataBrowser.jar!/
+2016-11-17T15:21:36.169613 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Recall.jar!/
+2016-11-17T15:21:36.185213 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\SPIMacquisition.jar!/
+2016-11-17T15:21:36.325614 tid2644 [IFO,App] Installing plugin org.micromanager.browser.Data_Browser...
+2016-11-17T15:21:36.325614 tid2644 [IFO,App] Error: Plugin [org.micromanager.browser.Data_Browser] has no menuName field
+2016-11-17T15:21:36.325614 tid2644 [IFO,App] org.micromanager.browser.Data_Browser fails to implement static String tooltipDescription.
+2016-11-17T15:21:36.325614 tid2644 [IFO,App] Installing plugin org.micromanager.recall.RecallPlugin...
+2016-11-17T15:21:36.325614 tid2644 [IFO,App] Installing plugin spim.SPIMAcquisition...
+2016-11-17T15:21:36.341214 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmplugins/Acquisition_Tools/
+2016-11-17T15:21:36.341214 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Acquisition_Tools\AcquireMultipleRegions.jar!/
+2016-11-17T15:21:36.434814 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Acquisition_Tools\Gaussian.jar!/
+2016-11-17T15:21:36.668814 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Acquisition_Tools\HCS.jar!/
+2016-11-17T15:21:36.778014 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Acquisition_Tools\IntelligentAcquisition.jar!/
+2016-11-17T15:21:36.871614 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Acquisition_Tools\MMTracker.jar!/
+2016-11-17T15:21:36.918415 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Acquisition_Tools\SlideExplorer.jar!/
+2016-11-17T15:21:36.980815 tid2644 [IFO,App] Installing plugin org.micromanager.acquiremultipleregions.AcquireMultipleRegions...
+2016-11-17T15:21:36.980815 tid2644 [IFO,App] Installing plugin GaussianTrack_...
+2016-11-17T15:21:36.980815 tid2644 [IFO,App] Installing plugin org.micromanager.hcs.SiteGenerator...
+2016-11-17T15:21:36.980815 tid2644 [IFO,App] Installing plugin org.micromanager.intelligentacquisition.IntelligentAcquisition...
+2016-11-17T15:21:36.980815 tid2644 [IFO,App] Installing plugin com.imaging100x.tracker.TrackerControl...
+2016-11-17T15:21:36.996415 tid2644 [IFO,App] Installing plugin org.micromanager.slideexplorer.SlideExplorerPlugin...
+2016-11-17T15:21:36.996415 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmplugins/Beta/
+2016-11-17T15:21:36.996415 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Beta\PixelCalibrator.jar!/
+2016-11-17T15:21:37.043215 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Beta\SlideExplorer2.jar!/
+2016-11-17T15:21:38.774818 tid304 [IFO,App] Waiting for plugins to finish loading...
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] Installing plugin org.micromanager.pixelcalibrator.PixelCalibratorPlugin...
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] Installing plugin org.micromanager.SlideExplorer2...
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] Error: Plugin [org.micromanager.SlideExplorer2] has no menuName field
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] org.micromanager.SlideExplorer2 fails to implement static String tooltipDescription.
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmplugins/Developer_Tools/
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Developer_Tools\ClojureEditor.jar!/
+2016-11-17T15:21:40.085220 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Developer_Tools\DLLAutoReloader.jar!/
+2016-11-17T15:21:40.194420 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Developer_Tools\SequenceBufferMonitor.jar!/
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] Installing plugin org.micromanager.clojureeditor.ClojureEditorPlugin...
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] Installing plugin org.micromanager.DLLAutoReloader...
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] Error: Plugin [org.micromanager.DLLAutoReloader] has no menuName field
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] org.micromanager.DLLAutoReloader fails to implement static String tooltipDescription.
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] Installing plugin org.micromanager.plugins.sequencebuffermonitor.SequenceBufferMonitor...
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmplugins/Device_Control/
+2016-11-17T15:21:40.210020 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\ASIdiSPIM.jar!/
+2016-11-17T15:21:40.334821 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\AutoLase.jar!/
+2016-11-17T15:21:40.475221 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\CRISP.jar!/
+2016-11-17T15:21:40.537621 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\MultiCamera.jar!/
+2016-11-17T15:21:40.584421 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\pgFocus.jar!/
+2016-11-17T15:21:40.709221 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\Projector.jar!/
+2016-11-17T15:21:40.787221 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Device_Control\StageControl.jar!/
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin org.micromanager.asidispim.ASIdiSPIM...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin ch.epfl.leb.autolase.AutoLasePlugin...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin org.micromanager.CRISP.CRISP...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin org.micromanager.multicamera.MultiCamera...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin edu.umassmed.pgfocus.pgFocus...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin org.micromanager.projector.ProjectorPlugin...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Installing plugin org.micromanager.stagecontrol.StageControl...
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmplugins/Image_Processing/
+2016-11-17T15:21:40.834021 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Image_Processing\ImageFlipper.jar!/
+2016-11-17T15:21:40.865221 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Image_Processing\MultiChannelShading.jar!/
+2016-11-17T15:21:40.990022 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmplugins\Image_Processing\SplitView.jar!/
+2016-11-17T15:21:41.036822 tid2644 [IFO,App] Installing plugin org.micromanager.newimageflipper.NewTaggedImageFlipper...
+2016-11-17T15:21:41.036822 tid2644 [IFO,App] Installing plugin org.micromanager.multichannelshading.MultiChannelShading...
+2016-11-17T15:21:41.036822 tid2644 [IFO,App] Installing plugin org.micromanager.splitview.SplitView...
+2016-11-17T15:21:41.083622 tid2644 [IFO,App] Added URL to system class loader: file:/D:/mFiji/mmautofocus/
+2016-11-17T15:21:41.083622 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmautofocus\MMAutofocus.jar!/
+2016-11-17T15:21:41.114822 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmautofocus\MMAutofocusDuo.jar!/
+2016-11-17T15:21:41.114822 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmautofocus\MMAutofocusTB.jar!/
+2016-11-17T15:21:41.130422 tid2644 [IFO,App] Added URL to system class loader: jar:file:D:\mFiji\mmautofocus\MMOughtaFocus.jar!/
+2016-11-17T15:21:41.177222 tid2644 [IFO,App] Installing autofocus plugin Autofocus...
+2016-11-17T15:21:41.177222 tid2644 [IFO,App] Installing autofocus plugin AutofocusDuo...
+2016-11-17T15:21:41.177222 tid2644 [IFO,App] Installing autofocus plugin AutofocusTB...
+2016-11-17T15:21:41.177222 tid2644 [IFO,App] Installing autofocus plugin OughtaFocus...
+2016-11-17T15:21:41.177222 tid304 [IFO,App] Finished waiting for plugins to load
+2016-11-17T15:21:41.239622 tid304 [IFO,Core] Did unload all devices
+2016-11-17T15:21:41.286422 tid304 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2016-11-17T15:21:41.380022 tid304 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2016-11-17T15:21:41.380022 tid304 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2016-11-17T15:21:41.380022 tid304 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2016-11-17T15:21:42.284824 tid304 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = OrcaFlash
+2016-11-17T15:21:42.300424 tid304 [IFO,Core] Did load device Cobolt from Cobolt; label = Cobolt
+2016-11-17T15:21:42.409624 tid304 [IFO,Core] Will initialize 6 devices
+2016-11-17T15:21:42.409624 tid304 [IFO,Core] Will initialize device COM3
+2016-11-17T15:21:42.425224 tid304 [IFO,Core] Did initialize device COM3
+2016-11-17T15:21:42.425224 tid304 [IFO,Core] Will initialize device Picard Twister
+2016-11-17T15:21:42.456424 tid304 [IFO,Core] Did initialize device Picard Twister
+2016-11-17T15:21:42.456424 tid304 [IFO,Core] Will initialize device Picard Z Stage
+2016-11-17T15:21:42.456424 tid304 [IFO,Core] Did initialize device Picard Z Stage
+2016-11-17T15:21:42.456424 tid304 [IFO,Core] Will initialize device Picard XY Stage
+2016-11-17T15:21:42.503224 tid304 [IFO,Core] Did initialize device Picard XY Stage
+2016-11-17T15:21:42.503224 tid304 [IFO,Core] Default xy stage set to Picard XY Stage
+2016-11-17T15:21:42.503224 tid304 [IFO,Core] Will initialize device OrcaFlash
+2016-11-17T15:21:46.012188 tid304 [IFO,Core] Did initialize device OrcaFlash
+2016-11-17T15:21:46.012188 tid304 [IFO,Core] Default camera set to OrcaFlash
+2016-11-17T15:21:46.012188 tid304 [IFO,Core] Will initialize device Cobolt
+2016-11-17T15:21:46.121194 tid304 [IFO,Core] Did initialize device Cobolt
+2016-11-17T15:21:46.121194 tid304 [IFO,Core] Default shutter set to Cobolt
+2016-11-17T15:21:46.121194 tid304 [IFO,Core] Finished initializing 6 devices
+2016-11-17T15:21:46.121194 tid304 [IFO,Core] Default camera set to OrcaFlash
+2016-11-17T15:21:46.121194 tid304 [IFO,Core] Default stage set to Picard Z Stage
+2016-11-17T15:21:46.240201 tid304 [IFO,Core] Did update system state cache
+2016-11-17T15:21:46.281203 tid304 [ERR,Core] Error occurred in device CMMCore::getShutterOpen(): Error in device "Cobolt": Invalid state (position) requested (12)
+2016-11-17T15:21:46.288204 tid304 [IFO,App] 
+                                  [       ] java.lang.Exception: Error in device "Cobolt": Invalid state (position) requested (12) in Thread[AWT-EventQueue-0,6,main]
+                                  [       ]   at mmcorej.MMCoreJJNI.CMMCore_getShutterOpen__SWIG_0(Native Method)
+                                  [       ]   at mmcorej.CMMCore.getShutterOpen(CMMCore.java:881)
+                                  [       ]   at org.micromanager.MMStudioMainFrame.updateGUI(MMStudioMainFrame.java:2555)
+                                  [       ]   at org.micromanager.MMStudioMainFrame.updateGUI(MMStudioMainFrame.java:2526)
+                                  [       ]   at org.micromanager.MMStudioMainFrame.initializeGUI(MMStudioMainFrame.java:2414)
+                                  [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:2877)
+                                  [       ]   at org.micromanager.MMStudioMainFrame.initializationSequence(MMStudioMainFrame.java:589)
+                                  [       ]   at org.micromanager.MMStudioMainFrame.access$100(MMStudioMainFrame.java:176)
+                                  [       ]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:477)
+                                  [       ]   at java.awt.AWTEventMulticaster.windowOpened(Unknown Source)
+                                  [       ]   at java.awt.Window.processWindowEvent(Unknown Source)
+                                  [       ]   at javax.swing.JFrame.processWindowEvent(Unknown Source)
+                                  [       ]   at java.awt.Window.processEvent(Unknown Source)
+                                  [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                  [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                  [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                  [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                  [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                  [       ]   at java.awt.EventQueue.access$000(Unknown Source)
+                                  [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                  [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                  [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                  [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                  [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                  [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                  [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                  [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                  [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                  [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2016-11-17T15:21:46.338207 tid304 [IFO,App] Startup script file (D:\mFiji\MMStartup.bsh) not present.
+2016-11-17T15:44:45.949116 tid304 [IFO,App] Stop called in LivemodeTimer, true
+2016-11-17T15:44:55.108640 tid4064 [ERR,Core] Error occurred in device CMMCore::getShutterOpen(): Error in device "Cobolt": Invalid state (position) requested (12)
+2016-11-17T15:44:55.110640 tid3088 [IFO,App] Acquisition failed.
+                                   [       ] java.lang.RuntimeException: java.lang.Exception: Error in device "Cobolt": Invalid state (position) requested (12) in Thread[clojure-agent-send-off-pool-0,6,main]
+                                   [       ]   at clojure.lang.Util.runtimeException(Util.java:165)
+                                   [       ]   at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:97)
+                                   [       ]   at clojure.lang.Reflector.invokeNoArgInstanceMember(Reflector.java:316)
+                                   [       ]   at org.micromanager.acq_engine$prepare_state.invoke(acq_engine.clj:643)
+                                   [       ]   at org.micromanager.acq_engine$run_acquisition.invoke(acq_engine.clj:740)
+                                   [       ]   at org.micromanager.acq_engine$run$fn__1408.invoke(acq_engine.clj:896)
+                                   [       ]   at clojure.lang.AFn.run(AFn.java:24)
+                                   [       ]   at java.lang.Thread.run(Unknown Source)
+                                   [       ] Caused by: java.lang.Exception: Error in device "Cobolt": Invalid state (position) requested (12)
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_getShutterOpen__SWIG_0(Native Method)
+                                   [       ]   at mmcorej.CMMCore.getShutterOpen(CMMCore.java:881)
+                                   [       ]   at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                                   [       ]   at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+                                   [       ]   at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+                                   [       ]   at java.lang.reflect.Method.invoke(Unknown Source)
+                                   [       ]   at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:92)
+                                   [       ]   at clojure.lang.Reflector.invokeNoArgInstanceMember(Reflector.java:316)
+                                   [       ]   at org.micromanager.acq_engine$prepare_state.invoke(acq_engine.clj:643)
+                                   [       ]   at org.micromanager.acq_engine$run_acquisition.invoke(acq_engine.clj:740)
+                                   [       ]   at org.micromanager.acq_engine$run$fn__1408.invoke(acq_engine.clj:896)
+                                   [       ]   at clojure.lang.AFn.run(AFn.java:24)
+                                   [       ]   at java.lang.Thread.run(Unknown Source)
+2016-11-17T15:44:55.161643 tid4064 [IFO,App] Acquisition cleanup failed.
+                                   [       ] java.lang.IllegalArgumentException in Thread[AcquisitionEngine2010 Thread (Clojure),6,main]
+                                   [       ]   at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                                   [       ]   at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+                                   [       ]   at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+                                   [       ]   at java.lang.reflect.Method.invoke(Unknown Source)
+                                   [       ]   at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:92)
+                                   [       ]   at clojure.lang.Reflector.invokeInstanceMethod(Reflector.java:30)
+                                   [       ]   at org.micromanager.acq_engine$cleanup$fn__1200.invoke(acq_engine.clj:672)
+                                   [       ]   at org.micromanager.acq_engine$cleanup.invoke(acq_engine.clj:663)
+                                   [       ]   at org.micromanager.acq_engine$run_acquisition.invoke(acq_engine.clj:750)
+                                   [       ]   at org.micromanager.acq_engine$run$fn__1408.invoke(acq_engine.clj:896)
+                                   [       ]   at clojure.lang.AFn.run(AFn.java:24)
+                                   [       ]   at java.lang.Thread.run(Unknown Source)
+2016-11-17T15:44:59.640899 tid1428 [IFO,App] 0 images stored in 4657 ms.
+2016-11-17T15:45:05.502234 tid304 [IFO,App] Stop called in LivemodeTimer, true
+2016-11-17T15:45:05.945647 tid304 [IFO,Core] Did unload all devices
+2016-11-17T15:45:05.945647 tid304 [IFO,Core] System reset
+2016-11-17T15:45:05.945647 tid304 [IFO,Core] Core session ended

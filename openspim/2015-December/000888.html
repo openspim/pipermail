@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 7
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2032%2C%20Issue%207&In-Reply-To=%3C63350934-79C8-43C1-99ED-AE15664008A1%40cores.utah.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000886.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM Digest, Vol 32, Issue 7</H1>
+    <B>Michael Redd</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20Digest%2C%20Vol%2032%2C%20Issue%207&In-Reply-To=%3C63350934-79C8-43C1-99ED-AE15664008A1%40cores.utah.edu%3E"
+       TITLE="[OpenSPIM] OpenSPIM Digest, Vol 32, Issue 7">mredd at cores.utah.edu
+       </A><BR>
+    <I>Tue Dec 22 12:45:46 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000886.html">[OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#888">[ date ]</a>
+              <a href="thread.html#888">[ thread ]</a>
+              <a href="subject.html#888">[ subject ]</a>
+              <a href="author.html#888">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I don&#8217;t think that the Openspim plugin is capable of two channels. If it is I would like to know how. I use the Multidimensional acquisition window from micro-manager to handle my two channel, z stack, time-lapse acquisitions. You set up the channels&#8212;red and green&#8212; in the configuration settings of micro-manager. The group can be called channels and consists of two presets&#8212;red and green. The important parameter for the group is the core shutter. For the red channel it is your green laser and for the green channel it is your blue laser. When you open the multi-dimensional acquisition window there will be a channel section of the window. There is a drop down tab called &#8220;channel group&#8221; which you need to specify the channel configuration group that you set up. Then press the new button on the right to add the red and green channels. You can add the color in the table and the exposure time for each channel. It is a really straightforward multi-dimensional acquisition window once you learn how to use it. I hope this helps. I could send you screen shots if necessary.
+
+cheers
+mike
+&gt;<i> On Dec 22, 2015, at 11:00 AM, <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Send OpenSPIM mailing list submissions to
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i> 
+</I>&gt;<i>   1. Re: OpenSPIM Digest, Vol 32, Issue 5 (Anthony, Neil)
+</I>&gt;<i>   2. Re: Running SPIMAcquisition Code in Netbeans (Anthony, Neil)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 1
+</I>&gt;<i> Date: Tue, 22 Dec 2015 04:11:33 +0000
+</I>&gt;<i> From: &quot;Anthony, Neil&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt;
+</I>&gt;<i> To: Michael Redd &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">mredd at cores.utah.edu</A>&gt;, &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot;
+</I>&gt;<i> 	&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;<i> Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+</I>&gt;<i> Message-ID:
+</I>&gt;<i> 	&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">CO2PR05MB681FC11314FA37BD36762CAECE50 at CO2PR05MB681.namprd05.prod.outlook.com</A>&gt;
+</I>&gt;<i> 	
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;us-ascii&quot;
+</I>&gt;<i> 
+</I>&gt;<i> Hi Mike, thanks for that info.
+</I>&gt;<i> 
+</I>&gt;<i> Can you please tell me if it's possible to use the presets in the OpenSPIM plugin?  For example, can I setup some presets for red channel and green channel and then get OpenSPIM switch between during the acquisition?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks
+</I>&gt;<i> Neil
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Michael Redd
+</I>&gt;<i> Sent: Monday, December 21, 2015 11:20 AM
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+</I>&gt;<i> 
+</I>&gt;<i> The Stradus is not integrated with the Openspim plugin so power cannot be controlled by the slider. You can control the power using micromanager presets: one to turn on the Laser and another to set the power level. I am not sure why you need to turn the laser on before changing the power level, but in my experience that is what you need to do. Email me if you need further details.
+</I>&gt;<i> 
+</I>&gt;<i> cheers
+</I>&gt;<i> mike
+</I>&gt;&gt;<i> On Dec 19, 2015, at 11:00 AM, <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Send OpenSPIM mailing list submissions to
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> You can reach the person managing the list at
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;&gt;<i> than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Today's Topics:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  1. Plugin Power Control (Anthony, Neil)
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> ----------------------------------------------------------------------
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Message: 1
+</I>&gt;&gt;<i> Date: Fri, 18 Dec 2015 18:42:21 +0000
+</I>&gt;&gt;<i> From: &quot;Anthony, Neil&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt;
+</I>&gt;&gt;<i> To: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;&gt;<i> Subject: [OpenSPIM] Plugin Power Control
+</I>&gt;&gt;<i> Message-ID:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">CO2PR05MB681C3681C7F827CCDA4BF8FECE10 at CO2PR05MB681.namprd05.prod.outl</A>
+</I>&gt;&gt;<i> ook.com&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Content-Type: text/plain; charset=&quot;us-ascii&quot;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Hi all,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Has anybody got any experience with the power control slider not working when connected to a Stradus laser over a COM port?  I have made a short unlisted YouTube to show what's happening and save me a few words here:
+</I>&gt;&gt;<i> <A HREF="https://www.youtube.com/watch?v=2JEiMHxS69w">https://www.youtube.com/watch?v=2JEiMHxS69w</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Key points:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> -          I cannot control the power of the active shutter using the power slider - it jumps back to zero
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> -          When changing through the device controller (which works as it should on the laser itself) it shows what looks like a multiplication factor gone wrong somewhere on the slider.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> -          At certain values the slider value jumps back and forth, which is strange
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> -          It only works for one of the lasers.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Any thoughts would be much appreciated.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Thanks
+</I>&gt;&gt;<i> Neil
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> ________________________________
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> This e-mail message (including any attachments) is for the sole use of
+</I>&gt;&gt;<i> the intended recipient(s) and may contain confidential and privileged
+</I>&gt;&gt;<i> information. If the reader of this message is not the intended
+</I>&gt;&gt;<i> recipient, you are hereby notified that any dissemination,
+</I>&gt;&gt;<i> distribution or copying of this message (including any attachments) is
+</I>&gt;&gt;<i> strictly prohibited.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> If you have received this message in error, please contact the sender
+</I>&gt;&gt;<i> by reply e-mail message and destroy all copies of the original message
+</I>&gt;&gt;<i> (including attachments).
+</I>&gt;&gt;<i> -------------- next part -------------- An HTML attachment was
+</I>&gt;&gt;<i> scrubbed...
+</I>&gt;&gt;<i> URL:
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/">http://openspim.org/pipermail/openspim/attachments/20151218/f1752849/</A>
+</I>&gt;&gt;<i> attachment-0001.html&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> ------------------------------
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> End of OpenSPIM Digest, Vol 32, Issue 5
+</I>&gt;&gt;<i> ***************************************
+</I>&gt;<i> 
+</I>&gt;<i> Michael Redd
+</I>&gt;<i> Imaging Specialist
+</I>&gt;<i> Cell Imaging Core Facility
+</I>&gt;<i> University of Utah
+</I>&gt;<i> Radiobiology Bldg, Room 48,
+</I>&gt;<i> 30 N 2030 E, Salt Lake City, UT 84112
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">michael.redd at hci.utah.edu</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i> ________________________________
+</I>&gt;<i> 
+</I>&gt;<i> This e-mail message (including any attachments) is for the sole use of
+</I>&gt;<i> the intended recipient(s) and may contain confidential and privileged
+</I>&gt;<i> information. If the reader of this message is not the intended
+</I>&gt;<i> recipient, you are hereby notified that any dissemination, distribution
+</I>&gt;<i> or copying of this message (including any attachments) is strictly
+</I>&gt;<i> prohibited.
+</I>&gt;<i> 
+</I>&gt;<i> If you have received this message in error, please contact
+</I>&gt;<i> the sender by reply e-mail message and destroy all copies of the
+</I>&gt;<i> original message (including attachments).
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 2
+</I>&gt;<i> Date: Tue, 22 Dec 2015 04:38:43 +0000
+</I>&gt;<i> From: &quot;Anthony, Neil&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt;
+</I>&gt;<i> To: &quot;Anthony, Neil&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at emory.edu</A>&gt;, &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot;
+</I>&gt;<i> 	&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;<i> Subject: Re: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</I>&gt;<i> Message-ID:
+</I>&gt;<i> 	&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">CO2PR05MB681F529BB001DE1FC43539FECE50 at CO2PR05MB681.namprd05.prod.outlook.com</A>&gt;
+</I>&gt;<i> 	
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;us-ascii&quot;
+</I>&gt;<i> 
+</I>&gt;<i> Hi all.  I understand this is a very specific area, and as such understand the support for which will be limited.  I'll continue to post my steps and progress for future reference.
+</I>&gt;<i> 
+</I>&gt;<i> I realized that I needed to right click and run the SPIMtestDrive file (newb trying to run the main acquisition part of the code).
+</I>&gt;<i> 
+</I>&gt;<i> It runs, pops up the &quot;Welcome to Micro-Manager&quot; window to fill out my details, after which it throws a &quot;Micro-Manager Error&quot; of:
+</I>&gt;<i> Error: Failed to load the MMCoreJ_wrap native library
+</I>&gt;<i> Mmcorj.MMCoreJJNI.swig_module_init()V
+</I>&gt;<i> 
+</I>&gt;<i> In the output window I see the text pasted below.  I've read that it might be a 32 to 64 bit issue, but not sure how to proceed.  I have JDK 32 and 64 bit installed.  I've tried creating an environment parameter for JAVA_HOME as C:\Program Files (x86)\Java\jre7 as suggested in a really old post, but still no joy.
+</I>&gt;<i> 
+</I>&gt;<i> Any help would be much appreciated.
+</I>&gt;<i> Thanks
+</I>&gt;<i> Neil
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Netbeans Output Window:
+</I>&gt;<i> 
+</I>&gt;<i> cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; &quot;JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80&quot; cmd /c &quot;\&quot;\&quot;C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\&quot; -Dexec.args=\&quot;-classpath %classpath SPIMTestDrive\&quot; -Dexec.executable=\&quot;C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\&quot; -Dexec.classpathScope=test -Dmaven.ext.class.path=\&quot;C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\&quot; -Dfile.encoding=UTF-8 --errors -e org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\&quot;&quot;
+</I>&gt;<i> Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+</I>&gt;<i> Error stacktraces are turned on.
+</I>&gt;<i> Scanning for projects...
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------------------
+</I>&gt;<i> Building SPIMAcquisition 1.0.1-SNAPSHOT
+</I>&gt;<i> ------------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> --- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+</I>&gt;<i> C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target
+</I>&gt;<i> 
+</I>&gt;<i> java.lang.ClassNotFoundException: org.micromanager.AcquisitionEngine2010 in Thread[Pipeline Class loading thread,6,main]
+</I>&gt;<i> ... (let me know if you need the extra &quot;at&quot; lines)
+</I>&gt;<i> 
+</I>&gt;<i> Failed to load the MMCoreJ_wrap native library
+</I>&gt;<i> java.lang.UnsatisfiedLinkError: mmcorej.MMCoreJJNI.swig_module_init()V in Thread[AWT-EventQueue-0,6,main]
+</I>&gt;<i> ...
+</I>&gt;<i> 
+</I>&gt;<i> java.lang.NullPointerException in Thread[AWT-EventQueue-0,6,main]
+</I>&gt;<i> ...
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------------------------------------------------
+</I>&gt;<i> BUILD SUCCESS
+</I>&gt;<i> ------------------------------------------------------------------------
+</I>&gt;<i> Total time: 10.078s
+</I>&gt;<i> Finished at: Mon Dec 21 23:31:26 EST 2015
+</I>&gt;<i> Final Memory: 11M/222M
+</I>&gt;<i> ------------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Anthony, Neil
+</I>&gt;<i> Sent: Thursday, December 17, 2015 10:46 PM
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</I>&gt;<i> 
+</I>&gt;<i> Hi guys,
+</I>&gt;<i> 
+</I>&gt;<i> I've gotten the following installed on the microscope controller PC (fresh Win7 64bit install):
+</I>&gt;<i> - Netbeans 8.1
+</I>&gt;<i> - JDK 1.7.0_80 (unchecking the open JRE option, assuming that my JRE 1.8.0_66 is all I need for my browser) (I've installed both 32 and 64 bit versions of both).
+</I>&gt;<i> -  OpenSPIM-20150427 extracted
+</I>&gt;<i> 
+</I>&gt;<i> I created a GIT account, watched a few tutorials and have the gist for now - I'll come back to that once I get to understanding where I'm going to start making changes.  I downloaded a clone, Maven appeared to download all the required files when I clicked Resolve Issues (initially shows as [unloadable]).  When I Clean and Build it looks to build ok.  When I try to Run it gives the following exception:
+</I>&gt;<i> 
+</I>&gt;<i> Exception in thread &quot;main&quot; java.lang.NoClassDefFoundError: bsh/EvalError at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+</I>&gt;<i> 
+</I>&gt;<i> I've attached the full output window with -e and -X settings in place (sorry if too verbose, I can provide other details if needed).
+</I>&gt;<i> 
+</I>&gt;<i> I thought there might be changes in the master repo, so I performed a pull, and on inspecting the differences it appears some changes has been made, but still I get the same error on running the code.  That's assuming I have incorporated those changes.  Does a pull automatically merge with my original clone?
+</I>&gt;<i> I'm using the git options via Netbeans.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks in advance for your time.
+</I>&gt;<i> Neil
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ________________________________
+</I>&gt;<i> 
+</I>&gt;<i> This e-mail message (including any attachments) is for the sole use of the intended recipient(s) and may contain confidential and privileged information. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this message (including any attachments) is strictly prohibited.
+</I>&gt;<i> 
+</I>&gt;<i> If you have received this message in error, please contact the sender by reply e-mail message and destroy all copies of the original message (including attachments).
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> End of OpenSPIM Digest, Vol 32, Issue 7
+</I>&gt;<i> ***************************************
+</I>
+Michael Redd
+Imaging Specialist
+Cell Imaging Core Facility
+University of Utah
+Radiobiology Bldg, Room 48, 
+30 N 2030 E, Salt Lake City, UT 84112
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">michael.redd at hci.utah.edu</A>
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000886.html">[OpenSPIM] OpenSPIM Digest, Vol 32, Issue 5
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#888">[ date ]</a>
+              <a href="thread.html#888">[ thread ]</a>
+              <a href="subject.html#888">[ subject ]</a>
+              <a href="author.html#888">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

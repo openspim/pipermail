@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] z-motor communication problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20z-motor%20communication%20problem&In-Reply-To=%3C95646A35663E8442A8E21E0DBCED83877319E2E0%40HCI-EX-MB1.hci.utah.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001508.html">
+   <LINK REL="Next"  HREF="001510.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] z-motor communication problem</H1>
+    <B>Michael Redd</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20z-motor%20communication%20problem&In-Reply-To=%3C95646A35663E8442A8E21E0DBCED83877319E2E0%40HCI-EX-MB1.hci.utah.edu%3E"
+       TITLE="[OpenSPIM] z-motor communication problem">Michael.Redd at hci.utah.edu
+       </A><BR>
+    <I>Mon Oct  6 17:59:04 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001508.html">[OpenSPIM] Z motor problem
+</A></li>
+        <LI>Next message: <A HREF="001510.html">[OpenSPIM] z-motor communication problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1509">[ date ]</a>
+              <a href="thread.html#1509">[ thread ]</a>
+              <a href="subject.html#1509">[ subject ]</a>
+              <a href="author.html#1509">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I have been struggling with fiji failing to communicate with my Picard Z-motor. ImageJ and micromanager can drive the stage just fine. I managed to get fiji to communicate with my Picard Z motor by replacing the openspim fiji mm Picard stage driver with the Picard driver from micromanager 1.4 in a windows 7 machine. (This does not work with windows xp 32.) Unfortunately I now get another error: &quot;Line 8: Device COM1, Serial Manager, COM1 The specified label &quot;COM1&quot; is already in use&quot;. Can anyone help me? Here is a core log
+
+2014-10-06T15:43:27.161040 tid2364 [IFO,LogManager] Enabled primary log file C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\CoreLogs\CoreLog20141006T154327_pid1088.txt
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] User: SPIM-7
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Host: SPIM-7-PC
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] MM Studio version: 1.4.x dev
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] MMCore version 4.0.4
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Device API version 60, Module API version 10
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Operating System: Windows 7 (x86) 6.1
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.7.0_67, 32-bit
+2014-10-06T15:43:27.410640 tid2072 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin Autofocus
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did unload all devices
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device COM1 from SerialManager; label = COM1
+2014-10-06T15:43:29.859844 tid2364 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label &quot;COM1&quot; is already in use
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = HamamatsuHam_DCAM
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device VLTStradus from Stradus; label = VLTStradus
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize 6 devices
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device COM1
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Did initialize device COM1
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Will initialize device VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Did initialize device VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Default shutter set to VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Will initialize device Picard Twister
+2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Did initialize device Picard Twister
+2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Will initialize device Picard Z Stage
+2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Did initialize device Picard Z Stage
+2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Will initialize device Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Did initialize device Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default xy stage set to Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Finished initializing 6 devices
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2014-10-06T15:43:32.226971 tid2364 [IFO,App]
+                                   [       ] java.lang.Exception: Line 8: Device,COM1,SerialManager,COM1
+                                   [       ] The specified label &quot;COM1&quot; is already in use
+                                   [       ]
+                                   [       ]  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                   [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:313)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:3151)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$2200(MMStudioMainFrame.java:157)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:560)
+                                   [       ]   at java.awt.AWTEventMulticaster.windowOpened(Unknown Source)
+                                   [       ]   at java.awt.Window.processWindowEvent(Unknown Source)
+                                   [       ]   at javax.swing.JFrame.processWindowEvent(Unknown Source)
+                                   [       ]   at java.awt.Window.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$200(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2014-10-06T15:43:41.510502 tid2364 [IFO,Core] Did update system state cache
+2014-10-06T15:43:41.544504 tid2364 [IFO,App] Startup script file (C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\MMStartup.bsh) not present.
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Did unload all devices
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] System reset
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Core session ended
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001508.html">[OpenSPIM] Z motor problem
+</A></li>
+	<LI>Next message: <A HREF="001510.html">[OpenSPIM] z-motor communication problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1509">[ date ]</a>
+              <a href="thread.html#1509">[ thread ]</a>
+              <a href="subject.html#1509">[ subject ]</a>
+              <a href="author.html#1509">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] 64-bit Fiji Memory Limit Issue
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%2064-bit%20Fiji%20Memory%20Limit%20Issue&In-Reply-To=%3C0a1b2ae3caf19ed5b554930dcd783ddd%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001661.html">
+   <LINK REL="Next"  HREF="001663.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] 64-bit Fiji Memory Limit Issue</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%2064-bit%20Fiji%20Memory%20Limit%20Issue&In-Reply-To=%3C0a1b2ae3caf19ed5b554930dcd783ddd%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] 64-bit Fiji Memory Limit Issue">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Tue Apr 21 09:38:13 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001661.html">[OpenSPIM] 64-bit Fiji Memory Limit Issue
+</A></li>
+        <LI>Next message: <A HREF="001663.html">[OpenSPIM] Automatic builds
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1662">[ date ]</a>
+              <a href="thread.html#1662">[ thread ]</a>
+              <a href="subject.html#1662">[ subject ]</a>
+              <a href="author.html#1662">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Tom,
+
+On 2015-04-21 14:28, Roberts, Thomas wrote:
+
+&gt;<i> So, I have mFiji located on my desktop.
+</I>
+Unfortunately I cannot support mFiji. It is unclear from which sources 
+it was built/put together, and whether those sources are available to be 
+to begin with.
+
+Having said that...
+
+&gt;<i> If I click into the Fiji window it says the following:
+</I>&gt;<i> 
+</I>&gt;<i> (Fiji Is Just) ImageJ 2.0.0-rc-29/1.49q; Java 1.6.0_31 [64-bit]; 11MB
+</I>&gt;<i> of 20000MB (&lt;1%).
+</I>
+Assuming that you use this 64-bit Fiji with the SPIM reconstruction, 
+please note that that plugin is a bit wasteful with resources, i.e. it 
+does not release memory necessarily as soon as it does not need it 
+anymore. I remember that we had problems to reconstruct some data in 
+Madison until we moved to a computer with 128GB (!!!).
+
+To verify that this could be the problem, I would suggest to monitor the 
+memory consumption by calling Plugins&gt;Utilities&gt;Monitor Memory... before 
+starting to process the data. It should be relatively obvious from the 
+monitor window and the log which steps in the reconstruction take that 
+much memory (if I am correct in my assumption that there is a memory 
+pseudo-leak, of course).
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001661.html">[OpenSPIM] 64-bit Fiji Memory Limit Issue
+</A></li>
+	<LI>Next message: <A HREF="001663.html">[OpenSPIM] Automatic builds
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1662">[ date ]</a>
+              <a href="thread.html#1662">[ thread ]</a>
+              <a href="subject.html#1662">[ subject ]</a>
+              <a href="author.html#1662">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Plugin update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Plugin%20update&In-Reply-To=%3C8e80694b79413fd56a5e25c8259ffeda%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001115.html">
+   <LINK REL="Next"  HREF="001117.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Plugin update</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Plugin%20update&In-Reply-To=%3C8e80694b79413fd56a5e25c8259ffeda%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Plugin update">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Aug 28 08:49:25 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001115.html">[OpenSPIM] beadscans
+</A></li>
+        <LI>Next message: <A HREF="001117.html">[OpenSPIM] Plugin update (again)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1116">[ date ]</a>
+              <a href="thread.html#1116">[ thread ]</a>
+              <a href="subject.html#1116">[ subject ]</a>
+              <a href="author.html#1116">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi everyone,
+
+ I've just uploaded a new version of the plugin to the Fiji update site. Some
+quick features:
+
+ - Rebuilt device interactions to be less dependent on specific
+devices/properties/et cetera
+ - Overhauled asynchronous output to be more reliable and transparent
+ - Added some rudimentary acquisition profiling, for the curious
+
+ As always, I do my best to make sure that the updates are free of any
+use-impairing bugs or issues. However, and especially with this update, this
+is not always possible. Therefore, if you have any project-critical imaging to
+do, please do not update until you have finished.
+
+ I mention this because this update completely revises the way the plugin
+interacts with Micro-Manager devices, letting us easily add new features and
+supported hardware. However, this also means that, for certain features, the
+plugin now expects a limited subset of devices, and might cause problems with
+others -- in particular, anyone not using the OpenSPIM 1.0 specification might
+run into trouble.
+
+ On the other hand, if you _don't_ have any project-critical imaging, I would
+greatly appreciate it if you could test the plugin on your setup. As I can
+personally only test the OpenSPIM 1.0 setup, I don't yet know if the plugin
+will operate seamlessly with variants on the setup. If you can, please test
+the new plugin and get back to me!
+
+ The rest of this e-mail describes the pros, cons, capabilities, and
+limitations of the new code, and might only be of interest if the update is
+giving you trouble (or if you're just curious about these sorts of things. ;-)
+).
+
+ Thanks,
+ Luke Stuyvenberg
+
+-------------------------
+
+The plugin should still work with any hardware compatible with Micro-Manager,
+but it will not be able to use any features not provided by the MM API. For
+example, it will not be able to determine the maximum position of most stages,
+and will be unable to control their velocity, or the laser power of most
+lasers. (These will need to be controlled another way, i.e. through the device
+property browser in Micro-Manager.)
+
+ _What it _can_ do_: The plugin knows the attributes (minimum, maximum, and
+step size) of Picard stages, and can control the Z-stage's velocity. It also
+knows the minimum and maximum laser power of Coherent Cube laser devices, and
+can control that.
+
+ _What it _should_ be able to do_: Additionally, it should be able to control
+the laser power of Cobolt laser devices (although the range is hard-coded to 0
+- 50 mW).
+
+ I don't mention cameras because, as yet, the plugin doesn't take advantage of
+any camera features not available through the MM API. As a result, it should
+be able to use any camera MM can use without trouble.
+
+ If your hardware is having problems with the update, feel free to e-mail the
+list with whatever issues you're running into. You can also add support for
+your device yourself: download our development environment from
+<A HREF="http://openspim.org/How_to_build_the_software">http://openspim.org/How_to_build_the_software</A> -- from there, take a look at
+plugins/SPIMAcquisition/src/main/java/spim/setup/PicardStage.java for an
+example of the code the new device manager runs on. I only ask that such
+daring individuals as do so eventually submit a pull request on github, or
+contact the list with their new code, so we can extend this support to
+everyone using the software.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130828/29561f6e/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20130828/29561f6e/attachment-0002.html</A>&gt;
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: message_1.1.txt
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130828/29561f6e/attachment-0002.txt">http://openspim.org/pipermail/openspim/attachments/20130828/29561f6e/attachment-0002.txt</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001115.html">[OpenSPIM] beadscans
+</A></li>
+	<LI>Next message: <A HREF="001117.html">[OpenSPIM] Plugin update (again)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1116">[ date ]</a>
+              <a href="thread.html#1116">[ thread ]</a>
+              <a href="subject.html#1116">[ subject ]</a>
+              <a href="author.html#1116">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

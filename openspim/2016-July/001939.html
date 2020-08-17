@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital scanning to reduce banding?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Follow-up%3A%20%5BOpen-SPIM%5D%20Is%20anyone%20using%20digital%0A%20scanning%20to%20reduce%20banding%3F&In-Reply-To=%3C2c879e73-c6fe-8ba7-c960-93b18ed80a53%40ipmc.cnrs.fr%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001938.html">
+   <LINK REL="Next"  HREF="001940.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital scanning to reduce banding?</H1>
+    <B>Frédéric BRAU</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Follow-up%3A%20%5BOpen-SPIM%5D%20Is%20anyone%20using%20digital%0A%20scanning%20to%20reduce%20banding%3F&In-Reply-To=%3C2c879e73-c6fe-8ba7-c960-93b18ed80a53%40ipmc.cnrs.fr%3E"
+       TITLE="[OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital scanning to reduce banding?">brau at ipmc.cnrs.fr
+       </A><BR>
+    <I>Tue Jul  5 16:49:30 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001938.html">[OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital	scanning to reduce banding?
+</A></li>
+        <LI>Next message: <A HREF="001940.html">[OpenSPIM] OpenSPIM update site not working?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1939">[ date ]</a>
+              <a href="thread.html#1939">[ thread ]</a>
+              <a href="subject.html#1939">[ subject ]</a>
+              <a href="author.html#1939">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Jan and Tim,
+
+Sorry to come into your discussions but I noticed your comment Jan 
+concerning this point : a) Double-sided illumination helps. Depending on 
+the sample you may want to do simultaneous or sequential double-sided 
+illumination. There are various ways of merging the two images.
+
+In our lab we built a home-made ultramicroscope (and reproduce an 
+open-spim : 
+<A HREF="http://unice.fr/plateformes/mica/ressources/developpements-1/developpements">http://unice.fr/plateformes/mica/ressources/developpements-1/developpements</A>) 
+and I was wondering about the best method to fuse images taken from the 
+left+those taken from the right from our ultramicroscope (without any 
+rotation). At the moment we only do averaging which maybe not the best 
+solution, I suppose. Do you know a paper mentionning the different ways 
+to do image fusion, or any advice about that (I also knew about a method 
+consisting to cut the image in 3 part, but I don't really remember all 
+the steps)?
+
+Thanks in advance,
+
+Best regards,
+
+Frédéric
+
+
+Le 05/07/2016 à 20:35, Jan Huisken a écrit :
+&gt;<i> Hi Tim,
+</I>&gt;<i>
+</I>&gt;<i> great! I like your setup.
+</I>&gt;<i>
+</I>&gt;<i> One remark to the last figure caption in your document: You need to 
+</I>&gt;<i> adjust the amplitude to get the maximum efficiency of the mSPIM. You 
+</I>&gt;<i> start with a small amplitude and increase it until the light sheet 
+</I>&gt;<i> intensity (and fluorescence) drops. Now you have found the amplitude 
+</I>&gt;<i> where you pivot the sheet as much as the NA of your illumination lens 
+</I>&gt;<i> allows and you are getting the best performance. Going any further, 
+</I>&gt;<i> the beam will be cut off and you loose laser power.
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i> Jan
+</I>&gt;<i>
+</I>&gt;&gt;<i> On Jul 5, 2016, at 3:18 PM, Feinstein, Timothy N &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at PITT.EDU</A> 
+</I>&gt;&gt;<i> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at PITT.EDU</A>&gt;&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi folks,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Many thanks for your help.  After much testing I have concluded that 
+</I>&gt;&gt;<i> anti-striping along the lines of Huisken &amp; Stainier (2007) is 
+</I>&gt;&gt;<i> extremely important for imaging large structures like a zebrafish 
+</I>&gt;&gt;<i> embryo.  This adds significant complexity and cost (~$2,000) to the 
+</I>&gt;&gt;<i> basic openSPIM design but in my opinion it makes the instrument 
+</I>&gt;&gt;<i> dramatically more useful for segmentation and quantiative imaging. 
+</I>&gt;&gt;<i>  Importantly the fact that I could make it suggests that it is within 
+</I>&gt;&gt;<i> the engineering abilities of most people who can build an openSPIM. 
+</I>&gt;&gt;<i>  We have not started using it yet as our lasers are also out for an 
+</I>&gt;&gt;<i> upgrade; I will update the list when I have had a chance to test it.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I had to fill in some details from the 2007 paper on my own, so it is 
+</I>&gt;&gt;<i> likely that more elegant/less kludgy designs exist.  Still, this 
+</I>&gt;&gt;<i> guide I wrote for our group may be useful for those thinking of 
+</I>&gt;&gt;<i> adding anti-striping in the future.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0">https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> All the best,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Tim
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Timothy Feinstein, Ph.D.
+</I>&gt;&gt;<i> Research Scientist
+</I>&gt;&gt;<i> University of Pittsburgh Department of Developmental Biology
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> From:&lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> 
+</I>&gt;&gt;<i> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>&gt;&gt; on behalf of Timothy 
+</I>&gt;&gt;<i> Feinstein &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at pitt.edu</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at pitt.edu</A>&gt;&gt;
+</I>&gt;&gt;<i> Date:Tuesday, May 3, 2016 at 9:27 AM
+</I>&gt;&gt;<i> To:Jan Huisken &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A>&gt;&gt;
+</I>&gt;&gt;<i> Cc:&quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&quot; 
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&gt;
+</I>&gt;&gt;<i> Subject:Re: [OpenSPIM] Is anyone using digital scanning to reduce 
+</I>&gt;&gt;<i> banding?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Correction, I meant 0.05% tricaine.
+</I>&gt;&gt;<i> Best,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> T
+</I>&gt;&gt;<i> *From:*Jan Huisken [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A>]
+</I>&gt;&gt;<i> *Sent:*Friday, April 29, 2016 3:01 AM
+</I>&gt;&gt;<i> *To:*Feinstein, Timothy N
+</I>&gt;&gt;<i> *Cc:*<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;&gt;<i> *Subject:*Re: [OpenSPIM] Is anyone using digital scanning to reduce 
+</I>&gt;&gt;<i> banding?
+</I>&gt;&gt;<i> Dear Tim,
+</I>&gt;&gt;<i> I think you are mixing up two issue.
+</I>&gt;&gt;<i> *1. Getting rid of stripes.*
+</I>&gt;&gt;<i> Yes, you can do a little bit in post-processing but the stripes can 
+</I>&gt;&gt;<i> be quite complex and are not necessarily straight. Oftentimes you see 
+</I>&gt;&gt;<i> a lot of lensing and I do not think you can easily remove it with 
+</I>&gt;&gt;<i> image processing.
+</I>&gt;&gt;<i> a) Double-sided illumination helps. Depending on the sample you may 
+</I>&gt;&gt;<i> want to do simultaneous or sequential double-sided illumination. 
+</I>&gt;&gt;<i> There are various ways of merging the two images.
+</I>&gt;&gt;<i> b) A resonant mSPIM mirror is cheap and easy to integrate. You will 
+</I>&gt;&gt;<i> get rid of most stripes, but again this depends on the sample. The 
+</I>&gt;&gt;<i> details for a) and b) are in our Opt. Lett. paper (Huisken &amp; 
+</I>&gt;&gt;<i> Stainier, 2007). Basically, you are pivoting the light sheet around 
+</I>&gt;&gt;<i> the center of your field of view, e.g. with 1kHz. The stripes are 
+</I>&gt;&gt;<i> “washed out” during the exposure time of your camera. We use this on 
+</I>&gt;&gt;<i> most of our systems and it helps a lot to reduce stripes.
+</I>&gt;&gt;<i> c) Multi-view fusion can also help to some extent.
+</I>&gt;&gt;<i> *2. DSLM vs. SPIM*
+</I>&gt;&gt;<i> Yes, DSLM should also help reducing stripes but I have no experience 
+</I>&gt;&gt;<i> with that. Basically, your light sheet is not coherent anymore and 
+</I>&gt;&gt;<i> the sheet does not “interfere with itself”. However, the setup is 
+</I>&gt;&gt;<i> more expensive and requires you to power and control another element: 
+</I>&gt;&gt;<i> the galvo scanner to sweep the beam up and down. You need a proper 
+</I>&gt;&gt;<i> scan mirror and not just the cheap mSPIM mirror. The additional 
+</I>&gt;&gt;<i> benefit is that the resulting light sheet is more uniform than the 
+</I>&gt;&gt;<i> cropped Gaussian light sheet. However, you need to illuminate each 
+</I>&gt;&gt;<i> line with higher intensity which may result in saturation and worse 
+</I>&gt;&gt;<i> dynamic range. Obviously you need to wait for the scan and need to 
+</I>&gt;&gt;<i> synchronize your readout. Depending whether you have a global shutter 
+</I>&gt;&gt;<i> or rolling shutter camera you need to take some precaution.
+</I>&gt;&gt;<i> Best
+</I>&gt;&gt;<i> Jan
+</I>&gt;&gt;<i> —
+</I>&gt;&gt;<i> *Jan Huisken*
+</I>&gt;&gt;<i> /Head of Max Planck Research Group/
+</I>&gt;&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at PITT.EDU</A>
+</I>&gt;&gt;<i>     &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">tnf8 at PITT.EDU</A>&gt;&gt; wrote:
+</I>&gt;&gt;<i>     Hello all,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     I found the Selzer group's solution (Keller et al. 2013) quite
+</I>&gt;&gt;<i>     interesting
+</I>&gt;&gt;<i>     and would love to know if anyone had a positive experience doing
+</I>&gt;&gt;<i>     that.
+</I>&gt;&gt;<i>     The banding from my basic openSPIM is definitely a problem for
+</I>&gt;&gt;<i>     segmentation and analysis.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     As far as I can tell fixing the banding will mostly involve
+</I>&gt;&gt;<i>     buying a scan
+</I>&gt;&gt;<i>     mirror.  I don't have a quote yet for the Cambridge VM500
+</I>&gt;&gt;<i>     scanning mirror
+</I>&gt;&gt;<i>     that the Selzer group used but its ThorLabs equivalent (#GVS101?)
+</I>&gt;&gt;<i>     costs
+</I>&gt;&gt;<i>     about $1k.  That seems reasonable and not that hard for regular
+</I>&gt;&gt;<i>     folks to
+</I>&gt;&gt;<i>     implement.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     In related news I just noticed that the TeraStitcher plugin for
+</I>&gt;&gt;<i>     Vaa3D now
+</I>&gt;&gt;<i>     has an option to fight banding in light sheet data.  I have not
+</I>&gt;&gt;<i>     tested it
+</I>&gt;&gt;<i>     yet but potentially that feature could be useful.  I will just
+</I>&gt;&gt;<i>     post my
+</I>&gt;&gt;<i>     usual warning for folks trying TeraStitcher for the first time: it
+</I>&gt;&gt;<i>     stitches really well but it could be a hair more user-friendly.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     Best,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     Tim
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     Timothy Feinstein, Ph.D.
+</I>&gt;&gt;<i>     Research Scientist
+</I>&gt;&gt;<i>     University of Pittsburgh Department of Developmental Biology
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     _______________________________________________
+</I>&gt;&gt;<i>     OpenSPIM mailing list
+</I>&gt;&gt;<i>     <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;&gt;<i>     <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-- 
+Frédéric Brau &lt;mailto:%<A HREF="http://openspim.org/mailman/listinfo/openspim">20brau at ipmc.cnrs.fr</A>&gt;
+Institut de Pharmacologie Moléculaire et Cellulaire - UMR7275 CNRS/UNS 
+&lt;<A HREF="http://www.ipmc.cnrs.fr">http://www.ipmc.cnrs.fr</A>&gt;
+660, Route des Lucioles
+06560 VALBONNE
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme MICA: Microscopie Imagerie Côte d'Azur &lt;<A HREF="http://mica.unice.fr">http://mica.unice.fr</A>&gt;
+Réseau Technologique de Microscopie de Fluorescence Multidimensionnelle 
+&lt;<A HREF="http://rtmfm.cnrs.fr">http://rtmfm.cnrs.fr</A>&gt;
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160705/8d1c8945/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20160705/8d1c8945/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001938.html">[OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital	scanning to reduce banding?
+</A></li>
+	<LI>Next message: <A HREF="001940.html">[OpenSPIM] OpenSPIM update site not working?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1939">[ date ]</a>
+              <a href="thread.html#1939">[ thread ]</a>
+              <a href="subject.html#1939">[ subject ]</a>
+              <a href="author.html#1939">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

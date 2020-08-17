@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] MicroManager error when configure an andor camera
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20MicroManager%20error%20when%20configure%20an%20andor%20camera&In-Reply-To=%3CAM4PR03MB1475F9AB05B9082774A08092DDBA0%40AM4PR03MB1475.eurprd03.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000924.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] MicroManager error when configure an andor camera</H1>
+    <B>Windell, Dylan</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20MicroManager%20error%20when%20configure%20an%20andor%20camera&In-Reply-To=%3CAM4PR03MB1475F9AB05B9082774A08092DDBA0%40AM4PR03MB1475.eurprd03.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] MicroManager error when configure an andor camera">dw388 at exeter.ac.uk
+       </A><BR>
+    <I>Mon Feb 29 04:36:56 CST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000924.html">[OpenSPIM] MicroManager error when configure an andor camera
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#925">[ date ]</a>
+              <a href="thread.html#925">[ thread ]</a>
+              <a href="subject.html#925">[ subject ]</a>
+              <a href="author.html#925">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Zheng,
+
+I too use an Andor camera and also had problems in the beginning. I followed all the steps listed here first (<A HREF="http://openspim.org/64bit_OpenSPIM">http://openspim.org/64bit_OpenSPIM</A>). The drivers work if installed in the OpenSPIM directory and when loading into the config choose the Andor SDK option. The C-states can also be named slightly different in your BIOS settings depending on the make of your PC. The PCI card that Andor provide is essential, you need to run the camera through the card if you have a USB 3.0 model otherwise it definitely won&#8217;t load into the configuration.
+
+If you have done all these, I contacted the Andor support and they are extremely helpful in helping out. They also updated the camera firmware through a remote session.
+
+As for the update error, I find downloading a fresh OpenSPIM and updating from scratch sometimes helps.
+
+Kind regards,
+
+Dylan
+
+From: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of ?
+Sent: 29 February 2016 06:22
+To: openspim
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+
+Hi, all
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera can be used by its owned software correctly.
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>&gt;
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160229/f9e09756/attachment.html">http://openspim.org/pipermail/openspim/attachments/20160229/f9e09756/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000924.html">[OpenSPIM] MicroManager error when configure an andor camera
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#925">[ date ]</a>
+              <a href="thread.html#925">[ thread ]</a>
+              <a href="subject.html#925">[ subject ]</a>
+              <a href="author.html#925">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

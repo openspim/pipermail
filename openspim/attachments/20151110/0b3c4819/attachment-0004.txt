@@ -1,0 +1,63 @@
+Loading E:\4dpf_Brain_Imaging_20_beads_5step_140exp_3_angles\tiff\\spim_TL01_Angle0.tif
+r1 = 2.0
+r2 = 3.0
+threshold = 0.010126623325049877
+ChannelPattern: 
+Channels: (0)
+ChannelsToRegister: 
+ChannelsRegister: (0)
+ChannelsToFuse: 
+ChannelsFuse: (0)
+Version 0.55
+Using model: mpicbg.models.AffineModel3D
+(Tue Nov 10 14:17:28 GMT 2015): Starting Bead Extraction
+(Tue Nov 10 14:17:28 GMT 2015): Starting Integral Image based DOM Bead Extraction for spim_TL01_Angle0.tif
+(Tue Nov 10 14:17:28 GMT 2015): Opening 'E:\4dpf_Brain_Imaging_20_beads_5step_140exp_3_angles\tiff\spim_TL01_Angle0.tif' [ArrayContainerFactory]
+(Tue Nov 10 14:17:35 GMT 2015): Computing Integral Image
+(Tue Nov 10 14:17:39 GMT 2015): min intensity = 0.0, max intensity = 4095.0
+(Tue Nov 10 14:17:39 GMT 2015): Computing Difference-of-Mean
+(Tue Nov 10 14:17:44 GMT 2015): Extracting peaks
+(Tue Nov 10 14:18:00 GMT 2015): Subpixel localization using quadratic n-dimensional fit
+Found peaks (possible beads): 4571 in view spim_TL01_Angle0.tif
+(Tue Nov 10 14:18:01 GMT 2015): Starting Integral Image based DOM Bead Extraction for spim_TL01_Angle1.tif
+(Tue Nov 10 14:18:01 GMT 2015): Opening 'E:\4dpf_Brain_Imaging_20_beads_5step_140exp_3_angles\tiff\spim_TL01_Angle1.tif' [ArrayContainerFactory]
+(Tue Nov 10 14:18:15 GMT 2015): Computing Integral Image
+(Tue Nov 10 14:18:19 GMT 2015): min intensity = 0.0, max intensity = 4095.0
+(Tue Nov 10 14:18:19 GMT 2015): Computing Difference-of-Mean
+(Tue Nov 10 14:18:28 GMT 2015): Extracting peaks
+(Tue Nov 10 14:18:44 GMT 2015): Subpixel localization using quadratic n-dimensional fit
+Found peaks (possible beads): 2188 in view spim_TL01_Angle1.tif
+(Tue Nov 10 14:18:44 GMT 2015): Starting Integral Image based DOM Bead Extraction for spim_TL01_Angle2.tif
+(Tue Nov 10 14:18:44 GMT 2015): Opening 'E:\4dpf_Brain_Imaging_20_beads_5step_140exp_3_angles\tiff\spim_TL01_Angle2.tif' [ArrayContainerFactory]
+(Tue Nov 10 14:18:58 GMT 2015): Computing Integral Image
+(Tue Nov 10 14:19:01 GMT 2015): min intensity = 0.0, max intensity = 4095.0
+(Tue Nov 10 14:19:01 GMT 2015): Computing Difference-of-Mean
+(Tue Nov 10 14:19:12 GMT 2015): Extracting peaks
+(Tue Nov 10 14:19:31 GMT 2015): Subpixel localization using quadratic n-dimensional fit
+Found peaks (possible beads): 4981 in view spim_TL01_Angle2.tif
+Opening files took: 35 sec (29 %)
+Computation took: 87 sec (71 %)
+(Tue Nov 10 14:19:32 GMT 2015): Finished Bead Extraction
+(Tue Nov 10 14:19:32 GMT 2015): Starting Registration
+spim_TL01_Angle1.tif<->spim_TL01_Angle2.tif: Not enough correspondences found 3, should be at least 12
+spim_TL01_Angle0.tif<->spim_TL01_Angle1.tif: Not enough correspondences found 8, should be at least 12
+spim_TL01_Angle0.tif<->spim_TL01_Angle2.tif: Not enough correspondences found 8, should be at least 12
+spim_TL01_Angle0.tif (id = 0) has 0 correspondences in 0 other views.
+spim_TL01_Angle1.tif (id = 1) has 0 correspondences in 0 other views.
+spim_TL01_Angle2.tif (id = 2) has 0 correspondences in 0 other views.
+The total number of detections was: 11740
+The total number of correspondence candidates was: 19
+The total number of true correspondences is: 0
+Successfully optimized configuration of 0 tiles after 202 iterations:
+  average displacement: ?px
+  minimal displacement: 179,769,313,486,231,570,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000.000px
+  maximal displacement: 0.000px
+Optimizer Matrices
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle0.tif (id = 0) is not part of the structure of my view spim_TL01_Angle0.tif (id = 0)
+spim_TL01_Angle0.tif (id = 0): is not connected to any other tile!
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle1.tif (id = 1) is not part of the structure of my view spim_TL01_Angle1.tif (id = 1)
+spim_TL01_Angle1.tif (id = 1): is not connected to any other tile!
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle2.tif (id = 2) is not part of the structure of my view spim_TL01_Angle2.tif (id = 2)
+spim_TL01_Angle2.tif (id = 2): is not connected to any other tile!
+(Tue Nov 10 14:19:32 GMT 2015): Finished Registration
+Finished processing.

@@ -1,0 +1,2619 @@
+From arisi at unifesp.br  Thu Apr  2 13:11:01 2015
+From: arisi at unifesp.br (Gabriel Arisi)
+Date: Thu, 2 Apr 2015 15:11:01 -0300
+Subject: [OpenSPIM] T-SPIM and L-SPIM configuration
+Message-ID: <CAH+O61Hg750WVOUDjG86ZdqCyOeZh1eJVTsRz4mCRwNCtd9qZg@mail.gmail.com>
+
+Dear Spimmers,
+
+I recently got a grant approval to build what I believe is the first
+OpenSPIM system in Brazil.
+
+I would like to update the parts list since, for example, Coherent no
+longer produces Cube systems replaced by Obis systems.
+
+I also would like to show both T-SPIM and L-SPIM configurations in the
+parts list page. Of course the three lenses design chamber will have to be
+released by Pete Pitrone.
+
+Last but not least, reading Reynaud and colleagues commentary published
+this January on Nature I was taken aback by the information "that roughly
+50 OpenSPIM systems are being built around the world" and we have only 7
+listed on the wiki page. Is there any suggestion on how to improve the
+share of ideas and solutions on the openspim webpage and not only in this
+email list?
+
+Thanks all of you for the information sharing and hard work on developing
+the OpenSPIM.
+
+Best regards
+
+
+
+Gabriel Arisi, PhD
+
+Professor Adjunto de Fisiologia, Escola Paulista de Medicina
+Universidade Federal de S?o Paulo - UNIFESP
+
+Rua Pedro de Toledo 669, 3 andar, S?o Paulo, SP, BRASIL
+04039-032
+
++55 11 5576-4969
+
+CV <http://lattes.cnpq.br/7090787914873358>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150402/7e06f5c5/attachment.html>
+
+From aureliaomega at gmail.com  Fri Apr 17 06:42:48 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Fri, 17 Apr 2015 12:42:48 +0100
+Subject: [OpenSPIM] open SPIM acquisition error
+Message-ID: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+
+Hello,
+I have a new error this morning.  When I try to start multi-angle
+acquisition, I get the following Java console error:
+
+[WARNING] Couldd not load legacy launcher config file
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\ImageJ.cfg
+MMCoreJ.jar path =
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins\MMCoreJ.jar
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32
+C:\Users\ah659\Desktop\OPENSP~1
+C:\Users\ah659\Desktop\OPENSP~1\mm\win32
+java.lang.NoSuchMethodError:
+loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+    at spim.progacq.OMETIFFHandler.<init>(OMETIFFHandler.java:95)
+    at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1731)
+    at
+javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+    at
+javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+    at
+javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+    at
+javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+    at
+javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+    at java.awt.Component.processMouseEvent(Component.java:6289)
+    at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+    at java.awt.Component.processEvent(Component.java:6054)
+    at java.awt.Container.processEvent(Container.java:2041)
+    at java.awt.Component.dispatchEventImpl(Component.java:4652)
+    at java.awt.Container.dispatchEventImpl(Container.java:2099)
+    at java.awt.Component.dispatchEvent(Component.java:4482)
+    at
+java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+    at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+    at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+    at java.awt.Container.dispatchEventImpl(Container.java:2085)
+    at java.awt.Window.dispatchEventImpl(Window.java:2478)
+    at java.awt.Component.dispatchEvent(Component.java:4482)
+    at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+    at java.awt.EventQueue.access$000(EventQueue.java:85)
+    at java.awt.EventQueue$1.run(EventQueue.java:603)
+    at java.awt.EventQueue$1.run(EventQueue.java:601)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+    at java.awt.EventQueue$2.run(EventQueue.java:617)
+    at java.awt.EventQueue$2.run(EventQueue.java:615)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+    at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+    at
+java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+    at
+java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+    at
+java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+    at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+Live view works, but Snap does not complete.
+Anyone have an idea?
+Thanks,
+Aurelia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150417/d9d74c70/attachment.html>
+
+From aureliaomega at gmail.com  Fri Apr 17 09:56:00 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Fri, 17 Apr 2015 15:56:00 +0100
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+Message-ID: <CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+
+I can acquire a stack and save it to disk, but whenever I try to start
+acquisition with an output directory specified, I get the error.
+
+I installed the new 64 bit version, and all works fine except I get a
+similar error:
+
+java.lang.NoSuchMethodError:
+loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+    at spim.progacq.OMETIFFHandler.<init>(OMETIFFHandler.java:95)
+    at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1760)
+    at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+    at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+    at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+    at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+    at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown
+Source)
+    at java.awt.Component.processMouseEvent(Unknown Source)
+    at javax.swing.JComponent.processMouseEvent(Unknown Source)
+    at java.awt.Component.processEvent(Unknown Source)
+    at java.awt.Container.processEvent(Unknown Source)
+    at java.awt.Component.dispatchEventImpl(Unknown Source)
+    at java.awt.Container.dispatchEventImpl(Unknown Source)
+    at java.awt.Component.dispatchEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+    at java.awt.Container.dispatchEventImpl(Unknown Source)
+    at java.awt.Window.dispatchEventImpl(Unknown Source)
+    at java.awt.Component.dispatchEvent(Unknown Source)
+    at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+    at java.awt.EventQueue.access$000(Unknown Source)
+    at java.awt.EventQueue$1.run(Unknown Source)
+    at java.awt.EventQueue$1.run(Unknown Source)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.awt.EventQueue$2.run(Unknown Source)
+    at java.awt.EventQueue$2.run(Unknown Source)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.awt.EventQueue.dispatchEvent(Unknown Source)
+    at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+    at java.awt.EventDispatchThread.run(Unknown Source)
+
+Cheers
+
+
+On Fri, Apr 17, 2015 at 12:42 PM, Aurelia Honerkamp-Smith <
+aureliaomega at gmail.com> wrote:
+
+> Hello,
+> I have a new error this morning.  When I try to start multi-angle
+> acquisition, I get the following Java console error:
+>
+> [WARNING] Couldd not load legacy launcher config file
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\ImageJ.cfg
+> MMCoreJ.jar path =
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins\MMCoreJ.jar
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32
+> C:\Users\ah659\Desktop\OPENSP~1
+> C:\Users\ah659\Desktop\OPENSP~1\mm\win32
+> java.lang.NoSuchMethodError:
+> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+>     at spim.progacq.OMETIFFHandler.<init>(OMETIFFHandler.java:95)
+>     at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1731)
+>     at
+> javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+>     at
+> javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+>     at
+> javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+>     at
+> javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+>     at
+> javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+>     at java.awt.Component.processMouseEvent(Component.java:6289)
+>     at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+>     at java.awt.Component.processEvent(Component.java:6054)
+>     at java.awt.Container.processEvent(Container.java:2041)
+>     at java.awt.Component.dispatchEventImpl(Component.java:4652)
+>     at java.awt.Container.dispatchEventImpl(Container.java:2099)
+>     at java.awt.Component.dispatchEvent(Component.java:4482)
+>     at
+> java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+>     at
+> java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+>     at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+>     at java.awt.Container.dispatchEventImpl(Container.java:2085)
+>     at java.awt.Window.dispatchEventImpl(Window.java:2478)
+>     at java.awt.Component.dispatchEvent(Component.java:4482)
+>     at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+>     at java.awt.EventQueue.access$000(EventQueue.java:85)
+>     at java.awt.EventQueue$1.run(EventQueue.java:603)
+>     at java.awt.EventQueue$1.run(EventQueue.java:601)
+>     at java.security.AccessController.doPrivileged(Native Method)
+>     at
+> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+>     at
+> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+>     at java.awt.EventQueue$2.run(EventQueue.java:617)
+>     at java.awt.EventQueue$2.run(EventQueue.java:615)
+>     at java.security.AccessController.doPrivileged(Native Method)
+>     at
+> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+>     at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+>     at
+> java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+>     at
+> java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+>     at
+> java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+>     at
+> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+>     at
+> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+>     at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+>
+> Live view works, but Snap does not complete.
+> Anyone have an idea?
+> Thanks,
+> Aurelia
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150417/af4aa526/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Apr 17 10:02:39 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 17 Apr 2015 17:02:39 +0200
+Subject: [OpenSPIM] HiRes Picard stage: the solution!
+Message-ID: <op.xw8r2pn3ahhlbl@pc511-7cad.ibd>
+
+Hi,
+
+as I wrote previously, I have the new version of the Picard stage and I  
+had issues with the maximum available position being limited to 32 767  
+steps, and the slider in the plugin being limited to 9000 um. The solution  
+that works for me is:
+
+1) replace PiUSB.dll with the newest version from the Picard website -  
+this fixes the 32 767 steps problem
+2) I modified the SPIMAcquisition code so that the slider reflects the  
+values of Max set during device configuration (where you also set the  
+serial numbers). My code is currently here:
+https://github.com/openspim/SPIMAcquisition/compare/master...pawlowska:addMaxPropertyReading
+I assume that the max value you set during configuration is the maxiumum  
+number of STEPS (not um)
+
+maybe this helps somebody.
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 427
+
+
+From johannes.schindelin at gmx.de  Fri Apr 17 15:10:34 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 17 Apr 2015 22:10:34 +0200
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+	<CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+Message-ID: <dc488e7b4294380c74197b0d07984614@www.dscho.org>
+
+Hi Aurelia,
+
+On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+
+> java.lang.NoSuchMethodError:
+> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+
+It would appear as if OMERO might have broken Bio-Formats' 
+backwards-compatibility once again... Exceptions like this one mean that 
+the method setPixelsPhysicalSizeX(PositiveFloat) was available at 
+compile time but is no longer available at runtime.
+
+And indeed, it looks as if IMetadata by virtue of extending 
+ome.xml.meta.MetadataStore defines only the following 
+setPixelsPhysicalSizeX() method:
+
+   public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length, 
+int);
+
+I fear that we will have to update the SPIMAcquisition plugin in a hurry 
+to conform with the new Bio-Formats version that was so overzealously 
+uploaded to the Fiji update site despite breaking backwards 
+compatibility in a rather blatant way.
+
+My calendar is densely packed, though, so I have no idea when I will get 
+around to fix it (hint: help appreciated).
+
+Ciao,
+Johannes
+
+
+From guenther at mpi-cbg.de  Mon Apr 20 03:23:42 2015
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 20 Apr 2015 10:23:42 +0200
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <dc488e7b4294380c74197b0d07984614@www.dscho.org>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+	<CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+	<dc488e7b4294380c74197b0d07984614@www.dscho.org>
+Message-ID: <2D47F005-0963-4704-B2CC-ACD0D4044D0B@mpi-cbg.de>
+
+  Hello Aurelia and Johannes,
+
+
+I modified the OMETiffHandler to use the new Units API of BioFormats, you can find the changes at?https://github.com/skalarproduktraum/SPIMAcquisition/tree/OMEUnitFixes
+
+
+Question to Johannes: Do you want a pull request for that? The issue I?m currently having is that it works just fine in Fiji with the MM update site, but not with the latest MM nightly, as it brings an older ome-xml version. Suggestions?
+
+
+cheers,
+
+
+ulrik
+
+
+
+
+?
+Ulrik G?nther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab,?Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail:?guenther at mpi-cbg.de
+
+
+
+
+> On Apr 17, 2015, at 10:10 PM, Johannes Schindelin <johannes.schindelin at gmx.de> wrote:
+> 
+> 
+> Hi Aurelia,
+> 
+> 
+> On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+> 
+> 
+>> java.lang.NoSuchMethodError:
+>> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+>> 
+>> 
+>> 
+> 
+> 
+> It would appear as if OMERO might have broken Bio-Formats'?
+> backwards-compatibility once again... Exceptions like this one mean that?
+> the method setPixelsPhysicalSizeX(PositiveFloat) was available at?
+> compile time but is no longer available at runtime.
+> 
+> 
+> And indeed, it looks as if IMetadata by virtue of extending?
+> ome.xml.meta.MetadataStore defines only the following?
+> setPixelsPhysicalSizeX() method:
+> 
+> 
+> public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length,?
+> int);
+> 
+> 
+> I fear that we will have to update the SPIMAcquisition plugin in a hurry?
+> to conform with the new Bio-Formats version that was so overzealously?
+> uploaded to the Fiji update site despite breaking backwards?
+> compatibility in a rather blatant way.
+> 
+> 
+> My calendar is densely packed, though, so I have no idea when I will get?
+> around to fix it (hint: help appreciated).
+> 
+> 
+> Ciao,
+> Johannes
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150420/9e46453b/attachment.html>
+
+From johannes.schindelin at gmx.de  Mon Apr 20 04:26:49 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 20 Apr 2015 11:26:49 +0200
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <2D47F005-0963-4704-B2CC-ACD0D4044D0B@mpi-cbg.de>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+	<CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+	<dc488e7b4294380c74197b0d07984614@www.dscho.org>
+	<2D47F005-0963-4704-B2CC-ACD0D4044D0B@mpi-cbg.de>
+Message-ID: <cf359e135dae45adea047be9c310649b@www.dscho.org>
+
+Hi Ulrik,
+
+On 2015-04-20 10:23, Ulrik G?nther wrote:
+
+> Question to Johannes: Do you want a pull request for that?
+
+Whenever some code in OpenSPIM has been improved, or for that matter, in 
+any Open Source software I maintain, I want a Pull Request. Otherwise 
+the software would not improve but deteriorate, wouldn't it?
+
+So was that a trick question?
+
+> The issue I?m currently having is that it works just fine in Fiji with 
+> the MM
+> update site, but not with the latest MM nightly, as it brings an older
+> ome-xml version. Suggestions?
+
+My suggestion is not new.
+
+My suggestion is to finally work together on having *the same* software 
+versions in all OpenSPIM setups, by using the update site. We already 
+have a beautiful update site, but nobody took care so far to get it back 
+up-to-date, right? So now everybody and her dog has to work just as hard 
+as everybody else to get to a working state, and nobody benefits from 
+anybody else's work (the Pull Requests that have been opened and merged 
+have been a really nice exception).
+
+I know that it is typically highly discouraged in scientific work to 
+work with other groups: after all, you could write papers, and even 
+scoop other groups, instead of working on something that benefits them 
+as well as yourself, right? This, however, is not the idea behind 
+OpenSPIM. The idea of OpenSPIM is that when everybody works a little, 
+everybody benefits a *lot*.
+
+So let's work everybody a little on the software. Preferably in a way 
+that other people do not have to solve the same problem that you solved, 
+*again*. Rather, in a way where each problem is solved such that nobody 
+else has to bother with the same problem. Whether you share your 
+solution as a mail to this list, as an edit to the wiki, as a Pull 
+Request, just share it.
+
+Then we all will benefit.
+
+Ciao,
+Johannes
+
+
+From thomas.roberts.10 at ucl.ac.uk  Mon Apr 20 10:31:57 2015
+From: thomas.roberts.10 at ucl.ac.uk (Roberts, Thomas)
+Date: Mon, 20 Apr 2015 15:31:57 +0000
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+Message-ID: <1429543916741.90268@ucl.ac.uk>
+
+Hi everyone,
+
+
+This is probably a wider issue with Fiji than OpenSPIM, but I was wondering if anyone else encountered the same problem we are having.
+
+
+For reference, we are running 64-bit Windows 7 on a monster machine with 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+
+
+We generally run the 32-bit version of OpenSPIM for acquisition, but opening large image datasets (such as the ones in the Registation tutorial: http://openspim.org/Registration) results in Fiji reaching its memory limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji in an attempt to increase the memory limit.
+
+
+If I set the memory limit to a large value (20,000 MB) by going to Edit > Options > Memory & Threads, I get the same error message, as below:
+
+
+Loading C:\Users\SPIM\Documents\OpenSPIM Dresden Data\tiffs\\spim_TL05_Angle0.tif
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<Out of memory>
+<All available memory (505MB) has been>
+<used. To make more available, use the>
+<Edit>Options>Memory & Threads command.>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+This is really odd, because if I go to Help > About ImageJ, it says that 13MB out of 20000MB (<1%) is in use. Put another way, Fiji accepts that I want to increase the memory limit, but it still doesn't use more than 505MB of memory.
+
+As a sanity check, I have installed 64-bit Fiji on my office computer and I can open the Registration tutorial data there, but my personal computer is really slow at manipulating the large datasets!
+
+Has anyone else experienced this problem? Or does anyone have any suggestions for how to solve the issue?
+
+It's really frustrating as our behemoth PC refuses to do what it was bought to do!
+
+Many thanks in advance for any replies.
+Tom Roberts
+
+-----
+Research Associate
+UCL Centre for Advanced Biomedical Imaging
+thomas.roberts.10 at ucl.ac.uk
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment.html>
+
+From 709314090 at qq.com  Mon Apr 20 19:18:31 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Tue, 21 Apr 2015 08:18:31 +0800
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <1429543916741.90268@ucl.ac.uk>
+References: <1429543916741.90268@ucl.ac.uk>
+Message-ID: <tencent_46F969110EC4001821CE9093@qq.com>
+
+Do you install the 32bit or 64 bit java invironment?  
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ Original ------------------
+From: "Roberts, Thomas"<thomas.roberts.10 at ucl.ac.uk>; 
+Date: 2015?4?20?(???) ??11:31
+To: "openspim"<openspim at openspim.org>; 
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+
+
+
+ 
+Hi everyone,
+ 
+ 
+
+ 
+ 
+This is probably a wider issue with Fiji than OpenSPIM, but I was wondering if anyone else encountered the same problem we are having.
+ 
+ 
+
+ 
+ 
+For reference, we are running 64-bit Windows 7 on a monster machine with 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+ 
+
+ 
+ 
+We generally run the 32-bit version of OpenSPIM for acquisition, but opening large image datasets (such as the ones in the Registation tutorial: http://openspim.org/Registration) results in  Fiji reaching its memory limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji in an attempt to increase the memory limit. 
+ 
+ 
+
+ 
+ 
+If I set the memory limit to a large value (20,000 MB) by going to Edit > Options > Memory & Threads, I get the same error message, as below:
+ 
+ 
+
+ 
+ Loading C:\Users\SPIM\Documents\OpenSPIM Dresden Data\tiffs\\spim_TL05_Angle0.tif
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ <Out of memory>
+ 
+ <All available memory (505MB) has been>
+ <used. To make more available, use the>
+ <Edit>Options>Memory & Threads command.>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ 
+ This is really odd, because if I go to Help > About ImageJ, it says that 13MB out of 20000MB (<1%) is in use. Put another way, Fiji accepts that I want to increase the memory limit, but it still doesn't use more than 505MB of memory.
+ 
+ 
+ 
+ As a sanity check, I have installed 64-bit Fiji on my office computer and I can open the Registration tutorial data there, but my personal computer is really slow at manipulating the large datasets!
+ 
+ 
+ 
+ Has anyone else experienced this problem? Or does anyone have any suggestions for how to solve the issue?
+ 
+ 
+ 
+ It's really frustrating as our behemoth PC refuses to do what it was bought to do!
+ 
+ 
+ 
+ Many thanks in advance for any replies.
+ 
+ Tom Roberts
+ 
+ 
+ 
+ -----
+ 
+ Research Associate
+ 
+ UCL Centre for Advanced Biomedical Imaging
+ 
+ thomas.roberts.10 at ucl.ac.uk
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150421/1db4e268/attachment.html>
+
+From johannes.schindelin at gmx.de  Tue Apr 21 03:01:25 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 Apr 2015 10:01:25 +0200
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <1429543916741.90268@ucl.ac.uk>
+References: <1429543916741.90268@ucl.ac.uk>
+Message-ID: <90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+
+Hi Thomas,
+
+On 2015-04-20 17:31, Roberts, Thomas wrote:
+
+> If I set the memory limit to a large value (20,000 MB) by going to
+> Edit > Options > Memory & Threads, I get the same error message, as
+> below:
+> 
+> 
+> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+> Data\tiffs\\spim_TL05_Angle0.tif
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+> <Out of memory>
+> <All available memory (505MB) has been>
+> <used. To make more available, use the>
+> <Edit>Options>Memory & Threads command.>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+
+Are you really certain that this is the 64-bit version? If you click 
+into the status area of the main window, it will not only report the 
+current available memory, but also the Java version and architecture.
+
+Ciao,
+Johannes
+
+
+
+From thomas.roberts.10 at ucl.ac.uk  Tue Apr 21 07:28:12 2015
+From: thomas.roberts.10 at ucl.ac.uk (Roberts, Thomas)
+Date: Tue, 21 Apr 2015 12:28:12 +0000
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+References: <1429543916741.90268@ucl.ac.uk>,
+	<90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+Message-ID: <1429619290453.58534@ucl.ac.uk>
+
+Hi Johannes (& Zheng),
+
+Thanks for the replies.
+
+So, I have mFiji located on my desktop. If I click into the Fiji window it says the following:
+
+(Fiji Is Just) ImageJ 2.0.0-rc-29/1.49q; Java 1.6.0_31 [64-bit]; 11MB of 20000MB (<1%).
+
+Thanks,
+Tom
+
+
+________________________________________
+From: Johannes Schindelin <johannes.schindelin at gmx.de>
+Sent: 21 April 2015 09:01
+To: Roberts, Thomas
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+
+Hi Thomas,
+
+On 2015-04-20 17:31, Roberts, Thomas wrote:
+
+> If I set the memory limit to a large value (20,000 MB) by going to
+> Edit > Options > Memory & Threads, I get the same error message, as
+> below:
+>
+>
+> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+> Data\tiffs\\spim_TL05_Angle0.tif
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+> <Out of memory>
+> <All available memory (505MB) has been>
+> <used. To make more available, use the>
+> <Edit>Options>Memory & Threads command.>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Are you really certain that this is the 64-bit version? If you click
+into the status area of the main window, it will not only report the
+current available memory, but also the Java version and architecture.
+
+Ciao,
+Johannes
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150421/03239cec/attachment.html>
+
+From johannes.schindelin at gmx.de  Tue Apr 21 09:38:13 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 Apr 2015 16:38:13 +0200
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <1429619290453.58534@ucl.ac.uk>
+References: <1429543916741.90268@ucl.ac.uk>,
+	<90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+	<1429619290453.58534@ucl.ac.uk>
+Message-ID: <0a1b2ae3caf19ed5b554930dcd783ddd@www.dscho.org>
+
+Hi Tom,
+
+On 2015-04-21 14:28, Roberts, Thomas wrote:
+
+> So, I have mFiji located on my desktop.
+
+Unfortunately I cannot support mFiji. It is unclear from which sources 
+it was built/put together, and whether those sources are available to be 
+to begin with.
+
+Having said that...
+
+> If I click into the Fiji window it says the following:
+> 
+> (Fiji Is Just) ImageJ 2.0.0-rc-29/1.49q; Java 1.6.0_31 [64-bit]; 11MB
+> of 20000MB (<1%).
+
+Assuming that you use this 64-bit Fiji with the SPIM reconstruction, 
+please note that that plugin is a bit wasteful with resources, i.e. it 
+does not release memory necessarily as soon as it does not need it 
+anymore. I remember that we had problems to reconstruct some data in 
+Madison until we moved to a computer with 128GB (!!!).
+
+To verify that this could be the problem, I would suggest to monitor the 
+memory consumption by calling Plugins>Utilities>Monitor Memory... before 
+starting to process the data. It should be relatively obvious from the 
+monitor window and the log which steps in the reconstruction take that 
+much memory (if I am correct in my assumption that there is a memory 
+pseudo-leak, of course).
+
+Ciao,
+Johannes
+
+
+From johannes.schindelin at gmx.de  Tue Apr 21 10:25:47 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 Apr 2015 17:25:47 +0200
+Subject: [OpenSPIM] Automatic builds
+Message-ID: <53bfb3c0082d7349a789309bcb6ed24c@www.dscho.org>
+
+Hello OpenSPIMagers,
+
+I just added a Jenkins job that automatically builds the latest OpenSPIM 
+source code:
+
+http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+
+For example, if you are curious whether Monika's recent fixes help your 
+use case, you can now download the latest .jar file and test it in your 
+setup.
+
+Ciao,
+Johannes
+
+
+From aureliaomega at gmail.com  Tue Apr 21 15:05:08 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Tue, 21 Apr 2015 21:05:08 +0100
+Subject: [OpenSPIM] OMETiffHandler fix
+Message-ID: <CAHAw+8YDEFo8Ug3uj2jKx4JzfUeZr2E+BKseoqF1Q93cbRDSEg@mail.gmail.com>
+
+Hello,
+Ulrik, thank you for updating the OMETiffHandler.  I have to admit, I don't
+know what to do with the file you have linked, though.  I haven't used
+Maven before.  Is that the only way to incorporate this change into Fiji?
+Thank you,
+Aurelia
+
+
+
+On Mon, Apr 20, 2015 at 6:00 PM, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Re: open SPIM acquisition error (Ulrik G?nther)
+>    2. Re: open SPIM acquisition error (Johannes Schindelin)
+>    3. 64-bit Fiji Memory Limit Issue (Roberts, Thomas)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: 20 Apr 2015 10:23:42 +0200
+> From: Ulrik G?nther <guenther at mpi-cbg.de>
+> To: Johannes Schindelin <johannes.schindelin at gmx.de>
+> Cc: Aurelia Honerkamp-Smith <aureliaomega at gmail.com>,
+>         openspim at openspim.org
+> Subject: Re: [OpenSPIM] open SPIM acquisition error
+> Message-ID: <2D47F005-0963-4704-B2CC-ACD0D4044D0B at mpi-cbg.de>
+> Content-Type: text/plain; charset="utf-8"
+>
+>   Hello Aurelia and Johannes,
+>
+>
+> I modified the OMETiffHandler to use the new Units API of BioFormats, you
+> can find the changes at?
+> https://github.com/skalarproduktraum/SPIMAcquisition/tree/OMEUnitFixes
+>
+>
+> Question to Johannes: Do you want a pull request for that? The issue I?m
+> currently having is that it works just fine in Fiji with the MM update
+> site, but not with the latest MM nightly, as it brings an older ome-xml
+> version. Suggestions?
+>
+>
+> cheers,
+>
+>
+> ulrik
+>
+>
+>
+>
+> ?
+> Ulrik G?nther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab,?Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+>
+>
+> E-Mail:?guenther at mpi-cbg.de
+>
+>
+>
+>
+> > On Apr 17, 2015, at 10:10 PM, Johannes Schindelin <
+> johannes.schindelin at gmx.de> wrote:
+> >
+> >
+> > Hi Aurelia,
+> >
+> >
+> > On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+> >
+> >
+> >> java.lang.NoSuchMethodError:
+> >>
+> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+> >>
+> >>
+> >>
+> >
+> >
+> > It would appear as if OMERO might have broken Bio-Formats'?
+> > backwards-compatibility once again... Exceptions like this one mean that?
+> > the method setPixelsPhysicalSizeX(PositiveFloat) was available at?
+> > compile time but is no longer available at runtime.
+> >
+> >
+> > And indeed, it looks as if IMetadata by virtue of extending?
+> > ome.xml.meta.MetadataStore defines only the following?
+> > setPixelsPhysicalSizeX() method:
+> >
+> >
+> > public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length,?
+> > int);
+> >
+> >
+> > I fear that we will have to update the SPIMAcquisition plugin in a hurry?
+> > to conform with the new Bio-Formats version that was so overzealously?
+> > uploaded to the Fiji update site despite breaking backwards?
+> > compatibility in a rather blatant way.
+> >
+> >
+> > My calendar is densely packed, though, so I have no idea when I will get?
+> > around to fix it (hint: help appreciated).
+> >
+> >
+> > Ciao,
+> > Johannes
+> >
+> >
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+> >
+> >
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <
+> http://openspim.org/pipermail/openspim/attachments/20150420/9e46453b/attachment-0001.html
+> >
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Mon, 20 Apr 2015 11:26:49 +0200
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+> To: Ulrik G?nther <guenther at mpi-cbg.de>
+> Cc: Aurelia Honerkamp-Smith <aureliaomega at gmail.com>,
+>         openspim at openspim.org
+> Subject: Re: [OpenSPIM] open SPIM acquisition error
+> Message-ID: <cf359e135dae45adea047be9c310649b at www.dscho.org>
+> Content-Type: text/plain; charset=UTF-8; format=flowed
+>
+> Hi Ulrik,
+>
+> On 2015-04-20 10:23, Ulrik G?nther wrote:
+>
+> > Question to Johannes: Do you want a pull request for that?
+>
+> Whenever some code in OpenSPIM has been improved, or for that matter, in
+> any Open Source software I maintain, I want a Pull Request. Otherwise
+> the software would not improve but deteriorate, wouldn't it?
+>
+> So was that a trick question?
+>
+> > The issue I?m currently having is that it works just fine in Fiji with
+> > the MM
+> > update site, but not with the latest MM nightly, as it brings an older
+> > ome-xml version. Suggestions?
+>
+> My suggestion is not new.
+>
+> My suggestion is to finally work together on having *the same* software
+> versions in all OpenSPIM setups, by using the update site. We already
+> have a beautiful update site, but nobody took care so far to get it back
+> up-to-date, right? So now everybody and her dog has to work just as hard
+> as everybody else to get to a working state, and nobody benefits from
+> anybody else's work (the Pull Requests that have been opened and merged
+> have been a really nice exception).
+>
+> I know that it is typically highly discouraged in scientific work to
+> work with other groups: after all, you could write papers, and even
+> scoop other groups, instead of working on something that benefits them
+> as well as yourself, right? This, however, is not the idea behind
+> OpenSPIM. The idea of OpenSPIM is that when everybody works a little,
+> everybody benefits a *lot*.
+>
+> So let's work everybody a little on the software. Preferably in a way
+> that other people do not have to solve the same problem that you solved,
+> *again*. Rather, in a way where each problem is solved such that nobody
+> else has to bother with the same problem. Whether you share your
+> solution as a mail to this list, as an edit to the wiki, as a Pull
+> Request, just share it.
+>
+> Then we all will benefit.
+>
+> Ciao,
+> Johannes
+>
+>
+>
+> ------------------------------
+>
+> Message: 3
+> Date: Mon, 20 Apr 2015 15:31:57 +0000
+> From: "Roberts, Thomas" <thomas.roberts.10 at ucl.ac.uk>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+> Message-ID: <1429543916741.90268 at ucl.ac.uk>
+> Content-Type: text/plain; charset="iso-8859-1"
+>
+> Hi everyone,
+>
+>
+> This is probably a wider issue with Fiji than OpenSPIM, but I was
+> wondering if anyone else encountered the same problem we are having.
+>
+>
+> For reference, we are running 64-bit Windows 7 on a monster machine with
+> 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+>
+>
+> We generally run the 32-bit version of OpenSPIM for acquisition, but
+> opening large image datasets (such as the ones in the Registation tutorial:
+> http://openspim.org/Registration) results in Fiji reaching its memory
+> limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji
+> in an attempt to increase the memory limit.
+>
+>
+> If I set the memory limit to a large value (20,000 MB) by going to Edit >
+> Options > Memory & Threads, I get the same error message, as below:
+>
+>
+> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+> Data\tiffs\\spim_TL05_Angle0.tif
+> >>>>>>>>>>>>>>>>>>>>>>>>>>>
+> <Out of memory>
+> <All available memory (505MB) has been>
+> <used. To make more available, use the>
+> <Edit>Options>Memory & Threads command.>
+> >>>>>>>>>>>>>>>>>>>>>>>>>>>
+>
+> This is really odd, because if I go to Help > About ImageJ, it says that
+> 13MB out of 20000MB (<1%) is in use. Put another way, Fiji accepts that I
+> want to increase the memory limit, but it still doesn't use more than 505MB
+> of memory.
+>
+> As a sanity check, I have installed 64-bit Fiji on my office computer and
+> I can open the Registration tutorial data there, but my personal computer
+> is really slow at manipulating the large datasets!
+>
+> Has anyone else experienced this problem? Or does anyone have any
+> suggestions for how to solve the issue?
+>
+> It's really frustrating as our behemoth PC refuses to do what it was
+> bought to do!
+>
+> Many thanks in advance for any replies.
+> Tom Roberts
+>
+> -----
+> Research Associate
+> UCL Centre for Advanced Biomedical Imaging
+> thomas.roberts.10 at ucl.ac.uk
+>
+>
+>
+>
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <
+> http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment-0001.html
+> >
+>
+> ------------------------------
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> End of OpenSPIM Digest, Vol 24, Issue 4
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150421/bf19c687/attachment.html>
+
+From johannes.schindelin at gmx.de  Mon Apr 27 16:38:50 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 27 Apr 2015 23:38:50 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+Message-ID: <6125cdd1aafa8fc822f981d80410580a@www.dscho.org>
+
+Hi,
+
+I uploaded a 64-bit version of the OpenSPIM software that reflects the 
+setup when unpacking Fiji for 64-bit Windows and activating the OpenSPIM 
+update site (after spending the last few weeks on getting the 
+code/update site back on track). It would be good if users with a 64-bit 
+Windows could download & test 
+http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on 
+this list.
+
+Thank you,
+Johannes
+
+
+From johannes.schindelin at gmx.de  Tue Apr 28 09:17:39 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 28 Apr 2015 16:17:39 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <6125cdd1aafa8fc822f981d80410580a@www.dscho.org>
+References: <6125cdd1aafa8fc822f981d80410580a@www.dscho.org>
+Message-ID: <d376a417d6a861caa5b7c17e7178a22e@www.dscho.org>
+
+Hi OpenSPIMists,
+
+On 2015-04-27 23:38, Johannes Schindelin wrote:
+
+> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+> setup when unpacking Fiji for 64-bit Windows and activating the
+> OpenSPIM update site (after spending the last few weeks on getting the
+> code/update site back on track). It would be good if users with a
+> 64-bit Windows could download & test
+> http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on
+> this list.
+
+I just tested this myself with our hardware setup in Dresden and it all 
+works fine.
+
+For the record, the difference between 32-bit and 64-bit distribution is 
+so small, the next time I upload a new complete package, it will be a 
+combined one. This only adds ~10MB to the download but makes maintenance 
+easier.
+
+Ciao,
+Johannes
+
+P.S.: The new package -- as well as the current contents of the OpenSPIM 
+update site -- also contain the fixes I made for the problem we had with 
+the recent Bio-Formats update.
+
+
+From aureliaomega at gmail.com  Tue Apr 28 10:08:05 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Tue, 28 Apr 2015 16:08:05 +0100
+Subject: [OpenSPIM] Request for testing: 64-bit
+Message-ID: <CAHAw+8arHpQNB53wxV5QSQfNZZNGiSkxwmdZyw3NVzc+j5A-_Q@mail.gmail.com>
+
+Dear Johannes,
+I downloaded this and am currently acquiring data with it, with no
+problems.
+Thank you very much!
+Aurelia
+
+
+On Tue, Apr 28, 2015 at 12:02 PM, Stephanie H?hn <s.hoehn78 at gmail.com>
+wrote:
+
+>
+> ---------- Forwarded message ----------
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+> Date: Mon, Apr 27, 2015 at 10:38 PM
+> Subject: [OpenSPIM] Request for testing: 64-bit
+> To: openspim at openspim.org
+>
+>
+> Hi,
+>
+> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+> setup when unpacking Fiji for 64-bit Windows and activating the OpenSPIM
+> update site (after spending the last few weeks on getting the code/update
+> site back on track). It would be good if users with a 64-bit Windows could
+> download & test http://openspim.org/downloads/OpenSPIM-20150427.zip and
+> report back on this list.
+>
+> Thank you,
+> Johannes
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+> --
+> Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> *Office Tel:* 01223 337859
+> *Office:* H0.0*3*
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150428/b0942328/attachment.html>
+
+From johannes.schindelin at gmx.de  Tue Apr 28 11:12:40 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 28 Apr 2015 18:12:40 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <CAHAw+8arHpQNB53wxV5QSQfNZZNGiSkxwmdZyw3NVzc+j5A-_Q@mail.gmail.com>
+References: <CAHAw+8arHpQNB53wxV5QSQfNZZNGiSkxwmdZyw3NVzc+j5A-_Q@mail.gmail.com>
+Message-ID: <0b81f059ccce5cfb1724f50f4611424c@www.dscho.org>
+
+Hi Aurelia,
+
+On 2015-04-28 17:08, Aurelia Honerkamp-Smith wrote:
+
+> I downloaded this and am currently acquiring data with it, with no
+> problems.
+
+Thank you!
+Johannes
+
+
+From m.pawlowska at nencki.gov.pl  Wed Apr 29 05:15:53 2015
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Wed, 29 Apr 2015 12:15:53 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <mailman.3.1430240402.13906.openspim@openspim.org>
+References: <mailman.3.1430240402.13906.openspim@openspim.org>
+Message-ID: <de49288c63dd4acf252a845e81bb87f0@nencki.gov.pl>
+
+> Message: 1
+> Date: Mon, 27 Apr 2015 23:38:50 +0200
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Request for testing: 64-bit
+> Message-ID: <6125cdd1aafa8fc822f981d80410580a at www.dscho.org>
+> Content-Type: text/plain; charset=US-ASCII; format=flowed
+> 
+> Hi,
+> 
+> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+> setup when unpacking Fiji for 64-bit Windows and activating the 
+> OpenSPIM
+> update site (after spending the last few weeks on getting the
+> code/update site back on track). It would be good if users with a 
+> 64-bit
+> Windows could download & test
+> http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on
+> this list.
+
+I activated the update site for openspim, updated all, restarted, 
+acquired a test stack of 3 images, all seems fine. Thanks Johannes!!!
+
+Regards,
+Monika
+
+
+From johannes.schindelin at gmx.de  Wed Apr 29 05:38:59 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 29 Apr 2015 12:38:59 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <de49288c63dd4acf252a845e81bb87f0@nencki.gov.pl>
+References: <mailman.3.1430240402.13906.openspim@openspim.org>
+	<de49288c63dd4acf252a845e81bb87f0@nencki.gov.pl>
+Message-ID: <e11f295538fcb577d7f2637fac92cadd@www.dscho.org>
+
+Hi Monika,
+
+On 2015-04-29 12:15, m.pawlowska at nencki.gov.pl wrote:
+
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+
+>> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+>> setup when unpacking Fiji for 64-bit Windows and activating the 
+>> OpenSPIM
+>> update site (after spending the last few weeks on getting the
+>> code/update site back on track). It would be good if users with a 
+>> 64-bit
+>> Windows could download & test
+>> http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on
+>> this list.
+> 
+> I activated the update site for openspim, updated all, restarted,
+> acquired a test stack of 3 images, all seems fine. Thanks Johannes!!!
+
+Thanks for testing!
+Johannes
+
+
+From arisi at unifesp.br  Thu Apr  2 13:11:01 2015
+From: arisi at unifesp.br (Gabriel Arisi)
+Date: Thu, 2 Apr 2015 15:11:01 -0300
+Subject: [OpenSPIM] T-SPIM and L-SPIM configuration
+Message-ID: <CAH+O61Hg750WVOUDjG86ZdqCyOeZh1eJVTsRz4mCRwNCtd9qZg@mail.gmail.com>
+
+Dear Spimmers,
+
+I recently got a grant approval to build what I believe is the first
+OpenSPIM system in Brazil.
+
+I would like to update the parts list since, for example, Coherent no
+longer produces Cube systems replaced by Obis systems.
+
+I also would like to show both T-SPIM and L-SPIM configurations in the
+parts list page. Of course the three lenses design chamber will have to be
+released by Pete Pitrone.
+
+Last but not least, reading Reynaud and colleagues commentary published
+this January on Nature I was taken aback by the information "that roughly
+50 OpenSPIM systems are being built around the world" and we have only 7
+listed on the wiki page. Is there any suggestion on how to improve the
+share of ideas and solutions on the openspim webpage and not only in this
+email list?
+
+Thanks all of you for the information sharing and hard work on developing
+the OpenSPIM.
+
+Best regards
+
+
+
+Gabriel Arisi, PhD
+
+Professor Adjunto de Fisiologia, Escola Paulista de Medicina
+Universidade Federal de São Paulo - UNIFESP
+
+Rua Pedro de Toledo 669, 3 andar, São Paulo, SP, BRASIL
+04039-032
+
++55 11 5576-4969
+
+CV <http://lattes.cnpq.br/7090787914873358>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150402/7e06f5c5/attachment-0002.html>
+
+From aureliaomega at gmail.com  Fri Apr 17 06:42:48 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Fri, 17 Apr 2015 12:42:48 +0100
+Subject: [OpenSPIM] open SPIM acquisition error
+Message-ID: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+
+Hello,
+I have a new error this morning.  When I try to start multi-angle
+acquisition, I get the following Java console error:
+
+[WARNING] Couldd not load legacy launcher config file
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\ImageJ.cfg
+MMCoreJ.jar path =
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins\MMCoreJ.jar
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app
+C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32
+C:\Users\ah659\Desktop\OPENSP~1
+C:\Users\ah659\Desktop\OPENSP~1\mm\win32
+java.lang.NoSuchMethodError:
+loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+    at spim.progacq.OMETIFFHandler.<init>(OMETIFFHandler.java:95)
+    at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1731)
+    at
+javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+    at
+javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+    at
+javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+    at
+javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+    at
+javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+    at java.awt.Component.processMouseEvent(Component.java:6289)
+    at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+    at java.awt.Component.processEvent(Component.java:6054)
+    at java.awt.Container.processEvent(Container.java:2041)
+    at java.awt.Component.dispatchEventImpl(Component.java:4652)
+    at java.awt.Container.dispatchEventImpl(Container.java:2099)
+    at java.awt.Component.dispatchEvent(Component.java:4482)
+    at
+java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+    at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+    at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+    at java.awt.Container.dispatchEventImpl(Container.java:2085)
+    at java.awt.Window.dispatchEventImpl(Window.java:2478)
+    at java.awt.Component.dispatchEvent(Component.java:4482)
+    at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+    at java.awt.EventQueue.access$000(EventQueue.java:85)
+    at java.awt.EventQueue$1.run(EventQueue.java:603)
+    at java.awt.EventQueue$1.run(EventQueue.java:601)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+    at java.awt.EventQueue$2.run(EventQueue.java:617)
+    at java.awt.EventQueue$2.run(EventQueue.java:615)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at
+java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+    at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+    at
+java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+    at
+java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+    at
+java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+    at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+Live view works, but Snap does not complete.
+Anyone have an idea?
+Thanks,
+Aurelia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150417/d9d74c70/attachment-0002.html>
+
+From aureliaomega at gmail.com  Fri Apr 17 09:56:00 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Fri, 17 Apr 2015 15:56:00 +0100
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+Message-ID: <CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+
+I can acquire a stack and save it to disk, but whenever I try to start
+acquisition with an output directory specified, I get the error.
+
+I installed the new 64 bit version, and all works fine except I get a
+similar error:
+
+java.lang.NoSuchMethodError:
+loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+    at spim.progacq.OMETIFFHandler.<init>(OMETIFFHandler.java:95)
+    at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1760)
+    at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+    at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+    at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+    at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+    at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown
+Source)
+    at java.awt.Component.processMouseEvent(Unknown Source)
+    at javax.swing.JComponent.processMouseEvent(Unknown Source)
+    at java.awt.Component.processEvent(Unknown Source)
+    at java.awt.Container.processEvent(Unknown Source)
+    at java.awt.Component.dispatchEventImpl(Unknown Source)
+    at java.awt.Container.dispatchEventImpl(Unknown Source)
+    at java.awt.Component.dispatchEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+    at java.awt.Container.dispatchEventImpl(Unknown Source)
+    at java.awt.Window.dispatchEventImpl(Unknown Source)
+    at java.awt.Component.dispatchEvent(Unknown Source)
+    at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+    at java.awt.EventQueue.access$000(Unknown Source)
+    at java.awt.EventQueue$1.run(Unknown Source)
+    at java.awt.EventQueue$1.run(Unknown Source)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.awt.EventQueue$2.run(Unknown Source)
+    at java.awt.EventQueue$2.run(Unknown Source)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.awt.EventQueue.dispatchEvent(Unknown Source)
+    at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+    at java.awt.EventDispatchThread.run(Unknown Source)
+
+Cheers
+
+
+On Fri, Apr 17, 2015 at 12:42 PM, Aurelia Honerkamp-Smith <
+aureliaomega at gmail.com> wrote:
+
+> Hello,
+> I have a new error this morning.  When I try to start multi-angle
+> acquisition, I get the following Java console error:
+>
+> [WARNING] Couldd not load legacy launcher config file
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\ImageJ.cfg
+> MMCoreJ.jar path =
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins\MMCoreJ.jar
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app
+> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32
+> C:\Users\ah659\Desktop\OPENSP~1
+> C:\Users\ah659\Desktop\OPENSP~1\mm\win32
+> java.lang.NoSuchMethodError:
+> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+>     at spim.progacq.OMETIFFHandler.<init>(OMETIFFHandler.java:95)
+>     at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1731)
+>     at
+> javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+>     at
+> javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+>     at
+> javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+>     at
+> javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+>     at
+> javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+>     at java.awt.Component.processMouseEvent(Component.java:6289)
+>     at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+>     at java.awt.Component.processEvent(Component.java:6054)
+>     at java.awt.Container.processEvent(Container.java:2041)
+>     at java.awt.Component.dispatchEventImpl(Component.java:4652)
+>     at java.awt.Container.dispatchEventImpl(Container.java:2099)
+>     at java.awt.Component.dispatchEvent(Component.java:4482)
+>     at
+> java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+>     at
+> java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+>     at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+>     at java.awt.Container.dispatchEventImpl(Container.java:2085)
+>     at java.awt.Window.dispatchEventImpl(Window.java:2478)
+>     at java.awt.Component.dispatchEvent(Component.java:4482)
+>     at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+>     at java.awt.EventQueue.access$000(EventQueue.java:85)
+>     at java.awt.EventQueue$1.run(EventQueue.java:603)
+>     at java.awt.EventQueue$1.run(EventQueue.java:601)
+>     at java.security.AccessController.doPrivileged(Native Method)
+>     at
+> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+>     at
+> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+>     at java.awt.EventQueue$2.run(EventQueue.java:617)
+>     at java.awt.EventQueue$2.run(EventQueue.java:615)
+>     at java.security.AccessController.doPrivileged(Native Method)
+>     at
+> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+>     at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+>     at
+> java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+>     at
+> java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+>     at
+> java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+>     at
+> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+>     at
+> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+>     at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+>
+> Live view works, but Snap does not complete.
+> Anyone have an idea?
+> Thanks,
+> Aurelia
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150417/af4aa526/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Apr 17 10:02:39 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 17 Apr 2015 17:02:39 +0200
+Subject: [OpenSPIM] HiRes Picard stage: the solution!
+Message-ID: <op.xw8r2pn3ahhlbl@pc511-7cad.ibd>
+
+Hi,
+
+as I wrote previously, I have the new version of the Picard stage and I  
+had issues with the maximum available position being limited to 32 767  
+steps, and the slider in the plugin being limited to 9000 um. The solution  
+that works for me is:
+
+1) replace PiUSB.dll with the newest version from the Picard website -  
+this fixes the 32 767 steps problem
+2) I modified the SPIMAcquisition code so that the slider reflects the  
+values of Max set during device configuration (where you also set the  
+serial numbers). My code is currently here:
+https://github.com/openspim/SPIMAcquisition/compare/master...pawlowska:addMaxPropertyReading
+I assume that the max value you set during configuration is the maxiumum  
+number of STEPS (not um)
+
+maybe this helps somebody.
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 427
+
+
+
+From johannes.schindelin at gmx.de  Fri Apr 17 15:10:34 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Fri, 17 Apr 2015 22:10:34 +0200
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+	<CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+Message-ID: <dc488e7b4294380c74197b0d07984614@www.dscho.org>
+
+Hi Aurelia,
+
+On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+
+> java.lang.NoSuchMethodError:
+> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+
+It would appear as if OMERO might have broken Bio-Formats' 
+backwards-compatibility once again... Exceptions like this one mean that 
+the method setPixelsPhysicalSizeX(PositiveFloat) was available at 
+compile time but is no longer available at runtime.
+
+And indeed, it looks as if IMetadata by virtue of extending 
+ome.xml.meta.MetadataStore defines only the following 
+setPixelsPhysicalSizeX() method:
+
+   public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length, 
+int);
+
+I fear that we will have to update the SPIMAcquisition plugin in a hurry 
+to conform with the new Bio-Formats version that was so overzealously 
+uploaded to the Fiji update site despite breaking backwards 
+compatibility in a rather blatant way.
+
+My calendar is densely packed, though, so I have no idea when I will get 
+around to fix it (hint: help appreciated).
+
+Ciao,
+Johannes
+
+
+
+From guenther at mpi-cbg.de  Mon Apr 20 03:23:42 2015
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 20 Apr 2015 10:23:42 +0200
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <dc488e7b4294380c74197b0d07984614@www.dscho.org>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+	<CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+	<dc488e7b4294380c74197b0d07984614@www.dscho.org>
+Message-ID: <2D47F005-0963-4704-B2CC-ACD0D4044D0B@mpi-cbg.de>
+
+  Hello Aurelia and Johannes,
+
+
+I modified the OMETiffHandler to use the new Units API of BioFormats, you can find the changes at https://github.com/skalarproduktraum/SPIMAcquisition/tree/OMEUnitFixes
+
+
+Question to Johannes: Do you want a pull request for that? The issue I’m currently having is that it works just fine in Fiji with the MM update site, but not with the latest MM nightly, as it brings an older ome-xml version. Suggestions?
+
+
+cheers,
+
+
+ulrik
+
+
+
+
+—
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail: guenther at mpi-cbg.de
+
+
+
+
+> On Apr 17, 2015, at 10:10 PM, Johannes Schindelin <johannes.schindelin at gmx.de> wrote:
+> 
+> 
+> Hi Aurelia,
+> 
+> 
+> On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+> 
+> 
+>> java.lang.NoSuchMethodError:
+>> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+>> 
+>> 
+>> 
+> 
+> 
+> It would appear as if OMERO might have broken Bio-Formats' 
+> backwards-compatibility once again... Exceptions like this one mean that 
+> the method setPixelsPhysicalSizeX(PositiveFloat) was available at 
+> compile time but is no longer available at runtime.
+> 
+> 
+> And indeed, it looks as if IMetadata by virtue of extending 
+> ome.xml.meta.MetadataStore defines only the following 
+> setPixelsPhysicalSizeX() method:
+> 
+> 
+> public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length, 
+> int);
+> 
+> 
+> I fear that we will have to update the SPIMAcquisition plugin in a hurry 
+> to conform with the new Bio-Formats version that was so overzealously 
+> uploaded to the Fiji update site despite breaking backwards 
+> compatibility in a rather blatant way.
+> 
+> 
+> My calendar is densely packed, though, so I have no idea when I will get 
+> around to fix it (hint: help appreciated).
+> 
+> 
+> Ciao,
+> Johannes
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150420/9e46453b/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Mon Apr 20 04:26:49 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 20 Apr 2015 11:26:49 +0200
+Subject: [OpenSPIM] open SPIM acquisition error
+In-Reply-To: <2D47F005-0963-4704-B2CC-ACD0D4044D0B@mpi-cbg.de>
+References: <CAHAw+8ZmFJSNqps+=xF=FBhXp02SJhZy8wjpKdOFPMTyX6Kcfw@mail.gmail.com>
+	<CAHAw+8an4=aexx17eYRx7CCV5e3XMogmLz1rS_f+9Kym2EqyyQ@mail.gmail.com>
+	<dc488e7b4294380c74197b0d07984614@www.dscho.org>
+	<2D47F005-0963-4704-B2CC-ACD0D4044D0B@mpi-cbg.de>
+Message-ID: <cf359e135dae45adea047be9c310649b@www.dscho.org>
+
+Hi Ulrik,
+
+On 2015-04-20 10:23, Ulrik Günther wrote:
+
+> Question to Johannes: Do you want a pull request for that?
+
+Whenever some code in OpenSPIM has been improved, or for that matter, in 
+any Open Source software I maintain, I want a Pull Request. Otherwise 
+the software would not improve but deteriorate, wouldn't it?
+
+So was that a trick question?
+
+> The issue I’m currently having is that it works just fine in Fiji with 
+> the MM
+> update site, but not with the latest MM nightly, as it brings an older
+> ome-xml version. Suggestions?
+
+My suggestion is not new.
+
+My suggestion is to finally work together on having *the same* software 
+versions in all OpenSPIM setups, by using the update site. We already 
+have a beautiful update site, but nobody took care so far to get it back 
+up-to-date, right? So now everybody and her dog has to work just as hard 
+as everybody else to get to a working state, and nobody benefits from 
+anybody else's work (the Pull Requests that have been opened and merged 
+have been a really nice exception).
+
+I know that it is typically highly discouraged in scientific work to 
+work with other groups: after all, you could write papers, and even 
+scoop other groups, instead of working on something that benefits them 
+as well as yourself, right? This, however, is not the idea behind 
+OpenSPIM. The idea of OpenSPIM is that when everybody works a little, 
+everybody benefits a *lot*.
+
+So let's work everybody a little on the software. Preferably in a way 
+that other people do not have to solve the same problem that you solved, 
+*again*. Rather, in a way where each problem is solved such that nobody 
+else has to bother with the same problem. Whether you share your 
+solution as a mail to this list, as an edit to the wiki, as a Pull 
+Request, just share it.
+
+Then we all will benefit.
+
+Ciao,
+Johannes
+
+
+
+From thomas.roberts.10 at ucl.ac.uk  Mon Apr 20 10:31:57 2015
+From: thomas.roberts.10 at ucl.ac.uk (Roberts, Thomas)
+Date: Mon, 20 Apr 2015 15:31:57 +0000
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+Message-ID: <1429543916741.90268@ucl.ac.uk>
+
+Hi everyone,
+
+
+This is probably a wider issue with Fiji than OpenSPIM, but I was wondering if anyone else encountered the same problem we are having.
+
+
+For reference, we are running 64-bit Windows 7 on a monster machine with 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+
+
+We generally run the 32-bit version of OpenSPIM for acquisition, but opening large image datasets (such as the ones in the Registation tutorial: http://openspim.org/Registration) results in Fiji reaching its memory limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji in an attempt to increase the memory limit.
+
+
+If I set the memory limit to a large value (20,000 MB) by going to Edit > Options > Memory & Threads, I get the same error message, as below:
+
+
+Loading C:\Users\SPIM\Documents\OpenSPIM Dresden Data\tiffs\\spim_TL05_Angle0.tif
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<Out of memory>
+<All available memory (505MB) has been>
+<used. To make more available, use the>
+<Edit>Options>Memory & Threads command.>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+This is really odd, because if I go to Help > About ImageJ, it says that 13MB out of 20000MB (<1%) is in use. Put another way, Fiji accepts that I want to increase the memory limit, but it still doesn't use more than 505MB of memory.
+
+As a sanity check, I have installed 64-bit Fiji on my office computer and I can open the Registration tutorial data there, but my personal computer is really slow at manipulating the large datasets!
+
+Has anyone else experienced this problem? Or does anyone have any suggestions for how to solve the issue?
+
+It's really frustrating as our behemoth PC refuses to do what it was bought to do!
+
+Many thanks in advance for any replies.
+Tom Roberts
+
+-----
+Research Associate
+UCL Centre for Advanced Biomedical Imaging
+thomas.roberts.10 at ucl.ac.uk
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment-0002.html>
+
+From 709314090 at qq.com  Mon Apr 20 19:18:31 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Tue, 21 Apr 2015 08:18:31 +0800
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <1429543916741.90268@ucl.ac.uk>
+References: <1429543916741.90268@ucl.ac.uk>
+Message-ID: <tencent_46F969110EC4001821CE9093@qq.com>
+
+Do you install the 32bit or 64 bit java invironment?  
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ Original ------------------
+From: "Roberts, Thomas"<thomas.roberts.10 at ucl.ac.uk>; 
+Date: 2015年4月20日(星期一) 晚上11:31
+To: "openspim"<openspim at openspim.org>; 
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+
+
+
+ 
+Hi everyone,
+ 
+ 
+
+ 
+ 
+This is probably a wider issue with Fiji than OpenSPIM, but I was wondering if anyone else encountered the same problem we are having.
+ 
+ 
+
+ 
+ 
+For reference, we are running 64-bit Windows 7 on a monster machine with 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+ 
+
+ 
+ 
+We generally run the 32-bit version of OpenSPIM for acquisition, but opening large image datasets (such as the ones in the Registation tutorial: http://openspim.org/Registration) results in  Fiji reaching its memory limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji in an attempt to increase the memory limit. 
+ 
+ 
+
+ 
+ 
+If I set the memory limit to a large value (20,000 MB) by going to Edit > Options > Memory & Threads, I get the same error message, as below:
+ 
+ 
+
+ 
+ Loading C:\Users\SPIM\Documents\OpenSPIM Dresden Data\tiffs\\spim_TL05_Angle0.tif
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ <Out of memory>
+ 
+ <All available memory (505MB) has been>
+ <used. To make more available, use the>
+ <Edit>Options>Memory & Threads command.>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ 
+ This is really odd, because if I go to Help > About ImageJ, it says that 13MB out of 20000MB (<1%) is in use. Put another way, Fiji accepts that I want to increase the memory limit, but it still doesn't use more than 505MB of memory.
+ 
+ 
+ 
+ As a sanity check, I have installed 64-bit Fiji on my office computer and I can open the Registration tutorial data there, but my personal computer is really slow at manipulating the large datasets!
+ 
+ 
+ 
+ Has anyone else experienced this problem? Or does anyone have any suggestions for how to solve the issue?
+ 
+ 
+ 
+ It's really frustrating as our behemoth PC refuses to do what it was bought to do!
+ 
+ 
+ 
+ Many thanks in advance for any replies.
+ 
+ Tom Roberts
+ 
+ 
+ 
+ -----
+ 
+ Research Associate
+ 
+ UCL Centre for Advanced Biomedical Imaging
+ 
+ thomas.roberts.10 at ucl.ac.uk
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150421/1db4e268/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Tue Apr 21 03:01:25 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 Apr 2015 10:01:25 +0200
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <1429543916741.90268@ucl.ac.uk>
+References: <1429543916741.90268@ucl.ac.uk>
+Message-ID: <90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+
+Hi Thomas,
+
+On 2015-04-20 17:31, Roberts, Thomas wrote:
+
+> If I set the memory limit to a large value (20,000 MB) by going to
+> Edit > Options > Memory & Threads, I get the same error message, as
+> below:
+> 
+> 
+> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+> Data\tiffs\\spim_TL05_Angle0.tif
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+> <Out of memory>
+> <All available memory (505MB) has been>
+> <used. To make more available, use the>
+> <Edit>Options>Memory & Threads command.>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+
+Are you really certain that this is the 64-bit version? If you click 
+into the status area of the main window, it will not only report the 
+current available memory, but also the Java version and architecture.
+
+Ciao,
+Johannes
+
+
+
+
+From thomas.roberts.10 at ucl.ac.uk  Tue Apr 21 07:28:12 2015
+From: thomas.roberts.10 at ucl.ac.uk (Roberts, Thomas)
+Date: Tue, 21 Apr 2015 12:28:12 +0000
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+References: <1429543916741.90268@ucl.ac.uk>,
+	<90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+Message-ID: <1429619290453.58534@ucl.ac.uk>
+
+Hi Johannes (& Zheng),
+
+Thanks for the replies.
+
+So, I have mFiji located on my desktop. If I click into the Fiji window it says the following:
+
+(Fiji Is Just) ImageJ 2.0.0-rc-29/1.49q; Java 1.6.0_31 [64-bit]; 11MB of 20000MB (<1%).
+
+Thanks,
+Tom
+
+
+________________________________________
+From: Johannes Schindelin <johannes.schindelin at gmx.de>
+Sent: 21 April 2015 09:01
+To: Roberts, Thomas
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+
+Hi Thomas,
+
+On 2015-04-20 17:31, Roberts, Thomas wrote:
+
+> If I set the memory limit to a large value (20,000 MB) by going to
+> Edit > Options > Memory & Threads, I get the same error message, as
+> below:
+>
+>
+> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+> Data\tiffs\\spim_TL05_Angle0.tif
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+> <Out of memory>
+> <All available memory (505MB) has been>
+> <used. To make more available, use the>
+> <Edit>Options>Memory & Threads command.>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Are you really certain that this is the 64-bit version? If you click
+into the status area of the main window, it will not only report the
+current available memory, but also the Java version and architecture.
+
+Ciao,
+Johannes
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150421/03239cec/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Tue Apr 21 09:38:13 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 Apr 2015 16:38:13 +0200
+Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+In-Reply-To: <1429619290453.58534@ucl.ac.uk>
+References: <1429543916741.90268@ucl.ac.uk>,
+	<90a6504ba069c146ee8efa3e28778233@www.dscho.org>
+	<1429619290453.58534@ucl.ac.uk>
+Message-ID: <0a1b2ae3caf19ed5b554930dcd783ddd@www.dscho.org>
+
+Hi Tom,
+
+On 2015-04-21 14:28, Roberts, Thomas wrote:
+
+> So, I have mFiji located on my desktop.
+
+Unfortunately I cannot support mFiji. It is unclear from which sources 
+it was built/put together, and whether those sources are available to be 
+to begin with.
+
+Having said that...
+
+> If I click into the Fiji window it says the following:
+> 
+> (Fiji Is Just) ImageJ 2.0.0-rc-29/1.49q; Java 1.6.0_31 [64-bit]; 11MB
+> of 20000MB (<1%).
+
+Assuming that you use this 64-bit Fiji with the SPIM reconstruction, 
+please note that that plugin is a bit wasteful with resources, i.e. it 
+does not release memory necessarily as soon as it does not need it 
+anymore. I remember that we had problems to reconstruct some data in 
+Madison until we moved to a computer with 128GB (!!!).
+
+To verify that this could be the problem, I would suggest to monitor the 
+memory consumption by calling Plugins>Utilities>Monitor Memory... before 
+starting to process the data. It should be relatively obvious from the 
+monitor window and the log which steps in the reconstruction take that 
+much memory (if I am correct in my assumption that there is a memory 
+pseudo-leak, of course).
+
+Ciao,
+Johannes
+
+
+
+From johannes.schindelin at gmx.de  Tue Apr 21 10:25:47 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 21 Apr 2015 17:25:47 +0200
+Subject: [OpenSPIM] Automatic builds
+Message-ID: <53bfb3c0082d7349a789309bcb6ed24c@www.dscho.org>
+
+Hello OpenSPIMagers,
+
+I just added a Jenkins job that automatically builds the latest OpenSPIM 
+source code:
+
+http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/
+
+For example, if you are curious whether Monika's recent fixes help your 
+use case, you can now download the latest .jar file and test it in your 
+setup.
+
+Ciao,
+Johannes
+
+
+
+From aureliaomega at gmail.com  Tue Apr 21 15:05:08 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Tue, 21 Apr 2015 21:05:08 +0100
+Subject: [OpenSPIM] OMETiffHandler fix
+Message-ID: <CAHAw+8YDEFo8Ug3uj2jKx4JzfUeZr2E+BKseoqF1Q93cbRDSEg@mail.gmail.com>
+
+Hello,
+Ulrik, thank you for updating the OMETiffHandler.  I have to admit, I don't
+know what to do with the file you have linked, though.  I haven't used
+Maven before.  Is that the only way to incorporate this change into Fiji?
+Thank you,
+Aurelia
+
+
+
+On Mon, Apr 20, 2015 at 6:00 PM, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Re: open SPIM acquisition error (Ulrik G?nther)
+>    2. Re: open SPIM acquisition error (Johannes Schindelin)
+>    3. 64-bit Fiji Memory Limit Issue (Roberts, Thomas)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: 20 Apr 2015 10:23:42 +0200
+> From: Ulrik G?nther <guenther at mpi-cbg.de>
+> To: Johannes Schindelin <johannes.schindelin at gmx.de>
+> Cc: Aurelia Honerkamp-Smith <aureliaomega at gmail.com>,
+>         openspim at openspim.org
+> Subject: Re: [OpenSPIM] open SPIM acquisition error
+> Message-ID: <2D47F005-0963-4704-B2CC-ACD0D4044D0B at mpi-cbg.de>
+> Content-Type: text/plain; charset="utf-8"
+>
+>   Hello Aurelia and Johannes,
+>
+>
+> I modified the OMETiffHandler to use the new Units API of BioFormats, you
+> can find the changes at?
+> https://github.com/skalarproduktraum/SPIMAcquisition/tree/OMEUnitFixes
+>
+>
+> Question to Johannes: Do you want a pull request for that? The issue I?m
+> currently having is that it works just fine in Fiji with the MM update
+> site, but not with the latest MM nightly, as it brings an older ome-xml
+> version. Suggestions?
+>
+>
+> cheers,
+>
+>
+> ulrik
+>
+>
+>
+>
+> ?
+> Ulrik G?nther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab,?Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+>
+>
+> E-Mail:?guenther at mpi-cbg.de
+>
+>
+>
+>
+> > On Apr 17, 2015, at 10:10 PM, Johannes Schindelin <
+> johannes.schindelin at gmx.de> wrote:
+> >
+> >
+> > Hi Aurelia,
+> >
+> >
+> > On 2015-04-17 16:56, Aurelia Honerkamp-Smith wrote:
+> >
+> >
+> >> java.lang.NoSuchMethodError:
+> >>
+> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+> >>
+> >>
+> >>
+> >
+> >
+> > It would appear as if OMERO might have broken Bio-Formats'?
+> > backwards-compatibility once again... Exceptions like this one mean that?
+> > the method setPixelsPhysicalSizeX(PositiveFloat) was available at?
+> > compile time but is no longer available at runtime.
+> >
+> >
+> > And indeed, it looks as if IMetadata by virtue of extending?
+> > ome.xml.meta.MetadataStore defines only the following?
+> > setPixelsPhysicalSizeX() method:
+> >
+> >
+> > public abstract void setPixelsPhysicalSizeX(ome.units.quantity.Length,?
+> > int);
+> >
+> >
+> > I fear that we will have to update the SPIMAcquisition plugin in a hurry?
+> > to conform with the new Bio-Formats version that was so overzealously?
+> > uploaded to the Fiji update site despite breaking backwards?
+> > compatibility in a rather blatant way.
+> >
+> >
+> > My calendar is densely packed, though, so I have no idea when I will get?
+> > around to fix it (hint: help appreciated).
+> >
+> >
+> > Ciao,
+> > Johannes
+> >
+> >
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+> >
+> >
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <
+> http://openspim.org/pipermail/openspim/attachments/20150420/9e46453b/attachment-0001.html
+> >
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Mon, 20 Apr 2015 11:26:49 +0200
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+> To: Ulrik G?nther <guenther at mpi-cbg.de>
+> Cc: Aurelia Honerkamp-Smith <aureliaomega at gmail.com>,
+>         openspim at openspim.org
+> Subject: Re: [OpenSPIM] open SPIM acquisition error
+> Message-ID: <cf359e135dae45adea047be9c310649b at www.dscho.org>
+> Content-Type: text/plain; charset=UTF-8; format=flowed
+>
+> Hi Ulrik,
+>
+> On 2015-04-20 10:23, Ulrik G?nther wrote:
+>
+> > Question to Johannes: Do you want a pull request for that?
+>
+> Whenever some code in OpenSPIM has been improved, or for that matter, in
+> any Open Source software I maintain, I want a Pull Request. Otherwise
+> the software would not improve but deteriorate, wouldn't it?
+>
+> So was that a trick question?
+>
+> > The issue I?m currently having is that it works just fine in Fiji with
+> > the MM
+> > update site, but not with the latest MM nightly, as it brings an older
+> > ome-xml version. Suggestions?
+>
+> My suggestion is not new.
+>
+> My suggestion is to finally work together on having *the same* software
+> versions in all OpenSPIM setups, by using the update site. We already
+> have a beautiful update site, but nobody took care so far to get it back
+> up-to-date, right? So now everybody and her dog has to work just as hard
+> as everybody else to get to a working state, and nobody benefits from
+> anybody else's work (the Pull Requests that have been opened and merged
+> have been a really nice exception).
+>
+> I know that it is typically highly discouraged in scientific work to
+> work with other groups: after all, you could write papers, and even
+> scoop other groups, instead of working on something that benefits them
+> as well as yourself, right? This, however, is not the idea behind
+> OpenSPIM. The idea of OpenSPIM is that when everybody works a little,
+> everybody benefits a *lot*.
+>
+> So let's work everybody a little on the software. Preferably in a way
+> that other people do not have to solve the same problem that you solved,
+> *again*. Rather, in a way where each problem is solved such that nobody
+> else has to bother with the same problem. Whether you share your
+> solution as a mail to this list, as an edit to the wiki, as a Pull
+> Request, just share it.
+>
+> Then we all will benefit.
+>
+> Ciao,
+> Johannes
+>
+>
+>
+> ------------------------------
+>
+> Message: 3
+> Date: Mon, 20 Apr 2015 15:31:57 +0000
+> From: "Roberts, Thomas" <thomas.roberts.10 at ucl.ac.uk>
+> To: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: [OpenSPIM] 64-bit Fiji Memory Limit Issue
+> Message-ID: <1429543916741.90268 at ucl.ac.uk>
+> Content-Type: text/plain; charset="iso-8859-1"
+>
+> Hi everyone,
+>
+>
+> This is probably a wider issue with Fiji than OpenSPIM, but I was
+> wondering if anyone else encountered the same problem we are having.
+>
+>
+> For reference, we are running 64-bit Windows 7 on a monster machine with
+> 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+>
+>
+> We generally run the 32-bit version of OpenSPIM for acquisition, but
+> opening large image datasets (such as the ones in the Registation tutorial:
+> http://openspim.org/Registration) results in Fiji reaching its memory
+> limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji
+> in an attempt to increase the memory limit.
+>
+>
+> If I set the memory limit to a large value (20,000 MB) by going to Edit >
+> Options > Memory & Threads, I get the same error message, as below:
+>
+>
+> Loading C:\Users\SPIM\Documents\OpenSPIM Dresden
+> Data\tiffs\\spim_TL05_Angle0.tif
+> >>>>>>>>>>>>>>>>>>>>>>>>>>>
+> <Out of memory>
+> <All available memory (505MB) has been>
+> <used. To make more available, use the>
+> <Edit>Options>Memory & Threads command.>
+> >>>>>>>>>>>>>>>>>>>>>>>>>>>
+>
+> This is really odd, because if I go to Help > About ImageJ, it says that
+> 13MB out of 20000MB (<1%) is in use. Put another way, Fiji accepts that I
+> want to increase the memory limit, but it still doesn't use more than 505MB
+> of memory.
+>
+> As a sanity check, I have installed 64-bit Fiji on my office computer and
+> I can open the Registration tutorial data there, but my personal computer
+> is really slow at manipulating the large datasets!
+>
+> Has anyone else experienced this problem? Or does anyone have any
+> suggestions for how to solve the issue?
+>
+> It's really frustrating as our behemoth PC refuses to do what it was
+> bought to do!
+>
+> Many thanks in advance for any replies.
+> Tom Roberts
+>
+> -----
+> Research Associate
+> UCL Centre for Advanced Biomedical Imaging
+> thomas.roberts.10 at ucl.ac.uk
+>
+>
+>
+>
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <
+> http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment-0001.html
+> >
+>
+> ------------------------------
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> End of OpenSPIM Digest, Vol 24, Issue 4
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150421/bf19c687/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Mon Apr 27 16:38:50 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Mon, 27 Apr 2015 23:38:50 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+Message-ID: <6125cdd1aafa8fc822f981d80410580a@www.dscho.org>
+
+Hi,
+
+I uploaded a 64-bit version of the OpenSPIM software that reflects the 
+setup when unpacking Fiji for 64-bit Windows and activating the OpenSPIM 
+update site (after spending the last few weeks on getting the 
+code/update site back on track). It would be good if users with a 64-bit 
+Windows could download & test 
+http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on 
+this list.
+
+Thank you,
+Johannes
+
+
+
+From johannes.schindelin at gmx.de  Tue Apr 28 09:17:39 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 28 Apr 2015 16:17:39 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <6125cdd1aafa8fc822f981d80410580a@www.dscho.org>
+References: <6125cdd1aafa8fc822f981d80410580a@www.dscho.org>
+Message-ID: <d376a417d6a861caa5b7c17e7178a22e@www.dscho.org>
+
+Hi OpenSPIMists,
+
+On 2015-04-27 23:38, Johannes Schindelin wrote:
+
+> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+> setup when unpacking Fiji for 64-bit Windows and activating the
+> OpenSPIM update site (after spending the last few weeks on getting the
+> code/update site back on track). It would be good if users with a
+> 64-bit Windows could download & test
+> http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on
+> this list.
+
+I just tested this myself with our hardware setup in Dresden and it all 
+works fine.
+
+For the record, the difference between 32-bit and 64-bit distribution is 
+so small, the next time I upload a new complete package, it will be a 
+combined one. This only adds ~10MB to the download but makes maintenance 
+easier.
+
+Ciao,
+Johannes
+
+P.S.: The new package -- as well as the current contents of the OpenSPIM 
+update site -- also contain the fixes I made for the problem we had with 
+the recent Bio-Formats update.
+
+
+
+From aureliaomega at gmail.com  Tue Apr 28 10:08:05 2015
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Tue, 28 Apr 2015 16:08:05 +0100
+Subject: [OpenSPIM] Request for testing: 64-bit
+Message-ID: <CAHAw+8arHpQNB53wxV5QSQfNZZNGiSkxwmdZyw3NVzc+j5A-_Q@mail.gmail.com>
+
+Dear Johannes,
+I downloaded this and am currently acquiring data with it, with no
+problems.
+Thank you very much!
+Aurelia
+
+
+On Tue, Apr 28, 2015 at 12:02 PM, Stephanie Höhn <s.hoehn78 at gmail.com>
+wrote:
+
+>
+> ---------- Forwarded message ----------
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+> Date: Mon, Apr 27, 2015 at 10:38 PM
+> Subject: [OpenSPIM] Request for testing: 64-bit
+> To: openspim at openspim.org
+>
+>
+> Hi,
+>
+> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+> setup when unpacking Fiji for 64-bit Windows and activating the OpenSPIM
+> update site (after spending the last few weeks on getting the code/update
+> site back on track). It would be good if users with a 64-bit Windows could
+> download & test http://openspim.org/downloads/OpenSPIM-20150427.zip and
+> report back on this list.
+>
+> Thank you,
+> Johannes
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+> --
+> Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> *Office Tel:* 01223 337859
+> *Office:* H0.0*3*
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150428/b0942328/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Tue Apr 28 11:12:40 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Tue, 28 Apr 2015 18:12:40 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <CAHAw+8arHpQNB53wxV5QSQfNZZNGiSkxwmdZyw3NVzc+j5A-_Q@mail.gmail.com>
+References: <CAHAw+8arHpQNB53wxV5QSQfNZZNGiSkxwmdZyw3NVzc+j5A-_Q@mail.gmail.com>
+Message-ID: <0b81f059ccce5cfb1724f50f4611424c@www.dscho.org>
+
+Hi Aurelia,
+
+On 2015-04-28 17:08, Aurelia Honerkamp-Smith wrote:
+
+> I downloaded this and am currently acquiring data with it, with no
+> problems.
+
+Thank you!
+Johannes
+
+
+
+From m.pawlowska at nencki.gov.pl  Wed Apr 29 05:15:53 2015
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Wed, 29 Apr 2015 12:15:53 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <mailman.3.1430240402.13906.openspim@openspim.org>
+References: <mailman.3.1430240402.13906.openspim@openspim.org>
+Message-ID: <de49288c63dd4acf252a845e81bb87f0@nencki.gov.pl>
+
+> Message: 1
+> Date: Mon, 27 Apr 2015 23:38:50 +0200
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Request for testing: 64-bit
+> Message-ID: <6125cdd1aafa8fc822f981d80410580a at www.dscho.org>
+> Content-Type: text/plain; charset=US-ASCII; format=flowed
+> 
+> Hi,
+> 
+> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+> setup when unpacking Fiji for 64-bit Windows and activating the 
+> OpenSPIM
+> update site (after spending the last few weeks on getting the
+> code/update site back on track). It would be good if users with a 
+> 64-bit
+> Windows could download & test
+> http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on
+> this list.
+
+I activated the update site for openspim, updated all, restarted, 
+acquired a test stack of 3 images, all seems fine. Thanks Johannes!!!
+
+Regards,
+Monika
+
+
+
+From johannes.schindelin at gmx.de  Wed Apr 29 05:38:59 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 29 Apr 2015 12:38:59 +0200
+Subject: [OpenSPIM] Request for testing: 64-bit
+In-Reply-To: <de49288c63dd4acf252a845e81bb87f0@nencki.gov.pl>
+References: <mailman.3.1430240402.13906.openspim@openspim.org>
+	<de49288c63dd4acf252a845e81bb87f0@nencki.gov.pl>
+Message-ID: <e11f295538fcb577d7f2637fac92cadd@www.dscho.org>
+
+Hi Monika,
+
+On 2015-04-29 12:15, m.pawlowska at nencki.gov.pl wrote:
+
+> From: Johannes Schindelin <johannes.schindelin at gmx.de>
+
+>> I uploaded a 64-bit version of the OpenSPIM software that reflects the
+>> setup when unpacking Fiji for 64-bit Windows and activating the 
+>> OpenSPIM
+>> update site (after spending the last few weeks on getting the
+>> code/update site back on track). It would be good if users with a 
+>> 64-bit
+>> Windows could download & test
+>> http://openspim.org/downloads/OpenSPIM-20150427.zip and report back on
+>> this list.
+> 
+> I activated the update site for openspim, updated all, restarted,
+> acquired a test stack of 3 images, all seems fine. Thanks Johannes!!!
+
+Thanks for testing!
+Johannes
+
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] API(s) for OpenSPIM control of laser intensity?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20API%28s%29%20for%20OpenSPIM%20control%20of%20laser%20intensity%3F&In-Reply-To=%3Cx40jnn1drx18ksp3ohjow5cm.1374864092505%40email.android.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000108.html">
+   <LINK REL="Next"  HREF="000111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] API(s) for OpenSPIM control of laser intensity?</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20API%28s%29%20for%20OpenSPIM%20control%20of%20laser%20intensity%3F&In-Reply-To=%3Cx40jnn1drx18ksp3ohjow5cm.1374864092505%40email.android.com%3E"
+       TITLE="[OpenSPIM] API(s) for OpenSPIM control of laser intensity?">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Fri Jul 26 13:44:08 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000108.html">[OpenSPIM] Including OpenSPIM's PicardStage device adapter in	Micro-Manager
+</A></li>
+        <LI>Next message: <A HREF="000111.html">[OpenSPIM] API(s) for OpenSPIM control of laser intensity?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+The problem would be, I guess, differing power scales -- where the Cube's property is in mW (so the step is 10uW), the Cobolt's is in W. If you still don't want to alter SPIMAcquisition, you'll have to divide by 1000 when setting and multiply by the same when getting; see the OnPower member function.
+
+Let me know how it works out; this will be useful when I centralize the laser control.
+
+Luke
+
+Alexis Maizel &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Alexis.Maizel at cos.uni-heidelberg.de</A>&gt; wrote:
+
+&gt;<i>me again, not sure if the screenshot was transfered well.
+</I>&gt;<i>
+</I>&gt;<i>On 24 Jul 2013, at 23:30, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Alexis,
+</I>&gt;&gt;<i> On 07/24/13, Alexis Maizel  wrote:
+</I>&gt;&gt;&gt;<i> If we would assume that I'd prefer to not alter the OpenSPIM core code, I could in principle achieve the same effect by renaming the &quot;OnPower&quot; properties of the Cobolt DAL to be called &quot;OnPowerSetPoint&quot; and refactor it to implement the CoherentCube DAL behaviour, no?
+</I>&gt;&gt;&gt;<i> Definitively more work than your solution, but like this I am sure that all my hacks are in the same place, which should warrant less maintenance headaches on the long run (i-e next time OpenSPIM is updated, I do not have to remember to modify again SPIMAcquisition.java) 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Quite right. If that's the approach you'd prefer, there is another change you'll have to make -- OpenSPIM expects properties for minimum and maximum laser power as well; Cobolt doesn't offer these, but they can be added:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> - On (what used to be) line 86, change CreateProperty(&quot;Power&quot; ... to CreateProperty(&quot;PowerSetPoint&quot; ... (Micro-Manager only cares about that string, as far as accessing the property.)
+</I>&gt;&gt;<i> - Add lines inside that function:
+</I>&gt;&gt;<i> - CreateProperty(&quot;Minimum Laser Power&quot;, &quot;&lt;lowest value&gt;&quot;, MM::Float, true)
+</I>&gt;&gt;<i> - CreateProperty(&quot;Maximum Laser Power&quot;, &quot;&lt;highest value&gt;&quot;, MM::Float, true)
+</I>&gt;&gt;<i> filling in the values as appropriate, of course.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I hope this helps. Do let me know if you get it working!
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Luke Stuyvenberg
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130726/fa35cdea/attachment.html">http://openspim.org/pipermail/openspim/attachments/20130726/fa35cdea/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000108.html">[OpenSPIM] Including OpenSPIM's PicardStage device adapter in	Micro-Manager
+</A></li>
+	<LI>Next message: <A HREF="000111.html">[OpenSPIM] API(s) for OpenSPIM control of laser intensity?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

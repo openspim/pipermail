@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Unable%20to%20launch%20Open%20SPIM%20GUI%20After%20Fiji%20Update&In-Reply-To=%3C75a091d2b400c.5328297d%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000365.html">
+   <LINK REL="Next"  HREF="000362.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Unable%20to%20launch%20Open%20SPIM%20GUI%20After%20Fiji%20Update&In-Reply-To=%3C75a091d2b400c.5328297d%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Tue Mar 18 11:09:49 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000365.html">[OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+</A></li>
+        <LI>Next message: <A HREF="000362.html">[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#360">[ date ]</a>
+              <a href="thread.html#360">[ thread ]</a>
+              <a href="subject.html#360">[ subject ]</a>
+              <a href="author.html#360">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi John,
+
+I'm not able to reproduce this error on our end, which means I'll need a little help from you to find out what's going on. If possible, could you attach a recent core log? These are files named &quot;CoreLogYYYYMMDD.txt&quot; in the OpenSPIM.app directory. With a little luck, the log might contain details on any issue.
+
+
+Additionally, it might help to be sure OpenSPIM itself is fully up to date: Launch the Fiji Updater, click on &quot;Advanced Mode&quot; in the bottom right, and from the &quot;View Options&quot; drop-down at the top, select &quot;View files of the 'OpenSPIM' site&quot;. Make sure all files in the list below are marked as &quot;Up-to-date&quot;.
+
+
+Thanks,
+Luke
+
+On 03/18/14, &quot;LIM Soon Yew John (IMB)&quot;  wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> I am unable to launch the Open SPIM GUI (Plugins &gt; Acquire SPIM Image) from Micro-Manager after Fiji update. There was no response when I click on &quot;Acquire SPIM Image&quot; on the &quot;Plugins&quot; dropdown menu in Micro-Manager.
+</I>&gt;<i> 
+</I>&gt;<i> Can you please check if there is an issue with the software?
+</I>&gt;<i> 
+</I>&gt;<i> Thank You,
+</I>&gt;<i> John
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> From: Luke Stuyvenberg [<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>]
+</I>&gt;<i> Sent: Wednesday, March 12, 2014 3:06 PM
+</I>&gt;<i> To: LIM Soon Yew John (IMB)
+</I>&gt;<i> Subject: Re: [OpenSPIM] Off Center Rotation &amp; Calibration Tools in Open SPIM Software
+</I>&gt;<i> 
+</I>&gt;<i> Hi John,
+</I>&gt;<i> 
+</I>&gt;<i> Solving this problem is precisely the goal of the automatic rotational
+</I>&gt;<i> axis calibration tool (opened by clicking 'Calibrate' on the stage
+</I>&gt;<i> control tab).
+</I>&gt;<i> 
+</I>&gt;<i> I'm afraid it's poorly documented at the moment -- a failure on my part.
+</I>&gt;<i> I believe we have a ticket out to provide more documentation (or if we
+</I>&gt;<i> don't, we soon will).
+</I>&gt;<i> 
+</I>&gt;<i> Here's a rough guide that should get you started:
+</I>&gt;<i> - Set the rotation stage to a low value -- -90 degrees or so.
+</I>&gt;<i> - Find a nice, bright bead in the live view, then open the calibrator.
+</I>&gt;<i> - Use FIJI's rectangle ROI tool to select a region around that bead. The
+</I>&gt;<i> region should be as large as possible without including other/brighter
+</I>&gt;<i> beads.
+</I>&gt;<i> - Click 'Obtain Next' to begin the axis detection. (This button will
+</I>&gt;<i> change to 'Interrupt' while the software is processing.) The system will
+</I>&gt;<i> scan through Z to localize the bead, then rotate the stage by one step
+</I>&gt;<i> and repeat, building a list of bead positions.
+</I>&gt;<i> - After about 90 degrees (though, the more locations it has, the
+</I>&gt;<i> better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+</I>&gt;<i> determine the rotation axis location and direction.
+</I>&gt;<i> 
+</I>&gt;<i> This is an optimistic guide, however; in my experience, the calibrator
+</I>&gt;<i> sometimes has trouble tracking a bead -- or a bead that looked bright
+</I>&gt;<i> quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+</I>&gt;<i> button opens an advanced panel for controlling the tracking process:
+</I>&gt;<i> first/second delta control the Z scan size, X/Y determination is for
+</I>&gt;<i> localizing in the image plane, and so on. In particular, changing X/Y
+</I>&gt;<i> determination to 'Max Intens.' often produces better results than
+</I>&gt;<i> 'Gaussian (Beads)'.
+</I>&gt;<i> 
+</I>&gt;<i> Once the axis is detected, the calibration window can be closed or
+</I>&gt;<i> minimized. At this point, rotations with the mouse (i.e. holding Alt and
+</I>&gt;<i> dragging the mouse back and forth) will attempt to rotate around the
+</I>&gt;<i> detected axis. (I should note that the rotation slider does *not*
+</I>&gt;<i> implement this calculation at the moment! Only the mouse controls are
+</I>&gt;<i> properly affected.)
+</I>&gt;<i> 
+</I>&gt;<i> I'm sorry I can't be more helpful presently; I'll check on that
+</I>&gt;<i> documentation ticket/create it if necessary, to make sure this feature
+</I>&gt;<i> is documented more thoroughly.
+</I>&gt;<i> 
+</I>&gt;<i> Luke
+</I>&gt;<i> 
+</I>&gt;<i> On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+</I>&gt;<i> &gt; Dear All,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Any help will be greatly appreciated,
+</I>&gt;<i> &gt; John
+</I>&gt;<i> &gt; ________________________________________
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+</PRE>
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000365.html">[OpenSPIM] Welcome to the OpenSPIM community, Kumar!
+</A></li>
+	<LI>Next message: <A HREF="000362.html">[OpenSPIM] Unable to launch Open SPIM GUI After Fiji Update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#360">[ date ]</a>
+              <a href="thread.html#360">[ thread ]</a>
+              <a href="subject.html#360">[ subject ]</a>
+              <a href="author.html#360">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

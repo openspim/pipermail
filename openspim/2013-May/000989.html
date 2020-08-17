@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] [openspim] OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bopenspim%5D%20OpenSPIM&In-Reply-To=%3C51A5B615.2020305%40bii.a-star.edu.sg%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000988.html">
+   <LINK REL="Next"  HREF="000992.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] [openspim] OpenSPIM</H1>
+    <B>HUANG Chao-Hui</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%5Bopenspim%5D%20OpenSPIM&In-Reply-To=%3C51A5B615.2020305%40bii.a-star.edu.sg%3E"
+       TITLE="[OpenSPIM] [openspim] OpenSPIM">huangch at bii.a-star.edu.sg
+       </A><BR>
+    <I>Wed May 29 03:02:29 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000988.html">[OpenSPIM] [openspim] OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="000992.html">[OpenSPIM] [openspim] OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#989">[ date ]</a>
+              <a href="thread.html#989">[ thread ]</a>
+              <a href="subject.html#989">[ subject ]</a>
+              <a href="author.html#989">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+Thanks for replying. I would like to provide more information about the 
+package.
+
+I am not sure but it might be because of inconsistent of the source 
+code. I've found it will have problems when using java classes from 3rd 
+party folder. I have some problems when I was trying to compile it by my 
+own (and yes I solved the not-to-snap problem by build it from source 
+code).
+
+Actually I even have to make some modification on the downloaded source 
+code. By following the instruction on OpenSPIM web site, it will not 
+generate the same binary executable as the mentioned zip file. I think 
+there are some inconsistent problem on the actual souce code the source 
+code you used to build the zip file, including the 3rd party folder, 
+perhaps different versions of the jar files?), and the one which can be 
+downloaded from the github.
+
+A more solid example is, when compiling, according to the instruction, 
+we have to import the classes from ''3rdpartypublic\classext''. But when 
+running it, I think the code invoked the classes from jars folder in 
+somewhere under micromanager folder.
+
+I would like to suggest if that is possible, maybe it would be better to 
+to go for a full synchronization? Of course if you have tested and 
+verified the code from the github, this is not an issue anymore.
+
+Sincerely,
+
+Chaohui
+
+
+On 29/5/2013 5:20 AM, Luke Stuyvenberg wrote:
+&gt;<i> Chaohui,
+</I>&gt;<i>
+</I>&gt;<i> Please pardon the delay in my reply. I tested the problem and it's just as you explained: the version of Micro-Manager in the ZIP file (1/31) won't snap an image more than once (though I found that by turning live mode on and then off again, it is possible to snap another image). I'm not certain what causes this problem, however, and it doesn't happen in the latest version (which is now on Github). You should be able to update the plugin using Help -&gt; Update Fiji (Please be sure you get MMJ_.jar, MMCoreJ.jar, and any new DLL files as well.). Please let us know if this problem persists after updating!
+</I>&gt;<i> We will hopefully be providing a new ZIP file soon as well, so that future users will not encounter this problem at all.
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Luke Stuyvenberg
+</I>&gt;<i>
+</I>&gt;<i> On 05/02/13, &quot;HUANG, Chao-Hui&quot; wrote:
+</I>&gt;&gt;<i> Dear Johnnaes,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> May I ask if the OpenSPIM on Github is updated?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Actually I really suggest to test the problem that I mentioned. We've
+</I>&gt;&gt;<i> found that problem on PVCAM, and it can be happened either 64, 32 bits
+</I>&gt;&gt;<i> on DemoCamera. Of course, if in the same configuration, it would not be
+</I>&gt;&gt;<i> happened on your side, that will be another story :-)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Sincerely,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Chaohui
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 29/04/2013 23:04, Johannes Schindelin wrote:
+</I>&gt;&gt;&gt;<i> Hi Chaohui,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> On Mon, 29 Apr 2013, HUANG Chao-Hui wrote:
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> We are glad to see that the code will be updated soon.
+</I>&gt;&gt;&gt;<i> Don't hold your breath, though ;-)
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Just in the case that you might not aware. We found a problem in 1/31
+</I>&gt;&gt;&gt;&gt;<i> binary version. When you click snap on the live window of MM, you can
+</I>&gt;&gt;&gt;&gt;<i> only click one time. after the first time snap, the button is not going
+</I>&gt;&gt;&gt;&gt;<i> to update the live view screen.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This problem can be happened even using DemoCamera.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Are you aware this?
+</I>&gt;&gt;&gt;<i> No, I wasn't, and in fact, I did not have that problem. But then, I
+</I>&gt;&gt;&gt;<i> haven't used the DemoCamera in a while...
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Ciao,
+</I>&gt;&gt;&gt;<i> Johannes
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -- 
+</I>&gt;&gt;<i> HUANG, Chao-Hui (Ph.D.)
+</I>&gt;&gt;<i> -----------------------
+</I>&gt;&gt;<i> Research Fellow
+</I>&gt;&gt;<i> Bioinformatic Institute, Agency for Science, Technology Research
+</I>&gt;&gt;<i> National University of Singapore
+</I>&gt;&gt;<i> Singapore Mobile: +65 92426558
+</I>&gt;&gt;<i> Singapore Office: +65 64788353
+</I>&gt;&gt;<i> Taiwan Mobile: +886 928338607
+</I>&gt;&gt;<i> Email 1: <A HREF="http://openspim.org/mailman/listinfo/openspim">ch at mail2000.com.tw</A>
+</I>&gt;&gt;<i> Email 2: <A HREF="http://openspim.org/mailman/listinfo/openspim">huangch at bii.a-star.edu.sg</A>
+</I>&gt;&gt;<i> WWW: <A HREF="http://web.bii-sg.org/~huangch/">http://web.bii-sg.org/~huangch/</A>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000988.html">[OpenSPIM] [openspim] OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="000992.html">[OpenSPIM] [openspim] OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#989">[ date ]</a>
+              <a href="thread.html#989">[ thread ]</a>
+              <a href="subject.html#989">[ subject ]</a>
+              <a href="author.html#989">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

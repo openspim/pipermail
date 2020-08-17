@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Temperature control for the SPIM chamber
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3CEC2D3033-5E46-4E1C-A787-874D19FB62CD%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000168.html">
+   <LINK REL="Next"  HREF="000170.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Temperature control for the SPIM chamber</H1>
+    <B>Michael Weber</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3CEC2D3033-5E46-4E1C-A787-874D19FB62CD%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Temperature control for the SPIM chamber">weber at mpi-cbg.de
+       </A><BR>
+    <I>Fri Sep 20 12:32:31 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000168.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+        <LI>Next message: <A HREF="000170.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#169">[ date ]</a>
+              <a href="thread.html#169">[ thread ]</a>
+              <a href="subject.html#169">[ subject ]</a>
+              <a href="author.html#169">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Edgar,
+
+I recommend to not use aluminum as material for the chamber, as it is very sensitive to salt. As soon as you use medium containing salt (fish medium, PBS etc.) the surface will oxidize sooner or later and you will run into problems. You can coat/paint/anodize the aluminum but this will not last forever. The best would be to use stainless steel like in the Zeiss Lightsheet Z1, but at least our workshop has no suitable machines to build a chamber from stainless steel. If you want to use a peltier or a similar device I would try to build a &quot;two component&quot; chamber: a thin-walled plastic chamber, enclosed by an aluminum &quot;cage&quot; on the outside. Another possibility is to use a all-plastic chamber with an external perfusion system, that's how I do it. The main drawback is that you have water flowing in your chamber, which could disturb your imaging, that's why I use FEP tubes as a solid support for the specimen.
+
+Best,
+Michael
+
+
+On Sep 20, 2013, at 8:59 AM, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+
+&gt;<i> Dear Jan,
+</I>&gt;<i> 
+</I>&gt;<i> Thanks a lot for the information, it is very helpful.
+</I>&gt;<i> 
+</I>&gt;<i> I have seen that there are on internet some temperature controllers for ca. $25 
+</I>&gt;<i> <A HREF="http://www.ebay.de/itm/All-purpose-Temperature-Controller-STC-1000-Whit-sensor-/320628773067">http://www.ebay.de/itm/All-purpose-Temperature-Controller-STC-1000-Whit-sensor-/320628773067</A>
+</I>&gt;<i> <A HREF="http://www.autospeed.com/cms/A_112617/article.html">http://www.autospeed.com/cms/A_112617/article.html</A>
+</I>&gt;<i> 
+</I>&gt;<i> or this one that looks more complex
+</I>&gt;<i> <A HREF="http://www.auberins.com/index.php?main_page=product_info&amp;cPath=1&amp;products_id=14">http://www.auberins.com/index.php?main_page=product_info&amp;cPath=1&amp;products_id=14</A>
+</I>&gt;<i> 
+</I>&gt;<i> but I don't know if these kind of controllers are suitable for our application.
+</I>&gt;<i> 
+</I>&gt;<i> The advantage of this ones is that I wouldn't need to build the circuit for conditioning the
+</I>&gt;<i> signal for the PT100 sensor and avoid writting a program for controlling the temperature.
+</I>&gt;<i> So the temperature control would be independent.
+</I>&gt;<i> 
+</I>&gt;<i> What's your opinion?
+</I>&gt;<i> 
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> Edgar
+</I>&gt;<i> _________________________________________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Fraunhofer-Institut f&#252;r Produktionstechnologie IPT 
+</I>&gt;<i> Edgar Escobar Nieto 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Steinbachstra&#223;e 17 
+</I>&gt;<i> 52074 Aachen 
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+</I>&gt;<i> <A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A> 
+</I>&gt;<i> _________________________________________________________________________ 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Jan Krieger &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">j.krieger at dkfz-heidelberg.de</A>&gt; schrieb: -----
+</I>&gt;<i> An: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>&gt;
+</I>&gt;<i> Von: Jan Krieger &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">j.krieger at dkfz-heidelberg.de</A>&gt;
+</I>&gt;<i> Datum: 19.09.2013 18:12
+</I>&gt;<i> Betreff: Re: Temperature control for the SPIM chamber
+</I>&gt;<i> 
+</I>&gt;<i> Hi!
+</I>&gt;<i> 
+</I>&gt;<i> I'm attatching a picture of our chamber ... if that helps ;-) ... Have 
+</I>&gt;<i> you already decided on a temperature controller? As I mentioned before, 
+</I>&gt;<i> we have a homebuilt one and I'm using these PT100 to embed into the 
+</I>&gt;<i> sample chamber: 
+</I>&gt;<i> <A HREF="http://www.conrad.biz/ce/de/product/171961/Platin-Temperatursensor-in-Keramikhuelse-Heraeus-MR828-Heraeus-Nr-32-209-340-70-500-C-Keramikhuelse">http://www.conrad.biz/ce/de/product/171961/Platin-Temperatursensor-in-Keramikhuelse-Heraeus-MR828-Heraeus-Nr-32-209-340-70-500-C-Keramikhuelse</A> 
+</I>&gt;<i> 
+</I>&gt;<i> For measurement in the chamber I found thin PT100 from stainless steel: 
+</I>&gt;<i> <A HREF="http://www.temperaturmesstechnik.de/fileadmin/user_upload/pdf/tmh-mantelwiderstandsthermometer-001.pdf">http://www.temperaturmesstechnik.de/fileadmin/user_upload/pdf/tmh-mantelwiderstandsthermometer-001.pdf</A>  
+</I>&gt;<i> ... but they are rather expensive (~55EUR+VAT)
+</I>&gt;<i> 
+</I>&gt;<i> About the foil: The ones I found a few years ago were all very large ... 
+</I>&gt;<i> if you find a small one, please let me know ;-)
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> JAN
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Am 19.09.2013 13:49, schrieb <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>:
+</I>&gt;<i> &gt; Dear Jan,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thanks for your feedback. So I will use the TO22 housing resistor
+</I>&gt;<i> &gt; and the PT100 temperature sensor. Or maybe instead of the
+</I>&gt;<i> &gt; TO22 housing resistor I will use a heating foil (also a resistor).
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Kind regards,
+</I>&gt;<i> &gt; Edgar
+</I>&gt;<i> &gt; _________________________________________________________________________
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Fraunhofer-Institut f&#252;r Produktionstechnologie IPT
+</I>&gt;<i> &gt; Edgar Escobar Nieto
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Steinbachstra&#223;e 17
+</I>&gt;<i> &gt; 52074 Aachen
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> _
+</I>&gt;<i> &gt; __<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>_ &lt; <A HREF="http://www.ipt.fraunhofer.de/">http://www.ipt.fraunhofer.de/</A>&gt;
+</I>&gt;<i> &gt; _________________________________________________________________________
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> [Anhang 'SPIM_manual_poster.pdf' entfernt von Edgar Escobar Nieto/Fraunhofer IPT]
+</I>&gt;<i> [Anhang 'j_krieger.vcf' entfernt von Edgar Escobar Nieto/Fraunhofer IPT]
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+<A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130920/3d982370/attachment.html">http://openspim.org/pipermail/openspim/attachments/20130920/3d982370/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000168.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+	<LI>Next message: <A HREF="000170.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#169">[ date ]</a>
+              <a href="thread.html#169">[ thread ]</a>
+              <a href="subject.html#169">[ subject ]</a>
+              <a href="author.html#169">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Getting started with SPIM plugin code
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Getting%20started%20with%20SPIM%20plugin%20code&In-Reply-To=%3Calpine.DEB.2.20.1512151615200.6483%40virtualbox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001847.html">
+   <LINK REL="Next"  HREF="001849.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Getting started with SPIM plugin code</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Getting%20started%20with%20SPIM%20plugin%20code&In-Reply-To=%3Calpine.DEB.2.20.1512151615200.6483%40virtualbox%3E"
+       TITLE="[OpenSPIM] Getting started with SPIM plugin code">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Tue Dec 15 09:50:03 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001847.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+        <LI>Next message: <A HREF="001849.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1848">[ date ]</a>
+              <a href="thread.html#1848">[ thread ]</a>
+              <a href="subject.html#1848">[ subject ]</a>
+              <a href="author.html#1848">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Neil,
+
+On Tue, 15 Dec 2015, Anthony, Neil wrote:
+
+&gt;<i> I hope the science is treating you well.
+</I>
+Nah. It does not matter anymore, though, as I moved on ;-)
+
+&gt;<i> I have been looking at getting started with getting into the code, which
+</I>&gt;<i> I see is here:
+</I>&gt;<i> <A HREF="http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/">http://jenkins.imagej.net/view/OpenSPIM/job/SPIMAcquisition/</A>
+</I>
+What you found here is actually not the source code, but a so-called
+&quot;Continuous Integration Server&quot;. Essentially it means that this is a web
+server that also watches the source code in the background and builds it
+whenever it gets updated.
+
+Theoretically, it also runs all the regression tests (i.e. small snippets
+of code that verify that what the programmer expected to work, ahem,
+actually works). Practically, there is preciously little in the way of
+regression tests because the student who wrote most of the SPIMAcquisition
+code based a lot of faith in the code he wrote and skipped writing tests.
+
+The only regression test, in fact, was written by HongKee, long after the
+original author moved on to other pastures.
+
+As pointed out by HongKee, the source code can be found at
+
+	<A HREF="https://github.com/openspim/SPIMAcquisition">https://github.com/openspim/SPIMAcquisition</A>
+
+The most important thing about the source code is that it is in a source
+code &quot;repository&quot;, i.e. a place where the code can not only be shared, but
+contributions can be integrated easily. This is possible by the use of the
+version control software called &quot;Git&quot;. I encourage you to take 15 minutes
+to learn how to use it (and why it improves your life) at:
+
+	<A HREF="https://try.github.com/">https://try.github.com/</A>
+
+More about integrating contributions below.
+
+&gt;<i> I'm a semi experienced programmer (a little Java, Pascal, C, Matlab,
+</I>&gt;<i> Igor Pro, LabView, NIDAQ to varying levels) and I have all the
+</I>&gt;<i> applications in place (Netbeans, Eclipse, Visual Studio Express 2010,
+</I>&gt;<i> 2015, and all the java SDKs I might need).
+</I>
+Good. They all have support for Git (actually, VS Express does not, but VS
+2015 does, I am actually working on that ;-)). So all you need to do is
+&quot;clone&quot; the repository mentioned above into your workspace.
+
+You can then give the code a test run using the SPIMTestDrive class:
+
+	<A HREF="https://github.com/openspim/SPIMAcquisition/blob/master/src/test/java/SPIMTestDrive.java">https://github.com/openspim/SPIMAcquisition/blob/master/src/test/java/SPIMTestDrive.java</A>
+
+&gt;<i> Where I get lost is how to incorporate anything I do into the existing
+</I>&gt;<i> code?
+</I>
+Yeah, unfortunately this is my mistake. I was supposed to manage the
+student writing the code and I failed to convince him to document things
+so that the next person has a chance to dive in, too. So things are pretty
+much undocumented.
+
+I do not have enough time to answer questions, but I managed to give
+HongKee an introduction into the code base before switching jobs, so maybe
+you want to ask concrete questions on this list? (On this list so that the
+impact of the answers is maximized and HongKee won't have to repeat
+himself.)
+
+&gt;<i> What parts should I, can I work on?
+</I>
+The Open Source idea is that you work on those parts that you need to see
+improved. I am sure you have a couple of pet peeves that you would love to
+see addressed. Those are good places to start from.
+
+And again, if you have no idea where to start &quot;scratching your itch&quot;, just
+ask away, on this list.
+
+&gt;<i> Do these changes need to be vetted before being incorporated?
+</I>
+The common process is that you create a copy of the repository on GitHub
+(for historical reasons, this is called &quot;forking&quot;). In this copy, you can
+do *everything* you like.
+
+Then you will start improving the code. Once you have an improvement you
+think is valuable also for others, you open a so-called &quot;Pull Request&quot; on
+GitHub:
+
+	<A HREF="https://help.github.com/articles/using-pull-requests/">https://help.github.com/articles/using-pull-requests/</A>
+
+HongKee will review the changes, possibly make suggestions how to improve
+or otherwise change the code, and eventually &quot;merge&quot; the changes.
+
+Depending how polished you want your contribution to look, you might want
+to go to the full distance and follow the advice in:
+
+	<A HREF="https://github.com/maven-nar/nar-maven-plugin/wiki/How-to-contribute">https://github.com/maven-nar/nar-maven-plugin/wiki/How-to-contribute</A>
+
+(This is from a related project, but the advice applies to pretty much all
+Open Source projects.)
+
+&gt;<i> How do I get started with version control?
+</I>
+My recommendation is <A HREF="https://try.github.com/,">https://try.github.com/,</A> but depending how visual you
+work, <A HREF="http://eagain.net/articles/git-for-computer-scientists/">http://eagain.net/articles/git-for-computer-scientists/</A> might be
+better. Or read the Pro Git book: <A HREF="http://git-scm.com/book/en/v2.">http://git-scm.com/book/en/v2.</A> There are
+tons of good resources available, my favorite being Git For Teams
+(disclaimer: I reviewed this book before publication), but that one will
+keep you occupied for a couple of evenings.
+
+&gt;<i> feel this is, for me, the biggest hurdle in open source coding:  Not
+</I>&gt;<i> being able to code, but being able to 'open source'.  I've always been a
+</I>&gt;<i> lone coder up until this point, so please excuse my ignorance to these
+</I>&gt;<i> details.
+</I>
+You might find it slightly challenging at first, because collaboration
+always requires clearer communication than &quot;lone coding&quot;, and also the
+occasional compromise. I found that this requirement was most challenging
+to most scientists, who are basically used (even encouraged!!!) to work
+against each other all the time.
+
+The advantage of Open Source coding is that you do not need to duplicate
+work. You put in that extra effort to make the code work not only for you,
+but for others, and then you can benefit from others' contributions just
+the same as they can benefit from yours'.
+
+This concept is very closely related to Isaac Newton's famous words: &quot;If I
+could see so far, it was only because I was standing on the shoulders of
+giants&quot;. It is strange how far away science has deviated from that world
+view.
+
+&gt;<i> Also, I think maybe I'm stuck on the Maven thing.
+</I>
+Oh, Maven. Yep, it looks a little complex in the beginning, I agree.
+
+Think of Maven as the system that allows programmers to stand on each
+others' shoulders. It allows you to define what other software components
+your software depends on (&quot;dependencies&quot;). For example, OpenSPIM depends
+on Micro-Manager, which in turn depends on ImageJ. And the closer you
+look, the more fine-grained things become. More details can be found here:
+
+	<A HREF="http://imagej.net/Maven">http://imagej.net/Maven</A>
+
+Welcome on board,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001847.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+	<LI>Next message: <A HREF="001849.html">[OpenSPIM] Getting started with SPIM plugin code
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1848">[ date ]</a>
+              <a href="thread.html#1848">[ thread ]</a>
+              <a href="subject.html#1848">[ subject ]</a>
+              <a href="author.html#1848">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

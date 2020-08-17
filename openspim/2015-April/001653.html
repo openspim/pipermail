@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] open SPIM acquisition error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20open%20SPIM%20acquisition%20error&In-Reply-To=%3CCAHAw%2B8an4%3Daexx17eYRx7CCV5e3XMogmLz1rS_f%2B9Kym2EqyyQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001652.html">
+   <LINK REL="Next"  HREF="001655.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] open SPIM acquisition error</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20open%20SPIM%20acquisition%20error&In-Reply-To=%3CCAHAw%2B8an4%3Daexx17eYRx7CCV5e3XMogmLz1rS_f%2B9Kym2EqyyQ%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] open SPIM acquisition error">aureliaomega at gmail.com
+       </A><BR>
+    <I>Fri Apr 17 09:56:00 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001652.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+        <LI>Next message: <A HREF="001655.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1653">[ date ]</a>
+              <a href="thread.html#1653">[ thread ]</a>
+              <a href="subject.html#1653">[ subject ]</a>
+              <a href="author.html#1653">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I can acquire a stack and save it to disk, but whenever I try to start
+acquisition with an output directory specified, I get the error.
+
+I installed the new 64 bit version, and all works fine except I get a
+similar error:
+
+java.lang.NoSuchMethodError:
+loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+    at spim.progacq.OMETIFFHandler.&lt;init&gt;(OMETIFFHandler.java:95)
+    at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1760)
+    at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+    at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+    at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+    at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+    at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown
+Source)
+    at java.awt.Component.processMouseEvent(Unknown Source)
+    at javax.swing.JComponent.processMouseEvent(Unknown Source)
+    at java.awt.Component.processEvent(Unknown Source)
+    at java.awt.Container.processEvent(Unknown Source)
+    at java.awt.Component.dispatchEventImpl(Unknown Source)
+    at java.awt.Container.dispatchEventImpl(Unknown Source)
+    at java.awt.Component.dispatchEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+    at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+    at java.awt.Container.dispatchEventImpl(Unknown Source)
+    at java.awt.Window.dispatchEventImpl(Unknown Source)
+    at java.awt.Component.dispatchEvent(Unknown Source)
+    at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+    at java.awt.EventQueue.access$000(Unknown Source)
+    at java.awt.EventQueue$1.run(Unknown Source)
+    at java.awt.EventQueue$1.run(Unknown Source)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.awt.EventQueue$2.run(Unknown Source)
+    at java.awt.EventQueue$2.run(Unknown Source)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown
+Source)
+    at java.awt.EventQueue.dispatchEvent(Unknown Source)
+    at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+    at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+    at java.awt.EventDispatchThread.run(Unknown Source)
+
+Cheers
+
+
+On Fri, Apr 17, 2015 at 12:42 PM, Aurelia Honerkamp-Smith &lt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">aureliaomega at gmail.com</A>&gt; wrote:
+
+&gt;<i> Hello,
+</I>&gt;<i> I have a new error this morning.  When I try to start multi-angle
+</I>&gt;<i> acquisition, I get the following Java console error:
+</I>&gt;<i>
+</I>&gt;<i> [WARNING] Couldd not load legacy launcher config file
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\ImageJ.cfg
+</I>&gt;<i> MMCoreJ.jar path =
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins\MMCoreJ.jar
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\plugins
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1\OpenSPIM.app\mm\win32
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1
+</I>&gt;<i> C:\Users\ah659\Desktop\OPENSP~1\mm\win32
+</I>&gt;<i> java.lang.NoSuchMethodError:
+</I>&gt;<i> loci.formats.meta.IMetadata.setPixelsPhysicalSizeX(Lome/xml/model/primitives/PositiveFloat;I)V
+</I>&gt;<i>     at spim.progacq.OMETIFFHandler.&lt;init&gt;(OMETIFFHandler.java:95)
+</I>&gt;<i>     at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1731)
+</I>&gt;<i>     at
+</I>&gt;<i> javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
+</I>&gt;<i>     at
+</I>&gt;<i> javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
+</I>&gt;<i>     at
+</I>&gt;<i> javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
+</I>&gt;<i>     at
+</I>&gt;<i> javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
+</I>&gt;<i>     at
+</I>&gt;<i> javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
+</I>&gt;<i>     at java.awt.Component.processMouseEvent(Component.java:6289)
+</I>&gt;<i>     at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
+</I>&gt;<i>     at java.awt.Component.processEvent(Component.java:6054)
+</I>&gt;<i>     at java.awt.Container.processEvent(Container.java:2041)
+</I>&gt;<i>     at java.awt.Component.dispatchEventImpl(Component.java:4652)
+</I>&gt;<i>     at java.awt.Container.dispatchEventImpl(Container.java:2099)
+</I>&gt;<i>     at java.awt.Component.dispatchEvent(Component.java:4482)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4577)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
+</I>&gt;<i>     at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+</I>&gt;<i>     at java.awt.Container.dispatchEventImpl(Container.java:2085)
+</I>&gt;<i>     at java.awt.Window.dispatchEventImpl(Window.java:2478)
+</I>&gt;<i>     at java.awt.Component.dispatchEvent(Component.java:4482)
+</I>&gt;<i>     at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:644)
+</I>&gt;<i>     at java.awt.EventQueue.access$000(EventQueue.java:85)
+</I>&gt;<i>     at java.awt.EventQueue$1.run(EventQueue.java:603)
+</I>&gt;<i>     at java.awt.EventQueue$1.run(EventQueue.java:601)
+</I>&gt;<i>     at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i>     at
+</I>&gt;<i> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+</I>&gt;<i>     at
+</I>&gt;<i> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:98)
+</I>&gt;<i>     at java.awt.EventQueue$2.run(EventQueue.java:617)
+</I>&gt;<i>     at java.awt.EventQueue$2.run(EventQueue.java:615)
+</I>&gt;<i>     at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i>     at
+</I>&gt;<i> java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+</I>&gt;<i>     at java.awt.EventQueue.dispatchEvent(EventQueue.java:614)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+</I>&gt;<i>     at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+</I>&gt;<i>     at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+</I>&gt;<i>
+</I>&gt;<i> Live view works, but Snap does not complete.
+</I>&gt;<i> Anyone have an idea?
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Aurelia
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150417/af4aa526/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150417/af4aa526/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001652.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+	<LI>Next message: <A HREF="001655.html">[OpenSPIM] open SPIM acquisition error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1653">[ date ]</a>
+              <a href="thread.html#1653">[ thread ]</a>
+              <a href="subject.html#1653">[ subject ]</a>
+              <a href="author.html#1653">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

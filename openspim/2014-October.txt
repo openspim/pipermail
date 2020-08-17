@@ -1,0 +1,1463 @@
+From Johannes.Schindelin at gmx.de  Wed Oct  1 11:42:42 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 1 Oct 2014 18:42:42 +0200 (CEST)
+Subject: [OpenSPIM] Short downtime of the OpenSPIM wiki
+Message-ID: <alpine.DEB.1.00.1410011841570.990@s15462909.onlinehome-server.info>
+
+Dear OpenSPIM community,
+
+between 1pm and 2pm CDT (corresponding to 7pm ro 8pm UTC), there will be a
+short downtime of the servers hosting the OpenSPIM wiki and mailing list.
+It should not last longer than 10 minutes.
+
+Sorry for the inconvenience,
+Johannes
+
+
+From mredd at cores.utah.edu  Fri Oct  3 17:23:02 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Fri, 3 Oct 2014 22:23:02 +0000
+Subject: [OpenSPIM] sample holder
+Message-ID: <D0547DE4.13924%mredd@cores.utah.edu>
+
+I have questions about the Openspim stage sample holder. From the JOVE description and the Openspim website, I believe that zebrafish samples are mounted in FEP tubing and suspended in front of the imaging lens using a 1mL syringe (with a blunt needle sticking into the FEP tubing) that is stuck through the Picard stage pulley wheel and suspended with some kind of rubber stopper to adjust the sample height with the imaging lens. The pulley wheel on my Picard stage that holds the syringe does not fit my BD sciences 1mL syringes tightly. The syringe has a lot of side to side play which doesn't seem like a good idea. Are there 1mL syringes from other manufacturers that fit this pulley wheel more tightly? Any suggestions would be welcome.
+
+Cheers
+mike
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141003/9a995798/attachment.html>
+
+From mredd at cores.utah.edu  Fri Oct  3 17:23:29 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Fri, 3 Oct 2014 22:23:29 +0000
+Subject: [OpenSPIM] Z motor problem
+Message-ID: <D0547E00.13927%mredd@cores.utah.edu>
+
+Hi Johannes,
+I am still unable to communicate with the Picard Z motor in fiji running on windows xp 32. I tried a windows 7 machine and fiji communicates fine with my Picard Z motor. Unfortunately, my Stradus laser doesn't work on the Windows 7 machine. I put the stradus driver in the main folder of fiji and the stradus laser is listed as unavailable on the device list in the configuration wizard. This driver placement worked fine with fiji in XP 32.  Any advice?
+
+Thanks
+mike
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141003/ae965da8/attachment.html>
+
+From Michael.Redd at hci.utah.edu  Mon Oct  6 17:59:04 2014
+From: Michael.Redd at hci.utah.edu (Michael Redd)
+Date: Mon, 6 Oct 2014 22:59:04 +0000
+Subject: [OpenSPIM] z-motor communication problem
+Message-ID: <95646A35663E8442A8E21E0DBCED83877319E2E0@HCI-EX-MB1.hci.utah.edu>
+
+I have been struggling with fiji failing to communicate with my Picard Z-motor. ImageJ and micromanager can drive the stage just fine. I managed to get fiji to communicate with my Picard Z motor by replacing the openspim fiji mm Picard stage driver with the Picard driver from micromanager 1.4 in a windows 7 machine. (This does not work with windows xp 32.) Unfortunately I now get another error: "Line 8: Device COM1, Serial Manager, COM1 The specified label "COM1" is already in use". Can anyone help me? Here is a core log
+
+2014-10-06T15:43:27.161040 tid2364 [IFO,LogManager] Enabled primary log file C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\CoreLogs\CoreLog20141006T154327_pid1088.txt
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] User: SPIM-7
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Host: SPIM-7-PC
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] MM Studio version: 1.4.x dev
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] MMCore version 4.0.4
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Device API version 60, Module API version 10
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Operating System: Windows 7 (x86) 6.1
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.7.0_67, 32-bit
+2014-10-06T15:43:27.410640 tid2072 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin Autofocus
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did unload all devices
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device COM1 from SerialManager; label = COM1
+2014-10-06T15:43:29.859844 tid2364 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label "COM1" is already in use
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = HamamatsuHam_DCAM
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device VLTStradus from Stradus; label = VLTStradus
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize 6 devices
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device COM1
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Did initialize device COM1
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Will initialize device VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Did initialize device VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Default shutter set to VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Will initialize device Picard Twister
+2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Did initialize device Picard Twister
+2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Will initialize device Picard Z Stage
+2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Did initialize device Picard Z Stage
+2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Will initialize device Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Did initialize device Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default xy stage set to Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Finished initializing 6 devices
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2014-10-06T15:43:32.226971 tid2364 [IFO,App]
+                                   [       ] java.lang.Exception: Line 8: Device,COM1,SerialManager,COM1
+                                   [       ] The specified label "COM1" is already in use
+                                   [       ]
+                                   [       ]  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                   [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:313)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:3151)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$2200(MMStudioMainFrame.java:157)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:560)
+                                   [       ]   at java.awt.AWTEventMulticaster.windowOpened(Unknown Source)
+                                   [       ]   at java.awt.Window.processWindowEvent(Unknown Source)
+                                   [       ]   at javax.swing.JFrame.processWindowEvent(Unknown Source)
+                                   [       ]   at java.awt.Window.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$200(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2014-10-06T15:43:41.510502 tid2364 [IFO,Core] Did update system state cache
+2014-10-06T15:43:41.544504 tid2364 [IFO,App] Startup script file (C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\MMStartup.bsh) not present.
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Did unload all devices
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] System reset
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Core session ended
+
+
+From stuyvenberg at wisc.edu  Wed Oct  8 11:01:03 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 08 Oct 2014 10:01:03 -0600
+Subject: [OpenSPIM] z-motor communication problem
+In-Reply-To: <95646A35663E8442A8E21E0DBCED83877319E2E0@HCI-EX-MB1.hci.utah.edu>
+References: <95646A35663E8442A8E21E0DBCED83877319E2E0@HCI-EX-MB1.hci.utah.edu>
+Message-ID: <54355FBF.3010803@wisc.edu>
+
+Hi Michael,
+
+The error suggests that the configuration file is trying to load the 
+COM1 device twice.
+
+Do you have multiple serial devices in the configuration? The log seems 
+to suggest not. Have you tried creating a configuration from scratch? 
+It's possible there have been changes to SerialManager that require 
+creating a new configuration file.
+
+If these ideas don't help, could you please send an e-mail to the list 
+containing your configuration file and the core log as attachments?
+
+Thanks!
+Luke
+
+On 10/6/2014 4:59 PM, Michael Redd wrote:
+> I have been struggling with fiji failing to communicate with my Picard Z-motor. ImageJ and micromanager can drive the stage just fine. I managed to get fiji to communicate with my Picard Z motor by replacing the openspim fiji mm Picard stage driver with the Picard driver from micromanager 1.4 in a windows 7 machine. (This does not work with windows xp 32.) Unfortunately I now get another error: "Line 8: Device COM1, Serial Manager, COM1 The specified label "COM1" is already in use". Can anyone help me? Here is a core log
+>
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,LogManager] Enabled primary log file C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\CoreLogs\CoreLog20141006T154327_pid1088.txt
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] User: SPIM-7
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] Host: SPIM-7-PC
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] MM Studio version: 1.4.x dev
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] MMCore version 4.0.4
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] Device API version 60, Module API version 10
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] Operating System: Windows 7 (x86) 6.1
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.7.0_67, 32-bit
+> 2014-10-06T15:43:27.410640 tid2072 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin Autofocus
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did unload all devices
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device COM1 from SerialManager; label = COM1
+> 2014-10-06T15:43:29.859844 tid2364 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label "COM1" is already in use
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = HamamatsuHam_DCAM
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device VLTStradus from Stradus; label = VLTStradus
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize 6 devices
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device COM1
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Did initialize device COM1
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+> 2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+> 2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+> 2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Will initialize device VLTStradus
+> 2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Did initialize device VLTStradus
+> 2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Default shutter set to VLTStradus
+> 2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Will initialize device Picard Twister
+> 2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Did initialize device Picard Twister
+> 2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Will initialize device Picard Z Stage
+> 2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Did initialize device Picard Z Stage
+> 2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Will initialize device Picard XY Stage
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Did initialize device Picard XY Stage
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default xy stage set to Picard XY Stage
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Finished initializing 6 devices
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+> 2014-10-06T15:43:32.226971 tid2364 [IFO,App]
+>                                     [       ] java.lang.Exception: Line 8: Device,COM1,SerialManager,COM1
+>                                     [       ] The specified label "COM1" is already in use
+>                                     [       ]
+>                                     [       ]  in Thread[AWT-EventQueue-0,6,main]
+>                                     [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+>                                     [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:313)
+>                                     [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:3151)
+>                                     [       ]   at org.micromanager.MMStudioMainFrame.access$2200(MMStudioMainFrame.java:157)
+>                                     [       ]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:560)
+>                                     [       ]   at java.awt.AWTEventMulticaster.windowOpened(Unknown Source)
+>                                     [       ]   at java.awt.Window.processWindowEvent(Unknown Source)
+>                                     [       ]   at javax.swing.JFrame.processWindowEvent(Unknown Source)
+>                                     [       ]   at java.awt.Window.processEvent(Unknown Source)
+>                                     [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue.access$200(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+>                                     [       ]   at java.security.AccessController.doPrivileged(Native Method)
+>                                     [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+>                                     [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+>                                     [       ]   at java.security.AccessController.doPrivileged(Native Method)
+>                                     [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+> 2014-10-06T15:43:41.510502 tid2364 [IFO,Core] Did update system state cache
+> 2014-10-06T15:43:41.544504 tid2364 [IFO,App] Startup script file (C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\MMStartup.bsh) not present.
+> 2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Did unload all devices
+> 2014-10-06T15:43:47.106210 tid2364 [IFO,Core] System reset
+> 2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Core session ended
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From mredd at cores.utah.edu  Fri Oct 10 18:43:33 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Fri, 10 Oct 2014 23:43:33 +0000
+Subject: [OpenSPIM] SPIM stradus laser
+Message-ID: <D05DCB45.16B65%mredd@cores.utah.edu>
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141010/306cbf6e/attachment.html>
+
+From mredd at cores.utah.edu  Fri Oct 10 19:09:15 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Sat, 11 Oct 2014 00:09:15 +0000
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <<008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>>
+Message-ID: <D05DD149.16BA1%mredd@cores.utah.edu>
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141011/19e259fd/attachment.html>
+
+From jalast at wisc.edu  Mon Oct 13 12:28:22 2014
+From: jalast at wisc.edu (Julie Last)
+Date: Mon, 13 Oct 2014 12:28:22 -0500
+Subject: [OpenSPIM] metal sample holder
+Message-ID: <002b01cfe70b$16956620$43c03260$@wisc.edu>
+
+Hi Michael,
+
+ 
+
+We are currently using a syringe and plunger system as our SPIM sample
+holder.  This works great for fixed samples, but are now moving into some
+live imaging.  We have some FEP tubing for mounting the samples and were
+noticing that in the JOVE article and on the OpenSPIM website that you have
+a metal sample holder for the tubing.  Would you be willing to share details
+on the design of that holder: dimensions, parts, a drawing or anything else
+that might help us recreate that holder? 
+
+ 
+
+Thanks,
+
+ 
+
+Julie
+
+ 
+
+ 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141013/568428f8/attachment.html>
+
+From mredd at cores.utah.edu  Mon Oct 13 14:54:27 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Mon, 13 Oct 2014 19:54:27 +0000
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <007e01cfe6b1$19b27780$4d176680$@ee.oulu.fi>
+References: <008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>
+	<D05DD149.16BA1%mredd@cores.utah.edu>
+	<007e01cfe6b1$19b27780$4d176680$@ee.oulu.fi>
+Message-ID: <D06189B0.18B9A%mredd@cores.utah.edu>
+
+I am experiencing the same problem that you described in a posting on the Openspim forum in June:
+
+
+"Dear Sir,
+
+
+
+
+We used a stradus laser in OpenSPIM. But we cannot open the Acquire OpenSPIM
+option from Micro-manager. The settings can be seen in attachments. It
+always shows error like "Error in device VLTStradus: Duplicate property
+names are not allowed"
+
+
+
+Now we use one stradus laser with wavelength 561 nm, I cannot understand
+where "duplicate property names" happens.
+
+
+
+Another problem is the information in Corelog20140430 that "Startup script
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present." I do not
+know why miss this file MMSartup.bsh. How handle it?
+
+
+
+Could you help us? Thank you very much.
+
+
+
+Best regards,
+
+
+
+Zuomin Zhao
+
+
+
+Were you able to solve this problem and move on?
+
+
+Cheers
+
+mike
+
+From: Zuomin Zhao <zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>>
+Date: Monday, October 13, 2014 12:44 AM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>
+Subject: RE: stradus laser in OpenSPIM
+
+Dear Michael,
+
+What ?duplicate properties?? Could you tell more detail about your problem?
+
+Regards,
+
+Zuomin
+
+From: Michael Redd [mailto:mredd at cores.utah.edu]
+Sent: Saturday, October 11, 2014 3:09 AM
+To: zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: stradus laser in OpenSPIM
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141013/7d5e6dbf/attachment.html>
+
+From weber at mpi-cbg.de  Tue Oct 14 10:52:54 2014
+From: weber at mpi-cbg.de (=?utf-8?Q?Michael_Weber?=)
+Date: Tue, 14 Oct 2014 15:52:54 +0000
+Subject: [OpenSPIM] =?utf-8?q?metal_sample_holder?=
+In-Reply-To: <002b01cfe70b$16956620$43c03260$@wisc.edu>
+References: <002b01cfe70b$16956620$43c03260$@wisc.edu>
+Message-ID: <20141014155903.BFFF92AFC0D7@mail-srv3.mpi-cbg.de>
+
+Hi Julie,
+
+
+we bought the metal sample from Zeiss, it?s the same as in the Lightsheet Z.1. We had other holders before, but this one is definitely a worthy upgrade. It?s made from stainless steel and uses magnets to snap into place.
+
+
+Best,
+
+Michael
+
+
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+
+
+
+
+From: Julie Last
+Sent: ?Monday?, ?October? ?13?, ?2014 ?7?:?28? ?PM
+To: openspim at openspim.org, Michael Weber
+Cc: Jayne Squirrell
+
+
+
+
+
+
+Hi Michael,
+
+ 
+
+We are currently using a syringe and plunger system as our SPIM sample holder.  This works great for fixed samples, but are now moving into some live imaging.  We have some FEP tubing for mounting the samples and were noticing that in the JOVE article and on the OpenSPIM website that you have a metal sample holder for the tubing.  Would you be willing to share details on the design of that holder: dimensions, parts, a drawing or anything else that might help us recreate that holder? 
+
+ 
+
+Thanks,
+
+ 
+
+Julie
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141014/e45b838a/attachment.html>
+
+From mredd at cores.utah.edu  Tue Oct 14 16:59:31 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Tue, 14 Oct 2014 21:59:31 +0000
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <003d01cfe789$d50e3e50$7f2abaf0$@ee.oulu.fi>
+References: <008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>
+	<D05DD149.16BA1%mredd@cores.utah.edu>
+	<007e01cfe6b1$19b27780$4d176680$@ee.oulu.fi>
+	<D06189B0.18B9A%mredd@cores.utah.edu>
+	<003d01cfe789$d50e3e50$7f2abaf0$@ee.oulu.fi>
+Message-ID: <D062F808.19839%mredd@cores.utah.edu>
+
+Thanks for the reply. It worked. I was finally able to open the Spim   acquisition plugin and take images with the microscope. I am running Fiji on a Windows 7 32 bit machine with the Stradus laser. I still have an issue. The Stradus laser power cannot be modulated by the Spim acquisition window. The laser power slider doesn't do anything. Any advice?
+
+Cheers
+mike
+
+From: Zuomin Zhao <zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>>
+Date: Tuesday, October 14, 2014 2:35 AM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>
+Subject: RE: stradus laser in OpenSPIM
+
+Oh, Yes. we solved the problem, as the suggestion http://openspim.org/pipermail/openspim/2014-May/000408.html
+
+Since the Stradus device adapter is "secret", my ability to help is limited.
+My suggestion is:
+- First, please make sure you are using the Stradus device adapter
+(mmgr_dal_Stradus.dll) from the 5 February 2014 nightly build of
+Micro-Manager[1].
+- Run OpenSPIM, but before clicking "Acquire SPIM Image", create a pixel
+size:
+- On Micro-Manager, click "Tools -> Pixel Size Calibration..."
+- Click "New"
+- Set Label to "Uncalibrated"
+- Set Pixel Size (um/pixel) to 1.00
+- Across from "Core - Initialize" click "Use" checkbox.
+- Click "OK".
+- Try "Acquire SPIM Image" again.
+
+-Zuomin
+
+From: Michael Redd [mailto:mredd at cores.utah.edu]
+Sent: Monday, October 13, 2014 10:54 PM
+To: Zuomin Zhao
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: stradus laser in OpenSPIM
+
+I am experiencing the same problem that you described in a posting on the Openspim forum in June:
+
+
+"Dear Sir,
+
+
+
+
+
+
+
+We used a stradus laser in OpenSPIM. But we cannot open the Acquire OpenSPIM
+
+option from Micro-manager. The settings can be seen in attachments. It
+
+always shows error like "Error in device VLTStradus: Duplicate property
+
+names are not allowed"
+
+
+
+
+
+
+
+Now we use one stradus laser with wavelength 561 nm, I cannot understand
+
+where "duplicate property names" happens.
+
+
+
+
+
+
+
+Another problem is the information in Corelog20140430 that "Startup script
+
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present." I do not
+
+know why miss this file MMSartup.bsh. How handle it?
+
+
+
+
+
+
+
+Could you help us? Thank you very much.
+
+
+
+
+
+
+
+Best regards,
+
+
+
+
+
+
+
+Zuomin Zhao
+
+
+
+
+
+Were you able to solve this problem and move on?
+
+
+
+Cheers
+
+mike
+
+From: Zuomin Zhao <zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>>
+Date: Monday, October 13, 2014 12:44 AM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>
+Subject: RE: stradus laser in OpenSPIM
+
+Dear Michael,
+
+What ?duplicate properties?? Could you tell more detail about your problem?
+
+Regards,
+
+Zuomin
+
+From: Michael Redd [mailto:mredd at cores.utah.edu]
+Sent: Saturday, October 11, 2014 3:09 AM
+To: zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: stradus laser in OpenSPIM
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141014/666e7cda/attachment.html>
+
+From gregory.marquart at nih.gov  Tue Oct 21 13:32:53 2014
+From: gregory.marquart at nih.gov (Marquart, Gregory (NIH/NICHD) [F])
+Date: Tue, 21 Oct 2014 18:32:53 +0000
+Subject: [OpenSPIM] Deconvolution on cluster
+Message-ID: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+
+We have been trying to run deconvolution on a cluster at the NIH without much luck.  Although we have run the process on a 256GB node and Fiji says the deconvolution should only take ~80GB, Fiji still crashes.  How accurate are these memory estimates?  Is it possible that we are still running out of memory?  Or is it more likely that our settings just aren't right?  Any help or suggestions would be much appreciated.
+
+Cheers,
+Graham
+
+Gregory (Graham) Marquart
+Unit on Behavioral Neurogenetics, NICHD
+Building 6B, 3B-308
+6 Center Drive, Bethesda, MD 20892
+
+
+From tomancak at mpi-cbg.de  Tue Oct 21 14:02:14 2014
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Tue, 21 Oct 2014 21:02:14 +0200
+Subject: [OpenSPIM] Deconvolution on cluster
+In-Reply-To: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+References: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+Message-ID: <E4588B75-4217-49C4-AE76-233C6C3F78A6@mpi-cbg.de>
+
+Dear Graham,
+
+Are you using GPU acceleration? Is there any error message? How big is the image you are trying to deconvolve?
+
+It may be advisable to use blocks instead of the deconvolving the entire image at once, but at this point its just a hunch.
+
+I am cc'ing Stephan Preibisch who should be able to help, but we need more information.
+
+All the best
+
+PAvel
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: tomancak at mpi-cbg.de
+homepage: http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+
+
+
+On Oct 21, 2014, at 8:32 PM, "Marquart, Gregory (NIH/NICHD) [F]" <gregory.marquart at nih.gov> wrote:
+
+> We have been trying to run deconvolution on a cluster at the NIH without much luck.  Although we have run the process on a 256GB node and Fiji says the deconvolution should only take ~80GB, Fiji still crashes.  How accurate are these memory estimates?  Is it possible that we are still running out of memory?  Or is it more likely that our settings just aren't right?  Any help or suggestions would be much appreciated.
+> 
+> Cheers,
+> Graham
+> 
+> Gregory (Graham) Marquart
+> Unit on Behavioral Neurogenetics, NICHD
+> Building 6B, 3B-308
+> 6 Center Drive, Bethesda, MD 20892
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141021/07f8a45b/attachment.html>
+
+From robert.hauschild at ist.ac.at  Thu Oct 23 10:19:20 2014
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Thu, 23 Oct 2014 17:19:20 +0200
+Subject: [OpenSPIM] SPIM Plugin no longer opens from MM
+In-Reply-To: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+References: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+Message-ID: <54491C78.8000208@ist.ac.at>
+
+Hi All,
+
+when I click "Acquire SPIM Image" in /plugins in Micromanager the SPIM 
+window no longer opens.
+Last week everything still worked fine and I did not (at least not 
+consciously) change anything. I still can access all devices in MM, 
+every seems to work. I pulled out an old backup of the entire Fiji 
+folder with the same result.
+Any ideas are highly appreciated!
+
+Best,
+
+Robert
+
+
+From Johannes.Schindelin at gmx.de  Wed Oct  1 11:42:42 2014
+From: Johannes.Schindelin at gmx.de (Johannes Schindelin)
+Date: Wed, 1 Oct 2014 18:42:42 +0200 (CEST)
+Subject: [OpenSPIM] Short downtime of the OpenSPIM wiki
+Message-ID: <alpine.DEB.1.00.1410011841570.990@s15462909.onlinehome-server.info>
+
+Dear OpenSPIM community,
+
+between 1pm and 2pm CDT (corresponding to 7pm ro 8pm UTC), there will be a
+short downtime of the servers hosting the OpenSPIM wiki and mailing list.
+It should not last longer than 10 minutes.
+
+Sorry for the inconvenience,
+Johannes
+
+
+
+From mredd at cores.utah.edu  Fri Oct  3 17:23:02 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Fri, 3 Oct 2014 22:23:02 +0000
+Subject: [OpenSPIM] sample holder
+Message-ID: <D0547DE4.13924%mredd@cores.utah.edu>
+
+I have questions about the Openspim stage sample holder. From the JOVE description and the Openspim website, I believe that zebrafish samples are mounted in FEP tubing and suspended in front of the imaging lens using a 1mL syringe (with a blunt needle sticking into the FEP tubing) that is stuck through the Picard stage pulley wheel and suspended with some kind of rubber stopper to adjust the sample height with the imaging lens. The pulley wheel on my Picard stage that holds the syringe does not fit my BD sciences 1mL syringes tightly. The syringe has a lot of side to side play which doesn't seem like a good idea. Are there 1mL syringes from other manufacturers that fit this pulley wheel more tightly? Any suggestions would be welcome.
+
+Cheers
+mike
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141003/9a995798/attachment-0002.html>
+
+From mredd at cores.utah.edu  Fri Oct  3 17:23:29 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Fri, 3 Oct 2014 22:23:29 +0000
+Subject: [OpenSPIM] Z motor problem
+Message-ID: <D0547E00.13927%mredd@cores.utah.edu>
+
+Hi Johannes,
+I am still unable to communicate with the Picard Z motor in fiji running on windows xp 32. I tried a windows 7 machine and fiji communicates fine with my Picard Z motor. Unfortunately, my Stradus laser doesn't work on the Windows 7 machine. I put the stradus driver in the main folder of fiji and the stradus laser is listed as unavailable on the device list in the configuration wizard. This driver placement worked fine with fiji in XP 32.  Any advice?
+
+Thanks
+mike
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141003/ae965da8/attachment-0002.html>
+
+From Michael.Redd at hci.utah.edu  Mon Oct  6 17:59:04 2014
+From: Michael.Redd at hci.utah.edu (Michael Redd)
+Date: Mon, 6 Oct 2014 22:59:04 +0000
+Subject: [OpenSPIM] z-motor communication problem
+Message-ID: <95646A35663E8442A8E21E0DBCED83877319E2E0@HCI-EX-MB1.hci.utah.edu>
+
+I have been struggling with fiji failing to communicate with my Picard Z-motor. ImageJ and micromanager can drive the stage just fine. I managed to get fiji to communicate with my Picard Z motor by replacing the openspim fiji mm Picard stage driver with the Picard driver from micromanager 1.4 in a windows 7 machine. (This does not work with windows xp 32.) Unfortunately I now get another error: "Line 8: Device COM1, Serial Manager, COM1 The specified label "COM1" is already in use". Can anyone help me? Here is a core log
+
+2014-10-06T15:43:27.161040 tid2364 [IFO,LogManager] Enabled primary log file C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\CoreLogs\CoreLog20141006T154327_pid1088.txt
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] User: SPIM-7
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Host: SPIM-7-PC
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] MM Studio version: 1.4.x dev
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] MMCore version 4.0.4
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Device API version 60, Module API version 10
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] Operating System: Windows 7 (x86) 6.1
+2014-10-06T15:43:27.161040 tid2364 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.7.0_67, 32-bit
+2014-10-06T15:43:27.410640 tid2072 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin Autofocus
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did unload all devices
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device COM1 from SerialManager; label = COM1
+2014-10-06T15:43:29.859844 tid2364 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label "COM1" is already in use
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = HamamatsuHam_DCAM
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device VLTStradus from Stradus; label = VLTStradus
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize 6 devices
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device COM1
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Did initialize device COM1
+2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Will initialize device VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Did initialize device VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Default shutter set to VLTStradus
+2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Will initialize device Picard Twister
+2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Did initialize device Picard Twister
+2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Will initialize device Picard Z Stage
+2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Did initialize device Picard Z Stage
+2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Will initialize device Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Did initialize device Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default xy stage set to Picard XY Stage
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Finished initializing 6 devices
+2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2014-10-06T15:43:32.226971 tid2364 [IFO,App]
+                                   [       ] java.lang.Exception: Line 8: Device,COM1,SerialManager,COM1
+                                   [       ] The specified label "COM1" is already in use
+                                   [       ]
+                                   [       ]  in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                   [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:313)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:3151)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$2200(MMStudioMainFrame.java:157)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:560)
+                                   [       ]   at java.awt.AWTEventMulticaster.windowOpened(Unknown Source)
+                                   [       ]   at java.awt.Window.processWindowEvent(Unknown Source)
+                                   [       ]   at javax.swing.JFrame.processWindowEvent(Unknown Source)
+                                   [       ]   at java.awt.Window.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$200(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2014-10-06T15:43:41.510502 tid2364 [IFO,Core] Did update system state cache
+2014-10-06T15:43:41.544504 tid2364 [IFO,App] Startup script file (C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\MMStartup.bsh) not present.
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Did unload all devices
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] System reset
+2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Core session ended
+
+
+
+From stuyvenberg at wisc.edu  Wed Oct  8 11:01:03 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Wed, 08 Oct 2014 10:01:03 -0600
+Subject: [OpenSPIM] z-motor communication problem
+In-Reply-To: <95646A35663E8442A8E21E0DBCED83877319E2E0@HCI-EX-MB1.hci.utah.edu>
+References: <95646A35663E8442A8E21E0DBCED83877319E2E0@HCI-EX-MB1.hci.utah.edu>
+Message-ID: <54355FBF.3010803@wisc.edu>
+
+Hi Michael,
+
+The error suggests that the configuration file is trying to load the 
+COM1 device twice.
+
+Do you have multiple serial devices in the configuration? The log seems 
+to suggest not. Have you tried creating a configuration from scratch? 
+It's possible there have been changes to SerialManager that require 
+creating a new configuration file.
+
+If these ideas don't help, could you please send an e-mail to the list 
+containing your configuration file and the core log as attachments?
+
+Thanks!
+Luke
+
+On 10/6/2014 4:59 PM, Michael Redd wrote:
+> I have been struggling with fiji failing to communicate with my Picard Z-motor. ImageJ and micromanager can drive the stage just fine. I managed to get fiji to communicate with my Picard Z motor by replacing the openspim fiji mm Picard stage driver with the Picard driver from micromanager 1.4 in a windows 7 machine. (This does not work with windows xp 32.) Unfortunately I now get another error: "Line 8: Device COM1, Serial Manager, COM1 The specified label "COM1" is already in use". Can anyone help me? Here is a core log
+>
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,LogManager] Enabled primary log file C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\CoreLogs\CoreLog20141006T154327_pid1088.txt
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] User: SPIM-7
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] Host: SPIM-7-PC
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] MM Studio version: 1.4.x dev
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] MMCore version 4.0.4
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] Device API version 60, Module API version 10
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] Operating System: Windows 7 (x86) 6.1
+> 2014-10-06T15:43:27.161040 tid2364 [IFO,App] JVM: Java HotSpot(TM) Client VM, version 1.7.0_67, 32-bit
+> 2014-10-06T15:43:27.410640 tid2072 [IFO,App] Attempting to install plugin spim.SPIMAcquisition
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin Autofocus
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+> 2014-10-06T15:43:27.426240 tid2072 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did unload all devices
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device COM1 from SerialManager; label = COM1
+> 2014-10-06T15:43:29.859844 tid2364 [ERR,Core] Error occurred in device MMCore::loadDevice: The specified label "COM1" is already in use
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = HamamatsuHam_DCAM
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device VLTStradus from Stradus; label = VLTStradus
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard Z Stage from PicardStage; label = Picard Z Stage
+> 2014-10-06T15:43:29.859844 tid2364 [IFO,Core] Did load device Picard XY Stage from PicardStage; label = Picard XY Stage
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize 6 devices
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device COM1
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Did initialize device COM1
+> 2014-10-06T15:43:29.984645 tid2364 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+> 2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+> 2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+> 2014-10-06T15:43:31.396924 tid2364 [IFO,Core] Will initialize device VLTStradus
+> 2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Did initialize device VLTStradus
+> 2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Default shutter set to VLTStradus
+> 2014-10-06T15:43:32.146967 tid2364 [IFO,Core] Will initialize device Picard Twister
+> 2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Did initialize device Picard Twister
+> 2014-10-06T15:43:32.168968 tid2364 [IFO,Core] Will initialize device Picard Z Stage
+> 2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Did initialize device Picard Z Stage
+> 2014-10-06T15:43:32.172968 tid2364 [IFO,Core] Will initialize device Picard XY Stage
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Did initialize device Picard XY Stage
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default xy stage set to Picard XY Stage
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Finished initializing 6 devices
+> 2014-10-06T15:43:32.224971 tid2364 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+> 2014-10-06T15:43:32.226971 tid2364 [IFO,App]
+>                                     [       ] java.lang.Exception: Line 8: Device,COM1,SerialManager,COM1
+>                                     [       ] The specified label "COM1" is already in use
+>                                     [       ]
+>                                     [       ]  in Thread[AWT-EventQueue-0,6,main]
+>                                     [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+>                                     [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:313)
+>                                     [       ]   at org.micromanager.MMStudioMainFrame.loadSystemConfiguration(MMStudioMainFrame.java:3151)
+>                                     [       ]   at org.micromanager.MMStudioMainFrame.access$2200(MMStudioMainFrame.java:157)
+>                                     [       ]   at org.micromanager.MMStudioMainFrame$1.windowOpened(MMStudioMainFrame.java:560)
+>                                     [       ]   at java.awt.AWTEventMulticaster.windowOpened(Unknown Source)
+>                                     [       ]   at java.awt.Window.processWindowEvent(Unknown Source)
+>                                     [       ]   at javax.swing.JFrame.processWindowEvent(Unknown Source)
+>                                     [       ]   at java.awt.Window.processEvent(Unknown Source)
+>                                     [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue.access$200(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$3.run(Unknown Source)
+>                                     [       ]   at java.security.AccessController.doPrivileged(Native Method)
+>                                     [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+>                                     [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue$4.run(Unknown Source)
+>                                     [       ]   at java.security.AccessController.doPrivileged(Native Method)
+>                                     [       ]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+>                                     [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+>                                     [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+> 2014-10-06T15:43:41.510502 tid2364 [IFO,Core] Did update system state cache
+> 2014-10-06T15:43:41.544504 tid2364 [IFO,App] Startup script file (C:\Users\SPIM-7\Desktop\OpenSPIM-20140207\OpenSPIM.app\MMStartup.bsh) not present.
+> 2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Did unload all devices
+> 2014-10-06T15:43:47.106210 tid2364 [IFO,Core] System reset
+> 2014-10-06T15:43:47.106210 tid2364 [IFO,Core] Core session ended
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+
+From mredd at cores.utah.edu  Fri Oct 10 18:43:33 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Fri, 10 Oct 2014 23:43:33 +0000
+Subject: [OpenSPIM] SPIM stradus laser
+Message-ID: <D05DCB45.16B65%mredd@cores.utah.edu>
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141010/306cbf6e/attachment-0002.html>
+
+From mredd at cores.utah.edu  Fri Oct 10 19:09:15 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Sat, 11 Oct 2014 00:09:15 +0000
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <<008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>>
+Message-ID: <D05DD149.16BA1%mredd@cores.utah.edu>
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141011/19e259fd/attachment-0002.html>
+
+From jalast at wisc.edu  Mon Oct 13 12:28:22 2014
+From: jalast at wisc.edu (Julie Last)
+Date: Mon, 13 Oct 2014 12:28:22 -0500
+Subject: [OpenSPIM] metal sample holder
+Message-ID: <002b01cfe70b$16956620$43c03260$@wisc.edu>
+
+Hi Michael,
+
+ 
+
+We are currently using a syringe and plunger system as our SPIM sample
+holder.  This works great for fixed samples, but are now moving into some
+live imaging.  We have some FEP tubing for mounting the samples and were
+noticing that in the JOVE article and on the OpenSPIM website that you have
+a metal sample holder for the tubing.  Would you be willing to share details
+on the design of that holder: dimensions, parts, a drawing or anything else
+that might help us recreate that holder? 
+
+ 
+
+Thanks,
+
+ 
+
+Julie
+
+ 
+
+ 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141013/568428f8/attachment-0002.html>
+
+From mredd at cores.utah.edu  Mon Oct 13 14:54:27 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Mon, 13 Oct 2014 19:54:27 +0000
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <007e01cfe6b1$19b27780$4d176680$@ee.oulu.fi>
+References: <008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>
+	<D05DD149.16BA1%mredd@cores.utah.edu>
+	<007e01cfe6b1$19b27780$4d176680$@ee.oulu.fi>
+Message-ID: <D06189B0.18B9A%mredd@cores.utah.edu>
+
+I am experiencing the same problem that you described in a posting on the Openspim forum in June:
+
+
+"Dear Sir,
+
+
+
+
+We used a stradus laser in OpenSPIM. But we cannot open the Acquire OpenSPIM
+option from Micro-manager. The settings can be seen in attachments. It
+always shows error like "Error in device VLTStradus: Duplicate property
+names are not allowed"
+
+
+
+Now we use one stradus laser with wavelength 561 nm, I cannot understand
+where "duplicate property names" happens.
+
+
+
+Another problem is the information in Corelog20140430 that "Startup script
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present." I do not
+know why miss this file MMSartup.bsh. How handle it?
+
+
+
+Could you help us? Thank you very much.
+
+
+
+Best regards,
+
+
+
+Zuomin Zhao
+
+
+
+Were you able to solve this problem and move on?
+
+
+Cheers
+
+mike
+
+From: Zuomin Zhao <zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>>
+Date: Monday, October 13, 2014 12:44 AM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>
+Subject: RE: stradus laser in OpenSPIM
+
+Dear Michael,
+
+What ”duplicate properties”? Could you tell more detail about your problem?
+
+Regards,
+
+Zuomin
+
+From: Michael Redd [mailto:mredd at cores.utah.edu]
+Sent: Saturday, October 11, 2014 3:09 AM
+To: zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: stradus laser in OpenSPIM
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141013/7d5e6dbf/attachment-0002.html>
+
+From weber at mpi-cbg.de  Tue Oct 14 10:52:54 2014
+From: weber at mpi-cbg.de (=?utf-8?Q?Michael_Weber?=)
+Date: Tue, 14 Oct 2014 15:52:54 +0000
+Subject: [OpenSPIM] =?utf-8?q?metal_sample_holder?=
+In-Reply-To: <002b01cfe70b$16956620$43c03260$@wisc.edu>
+References: <002b01cfe70b$16956620$43c03260$@wisc.edu>
+Message-ID: <20141014155903.BFFF92AFC0D7@mail-srv3.mpi-cbg.de>
+
+Hi Julie,
+
+
+we bought the metal sample from Zeiss, it’s the same as in the Lightsheet Z.1. We had other holders before, but this one is definitely a worthy upgrade. It’s made from stainless steel and uses magnets to snap into place.
+
+
+Best,
+
+Michael
+
+
+
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+http://www.mpi-cbg.de/huisken
+
+
+
+
+
+From: Julie Last
+Sent: ‎Monday‎, ‎October‎ ‎13‎, ‎2014 ‎7‎:‎28‎ ‎PM
+To: openspim at openspim.org, Michael Weber
+Cc: Jayne Squirrell
+
+
+
+
+
+
+Hi Michael,
+
+ 
+
+We are currently using a syringe and plunger system as our SPIM sample holder.  This works great for fixed samples, but are now moving into some live imaging.  We have some FEP tubing for mounting the samples and were noticing that in the JOVE article and on the OpenSPIM website that you have a metal sample holder for the tubing.  Would you be willing to share details on the design of that holder: dimensions, parts, a drawing or anything else that might help us recreate that holder? 
+
+ 
+
+Thanks,
+
+ 
+
+Julie
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141014/e45b838a/attachment-0002.html>
+
+From mredd at cores.utah.edu  Tue Oct 14 16:59:31 2014
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Tue, 14 Oct 2014 21:59:31 +0000
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <003d01cfe789$d50e3e50$7f2abaf0$@ee.oulu.fi>
+References: <008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>
+	<D05DD149.16BA1%mredd@cores.utah.edu>
+	<007e01cfe6b1$19b27780$4d176680$@ee.oulu.fi>
+	<D06189B0.18B9A%mredd@cores.utah.edu>
+	<003d01cfe789$d50e3e50$7f2abaf0$@ee.oulu.fi>
+Message-ID: <D062F808.19839%mredd@cores.utah.edu>
+
+Thanks for the reply. It worked. I was finally able to open the Spim   acquisition plugin and take images with the microscope. I am running Fiji on a Windows 7 32 bit machine with the Stradus laser. I still have an issue. The Stradus laser power cannot be modulated by the Spim acquisition window. The laser power slider doesn't do anything. Any advice?
+
+Cheers
+mike
+
+From: Zuomin Zhao <zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>>
+Date: Tuesday, October 14, 2014 2:35 AM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>
+Subject: RE: stradus laser in OpenSPIM
+
+Oh, Yes. we solved the problem, as the suggestion http://openspim.org/pipermail/openspim/2014-May/000408.html
+
+Since the Stradus device adapter is "secret", my ability to help is limited.
+My suggestion is:
+- First, please make sure you are using the Stradus device adapter
+(mmgr_dal_Stradus.dll) from the 5 February 2014 nightly build of
+Micro-Manager[1].
+- Run OpenSPIM, but before clicking "Acquire SPIM Image", create a pixel
+size:
+- On Micro-Manager, click "Tools -> Pixel Size Calibration..."
+- Click "New"
+- Set Label to "Uncalibrated"
+- Set Pixel Size (um/pixel) to 1.00
+- Across from "Core - Initialize" click "Use" checkbox.
+- Click "OK".
+- Try "Acquire SPIM Image" again.
+
+-Zuomin
+
+From: Michael Redd [mailto:mredd at cores.utah.edu]
+Sent: Monday, October 13, 2014 10:54 PM
+To: Zuomin Zhao
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: stradus laser in OpenSPIM
+
+I am experiencing the same problem that you described in a posting on the Openspim forum in June:
+
+
+"Dear Sir,
+
+
+
+
+
+
+
+We used a stradus laser in OpenSPIM. But we cannot open the Acquire OpenSPIM
+
+option from Micro-manager. The settings can be seen in attachments. It
+
+always shows error like "Error in device VLTStradus: Duplicate property
+
+names are not allowed"
+
+
+
+
+
+
+
+Now we use one stradus laser with wavelength 561 nm, I cannot understand
+
+where "duplicate property names" happens.
+
+
+
+
+
+
+
+Another problem is the information in Corelog20140430 that "Startup script
+
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present." I do not
+
+know why miss this file MMSartup.bsh. How handle it?
+
+
+
+
+
+
+
+Could you help us? Thank you very much.
+
+
+
+
+
+
+
+Best regards,
+
+
+
+
+
+
+
+Zuomin Zhao
+
+
+
+
+
+Were you able to solve this problem and move on?
+
+
+
+Cheers
+
+mike
+
+From: Zuomin Zhao <zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>>
+Date: Monday, October 13, 2014 12:44 AM
+To: Michael Redd <mredd at cores.utah.edu<mailto:mredd at cores.utah.edu>>
+Subject: RE: stradus laser in OpenSPIM
+
+Dear Michael,
+
+What ”duplicate properties”? Could you tell more detail about your problem?
+
+Regards,
+
+Zuomin
+
+From: Michael Redd [mailto:mredd at cores.utah.edu]
+Sent: Saturday, October 11, 2014 3:09 AM
+To: zuomin at ee.oulu.fi<mailto:zuomin at ee.oulu.fi>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: stradus laser in OpenSPIM
+
+Dear Dr. Zhoa,
+I am building a SPIM microscope with a stradus laser. I am experiencing the same "duplicate properties" error that you reported last June on the openspim forum. Did you solve this problem? If so I would be much obliged if you would share the solution with me.
+
+thanks--
+Michael Redd
+Imaging Specialist
+Microscopy Core Facility
+University of Utah
+Radiobiology Bldg, Room 55
+Salt Lake City, Utah
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141014/666e7cda/attachment-0002.html>
+
+From gregory.marquart at nih.gov  Tue Oct 21 13:32:53 2014
+From: gregory.marquart at nih.gov (Marquart, Gregory (NIH/NICHD) [F])
+Date: Tue, 21 Oct 2014 18:32:53 +0000
+Subject: [OpenSPIM] Deconvolution on cluster
+Message-ID: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+
+We have been trying to run deconvolution on a cluster at the NIH without much luck.  Although we have run the process on a 256GB node and Fiji says the deconvolution should only take ~80GB, Fiji still crashes.  How accurate are these memory estimates?  Is it possible that we are still running out of memory?  Or is it more likely that our settings just aren't right?  Any help or suggestions would be much appreciated.
+
+Cheers,
+Graham
+
+Gregory (Graham) Marquart
+Unit on Behavioral Neurogenetics, NICHD
+Building 6B, 3B-308
+6 Center Drive, Bethesda, MD 20892
+
+
+
+From tomancak at mpi-cbg.de  Tue Oct 21 14:02:14 2014
+From: tomancak at mpi-cbg.de (Pavel Tomancak)
+Date: Tue, 21 Oct 2014 21:02:14 +0200
+Subject: [OpenSPIM] Deconvolution on cluster
+In-Reply-To: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+References: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+Message-ID: <E4588B75-4217-49C4-AE76-233C6C3F78A6@mpi-cbg.de>
+
+Dear Graham,
+
+Are you using GPU acceleration? Is there any error message? How big is the image you are trying to deconvolve?
+
+It may be advisable to use blocks instead of the deconvolving the entire image at once, but at this point its just a hunch.
+
+I am cc'ing Stephan Preibisch who should be able to help, but we need more information.
+
+All the best
+
+PAvel
+
+-----------------------------------------------------------------------------------
+Pavel Tomancak, Ph.D.
+
+Group Leader
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+D-01307 Dresden				Tel.: +49 351 210 2670
+Germany						Fax: +49 351 210 2020
+email: tomancak at mpi-cbg.de
+homepage: http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html
+twitter: @PavelTomancak
+-----------------------------------------------------------------------------------
+
+
+
+
+
+On Oct 21, 2014, at 8:32 PM, "Marquart, Gregory (NIH/NICHD) [F]" <gregory.marquart at nih.gov> wrote:
+
+> We have been trying to run deconvolution on a cluster at the NIH without much luck.  Although we have run the process on a 256GB node and Fiji says the deconvolution should only take ~80GB, Fiji still crashes.  How accurate are these memory estimates?  Is it possible that we are still running out of memory?  Or is it more likely that our settings just aren't right?  Any help or suggestions would be much appreciated.
+> 
+> Cheers,
+> Graham
+> 
+> Gregory (Graham) Marquart
+> Unit on Behavioral Neurogenetics, NICHD
+> Building 6B, 3B-308
+> 6 Center Drive, Bethesda, MD 20892
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20141021/07f8a45b/attachment-0002.html>
+
+From robert.hauschild at ist.ac.at  Thu Oct 23 10:19:20 2014
+From: robert.hauschild at ist.ac.at (Robert Hauschild)
+Date: Thu, 23 Oct 2014 17:19:20 +0200
+Subject: [OpenSPIM] SPIM Plugin no longer opens from MM
+In-Reply-To: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+References: <E68977F31D40D94D859EA64D832B27C102B6ABF3@MLBXv04.nih.gov>
+Message-ID: <54491C78.8000208@ist.ac.at>
+
+Hi All,
+
+when I click "Acquire SPIM Image" in /plugins in Micromanager the SPIM 
+window no longer opens.
+Last week everything still worked fine and I did not (at least not 
+consciously) change anything. I still can access all devices in MM, 
+every seems to work. I pulled out an old backup of the entire Fiji 
+folder with the same result.
+Any ideas are highly appreciated!
+
+Best,
+
+Robert
+
+
+

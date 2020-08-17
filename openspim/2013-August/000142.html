@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C75f0ad0e57b91.5214981f%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000141.html">
+   <LINK REL="Next"  HREF="000143.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C75f0ad0e57b91.5214981f%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Aug 21 10:36:15 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000141.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+        <LI>Next message: <A HREF="000143.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#142">[ date ]</a>
+              <a href="thread.html#142">[ thread ]</a>
+              <a href="subject.html#142">[ subject ]</a>
+              <a href="author.html#142">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+&gt;<i> some more tests and hopefully some progresses. I scanned a 82Mb stack (1024*1024*41 @ 16bits)
+</I>&gt;<i>&#160;
+</I>&gt;<i> - RAM usage by Fiji and stack writing to disk:&#160;
+</I>&gt;<i> ~20Mb used at start (out of 1Gb allocated)&#160;
+</I>&gt;<i> as the scan progresses in ramps up to ~110Mb and then slowly decreases as the size of the file on disk increases; finally the garbage collector resets to 20Mb
+</I>&gt;<i> it takes up to 2 minutes to write the 84Mb and at least 1 minute more to write the remaining 2Mb (the metadata, I presume...)
+</I>Okay; although the writing times are not at all ideal (my 400MB stacks were written synchronously and in their entirety in a little over a minute and a half), the RAM usage is more or less as expected.
+
+
+&gt;<i> If you open that stack &amp; metadata, you will see that the planes are not written in the right order. Look at the sequence (toward the end of the file above):
+</I>&gt;<i>&#160;
+</I>&gt;<i> &lt;Plane DeltaT=&quot;18.37296911600015&quot; PositionX=&quot;3205.0&quot; PositionY=&quot;2628.0&quot; PositionZ=&quot;3085.0&quot; TheT=&quot;0&quot; TheZ=&quot;36&quot;&gt;
+</I>&gt;<i> &lt;Plane DeltaT=&quot;12.293132814000273&quot; PositionX=&quot;3205.0&quot; PositionY=&quot;2628.0&quot; PositionZ=&quot;3025.0&quot; TheT=&quot;0&quot; TheZ=&quot;37&quot;&gt;
+</I>&gt;<i> &lt;Plane DeltaT=&quot;18.884906363000027&quot; PositionX=&quot;3205.0&quot; PositionY=&quot;2628.0&quot; PositionZ=&quot;3090.0&quot; TheT=&quot;0&quot; TheZ=&quot;38&quot;&gt;
+</I>&gt;<i> The plane with the index TheZ=37 (physical position in Z 3025 and the timestamp 12.29) is intercalated between two obviously consecutive slices (TheZ=36 and TheZ=38). This is obviously wrong&#8230;
+</I>
+I have some mixed feelings on this; this is the definitive proof I was looking for, but I'm genuinely at a loss as to how this may have come about. My best guess is that the synchronization is too loose, and somehow the acquisition (&quot;main&quot;) thread is writing slices (because it feels it needs to) before the writing thread.
+
+
+&gt;<i> I have the feeling that my problems are somehow linked to Bio-Format	not behaving properly.&#160;
+</I>
+I've tried the new Bio-Formats daily builds update site through the Fiji updater, and haven't noticed any problems from it; perhaps try enabling that update site and downloading the very latest versions?
+
+
+Finally, I have most of the promised plugin updates. There are two main additions:
+- First, it does some timing over the acquisition, outputting the results to the log; although it isn't very detailed, it gives a breakdown of how time is used while acquiring (for example, if the async isn't appropriately asynchronous, the acquisition time will be roughly the same as though it were off).
+- Second, and more importantly for you, the async writer has been completely revamped. It now queues the begin/end stack events as well as new slices, so these operations shouldn't *ever* get out of order. It also puts up a monitor showing the state of its queue, which will let us know if it's filling up or not.
+If you're willing to play guinea pig again, please try replacing mmplugins/SPIMAcquisition.jar with the version from: <A HREF="https://dl.dropboxusercontent.com/u/57890359/SPIMAcquisition.jar">https://dl.dropboxusercontent.com/u/57890359/SPIMAcquisition.jar</A>
+Anyone is free to try this JAR out, but I haven't put it on our Fiji update site for a few reasons -- the new features are only conditionally useful, and can't (yet) be disabled. That said, if the new async fixes your output problems, I'll polish these changes and incorporate them.
+
+
+Thanks,
+Luke
+
+
+On 08/21/13, Alexis Maizel  wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i> 
+</I>&gt;<i> some more tests and hopefully some progresses. I scanned a 82Mb stack (1024*1024*41 @ 16bits)
+</I>&gt;<i> 
+</I>&gt;<i> - RAM usage by Fiji and stack writing to disk: 
+</I>&gt;<i> ~20Mb used at start (out of 1Gb allocated) 
+</I>&gt;<i> as the scan progresses in ramps up to ~110Mb and then slowly decreases as the size of the file on disk increases; finally the garbage collector resets to 20Mb
+</I>&gt;<i> it takes up to 2 minutes to write the 84Mb and at least 1 minute more to write the remaining 2Mb (the metadata, I presume...)
+</I>&gt;<i> - Metadata: 
+</I>&gt;<i> I have updated Fiji
+</I>&gt;<i> I have tried to update LOCI to the trunk/daily/stable versions but after downloading some files I get an error message (&quot;there was an error updating LOCI&quot;)
+</I>&gt;<i> It takes a very long time to write the metadata, much longer than the images. You can retrieve one stack with metadata here: <A HREF="http://dl.dropbox.com/u/484859/spim_TL01_Angle0.ome.tiff">http://dl.dropbox.com/u/484859/spim_TL01_Angle0.ome.tiff</A>
+</I>&gt;<i> If you open that stack &amp; metadata, you will see that the planes are not written in the right order. Look at the sequence (toward the end of the file above):
+</I>&gt;<i> 
+</I>&gt;<i> &lt;Plane DeltaT=&quot;18.37296911600015&quot; PositionX=&quot;3205.0&quot; PositionY=&quot;2628.0&quot; PositionZ=&quot;3085.0&quot; TheT=&quot;0&quot; TheZ=&quot;36&quot;&gt;
+</I>&gt;<i> &lt;Plane DeltaT=&quot;12.293132814000273&quot; PositionX=&quot;3205.0&quot; PositionY=&quot;2628.0&quot; PositionZ=&quot;3025.0&quot; TheT=&quot;0&quot; TheZ=&quot;37&quot;&gt;
+</I>&gt;<i> &lt;Plane DeltaT=&quot;18.884906363000027&quot; PositionX=&quot;3205.0&quot; PositionY=&quot;2628.0&quot; PositionZ=&quot;3090.0&quot; TheT=&quot;0&quot; TheZ=&quot;38&quot;&gt;
+</I>&gt;<i> The plane with the index TheZ=37 (physical position in Z 3025 and the timestamp 12.29) is intercalated between two obviously consecutive slices (TheZ=36 and TheZ=38). This is obviously wrong&#8230;
+</I>&gt;<i> 
+</I>&gt;<i> I have the feeling that my problems are somehow linked to Bio-Format	not behaving properly. 
+</I>&gt;<i> 
+</I>&gt;<i> With my best regards,
+</I>&gt;<i> 
+</I>&gt;<i> Alexis
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On 20 Aug 2013, at 20:24, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; Hi Alexis,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;&gt; I scaled them down to 8bits and saved them on my Mac. You can get an original &quot;shuffled&quot; stack here: <A HREF="http://dl.dropbox.com/u/484859/spim_TL01_Angle0.ome.tiffUnfortunately">http://dl.dropbox.com/u/484859/spim_TL01_Angle0.ome.tiffUnfortunately</A> this stack, too, seems to have no metadata attached to it. If the plugin is outputting this kind of data, I may have a serious problem. :-)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Are you by any chance clicking the Abort! button at the end of an acquisition? Although acquiring the data may finish, the text will keep reading Abort! until the writing is finished; with large data sets, it may seem the process is done and the button has just gotten stuck, when in fact the OME-TIFF writer is updating the metadata in each of its images (I explain this in more detail below.). Clicking Abort! at such a time would stop the metadata from being written.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;&gt; Definitively the writing to disk finishes way after the stack has finished to be acquired. 
+</I>&gt;<i> &gt; Upon review, this makes more sense than it did. The basic OME-TIFF specification requires that each file in the dataset have the complete metadata. Unfortunately, there's no way to know what the complete metadata is until all the files have been written. So as the output handler writes each file, it builds up the metadata, until the end of the acquisition. At this point, it reopens each file in the dataset and rewrites the comment to have the correct metadata (this is the long delay I mentioned above -- the more files you write, the longer it takes to put the finished metadata in place). The question, then, is whether or not the last *slice* of each is actually being held back -- I suspect not; the part of the code that appends a slice to the file is unambiguous in its function, while the metadata can easily reach such a size that writing it seems much like writing a new slice. In essence, there's not much we can presently do about this particular quirk, though now that Bio-Formats is outputting daily builds, there may be other options soon.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt;&gt;&gt; If so, the next time you're running an acquisition, could you try monitoring Fiji's memory usage (Plugins &gt; Utilities &gt; Memory Monitor) as the sequence progresses? I suspect that the bursts you are observing happen because the queue is filling up, forcing the output handler to synchronously write out one or more slices; you should see the memory use climb in a stair-step pattern until one of these bursts, when it should plummet back to nearly nothing.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Actually, thinking on it, the plummeting most likely will not coincide with the writes -- more likely, the images will stick around in memory until the garbage collector decides to run. So the aforementioned pattern should appear in some form or other, though the timing may not tell us very much.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; A few other thoughts:
+</I>&gt;<i> &gt; - Do any other programs make regular use of your hard drive? Perhaps Windows 7's automatic (background) defragmentation, or a filesystem-filter antivirus (like avast!, which scans files as they are read and written)? The writing thread is given a low priority so the acquisition can run freely, but this might cause it to be blocked outright by low-level processes making regular use of the hard drive.
+</I>&gt;<i> &gt; - Is your RAM mostly free when you start the acquisition? The maximum length of the image queue is decided based on the available memory at the beginning of an acquisition; I don't yet have a display for it, but it might be being set too low...
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; I'm working on a slight rework of the async handler which might help to fix these issues; I'll upload it to our update server once it's done. Of course, it's hard to gauge its efficacy until I can reproduce this behavior, so I'll see what I can do on that front as well.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Thanks again,
+</I>&gt;<i> &gt; Luke
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 08/20/13, Alexis Maizel wrote:
+</I>&gt;<i> &gt;&gt; Hi Luke,
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; Did you re-save this data, or are these stacks fresh from the OpenSPIM plugin?
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I scaled them down to 8bits and saved them on my Mac. You can get an original &quot;shuffled&quot; stack here: <A HREF="http://dl.dropbox.com/u/484859/spim_TL01_Angle0.ome.tiff">http://dl.dropbox.com/u/484859/spim_TL01_Angle0.ome.tiff</A>
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; I ask because the OME-TIFF metadata have been clobbered in both stacks (you can check using the Bio-Formats importer); if this is fresh output, the plugin may have a serious error in its metadata generation. Alternatively, Bio-Formats might be out-of-date or acting up. At any rate, the image slices obviously shouldn't be written out of order, but even if they were to be written in the wrong order, were the OME metadata intact, Bio-Formats should be able to display the slices in the correct order (because now it has a table relating the slice's index in the file to its physical Z position).
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I forced Fiji to open the fresh-from-openSPIM stacks on my mac using the Bio-format importer (updated) and the slices are still in the wrong order.
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; The data isn't truly meant to be written in bursts -- ideally it would just chug along in the background... I'll try tweaking the async a little more; probably, the code is doing something incorrectly leading to this. As for the timepoint images, this too is very unusual -- I specifically have the writer finish writing any pending images before finalizing a stack. I'll look into this as well.
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; Definitively the writing to disk finishes way after the stack has finished to be acquired. 
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; Also, if one abort a time lapse recording in between two time points, but when all planes have not yet been written to disk, then there is a warning windows displayed (which is empty&#8230;) after some seconds, the window disappear and the recording has been aborted.
+</I>&gt;<i> &gt;&gt;&gt; I'm aware of this; I've never been able to determine what that message box is trying to display. No warnings should be appearing during an abort, but this one mysteriously shows up. It's a low priority for me, however; it doesn't seem to affect the abort or change the data that was written (well, any more than aborting mid-acquisition already does).
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I concur that it is not critical, I just wanted to point it out. Glad to read that at least some of what I am experiencing can be reproduced :-)
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; Is everything completely up-to-date, including Bio-Formats? (Note that I haven't yet tried the Bio-Formats daily builds -- whether they will fix or break the plugin has yet to be seen.)
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I will update everything and perform more tests.
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; If so, the next time you're running an acquisition, could you try monitoring Fiji's memory usage (Plugins &gt; Utilities &gt; Memory Monitor) as the sequence progresses? I suspect that the bursts you are observing happen because the queue is filling up, forcing the output handler to synchronously write out one or more slices; you should see the memory use climb in a stair-step pattern until one of these bursts, when it should plummet back to nearly nothing.
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; I'll do that and get back to you.
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; Thanks for your help,
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; Alexis
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; Thanks,
+</I>&gt;<i> &gt;&gt;&gt; Luke
+</I>&gt;<i> &gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt; On 08/14/13, Alexis Maizel wrote:
+</I>&gt;<i> &gt;&gt;&gt;&gt; Hi Pavel,
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; I did some more tests this morning. 
+</I>&gt;<i> &gt;&gt;&gt;&gt; The asynchronous writing is indeed the culprit. You can get two stacks here: <A HREF="http://dl.dropbox.com/u/484859/async_ON_vs_OFF.zip">http://dl.dropbox.com/u/484859/async_ON_vs_OFF.zip</A>
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; With async OFF: the images are written to the disk as soon as they are acquired; it is slow but the planes are in the right order.
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; With async ON: the stack is acquired and written 'in bursts' to the disk. Sometimes there is a gap of several seconds between two bursts of disk writing and I have the feeling this corresponds to points when the planes are written in the wrong order. I have also noticed that irrespective of the time delay between two time lapse acquisition, the last image(s) of time point N are written to the disk instant before the time point N+1 starts to be acquired. Also, if one abort a time lapse recording in between two time points, but when all planes have not yet been written to disk, then there is a warning windows displayed (which is empty&#8230;) after some seconds, the window disappear and the recording has been aborted. 
+</I>&gt;<i> &gt;&gt;&gt;&gt; So I do not know, what's wrong but something does not seem right in this 'asynchronous writing' option, at least on our config:
+</I>&gt;<i> &gt;&gt;&gt;&gt; Windows 7 pro
+</I>&gt;<i> &gt;&gt;&gt;&gt; 1024Mb of RAM allocated to Fiji (we can not allocate more, otherwise the Orca won't operate)
+</I>&gt;<i> &gt;&gt;&gt;&gt; JRE 1.6.0
+</I>&gt;<i> &gt;&gt;&gt;&gt; everything 32bits version
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; Would be great to get that fixed :-)
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; With my best regards,
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; Alexis
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt; On 14 Aug 2013, at 00:30, Pavel Tomancak &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>&gt; wrote:
+</I>&gt;<i> &gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; Hi Alexis,
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; That is very strange. I have never seen that. We made some acquisitions today and nothing like that was going on. Its obviously a serious issue. Does it happen only when you have the asynchronous writing enabled? I assume you are running on Windows 7.
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; All the best
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; PAvel
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; -----------------------------------------------------------------------------------
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; Pavel Tomancak, Ph.D.
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; Group Leader
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; Pfotenhauerstr. 108
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; D-01307 Dresden Tel.: +49 351 210 2670
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; Germany Fax: +49 351 210 2020
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">tomancak at mpi-cbg.de</A>
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; <A HREF="http://www.mpi-cbg.de">http://www.mpi-cbg.de</A>
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; -----------------------------------------------------------------------------------
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; On Aug 13, 2013, at 8:14 PM, Alexis Maizel &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Alexis.Maizel at cos.uni-heidelberg.de</A>&gt; wrote:
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; Hi,
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; I have noticed that when acquiring stacks during a time lapse and writing them to disk, using the 'asynchronous writing' option, the order in which the individual images are laid into the stack is imprecise. What I mean is that an image obviously in the middle of the stack is shifted toward the end. I did not observed a fixed pattern, except that usually the first 15-20 planes are in the right order and the mess is a the end.
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; I have carefully observed and the problem does not come from the stage 'going back and forth' during acquisition. It is upon writing to the disk that the problem seems to occur. Also I have noticed that it takes quite a long time (up to 3 minutes) to write to disk a ~400Mb stack. 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; You can see more precisely what I am talking about by looking at two representative stacks: <A HREF="http://dl.dropbox.com/u/484859/Stacks.zip">http://dl.dropbox.com/u/484859/Stacks.zip</A>
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; With my best regards,
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; Alexis
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; 
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; _______________________________________________
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; OpenSPIM mailing list
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt;&gt;&gt;&gt;&gt;
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000141.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+	<LI>Next message: <A HREF="000143.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#142">[ date ]</a>
+              <a href="thread.html#142">[ thread ]</a>
+              <a href="subject.html#142">[ subject ]</a>
+              <a href="author.html#142">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

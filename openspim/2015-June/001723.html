@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM]  Problems with Image Processing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%20Problems%20with%20Image%20Processing&In-Reply-To=%3CAM2PR03MB07071E6988A10303523A4DCADDB80%40AM2PR03MB0707.eurprd03.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001722.html">
+   <LINK REL="Next"  HREF="001731.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM]  Problems with Image Processing</H1>
+    <B>Windell, Dylan</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%20Problems%20with%20Image%20Processing&In-Reply-To=%3CAM2PR03MB07071E6988A10303523A4DCADDB80%40AM2PR03MB0707.eurprd03.prod.outlook.com%3E"
+       TITLE="[OpenSPIM]  Problems with Image Processing">dw388 at exeter.ac.uk
+       </A><BR>
+    <I>Mon Jun 15 09:26:26 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001722.html">[OpenSPIM] Problems with Image Processing
+</A></li>
+        <LI>Next message: <A HREF="001731.html">[OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1723">[ date ]</a>
+              <a href="thread.html#1723">[ thread ]</a>
+              <a href="subject.html#1723">[ subject ]</a>
+              <a href="author.html#1723">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes,
+
+Thank you for your email. I changed the settings to open the files without any prompts but it still seems to bring up all the different stacks every time I try to open a file or convert the file types. The files are actually converting now but they are taking &gt;3 hours each and sometimes an error pops up telling me the file type incompatible and will not convert at all.
+
+The macro only converts one at a time too, can it convert them all at once? Whenever I type in 'setBatchMode( true )' I get the attached error.
+
+Furthermore, I also get this warning quite often: 'Could not get charToByteConverterClass!' Any idea what this is?
+
+Thanks again,
+
+Dylan
+
+-----Original Message-----
+From: Johannes Schindelin [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>]
+Sent: 09 June 2015 14:02
+To: Windell, Dylan
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: [OpenSPIM] Problems with Image Processing
+
+Hi Dylan,
+
+On 2015-06-09 14:45, Windell, Dylan wrote:
+
+&gt;<i> I am very new to OpenSPIM and do not have previous experience with 
+</I>&gt;<i> regards to coding or ImageJ so I do apologise for all the basic 
+</I>&gt;<i> questions.
+</I>&gt;<i> 
+</I>&gt;<i> I have managed to take some practise stack image stacks at 6 angles
+</I>&gt;<i> (300 images - ~2-4GB) but they do not open normally in Image J and the 
+</I>&gt;<i> program just says this:
+</I>&gt;<i> 
+</I>&gt;<i> Reading heading file header (Bio-Formats Import Options listing all 
+</I>&gt;<i> series), Cancelling thumbnail generation, Import preparations complete
+</I>&gt;<i> - which is followed by nothing.
+</I>&gt;<i> 
+</I>&gt;<i> When I tried pre-processing the images using the macro I used the 
+</I>&gt;<i> following adaptions to the code as I only have 1 time-point:
+</I>&gt;<i> 
+</I>&gt;<i> for ( t = 1; t &lt;= 1; t++ ) {
+</I>&gt;<i>     for ( a = 0; a &lt;= 5; a++ )
+</I>&gt;<i> 
+</I>&gt;<i> As I have Windows 7 64bit, I changed the directory to this:
+</I>&gt;<i> open(&quot;E:\\SPIM_Images\\&lt;<A HREF="file:///\\E:\SPIM_Images\">file:///\\E:\SPIM_Images\</A>&gt;....spim_TL&quot;
+</I>&gt;<i> 
+</I>&gt;<i> I also attached an exception message I received when trying to process 
+</I>&gt;<i> the files.
+</I>
+It appears as if the time lapse might have been interrupted (but this is just a wild guess).
+
+You could try to open the files individually by using 
+File&gt;Import&gt;Bio-Formats and then adjusting the setting so that it does
+*not* group the images.
+
+Ciao,
+Johannes
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: Error.txt
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150615/ebf04529/attachment-0002.txt">http://openspim.org/pipermail/openspim/attachments/20150615/ebf04529/attachment-0002.txt</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001722.html">[OpenSPIM] Problems with Image Processing
+</A></li>
+	<LI>Next message: <A HREF="001731.html">[OpenSPIM] Problems with Image Processing -&gt; in my case seems linked to Switching to BigTIFF
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1723">[ date ]</a>
+              <a href="thread.html#1723">[ thread ]</a>
+              <a href="subject.html#1723">[ subject ]</a>
+              <a href="author.html#1723">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] OpenSPIM app 64bit and other issues
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20app%2064bit%20and%20other%20issues&In-Reply-To=%3Cop.xsj29bb5ahhlbl%40pc511-7cad.ibd%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001543.html">
+   <LINK REL="Next"  HREF="000578.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] OpenSPIM app 64bit and other issues</H1>
+    <B>Monika Pawłowska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20OpenSPIM%20app%2064bit%20and%20other%20issues&In-Reply-To=%3Cop.xsj29bb5ahhlbl%40pc511-7cad.ibd%3E"
+       TITLE="[OpenSPIM] OpenSPIM app 64bit and other issues">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Fri Jan 16 06:49:49 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001543.html">[OpenSPIM] OpenSPIM app 64bit and other issues
+</A></li>
+        <LI>Next message: <A HREF="000578.html">[OpenSPIM] OpenSpim
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1544">[ date ]</a>
+              <a href="thread.html#1544">[ thread ]</a>
+              <a href="subject.html#1544">[ subject ]</a>
+              <a href="author.html#1544">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ulrik,
+
+thanks a lot! So far I installed it on my office PC (also 64bit Win7) to  
+test it. Micro-manager starts from Fiji without any problems and the SPIM  
+plugin is listed in the menu. I have no devices connected in my office, so  
+I couldn't run the plugin anyway.
+
+I only got one error message from Fiji:
+
+CriticalError: plugins/Volume_Viewer-2.01.1-SNAPSHOT.jar
+Multiple locally-modified versions of  
+plugins/Volume_Viewer-2.01.1-SNAPSHOT.jar exist:  
+C:\Users\MPAWLO~1\DOWNLO~1\mFiji\mFiji\plugins\Volume_Viewer.jar
+
+But I told it to delete duplicates and that's it.
+
+Only one comment: I noticed that the mFiji.zip file contains jdk1.6.0_24,  
+is this needed or just an artifact?
+
+And again, thanks, I lost far too much time with it before I had the idea  
+to search the list archives.
+
+Regards,
+Monika
+
+W dniu .01.2015 o 12:42 Ulrik Günther &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>&gt; pisze:
+
+&gt;<i>   Hello Monika,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> we’re currently working on making OpenSPIM into a simple MicroManager  
+</I>&gt;<i> plugin so the whole custom MicroManager package is not needed anymore. 
+</I>&gt;<i> This will also solve your 64bit troubles. For the moment, I can provide  
+</I>&gt;<i> you with a 64bit build based on MicroManager 1.4.18, which you can find  
+</I>&gt;<i> at <A HREF="https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/mFiji.zip">https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/mFiji.zip</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> You’ll also need the OpenSPIM plugin, which you can find at  
+</I>&gt;<i> <A HREF="https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/SPIMacquisition.jar">https://idisk-srv1.mpi-cbg.de/~gunther/OpenSPIM/SPIMacquisition.jar</A>
+</I>&gt;<i>  - this has to be put in mmplugins/
+</I>&gt;<i> Please also make sure you have the 1.8 version of the Java JRE installed.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Let me know if that worked for you :-)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> cheers,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ulrik
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> —
+</I>&gt;<i> Ulrik Günther, Dipl.-Phys.
+</I>&gt;<i> PhD Student
+</I>&gt;<i> MOSAIC Group &amp; Tomancak Lab, Center of Systems Biology Dresden
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> E-Mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">guenther at mpi-cbg.de</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> On Jan 16, 2015, at 12:33 PM, Monika Pawłowska  
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi all,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I am new here, so first of all - big thanks to everybody for taking time
+</I>&gt;&gt;<i> to help!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Now, to the topic. Are there any news regarding a possible 64bit version 
+</I>&gt;&gt;<i> of the package? Or alternatively, an instruction that one can follow to 
+</I>&gt;&gt;<i> install/build a 64bit version on one's own machine? For example by  
+</I>&gt;&gt;<i> addingthe 64bit micro-manager .dll libraries manually?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> In the end I got the package running by using the ImageJ_win32 in 
+</I>&gt;&gt;<i> compatibility mode. However, the solution Luke proposed in one of his 
+</I>&gt;&gt;<i> emails - to put a java folder in the openspim.app folder - doesn't work 
+</I>&gt;&gt;<i> for me and I was forced to change the JAVA_HOME option to use the 32bit 
+</I>&gt;&gt;<i> java globally. Now I'm concerned that it will mess up other things. Do  
+</I>&gt;&gt;<i> youhave any experience with that?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best regards,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --Monika Pawłowska
+</I>&gt;&gt;<i> Nencki Institute
+</I>&gt;&gt;<i> Laboratory of Neurobiology
+</I>&gt;&gt;<i> 3, Pasteur Street
+</I>&gt;&gt;<i> 02-093 Warsaw, Poland
+</I>&gt;&gt;<i> phone: (+48) 22 5892 427
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>
+
+-- 
+Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 427
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001543.html">[OpenSPIM] OpenSPIM app 64bit and other issues
+</A></li>
+	<LI>Next message: <A HREF="000578.html">[OpenSPIM] OpenSpim
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1544">[ date ]</a>
+              <a href="thread.html#1544">[ thread ]</a>
+              <a href="subject.html#1544">[ subject ]</a>
+              <a href="author.html#1544">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

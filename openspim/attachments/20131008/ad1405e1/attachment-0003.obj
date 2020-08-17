@@ -1,0 +1,228 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x7425971e, pid=5456, tid=5412
+#
+# JRE version: 6.0_24-b07
+# Java VM: Java HotSpot(TM) Client VM (19.1-b02 mixed mode windows-x86 )
+# Problematic frame:
+# C  [TIS_DShowLib09.dll+0x1971e]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x6bffe000):  VMThread [stack: 0x6c4e0000,0x6c6e0000] [id=5412]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x76c89e7c
+
+Registers:
+EAX=0x003ee0a4, EBX=0x76a86968, ECX=0x76c89e74, EDX=0x76a80608
+ESP=0x6c6df90c, EBP=0x6c6df930, ESI=0x76a86ad8, EDI=0x76a86adc
+EIP=0x7425971e, EFLAGS=0x00010202
+
+Register to memory mapping:
+
+EAX=0x003ee0a4
+
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xc0000005]
+
+Stack: [0x6c4e0000,0x6c6e0000],  sp=0x6c6df90c,  free space=2046k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [TIS_DShowLib09.dll+0x1971e]
+C  [TIS_DShowLib09.dll+0x2680e]
+C  [TIS_DShowLib09.dll+0x68ab3]
+C  [TIS_DShowLib09.dll+0x1afac]
+C  [TIS_DShowLib09.dll+0x2217a]
+C  [TIS_DShowLib09.dll+0x22359]
+C  [TIS_DShowLib09.dll+0x10b46]
+C  [TIS_DShowLib09.dll+0x10ab4]
+C  [TIS_DShowLib09.dll+0x68ab3]
+C  [TIS_DShowLib09.dll+0x1afac]
+C  [TIS_UDSHL09_vc9.dll+0xad19]
+C  [TIS_UDSHL09_vc9.dll+0xaae6]
+C  [mmgr_dal_TIScam.dll+0x12f98]
+C  [mmgr_dal_TIScam.dll+0x130b7]
+C  [mmgr_dal_TIScam.dll+0x13134]
+C  [ntdll.dll+0x118a]
+C  [ntdll.dll+0x224ca]
+C  [kernel32.dll+0x1d1a6]
+C  [kernel32.dll+0x1d21e]
+C  [MSVCR71.dll+0x38e2]
+C  [MSVCR71.dll+0x381d]
+V  [jvm.dll+0x1fd8bd]
+V  [jvm.dll+0x1fcbde]
+V  [jvm.dll+0x1fcf00]
+V  [jvm.dll+0x1fd302]
+V  [jvm.dll+0x18317c]
+C  [MSVCR71.dll+0xb381]
+C  [kernel32.dll+0xb729]
+
+VM_Operation (0x7e5fede0): Exit, mode: safepoint, requested by thread 0x718ba400
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x718ba400 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=5248, stack(0x7e400000,0x7e600000)]
+  0x734b9400 JavaThread "Beanshell interpreter" [_thread_blocked, id=3768, stack(0x78b60000,0x78d60000)]
+  0x6c0e4800 JavaThread "Thread-5" [_thread_blocked, id=2040, stack(0x749f0000,0x74bf0000)]
+  0x73457400 JavaThread "TimerQueue" daemon [_thread_blocked, id=5152, stack(0x74310000,0x74510000)]
+  0x71144800 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=5636, stack(0x72cb0000,0x72eb0000)]
+  0x00015000 JavaThread "DestroyJavaVM" [_thread_blocked, id=3772, stack(0x00030000,0x00230000)]
+  0x71143400 JavaThread "AWT-Shutdown" [_thread_blocked, id=1856, stack(0x728b0000,0x72ab0000)]
+  0x711c2400 JavaThread "RMI Reaper" [_thread_blocked, id=5964, stack(0x72660000,0x72860000)]
+  0x71152400 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=6032, stack(0x71e60000,0x72060000)]
+  0x710df800 JavaThread "GC Daemon" daemon [_thread_blocked, id=1440, stack(0x72460000,0x72660000)]
+  0x6c14f400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=1760, stack(0x71c60000,0x71e60000)]
+  0x6c027c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=4796, stack(0x6d3f0000,0x6d5f0000)]
+  0x6c019000 JavaThread "CompilerThread0" daemon [_thread_blocked, id=4748, stack(0x6d0e0000,0x6d2e0000)]
+  0x6c017800 JavaThread "Attach Listener" daemon [_thread_blocked, id=3956, stack(0x6cee0000,0x6d0e0000)]
+  0x6c014c00 JavaThread "Surrogate Locker Thread (CMS)" daemon [_thread_blocked, id=1492, stack(0x6cae0000,0x6cce0000)]
+  0x6c006800 JavaThread "Finalizer" daemon [_thread_blocked, id=6104, stack(0x6c8e0000,0x6cae0000)]
+  0x6c001c00 JavaThread "Reference Handler" daemon [_thread_blocked, id=3492, stack(0x6c6e0000,0x6c8e0000)]
+
+Other Threads:
+=>0x6bffe000 VMThread [stack: 0x6c4e0000,0x6c6e0000] [id=5412]
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00013d38] Threads_lock - owner thread: 0x6bffe000
+
+Heap
+ par new generation   total 14784K, used 1510K [0x03280000, 0x04280000, 0x05280000)
+  eden space 13184K,  11% used [0x03280000, 0x033f9868, 0x03f60000)
+  from space 1600K,   0% used [0x040f0000, 0x040f0000, 0x04280000)
+  to   space 1600K,   0% used [0x03f60000, 0x03f60000, 0x040f0000)
+ concurrent mark-sweep generation total 59072K, used 23134K [0x05280000, 0x08c30000, 0x63280000)
+ concurrent-mark-sweep perm gen total 131072K, used 24603K [0x63280000, 0x6b280000, 0x6b280000)
+
+Dynamic libraries:
+0x00400000 - 0x00421000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\ImageJ-win32.exe
+0x7c910000 - 0x7c9c9000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c908000 	C:\WINDOWS\system32\kernel32.dll
+0x77da0000 - 0x77e4a000 	C:\WINDOWS\system32\ADVAPI32.DLL
+0x77e50000 - 0x77ee3000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77fc0000 - 0x77fd1000 	C:\WINDOWS\system32\Secur32.dll
+0x77be0000 - 0x77c38000 	C:\WINDOWS\system32\msvcrt.dll
+0x7e360000 - 0x7e3f1000 	C:\WINDOWS\system32\USER32.dll
+0x77ef0000 - 0x77f39000 	C:\WINDOWS\system32\GDI32.dll
+0x76330000 - 0x7634d000 	C:\WINDOWS\system32\IMM32.DLL
+0x6d7b0000 - 0x6d7d2000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\splashscreen.dll
+0x7c360000 - 0x7c3b6000 	C:\WINDOWS\system32\MSVCR71.dll
+0x746a0000 - 0x746ec000 	C:\WINDOWS\system32\MSCTF.dll
+0x6d8a0000 - 0x6db46000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\client\jvm.dll
+0x76af0000 - 0x76b1e000 	C:\WINDOWS\system32\WINMM.dll
+0x6d850000 - 0x6d85c000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\verify.dll
+0x6d3d0000 - 0x6d3ef000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\java.dll
+0x6d330000 - 0x6d338000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\hpi.dll
+0x76bb0000 - 0x76bbb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x75250000 - 0x7527e000 	C:\WINDOWS\system32\msctfime.ime
+0x774b0000 - 0x775ee000 	C:\WINDOWS\system32\ole32.dll
+0x6d890000 - 0x6d89f000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\zip.dll
+0x02e40000 - 0x02e59000 	C:\WINDOWS\system32\btmmhook.dll
+0x770f0000 - 0x7717b000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x6c2c0000 - 0x6c40a000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\awt.dll
+0x72f70000 - 0x72f96000 	C:\WINDOWS\system32\WINSPOOL.DRV
+0x6d5f0000 - 0x6d68a000 	C:\WINDOWS\system32\COMCTL32.dll
+0x6d6b0000 - 0x6d6c3000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\net.dll
+0x6c4c0000 - 0x6c4d7000 	C:\WINDOWS\system32\WS2_32.dll
+0x6d2e0000 - 0x6d2e8000 	C:\WINDOWS\system32\WS2HELP.dll
+0x6d340000 - 0x6d380000 	C:\WINDOWS\System32\mswsock.dll
+0x76ee0000 - 0x76f07000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76d20000 - 0x76d39000 	C:\WINDOWS\system32\iphlpapi.dll
+0x76f70000 - 0x76f78000 	C:\WINDOWS\System32\winrnr.dll
+0x76f20000 - 0x76f4d000 	C:\WINDOWS\system32\WLDAP32.dll
+0x6d6a0000 - 0x6d6a8000 	C:\Programme\National Instruments\Shared\mDNS Responder\nimdnsNSP.dll
+0x6d6e0000 - 0x6d6e9000 	C:\WINDOWS\system32\nimdnsResponder.dll
+0x78520000 - 0x785c3000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.6161_x-ww_31a54e43\MSVCR90.dll
+0x76f80000 - 0x76f86000 	C:\WINDOWS\system32\rasadhlp.dll
+0x6d710000 - 0x6d746000 	C:\WINDOWS\system32\rsaenh.dll
+0x76620000 - 0x766d6000 	C:\WINDOWS\system32\USERENV.dll
+0x6d7e0000 - 0x6d835000 	C:\WINDOWS\system32\netapi32.dll
+0x6d750000 - 0x6d7a9000 	C:\WINDOWS\system32\hnetcfg.dll
+0x6d840000 - 0x6d848000 	C:\WINDOWS\System32\wshtcpip.dll
+0x72860000 - 0x728af000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\fontmanager.dll
+0x73100000 - 0x73109000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\nio.dll
+0x00bf0000 - 0x00c13000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\dcpr.dll
+0x00b50000 - 0x00b56000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\java\win32\jdk1.6.0_24\jre\bin\rmi.dll
+0x7e670000 - 0x7ee91000 	C:\WINDOWS\system32\shell32.dll
+0x77f40000 - 0x77fb6000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x773a0000 - 0x774a3000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.6028_x-ww_61e65202\comctl32.dll
+0x74510000 - 0x745b3000 	C:\Dokumente und Einstellungen\Administrator\Desktop\OpenSPIM-20130131\OpenSPIM.app\mm\Win32\MMCoreJ_wrap.dll
+0x78480000 - 0x7850e000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.6161_x-ww_31a54e43\MSVCP90.dll
+0x778f0000 - 0x779e4000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x77b10000 - 0x77b32000 	C:\WINDOWS\system32\appHelp.dll
+0x76f90000 - 0x7700f000 	C:\WINDOWS\system32\CLBCATQ.DLL
+0x77010000 - 0x770e3000 	C:\WINDOWS\system32\COMRes.dll
+0x77bd0000 - 0x77bd8000 	C:\WINDOWS\system32\VERSION.dll
+0x745c0000 - 0x745e2000 	C:\Dokumente und Einstellungen\Administrator\Anwendungsdaten\Dropbox\bin\DropboxExt.19.dll
+0x745f0000 - 0x74691000 	C:\WINDOWS\system32\dbghelp.dll
+0x75280000 - 0x75686000 	C:\PROGRA~1\MICROS~2\Office14\GROOVEEX.DLL
+0x78e20000 - 0x78e4b000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC90.ATL_1fc8b3b9a1e18e3b_9.0.30729.6161_x-ww_92453bb7\ATL90.DLL
+0x74ef0000 - 0x74f28000 	C:\WINDOWS\system32\UxTheme.dll
+0x75890000 - 0x75caa000 	C:\PROGRA~1\GEMEIN~1\MICROS~1\OFFICE14\Cultures\office.odf
+0x78e50000 - 0x796db000 	C:\PROGRA~1\MICROS~2\Office14\1031\GrooveIntlResource.dll
+0x779f0000 - 0x77a46000 	C:\WINDOWS\System32\cscui.dll
+0x765a0000 - 0x765bd000 	C:\WINDOWS\System32\CSCDLL.dll
+0x75cb0000 - 0x75f89000 	C:\WINDOWS\system32\xpsp2res.dll
+0x751c0000 - 0x75223000 	C:\Programme\Gemeinsame Dateien\Adobe\Acrobat\ActiveX\PDFShell.dll
+0x78050000 - 0x780b9000 	C:\WINDOWS\system32\MSVCP100.dll
+0x78aa0000 - 0x78b5f000 	C:\WINDOWS\system32\MSVCR100.dll
+0x75170000 - 0x75182000 	C:\WINDOWS\system32\MPR.dll
+0x75190000 - 0x75197000 	C:\WINDOWS\System32\drprov.dll
+0x751a0000 - 0x751ae000 	C:\WINDOWS\System32\ntlanman.dll
+0x75230000 - 0x75247000 	C:\WINDOWS\System32\NETUI0.dll
+0x75fe0000 - 0x76020000 	C:\WINDOWS\System32\NETUI1.dll
+0x76020000 - 0x76027000 	C:\WINDOWS\System32\NETRAP.dll
+0x76030000 - 0x76043000 	C:\WINDOWS\System32\SAMLIB.dll
+0x76050000 - 0x7605a000 	C:\WINDOWS\System32\davclnt.dll
+0x76060000 - 0x76097000 	C:\WINDOWS\system32\netprovcredman.dll
+0x76bf0000 - 0x76c1e000 	C:\WINDOWS\system32\WINTRUST.dll
+0x77a50000 - 0x77ae6000 	C:\WINDOWS\system32\CRYPT32.dll
+0x77af0000 - 0x77b02000 	C:\WINDOWS\system32\MSASN1.dll
+0x76c50000 - 0x76c78000 	C:\WINDOWS\system32\IMAGEHLP.dll
+0x76590000 - 0x76598000 	C:\WINDOWS\system32\LINKINFO.dll
+0x765d0000 - 0x765f6000 	C:\WINDOWS\system32\ntshrui.dll
+0x76ad0000 - 0x76ae1000 	C:\WINDOWS\system32\ATL.DLL
+0x74130000 - 0x74155000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_TIScam.dll
+0x74170000 - 0x7422e000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\TIS_UDSHL09_vc9.dll
+0x74240000 - 0x742f9000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\TIS_DShowLib09.dll
+0x782c0000 - 0x7842f000 	C:\WINDOWS\system32\QUARTZ.dll
+0x76a50000 - 0x76a71000 	C:\WINDOWS\system32\MSVFW32.dll
+0x76a90000 - 0x76acb000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\mmgr_dal_PicardStage.dll
+0x76b30000 - 0x76b6b000 	C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\mm\win32\PiUsb.dll
+0x76b80000 - 0x76b89000 	C:\WINDOWS\system32\HID.DLL
+0x76c40000 - 0x76c47000 	C:\WINDOWS\system32\msdmo.dll
+0x789d0000 - 0x78a81000 	C:\WINDOWS\system32\SXS.DLL
+
+VM Arguments:
+jvm_args: -Dpython.cachedir.skip=true -Dplugins.dir=C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app -Xmx1536m -Xincgc -XX:PermSize=128m 
+java_command: ImageJ
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app/java/win32/jdk1.6.0_24//jre
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Programme\Intel\WiFi\bin\;C:\WINDOWS\System32\Empirum;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Programme\IVI Foundation\IVI\bin;C:\Programme\IVI Foundation\VISA\WinNT\Bin\;C:\Programme\IVI Foundation\VISA\WinNT\Bin;C:\Programme\National Instruments\Motion Assistant\bin\mxwplugins;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app/lib/win32;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app/mm/win32;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app/java/win32/jdk1.6.0_24//jre/bin;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\plugins;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\OpenSPIM.app\mm\win32;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1;C:\DOKUME~1\ADMINI~1\Desktop\OPENSP~1\mm\win32
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1
+
+Memory: 4k page, physical 3139520k(2110100k free), swap 5067304k(3648072k free)
+
+vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE (1.6.0_24-b07), built on Feb  2 2011 17:44:41 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Tue Oct 08 19:23:05 2013
+elapsed time: 304 seconds
+

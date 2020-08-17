@@ -1,0 +1,1072 @@
+From zuomin at ee.oulu.fi  Fri May  2 02:07:44 2014
+From: zuomin at ee.oulu.fi (Zuomin Zhao)
+Date: Fri, 2 May 2014 10:07:44 +0300
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <7670cb05f8ed.5361451c@wiscmail.wisc.edu>
+References: <001701cf6466$52bca410$f835ec30$@ee.oulu.fi>
+	<7580a71cb961.536187cf@wiscmail.wisc.edu>
+	<7630902fc9f4.53618849@wiscmail.wisc.edu>
+	<7670f98dc8a2.53618886@wiscmail.wisc.edu>
+	<7670934c8c63.536188c2@wiscmail.wisc.edu>
+	<76f0beba9654.536188fe@wiscmail.wisc.edu>
+	<7760d6c6ac4f.5361893b@wiscmail.wisc.edu>
+	<76d0b373af32.536189f2@wiscmail.wisc.edu>
+	<7670a88b8883.53618a2e@wiscmail.wisc.edu>
+	<76d090f4ac96.53618a6b@wiscmail.wisc.edu>
+	<7760aa17b5ef.53618aa7@wiscmail.wisc.edu>
+	<7580f5b9c607.53618ae4@wiscmail.wisc.edu>
+	<75c0ec5fd0ea.53618b23@wiscmail.wisc.edu>
+	<75709355943e.53618b5f@wiscmail.wisc.edu>
+	<7670cb05f8ed.5361451c@wiscmail.wisc.edu>
+Message-ID: <008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>
+
+Hi Luke,
+
+Thank you for your help. Following your guiding, the problem is solved,
+Acquire OpenSPIM imaging is opened. 
+
+Best regards,
+
+Zuomin
+
+-----Original Message-----
+From: Luke Stuyvenberg [mailto:stuyvenberg at wisc.edu] 
+Sent: Thursday, May 01, 2014 2:47 AM
+To: Zuomin Zhao
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] stradus laser in OpenSPIM
+
+Hi Zuomin Zhao,
+
+On 04/30/14, Zuomin Zhao  wrote:
+> We used a stradus laser in OpenSPIM. But we cannot open the Acquire
+OpenSPIM option from Micro-manager. The settings can be seen in attachments.
+It always shows error like "Error in device VLTStradus: Duplicate property
+names are not allowed"
+
+Since the Stradus device adapter is "secret", my ability to help is limited.
+My suggestion is:
+- First, please make sure you are using the Stradus device adapter
+(mmgr_dal_Stradus.dll) from the 5 February 2014 nightly build of
+Micro-Manager[1].
+- Run OpenSPIM, but before clicking "Acquire SPIM Image", create a pixel
+size:
+ - On Micro-Manager, click "Tools -> Pixel Size Calibration..."
+ - Click "New"
+ - Set Label to "Uncalibrated"
+ - Set Pixel Size (um/pixel) to 1.00
+ - Across from "Core - Initialize" click "Use" checkbox.
+ - Click "OK".
+- Try "Acquire SPIM Image" again.
+
+
+> Another problem is the information in Corelog20140430 that "Startup script
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present." I do not
+know why miss this file MMSartup.bsh. How handle it?
+This error should not cause any problems right now. It only means that the
+"Acquire SPIM Image" window will not open automatically.
+
+
+If you continue to have trouble, please e-mail us again and I will try to
+help more.
+Luke Stuyvenberg
+
+
+[1]
+http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_32bit_1.4.17_2
+0140205.exe -- or find it on the Micro-Manager website: Downloads ->
+Download Nightly Builds -> Version 1.4 (Windows) ->
+MMSetup_32bit_1.4.17_20140205.exe Install this file, then copy
+mmgr_dal_Stradus.dll from where it was installed to OpenSPIM.app/mm/win32/.
+
+
+
+From stuyvenberg at wisc.edu  Fri May  2 15:18:57 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Fri, 02 May 2014 15:18:57 -0500
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <7740ae5b9f33.5363fda8@wiscmail.wisc.edu>
+References: <001701cf6466$52bca410$f835ec30$@ee.oulu.fi>
+	<7580a71cb961.536187cf@wiscmail.wisc.edu>
+	<7630902fc9f4.53618849@wiscmail.wisc.edu>
+	<7670f98dc8a2.53618886@wiscmail.wisc.edu>
+	<7670934c8c63.536188c2@wiscmail.wisc.edu>
+	<76f0beba9654.536188fe@wiscmail.wisc.edu>
+	<7760d6c6ac4f.5361893b@wiscmail.wisc.edu>
+	<76d0b373af32.536189f2@wiscmail.wisc.edu>
+	<7670a88b8883.53618a2e@wiscmail.wisc.edu>
+	<76d090f4ac96.53618a6b@wiscmail.wisc.edu>
+	<7760aa17b5ef.53618aa7@wiscmail.wisc.edu>
+	<7580f5b9c607.53618ae4@wiscmail.wisc.edu>
+	<75c0ec5fd0ea.53618b23@wiscmail.wisc.edu>
+	<75709355943e.53618b5f@wiscmail.wisc.edu>
+	<7670cb05f8ed.5361451c@wiscmail.wisc.edu>
+	<CAKGYTBkAB2uL+G4Og=Q_+wxA2VKBsHL3ZpdXM2RXiatpjZahnw@mail.gmail.com>
+	<7710ab539ccd.5363fd68@wiscmail.wisc.edu>
+	<7740ae5b9f33.5363fda8@wiscmail.wisc.edu>
+Message-ID: <7710cb31e3f2.5363b761@wiscmail.wisc.edu>
+
+Hi Mark,
+
+On 04/30/14, Mark Tsuchida  wrote:
+> I don't have time to look into the duplicate property issue today, but
+> FYI the Stradus adapter is open source, and the source is in
+> DeviceAdapters/Vortran (can't blame you for missing it).
+Whoops! Actually, that one should've clicked when I learned what VLT stood for. My mistake.
+
+
+Although as it turns out, there's probably no fault in the device adapter. Thanks, though; I'll have a look anyway once I get time.
+Luke
+
+
+From zuomin at ee.oulu.fi  Tue May  6 07:10:09 2014
+From: zuomin at ee.oulu.fi (Zuomin Zhao)
+Date: Tue, 6 May 2014 15:10:09 +0300
+Subject: [OpenSPIM] beam sheet thickness and co-axis of double illumination
+	paths
+Message-ID: <005a01cf6924$204e3850$60eaa8f0$@ee.oulu.fi>
+
+Hi,
+
+The light sheet thickness of Our SPIM microscope is estimated about 50
+micrometers, during adjustment. I remember from OpenSPIM papers, the sheet
+thickness should be thinner than several micrometer. Could you tell me how
+to solve it?
+
+ 
+
+We used two illumination beams from opposite direction, how can align the
+two sheets? how large usually the malposition between the two sheets?  Thank
+you.
+
+ 
+
+Best regards,
+
+ 
+
+Zuomin Zhao 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140506/6acfe1f3/attachment.html>
+
+From aureliaomega at gmail.com  Wed May 14 09:51:12 2014
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Wed, 14 May 2014 15:51:12 +0100
+Subject: [OpenSPIM] multi-angle acquisition
+Message-ID: <CAHAw+8aavp_o-rLOvu5CmLSLFXRpe4gzOQFCm3AADWdOhJ=OWQ@mail.gmail.com>
+
+Hello everyone,
+
+I'm having an issue with acquisition that I wonder if anyone else has
+experienced. When I assign several positions, it frequently happens that
+when the stage moves to the next position, it will not complete the
+movement.  Usually, it rotates and moves in the z direction but not y.  I
+can observe the problem when acquisition is not running; if I double-click
+the row in the position list, the stage will move partially; then if I
+double-click it again, it finally moves to the correct position.
+I can get around this problem by adding a single frame at the start
+position for each stack before the stack is taken; then the stage moves to
+the correct position when it starts the stack.  However, this is annoying
+because I record a lot of unnecessary frames and I think it might make the
+anti-drift function behave oddly.  Anyone have a suggestion?
+
+Thanks,
+Aurelia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140514/14fbb4dc/attachment.html>
+
+From m.hanulova at imb.de  Wed May 14 10:04:53 2014
+From: m.hanulova at imb.de (Maria)
+Date: Wed, 14 May 2014 17:04:53 +0200
+Subject: [OpenSPIM] openSPIM for core facility and is optical table
+	necessary?
+Message-ID: <53738615.1040301@imb.de>
+
+Dear all,
+
+I'm working in a microscopy core facility and we are thinking about 
+building a SPIM. Do you think it is possible to run SPIM in this 
+environment -  I mean to train users to use the microscope on their own 
+with occasional support? Or is too complicated a machine and needs to be 
+run by a dedicated person, with the user only providing the sample? Does 
+anyone have experience from a similar situation?
+
+Second question: openSPIM is assembled on an optical breadboard, but all 
+other self-built microscopes I have seen were on optical tables. Is an 
+optical table necessary for openSPIM?
+
+Thank you very much and best regards,
+Maria
+
+-- 
+Maria Hanulova
+------------------------------------
+Core Facility Microscopy
+Institute of Molecular Biology gGmbH (IMB)
+Ackermannweg 4
+55128 Mainz
+Germany
+Phone: +49-6131-39-21507
+Email: m.hanulova at imb-mainz.de
+www.imb-mainz.de/core-facilities/microscopy/
+
+
+
+From stuyvenberg at wisc.edu  Mon May 19 10:13:11 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 19 May 2014 10:13:11 -0500
+Subject: [OpenSPIM] openSPIM for core facility and is optical
+	table	necessary?
+In-Reply-To: <7450fd5849b65.537a1f67@wiscmail.wisc.edu>
+References: <53738615.1040301@imb.de>
+	<7720878b4a75a.537a1c55@wiscmail.wisc.edu>
+	<7430d5f64816d.537a1c91@wiscmail.wisc.edu>
+	<7440daf348f87.537a1cce@wiscmail.wisc.edu>
+	<7720f6f64e9df.537a1d0a@wiscmail.wisc.edu>
+	<76a0d8be4ab3c.537a1d47@wiscmail.wisc.edu>
+	<774096474a93e.537a1d83@wiscmail.wisc.edu>
+	<768089f94da80.537a1dbf@wiscmail.wisc.edu>
+	<768093d44d0ba.537a1dfc@wiscmail.wisc.edu>
+	<7430e96a4a084.537a1e38@wiscmail.wisc.edu>
+	<75a08ec54e791.537a1e75@wiscmail.wisc.edu>
+	<768094df4fa19.537a1eb1@wiscmail.wisc.edu>
+	<75a0fc724825b.537a1eee@wiscmail.wisc.edu>
+	<7700a1c34e12b.537a1f2a@wiscmail.wisc.edu>
+	<7450fd5849b65.537a1f67@wiscmail.wisc.edu>
+Message-ID: <7680eac148e2d.5379d937@wiscmail.wisc.edu>
+
+Hi Maria,
+
+On 05/14/14, Maria?wrote:
+> I'm working in a microscopy core facility and we are thinking about building a SPIM. Do you think it is possible to run SPIM in this environment - I mean to train users to use the microscope on their own with occasional support? Or is too complicated a machine and needs to be run by a dedicated person, with the user only providing the sample? Does anyone have experience from a similar situation?
+I think it would be very possible. Basic use of the SPIM system -- setting up acquisitions and time-lapses -- isn't particularly complicated. As long as the system stays aligned (which seems to be a fairly long time) the operator needn't know much about the SPIM's optics to use it. (There *is* some value to it, though -- in my experience, for example, adjusting the corner mirror after inserting a new sample can sometimes improve the images the system records.) Occasionally checking the alignment with a mirror slide or similar is strongly recommended, of course, and having at least one person who is knowledgeable about the 'dirty details' to help in case of malfunction would be a good idea.
+
+On 05/14/14, Maria?wrote:
+> Second question: openSPIM is assembled on an optical breadboard, but all other self-built microscopes I have seen were on optical tables. Is an optical table necessary for openSPIM?
+
+A full table is not, in general, necessary. It might be desirable, for instance if the table is self-leveling, but as long as the breadboard is fairly flat the system should be able to operate normally. (As a point of interest, I also don't see why the system couldn't be assembled directly on a table; this might allow for a very flexible system. I don't think anyone has tried this yet.)
+
+
+Hope this helps!
+Luke Stuyvenberg
+
+
+On 05/14/14, Maria  wrote:
+> Dear all,
+> 
+> I'm working in a microscopy core facility and we are thinking about building a SPIM. Do you think it is possible to run SPIM in this environment - I mean to train users to use the microscope on their own with occasional support? Or is too complicated a machine and needs to be run by a dedicated person, with the user only providing the sample? Does anyone have experience from a similar situation?
+> 
+> Second question: openSPIM is assembled on an optical breadboard, but all other self-built microscopes I have seen were on optical tables. Is an optical table necessary for openSPIM?
+> 
+> Thank you very much and best regards,
+> Maria
+> 
+> -- 
+> Maria Hanulova
+> ------------------------------------
+> Core Facility Microscopy
+> Institute of Molecular Biology gGmbH (IMB)
+> Ackermannweg 4
+> 55128 Mainz
+> Germany
+> Phone: +49-6131-39-21507
+> Email: m.hanulova at imb-mainz.de
+> www.imb-mainz.de/core-facilities/microscopy/
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From stuyvenberg at wisc.edu  Mon May 19 10:29:09 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 19 May 2014 10:29:09 -0500
+Subject: [OpenSPIM] multi-angle acquisition
+In-Reply-To: <7720b1564d7ea.537a2320@wiscmail.wisc.edu>
+References: <CAHAw+8aavp_o-rLOvu5CmLSLFXRpe4gzOQFCm3AADWdOhJ=OWQ@mail.gmail.com>
+	<7440f74149e3a.537a1fc9@wiscmail.wisc.edu>
+	<7730a0e44daeb.537a2006@wiscmail.wisc.edu>
+	<7680e3e34b608.537a2042@wiscmail.wisc.edu>
+	<7430ad6a4a6ad.537a207e@wiscmail.wisc.edu>
+	<75a0907349185.537a20bb@wiscmail.wisc.edu>
+	<7720db194df1d.537a20f7@wiscmail.wisc.edu>
+	<7740849d4f382.537a2134@wiscmail.wisc.edu>
+	<7450dfd84b7ee.537a2171@wiscmail.wisc.edu>
+	<7580ed424aef4.537a21ad@wiscmail.wisc.edu>
+	<7730d6e14a557.537a21ec@wiscmail.wisc.edu>
+	<7440ae354fea2.537a2229@wiscmail.wisc.edu>
+	<7720b54d4fbec.537a22a4@wiscmail.wisc.edu>
+	<7430ddbf48be4.537a22e3@wiscmail.wisc.edu>
+	<7720b1564d7ea.537a2320@wiscmail.wisc.edu>
+Message-ID: <75a0a3584c2f3.5379dcf5@wiscmail.wisc.edu>
+
+Hi Aurelia,
+
+On 05/14/14, Aurelia Honerkamp-Smith?wrote:
+> I'm having an issue with acquisition that I wonder if anyone else has experienced. When I assign several positions, it frequently happens that when the stage moves to the next position, it will not complete the movement. Usually, it rotates and moves in the z direction but not y. I can observe the problem when acquisition is not running; if I double-click the row in the position list, the stage will move partially; then if I double-click it again, it finally moves to the correct position.Very odd. I've not heard of this or seen it, unfortunately, so I can only guess. First, a few questions:
+- Does this issue only happen with acquisition? That is, when you set the position with the stage controls tab, does the motor go to that location immediately?
+
+- Is your pixel size calibration set? (To 1.0, or to the actual value?)
+- Does the system produce any error messages? (These may not be visible normally; they should show up in a recent core log, though -- could you please attach one?)
+
+
+And now are a few ideas:
+- Are the thumbscrews on the stage slides all very lose? Each linear stage has one to hold it still while packing; the screw should be loosened or removed before using the stage.
+- Are the stage wires clear of any obstructions?
+- Try zeroing all the stages:
+ - First, remove any sample.
+ - From Micro-Manager, click Tools -> Script Panel
+ - In the bottom panel, type (pressing enter after each line):
+
+
+mmc.setPosition(mmc.getFocusDevice(), 0);
+mmc.setXYPosition(mmc.getXYStageDevice(), 0, 0);
+mmc.setPosition("Picard Twister", 0);
+
+
+ (The third one might fail if the twister has a different label.)
+
+
+Please let me know if this helps, or if there's any new developments!
+Thanks,
+Luke Stuyvenberg
+
+
+On 05/14/14, Aurelia Honerkamp-Smith  wrote:
+> Hello everyone, 
+> 
+> I'm having an issue with acquisition that I wonder if anyone else has experienced. When I assign several positions, it frequently happens that when the stage moves to the next position, it will not complete the movement. Usually, it rotates and moves in the z direction but not y. I can observe the problem when acquisition is not running; if I double-click the row in the position list, the stage will move partially; then if I double-click it again, it finally moves to the correct position.
+> I can get around this problem by adding a single frame at the start position for each stack before the stack is taken; then the stage moves to the correct position when it starts the stack. However, this is annoying because I record a lot of unnecessary frames and I think it might make the anti-drift function behave oddly. Anyone have a suggestion? 
+> 
+> 
+> Thanks, 
+> 
+> Aurelia
+
+
+From stuyvenberg at wisc.edu  Mon May 19 13:13:36 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 19 May 2014 13:13:36 -0500
+Subject: [OpenSPIM] beam sheet thickness and co-axis of double
+ illumination paths
+In-Reply-To: <7700fcca4cdc4.537a4999@wiscmail.wisc.edu>
+References: <005a01cf6924$204e3850$60eaa8f0$@ee.oulu.fi>
+	<7740becc4d967.537a48e3@wiscmail.wisc.edu>
+	<7740a0fc4f7b3.537a4920@wiscmail.wisc.edu>
+	<7700efd54e797.537a495c@wiscmail.wisc.edu>
+	<7700fcca4cdc4.537a4999@wiscmail.wisc.edu>
+Message-ID: <7720ea7f4f11b.537a0380@wiscmail.wisc.edu>
+
+Hi Zuomin Zhao,
+
+On 05/06/14, Zuomin Zhao?wrote:
+> The light sheet thickness of Our SPIM microscope is estimated about 50 micrometers, during adjustment. I remember from OpenSPIM papers, the sheet thickness should be thinner than several micrometer. Could you tell me how to solve it?
+
+
+
+Did you completely align the system? Please try adjusting the distance between the first two lenses (the ones on the long rail). The instructions at http://openspim.org/Advanced_Laser_Alignment might also help.
+
+
+On 05/06/14, Zuomin Zhao?wrote:
+> We used two illumination beams from opposite direction, how can align the two sheets? how large usually the malposition between the two sheets? Thank you.
+
+
+
+This is quite difficult. Perhaps if a sample is mounted in the system, blocking one laser and then the other can show you where the two sheets are, relative to each other? I don't know the usual misalignment; we've only tried using two beams once before.
+
+
+Good luck; hope this helps!
+Luke Stuyvenberg
+
+
+On 05/06/14, Zuomin Zhao  wrote:
+> 
+> 
+> 
+> 
+> Hi,
+> 
+> 
+> 
+> The light sheet thickness of Our SPIM microscope is estimated about 50 micrometers, during adjustment. I remember from OpenSPIM papers, the sheet thickness should be thinner than several micrometer. Could you tell me how to solve it?
+> 
+> 
+> 
+> We used two illumination beams from opposite direction, how can align the two sheets? how large usually the malposition between the two sheets? Thank you.
+> 
+> 
+> 
+> Best regards,
+> 
+> 
+> 
+> Zuomin Zhao
+
+
+From Shugi at gmx.de  Tue May 27 05:19:55 2014
+From: Shugi at gmx.de (Shugi at gmx.de)
+Date: Tue, 27 May 2014 12:19:55 +0200
+Subject: [OpenSPIM] Input data for SPIM Registration PlugIn
+Message-ID: <trinity-38ca28b4-846a-43fc-a2d1-dfce72f1b7cf-1401185995801@3capp-gmx-bs17>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140527/3a457094/attachment.html>
+
+From kieran.short at gmail.com  Tue May 27 16:18:52 2014
+From: kieran.short at gmail.com (Kieran Short)
+Date: Wed, 28 May 2014 07:18:52 +1000
+Subject: [OpenSPIM] Input data for SPIM Registration PlugIn
+In-Reply-To: <trinity-38ca28b4-846a-43fc-a2d1-dfce72f1b7cf-1401185995801@3capp-gmx-bs17>
+References: <trinity-38ca28b4-846a-43fc-a2d1-dfce72f1b7cf-1401185995801@3capp-gmx-bs17>
+Message-ID: <CANkVCd7OH7GC1EECB0q6GBnch9eyf6gTJm1-oQBSZg6hanTbpg@mail.gmail.com>
+
+Richard,
+
+The endianness of the TIFF data might be wrong (wrong byte order). Try
+switching to intel-byte order (or if it already is, switch it to big
+endian).
+
+fyi: http://en.wikipedia.org/wiki/Endianness
+
+cheers,
+Kieran
+
+
+On Tue, May 27, 2014 at 8:19 PM, <Shugi at gmx.de> wrote:
+
+> Hello,
+>
+>  I read about your tool for registration and fusion of multiple view
+> images. It is the topic of my intership to find a way doing this with our
+> data and I would like to try your tool. But it seems to have a problem with
+> our data. The original data from a Z1 are present as czi file. I extract
+> them as ome.tif file with the ZEN2012 Software. Like in the tutorial the
+> extension was changed from ome.tif to tif. I was following the tutorial and
+> when to interactivlly choosing the threshold for the beads and click "Done"
+> the following Messages occure in the Log:
+>
+> Opening first image to determine z-stretching.
+> Cannot open fie: ...
+>
+> The path and the filename are correct. Maybe it is something about the
+> formate? Do you need special tags in the tiff file or does the bit depth
+> has influence?
+> Hope you can help me, because your tool seems to be very promising.
+>
+> Kind regardas
+> Ricarda Br?uniger
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140528/21c2abb7/attachment.html>
+
+From nantho2 at emory.edu  Thu May 29 10:41:14 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Thu, 29 May 2014 11:41:14 -0400
+Subject: [OpenSPIM] Shutters for T-SPIM
+Message-ID: <5387551A.3000709@emory.edu>
+
+Hi all,
+
+I love the new (not sure how new) renders of the T-SPIM and X-SPIM! I 
+wanted to ask two serious and silly question about the shutters. What's 
+the part number?  Does it interface with ?Manager? Do they really float?
+
+Thanks
+Neil
+
+-- 
+*Neil Anthony, PhD*  | Research Imaging Specialist
+Health Sciences Research Building (HSRB), Room EG21
+1760 Haygood Drive, Atlanta, GA 30322 	
+
+neil.anthony at emory.edu <mailto:neil.anthony at emory.edu>
+ici.emory.edu <http://ici.emory.edu/>
+404 969-CORE
+
+<http://ici.emory.edu/> 	<https://www.facebook.com/ICIEmory> 
+<http://www.linkedin.com/pub/neil-anthony/35/a0b/126> 
+<https://www.researchgate.net/profile/Neil_Anthony/>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: EU_ICI_SmlLogo.png
+Type: image/png
+Size: 11461 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0004.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: facebook_logo.png
+Type: image/png
+Size: 3826 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0005.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: linkedin_logo.png
+Type: image/png
+Size: 4053 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0006.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: researchgate_logo.png
+Type: image/png
+Size: 4345 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0007.png>
+
+From zuomin at ee.oulu.fi  Fri May  2 02:07:44 2014
+From: zuomin at ee.oulu.fi (Zuomin Zhao)
+Date: Fri, 2 May 2014 10:07:44 +0300
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <7670cb05f8ed.5361451c@wiscmail.wisc.edu>
+References: <001701cf6466$52bca410$f835ec30$@ee.oulu.fi>
+	<7580a71cb961.536187cf@wiscmail.wisc.edu>
+	<7630902fc9f4.53618849@wiscmail.wisc.edu>
+	<7670f98dc8a2.53618886@wiscmail.wisc.edu>
+	<7670934c8c63.536188c2@wiscmail.wisc.edu>
+	<76f0beba9654.536188fe@wiscmail.wisc.edu>
+	<7760d6c6ac4f.5361893b@wiscmail.wisc.edu>
+	<76d0b373af32.536189f2@wiscmail.wisc.edu>
+	<7670a88b8883.53618a2e@wiscmail.wisc.edu>
+	<76d090f4ac96.53618a6b@wiscmail.wisc.edu>
+	<7760aa17b5ef.53618aa7@wiscmail.wisc.edu>
+	<7580f5b9c607.53618ae4@wiscmail.wisc.edu>
+	<75c0ec5fd0ea.53618b23@wiscmail.wisc.edu>
+	<75709355943e.53618b5f@wiscmail.wisc.edu>
+	<7670cb05f8ed.5361451c@wiscmail.wisc.edu>
+Message-ID: <008101cf65d5$37b37160$a71a5420$@ee.oulu.fi>
+
+Hi Luke,
+
+Thank you for your help. Following your guiding, the problem is solved,
+Acquire OpenSPIM imaging is opened. 
+
+Best regards,
+
+Zuomin
+
+-----Original Message-----
+From: Luke Stuyvenberg [mailto:stuyvenberg at wisc.edu] 
+Sent: Thursday, May 01, 2014 2:47 AM
+To: Zuomin Zhao
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] stradus laser in OpenSPIM
+
+Hi Zuomin Zhao,
+
+On 04/30/14, Zuomin Zhao  wrote:
+> We used a stradus laser in OpenSPIM. But we cannot open the Acquire
+OpenSPIM option from Micro-manager. The settings can be seen in attachments.
+It always shows error like "Error in device VLTStradus: Duplicate property
+names are not allowed"
+
+Since the Stradus device adapter is "secret", my ability to help is limited.
+My suggestion is:
+- First, please make sure you are using the Stradus device adapter
+(mmgr_dal_Stradus.dll) from the 5 February 2014 nightly build of
+Micro-Manager[1].
+- Run OpenSPIM, but before clicking "Acquire SPIM Image", create a pixel
+size:
+ - On Micro-Manager, click "Tools -> Pixel Size Calibration..."
+ - Click "New"
+ - Set Label to "Uncalibrated"
+ - Set Pixel Size (um/pixel) to 1.00
+ - Across from "Core - Initialize" click "Use" checkbox.
+ - Click "OK".
+- Try "Acquire SPIM Image" again.
+
+
+> Another problem is the information in Corelog20140430 that "Startup script
+file (C:\Users\Admin\Desktop\Fiji.app/MMStartup.bsh) not present." I do not
+know why miss this file MMSartup.bsh. How handle it?
+This error should not cause any problems right now. It only means that the
+"Acquire SPIM Image" window will not open automatically.
+
+
+If you continue to have trouble, please e-mail us again and I will try to
+help more.
+Luke Stuyvenberg
+
+
+[1]
+http://valelab.ucsf.edu/~MM/nightlyBuilds/1.4/Windows/MMSetup_32bit_1.4.17_2
+0140205.exe -- or find it on the Micro-Manager website: Downloads ->
+Download Nightly Builds -> Version 1.4 (Windows) ->
+MMSetup_32bit_1.4.17_20140205.exe Install this file, then copy
+mmgr_dal_Stradus.dll from where it was installed to OpenSPIM.app/mm/win32/.
+
+
+
+
+From stuyvenberg at wisc.edu  Fri May  2 15:18:57 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Fri, 02 May 2014 15:18:57 -0500
+Subject: [OpenSPIM] stradus laser in OpenSPIM
+In-Reply-To: <7740ae5b9f33.5363fda8@wiscmail.wisc.edu>
+References: <001701cf6466$52bca410$f835ec30$@ee.oulu.fi>
+	<7580a71cb961.536187cf@wiscmail.wisc.edu>
+	<7630902fc9f4.53618849@wiscmail.wisc.edu>
+	<7670f98dc8a2.53618886@wiscmail.wisc.edu>
+	<7670934c8c63.536188c2@wiscmail.wisc.edu>
+	<76f0beba9654.536188fe@wiscmail.wisc.edu>
+	<7760d6c6ac4f.5361893b@wiscmail.wisc.edu>
+	<76d0b373af32.536189f2@wiscmail.wisc.edu>
+	<7670a88b8883.53618a2e@wiscmail.wisc.edu>
+	<76d090f4ac96.53618a6b@wiscmail.wisc.edu>
+	<7760aa17b5ef.53618aa7@wiscmail.wisc.edu>
+	<7580f5b9c607.53618ae4@wiscmail.wisc.edu>
+	<75c0ec5fd0ea.53618b23@wiscmail.wisc.edu>
+	<75709355943e.53618b5f@wiscmail.wisc.edu>
+	<7670cb05f8ed.5361451c@wiscmail.wisc.edu>
+	<CAKGYTBkAB2uL+G4Og=Q_+wxA2VKBsHL3ZpdXM2RXiatpjZahnw@mail.gmail.com>
+	<7710ab539ccd.5363fd68@wiscmail.wisc.edu>
+	<7740ae5b9f33.5363fda8@wiscmail.wisc.edu>
+Message-ID: <7710cb31e3f2.5363b761@wiscmail.wisc.edu>
+
+Hi Mark,
+
+On 04/30/14, Mark Tsuchida  wrote:
+> I don't have time to look into the duplicate property issue today, but
+> FYI the Stradus adapter is open source, and the source is in
+> DeviceAdapters/Vortran (can't blame you for missing it).
+Whoops! Actually, that one should've clicked when I learned what VLT stood for. My mistake.
+
+
+Although as it turns out, there's probably no fault in the device adapter. Thanks, though; I'll have a look anyway once I get time.
+Luke
+
+
+
+From zuomin at ee.oulu.fi  Tue May  6 07:10:09 2014
+From: zuomin at ee.oulu.fi (Zuomin Zhao)
+Date: Tue, 6 May 2014 15:10:09 +0300
+Subject: [OpenSPIM] beam sheet thickness and co-axis of double illumination
+	paths
+Message-ID: <005a01cf6924$204e3850$60eaa8f0$@ee.oulu.fi>
+
+Hi,
+
+The light sheet thickness of Our SPIM microscope is estimated about 50
+micrometers, during adjustment. I remember from OpenSPIM papers, the sheet
+thickness should be thinner than several micrometer. Could you tell me how
+to solve it?
+
+ 
+
+We used two illumination beams from opposite direction, how can align the
+two sheets? how large usually the malposition between the two sheets?  Thank
+you.
+
+ 
+
+Best regards,
+
+ 
+
+Zuomin Zhao 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140506/6acfe1f3/attachment-0002.html>
+
+From aureliaomega at gmail.com  Wed May 14 09:51:12 2014
+From: aureliaomega at gmail.com (Aurelia Honerkamp-Smith)
+Date: Wed, 14 May 2014 15:51:12 +0100
+Subject: [OpenSPIM] multi-angle acquisition
+Message-ID: <CAHAw+8aavp_o-rLOvu5CmLSLFXRpe4gzOQFCm3AADWdOhJ=OWQ@mail.gmail.com>
+
+Hello everyone,
+
+I'm having an issue with acquisition that I wonder if anyone else has
+experienced. When I assign several positions, it frequently happens that
+when the stage moves to the next position, it will not complete the
+movement.  Usually, it rotates and moves in the z direction but not y.  I
+can observe the problem when acquisition is not running; if I double-click
+the row in the position list, the stage will move partially; then if I
+double-click it again, it finally moves to the correct position.
+I can get around this problem by adding a single frame at the start
+position for each stack before the stack is taken; then the stage moves to
+the correct position when it starts the stack.  However, this is annoying
+because I record a lot of unnecessary frames and I think it might make the
+anti-drift function behave oddly.  Anyone have a suggestion?
+
+Thanks,
+Aurelia
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140514/14fbb4dc/attachment-0002.html>
+
+From m.hanulova at imb.de  Wed May 14 10:04:53 2014
+From: m.hanulova at imb.de (Maria)
+Date: Wed, 14 May 2014 17:04:53 +0200
+Subject: [OpenSPIM] openSPIM for core facility and is optical table
+	necessary?
+Message-ID: <53738615.1040301@imb.de>
+
+Dear all,
+
+I'm working in a microscopy core facility and we are thinking about 
+building a SPIM. Do you think it is possible to run SPIM in this 
+environment -  I mean to train users to use the microscope on their own 
+with occasional support? Or is too complicated a machine and needs to be 
+run by a dedicated person, with the user only providing the sample? Does 
+anyone have experience from a similar situation?
+
+Second question: openSPIM is assembled on an optical breadboard, but all 
+other self-built microscopes I have seen were on optical tables. Is an 
+optical table necessary for openSPIM?
+
+Thank you very much and best regards,
+Maria
+
+-- 
+Maria Hanulova
+------------------------------------
+Core Facility Microscopy
+Institute of Molecular Biology gGmbH (IMB)
+Ackermannweg 4
+55128 Mainz
+Germany
+Phone: +49-6131-39-21507
+Email: m.hanulova at imb-mainz.de
+www.imb-mainz.de/core-facilities/microscopy/
+
+
+
+
+From stuyvenberg at wisc.edu  Mon May 19 10:13:11 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 19 May 2014 10:13:11 -0500
+Subject: [OpenSPIM] openSPIM for core facility and is optical
+	table	necessary?
+In-Reply-To: <7450fd5849b65.537a1f67@wiscmail.wisc.edu>
+References: <53738615.1040301@imb.de>
+	<7720878b4a75a.537a1c55@wiscmail.wisc.edu>
+	<7430d5f64816d.537a1c91@wiscmail.wisc.edu>
+	<7440daf348f87.537a1cce@wiscmail.wisc.edu>
+	<7720f6f64e9df.537a1d0a@wiscmail.wisc.edu>
+	<76a0d8be4ab3c.537a1d47@wiscmail.wisc.edu>
+	<774096474a93e.537a1d83@wiscmail.wisc.edu>
+	<768089f94da80.537a1dbf@wiscmail.wisc.edu>
+	<768093d44d0ba.537a1dfc@wiscmail.wisc.edu>
+	<7430e96a4a084.537a1e38@wiscmail.wisc.edu>
+	<75a08ec54e791.537a1e75@wiscmail.wisc.edu>
+	<768094df4fa19.537a1eb1@wiscmail.wisc.edu>
+	<75a0fc724825b.537a1eee@wiscmail.wisc.edu>
+	<7700a1c34e12b.537a1f2a@wiscmail.wisc.edu>
+	<7450fd5849b65.537a1f67@wiscmail.wisc.edu>
+Message-ID: <7680eac148e2d.5379d937@wiscmail.wisc.edu>
+
+Hi Maria,
+
+On 05/14/14, Maria wrote:
+> I'm working in a microscopy core facility and we are thinking about building a SPIM. Do you think it is possible to run SPIM in this environment - I mean to train users to use the microscope on their own with occasional support? Or is too complicated a machine and needs to be run by a dedicated person, with the user only providing the sample? Does anyone have experience from a similar situation?
+I think it would be very possible. Basic use of the SPIM system -- setting up acquisitions and time-lapses -- isn't particularly complicated. As long as the system stays aligned (which seems to be a fairly long time) the operator needn't know much about the SPIM's optics to use it. (There *is* some value to it, though -- in my experience, for example, adjusting the corner mirror after inserting a new sample can sometimes improve the images the system records.) Occasionally checking the alignment with a mirror slide or similar is strongly recommended, of course, and having at least one person who is knowledgeable about the 'dirty details' to help in case of malfunction would be a good idea.
+
+On 05/14/14, Maria wrote:
+> Second question: openSPIM is assembled on an optical breadboard, but all other self-built microscopes I have seen were on optical tables. Is an optical table necessary for openSPIM?
+
+A full table is not, in general, necessary. It might be desirable, for instance if the table is self-leveling, but as long as the breadboard is fairly flat the system should be able to operate normally. (As a point of interest, I also don't see why the system couldn't be assembled directly on a table; this might allow for a very flexible system. I don't think anyone has tried this yet.)
+
+
+Hope this helps!
+Luke Stuyvenberg
+
+
+On 05/14/14, Maria  wrote:
+> Dear all,
+> 
+> I'm working in a microscopy core facility and we are thinking about building a SPIM. Do you think it is possible to run SPIM in this environment - I mean to train users to use the microscope on their own with occasional support? Or is too complicated a machine and needs to be run by a dedicated person, with the user only providing the sample? Does anyone have experience from a similar situation?
+> 
+> Second question: openSPIM is assembled on an optical breadboard, but all other self-built microscopes I have seen were on optical tables. Is an optical table necessary for openSPIM?
+> 
+> Thank you very much and best regards,
+> Maria
+> 
+> -- 
+> Maria Hanulova
+> ------------------------------------
+> Core Facility Microscopy
+> Institute of Molecular Biology gGmbH (IMB)
+> Ackermannweg 4
+> 55128 Mainz
+> Germany
+> Phone: +49-6131-39-21507
+> Email: m.hanulova at imb-mainz.de
+> www.imb-mainz.de/core-facilities/microscopy/
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From stuyvenberg at wisc.edu  Mon May 19 10:29:09 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 19 May 2014 10:29:09 -0500
+Subject: [OpenSPIM] multi-angle acquisition
+In-Reply-To: <7720b1564d7ea.537a2320@wiscmail.wisc.edu>
+References: <CAHAw+8aavp_o-rLOvu5CmLSLFXRpe4gzOQFCm3AADWdOhJ=OWQ@mail.gmail.com>
+	<7440f74149e3a.537a1fc9@wiscmail.wisc.edu>
+	<7730a0e44daeb.537a2006@wiscmail.wisc.edu>
+	<7680e3e34b608.537a2042@wiscmail.wisc.edu>
+	<7430ad6a4a6ad.537a207e@wiscmail.wisc.edu>
+	<75a0907349185.537a20bb@wiscmail.wisc.edu>
+	<7720db194df1d.537a20f7@wiscmail.wisc.edu>
+	<7740849d4f382.537a2134@wiscmail.wisc.edu>
+	<7450dfd84b7ee.537a2171@wiscmail.wisc.edu>
+	<7580ed424aef4.537a21ad@wiscmail.wisc.edu>
+	<7730d6e14a557.537a21ec@wiscmail.wisc.edu>
+	<7440ae354fea2.537a2229@wiscmail.wisc.edu>
+	<7720b54d4fbec.537a22a4@wiscmail.wisc.edu>
+	<7430ddbf48be4.537a22e3@wiscmail.wisc.edu>
+	<7720b1564d7ea.537a2320@wiscmail.wisc.edu>
+Message-ID: <75a0a3584c2f3.5379dcf5@wiscmail.wisc.edu>
+
+Hi Aurelia,
+
+On 05/14/14, Aurelia Honerkamp-Smith wrote:
+> I'm having an issue with acquisition that I wonder if anyone else has experienced. When I assign several positions, it frequently happens that when the stage moves to the next position, it will not complete the movement. Usually, it rotates and moves in the z direction but not y. I can observe the problem when acquisition is not running; if I double-click the row in the position list, the stage will move partially; then if I double-click it again, it finally moves to the correct position.Very odd. I've not heard of this or seen it, unfortunately, so I can only guess. First, a few questions:
+- Does this issue only happen with acquisition? That is, when you set the position with the stage controls tab, does the motor go to that location immediately?
+
+- Is your pixel size calibration set? (To 1.0, or to the actual value?)
+- Does the system produce any error messages? (These may not be visible normally; they should show up in a recent core log, though -- could you please attach one?)
+
+
+And now are a few ideas:
+- Are the thumbscrews on the stage slides all very lose? Each linear stage has one to hold it still while packing; the screw should be loosened or removed before using the stage.
+- Are the stage wires clear of any obstructions?
+- Try zeroing all the stages:
+ - First, remove any sample.
+ - From Micro-Manager, click Tools -> Script Panel
+ - In the bottom panel, type (pressing enter after each line):
+
+
+mmc.setPosition(mmc.getFocusDevice(), 0);
+mmc.setXYPosition(mmc.getXYStageDevice(), 0, 0);
+mmc.setPosition("Picard Twister", 0);
+
+
+ (The third one might fail if the twister has a different label.)
+
+
+Please let me know if this helps, or if there's any new developments!
+Thanks,
+Luke Stuyvenberg
+
+
+On 05/14/14, Aurelia Honerkamp-Smith  wrote:
+> Hello everyone, 
+> 
+> I'm having an issue with acquisition that I wonder if anyone else has experienced. When I assign several positions, it frequently happens that when the stage moves to the next position, it will not complete the movement. Usually, it rotates and moves in the z direction but not y. I can observe the problem when acquisition is not running; if I double-click the row in the position list, the stage will move partially; then if I double-click it again, it finally moves to the correct position.
+> I can get around this problem by adding a single frame at the start position for each stack before the stack is taken; then the stage moves to the correct position when it starts the stack. However, this is annoying because I record a lot of unnecessary frames and I think it might make the anti-drift function behave oddly. Anyone have a suggestion? 
+> 
+> 
+> Thanks, 
+> 
+> Aurelia
+
+
+
+From stuyvenberg at wisc.edu  Mon May 19 13:13:36 2014
+From: stuyvenberg at wisc.edu (Luke Stuyvenberg)
+Date: Mon, 19 May 2014 13:13:36 -0500
+Subject: [OpenSPIM] beam sheet thickness and co-axis of double
+ illumination paths
+In-Reply-To: <7700fcca4cdc4.537a4999@wiscmail.wisc.edu>
+References: <005a01cf6924$204e3850$60eaa8f0$@ee.oulu.fi>
+	<7740becc4d967.537a48e3@wiscmail.wisc.edu>
+	<7740a0fc4f7b3.537a4920@wiscmail.wisc.edu>
+	<7700efd54e797.537a495c@wiscmail.wisc.edu>
+	<7700fcca4cdc4.537a4999@wiscmail.wisc.edu>
+Message-ID: <7720ea7f4f11b.537a0380@wiscmail.wisc.edu>
+
+Hi Zuomin Zhao,
+
+On 05/06/14, Zuomin Zhao wrote:
+> The light sheet thickness of Our SPIM microscope is estimated about 50 micrometers, during adjustment. I remember from OpenSPIM papers, the sheet thickness should be thinner than several micrometer. Could you tell me how to solve it?
+
+
+
+Did you completely align the system? Please try adjusting the distance between the first two lenses (the ones on the long rail). The instructions at http://openspim.org/Advanced_Laser_Alignment might also help.
+
+
+On 05/06/14, Zuomin Zhao wrote:
+> We used two illumination beams from opposite direction, how can align the two sheets? how large usually the malposition between the two sheets? Thank you.
+
+
+
+This is quite difficult. Perhaps if a sample is mounted in the system, blocking one laser and then the other can show you where the two sheets are, relative to each other? I don't know the usual misalignment; we've only tried using two beams once before.
+
+
+Good luck; hope this helps!
+Luke Stuyvenberg
+
+
+On 05/06/14, Zuomin Zhao  wrote:
+> 
+> 
+> 
+> 
+> Hi,
+> 
+> 
+> 
+> The light sheet thickness of Our SPIM microscope is estimated about 50 micrometers, during adjustment. I remember from OpenSPIM papers, the sheet thickness should be thinner than several micrometer. Could you tell me how to solve it?
+> 
+> 
+> 
+> We used two illumination beams from opposite direction, how can align the two sheets? how large usually the malposition between the two sheets? Thank you.
+> 
+> 
+> 
+> Best regards,
+> 
+> 
+> 
+> Zuomin Zhao
+
+
+
+From Shugi at gmx.de  Tue May 27 05:19:55 2014
+From: Shugi at gmx.de (Shugi at gmx.de)
+Date: Tue, 27 May 2014 12:19:55 +0200
+Subject: [OpenSPIM] Input data for SPIM Registration PlugIn
+Message-ID: <trinity-38ca28b4-846a-43fc-a2d1-dfce72f1b7cf-1401185995801@3capp-gmx-bs17>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140527/3a457094/attachment-0002.html>
+
+From kieran.short at gmail.com  Tue May 27 16:18:52 2014
+From: kieran.short at gmail.com (Kieran Short)
+Date: Wed, 28 May 2014 07:18:52 +1000
+Subject: [OpenSPIM] Input data for SPIM Registration PlugIn
+In-Reply-To: <trinity-38ca28b4-846a-43fc-a2d1-dfce72f1b7cf-1401185995801@3capp-gmx-bs17>
+References: <trinity-38ca28b4-846a-43fc-a2d1-dfce72f1b7cf-1401185995801@3capp-gmx-bs17>
+Message-ID: <CANkVCd7OH7GC1EECB0q6GBnch9eyf6gTJm1-oQBSZg6hanTbpg@mail.gmail.com>
+
+Richard,
+
+The endianness of the TIFF data might be wrong (wrong byte order). Try
+switching to intel-byte order (or if it already is, switch it to big
+endian).
+
+fyi: http://en.wikipedia.org/wiki/Endianness
+
+cheers,
+Kieran
+
+
+On Tue, May 27, 2014 at 8:19 PM, <Shugi at gmx.de> wrote:
+
+> Hello,
+>
+>  I read about your tool for registration and fusion of multiple view
+> images. It is the topic of my intership to find a way doing this with our
+> data and I would like to try your tool. But it seems to have a problem with
+> our data. The original data from a Z1 are present as czi file. I extract
+> them as ome.tif file with the ZEN2012 Software. Like in the tutorial the
+> extension was changed from ome.tif to tif. I was following the tutorial and
+> when to interactivlly choosing the threshold for the beads and click "Done"
+> the following Messages occure in the Log:
+>
+> Opening first image to determine z-stretching.
+> Cannot open fie: ...
+>
+> The path and the filename are correct. Maybe it is something about the
+> formate? Do you need special tags in the tiff file or does the bit depth
+> has influence?
+> Hope you can help me, because your tool seems to be very promising.
+>
+> Kind regardas
+> Ricarda Bräuniger
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140528/21c2abb7/attachment-0002.html>
+
+From nantho2 at emory.edu  Thu May 29 10:41:14 2014
+From: nantho2 at emory.edu (Neil Anthony)
+Date: Thu, 29 May 2014 11:41:14 -0400
+Subject: [OpenSPIM] Shutters for T-SPIM
+Message-ID: <5387551A.3000709@emory.edu>
+
+Hi all,
+
+I love the new (not sure how new) renders of the T-SPIM and X-SPIM! I 
+wanted to ask two serious and silly question about the shutters. What's 
+the part number?  Does it interface with µManager? Do they really float?
+
+Thanks
+Neil
+
+-- 
+*Neil Anthony, PhD*  | Research Imaging Specialist
+Health Sciences Research Building (HSRB), Room EG21
+1760 Haygood Drive, Atlanta, GA 30322 	
+
+neil.anthony at emory.edu <mailto:neil.anthony at emory.edu>
+ici.emory.edu <http://ici.emory.edu/>
+404 969-CORE
+
+<http://ici.emory.edu/> 	<https://www.facebook.com/ICIEmory> 
+<http://www.linkedin.com/pub/neil-anthony/35/a0b/126> 
+<https://www.researchgate.net/profile/Neil_Anthony/>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: EU_ICI_SmlLogo.png
+Type: image/png
+Size: 11461 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0008.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: facebook_logo.png
+Type: image/png
+Size: 3826 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0009.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: linkedin_logo.png
+Type: image/png
+Size: 4053 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0010.png>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: researchgate_logo.png
+Type: image/png
+Size: 4345 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20140529/e8ab0430/attachment-0011.png>
+

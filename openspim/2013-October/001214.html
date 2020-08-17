@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] New OpenSPIM version available
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20OpenSPIM%20version%20available&In-Reply-To=%3CCAKGYTBkA6hVSQCk9kX4WgTBNmE1Whi0qxcJSdRwV7u%2BcsJMQxg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001209.html">
+   <LINK REL="Next"  HREF="001210.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] New OpenSPIM version available</H1>
+    <B>Mark Tsuchida</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20OpenSPIM%20version%20available&In-Reply-To=%3CCAKGYTBkA6hVSQCk9kX4WgTBNmE1Whi0qxcJSdRwV7u%2BcsJMQxg%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] New OpenSPIM version available">marktsuchida at gmail.com
+       </A><BR>
+    <I>Thu Oct 24 20:52:39 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001209.html">[OpenSPIM] New OpenSPIM version available
+</A></li>
+        <LI>Next message: <A HREF="001210.html">[OpenSPIM] Zebra fish SPIM imaging
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1214">[ date ]</a>
+              <a href="thread.html#1214">[ thread ]</a>
+              <a href="subject.html#1214">[ subject ]</a>
+              <a href="author.html#1214">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke &amp; OpenSPIM,
+
+On Wed, Oct 23, 2013 at 4:53 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+&gt;<i> I've finished updating the plugin to use (nearly) the latest Micro-Manager base.
+</I>
+Congrats!
+
+&gt;<i> I also expect people using unexpected hardware may receive load errors saying the device adapter interface versions are mismatched. (This may also happen silently, causing unexpected program crashes.)
+</I>
+Do you happen to see any pattern to the undetected incompatibilities
+(such as the Micro-Manager version from which the device adapters
+came)? (I might want to investigate if (and probably only if) there is
+a recurring pattern that looks like more than unrelated bugs or
+incompatibilities with non-device-adapter DLLs. Never mind if it
+appears unpredictable.)
+
+&gt;<i> N.B.: The latest nightly build has once again changed version numbers, so device adapters from that build will _not_ load in OpenSPIM -- yet. :-)
+</I>
+In case anybody cares, the incompatibility is since October 22 (SVN
+r11996) (i.e. MM nightly build device adapters from Oct 22 onward are
+incompatible with Luke's present update, or with MM 1.4.15, the latest
+release version).
+
+Ironically, that incompatibility was introduced in order to prevent
+crashes that could occur due to incompatible device adapters. The
+problem was usually seen when using the MultiCamera device, and is
+most likely to be observed when using (real) camera device adapters
+that are compiled by a different version of Visual Studio.
+
+Best,
+Mark
+
+(UCSF Micro-Manager Project)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001209.html">[OpenSPIM] New OpenSPIM version available
+</A></li>
+	<LI>Next message: <A HREF="001210.html">[OpenSPIM] Zebra fish SPIM imaging
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1214">[ date ]</a>
+              <a href="thread.html#1214">[ thread ]</a>
+              <a href="subject.html#1214">[ subject ]</a>
+              <a href="author.html#1214">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

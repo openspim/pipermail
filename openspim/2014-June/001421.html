@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Problems with OpenSPIM system
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20OpenSPIM%20system&In-Reply-To=%3CCAKGYTBmGCjmPOjzYMqs1--HWu7K6%2B63TOprxpc8_sE4M4KETsg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001423.html">
+   <LINK REL="Next"  HREF="001425.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Problems with OpenSPIM system</H1>
+    <B>Mark Tsuchida</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20OpenSPIM%20system&In-Reply-To=%3CCAKGYTBmGCjmPOjzYMqs1--HWu7K6%2B63TOprxpc8_sE4M4KETsg%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Problems with OpenSPIM system">marktsuchida at gmail.com
+       </A><BR>
+    <I>Fri Jun 27 08:37:14 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001423.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+        <LI>Next message: <A HREF="001425.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1421">[ date ]</a>
+              <a href="thread.html#1421">[ thread ]</a>
+              <a href="subject.html#1421">[ subject ]</a>
+              <a href="author.html#1421">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+On Fri, Jun 27, 2014 at 6:05 AM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+&gt;<i> The intent of the Initialize call was to test the serial number received from the Pi-detector, but I didn't account for the possibility of CPiDetector returning DEFAULT_SERIAL_UNKNOWN, which it does if the requested device hadn't been found.
+</I>
+In that case, maybe you can remove the call to Initialize() from the
+BeforeGet branch of OnGenericSerial() (if you insist that the serial
+number must be checked immediately when the user enters it, instead of
+when the OK button is clicked).
+
+Best,
+Mark
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001423.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+	<LI>Next message: <A HREF="001425.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1421">[ date ]</a>
+              <a href="thread.html#1421">[ thread ]</a>
+              <a href="subject.html#1421">[ subject ]</a>
+              <a href="author.html#1421">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

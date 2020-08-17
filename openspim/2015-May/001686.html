@@ -1,0 +1,931 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] very slow acquisition speed
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20very%20slow%20acquisition%20speed&In-Reply-To=%3Cb25a1860360928b2fc54bbc7721b4dde%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001685.html">
+   <LINK REL="Next"  HREF="001691.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] very slow acquisition speed</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20very%20slow%20acquisition%20speed&In-Reply-To=%3Cb25a1860360928b2fc54bbc7721b4dde%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] very slow acquisition speed">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Thu May  7 11:20:58 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001685.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+        <LI>Next message: <A HREF="001691.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1686">[ date ]</a>
+              <a href="thread.html#1686">[ thread ]</a>
+              <a href="subject.html#1686">[ subject ]</a>
+              <a href="author.html#1686">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Robert,
+
+since I also have Orca+Picard, I decided to repeat your experiment and 
+did 10 frames, 100 ms. I'm using the new 64-bit version, updated. I got 
+very similar results to yours (see below). Unfortunately I don't know 
+whether it used to be better, I never tried taking very fast 
+measurements.
+
+Maybe somebody who is able to get 10 frames/sec could send their CoreLog 
+for comparison...?
+
+Opened log file 
+D:\Dane\2015\2015_05\2015_05_07\02time_series_test\log.txt
+Profiler(&quot;performAcquisition&quot;)[4 children]: 6,0611s
+6,3337%:    Profiler(&quot;Output&quot;)[0 children]: 0,3839s
+0,0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0,0000s
+29,7792%:    Profiler(&quot;Movement&quot;)[0 children]: 1,8049s
+0,0005%:    Profiler(&quot;Setup&quot;)[0 children]: 0,0000s
+
+Regards,
+Monika
+
+
+W dniu 2015-05-07 17:27, <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A> napisał(a):
+&gt;<i> Send OpenSPIM mailing list submissions to
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-request at openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i> 	<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific
+</I>&gt;<i> than &quot;Re: Contents of OpenSPIM digest...&quot;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i> 
+</I>&gt;<i>    1. Re: very slow acquisition speed (Robert Hauschild)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 1
+</I>&gt;<i> Date: Thu, 07 May 2015 17:27:12 +0200
+</I>&gt;<i> From: Robert Hauschild &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">robert.hauschild at ist.ac.at</A>&gt;
+</I>&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: [OpenSPIM] very slow acquisition speed
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">554B8450.4050407 at ist.ac.at</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;windows-1252&quot;; Format=&quot;flowed&quot;
+</I>&gt;<i> 
+</I>&gt;<i> Hi All and especially Pete,
+</I>&gt;<i> 
+</I>&gt;<i> My setup is Orca R2, Coherent Cube, Picard stage.
+</I>&gt;<i> I tested a couple of things and it it still unclear to me where the 
+</I>&gt;<i> time
+</I>&gt;<i> is wasted.
+</I>&gt;<i> 
+</I>&gt;<i> I attached the core log of a 10 frame long time series (100ms exposure)
+</I>&gt;<i> recorded to memory with X/Y/Z Stage/Theta all unchecked and  without
+</I>&gt;<i> &quot;Update Live preview&quot;.
+</I>&gt;<i> 
+</I>&gt;<i> I tried two configurations:
+</I>&gt;<i> 1. Orca  + Cube + Picard
+</I>&gt;<i> 2. Orca  + Picard
+</I>&gt;<i> 
+</I>&gt;<i> &quot;1&quot; took 7.6 s of which (&quot;1&quot;- &quot;2&quot;) = 1.4 s are communication with 
+</I>&gt;<i> laser,
+</I>&gt;<i> which, while way too much, is not the source of the problem.
+</I>&gt;<i> 
+</I>&gt;<i> Profiler(&quot;performAcquisition&quot;)[4 children]: 7.6113s
+</I>&gt;<i> 0.0017%:    Profiler(&quot;Output&quot;)[0 children]: 0.0001s
+</I>&gt;<i> 0.0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 24.0133%:    Profiler(&quot;Movement&quot;)[0 children]: 1.8277s
+</I>&gt;<i> 0.0013%:    Profiler(&quot;Setup&quot;)[0 children]: 0.0001s
+</I>&gt;<i> 
+</I>&gt;<i> So most of the time the system is doing something that the Profiler is
+</I>&gt;<i> not recording.
+</I>&gt;<i> 
+</I>&gt;<i> Looking at the core log I am a bit puzzled why the laser power is
+</I>&gt;<i> queried once  per slice and why the stage is told to move to the very
+</I>&gt;<i> position it currently is even though none of the motors should move at
+</I>&gt;<i> all since X/Y/Z/Theta are all unchecked in the acquisition dialog.
+</I>&gt;<i> 
+</I>&gt;<i> I would really appreciate any hint/suggestion on how to get back to
+</I>&gt;<i> reasonable acquisition speeds.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks again!
+</I>&gt;<i> 
+</I>&gt;<i> Robert
+</I>&gt;<i> 
+</I>&gt;<i> On 04.05.2015 15:32, Peter Gabriel Pitrone wrote:
+</I>&gt;&gt;<i> Howdy Robert,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> While I'm not the software expert on this project, me thinks it has to 
+</I>&gt;&gt;<i> do
+</I>&gt;&gt;<i> with communication overhead. What type of camera did you integrate in
+</I>&gt;&gt;<i> your OpenSPIM? One idea I have is to take one component out of the mix 
+</I>&gt;&gt;<i> by
+</I>&gt;&gt;<i> hardware triggering your laser to the camera, if it is at all possible
+</I>&gt;&gt;<i> with the make and model you have.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Best Regards,
+</I>&gt;&gt;<i> Pete
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+</I>&gt;&gt;<i> Light Sheet Fluorescence Microscopist and Imaging Specialist
+</I>&gt;&gt;<i> for Dr. Pavel Tomancak's research group at the
+</I>&gt;&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;&gt;<i> Pfotenhauerstra?e 108
+</I>&gt;&gt;<i> 01307 Dresden, Saxony
+</I>&gt;&gt;<i> Germany
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> <A HREF="http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html">http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html</A> &amp;
+</I>&gt;&gt;<i> <A HREF="http://www.openspim.org">http://www.openspim.org</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &quot;I KEEP six honest serving-men (they taught me all I knew); their 
+</I>&gt;&gt;<i> names
+</I>&gt;&gt;<i> are What and Why and When and How and Where and Who.&quot; Rudyard Kipling 
+</I>&gt;&gt;<i> -
+</I>&gt;&gt;<i> The Elephant's Child
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> On Mon, May 4, 2015 15:17, Robert Hauschild wrote:
+</I>&gt;&gt;<i> &lt;|&gt; Hi OpenSPIMists,
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; I have a plain vanilla OpenSpim that I set up &gt; a year ago. 
+</I>&gt;&gt;<i> Recently I
+</I>&gt;&gt;<i> &lt;|&gt; noticed that the acquisition speed dropped to 1.5 frames/s. This 
+</I>&gt;&gt;<i> is also
+</I>&gt;&gt;<i> &lt;|&gt; the case when I am not moving the stage (single slice time lapse) 
+</I>&gt;&gt;<i> and
+</I>&gt;&gt;<i> &lt;|&gt; keeping the laser on continuously. I remember that was not a 
+</I>&gt;&gt;<i> problem
+</I>&gt;&gt;<i> &lt;|&gt; initially and that I got something like 10 frames/s in a z-stack 
+</I>&gt;&gt;<i> which
+</I>&gt;&gt;<i> &lt;|&gt; was good enough for me.
+</I>&gt;&gt;<i> &lt;|&gt; I can record with the full frame rate of the camera in 
+</I>&gt;&gt;<i> micromanager so
+</I>&gt;&gt;<i> &lt;|&gt; this doesn't seem to be the problem either.
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; I also tried the new 64bit version (which works fine btw.) but 
+</I>&gt;&gt;<i> that did
+</I>&gt;&gt;<i> &lt;|&gt; not change anything in terms of acquisition speed.
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; Any help is really appreciated!
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; Robert
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; --
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; Robert Hauschild
+</I>&gt;&gt;<i> &lt;|&gt; staff scientist
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; Institute of Science and Technology Austria (IST Austria)
+</I>&gt;&gt;<i> &lt;|&gt; Am Campus 1
+</I>&gt;&gt;<i> &lt;|&gt; A ? 3400 Klosterneuburg
+</I>&gt;&gt;<i> &lt;|&gt; Phone: +43 (0)2243 - 9000 - 1047
+</I>&gt;&gt;<i> &lt;|&gt; Email:   <A HREF="http://openspim.org/mailman/listinfo/openspim">robert.hauschild at ist.ac.at</A>
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> &lt;|&gt; _______________________________________________
+</I>&gt;&gt;<i> &lt;|&gt; OpenSPIM mailing list
+</I>&gt;&gt;<i> &lt;|&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> &lt;|&gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i> &lt;|&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> --
+</I>&gt;<i> 
+</I>&gt;<i> Robert Hauschild
+</I>&gt;<i> staff scientist
+</I>&gt;<i> 
+</I>&gt;<i> Institute of Science and Technology Austria (IST Austria)
+</I>&gt;<i> Am Campus 1
+</I>&gt;<i> A ? 3400 Klosterneuburg
+</I>&gt;<i> Phone: +43 (0)2243 - 9000 - 1047
+</I>&gt;<i> Email:   <A HREF="http://openspim.org/mailman/listinfo/openspim">robert.hauschild at ist.ac.at</A>
+</I>&gt;<i> 
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> 10 frames 100 ms exposure recorded to memory at one position with 
+</I>&gt;<i> Interval 0
+</I>&gt;<i> X/Y/Z Stage; Theta: all unchecked
+</I>&gt;<i> without Update Live preview
+</I>&gt;<i> 
+</I>&gt;<i> Orca R2+ Cube + Picard
+</I>&gt;<i> 
+</I>&gt;<i> Profiler(&quot;performAcquisition&quot;)[4 children]: 7.6113s
+</I>&gt;<i> 0.0017%:    Profiler(&quot;Output&quot;)[0 children]: 0.0001s
+</I>&gt;<i> 0.0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 24.0133%:    Profiler(&quot;Movement&quot;)[0 children]: 1.8277s
+</I>&gt;<i> 0.0013%:    Profiler(&quot;Setup&quot;)[0 children]: 0.0001s
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Orca R2 + Picard
+</I>&gt;<i> 
+</I>&gt;<i> Profiler(&quot;performAcquisition&quot;)[4 children]: 6.2069s
+</I>&gt;<i> 0.0008%:    Profiler(&quot;Output&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 0.0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 28.4661%:    Profiler(&quot;Movement&quot;)[0 children]: 1.7669s
+</I>&gt;<i> 0.0006%:    Profiler(&quot;Setup&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> CORE LOG FOR ACQUISITION WITH ORCA R2 + CUBE + PICARD
+</I>&gt;<i> 
+</I>&gt;<i> 2015-05-07T16:27:04.234482 tid7100 [dbg,Core] Autoshutter turned off
+</I>&gt;<i> 2015-05-07T16:27:04.234482 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:04.261485 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:04.293488 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:04.297488 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:04.329491 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:04.361495 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:04.361495 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:04.361495 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:04.361495 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:04.361495 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:04.371496 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:04.371496 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:04.434502 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:04.434502 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:04.434502 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:04.434502 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:04.434502 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:04.465505 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:04.465505 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:04.723531 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:04.869545 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:04.869545 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:04.897548 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:04.897548 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:04.962555 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:04.962555 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:05.024561 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:05.024561 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:05.059564 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -0.8254020479998871s)
+</I>&gt;<i> 2015-05-07T16:27:05.059564 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:05.089567 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:05.121571 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:05.129571 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:05.161575 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:05.189577 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:05.189577 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:05.193578 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:05.193578 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:05.193578 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:05.193578 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:05.193578 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:05.203579 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:05.203579 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:05.263585 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:05.263585 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:05.263585 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:05.349593 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:05.349593 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:05.373596 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:05.373596 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:05.425601 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:05.662625 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:05.662625 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:05.725631 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:05.725631 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:05.733632 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -1.4991643149999163s)
+</I>&gt;<i> 2015-05-07T16:27:05.733632 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:05.765635 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:05.797638 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:05.801639 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:05.833642 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:05.861645 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:05.861645 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:05.893648 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:05.893648 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:05.893648 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:05.893648 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:05.893648 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:05.903649 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:05.903649 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:05.963655 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:05.963655 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:05.963655 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:05.963655 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:05.963655 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:05.995658 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:05.995658 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:06.127671 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:06.365695 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:06.365695 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:06.426701 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:06.426701 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:06.426701 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:06.426701 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:06.437702 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -2.20315794499993s)
+</I>&gt;<i> 2015-05-07T16:27:06.437702 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:06.442703 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:06.442703 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:06.469705 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:06.565715 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:06.601719 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:06.633722 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:06.633722 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:06.633722 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:06.633722 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:06.633722 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:06.643723 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:06.643723 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:06.643723 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:06.643723 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:06.665725 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:06.665725 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:06.665725 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:06.665725 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:06.665725 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:06.675726 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:06.675726 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:06.729731 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:06.729731 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:06.729731 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:06.853744 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:06.853744 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:06.887747 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:06.887747 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:06.946753 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:07.185777 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:07.185777 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:07.255784 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:07.255784 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:07.269785 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -3.0351039029999356s)
+</I>&gt;<i> 2015-05-07T16:27:07.269785 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:07.301789 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:07.333792 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:07.337792 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:07.369795 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:07.397798 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:07.397798 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:07.401799 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:07.401799 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:07.401799 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:07.401799 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:07.401799 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:07.411800 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:07.411800 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:07.477806 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:07.477806 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:07.477806 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:07.477806 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:07.477806 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:07.510809 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:07.510809 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:07.648823 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:07.886847 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:07.886847 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:07.955854 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:07.955854 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:07.955854 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:07.955854 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:07.972856 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:07.972856 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:07.973856 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -3.739081533999979s)
+</I>&gt;<i> 2015-05-07T16:27:07.973856 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:08.037862 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:08.101869 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:08.137872 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:08.169875 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:08.169875 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:08.169875 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:08.169875 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:08.169875 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:08.179876 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:08.179876 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:08.179876 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:08.179876 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:08.201879 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:08.201879 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:08.201879 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:08.201879 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:08.201879 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:08.211880 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:08.211880 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:08.275886 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:08.275886 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:08.275886 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:08.357894 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:08.357894 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:08.387897 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:08.387897 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:08.467905 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:08.706929 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:08.706929 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:08.769935 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:08.769935 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:08.801939 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -4.567056592999961s)
+</I>&gt;<i> 2015-05-07T16:27:08.801939 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:08.833942 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:08.865945 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:08.941953 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:08.941953 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:08.959954 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:08.959954 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:09.001959 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:09.033962 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:09.061965 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:09.061965 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:09.065965 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:09.065965 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:09.065965 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:09.065965 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:09.065965 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:09.075966 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:09.075966 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:09.136972 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:09.136972 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:09.136972 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:09.287987 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:09.349993 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:09.349993 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:09.375996 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:09.375996 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:09.525011 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:09.525011 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:09.583017 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:09.583017 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:09.606019 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -5.371039023000094s)
+</I>&gt;<i> 2015-05-07T16:27:09.606019 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:09.638022 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:09.670025 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:09.674026 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:09.706029 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:09.734032 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:09.734032 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:09.737032 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:09.737032 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:09.737032 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:09.737032 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:09.737032 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:09.748033 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:09.748033 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:09.805039 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:09.805039 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:09.805039 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:09.862045 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:09.862045 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:09.885047 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:09.885047 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:09.990057 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:10.227081 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:10.227081 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:10.300088 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:10.300088 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:10.310089 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -6.074973791000048s)
+</I>&gt;<i> 2015-05-07T16:27:10.310089 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:10.342093 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:10.374096 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:10.446103 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:10.446103 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:10.459104 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:10.459104 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:10.506109 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:10.537112 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:10.537112 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:10.538112 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:10.538112 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:10.538112 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:10.570115 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:10.570115 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:10.574116 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:10.574116 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:10.601118 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:10.601118 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:10.601118 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:10.601118 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:10.601118 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:10.612120 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:10.612120 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:10.667125 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:10.667125 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:10.667125 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:10.809139 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:10.854144 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:10.854144 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:10.874146 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:10.874146 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:11.048163 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:11.048163 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:11.112170 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:11.112170 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:11.142173 tid7100 [IFO,App] Behind schedule! (next
+</I>&gt;<i> seq in -6.907089995999968s)
+</I>&gt;<i> 2015-05-07T16:27:11.142173 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:11.173176 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard XY Stage to position (0.000, 0.000) um
+</I>&gt;<i> 2015-05-07T16:27:11.206179 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Z Stage to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:11.209179 tid7100 [dbg,Core] Will start absolute move
+</I>&gt;<i> of Picard Twister to position 0.00000 um
+</I>&gt;<i> 2015-05-07T16:27:11.241182 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM5...
+</I>&gt;<i> 2015-05-07T16:27:11.241182 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM5
+</I>&gt;<i> 2015-05-07T16:27:11.241182 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> COM4...
+</I>&gt;<i> 2015-05-07T16:27:11.241182 tid7100 [dbg,Core] Finished waiting for 
+</I>&gt;<i> device COM4
+</I>&gt;<i> 2015-05-07T16:27:11.241182 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Z Stage...
+</I>&gt;<i> 2015-05-07T16:27:11.242183 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Z Stage
+</I>&gt;<i> 2015-05-07T16:27:11.242183 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard XY Stage...
+</I>&gt;<i> 2015-05-07T16:27:11.242183 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard XY Stage
+</I>&gt;<i> 2015-05-07T16:27:11.242183 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> Picard Twister...
+</I>&gt;<i> 2015-05-07T16:27:11.273186 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device Picard Twister
+</I>&gt;<i> 2015-05-07T16:27:11.274186 tid7100 [dbg,Core] Waiting for device
+</I>&gt;<i> HamamatsuHam_DCAM...
+</I>&gt;<i> 2015-05-07T16:27:11.274186 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device HamamatsuHam_DCAM
+</I>&gt;<i> 2015-05-07T16:27:11.274186 tid7100 [dbg,Core] Waiting for device 
+</I>&gt;<i> CoherentCube...
+</I>&gt;<i> 2015-05-07T16:27:11.274186 tid7100 [dbg,Core] Finished waiting for
+</I>&gt;<i> device CoherentCube
+</I>&gt;<i> 2015-05-07T16:27:11.284187 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=1
+</I>&gt;<i> 2015-05-07T16:27:11.284187 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=1\r
+</I>&gt;<i> 2015-05-07T16:27:11.352194 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=1\r\n
+</I>&gt;<i> 2015-05-07T16:27:11.352194 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=1
+</I>&gt;<i> 2015-05-07T16:27:11.352194 tid7100 [dbg,Core] Will snap image from
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:11.365195 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           ?SP
+</I>&gt;<i> 2015-05-07T16:27:11.366195 tid3624 [dbg,dev:COM4] SetCommand -&gt; ?SP\r
+</I>&gt;<i> 2015-05-07T16:27:11.384197 tid3624 [dbg,dev:COM4] GetAnswer &lt;- 
+</I>&gt;<i> SP=3.00\r\n
+</I>&gt;<i> 2015-05-07T16:27:11.384197 tid3624 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine SP=3.00
+</I>&gt;<i> 2015-05-07T16:27:11.511209 tid7100 [dbg,Core] Did snap image from 
+</I>&gt;<i> current camera
+</I>&gt;<i> 2015-05-07T16:27:11.750233 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::Send           L=0
+</I>&gt;<i> 2015-05-07T16:27:11.750233 tid7100 [dbg,dev:COM4] SetCommand -&gt; L=0\r
+</I>&gt;<i> 2015-05-07T16:27:11.814240 tid7100 [dbg,dev:COM4] GetAnswer &lt;- L=0\r\n
+</I>&gt;<i> 2015-05-07T16:27:11.814240 tid7100 [dbg,dev:CoherentCube]
+</I>&gt;<i> CoherentCube::ReceiveOneLine L=0
+</I>&gt;<i> 2015-05-07T16:27:11.846243 tid7100 [dbg,Core] Autoshutter turned on
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> End of OpenSPIM Digest, Vol 25, Issue 6
+</I>&gt;<i> ***************************************
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001685.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+	<LI>Next message: <A HREF="001691.html">[OpenSPIM] very slow acquisition speed
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1686">[ date ]</a>
+              <a href="thread.html#1686">[ thread ]</a>
+              <a href="subject.html#1686">[ subject ]</a>
+              <a href="author.html#1686">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

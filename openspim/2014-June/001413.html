@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Problem with the Z stage of the USB 4D stage of	Picard Industry
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problem%20with%20the%20Z%20stage%20of%20the%20USB%204D%20stage%20of%0A%09Picard%20Industry&In-Reply-To=%3CCANQL1Fu9jKKW-_Ms9O%3DsKmBUx_yjrNr0FPh1rrujEUgeO%2B34Dw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001408.html">
+   <LINK REL="Next"  HREF="001412.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Problem with the Z stage of the USB 4D stage of	Picard Industry</H1>
+    <B>Ke Li</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problem%20with%20the%20Z%20stage%20of%20the%20USB%204D%20stage%20of%0A%09Picard%20Industry&In-Reply-To=%3CCANQL1Fu9jKKW-_Ms9O%3DsKmBUx_yjrNr0FPh1rrujEUgeO%2B34Dw%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Problem with the Z stage of the USB 4D stage of	Picard Industry">tianlankeke at gmail.com
+       </A><BR>
+    <I>Wed Jun 25 17:07:43 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001408.html">[OpenSPIM] Problem with the Z stage of the USB 4D stage of Picard Industry
+</A></li>
+        <LI>Next message: <A HREF="001412.html">[OpenSPIM] multi-view data set
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1413">[ date ]</a>
+              <a href="thread.html#1413">[ thread ]</a>
+              <a href="subject.html#1413">[ subject ]</a>
+              <a href="author.html#1413">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes,
+
+Thanks so much for answering my question!
+
+I tried your suggestion. While the problem is that I can't add the Z stage
+in the wizard so I have no access to the properties and can't change the
+serial number of the Z stage. (I can change the serial numbers of XY stage
+after I add them.)
+
+I have tried different cables and the problem still exists.
+
+What other potential reasons can cause this problem? Is there any way to
+solve the problem? Do you think generate a problem report helps?
+
+Thanks,
+Ke
+
+
+
+
+
+Ke Li
+Research Assistant
+Biomedical Engineering
+Johns Hopkins University
+Phone: 410-934-9802
+Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+
+
+On Wed, Jun 25, 2014 at 1:05 PM, Johannes Schindelin &lt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; wrote:
+
+&gt;<i> Hi Ke,
+</I>&gt;<i>
+</I>&gt;<i> first of all: welcome to the OpenSPIM community! It is an exciting project
+</I>&gt;<i> and it is good that so many people start building their own SPIM setups
+</I>&gt;<i> and start sharing their experiences.
+</I>&gt;<i>
+</I>&gt;<i> Especially in this light, though, I'd like to point out I do not discuss
+</I>&gt;<i> Open Source (or, as in this case, Open Hardware) in private mails (unless
+</I>&gt;<i> I am paid for it specifically, and I would charge what my work is truly
+</I>&gt;<i> worth). Therefore, I Cc:ed the OpenSPIM mailing list and encourage you to
+</I>&gt;<i> reply-to-all.
+</I>&gt;<i>
+</I>&gt;<i> On Wed, 25 Jun 2014, Ke Li wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; I'm Ke, a graduate student at Johns Hopkins University. Our lab now is
+</I>&gt;<i> &gt; building the OpenSPIM system:
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/Welcome_to_the_OpenSPIM_Wiki">http://openspim.org/Welcome_to_the_OpenSPIM_Wiki</A>
+</I>&gt;<i>
+</I>&gt;<i> Great!
+</I>&gt;<i>
+</I>&gt;<i> &gt; During the process, I encountered a problem related to the 4D stage of
+</I>&gt;<i> &gt; Picard Industry. When I create the hardware configuration using
+</I>&gt;<i> &gt; micro-manager, an error (*Error in device Picard Z stage: Unable to
+</I>&gt;<i> &gt; communicate with the device.*) shows every time when I try to add the Z
+</I>&gt;<i> &gt; stage of the USB 4D stage.
+</I>&gt;<i>
+</I>&gt;<i> Hmm... Typically, this means that the serial number is wrong... You should
+</I>&gt;<i> be able to set it in the properties in the wizard.
+</I>&gt;<i>
+</I>&gt;<i> &gt; While the Picard Twister and the XY stage can be added correctly. The Z
+</I>&gt;<i> &gt; stage can be controlled by the software from Picard Industry normally.
+</I>&gt;<i> &gt; So I think the communication between the stage and the driver should be
+</I>&gt;<i> &gt; ok.
+</I>&gt;<i>
+</I>&gt;<i> That is valuable information, thanks for sharing. I half suspected the
+</I>&gt;<i> cable to be faulty.
+</I>&gt;<i>
+</I>&gt;<i> &gt; And I have followed the instruction here:
+</I>&gt;<i> &gt; <A HREF="https://www.micro-manager.org/wiki/PicardStage">https://www.micro-manager.org/wiki/PicardStage</A> and the micro-manager I
+</I>&gt;<i> &gt; used is the newest version. I have encountered this problem both in
+</I>&gt;<i> &gt; 32bit and 64bit Windows system for almost one week and had no clue to
+</I>&gt;<i> &gt; solve it. Could you please give me some suggestion for solving this
+</I>&gt;<i> &gt; problem?
+</I>&gt;<i>
+</I>&gt;<i> Well, I hope that the above comment helps you solve the problem!
+</I>&gt;<i>
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140625/144f1377/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20140625/144f1377/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001408.html">[OpenSPIM] Problem with the Z stage of the USB 4D stage of Picard Industry
+</A></li>
+	<LI>Next message: <A HREF="001412.html">[OpenSPIM] multi-view data set
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1413">[ date ]</a>
+              <a href="thread.html#1413">[ thread ]</a>
+              <a href="subject.html#1413">[ subject ]</a>
+              <a href="author.html#1413">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

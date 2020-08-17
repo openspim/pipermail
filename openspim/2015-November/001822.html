@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Controlling Open SPIM Without lasers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Controlling%20Open%20SPIM%20Without%20lasers&In-Reply-To=%3Cop.x7fdrwbjahhlbl%40monika-thinkpad.rz.uni-wuerzburg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="001823.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Controlling Open SPIM Without lasers</H1>
+    <B>Monika Pawłowska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Controlling%20Open%20SPIM%20Without%20lasers&In-Reply-To=%3Cop.x7fdrwbjahhlbl%40monika-thinkpad.rz.uni-wuerzburg.de%3E"
+       TITLE="[OpenSPIM] Controlling Open SPIM Without lasers">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Sun Nov  1 08:12:58 CST 2015</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="001823.html">[OpenSPIM] Is there other software to display  the 3D-data,	except BigDataViewer
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1822">[ date ]</a>
+              <a href="thread.html#1822">[ thread ]</a>
+              <a href="subject.html#1822">[ subject ]</a>
+              <a href="author.html#1822">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I use the plugin without a laser connected all the time and it works, so  
+it seems that your problem must be something else. The Picard stage has to  
+be added 3 times: the rotation, the XY and the Z separately, and the  
+serial numbers have to be changed. If this is done right, then it should  
+be possible to move the XY and the Z stage via the Stage Control of  
+Micro-Manager: <A HREF="https://micro-manager.org/wiki/Stage_Control">https://micro-manager.org/wiki/Stage_Control</A> . This is an  
+independent way to check whether Micro-Manager sees the stages.
+
+Regards,
+Monika
+
+W dniu .10.2015 o 17:23 WHEELER Ann &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Ann.Wheeler at igmm.ed.ac.uk</A>&gt; pisze:
+
+&gt;<i> Dear Open SPIM team
+</I>&gt;<i>
+</I>&gt;<i> We're about halfway through our SPIM build project. What I'm hoping to  
+</I>&gt;<i> do is make an OPT-SPIM. Getting the electronics sorted out for the SPIM  
+</I>&gt;<i> side is proving a little tricky as our electronics guy has gone on a  
+</I>&gt;<i> very long vacation. We can't get the interlock for our lasers installed  
+</I>&gt;<i> which means it won't work at the moment.
+</I>&gt;<i>
+</I>&gt;<i> However I believe that we can get the OPT side of the instrument going.  
+</I>&gt;<i> To do this we'd need to get the BF light source, filterwheel and Picard  
+</I>&gt;<i> stage going in Micromanager.
+</I>&gt;<i>
+</I>&gt;<i> So far We have managed to get Micromanager to locate all of these  
+</I>&gt;<i> devices. However we can't micromanager to run the Picard stage. The Open  
+</I>&gt;<i> SPIM plugin is apparently looking for the lasers (which can't be  
+</I>&gt;<i> connected right now). We wondered if we can persuade it either do  
+</I>&gt;<i> without the laser or find an emulated laser somewhere.
+</I>&gt;<i>
+</I>&gt;<i> We can send the core log if that's any help?
+</I>&gt;<i>
+</I>&gt;<i> Thanks
+</I>&gt;<i>
+</I>&gt;<i> Ann
+</I>&gt;<i>
+</I>&gt;<i> Dr Ann Wheeler
+</I>&gt;<i> Advanced Imaging Resource, Institute of Genetics and Molecular Medicine,  
+</I>&gt;<i> University of Edinburgh, Edinburgh EH4 2XU
+</I>&gt;<i> E: <A HREF="http://openspim.org/mailman/listinfo/openspim">ann.wheeler at igmm.ed.ac.uk</A>
+</I>&gt;<i> T: 0131 651 8665
+</I>&gt;<i> W: <A HREF="http://www.igmm.ac.uk/imaging.htm">http://www.igmm.ac.uk/imaging.htm</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 382
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="001823.html">[OpenSPIM] Is there other software to display  the 3D-data,	except BigDataViewer
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1822">[ date ]</a>
+              <a href="thread.html#1822">[ thread ]</a>
+              <a href="subject.html#1822">[ subject ]</a>
+              <a href="author.html#1822">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

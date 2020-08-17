@@ -1,0 +1,751 @@
+From tnf8 at pitt.edu  Tue Jul  5 08:18:49 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 5 Jul 2016 13:18:49 +0000
+Subject: [OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital scanning
+ to reduce banding?
+Message-ID: <D3A12955.ECFB%tnf8@pitt.edu>
+
+Hi folks,
+
+Many thanks for your help.  After much testing I have concluded that anti-striping along the lines of Huisken & Stainier (2007) is extremely important for imaging large structures like a zebrafish embryo.  This adds significant complexity and cost (~$2,000) to the basic openSPIM design but in my opinion it makes the instrument dramatically more useful for segmentation and quantiative imaging.  Importantly the fact that I could make it suggests that it is within the engineering abilities of most people who can build an openSPIM.  We have not started using it yet as our lasers are also out for an upgrade; I will update the list when I have had a chance to test it.
+
+I had to fill in some details from the 2007 paper on my own, so it is likely that more elegant/less kludgy designs exist.  Still, this guide I wrote for our group may be useful for those thinking of adding anti-striping in the future.
+
+https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>
+Date: Tuesday, May 3, 2016 at 9:27 AM
+To: Jan Huisken <huisken at mpi-cbg.de<mailto:huisken at mpi-cbg.de>>
+Cc: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: Re: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+
+Correction, I meant 0.05% tricaine.
+
+Best,
+
+
+T
+
+From: Jan Huisken [mailto:huisken at mpi-cbg.de]
+Sent: Friday, April 29, 2016 3:01 AM
+To: Feinstein, Timothy N
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+
+Dear Tim,
+
+I think you are mixing up two issue.
+
+1. Getting rid of stripes.
+
+Yes, you can do a little bit in post-processing but the stripes can be quite complex and are not necessarily straight. Oftentimes you see a lot of lensing and I do not think you can easily remove it with image processing.
+
+a) Double-sided illumination helps. Depending on the sample you may want to do simultaneous or sequential double-sided illumination. There are various ways of merging the two images.
+b) A resonant mSPIM mirror is cheap and easy to integrate. You will get rid of most stripes, but again this depends on the sample. The details for a) and b) are in our Opt. Lett. paper (Huisken & Stainier, 2007). Basically, you are pivoting the light sheet around the center of your field of view, e.g. with 1kHz. The stripes are "washed out" during the exposure time of your camera. We use this on most of our systems and it helps a lot to reduce stripes.
+c) Multi-view fusion can also help to some extent.
+
+2. DSLM vs. SPIM
+
+Yes, DSLM should also help reducing stripes but I have no experience with that. Basically, your light sheet is not coherent anymore and the sheet does not "interfere with itself". However, the setup is more expensive and requires you to power and control another element: the galvo scanner to sweep the beam up and down. You need a proper scan mirror and not just the cheap mSPIM mirror. The additional benefit is that the resulting light sheet is more uniform than the cropped Gaussian light sheet. However, you need to illuminate each line with higher intensity which may result in saturation and worse dynamic range. Obviously you need to wait for the scan and need to synchronize your readout. Depending whether you have a global shutter or rolling shutter camera you need to take some precaution.
+
+Best
+Jan
+
+
+
+-
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+
+On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N <tnf8 at PITT.EDU<mailto:tnf8 at PITT.EDU>> wrote:
+
+Hello all,
+
+I found the Selzer group's solution (Keller et al. 2013) quite interesting
+and would love to know if anyone had a positive experience doing that.
+The banding from my basic openSPIM is definitely a problem for
+segmentation and analysis.
+
+As far as I can tell fixing the banding will mostly involve buying a scan
+mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+about $1k.  That seems reasonable and not that hard for regular folks to
+implement.
+
+In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+has an option to fight banding in light sheet data.  I have not tested it
+yet but potentially that feature could be useful.  I will just post my
+usual warning for folks trying TeraStitcher for the first time: it
+stitches really well but it could be a hair more user-friendly.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160705/0e1321bc/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Tue Jul  5 08:29:47 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Tue, 05 Jul 2016 15:29:47 +0200
+Subject: [OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital
+ scanning to reduce banding?
+In-Reply-To: <D3A12955.ECFB%tnf8@pitt.edu>
+References: <D3A12955.ECFB%tnf8@pitt.edu>
+Message-ID: <op.yj4qfxlrahhlbl@pc507-99ff.ibd>
+
+Hi Tim,
+
+I would be very interested in an example "before and after" image once you  
+have them!
+
+Regards,
+Monika
+
+W dniu .07.2016 o 15:18 Feinstein, Timothy N <tnf8 at pitt.edu> pisze:
+
+> Hi folks,
+> Many thanks for your help.  After much testing I have concluded that  
+> anti-striping along the lines of Huisken & Stainier (2007) is extremely  
+> >important for imaging large structures like a zebrafish embryo.  This  
+> adds significant complexity and cost (~$2,000) to the basic openSPIM  
+> >design but in my opinion it makes the instrument dramatically more  
+> useful for segmentation and quantiative imaging.  Importantly the fact  
+> >that I could make it suggests that it is within the engineering  
+> abilities of most people who can build an openSPIM.  We have not started  
+> using it >yet as our lasers are also out for an upgrade; I will update  
+> the list when I have had a chance to test it.  
+> I had to fill in some details from the 2007 paper on my own, so it is  
+> likely that more elegant/less kludgy designs exist.  Still, this guide I  
+> wrote >for our group may be useful for those thinking of adding  
+> anti-striping in the future.  
+> https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0
+>
+> All the best,
+>
+> Tim
+>
+> Timothy Feinstein, Ph.D.Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+>
+>
+>> From: <openspim-bounces at openspim.org> on behalf of Timothy Feinstein  
+>> <tnf8 at pitt.edu>
+> Date: Tuesday, May 3, 2016 at 9:27 AM
+> To: Jan Huisken <huisken at mpi-cbg.de>
+> Cc: "openspim at openspim.org" <openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Is anyone using digital scanning to reduce  
+> banding?
+>
+>
+> Correction, I meant 0.05% tricaine.  
+>
+> Best,
+>
+>
+>> T
+>
+>
+> From: Jan Huisken [mailto:huisken at mpi-cbg.de]Sent: Friday, April 29,  
+> 2016 3:01 AM
+> To: Feinstein, Timothy N
+> Cc: openspim at openspim.org
+> Subject: Re: [OpenSPIM] Is anyone using digital scanning to reduce  
+> banding?
+>
+>
+> Dear Tim,
+>
+>
+> I think you are mixing up two issue.
+>
+>
+> 1. Getting rid of stripes.
+>
+>
+> Yes, you can do a little bit in post-processing but the stripes can be  
+> quite complex and are not necessarily straight. Oftentimes you >see a  
+> lot of lensing and I do not think you can easily remove it with image  
+> processing.
+>
+>
+> a) Double-sided illumination helps. Depending on the sample you may want  
+> to do simultaneous or sequential double-sided >illumination. There are  
+> various ways of merging the two images.
+>
+> b) A resonant mSPIM mirror is cheap and easy to integrate. You will get  
+> rid of most stripes, but again this depends on the sample. >The details  
+> for a) and b) are in our Opt. Lett. paper (Huisken & Stainier, 2007).  
+> Basically, you are pivoting the light sheet around the >center of your  
+> field of view, e.g. with 1kHz. The stripes are “washed out” during the  
+> exposure time of your camera. We use this on >most of our systems and it  
+> helps a lot to reduce stripes.
+>
+> c) Multi-view fusion can also help to some extent.
+>
+>
+> 2. DSLM vs. SPIM
+>
+>
+> Yes, DSLM should also help reducing stripes but I have no experience  
+> with that. Basically, your light sheet is not coherent anymore >and the  
+> sheet does not “interfere with itself”. However, the setup is more  
+> expensive and requires you to power and control another >element: the  
+> galvo scanner to sweep the beam up and down. You need a proper scan  
+> mirror and not just the cheap mSPIM mirror. >The additional benefit is  
+> that the resulting light sheet is more uniform than the cropped Gaussian  
+> light sheet. However, you need to >illuminate each line with higher  
+> intensity which may result in saturation and worse dynamic range.  
+> Obviously you need to wait for the >scan and need to synchronize your  
+> readout. Depending whether you have a global shutter or rolling shutter  
+> camera you need to take >some precaution.
+>
+>
+> Best
+>
+> Jan
+>
+>
+>
+>
+> —
+>
+> Jan Huisken
+>
+> Head of Max Planck Research Group
+>
+>
+> Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+>
+>
+>>
+>> On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+>>
+>>
+>> Hello all,
+>> I found the Selzer group's solution (Keller et al. 2013) quite  
+>> interesting
+>> and would love to know if anyone had a positive experience doing that.
+>> The banding from my basic openSPIM is definitely a problem for
+>> segmentation and analysis.
+>>
+>> As far as I can tell fixing the banding will mostly involve buying a  
+>> scan
+>> mirror.  I don't have a quote yet for the Cambridge VM500 scanning  
+>> mirror
+>> that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+>> about $1k.  That seems reasonable and not that hard for regular folks to
+>> implement.  
+>> In related news I just noticed that the TeraStitcher plugin for Vaa3D  
+>> now
+>> has an option to fight banding in light sheet data.  I have not tested  
+>> it
+>> yet but potentially that feature could be useful.  I will just post my
+>> usual warning for folks trying TeraStitcher for the first time: it
+>> stitches really well but it could be a hair more user-friendly.
+>>
+>> Best,
+>>
+>> Tim
+>>
+>> Timothy Feinstein, Ph.D.
+>> Research Scientist
+>> University of Pittsburgh Department of Developmental Biology
+>>
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>
+>
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160705/c310e9bd/attachment-0001.html>
+
+From huisken at mpi-cbg.de  Tue Jul  5 13:35:19 2016
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Tue, 5 Jul 2016 20:35:19 +0200
+Subject: [OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital
+	scanning to reduce banding?
+In-Reply-To: <D3A12955.ECFB%tnf8@pitt.edu>
+References: <D3A12955.ECFB%tnf8@pitt.edu>
+Message-ID: <C5F79F6B-AB3E-4176-BD26-F25038B85955@mpi-cbg.de>
+
+Hi Tim,
+
+great! I like your setup.
+
+One remark to the last figure caption in your document: You need to adjust the amplitude to get the maximum efficiency of the mSPIM. You start with a small amplitude and increase it until the light sheet intensity (and fluorescence) drops. Now you have found the amplitude where you pivot the sheet as much as the NA of your illumination lens allows and you are getting the best performance. Going any further, the beam will be cut off and you loose laser power.
+
+Best
+Jan
+
+> On Jul 5, 2016, at 3:18 PM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+> 
+> Hi folks, 
+> 
+> Many thanks for your help.  After much testing I have concluded that anti-striping along the lines of Huisken & Stainier (2007) is extremely important for imaging large structures like a zebrafish embryo.  This adds significant complexity and cost (~$2,000) to the basic openSPIM design but in my opinion it makes the instrument dramatically more useful for segmentation and quantiative imaging.  Importantly the fact that I could make it suggests that it is within the engineering abilities of most people who can build an openSPIM.  We have not started using it yet as our lasers are also out for an upgrade; I will update the list when I have had a chance to test it.  
+> 
+> I had to fill in some details from the 2007 paper on my own, so it is likely that more elegant/less kludgy designs exist.  Still, this guide I wrote for our group may be useful for those thinking of adding anti-striping in the future.  
+> 
+> https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0 <https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0>
+> 
+> All the best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> From: <openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu <mailto:tnf8 at pitt.edu>>
+> Date: Tuesday, May 3, 2016 at 9:27 AM
+> To: Jan Huisken <huisken at mpi-cbg.de <mailto:huisken at mpi-cbg.de>>
+> Cc: "openspim at openspim.org <mailto:openspim at openspim.org>" <openspim at openspim.org <mailto:openspim at openspim.org>>
+> Subject: Re: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+> 
+> Correction, I meant 0.05% tricaine. 
+>  
+> Best,
+> 
+> 
+> T
+>  
+> From: Jan Huisken [mailto:huisken at mpi-cbg.de <mailto:huisken at mpi-cbg.de>] 
+> Sent: Friday, April 29, 2016 3:01 AM
+> To: Feinstein, Timothy N
+> Cc: openspim at openspim.org <mailto:openspim at openspim.org>
+> Subject: Re: [OpenSPIM] Is anyone using digital scanning to reduce banding?
+>  
+> Dear Tim,
+>  
+> I think you are mixing up two issue.
+>  
+> 1. Getting rid of stripes.
+>  
+> Yes, you can do a little bit in post-processing but the stripes can be quite complex and are not necessarily straight. Oftentimes you see a lot of lensing and I do not think you can easily remove it with image processing.
+>  
+> a) Double-sided illumination helps. Depending on the sample you may want to do simultaneous or sequential double-sided illumination. There are various ways of merging the two images.
+> b) A resonant mSPIM mirror is cheap and easy to integrate. You will get rid of most stripes, but again this depends on the sample. The details for a) and b) are in our Opt. Lett. paper (Huisken & Stainier, 2007). Basically, you are pivoting the light sheet around the center of your field of view, e.g. with 1kHz. The stripes are “washed out” during the exposure time of your camera. We use this on most of our systems and it helps a lot to reduce stripes.
+> c) Multi-view fusion can also help to some extent.
+>  
+> 2. DSLM vs. SPIM
+>  
+> Yes, DSLM should also help reducing stripes but I have no experience with that. Basically, your light sheet is not coherent anymore and the sheet does not “interfere with itself”. However, the setup is more expensive and requires you to power and control another element: the galvo scanner to sweep the beam up and down. You need a proper scan mirror and not just the cheap mSPIM mirror. The additional benefit is that the resulting light sheet is more uniform than the cropped Gaussian light sheet. However, you need to illuminate each line with higher intensity which may result in saturation and worse dynamic range. Obviously you need to wait for the scan and need to synchronize your readout. Depending whether you have a global shutter or rolling shutter camera you need to take some precaution.
+>  
+> Best
+> Jan
+>  
+>  
+>  
+> —
+> Jan Huisken
+> Head of Max Planck Research Group
+>  
+> Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+>  
+> On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N <tnf8 at PITT.EDU <mailto:tnf8 at PITT.EDU>> wrote:
+>  
+> Hello all, 
+> 
+> I found the Selzer group's solution (Keller et al. 2013) quite interesting
+> and would love to know if anyone had a positive experience doing that.
+> The banding from my basic openSPIM is definitely a problem for
+> segmentation and analysis.
+> 
+> As far as I can tell fixing the banding will mostly involve buying a scan
+> mirror.  I don't have a quote yet for the Cambridge VM500 scanning mirror
+> that the Selzer group used but its ThorLabs equivalent (#GVS101?) costs
+> about $1k.  That seems reasonable and not that hard for regular folks to
+> implement.  
+> 
+> In related news I just noticed that the TeraStitcher plugin for Vaa3D now
+> has an option to fight banding in light sheet data.  I have not tested it
+> yet but potentially that feature could be useful.  I will just post my
+> usual warning for folks trying TeraStitcher for the first time: it
+> stitches really well but it could be a hair more user-friendly.
+> 
+> Best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D.
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim <http://openspim.org/mailman/listinfo/openspim>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160705/89adf2e7/attachment-0001.html>
+
+From brau at ipmc.cnrs.fr  Tue Jul  5 16:49:30 2016
+From: brau at ipmc.cnrs.fr (=?UTF-8?B?RnLDqWTDqXJpYyBCUkFV?=)
+Date: Tue, 5 Jul 2016 23:49:30 +0200
+Subject: [OpenSPIM] Follow-up: [Open-SPIM] Is anyone using digital
+ scanning to reduce banding?
+In-Reply-To: <C5F79F6B-AB3E-4176-BD26-F25038B85955@mpi-cbg.de>
+References: <D3A12955.ECFB%tnf8@pitt.edu>
+ <C5F79F6B-AB3E-4176-BD26-F25038B85955@mpi-cbg.de>
+Message-ID: <2c879e73-c6fe-8ba7-c960-93b18ed80a53@ipmc.cnrs.fr>
+
+Dear Jan and Tim,
+
+Sorry to come into your discussions but I noticed your comment Jan 
+concerning this point : a) Double-sided illumination helps. Depending on 
+the sample you may want to do simultaneous or sequential double-sided 
+illumination. There are various ways of merging the two images.
+
+In our lab we built a home-made ultramicroscope (and reproduce an 
+open-spim : 
+http://unice.fr/plateformes/mica/ressources/developpements-1/developpements) 
+and I was wondering about the best method to fuse images taken from the 
+left+those taken from the right from our ultramicroscope (without any 
+rotation). At the moment we only do averaging which maybe not the best 
+solution, I suppose. Do you know a paper mentionning the different ways 
+to do image fusion, or any advice about that (I also knew about a method 
+consisting to cut the image in 3 part, but I don't really remember all 
+the steps)?
+
+Thanks in advance,
+
+Best regards,
+
+Frédéric
+
+
+Le 05/07/2016 à 20:35, Jan Huisken a écrit :
+> Hi Tim,
+>
+> great! I like your setup.
+>
+> One remark to the last figure caption in your document: You need to 
+> adjust the amplitude to get the maximum efficiency of the mSPIM. You 
+> start with a small amplitude and increase it until the light sheet 
+> intensity (and fluorescence) drops. Now you have found the amplitude 
+> where you pivot the sheet as much as the NA of your illumination lens 
+> allows and you are getting the best performance. Going any further, 
+> the beam will be cut off and you loose laser power.
+>
+> Best
+> Jan
+>
+>> On Jul 5, 2016, at 3:18 PM, Feinstein, Timothy N <tnf8 at PITT.EDU 
+>> <mailto:tnf8 at PITT.EDU>> wrote:
+>>
+>> Hi folks,
+>>
+>> Many thanks for your help.  After much testing I have concluded that 
+>> anti-striping along the lines of Huisken & Stainier (2007) is 
+>> extremely important for imaging large structures like a zebrafish 
+>> embryo.  This adds significant complexity and cost (~$2,000) to the 
+>> basic openSPIM design but in my opinion it makes the instrument 
+>> dramatically more useful for segmentation and quantiative imaging. 
+>>  Importantly the fact that I could make it suggests that it is within 
+>> the engineering abilities of most people who can build an openSPIM. 
+>>  We have not started using it yet as our lasers are also out for an 
+>> upgrade; I will update the list when I have had a chance to test it.
+>>
+>> I had to fill in some details from the 2007 paper on my own, so it is 
+>> likely that more elegant/less kludgy designs exist.  Still, this 
+>> guide I wrote for our group may be useful for those thinking of 
+>> adding anti-striping in the future.
+>>
+>> https://www.dropbox.com/s/6r1z13pggat7v76/Anti-striping%20mirror.docx?dl=0
+>>
+>> All the best,
+>>
+>>
+>> Tim
+>>
+>> Timothy Feinstein, Ph.D.
+>> Research Scientist
+>> University of Pittsburgh Department of Developmental Biology
+>>
+>>
+>> From:<openspim-bounces at openspim.org 
+>> <mailto:openspim-bounces at openspim.org>> on behalf of Timothy 
+>> Feinstein <tnf8 at pitt.edu <mailto:tnf8 at pitt.edu>>
+>> Date:Tuesday, May 3, 2016 at 9:27 AM
+>> To:Jan Huisken <huisken at mpi-cbg.de <mailto:huisken at mpi-cbg.de>>
+>> Cc:"openspim at openspim.org <mailto:openspim at openspim.org>" 
+>> <openspim at openspim.org <mailto:openspim at openspim.org>>
+>> Subject:Re: [OpenSPIM] Is anyone using digital scanning to reduce 
+>> banding?
+>>
+>> Correction, I meant 0.05% tricaine.
+>> Best,
+>>
+>>
+>> T
+>> *From:*Jan Huisken [mailto:huisken at mpi-cbg.de]
+>> *Sent:*Friday, April 29, 2016 3:01 AM
+>> *To:*Feinstein, Timothy N
+>> *Cc:*openspim at openspim.org <mailto:openspim at openspim.org>
+>> *Subject:*Re: [OpenSPIM] Is anyone using digital scanning to reduce 
+>> banding?
+>> Dear Tim,
+>> I think you are mixing up two issue.
+>> *1. Getting rid of stripes.*
+>> Yes, you can do a little bit in post-processing but the stripes can 
+>> be quite complex and are not necessarily straight. Oftentimes you see 
+>> a lot of lensing and I do not think you can easily remove it with 
+>> image processing.
+>> a) Double-sided illumination helps. Depending on the sample you may 
+>> want to do simultaneous or sequential double-sided illumination. 
+>> There are various ways of merging the two images.
+>> b) A resonant mSPIM mirror is cheap and easy to integrate. You will 
+>> get rid of most stripes, but again this depends on the sample. The 
+>> details for a) and b) are in our Opt. Lett. paper (Huisken & 
+>> Stainier, 2007). Basically, you are pivoting the light sheet around 
+>> the center of your field of view, e.g. with 1kHz. The stripes are 
+>> “washed out” during the exposure time of your camera. We use this on 
+>> most of our systems and it helps a lot to reduce stripes.
+>> c) Multi-view fusion can also help to some extent.
+>> *2. DSLM vs. SPIM*
+>> Yes, DSLM should also help reducing stripes but I have no experience 
+>> with that. Basically, your light sheet is not coherent anymore and 
+>> the sheet does not “interfere with itself”. However, the setup is 
+>> more expensive and requires you to power and control another element: 
+>> the galvo scanner to sweep the beam up and down. You need a proper 
+>> scan mirror and not just the cheap mSPIM mirror. The additional 
+>> benefit is that the resulting light sheet is more uniform than the 
+>> cropped Gaussian light sheet. However, you need to illuminate each 
+>> line with higher intensity which may result in saturation and worse 
+>> dynamic range. Obviously you need to wait for the scan and need to 
+>> synchronize your readout. Depending whether you have a global shutter 
+>> or rolling shutter camera you need to take some precaution.
+>> Best
+>> Jan
+>> —
+>> *Jan Huisken*
+>> /Head of Max Planck Research Group/
+>> Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+>>
+>>     On Apr 27, 2016, at 4:13 PM, Feinstein, Timothy N <tnf8 at PITT.EDU
+>>     <mailto:tnf8 at PITT.EDU>> wrote:
+>>     Hello all,
+>>
+>>     I found the Selzer group's solution (Keller et al. 2013) quite
+>>     interesting
+>>     and would love to know if anyone had a positive experience doing
+>>     that.
+>>     The banding from my basic openSPIM is definitely a problem for
+>>     segmentation and analysis.
+>>
+>>     As far as I can tell fixing the banding will mostly involve
+>>     buying a scan
+>>     mirror.  I don't have a quote yet for the Cambridge VM500
+>>     scanning mirror
+>>     that the Selzer group used but its ThorLabs equivalent (#GVS101?)
+>>     costs
+>>     about $1k.  That seems reasonable and not that hard for regular
+>>     folks to
+>>     implement.
+>>
+>>     In related news I just noticed that the TeraStitcher plugin for
+>>     Vaa3D now
+>>     has an option to fight banding in light sheet data.  I have not
+>>     tested it
+>>     yet but potentially that feature could be useful.  I will just
+>>     post my
+>>     usual warning for folks trying TeraStitcher for the first time: it
+>>     stitches really well but it could be a hair more user-friendly.
+>>
+>>     Best,
+>>
+>>
+>>     Tim
+>>
+>>     Timothy Feinstein, Ph.D.
+>>     Research Scientist
+>>     University of Pittsburgh Department of Developmental Biology
+>>
+>>
+>>     _______________________________________________
+>>     OpenSPIM mailing list
+>>     OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+>>     http://openspim.org/mailman/listinfo/openspim
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+>> http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Frédéric Brau <mailto:%20brau at ipmc.cnrs.fr>
+Institut de Pharmacologie Moléculaire et Cellulaire - UMR7275 CNRS/UNS 
+<http://www.ipmc.cnrs.fr>
+660, Route des Lucioles
+06560 VALBONNE
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme MICA: Microscopie Imagerie Côte d'Azur <http://mica.unice.fr>
+Réseau Technologique de Microscopie de Fluorescence Multidimensionnelle 
+<http://rtmfm.cnrs.fr>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160705/8d1c8945/attachment-0001.html>
+
+From Ann.Wheeler at igmm.ed.ac.uk  Tue Jul 12 11:08:53 2016
+From: Ann.Wheeler at igmm.ed.ac.uk (WHEELER Ann)
+Date: Tue, 12 Jul 2016 16:08:53 +0000
+Subject: [OpenSPIM] OpenSPIM update site not working?
+Message-ID: <DB5PR05MB1559D8CEF7D77BE244DCD481EC300@DB5PR05MB1559.eurprd05.prod.outlook.com>
+
+Dear Team.
+
+I wanted to update my version of the OpenSPIM software and found that the update site link http://openspim.org/update/ appears to be broken. None of the downloads are working either - or the link from the website to the downloads is broken. The updater in my copy of Fiji isn't working either.
+
+Is there somewhere else I can look for either a download (which would be have been updated on 27/4/15 or sooner) or an update?  I wondered if the link had moved. We're trying to get a multiline Versalase working in the SPIM software. Its seems happy in the most recent build of Micromanager. However this was after we asked the guy who wrote the driver for a little code tweak. However we updated the 'OpenSPIM' installation of Micromanager and now the OpenSPIM software won't play. I had thought of starting again with a fresh install when I found the broken link.
+
+Any pointers to where the software is would be most welcome. Am sure this is temporary glitch or maybe a firewall issue but that seems unlikely.
+
+Thanks
+
+Ann
+
+
+Dr Ann Wheeler
+Advanced Imaging Resource, Institute of Genetics and Molecular Medicine, University of Edinburgh, Edinburgh EH4 2XU
+E: ann.wheeler at igmm.ed.ac.uk
+T: 0131 651 8665
+W: http://www.igmm.ac.uk/imaging.htm
+
+
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+
+From ctrueden at wisc.edu  Tue Jul 12 17:47:09 2016
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Tue, 12 Jul 2016 17:47:09 -0500
+Subject: [OpenSPIM] OpenSPIM update site not working?
+In-Reply-To: <DB5PR05MB1559D8CEF7D77BE244DCD481EC300@DB5PR05MB1559.eurprd05.prod.outlook.com>
+References: <DB5PR05MB1559D8CEF7D77BE244DCD481EC300@DB5PR05MB1559.eurprd05.prod.outlook.com>
+Message-ID: <CADN69yku0MZZSfG3g=WXjJ9bpg8ai0OJ8N+en+L2tTG7NM46Cw@mail.gmail.com>
+
+Hi Ann,
+
+Thanks for the report, and my apologies: when upgrading the wiki, I did not
+migrate these files properly from the old web server. I have now restored
+the missing data.
+
+If anyone notices any other missing or broken functionality, please let me
+know.
+
+Regards,
+Curtis
+
+--
+Curtis Rueden
+LOCI software architect - http://loci.wisc.edu/software
+ImageJ2 lead, Fiji maintainer - http://imagej.net/User:Rueden
+Did you know ImageJ has a forum? http://forum.imagej.net/
+
+
+On Tue, Jul 12, 2016 at 11:08 AM, WHEELER Ann <Ann.Wheeler at igmm.ed.ac.uk>
+wrote:
+
+> Dear Team.
+>
+> I wanted to update my version of the OpenSPIM software and found that the
+> update site link http://openspim.org/update/ appears to be broken. None
+> of the downloads are working either - or the link from the website to the
+> downloads is broken. The updater in my copy of Fiji isn't working either.
+>
+> Is there somewhere else I can look for either a download (which would be
+> have been updated on 27/4/15 or sooner) or an update?  I wondered if the
+> link had moved. We're trying to get a multiline Versalase working in the
+> SPIM software. Its seems happy in the most recent build of Micromanager.
+> However this was after we asked the guy who wrote the driver for a little
+> code tweak. However we updated the 'OpenSPIM' installation of Micromanager
+> and now the OpenSPIM software won't play. I had thought of starting again
+> with a fresh install when I found the broken link.
+>
+> Any pointers to where the software is would be most welcome. Am sure this
+> is temporary glitch or maybe a firewall issue but that seems unlikely.
+>
+> Thanks
+>
+> Ann
+>
+>
+> Dr Ann Wheeler
+> Advanced Imaging Resource, Institute of Genetics and Molecular Medicine,
+> University of Edinburgh, Edinburgh EH4 2XU
+> E: ann.wheeler at igmm.ed.ac.uk
+> T: 0131 651 8665
+> W: http://www.igmm.ac.uk/imaging.htm
+>
+>
+>
+> --
+> The University of Edinburgh is a charitable body, registered in
+> Scotland, with registration number SC005336.
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160712/41d35f9f/attachment.html>
+

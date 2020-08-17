@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Data Registration Failure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Data%20Registration%20Failure&In-Reply-To=%3Ctencent_5648661F582935EA7FBA45F4%40qq.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000805.html">
+   <LINK REL="Next"  HREF="000806.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Data Registration Failure</H1>
+    <B>&#25919;</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Data%20Registration%20Failure&In-Reply-To=%3Ctencent_5648661F582935EA7FBA45F4%40qq.com%3E"
+       TITLE="[OpenSPIM] Data Registration Failure">709314090 at qq.com
+       </A><BR>
+    <I>Wed Sep  2 09:00:40 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000805.html">[OpenSPIM] transmitted light
+</A></li>
+        <LI>Next message: <A HREF="000806.html">[OpenSPIM] Compatibility with Windows 8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#803">[ date ]</a>
+              <a href="thread.html#803">[ thread ]</a>
+              <a href="subject.html#803">[ subject ]</a>
+              <a href="author.html#803">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, ALL!
+  I bulit my OpenSPIM last week, and I began to require data of zebrafish. But the data was registration failed.  The log of fiji was at the last of this mail. I try to change the threshold and nothing went well. 
+  I wonder it's maybe something worry with my require processing,  so I descirbe my require processing below. 
+  First, I selected a view, then set the Stack-Z = 400, and the step=7.5um, angle=-55.8.
+  Second, I wanted to select another view, so I changed the angle to -19.8. But at the same time, I had to change the x-value to keep the the zebrafish in the view of camera. Of cause, the range of Stack-z was also changed. Was this step wrong? I should not change the x-value?
+   Third, I repeated the second step to choose another three views and began to require data.
+   I hope to get your help&#65281;
+
+
+   By the way, I found the OpenSPIM.app(20150427) can not do data processing. When I did registration, the program alerted that missing 3D Viewer. I try to download the 3D Viewer, and it could work in this compter. Then I copyed the app folder to another computer, it couldn't work again. Was the 3D Viewer not installed in the app folder?  PS. The computer in lab can not access to Internet.
+    Thank you&#65281;
+
+
+Best ALL&#65281;
+
+
+***************************************************
+r1 = 1.0
+r2 = 2.0
+threshold = 0.015172152779996395
+....
+(Wed Sep 02 20:59:13 CST 2015): Subpixel localization using quadratic n-dimensional fit
+Found peaks (possible beads): 6160 in view spim_TL01_Angle4.tif
+Opening files took: 0 sec (17 %)
+Computation took: 4 sec (83 %)
+(Wed Sep 02 20:59:13 CST 2015): Finished Bead Extraction
+(Wed Sep 02 20:59:13 CST 2015): Starting Registration
+spim_TL01_Angle2.tif&lt;-&gt;spim_TL01_Angle4.tif: Not enough correspondences found 6, should be at least 12
+spim_TL01_Angle2.tif&lt;-&gt;spim_TL01_Angle3.tif: Model found but not enough remaining inliers (4/12) after RANSAC of 12
+spim_TL01_Angle1.tif&lt;-&gt;spim_TL01_Angle3.tif: Not enough correspondences found 7, should be at least 12
+
+
+
+......
+spim_TL01_Angle0.tif (id = 0) has 0 correspondences in 0 other views.
+spim_TL01_Angle1.tif (id = 1) has 0 correspondences in 0 other views.
+
+.....
+The total number of detections was: 32007
+The total number of correspondence candidates was: 126
+The total number of true correspondences is: 0
+
+Successfully optimized configuration of 0 tiles after 202 iterations:
+  average displacement: ?px
+  minimal displacement: 179,769,313,486,231,570,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000.000px
+  maximal displacement: 0.000px
+Optimizer Matrices
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle0.tif (id = 0) is not part of the structure of my view spim_TL01_Angle0.tif (id = 0)
+spim_TL01_Angle0.tif (id = 0): is not connected to any other tile!
+ViewErrorStatistics.setViewSpecificError(): Warning! spim_TL01_Angle1.tif (id = 1) is not part of the structure of my view spim_TL01_Angle1.tif (id = 1)
+spim_TL01_Angle1.tif (id = 1): is not connected to any other tile!
+
+
+
+.....
+*****************************************************
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150902/483aea30/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150902/483aea30/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000805.html">[OpenSPIM] transmitted light
+</A></li>
+	<LI>Next message: <A HREF="000806.html">[OpenSPIM] Compatibility with Windows 8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#803">[ date ]</a>
+              <a href="thread.html#803">[ thread ]</a>
+              <a href="subject.html#803">[ subject ]</a>
+              <a href="author.html#803">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

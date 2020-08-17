@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Micro-Manager Issue
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Micro-Manager%20Issue&In-Reply-To=%3C28f1a17c88338b59fa60b6958039c7f7%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000613.html">
+   <LINK REL="Next"  HREF="000615.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Micro-Manager Issue</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Micro-Manager%20Issue&In-Reply-To=%3C28f1a17c88338b59fa60b6958039c7f7%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] Micro-Manager Issue">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Wed Jan 28 06:00:35 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000613.html">[OpenSPIM] Micro-Manager Issue
+</A></li>
+        <LI>Next message: <A HREF="000615.html">[OpenSPIM] Micro-Manager Issue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#614">[ date ]</a>
+              <a href="thread.html#614">[ thread ]</a>
+              <a href="subject.html#614">[ subject ]</a>
+              <a href="author.html#614">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Dylan,
+
+I Cc:ed the mailing list again so that the OpenSPIM community knows 
+about your kind offer. For future record, I would also like to ask 
+keeping communication with me on public record (unless there are good 
+reasons to take the conversation private, of course).
+
+On 2015-01-27 12:26, Windell, Dylan wrote:
+&gt;<i> Dear Johannes,
+</I>&gt;<i> 
+</I>&gt;<i> Thank you very much for the email and information.
+</I>&gt;<i> 
+</I>&gt;<i> I followed all the steps once again and installed mfiji in a different
+</I>&gt;<i> directory and now the plugin works, I have attached all the log files
+</I>&gt;<i> I could find anyway, the first one is of the failed version this
+</I>&gt;<i> morning and the second two are the successful ones. I had tried to
+</I>&gt;<i> update ImageJ in one version but there were a list of duplicate
+</I>&gt;<i> plugins.
+</I>&gt;<i> 
+</I>&gt;<i> However, if I try and acquire any images I just get black or blank
+</I>&gt;<i> pictures, this error comes up when I try and calibrate the pixel size:
+</I>&gt;<i> 
+</I>&gt;<i> (Fiji Is Just) ImageJ 2.0.0-rc-13/1.49e; Java 1.6.0_31 [64-bit];
+</I>&gt;<i> Windows 7 6.1; 128MB of 2000MB (6%)
+</I>&gt;<i> 
+</I>&gt;<i> java.lang.Exception: Internal inconsistency: unknown system exception
+</I>&gt;<i> encountered
+</I>&gt;<i> 	at mmcorej.MMCoreJJNI.CMMCore_snapImage(Native Method)
+</I>&gt;<i> 	at mmcorej.CMMCore.snapImage(CMMCore.java:813)
+</I>&gt;<i> 	at 
+</I>&gt;<i> spim.PixelSizeCalibrator.fetchFreshImage(PixelSizeCalibrator.java:308)
+</I>&gt;<i> 	at spim.PixelSizeCalibrator.&lt;init&gt;(PixelSizeCalibrator.java:160)
+</I>&gt;<i> 	at spim.SPIMAcquisition$2.actionPerformed(SPIMAcquisition.java:395)
+</I>&gt;<i> 	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+</I>&gt;<i> 	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+</I>&gt;<i> 	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+</I>&gt;<i> 	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+</I>&gt;<i> 	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown 
+</I>&gt;<i> Source)
+</I>&gt;<i> 	at java.awt.Component.processMouseEvent(Unknown Source)
+</I>&gt;<i> 	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.Component.processEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.Container.processEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.Component.dispatchEventImpl(Unknown Source)
+</I>&gt;<i> 	at java.awt.Container.dispatchEventImpl(Unknown Source)
+</I>&gt;<i> 	at java.awt.Component.dispatchEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.Container.dispatchEventImpl(Unknown Source)
+</I>&gt;<i> 	at java.awt.Window.dispatchEventImpl(Unknown Source)
+</I>&gt;<i> 	at java.awt.Component.dispatchEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventQueue.access$000(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventQueue$1.run(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventQueue$1.run(Unknown Source)
+</I>&gt;<i> 	at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i> 	at 
+</I>&gt;<i> java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown 
+</I>&gt;<i> Source)
+</I>&gt;<i> 	at 
+</I>&gt;<i> java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown 
+</I>&gt;<i> Source)
+</I>&gt;<i> 	at java.awt.EventQueue$2.run(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventQueue$2.run(Unknown Source)
+</I>&gt;<i> 	at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i> 	at 
+</I>&gt;<i> java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown 
+</I>&gt;<i> Source)
+</I>&gt;<i> 	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+</I>&gt;<i> 	at java.awt.EventDispatchThread.run(Unknown Source)
+</I>&gt;<i> 
+</I>&gt;<i> I have contacted Andor to find out if there is something I am missing
+</I>&gt;<i> regarding the camera setup.
+</I>&gt;<i> 
+</I>&gt;<i> Thank you very much for taking the time to look into this, I do hope
+</I>&gt;<i> one day I will be able to help others with related issues.
+</I>&gt;<i> 
+</I>&gt;<i> Kind regards,
+</I>&gt;<i> 
+</I>&gt;<i> Dylan
+</I>&gt;<i> 
+</I>&gt;<i> Dylan Windell
+</I>&gt;<i> Postgraduate Researcher
+</I>&gt;<i> College&#160;of Life and Environmental Sciences
+</I>&gt;<i> University of Exeter, Geoffrey Pope
+</I>&gt;<i> Stocker Road, Exeter EX4 4QD, UK
+</I>&gt;<i> phone: +44 (0) 7596725056
+</I>&gt;<i> email:&#160;<A HREF="http://openspim.org/mailman/listinfo/openspim">dw388 at exeter.ac.uk</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Johannes Schindelin [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>]
+</I>&gt;<i> Sent: 26 January 2015 23:50
+</I>&gt;<i> To: Windell, Dylan
+</I>&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-owner at openspim.org</A>; <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+</I>&gt;<i> Subject: Re: Micro-Manager Issue
+</I>&gt;<i> 
+</I>&gt;<i> Hi Dylan,
+</I>&gt;<i> 
+</I>&gt;<i> On 2015-01-26 18:55, Windell, Dylan wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I am having trouble sending an email which I have attached below to
+</I>&gt;&gt;<i> the normal mailing address, I have registered on the site under this
+</I>&gt;&gt;<i> email account so I am not sure what is the problem.
+</I>&gt;<i> 
+</I>&gt;<i> Unfortunately I cannot see the mail. And I could not see any previous
+</I>&gt;<i> attempts to subscribe, either, so I allowed myself to subscribe you
+</I>&gt;<i> directly.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> After reading the recent post regarding SPIM at x64, I am trying to
+</I>&gt;&gt;<i> get MM to work on my Windows 7 OS working at 64-bit but thus far I
+</I>&gt;&gt;<i> have not been able to.
+</I>&gt;<i> 
+</I>&gt;<i> Please provide the full information, including all relevant log files
+</I>&gt;<i> that you can find. Even if they do not make sense to you, they might
+</I>&gt;<i> help others to help you.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I have installed my Andor drivers and followed the steps to install
+</I>&gt;&gt;<i> all the software but despite the new SPIM plugin, it does not run at
+</I>&gt;&gt;<i> all.
+</I>&gt;<i> 
+</I>&gt;<i> Again, a detailed error report is required to help you. If
+</I>&gt;<i> Micro-Manager crashes, or if it shows you an error message, or if
+</I>&gt;<i> another message pops up; all of that is crucial information that is
+</I>&gt;<i> required to help you make sense of the problem and resolve it.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> In addition, when trying to load my
+</I>&gt;&gt;<i> configuration the program continues to freeze and crash.
+</I>&gt;<i> 
+</I>&gt;<i> That description is unfortunately not precise enough to identify the
+</I>&gt;<i> problem. You probably have a CoreLog in your OpenSPIM.app/CoreLogs/
+</I>&gt;<i> directory that should shed light into the issues.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I know it is still not yet finished being fixed but I was just
+</I>&gt;&gt;<i> wandering if there is a temporary fix for this?
+</I>&gt;<i> 
+</I>&gt;<i> Unfortunately, it is not possible with specific information (such as
+</I>&gt;<i> the information provided by the CoreLog) to know enough about the
+</I>&gt;<i> problem in order to assess any possible fix. Please copy &amp; paste
+</I>&gt;<i> precise error messages whenever possible, otherwise write them into a
+</I>&gt;<i> mail as faithfully as possible, and attach the relevant (parts of the)
+</I>&gt;<i> CoreLog.
+</I>&gt;<i> 
+</I>&gt;<i> Once you do that, I am confident that you will find the OpenSPIM
+</I>&gt;<i> community to be helpful in getting your system to work, hopefully so
+</I>&gt;<i> much that you also help others to get their systems to work, too.
+</I>&gt;<i> 
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000613.html">[OpenSPIM] Micro-Manager Issue
+</A></li>
+	<LI>Next message: <A HREF="000615.html">[OpenSPIM] Micro-Manager Issue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#614">[ date ]</a>
+              <a href="thread.html#614">[ thread ]</a>
+              <a href="subject.html#614">[ subject ]</a>
+              <a href="author.html#614">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

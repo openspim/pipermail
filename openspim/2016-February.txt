@@ -1,0 +1,3031 @@
+From m.pawlowska at nencki.gov.pl  Mon Feb  8 05:03:57 2016
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Mon, 08 Feb 2016 12:03:57 +0100
+Subject: [OpenSPIM] Fwd: [Bug 1214] java.lang.IllegalStateException when
+ trying to open new script
+Message-ID: <67f4ccd6438d22c242c368770f35cdd3@nencki.gov.pl>
+
+To anybody who was using Fiji with OpenSPIM update site and was 
+experiencing java.lang.IllegalStateException errors lately (when 
+starting fiji and at some other times): it's fixed now, but you need to 
+remove some files manually, see below.
+
+Regards,
+Monika
+
+
+-------- Wiadomo?? oryginalna --------
+Temat: [Bug 1214] java.lang.IllegalStateException when trying to open 
+new script
+Data: 2016-02-04 17:12
+Od: bugzilla at fiji.sc
+Do: m.pawlowska at nencki.gov.pl
+
+  Curtis Rueden changed bug 1214 [1]
+
+  		WHAT
+  		REMOVED
+  		ADDED
+
+  		Status
+  		CONFIRMED
+  		RESOLVED
+
+  		Resolution
+  		---
+  		FIXED
+
+  COMMENT # 4 [2] ON BUG 1214 [1] FROM CURTIS RUEDEN
+
+After consulting with Hongkee Moon, we discovered that the
+Micro-Manager-dev
+update site, used by the OpenSPIM update site, had many invalid/obsolete
+duplicate libraries present in the plugins/Micro-Manager subfolder.
+
+These duplicates interfered with the normal operations of ImageJ.
+
+I have removed all the duplicates from the Micro-Manager-dev update
+site, so
+this problem should not bite others using OpenSPIM anymore -- at least
+for now.
+
+To repair your local installation, remove all
+plugins/Micro-Manager/scijava-common-*.jar files from your installation.
+Then
+launch OpenSPIM and run the updater (which should now launch
+successfully) to
+update everything else.
+
+And please feel free to reopen this issue if the problem recurs.
+
+-------------------------
+  You are receiving this mail because:
+
+  	* You are on the CC list for the bug.
+  	* You reported the bug.
+
+
+
+Links:
+------
+[1] http://fiji.sc/bugzilla/show_bug.cgi?id=1214
+[2] http://fiji.sc/bugzilla/show_bug.cgi?id=1214#c4
+
+
+From m.pawlowska at nencki.gov.pl  Mon Feb  8 05:36:02 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 08 Feb 2016 12:36:02 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+Message-ID: <op.yciiicchahhlbl@pc507-99ff.ibd>
+
+Hi,
+
+I am using an argon laser that only has a manual shutter, and so I'm  
+having problems with photobleaching. Could anybody recommend a low-cost  
+shutter that I could use to reduce bleaching in between stacks?
+
+Best regards,
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From nantho2 at emory.edu  Mon Feb  8 11:29:44 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 8 Feb 2016 17:29:44 +0000
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <op.yciiicchahhlbl@pc507-99ff.ibd>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+Message-ID: <CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Monika
+
+I haven't looked into the details, but thought this kind of thing would be super low cost, and fun too:
+http://www.instructables.com/id/DIY-Laser-Shutter/
+With some thinking you might even be able to control it using the TTL (I believe 3V) from a serial LPT port if you have one.
+
+Neil
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+Sent: Monday, February 08, 2016 6:36 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] what shutter would you recommend?
+
+Hi,
+
+I am using an argon laser that only has a manual shutter, and so I'm having problems with photobleaching. Could anybody recommend a low-cost shutter that I could use to reduce bleaching in between stacks?
+
+Best regards,
+--
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+From nantho2 at emory.edu  Mon Feb  8 11:32:37 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 8 Feb 2016 17:32:37 +0000
+Subject: [OpenSPIM] Low Melting Point Agarose
+Message-ID: <CO2PR05MB681EAAC4EBA1391729DDCF8ECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all,
+
+I was wondering if anybody has any experience, or knows of any studies, regarding the differences between low melting point agarose gels?  Is it a case of low melting point agarose is low melting point agarose and that's it, or are there subtleties between brands and composition, and/or handling that affect the results?
+
+Thanks in advance for your time.
+
+Neil
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From pitrone at mpi-cbg.de  Mon Feb  8 12:16:36 2016
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Mon, 8 Feb 2016 19:16:36 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <2F26682E-D1F5-4FC4-9DC4-2793C71B600A@mpi-cbg.de>
+
+Picard sells one for around 250 - 300 EUR? (or exactly 285 USD :-P):
+
+http://www.picard-industries.com/products.html#usb-shut <http://www.picard-industries.com/products.html#usb-shut>
+
+
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstra?e 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who." Rudyard Kipling - The Elephant's Child
+
+
+
+> On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at EMORY.EDU> wrote:
+> 
+> Hi Monika
+> 
+> I haven't looked into the details, but thought this kind of thing would be super low cost, and fun too:
+> http://www.instructables.com/id/DIY-Laser-Shutter/
+> With some thinking you might even be able to control it using the TTL (I believe 3V) from a serial LPT port if you have one.
+> 
+> Neil
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+> Sent: Monday, February 08, 2016 6:36 AM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] what shutter would you recommend?
+> 
+> Hi,
+> 
+> I am using an argon laser that only has a manual shutter, and so I'm having problems with photobleaching. Could anybody recommend a low-cost shutter that I could use to reduce bleaching in between stacks?
+> 
+> Best regards,
+> --
+> Dr Monika Paw?owska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160208/2e22e7e4/attachment.html>
+
+From guenther at mpi-cbg.de  Mon Feb  8 13:28:12 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 08 Feb 2016 20:28:12 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+
+Hey everyone,
+
+
+the solution Neil suggested works *really* well and is probably as low-cost as you can get. MicroManager is even able to use Arduinos as shutter, see?https://micro-manager.org/wiki/Control_laser_shutters_with_Arduino
+
+
+cheers!
+
+
+ulrik
+
+
+
+
+?
+Ulrik G?nther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab,?Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail:?guenther at mpi-cbg.de
+
+
+
+
+> On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> 
+> Hi Monika
+> 
+> 
+> I haven't looked into the details, but thought this kind of thing would be super low cost, and fun too:
+> http://www.instructables.com/id/DIY-Laser-Shutter/
+> With some thinking you might even be able to control it using the TTL (I believe 3V) from a serial LPT port if you have one.
+> 
+> 
+> Neil
+> 
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+> Sent: Monday, February 08, 2016 6:36 AM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] what shutter would you recommend?
+> 
+> 
+> Hi,
+> 
+> 
+> I am using an argon laser that only has a manual shutter, and so I'm having problems with photobleaching. Could anybody recommend a low-cost shutter that I could use to reduce bleaching in between stacks?
+> 
+> 
+> Best regards,
+> --
+> Dr Monika Paw?owska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> ________________________________
+> 
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160208/1bbf97fc/attachment.html>
+
+From winfrees at iu.edu  Mon Feb  8 13:32:42 2016
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Mon, 8 Feb 2016 19:32:42 +0000
+Subject: [OpenSPIM] shutter
+Message-ID: <0a784e46baff4cbe9d5cbba793386cc9@bl-cci-exch04.ads.iu.edu>
+
+Monika,
+
+I'd vote for the Arduino approach too-especially for the built in device adapter for micromanager.  A little bit of mucking about with the adapter would get you full control through the plugin.  I used this approach to integrate an AOTF.
+
+Unless you know someone to write the device adapter for the picard shutter (they provided a dll)...
+
+Seth
+
+Seth Winfree
+Indiana Center for Biological Microscopy
+Indiana University Medical Center
+950 West Walnut St, R2-202
+Indianapolis, IN  46202-5116
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160208/fe6b8c36/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Tue Feb  9 07:40:57 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Tue, 09 Feb 2016 14:40:57 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+	<BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+Message-ID: <op.yckiyjafahhlbl@pc507-99ff.ibd>
+
+Thanks for all the advice! I guess I'll try the Arduino then, if it  
+doesn't work I can still buy a proper shutter and maybe use Arduino for  
+something else later.
+
+Monika
+
+W dniu .02.2016 o 20:28 Ulrik G?nther <guenther at mpi-cbg.de> pisze:
+
+> Hey everyone,
+>
+> the solution Neil suggested works *really* well and is probably as  
+> low-cost as you can get. MicroManager is even able to use Arduinos as  
+> shutter, >see  
+> https://micro-manager.org/wiki/Control_laser_shutters_with_Arduino
+>
+> cheers!
+>
+> ulrik
+>
+>
+> ?Ulrik G?nther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+> E-Mail: guenther at mpi-cbg.de
+>
+>> On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+>>
+>> Hi Monika
+>>
+>> I haven't looked into the details, but thought this kind of thing would  
+>> be super low cost, and fun too:
+>> http://www.instructables.com/id/DIY-Laser-Shutter/
+>> With some thinking you might even be able to control it using the TTL  
+>> (I believe 3V) from a serial LPT port if you have one.
+>>
+>> Neil
+>>
+>> -----Original Message-----
+>> From: openspim-bounces at openspim.org  
+>> [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+>> Sent: Monday, February 08, 2016 6:36 AM
+>> To: openspim at openspim.org
+>> Subject: [OpenSPIM] what shutter would you recommend?
+>>
+>> Hi,
+>>
+>> I am using an argon laser that only has a manual shutter, and so I'm  
+>> having problems with photobleaching. Could anybody recommend a low-cost  
+>> >>shutter that I could use to reduce bleaching in between stacks?
+>>
+>> Best regards,
+>> --
+>> Dr Monika Paw?owska
+>> Nencki Institute
+>> 02-093 Warsaw
+>> Pasteura 3
+>> Poland
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>> ________________________________
+>>
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination, distribution
+>> or copying of this message (including any attachments) is strictly
+>> prohibited.
+>>
+>> If you have received this message in error, please contact
+>> the sender by reply e-mail message and destroy all copies of the
+>> original message (including attachments).
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+
+
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160209/ec725d21/attachment-0001.html>
+
+From brau at ipmc.cnrs.fr  Tue Feb  9 07:55:20 2016
+From: brau at ipmc.cnrs.fr (=?UTF-8?B?RnLDqWTDqXJpYyBCUkFV?=)
+Date: Tue, 9 Feb 2016 14:55:20 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <op.yckiyjafahhlbl@pc507-99ff.ibd>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+	<BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+	<op.yckiyjafahhlbl@pc507-99ff.ibd>
+Message-ID: <56B9EFC8.1020208@ipmc.cnrs.fr>
+
+Hi Monika,
+We are looking for shutters here for an other application and found this 
+one : http://marketplace.idexop.com/store/IdexCustom/PartDetails?pId=396
+It's major advantage is that you don't need any controler as it is 
+directly TTL driven. So with an Arduino board, or the serial control as 
+shutter on Micromanager  it should work directly.
+Best regards,
+Fr?d?ric
+
+
+
+Le 09/02/2016 14:40, Monika Paw?owska a ?crit :
+> Thanks for all the advice! I guess I'll try the Arduino then, if it 
+> doesn't work I can still buy a proper shutter and maybe use Arduino 
+> for something else later.
+>
+> Monika
+>
+> W dniu .02.2016 o 20:28 Ulrik G?nther <guenther at mpi-cbg.de> pisze:
+>
+>     Hey everyone,
+>
+>     the solution Neil suggested works *really* well and is probably as
+>     low-cost as you can get. MicroManager is even able to use Arduinos
+>     as shutter,
+>     see https://micro-manager.org/wiki/Control_laser_shutters_with_Arduino
+>
+>     cheers!
+>
+>     ulrik
+>
+>
+>     ?
+>     Ulrik G?nther, Dipl.-Phys.
+>     PhD Student
+>     MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+>     Max Planck Institute of Molecular Cell Biology and Genetics
+>     Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+>     E-Mail: guenther at mpi-cbg.de
+>
+>>     On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+>>
+>>     Hi Monika
+>>
+>>     I haven't looked into the details, but thought this kind of thing
+>>     would be super low cost, and fun too:
+>>     http://www.instructables.com/id/DIY-Laser-Shutter/
+>>     With some thinking you might even be able to control it using the
+>>     TTL (I believe 3V) from a serial LPT port if you have one.
+>>
+>>     Neil
+>>
+>>     -----Original Message-----
+>>     From: openspim-bounces at openspim.org
+>>     [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+>>     Sent: Monday, February 08, 2016 6:36 AM
+>>     To: openspim at openspim.org
+>>     Subject: [OpenSPIM] what shutter would you recommend?
+>>
+>>     Hi,
+>>
+>>     I am using an argon laser that only has a manual shutter, and so
+>>     I'm having problems with photobleaching. Could anybody recommend
+>>     a low-cost shutter that I could use to reduce bleaching in
+>>     between stacks?
+>>
+>>     Best regards,
+>>     --
+>>     Dr Monika Paw?owska
+>>     Nencki Institute
+>>     02-093 Warsaw
+>>     Pasteura 3
+>>     Poland
+>>
+>>     _______________________________________________
+>>     OpenSPIM mailing list
+>>     OpenSPIM at openspim.org
+>>     http://openspim.org/mailman/listinfo/openspim
+>>
+>>     ________________________________
+>>
+>>     This e-mail message (including any attachments) is for the sole
+>>     use of
+>>     the intended recipient(s) and may contain confidential and privileged
+>>     information. If the reader of this message is not the intended
+>>     recipient, you are hereby notified that any dissemination,
+>>     distribution
+>>     or copying of this message (including any attachments) is strictly
+>>     prohibited.
+>>
+>>     If you have received this message in error, please contact
+>>     the sender by reply e-mail message and destroy all copies of the
+>>     original message (including attachments).
+>>     _______________________________________________
+>>     OpenSPIM mailing list
+>>     OpenSPIM at openspim.org
+>>     http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+>
+> -- 
+> Dr Monika Paw?owska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Fr?d?ric Brau
+----------------------------------------------------------------------
+Institut de Pharmacologie Mol?culaire et Cellulaire - UMR7275 CNRS/UNS
+660, Route des Lucioles
+06560 VALBONNE
+Courriel : brau at ipmc.cnrs.fr
+Web : http://www.ipmc.cnrs.fr/
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme MICA : Microscopie Imagerie C?te d'Azur : http://www.mica-bio.fr
+R?seau Technologique de Microscopie de Fluorescence Multidimensionnelle : http://rtmfm.cnrs.fr/
+------------------------------------------------------------------------------------------------
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160209/9b13d182/attachment.html>
+
+From mredd at cores.utah.edu  Tue Feb  9 16:34:09 2016
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Tue, 9 Feb 2016 22:34:09 +0000
+Subject: [OpenSPIM] z settle time
+Message-ID: <558AD332-47DE-4FAB-B203-370FD612786A@cores.utah.edu>
+
+Since I have two laser lines on my SPIM, I use the Micro-manager multi-dimensional acquisition function rather than the SPIM acquisition window. One problem with this is no z-settle time button. To get around this, I always acquire a transmitted image before the GFP channel to allow for the sample to settle. The problem is that this doubles my file sizes. Is there a simple way to program a delay before acquisition to allow for sample settling after z movement?
+
+thanks
+Michael Redd
+
+From arnaud.monnard at unibas.ch  Wed Feb 10 10:14:02 2016
+From: arnaud.monnard at unibas.ch (Arnaud Monnard)
+Date: Wed, 10 Feb 2016 16:14:02 +0000
+Subject: [OpenSPIM] open a structured file on Fiji
+Message-ID: <FEFFB72B93A1D845AD4F36B32158C8401C0A9775@urz-mbx-4.urz.unibas.ch>
+
+Dear all,
+
+I am currently recording light sheet data on a Z.1 from Zeiss and was wondering if anyone would know how open a series of time points or positions or both such that you can play them with the bigdataviewer plugin.
+
+
+Thanks a lot for your answers!
+
+All the best,
+
+Arnaud Monnard,
+PhD candidate,
+Biozentrum, University of Basel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160210/6cb215f8/attachment.html>
+
+From nantho2 at emory.edu  Thu Feb 18 11:31:31 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 18 Feb 2016 17:31:31 +0000
+Subject: [OpenSPIM] SPIM Acquisition Java plugin
+Message-ID: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi HongKee, I hope the code is treating you well.
+
+Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called "Why do SPIM and Micro-Manager use different TIFF packages?" that I hijacked at the start of the year.
+
+Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+
+You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+
+My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+
+Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From nantho2 at emory.edu  Mon Feb 22 20:39:30 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 23 Feb 2016 02:39:30 +0000
+Subject: [OpenSPIM] Rotation Axis
+Message-ID: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all, I hope the scopes are treating you well.
+
+I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+
+Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+
+Any experiences or thoughts in this direction are much appreciated.
+
+Thanks in advance for your time.
+
+Neil
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+From huisken at mpi-cbg.de  Tue Feb 23 02:10:42 2016
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Tue, 23 Feb 2016 09:10:42 +0100
+Subject: [OpenSPIM] Rotation Axis
+In-Reply-To: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <CB307057-A512-4015-9F71-282521B646E2@mpi-cbg.de>
+
+Hi Neil
+
+here are a few thoughts:
+
+- The rotational axis can be determined very precisely by mounting a cylinder of fluorescent beads, switching on the laser and spinning the sample. You will see a ?snow storm? of beads. You keep on moving your sample in x and z until you see a line of beads that do not move. This is your rotational axis. Above this line you will see beads coming towards the lens, below away (or the other way around). You position this line of beads in your FOV?s center and call this stage position (0,y,0).
+
+- Once you have determined the rotational axis you can find and center your sample in the FOV. (The sample will not necessarily be on the rational axis.) When your sample is in the FOV the stage position tells you how far away from the rational axis you are. Rotating now by an angle theta should go along with a translation along x and z that you can easily calculate with Sin(theta) and Cos(Theta) and the distance from the axis. The sample will now rotate around the FOV?s center. (I do not know how the openSPIM software handles this.)
+
+- You can also build a little translational stage that allows you to reposition the sample with respect to the rotational axis (very important for OPT, useful for SPIM, see Bassi et al, Development 2015). This way you can always position the sample precisely on the rotational axis. 
+
+- The rotational axis is never perfectly vertical (parallel to y). Generally this is not a big deal. If you want to do MV imaging you anyway need to register the data sets.
+
+- Ideally you should have stages that are precise and reliable, i.e. they find the same position even after a few hours. Then you can image a bunch of beads from different directions at the beginning of your experiment, register the beads (Preibisch et al.) and you know once and forever how to register data from these directions. No need to embed ugly beads with your sample. Again, this assumes that you have a nice set of motors.
+
+- It is important to understand that the registration of data is independent of the actual sample?s position. It does not matter if the FEP tube is bent, if the sample is at an angle or off-axis. The transformations necessary to register the data are solely determined by how (well) you have assembled the (hopefully precise) motors.
+
+Hope this helps. 
+
+Jan
+
+
+?
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+Pfotenhauerstr. 108
+01307 Dresden, Germany
+
+www.mpi-cbg.de/huisken
+huisken at mpi-cbg.de <mailto:huisken at mpi-cbg.de>
++49 351 2102487
+
+
+
+
+
+
+> On Feb 23, 2016, at 3:39 AM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi all, I hope the scopes are treating you well.
+> 
+> I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+> 
+> Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+> 
+> Any experiences or thoughts in this direction are much appreciated.
+> 
+> Thanks in advance for your time.
+> 
+> Neil
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160223/378813f1/attachment.html>
+
+From matthew.pearson at igmm.ed.ac.uk  Tue Feb 23 04:05:07 2016
+From: matthew.pearson at igmm.ed.ac.uk (PEARSON Matthew)
+Date: Tue, 23 Feb 2016 10:05:07 +0000
+Subject: [OpenSPIM] Stradus Versalase for OpemSPIM
+Message-ID: <1D08D3CA-E241-42DB-ACA9-83926028B766@exseed.ed.ac.uk>
+
+Hi all,
+
+I was wondering if anyone is using a Stradus Versalase with OpenSPIM and if so i'm interested in knowing what properties of the laser are required and included in the micro-manager config group/preset.  So far i have created a Micro-Manager config file that contains all the required SPIM devices.
+
+Thanks,
+
+Matt
+
+--
+Matt Pearson
+Microscopy Facility
+MRC Human Genetics Unit
+IGMM
+University of Edinburgh
+Crewe Road
+EH4 2XU
+
+
+
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+
+From tnf8 at pitt.edu  Tue Feb 23 09:54:05 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 23 Feb 2016 15:54:05 +0000
+Subject: [OpenSPIM] Stradus Versalase for OpemSPIM
+Message-ID: <D2F1E652.ABAF%tnf8@pitt.edu>
+
+Hi Matt, 
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager: 
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 2/23/16, 5:05 AM, "openspim-bounces at openspim.org on behalf of PEARSON
+Matthew" <openspim-bounces at openspim.org on behalf of
+matthew.pearson at igmm.ed.ac.uk> wrote:
+
+>Hi all,
+>
+>I was wondering if anyone is using a Stradus Versalase with OpenSPIM and
+>if so i'm interested in knowing what properties of the laser are required
+>and included in the micro-manager config group/preset.  So far i have
+>created a Micro-Manager config file that contains all the required SPIM
+>devices.
+>
+>Thanks,
+>
+>Matt
+>
+>--
+>Matt Pearson
+>Microscopy Facility
+>MRC Human Genetics Unit
+>IGMM
+>University of Edinburgh
+>Crewe Road
+>EH4 2XU
+>
+>
+>
+>
+>-- 
+>The University of Edinburgh is a charitable body, registered in
+>Scotland, with registration number SC005336.
+>
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+
+From matthew.pearson at igmm.ed.ac.uk  Tue Feb 23 10:22:23 2016
+From: matthew.pearson at igmm.ed.ac.uk (PEARSON Matthew)
+Date: Tue, 23 Feb 2016 16:22:23 +0000
+Subject: [OpenSPIM] Stradus Versalase for OpemSPIM
+In-Reply-To: <D2F1E652.ABAF%tnf8@pitt.edu>
+References: <D2F1E652.ABAF%tnf8@pitt.edu>
+Message-ID: <AMXPR05MB0224FD1CFA726D5E71A6721EBA40@AMXPR05MB022.eurprd05.prod.outlook.com>
+
+Hi Tim,
+
+Thanks for the info, yes Johannes has been in tooch so i will follow hisand your instructions.
+
+Thanks again,
+
+Matt
+
+________________________________________
+From: Feinstein, Timothy N <tnf8 at pitt.edu>
+Sent: 23 February 2016 15:54
+To: PEARSON Matthew
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Stradus Versalase for OpemSPIM
+
+Hi Matt,
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager:
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 2/23/16, 5:05 AM, "openspim-bounces at openspim.org on behalf of PEARSON
+Matthew" <openspim-bounces at openspim.org on behalf of
+matthew.pearson at igmm.ed.ac.uk> wrote:
+
+>Hi all,
+>
+>I was wondering if anyone is using a Stradus Versalase with OpenSPIM and
+>if so i'm interested in knowing what properties of the laser are required
+>and included in the micro-manager config group/preset.  So far i have
+>created a Micro-Manager config file that contains all the required SPIM
+>devices.
+>
+>Thanks,
+>
+>Matt
+>
+>--
+>Matt Pearson
+>Microscopy Facility
+>MRC Human Genetics Unit
+>IGMM
+>University of Edinburgh
+>Crewe Road
+>EH4 2XU
+>
+>
+>
+>
+>--
+>The University of Edinburgh is a charitable body, registered in
+>Scotland, with registration number SC005336.
+>
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+
+From nantho2 at emory.edu  Wed Feb 24 11:22:08 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 24 Feb 2016 17:22:08 +0000
+Subject: [OpenSPIM] Rotation Axis
+In-Reply-To: <CB307057-A512-4015-9F71-282521B646E2@mpi-cbg.de>
+References: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+	<CB307057-A512-4015-9F71-282521B646E2@mpi-cbg.de>
+Message-ID: <CO2PR05MB681E04894526C134C95B70AECA50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Jan, thanks for the detailed response.
+
+I?ll look forward to taking my first data set soon and I?m sure they?ll be more posts from me to keep people updated :)
+
+And thanks for the Bassi reference.  I like their little xy translation mount.
+
+Neil
+
+
+From: Jan Huisken [mailto:huisken at mpi-cbg.de]
+Sent: Tuesday, February 23, 2016 3:11 AM
+To: Anthony, Neil
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Rotation Axis
+
+Hi Neil
+
+here are a few thoughts:
+
+- The rotational axis can be determined very precisely by mounting a cylinder of fluorescent beads, switching on the laser and spinning the sample. You will see a ?snow storm? of beads. You keep on moving your sample in x and z until you see a line of beads that do not move. This is your rotational axis. Above this line you will see beads coming towards the lens, below away (or the other way around). You position this line of beads in your FOV?s center and call this stage position (0,y,0).
+
+- Once you have determined the rotational axis you can find and center your sample in the FOV. (The sample will not necessarily be on the rational axis.) When your sample is in the FOV the stage position tells you how far away from the rational axis you are. Rotating now by an angle theta should go along with a translation along x and z that you can easily calculate with Sin(theta) and Cos(Theta) and the distance from the axis. The sample will now rotate around the FOV?s center. (I do not know how the openSPIM software handles this.)
+
+- You can also build a little translational stage that allows you to reposition the sample with respect to the rotational axis (very important for OPT, useful for SPIM, see Bassi et al, Development 2015). This way you can always position the sample precisely on the rotational axis.
+
+- The rotational axis is never perfectly vertical (parallel to y). Generally this is not a big deal. If you want to do MV imaging you anyway need to register the data sets.
+
+- Ideally you should have stages that are precise and reliable, i.e. they find the same position even after a few hours. Then you can image a bunch of beads from different directions at the beginning of your experiment, register the beads (Preibisch et al.) and you know once and forever how to register data from these directions. No need to embed ugly beads with your sample. Again, this assumes that you have a nice set of motors.
+
+- It is important to understand that the registration of data is independent of the actual sample?s position. It does not matter if the FEP tube is bent, if the sample is at an angle or off-axis. The transformations necessary to register the data are solely determined by how (well) you have assembled the (hopefully precise) motors.
+
+Hope this helps.
+
+Jan
+
+
+?
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+Pfotenhauerstr. 108
+01307 Dresden, Germany
+
+www.mpi-cbg.de/huisken<http://www.mpi-cbg.de/huisken>
+huisken at mpi-cbg.de<mailto:huisken at mpi-cbg.de>
++49 351 2102487
+
+
+
+
+
+On Feb 23, 2016, at 3:39 AM, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+
+Hi all, I hope the scopes are treating you well.
+
+I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+
+Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+
+Any experiences or thoughts in this direction are much appreciated.
+
+Thanks in advance for your time.
+
+Neil
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160224/6aa5c237/attachment.html>
+
+From 709314090 at qq.com  Mon Feb 29 00:09:58 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 29 Feb 2016 14:09:58 +0800
+Subject: [OpenSPIM] The update error
+Message-ID: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+
+Hi, all
+     I just updated OpenSPIM(64bit) at Help->update. And the error happened when you restart the OpenSPIM. 
+
+
+[ERROR] Module threw exception
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+
+
+
+     If try the update again, it reported
+
+
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+
+
+
+
+
+     Does anyone has this error ?
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/bf56a269/attachment.html>
+
+From 709314090 at qq.com  Mon Feb 29 00:22:24 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 29 Feb 2016 14:22:24 +0800
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+Message-ID: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+
+Hi, all 
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera can be used by its owned software correctly.
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+     
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/a80c97ff/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: hs_err_pid11436.log
+Type: application/octet-stream
+Size: 42921 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/a80c97ff/attachment-0001.obj>
+
+From dw388 at exeter.ac.uk  Mon Feb 29 04:36:56 2016
+From: dw388 at exeter.ac.uk (Windell, Dylan)
+Date: Mon, 29 Feb 2016 10:36:56 +0000
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+In-Reply-To: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+References: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+Message-ID: <AM4PR03MB1475F9AB05B9082774A08092DDBA0@AM4PR03MB1475.eurprd03.prod.outlook.com>
+
+Dear Zheng,
+
+I too use an Andor camera and also had problems in the beginning. I followed all the steps listed here first (http://openspim.org/64bit_OpenSPIM). The drivers work if installed in the OpenSPIM directory and when loading into the config choose the Andor SDK option. The C-states can also be named slightly different in your BIOS settings depending on the make of your PC. The PCI card that Andor provide is essential, you need to run the camera through the card if you have a USB 3.0 model otherwise it definitely won?t load into the configuration.
+
+If you have done all these, I contacted the Andor support and they are extremely helpful in helping out. They also updated the camera firmware through a remote session.
+
+As for the update error, I find downloading a fresh OpenSPIM and updating from scratch sometimes helps.
+
+Kind regards,
+
+Dylan
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of ?
+Sent: 29 February 2016 06:22
+To: openspim
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+
+Hi, all
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera can be used by its owned software correctly.
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com<mailto:709314090 at qq.com>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/f9e09756/attachment.html>
+
+From moon at mpi-cbg.de  Mon Feb 29 07:15:16 2016
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Mon, 29 Feb 2016 14:15:16 +0100
+Subject: [OpenSPIM] SPIM Acquisition Java plugin
+In-Reply-To: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <8C1623C8-2C9B-4757-82A7-D7A698B58EEB@mpi-cbg.de>
+
+Dear Neil,
+
+First of all, I have to say that I am so sorry for the late reply.
+
+I am trying to explain as possible as I can.
+
+> On Feb 18, 2016, at 6:31 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi HongKee, I hope the code is treating you well.
+> 
+> Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called "Why do SPIM and Micro-Manager use different TIFF packages?" that I hijacked at the start of the year.
+> 
+> Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+Unfortunately, SPIMAcquisition builds GUI programmatically and lack of comments on this part. Personally, I would like to remove all the unnecessary GUI parts except ?Acquisition?. However, I cannot check whether all those things are still being used by users or not, and there are differently associated tasks(video recording, etc) depending on which tab selected. My idea to handle your case is that you can build your own Tab including your controls or add ?Customize? button to open your customized panel by ?clicking? event. Then, you can manage to implement your logics there.
+
+> 
+> You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+The first thing for you to look at is "spim.SPIMAcquisition#initUI()? part, which contains long lines of codes for initializing GUI controls. I tried to make it little bit readable by ?//? and following short description for only small parts. Let me know if you have complicated codes in the file. I will explain it.
+
+> 
+> My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+That would be a really good idea if we can bring the modularity from the implemented MM parts and reuse them inside the plugin context. Actually, I have not investigated MM codes enough to be able to judge. However, it would be much nicer and compact if we can reuse the components from the MM packages. It will involve that I need study MM codes more. It is hard to tell you how much time it could be expected.
+
+> 
+> Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+No problem! I will be always on your side. Please, let me know whenever you have questions/feedbacks regarding SPIMAcquisition plugin. I try to do my best to answer you as much as I can.
+
+Best Regards,
+
+HongKee
+
+> 
+> Thanks in advance for your time.
+> 
+> Neil
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/d8b7cc1d/attachment-0001.html>
+
+From moon at mpi-cbg.de  Mon Feb 29 07:20:11 2016
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Mon, 29 Feb 2016 14:20:11 +0100
+Subject: [OpenSPIM] The update error
+In-Reply-To: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+References: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+Message-ID: <6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052@mpi-cbg.de>
+
+Hi Zheng,
+
+Curtis and I have found the bug and I thought we managed it.
+Please, refer http://fiji.sc/bugzilla/show_bug.cgi?id=1214 <http://fiji.sc/bugzilla/show_bug.cgi?id=1214>.
+
+"To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.?
+
+Cheers,
+HongKee
+
+> On Feb 29, 2016, at 7:09 AM, ? <709314090 at qq.com> wrote:
+> 
+> Hi, all
+>      I just updated OpenSPIM(64bit) at Help->update. And the error happened when you restart the OpenSPIM. 
+> 
+> [ERROR] Module threw exception
+> java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+> 
+>      If try the update again, it reported
+> 
+> java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+> 	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+> 
+> 
+>      Does anyone has this error ?
+> 
+> 
+> ------------------
+> Zheng Huang
+> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+> Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+> Tel: 13120836853
+> E-mail: 709314090 at qq.com
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/2ca0266b/attachment.html>
+
+From 709314090 at qq.com  Mon Feb 29 07:27:09 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 29 Feb 2016 21:27:09 +0800
+Subject: [OpenSPIM] =?gb18030?b?u9i4tKO6ICBUaGUgdXBkYXRlIGVycm9y?=
+In-Reply-To: <6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052@mpi-cbg.de>
+References: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+	<6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052@mpi-cbg.de>
+Message-ID: <tencent_510314105498518B519EB8D3@qq.com>
+
+Hi, HongKee
+     Thank you for your reply. And your method worked well.
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ ???? ------------------
+???: "HongKee Moon";<moon at mpi-cbg.de>;
+????: 2016?2?29?(???) ??9:20
+???: "?"<709314090 at qq.com>; 
+??: "openspim"<openspim at openspim.org>; 
+??: Re: [OpenSPIM] The update error
+
+
+
+Hi Zheng,
+
+Curtis and I have found the bug and I thought we managed it.
+Please, refer http://fiji.sc/bugzilla/show_bug.cgi?id=1214.
+
+
+"To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.?
+
+
+Cheers,
+HongKee
+
+On Feb 29, 2016, at 7:09 AM, ? <709314090 at qq.com> wrote:
+
+Hi, all
+     I just updated OpenSPIM(64bit) at Help->update. And the error happened when you restart the OpenSPIM. 
+
+
+[ERROR] Module threw exception
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+
+
+
+     If try the update again, it reported
+
+
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+
+
+
+
+
+     Does anyone has this error ?
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+ 
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/9a624744/attachment-0001.html>
+
+From m.pawlowska at nencki.gov.pl  Mon Feb  8 05:03:57 2016
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Mon, 08 Feb 2016 12:03:57 +0100
+Subject: [OpenSPIM] Fwd: [Bug 1214] java.lang.IllegalStateException when
+ trying to open new script
+Message-ID: <67f4ccd6438d22c242c368770f35cdd3@nencki.gov.pl>
+
+To anybody who was using Fiji with OpenSPIM update site and was 
+experiencing java.lang.IllegalStateException errors lately (when 
+starting fiji and at some other times): it's fixed now, but you need to 
+remove some files manually, see below.
+
+Regards,
+Monika
+
+
+-------- Wiadomość oryginalna --------
+Temat: [Bug 1214] java.lang.IllegalStateException when trying to open 
+new script
+Data: 2016-02-04 17:12
+Od: bugzilla at fiji.sc
+Do: m.pawlowska at nencki.gov.pl
+
+  Curtis Rueden changed bug 1214 [1]
+
+  		WHAT
+  		REMOVED
+  		ADDED
+
+  		Status
+  		CONFIRMED
+  		RESOLVED
+
+  		Resolution
+  		---
+  		FIXED
+
+  COMMENT # 4 [2] ON BUG 1214 [1] FROM CURTIS RUEDEN
+
+After consulting with Hongkee Moon, we discovered that the
+Micro-Manager-dev
+update site, used by the OpenSPIM update site, had many invalid/obsolete
+duplicate libraries present in the plugins/Micro-Manager subfolder.
+
+These duplicates interfered with the normal operations of ImageJ.
+
+I have removed all the duplicates from the Micro-Manager-dev update
+site, so
+this problem should not bite others using OpenSPIM anymore -- at least
+for now.
+
+To repair your local installation, remove all
+plugins/Micro-Manager/scijava-common-*.jar files from your installation.
+Then
+launch OpenSPIM and run the updater (which should now launch
+successfully) to
+update everything else.
+
+And please feel free to reopen this issue if the problem recurs.
+
+-------------------------
+  You are receiving this mail because:
+
+  	* You are on the CC list for the bug.
+  	* You reported the bug.
+
+
+
+Links:
+------
+[1] http://fiji.sc/bugzilla/show_bug.cgi?id=1214
+[2] http://fiji.sc/bugzilla/show_bug.cgi?id=1214#c4
+
+
+
+From m.pawlowska at nencki.gov.pl  Mon Feb  8 05:36:02 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 08 Feb 2016 12:36:02 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+Message-ID: <op.yciiicchahhlbl@pc507-99ff.ibd>
+
+Hi,
+
+I am using an argon laser that only has a manual shutter, and so I'm  
+having problems with photobleaching. Could anybody recommend a low-cost  
+shutter that I could use to reduce bleaching in between stacks?
+
+Best regards,
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+
+From nantho2 at emory.edu  Mon Feb  8 11:29:44 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 8 Feb 2016 17:29:44 +0000
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <op.yciiicchahhlbl@pc507-99ff.ibd>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+Message-ID: <CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Monika
+
+I haven't looked into the details, but thought this kind of thing would be super low cost, and fun too:
+http://www.instructables.com/id/DIY-Laser-Shutter/
+With some thinking you might even be able to control it using the TTL (I believe 3V) from a serial LPT port if you have one.
+
+Neil
+
+-----Original Message-----
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+Sent: Monday, February 08, 2016 6:36 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] what shutter would you recommend?
+
+Hi,
+
+I am using an argon laser that only has a manual shutter, and so I'm having problems with photobleaching. Could anybody recommend a low-cost shutter that I could use to reduce bleaching in between stacks?
+
+Best regards,
+--
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+From nantho2 at emory.edu  Mon Feb  8 11:32:37 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Mon, 8 Feb 2016 17:32:37 +0000
+Subject: [OpenSPIM] Low Melting Point Agarose
+Message-ID: <CO2PR05MB681EAAC4EBA1391729DDCF8ECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all,
+
+I was wondering if anybody has any experience, or knows of any studies, regarding the differences between low melting point agarose gels?  Is it a case of low melting point agarose is low melting point agarose and that's it, or are there subtleties between brands and composition, and/or handling that affect the results?
+
+Thanks in advance for your time.
+
+Neil
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From pitrone at mpi-cbg.de  Mon Feb  8 12:16:36 2016
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Mon, 8 Feb 2016 19:16:36 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <2F26682E-D1F5-4FC4-9DC4-2793C71B600A@mpi-cbg.de>
+
+Picard sells one for around 250 - 300 EUR… (or exactly 285 USD :-P):
+
+http://www.picard-industries.com/products.html#usb-shut <http://www.picard-industries.com/products.html#usb-shut>
+
+
+
+Best Regards,
+Pete
+
+Peter Gabriel Pitrone - DipRMS TechRMS FRMS
+Light Sheet Fluorescence Microscopist and Imaging Specialist
+for Dr. Pavel Tomancak's research group at the
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstraße 108
+01307 Dresden, Saxony
+Germany
+
+
+http://www.mpi-cbg.de/research/research-groups/pavel-tomancak.html &
+http://www.openspim.org
+
+"I KEEP six honest serving-men (they taught me all I knew); their names are What and Why and When and How and Where and Who." Rudyard Kipling - The Elephant's Child
+
+
+
+> On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at EMORY.EDU> wrote:
+> 
+> Hi Monika
+> 
+> I haven't looked into the details, but thought this kind of thing would be super low cost, and fun too:
+> http://www.instructables.com/id/DIY-Laser-Shutter/
+> With some thinking you might even be able to control it using the TTL (I believe 3V) from a serial LPT port if you have one.
+> 
+> Neil
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+> Sent: Monday, February 08, 2016 6:36 AM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] what shutter would you recommend?
+> 
+> Hi,
+> 
+> I am using an argon laser that only has a manual shutter, and so I'm having problems with photobleaching. Could anybody recommend a low-cost shutter that I could use to reduce bleaching in between stacks?
+> 
+> Best regards,
+> --
+> Dr Monika Pawłowska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160208/2e22e7e4/attachment-0002.html>
+
+From guenther at mpi-cbg.de  Mon Feb  8 13:28:12 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 08 Feb 2016 20:28:12 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+
+Hey everyone,
+
+
+the solution Neil suggested works *really* well and is probably as low-cost as you can get. MicroManager is even able to use Arduinos as shutter, see https://micro-manager.org/wiki/Control_laser_shutters_with_Arduino
+
+
+cheers!
+
+
+ulrik
+
+
+
+
+—
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+E-Mail: guenther at mpi-cbg.de
+
+
+
+
+> On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> 
+> Hi Monika
+> 
+> 
+> I haven't looked into the details, but thought this kind of thing would be super low cost, and fun too:
+> http://www.instructables.com/id/DIY-Laser-Shutter/
+> With some thinking you might even be able to control it using the TTL (I believe 3V) from a serial LPT port if you have one.
+> 
+> 
+> Neil
+> 
+> 
+> -----Original Message-----
+> From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+> Sent: Monday, February 08, 2016 6:36 AM
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] what shutter would you recommend?
+> 
+> 
+> Hi,
+> 
+> 
+> I am using an argon laser that only has a manual shutter, and so I'm having problems with photobleaching. Could anybody recommend a low-cost shutter that I could use to reduce bleaching in between stacks?
+> 
+> 
+> Best regards,
+> --
+> Dr Monika Pawłowska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> ________________________________
+> 
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160208/1bbf97fc/attachment-0002.html>
+
+From winfrees at iu.edu  Mon Feb  8 13:32:42 2016
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Mon, 8 Feb 2016 19:32:42 +0000
+Subject: [OpenSPIM] shutter
+Message-ID: <0a784e46baff4cbe9d5cbba793386cc9@bl-cci-exch04.ads.iu.edu>
+
+Monika,
+
+I'd vote for the Arduino approach too-especially for the built in device adapter for micromanager.  A little bit of mucking about with the adapter would get you full control through the plugin.  I used this approach to integrate an AOTF.
+
+Unless you know someone to write the device adapter for the picard shutter (they provided a dll)...
+
+Seth
+
+Seth Winfree
+Indiana Center for Biological Microscopy
+Indiana University Medical Center
+950 West Walnut St, R2-202
+Indianapolis, IN  46202-5116
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160208/fe6b8c36/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Tue Feb  9 07:40:57 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Tue, 09 Feb 2016 14:40:57 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+	<BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+Message-ID: <op.yckiyjafahhlbl@pc507-99ff.ibd>
+
+Thanks for all the advice! I guess I'll try the Arduino then, if it  
+doesn't work I can still buy a proper shutter and maybe use Arduino for  
+something else later.
+
+Monika
+
+W dniu .02.2016 o 20:28 Ulrik Günther <guenther at mpi-cbg.de> pisze:
+
+> Hey everyone,
+>
+> the solution Neil suggested works *really* well and is probably as  
+> low-cost as you can get. MicroManager is even able to use Arduinos as  
+> shutter, >see  
+> https://micro-manager.org/wiki/Control_laser_shutters_with_Arduino
+>
+> cheers!
+>
+> ulrik
+>
+>
+> —Ulrik Günther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+> E-Mail: guenther at mpi-cbg.de
+>
+>> On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+>>
+>> Hi Monika
+>>
+>> I haven't looked into the details, but thought this kind of thing would  
+>> be super low cost, and fun too:
+>> http://www.instructables.com/id/DIY-Laser-Shutter/
+>> With some thinking you might even be able to control it using the TTL  
+>> (I believe 3V) from a serial LPT port if you have one.
+>>
+>> Neil
+>>
+>> -----Original Message-----
+>> From: openspim-bounces at openspim.org  
+>> [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+>> Sent: Monday, February 08, 2016 6:36 AM
+>> To: openspim at openspim.org
+>> Subject: [OpenSPIM] what shutter would you recommend?
+>>
+>> Hi,
+>>
+>> I am using an argon laser that only has a manual shutter, and so I'm  
+>> having problems with photobleaching. Could anybody recommend a low-cost  
+>> >>shutter that I could use to reduce bleaching in between stacks?
+>>
+>> Best regards,
+>> --
+>> Dr Monika Pawłowska
+>> Nencki Institute
+>> 02-093 Warsaw
+>> Pasteura 3
+>> Poland
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>> ________________________________
+>>
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination, distribution
+>> or copying of this message (including any attachments) is strictly
+>> prohibited.
+>>
+>> If you have received this message in error, please contact
+>> the sender by reply e-mail message and destroy all copies of the
+>> original message (including attachments).
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160209/ec725d21/attachment-0002.html>
+
+From brau at ipmc.cnrs.fr  Tue Feb  9 07:55:20 2016
+From: brau at ipmc.cnrs.fr (=?UTF-8?B?RnLDqWTDqXJpYyBCUkFV?=)
+Date: Tue, 9 Feb 2016 14:55:20 +0100
+Subject: [OpenSPIM] what shutter would you recommend?
+In-Reply-To: <op.yckiyjafahhlbl@pc507-99ff.ibd>
+References: <op.yciiicchahhlbl@pc507-99ff.ibd>
+	<CO2PR05MB6810680CC6855733C047C4FECD50@CO2PR05MB681.namprd05.prod.outlook.com>
+	<BF041130-E13C-4195-9B3B-B8AE30910A87@mpi-cbg.de>
+	<op.yckiyjafahhlbl@pc507-99ff.ibd>
+Message-ID: <56B9EFC8.1020208@ipmc.cnrs.fr>
+
+Hi Monika,
+We are looking for shutters here for an other application and found this 
+one : http://marketplace.idexop.com/store/IdexCustom/PartDetails?pId=396
+It's major advantage is that you don't need any controler as it is 
+directly TTL driven. So with an Arduino board, or the serial control as 
+shutter on Micromanager  it should work directly.
+Best regards,
+Frédéric
+
+
+
+Le 09/02/2016 14:40, Monika Pawłowska a écrit :
+> Thanks for all the advice! I guess I'll try the Arduino then, if it 
+> doesn't work I can still buy a proper shutter and maybe use Arduino 
+> for something else later.
+>
+> Monika
+>
+> W dniu .02.2016 o 20:28 Ulrik Günther <guenther at mpi-cbg.de> pisze:
+>
+>     Hey everyone,
+>
+>     the solution Neil suggested works *really* well and is probably as
+>     low-cost as you can get. MicroManager is even able to use Arduinos
+>     as shutter,
+>     see https://micro-manager.org/wiki/Control_laser_shutters_with_Arduino
+>
+>     cheers!
+>
+>     ulrik
+>
+>
+>     —
+>     Ulrik Günther, Dipl.-Phys.
+>     PhD Student
+>     MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+>     Max Planck Institute of Molecular Cell Biology and Genetics
+>     Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>
+>     E-Mail: guenther at mpi-cbg.de
+>
+>>     On Feb 8, 2016, at 6:29 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+>>
+>>     Hi Monika
+>>
+>>     I haven't looked into the details, but thought this kind of thing
+>>     would be super low cost, and fun too:
+>>     http://www.instructables.com/id/DIY-Laser-Shutter/
+>>     With some thinking you might even be able to control it using the
+>>     TTL (I believe 3V) from a serial LPT port if you have one.
+>>
+>>     Neil
+>>
+>>     -----Original Message-----
+>>     From: openspim-bounces at openspim.org
+>>     [mailto:openspim-bounces at openspim.org] On Behalf Of Monika Pawlowska
+>>     Sent: Monday, February 08, 2016 6:36 AM
+>>     To: openspim at openspim.org
+>>     Subject: [OpenSPIM] what shutter would you recommend?
+>>
+>>     Hi,
+>>
+>>     I am using an argon laser that only has a manual shutter, and so
+>>     I'm having problems with photobleaching. Could anybody recommend
+>>     a low-cost shutter that I could use to reduce bleaching in
+>>     between stacks?
+>>
+>>     Best regards,
+>>     --
+>>     Dr Monika Pawłowska
+>>     Nencki Institute
+>>     02-093 Warsaw
+>>     Pasteura 3
+>>     Poland
+>>
+>>     _______________________________________________
+>>     OpenSPIM mailing list
+>>     OpenSPIM at openspim.org
+>>     http://openspim.org/mailman/listinfo/openspim
+>>
+>>     ________________________________
+>>
+>>     This e-mail message (including any attachments) is for the sole
+>>     use of
+>>     the intended recipient(s) and may contain confidential and privileged
+>>     information. If the reader of this message is not the intended
+>>     recipient, you are hereby notified that any dissemination,
+>>     distribution
+>>     or copying of this message (including any attachments) is strictly
+>>     prohibited.
+>>
+>>     If you have received this message in error, please contact
+>>     the sender by reply e-mail message and destroy all copies of the
+>>     original message (including attachments).
+>>     _______________________________________________
+>>     OpenSPIM mailing list
+>>     OpenSPIM at openspim.org
+>>     http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+>
+> -- 
+> Dr Monika Pawłowska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Frédéric Brau
+----------------------------------------------------------------------
+Institut de Pharmacologie Moléculaire et Cellulaire - UMR7275 CNRS/UNS
+660, Route des Lucioles
+06560 VALBONNE
+Courriel : brau at ipmc.cnrs.fr
+Web : http://www.ipmc.cnrs.fr/
+Tel: 33 (0)4 93 95 77 83 Bureau / 77 87 / 77 88 / 77 89 Confocaux
+Fax: 33 (0)4 93 95 77 08
+Plateforme MICA : Microscopie Imagerie Côte d'Azur : http://www.mica-bio.fr
+Réseau Technologique de Microscopie de Fluorescence Multidimensionnelle : http://rtmfm.cnrs.fr/
+------------------------------------------------------------------------------------------------
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160209/9b13d182/attachment-0002.html>
+
+From mredd at cores.utah.edu  Tue Feb  9 16:34:09 2016
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Tue, 9 Feb 2016 22:34:09 +0000
+Subject: [OpenSPIM] z settle time
+Message-ID: <558AD332-47DE-4FAB-B203-370FD612786A@cores.utah.edu>
+
+Since I have two laser lines on my SPIM, I use the Micro-manager multi-dimensional acquisition function rather than the SPIM acquisition window. One problem with this is no z-settle time button. To get around this, I always acquire a transmitted image before the GFP channel to allow for the sample to settle. The problem is that this doubles my file sizes. Is there a simple way to program a delay before acquisition to allow for sample settling after z movement?
+
+thanks
+Michael Redd
+
+
+From arnaud.monnard at unibas.ch  Wed Feb 10 10:14:02 2016
+From: arnaud.monnard at unibas.ch (Arnaud Monnard)
+Date: Wed, 10 Feb 2016 16:14:02 +0000
+Subject: [OpenSPIM] open a structured file on Fiji
+Message-ID: <FEFFB72B93A1D845AD4F36B32158C8401C0A9775@urz-mbx-4.urz.unibas.ch>
+
+Dear all,
+
+I am currently recording light sheet data on a Z.1 from Zeiss and was wondering if anyone would know how open a series of time points or positions or both such that you can play them with the bigdataviewer plugin.
+
+
+Thanks a lot for your answers!
+
+All the best,
+
+Arnaud Monnard,
+PhD candidate,
+Biozentrum, University of Basel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160210/6cb215f8/attachment-0002.html>
+
+From nantho2 at emory.edu  Thu Feb 18 11:31:31 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 18 Feb 2016 17:31:31 +0000
+Subject: [OpenSPIM] SPIM Acquisition Java plugin
+Message-ID: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi HongKee, I hope the code is treating you well.
+
+Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called "Why do SPIM and Micro-Manager use different TIFF packages?" that I hijacked at the start of the year.
+
+Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+
+You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+
+My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+
+Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From nantho2 at emory.edu  Mon Feb 22 20:39:30 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Tue, 23 Feb 2016 02:39:30 +0000
+Subject: [OpenSPIM] Rotation Axis
+Message-ID: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi all, I hope the scopes are treating you well.
+
+I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+
+Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+
+Any experiences or thoughts in this direction are much appreciated.
+
+Thanks in advance for your time.
+
+Neil
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+From huisken at mpi-cbg.de  Tue Feb 23 02:10:42 2016
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Tue, 23 Feb 2016 09:10:42 +0100
+Subject: [OpenSPIM] Rotation Axis
+In-Reply-To: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <CB307057-A512-4015-9F71-282521B646E2@mpi-cbg.de>
+
+Hi Neil
+
+here are a few thoughts:
+
+- The rotational axis can be determined very precisely by mounting a cylinder of fluorescent beads, switching on the laser and spinning the sample. You will see a “snow storm” of beads. You keep on moving your sample in x and z until you see a line of beads that do not move. This is your rotational axis. Above this line you will see beads coming towards the lens, below away (or the other way around). You position this line of beads in your FOV’s center and call this stage position (0,y,0).
+
+- Once you have determined the rotational axis you can find and center your sample in the FOV. (The sample will not necessarily be on the rational axis.) When your sample is in the FOV the stage position tells you how far away from the rational axis you are. Rotating now by an angle theta should go along with a translation along x and z that you can easily calculate with Sin(theta) and Cos(Theta) and the distance from the axis. The sample will now rotate around the FOV’s center. (I do not know how the openSPIM software handles this.)
+
+- You can also build a little translational stage that allows you to reposition the sample with respect to the rotational axis (very important for OPT, useful for SPIM, see Bassi et al, Development 2015). This way you can always position the sample precisely on the rotational axis. 
+
+- The rotational axis is never perfectly vertical (parallel to y). Generally this is not a big deal. If you want to do MV imaging you anyway need to register the data sets.
+
+- Ideally you should have stages that are precise and reliable, i.e. they find the same position even after a few hours. Then you can image a bunch of beads from different directions at the beginning of your experiment, register the beads (Preibisch et al.) and you know once and forever how to register data from these directions. No need to embed ugly beads with your sample. Again, this assumes that you have a nice set of motors.
+
+- It is important to understand that the registration of data is independent of the actual sample’s position. It does not matter if the FEP tube is bent, if the sample is at an angle or off-axis. The transformations necessary to register the data are solely determined by how (well) you have assembled the (hopefully precise) motors.
+
+Hope this helps. 
+
+Jan
+
+
+—
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+Pfotenhauerstr. 108
+01307 Dresden, Germany
+
+www.mpi-cbg.de/huisken
+huisken at mpi-cbg.de <mailto:huisken at mpi-cbg.de>
++49 351 2102487
+
+
+
+
+
+
+> On Feb 23, 2016, at 3:39 AM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi all, I hope the scopes are treating you well.
+> 
+> I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+> 
+> Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+> 
+> Any experiences or thoughts in this direction are much appreciated.
+> 
+> Thanks in advance for your time.
+> 
+> Neil
+> 
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160223/378813f1/attachment-0002.html>
+
+From matthew.pearson at igmm.ed.ac.uk  Tue Feb 23 04:05:07 2016
+From: matthew.pearson at igmm.ed.ac.uk (PEARSON Matthew)
+Date: Tue, 23 Feb 2016 10:05:07 +0000
+Subject: [OpenSPIM] Stradus Versalase for OpemSPIM
+Message-ID: <1D08D3CA-E241-42DB-ACA9-83926028B766@exseed.ed.ac.uk>
+
+Hi all,
+
+I was wondering if anyone is using a Stradus Versalase with OpenSPIM and if so i'm interested in knowing what properties of the laser are required and included in the micro-manager config group/preset.  So far i have created a Micro-Manager config file that contains all the required SPIM devices.
+
+Thanks,
+
+Matt
+
+--
+Matt Pearson
+Microscopy Facility
+MRC Human Genetics Unit
+IGMM
+University of Edinburgh
+Crewe Road
+EH4 2XU
+
+
+
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+
+
+From tnf8 at pitt.edu  Tue Feb 23 09:54:05 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 23 Feb 2016 15:54:05 +0000
+Subject: [OpenSPIM] Stradus Versalase for OpemSPIM
+Message-ID: <D2F1E652.ABAF%tnf8@pitt.edu>
+
+Hi Matt, 
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager: 
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 2/23/16, 5:05 AM, "openspim-bounces at openspim.org on behalf of PEARSON
+Matthew" <openspim-bounces at openspim.org on behalf of
+matthew.pearson at igmm.ed.ac.uk> wrote:
+
+>Hi all,
+>
+>I was wondering if anyone is using a Stradus Versalase with OpenSPIM and
+>if so i'm interested in knowing what properties of the laser are required
+>and included in the micro-manager config group/preset.  So far i have
+>created a Micro-Manager config file that contains all the required SPIM
+>devices.
+>
+>Thanks,
+>
+>Matt
+>
+>--
+>Matt Pearson
+>Microscopy Facility
+>MRC Human Genetics Unit
+>IGMM
+>University of Edinburgh
+>Crewe Road
+>EH4 2XU
+>
+>
+>
+>
+>-- 
+>The University of Edinburgh is a charitable body, registered in
+>Scotland, with registration number SC005336.
+>
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+
+
+From matthew.pearson at igmm.ed.ac.uk  Tue Feb 23 10:22:23 2016
+From: matthew.pearson at igmm.ed.ac.uk (PEARSON Matthew)
+Date: Tue, 23 Feb 2016 16:22:23 +0000
+Subject: [OpenSPIM] Stradus Versalase for OpemSPIM
+In-Reply-To: <D2F1E652.ABAF%tnf8@pitt.edu>
+References: <D2F1E652.ABAF%tnf8@pitt.edu>
+Message-ID: <AMXPR05MB0224FD1CFA726D5E71A6721EBA40@AMXPR05MB022.eurprd05.prod.outlook.com>
+
+Hi Tim,
+
+Thanks for the info, yes Johannes has been in tooch so i will follow hisand your instructions.
+
+Thanks again,
+
+Matt
+
+________________________________________
+From: Feinstein, Timothy N <tnf8 at pitt.edu>
+Sent: 23 February 2016 15:54
+To: PEARSON Matthew
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Stradus Versalase for OpemSPIM
+
+Hi Matt,
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager:
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+
+
+
+On 2/23/16, 5:05 AM, "openspim-bounces at openspim.org on behalf of PEARSON
+Matthew" <openspim-bounces at openspim.org on behalf of
+matthew.pearson at igmm.ed.ac.uk> wrote:
+
+>Hi all,
+>
+>I was wondering if anyone is using a Stradus Versalase with OpenSPIM and
+>if so i'm interested in knowing what properties of the laser are required
+>and included in the micro-manager config group/preset.  So far i have
+>created a Micro-Manager config file that contains all the required SPIM
+>devices.
+>
+>Thanks,
+>
+>Matt
+>
+>--
+>Matt Pearson
+>Microscopy Facility
+>MRC Human Genetics Unit
+>IGMM
+>University of Edinburgh
+>Crewe Road
+>EH4 2XU
+>
+>
+>
+>
+>--
+>The University of Edinburgh is a charitable body, registered in
+>Scotland, with registration number SC005336.
+>
+>
+>_______________________________________________
+>OpenSPIM mailing list
+>OpenSPIM at openspim.org
+>http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+
+
+
+From nantho2 at emory.edu  Wed Feb 24 11:22:08 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 24 Feb 2016 17:22:08 +0000
+Subject: [OpenSPIM] Rotation Axis
+In-Reply-To: <CB307057-A512-4015-9F71-282521B646E2@mpi-cbg.de>
+References: <CO2PR05MB6815BC16D658672603A7B23ECA40@CO2PR05MB681.namprd05.prod.outlook.com>
+	<CB307057-A512-4015-9F71-282521B646E2@mpi-cbg.de>
+Message-ID: <CO2PR05MB681E04894526C134C95B70AECA50@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi Jan, thanks for the detailed response.
+
+I’ll look forward to taking my first data set soon and I’m sure they’ll be more posts from me to keep people updated :)
+
+And thanks for the Bassi reference.  I like their little xy translation mount.
+
+Neil
+
+
+From: Jan Huisken [mailto:huisken at mpi-cbg.de]
+Sent: Tuesday, February 23, 2016 3:11 AM
+To: Anthony, Neil
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Rotation Axis
+
+Hi Neil
+
+here are a few thoughts:
+
+- The rotational axis can be determined very precisely by mounting a cylinder of fluorescent beads, switching on the laser and spinning the sample. You will see a “snow storm” of beads. You keep on moving your sample in x and z until you see a line of beads that do not move. This is your rotational axis. Above this line you will see beads coming towards the lens, below away (or the other way around). You position this line of beads in your FOV’s center and call this stage position (0,y,0).
+
+- Once you have determined the rotational axis you can find and center your sample in the FOV. (The sample will not necessarily be on the rational axis.) When your sample is in the FOV the stage position tells you how far away from the rational axis you are. Rotating now by an angle theta should go along with a translation along x and z that you can easily calculate with Sin(theta) and Cos(Theta) and the distance from the axis. The sample will now rotate around the FOV’s center. (I do not know how the openSPIM software handles this.)
+
+- You can also build a little translational stage that allows you to reposition the sample with respect to the rotational axis (very important for OPT, useful for SPIM, see Bassi et al, Development 2015). This way you can always position the sample precisely on the rotational axis.
+
+- The rotational axis is never perfectly vertical (parallel to y). Generally this is not a big deal. If you want to do MV imaging you anyway need to register the data sets.
+
+- Ideally you should have stages that are precise and reliable, i.e. they find the same position even after a few hours. Then you can image a bunch of beads from different directions at the beginning of your experiment, register the beads (Preibisch et al.) and you know once and forever how to register data from these directions. No need to embed ugly beads with your sample. Again, this assumes that you have a nice set of motors.
+
+- It is important to understand that the registration of data is independent of the actual sample’s position. It does not matter if the FEP tube is bent, if the sample is at an angle or off-axis. The transformations necessary to register the data are solely determined by how (well) you have assembled the (hopefully precise) motors.
+
+Hope this helps.
+
+Jan
+
+
+—
+Jan Huisken
+Head of Max Planck Research Group
+
+Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)
+Pfotenhauerstr. 108
+01307 Dresden, Germany
+
+www.mpi-cbg.de/huisken<http://www.mpi-cbg.de/huisken>
+huisken at mpi-cbg.de<mailto:huisken at mpi-cbg.de>
++49 351 2102487
+
+
+
+
+
+On Feb 23, 2016, at 3:39 AM, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+
+Hi all, I hope the scopes are treating you well.
+
+I have a general question for all.  I haven't yet taken any data (almost everything is in place and nearly ready to roll), but I'm curious to know about the axis of rotation when rotating the sample to different views.
+
+Maybe I'm over thinking this, or the effects of being off axis are smaller than I imagine, but I'm really curious to know how people are experiencing and counteracting this part of the acquisition.  In a perfect world my theta would rotate around an axis parallel to the y axis and the sample would be placed on the rotation axis.  I could then translate the axis into the center of my camera and z-stack and rotate from there.  In reality, I'm guessing here as you know, you'd have an axis of rotation that's tilted to some degree, and the sample would likely be off center.  This would lead to samples moving in an arc when rotating, and xyz translation required to bring the region of interest back into view on each rotation.
+
+Any experiences or thoughts in this direction are much appreciated.
+
+Thanks in advance for your time.
+
+Neil
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160224/6aa5c237/attachment-0002.html>
+
+From 709314090 at qq.com  Mon Feb 29 00:09:58 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 29 Feb 2016 14:09:58 +0800
+Subject: [OpenSPIM] The update error
+Message-ID: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+
+Hi, all
+     I just updated OpenSPIM(64bit) at Help->update. And the error happened when you restart the OpenSPIM. 
+
+
+[ERROR] Module threw exception
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+
+
+
+     If try the update again, it reported
+
+
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+
+
+
+
+
+     Does anyone has this error ?
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/bf56a269/attachment-0002.html>
+
+From 709314090 at qq.com  Mon Feb 29 00:22:24 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 29 Feb 2016 14:22:24 +0800
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+Message-ID: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+
+Hi, all 
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera can be used by its owned software correctly.
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+     
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/a80c97ff/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: hs_err_pid11436.log
+Type: application/octet-stream
+Size: 42921 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/a80c97ff/attachment-0002.obj>
+
+From dw388 at exeter.ac.uk  Mon Feb 29 04:36:56 2016
+From: dw388 at exeter.ac.uk (Windell, Dylan)
+Date: Mon, 29 Feb 2016 10:36:56 +0000
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+In-Reply-To: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+References: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+Message-ID: <AM4PR03MB1475F9AB05B9082774A08092DDBA0@AM4PR03MB1475.eurprd03.prod.outlook.com>
+
+Dear Zheng,
+
+I too use an Andor camera and also had problems in the beginning. I followed all the steps listed here first (http://openspim.org/64bit_OpenSPIM). The drivers work if installed in the OpenSPIM directory and when loading into the config choose the Andor SDK option. The C-states can also be named slightly different in your BIOS settings depending on the make of your PC. The PCI card that Andor provide is essential, you need to run the camera through the card if you have a USB 3.0 model otherwise it definitely won’t load into the configuration.
+
+If you have done all these, I contacted the Andor support and they are extremely helpful in helping out. They also updated the camera firmware through a remote session.
+
+As for the update error, I find downloading a fresh OpenSPIM and updating from scratch sometimes helps.
+
+Kind regards,
+
+Dylan
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of ?
+Sent: 29 February 2016 06:22
+To: openspim
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+
+Hi, all
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera can be used by its owned software correctly.
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com<mailto:709314090 at qq.com>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/f9e09756/attachment-0002.html>
+
+From moon at mpi-cbg.de  Mon Feb 29 07:15:16 2016
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Mon, 29 Feb 2016 14:15:16 +0100
+Subject: [OpenSPIM] SPIM Acquisition Java plugin
+In-Reply-To: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+References: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+Message-ID: <8C1623C8-2C9B-4757-82A7-D7A698B58EEB@mpi-cbg.de>
+
+Dear Neil,
+
+First of all, I have to say that I am so sorry for the late reply.
+
+I am trying to explain as possible as I can.
+
+> On Feb 18, 2016, at 6:31 PM, Anthony, Neil <nantho2 at emory.edu> wrote:
+> 
+> Hi HongKee, I hope the code is treating you well.
+> 
+> Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called "Why do SPIM and Micro-Manager use different TIFF packages?" that I hijacked at the start of the year.
+> 
+> Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+Unfortunately, SPIMAcquisition builds GUI programmatically and lack of comments on this part. Personally, I would like to remove all the unnecessary GUI parts except “Acquisition”. However, I cannot check whether all those things are still being used by users or not, and there are differently associated tasks(video recording, etc) depending on which tab selected. My idea to handle your case is that you can build your own Tab including your controls or add “Customize” button to open your customized panel by “clicking” event. Then, you can manage to implement your logics there.
+
+> 
+> You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+The first thing for you to look at is "spim.SPIMAcquisition#initUI()” part, which contains long lines of codes for initializing GUI controls. I tried to make it little bit readable by “//“ and following short description for only small parts. Let me know if you have complicated codes in the file. I will explain it.
+
+> 
+> My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+That would be a really good idea if we can bring the modularity from the implemented MM parts and reuse them inside the plugin context. Actually, I have not investigated MM codes enough to be able to judge. However, it would be much nicer and compact if we can reuse the components from the MM packages. It will involve that I need study MM codes more. It is hard to tell you how much time it could be expected.
+
+> 
+> Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+No problem! I will be always on your side. Please, let me know whenever you have questions/feedbacks regarding SPIMAcquisition plugin. I try to do my best to answer you as much as I can.
+
+Best Regards,
+
+HongKee
+
+> 
+> Thanks in advance for your time.
+> 
+> Neil
+> 
+> 
+> ________________________________
+> 
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+> 
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/d8b7cc1d/attachment-0002.html>
+
+From moon at mpi-cbg.de  Mon Feb 29 07:20:11 2016
+From: moon at mpi-cbg.de (HongKee Moon)
+Date: Mon, 29 Feb 2016 14:20:11 +0100
+Subject: [OpenSPIM] The update error
+In-Reply-To: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+References: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+Message-ID: <6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052@mpi-cbg.de>
+
+Hi Zheng,
+
+Curtis and I have found the bug and I thought we managed it.
+Please, refer http://fiji.sc/bugzilla/show_bug.cgi?id=1214 <http://fiji.sc/bugzilla/show_bug.cgi?id=1214>.
+
+"To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.”
+
+Cheers,
+HongKee
+
+> On Feb 29, 2016, at 7:09 AM, 政 <709314090 at qq.com> wrote:
+> 
+> Hi, all
+>      I just updated OpenSPIM(64bit) at Help->update. And the error happened when you restart the OpenSPIM. 
+> 
+> [ERROR] Module threw exception
+> java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+> 
+>      If try the update again, it reported
+> 
+> java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+> 	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+> 
+> 
+>      Does anyone has this error ?
+> 
+> 
+> ------------------
+> Zheng Huang
+> State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+> Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+> Tel: 13120836853
+> E-mail: 709314090 at qq.com
+>  
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/2ca0266b/attachment-0002.html>
+
+From 709314090 at qq.com  Mon Feb 29 07:27:09 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 29 Feb 2016 21:27:09 +0800
+Subject: [OpenSPIM] =?gb18030?b?u9i4tKO6ICBUaGUgdXBkYXRlIGVycm9y?=
+In-Reply-To: <6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052@mpi-cbg.de>
+References: <tencent_037FD8253A5E02915AC4DDB9@qq.com>
+	<6C7AC1E1-818B-4FFE-9A47-FAC3DD3BD052@mpi-cbg.de>
+Message-ID: <tencent_510314105498518B519EB8D3@qq.com>
+
+Hi, HongKee
+     Thank you for your reply. And your method worked well.
+
+
+All best!
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ 原始邮件 ------------------
+发件人: "HongKee Moon";<moon at mpi-cbg.de>;
+发送时间: 2016年2月29日(星期一) 晚上9:20
+收件人: "政"<709314090 at qq.com>; 
+抄送: "openspim"<openspim at openspim.org>; 
+主题: Re: [OpenSPIM] The update error
+
+
+
+Hi Zheng,
+
+Curtis and I have found the bug and I thought we managed it.
+Please, refer http://fiji.sc/bugzilla/show_bug.cgi?id=1214.
+
+
+"To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.”
+
+
+Cheers,
+HongKee
+
+On Feb 29, 2016, at 7:09 AM, 政 <709314090 at qq.com> wrote:
+
+Hi, all
+     I just updated OpenSPIM(64bit) at Help->update. And the error happened when you restart the OpenSPIM. 
+
+
+[ERROR] Module threw exception
+java.lang.IllegalStateException: Context already injected: net.imagej.updater.CheckForUpdates#commandService
+
+
+
+     If try the update again, it reported
+
+
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Context already injected: net.imagej.ui.swing.updater.ImageJUpdater#statusService
+	at net.imagej.legacy.LegacyService.runLegacyCompatibleCommand(LegacyService.java:274)
+
+
+
+
+
+     Does anyone has this error ?
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+ 
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160229/9a624744/attachment-0002.html>
+

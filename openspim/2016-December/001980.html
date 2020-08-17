@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] mutli-channel OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20mutli-channel%20OpenSPIM&In-Reply-To=%3CD46B53E1.15919%25tnf8%40pitt.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001979.html">
+   <LINK REL="Next"  HREF="001981.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] mutli-channel OpenSPIM</H1>
+    <B>Feinstein, Timothy N</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20mutli-channel%20OpenSPIM&In-Reply-To=%3CD46B53E1.15919%25tnf8%40pitt.edu%3E"
+       TITLE="[OpenSPIM] mutli-channel OpenSPIM">tnf8 at pitt.edu
+       </A><BR>
+    <I>Mon Dec  5 16:31:14 CST 2016</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="001979.html">[OpenSPIM] mutli-channel OpenSPIM
+</A></li>
+        <LI>Next message (by thread): <A HREF="001981.html">[OpenSPIM] 50/50 beam splitter?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1980">[ date ]</a>
+              <a href="thread.html#1980">[ thread ]</a>
+              <a href="subject.html#1980">[ subject ]</a>
+              <a href="author.html#1980">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Kurt,
+
+I pasted below a response to a similar question posed earlier to the list.  I am quite happy with a four-laser launch made by Vortran in California (no commercial interest).  The only downside is that OpenSpim software cannot currently control multi-laser launches.  I currently make do with Micro-Manager, a 3D SpaceNavigator mouse for coarse sample movement and the software that comes with the Picard motorized stage for fine movement.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+---------
+
+Hi Matt,
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager:
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+From: OpenSPIM &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>&gt;&gt; on behalf of &quot;Weiss, Kurt&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">KWeiss at morgridge.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">KWeiss at morgridge.org</A>&gt;&gt;
+Date: Monday, December 5, 2016 at 5:22 PM
+To: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;&gt;
+Subject: [OpenSPIM] mutli-channel OpenSPIM
+
+Hi,
+
+We are interested in adding more laser channels to our current OpenSPIM. There seem to be three options: (1) multi-channel lauch, (2) laser combiner unit, (3) combine with mirror + dichroic.
+
+If we go for option 1: Does anyone have experience with mult-channel modules which integrate well with the OpenSPIM platform? (Besides the Stradus Versalase I have seen mentioned on this forum, though updates on this unit might be helpful if anyone has strong feelings).
+
+Any other comments on options 2 or 3 would also be appreciated. A few concerns have been addressed here:
+<A HREF="http://openspim.org/pipermail/openspim/2013-December/001268.html">http://openspim.org/pipermail/openspim/2013-December/001268.html</A>
+
+Thanks,
+Kurt
+_______________________
+Kurt Weiss, Ph.D.
+Postdoctoral Associate
+Huisken Group, Medical Engineering
+Morgridge Institute for Research
+330 N Charter St.
+Madison, WI 53715
+<A HREF="http://openspim.org/mailman/listinfo/openspim">KWeiss at morgridge.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">KWeiss at morgridge.org</A>&gt;
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20161205/4babeaf7/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20161205/4babeaf7/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="001979.html">[OpenSPIM] mutli-channel OpenSPIM
+</A></li>
+	<LI>Next message (by thread): <A HREF="001981.html">[OpenSPIM] 50/50 beam splitter?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1980">[ date ]</a>
+              <a href="thread.html#1980">[ thread ]</a>
+              <a href="subject.html#1980">[ subject ]</a>
+              <a href="author.html#1980">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Anti-drift update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift%20update&In-Reply-To=%3C53F55DC0.6050607%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000505.html">
+   <LINK REL="Next"  HREF="000506.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Anti-drift update</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift%20update&In-Reply-To=%3C53F55DC0.6050607%40wisc.edu%3E"
+       TITLE="[OpenSPIM] Anti-drift update">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Aug 20 21:47:28 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000505.html">[OpenSPIM] Anti-drift update
+</A></li>
+        <LI>Next message: <A HREF="000506.html">[OpenSPIM] Picard stage error after update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#514">[ date ]</a>
+              <a href="thread.html#514">[ thread ]</a>
+              <a href="subject.html#514">[ subject ]</a>
+              <a href="author.html#514">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Aurelia,
+
+Interestingly, the 'suggested' diffs didn't seem to be lining up all 
+that often -- and there's certainly enough shape information there for 
+the phase correlation to have corrected for the displacement... It may 
+be that a change in imglib2 has caused these effects, but it could just 
+as easily be that the suggested diffs are being written improperly. 
+Perhaps the phase correlation algorithm has changed somehow, and it's 
+picking non-ideal correlation shifts? (This could possibly cause the 
+entirely-automatic corrections to under-correct.)
+
+A few other ideas to check:
+
+- Is it possible the camera or its firmware is reversing the image 
+horizontally (as some webcams do, to produce the 'mirror' effect)? And 
+is your camera mounted right-side up? i.e. is the top of the frame in 
+the direction of the top of the sample chamber?
+- Did the flip or mirror device settings have an effect? (I don't know 
+that the PicardStage device adapter respects the 'flip' setting; a quirk 
+in the MM programming made this next to impossible last time I tried.)
+- How's the contrast/signal when looking at your sample?
+
+This would be a lot less confusing if our earlier anti-drift tests had 
+shown the same behavior! ;-)
+
+As a final thought, could you try guiding the anti-drift through an 
+entire acquisition? It would help narrow the search by determining if 
+the automatic (phase-correlation) correction is to blame for this issue, 
+or if the anti-drift in general is at fault.
+
+Luke
+
+On 8/12/2014 9:25 AM, Aurelia Honerkamp-Smith wrote:
+&gt;<i> Hi Luke,
+</I>&gt;<i>
+</I>&gt;<i> Thanks!  I'll send you the anti-drift debugging images in a moment.  I 
+</I>&gt;<i> measured pixel size by taking a picture of my calibration grid and 
+</I>&gt;<i> counting pixels per line.  I only vaguely verified its accuracy by 
+</I>&gt;<i> checking that the displacement of the embryo in the composite image I 
+</I>&gt;<i> sent before was about the same as the correction listed in the 
+</I>&gt;<i> anti-drift log file, and since they match approximately, I didn't look 
+</I>&gt;<i> further.  I could use the &quot;move a bead with the stage&quot; method to check 
+</I>&gt;<i> this more carefully, but it seems to be about right.
+</I>&gt;<i> The test is very repeatable, and in the case of making a small 
+</I>&gt;<i> correction to either Y or Z the stage moves to the suggested location 
+</I>&gt;<i> and then doesn't move significantly afterwards.
+</I>&gt;<i> Let me know if you think of some more helpful test I could do.  I'm 
+</I>&gt;<i> not certain that there isn't some hardware oddity causing this, but so 
+</I>&gt;<i> far I haven't figured out what it could be.
+</I>&gt;<i>
+</I>&gt;<i> Aurelia
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Tue, Aug 12, 2014 at 3:47 AM, Luke Stuyvenberg 
+</I>&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A> &lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>     Hi Aurelia,
+</I>&gt;<i>
+</I>&gt;<i>     Sorry about the delay; I've just moved across the States, and ran
+</I>&gt;<i>     into enormous trouble getting my internet connection established.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>     On 7/31/2014 10:21 AM, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i>
+</I>&gt;<i>         If I make a correction to Y or Z, I get the result I expect;
+</I>&gt;<i>         the image moves the right distance, in the right direction,
+</I>&gt;<i>         and then doesn't move again in the last 3 frames. But if I
+</I>&gt;<i>         make a correction in X, the stage moves to the correct
+</I>&gt;<i>         position, but then on the following frame moves 2x the
+</I>&gt;<i>         previous distance, and then next time moves 2x the previous
+</I>&gt;<i>         one again, until it leaves the field of view.  The attached
+</I>&gt;<i>         image shows z-projections of subsequent frames, with red being
+</I>&gt;<i>         the first one, green the second, and blue is third frame.  If
+</I>&gt;<i>         I correct to the left instead of right, the embryo continues
+</I>&gt;<i>         off to the left instead.  Setting the stage or the camera to
+</I>&gt;<i>         &quot;transpose mirror X&quot; in the tools/property browser changes
+</I>&gt;<i>         whether the live view mouse control behaves correctly, but
+</I>&gt;<i>         doesn't alter this behavior.
+</I>&gt;<i>         A sample log file showing the anti-drift corrections:
+</I>&gt;<i>         ...
+</I>&gt;<i>
+</I>&gt;<i>     It's interesting to me that Y isn't affected -- I presume you've
+</I>&gt;<i>     tried this same test with a slight Y correction? And how did you
+</I>&gt;<i>     measure your pixel size/have you verified its accuracy? Is this
+</I>&gt;<i>     same test repeatable? I've been working on a test to validate the
+</I>&gt;<i>     behavior of the anti-drift, and while it's not yet advanced enough
+</I>&gt;<i>     for me to be certain there's no software fault here, I haven't
+</I>&gt;<i>     been able to obtain these dramatic jerks so far.
+</I>&gt;<i>
+</I>&gt;<i>     When anti-drift is on, the software produces a directory
+</I>&gt;<i>     containing some images useful for debugging problems with it -- if
+</I>&gt;<i>     it's not too large, could you compress and send those files? (If
+</I>&gt;<i>     they're more than a few megabytes, you can probably send it
+</I>&gt;<i>     directly to me to spare other users' inboxes.) They might also
+</I>&gt;<i>     help identify any problems.
+</I>&gt;<i>
+</I>&gt;<i>     Hope these questions help shed some light on the issue,
+</I>&gt;<i>     Luke
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>     On 7/31/2014 10:21 AM, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i>
+</I>&gt;<i>         Hi,
+</I>&gt;<i>         I'm still having trouble with the anti-drift function, and I'm
+</I>&gt;<i>         not sure how to proceed.  To explain the trouble, I made the
+</I>&gt;<i>         following test: I set up a 5-time point acquisition with only
+</I>&gt;<i>         one view, turned on the anti-drift, and made a manual
+</I>&gt;<i>         correction to first one, then made no more adjustments after
+</I>&gt;<i>         that.  The frames are 100 seconds apart, so no significant
+</I>&gt;<i>         actual drift should be occurring.
+</I>&gt;<i>         If I make a correction to Y or Z, I get the result I expect;
+</I>&gt;<i>         the image moves the right distance, in the right direction,
+</I>&gt;<i>         and then doesn't move again in the last 3 frames. But if I
+</I>&gt;<i>         make a correction in X, the stage moves to the correct
+</I>&gt;<i>         position, but then on the following frame moves 2x the
+</I>&gt;<i>         previous distance, and then next time moves 2x the previous
+</I>&gt;<i>         one again, until it leaves the field of view.  The attached
+</I>&gt;<i>         image shows z-projections of subsequent frames, with red being
+</I>&gt;<i>         the first one, green the second, and blue is third frame.  If
+</I>&gt;<i>         I correct to the left instead of right, the embryo continues
+</I>&gt;<i>         off to the left instead.  Setting the stage or the camera to
+</I>&gt;<i>         &quot;transpose mirror X&quot; in the tools/property browser changes
+</I>&gt;<i>         whether the live view mouse control behaves correctly, but
+</I>&gt;<i>         doesn't alter this behavior.
+</I>&gt;<i>         A sample log file showing the anti-drift corrections:
+</I>&gt;<i>         TP 0 view 0: Offset: {8.6508; 0; 0}  (this x correction is the
+</I>&gt;<i>         one I have put in)
+</I>&gt;<i>         TP 0 view 0: Offset: {16.46055; -0.2493; 0}
+</I>&gt;<i>         TP 0 view 0: Offset: {34.48305; 0.2403; 0}
+</I>&gt;<i>         TP 0 view 0: Offset: {69.08625; -1.08135; 0}
+</I>&gt;<i>
+</I>&gt;<i>         It seems like there is a sign error of some kind, but I can't
+</I>&gt;<i>         figure out a way to change my configuration to correct it.  I
+</I>&gt;<i>         have already switched the X and Y serial numbers in my
+</I>&gt;<i>         configuration file, which improved things a little (previously
+</I>&gt;<i>         this test resulted in the embryo traveling in circles).
+</I>&gt;<i>         Any ideas?
+</I>&gt;<i>         Thanks,
+</I>&gt;<i>         Aurelia
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140820/c922e0d2/attachment.html">http://openspim.org/pipermail/openspim/attachments/20140820/c922e0d2/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000505.html">[OpenSPIM] Anti-drift update
+</A></li>
+	<LI>Next message: <A HREF="000506.html">[OpenSPIM] Picard stage error after update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#514">[ date ]</a>
+              <a href="thread.html#514">[ thread ]</a>
+              <a href="subject.html#514">[ subject ]</a>
+              <a href="author.html#514">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

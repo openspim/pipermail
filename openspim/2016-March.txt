@@ -1,0 +1,1010 @@
+From 709314090 at qq.com  Tue Mar  1 05:50:51 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Tue, 1 Mar 2016 19:50:51 +0800
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+In-Reply-To: <AM4PR03MB1475F9AB05B9082774A08092DDBA0@AM4PR03MB1475.eurprd03.prod.outlook.com>
+References: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+	<AM4PR03MB1475F9AB05B9082774A08092DDBA0@AM4PR03MB1475.eurprd03.prod.outlook.com>
+Message-ID: <tencent_4DE2645A00B59633393B380F@qq.com>
+
+Dear Dylan,
+      Thank you for your answer, and the problem was solved.
+      Besides, the update problem was answerd by Hongkee:
+
+
+      "Curtis and I have found the bug and I thought we managed it.
+       Please, refer http://fiji.sc/bugzilla/show_bug.cgi?id=1214.
+
+
+       "To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your         installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.?
+
+
+       I tried it and it worked well. Hope this message useful to you.
+
+
+Kind regards,
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ Original ------------------
+From:  "Windell, Dylan";<dw388 at exeter.ac.uk>;
+Date:  Mon, Feb 29, 2016 06:36 PM
+To:  "?"<709314090 at qq.com>; "openspim"<openspim at openspim.org>; 
+
+Subject:  RE: [OpenSPIM] MicroManager error when configure an andor camera
+
+
+
+  
+Dear Zheng,
+ 
+ 
+ 
+I too use an Andor camera and also had problems in the beginning. I followed all the steps listed here first (http://openspim.org/64bit_OpenSPIM).  The drivers work if installed in the OpenSPIM directory and when loading into the config choose the Andor SDK option. The C-states can also be named slightly different in your BIOS settings depending on the make of your PC. The PCI card that Andor provide  is essential, you need to run the camera through the card if you have a USB 3.0 model otherwise it definitely won?t load into the configuration.
+ 
+ 
+ 
+If you have done all these, I contacted the Andor support and they are extremely helpful in helping out. They also updated the camera firmware through a remote  session.
+ 
+ 
+ 
+As for the update error, I find downloading a fresh OpenSPIM and updating from scratch sometimes helps.
+ 
+ 
+ 
+Kind regards,
+ 
+
+ Dylan
+ 
+ 
+ 
+From: openspim-bounces at openspim.org  [mailto:openspim-bounces at openspim.org] On Behalf Of ?
+ Sent: 29 February 2016 06:22
+ To: openspim
+ Subject: [OpenSPIM] MicroManager error when configure an andor camera
+ 
+ 
+  
+Hi, all 
+ 
+  
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera  can be used by its owned software correctly.
+ 
+  
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+ 
+  
+     
+ 
+   
+------------------
+ 
+   
+Zheng Huang
+ 
+  
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+ 
+  
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+ 
+  
+Tel: 13120836853
+ 
+  
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160301/fe304481/attachment.html>
+
+From tnf8 at pitt.edu  Wed Mar  2 11:33:55 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 2 Mar 2016 17:33:55 +0000
+Subject: [OpenSPIM] Z axis wheel
+Message-ID: <D2FC8E30.BC5C%tnf8@pitt.edu>
+
+Hello,
+
+Has anyone tried using a digital focus wheel to control one of the axes of the Picard stage in OpenSpim/Micro-Manager?  In theory a joystick with a wheel on it would be even better.  Any experience appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160302/9fd6e9a5/attachment.html>
+
+From winfrees at iu.edu  Wed Mar  2 11:54:15 2016
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Wed, 2 Mar 2016 17:54:15 +0000
+Subject: [OpenSPIM] Z axis wheel
+In-Reply-To: <D2FC8E30.BC5C%tnf8@pitt.edu>
+References: <D2FC8E30.BC5C%tnf8@pitt.edu>
+Message-ID: <0EC46576-5055-49AE-93B9-A43D5B6C32EB@iu.edu>
+
+Something like this?  Like a lot of things, still needs to be finished, micromanager through arduino and openspim integration...
+
+Looks cool though.
+
+Seth
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image1.JPG
+Type: image/jpeg
+Size: 668435 bytes
+Desc: image1.JPG
+URL: <http://openspim.org/pipermail/openspim/attachments/20160302/2a3456d6/attachment-0001.jpe>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: ATT00001.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20160302/2a3456d6/attachment-0001.txt>
+
+From tnf8 at pitt.edu  Thu Mar  3 08:18:18 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Thu, 3 Mar 2016 14:18:18 +0000
+Subject: [OpenSPIM] Z axis wheel
+In-Reply-To: <D2FC8E30.BC5C%tnf8@pitt.edu>
+References: <D2FC8E30.BC5C%tnf8@pitt.edu>
+Message-ID: <5881849018a847e5b10c7d154ed6bbd0@pitt-prodx-02.univ.pitt.edu>
+
+Hi folks,
+
+Jean-Francois Depatie from Picard just let me know that the new version of their controller software is fully compatible with a 3D controller called 'Space Mouse'.  Apparently you just plug it in and the updated stage GUI detects it.
+
+http://www.3dconnexion.com/products/spacemouse/spacemousewireless.html?gclid=CIimr8rNossCFQgaaQodu1cIpg
+
+I just ordered one and will report back how it works.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Dept. of Developmental Biology
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Wednesday, March 02, 2016 12:34 PM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Z axis wheel
+
+Hello,
+
+Has anyone tried using a digital focus wheel to control one of the axes of the Picard stage in OpenSpim/Micro-Manager?  In theory a joystick with a wheel on it would be even better.  Any experience appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160303/416eef5d/attachment.html>
+
+From nantho2 at emory.edu  Thu Mar  3 12:33:17 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 3 Mar 2016 18:33:17 +0000
+Subject: [OpenSPIM] SPIM Acquisition Java plugin
+In-Reply-To: <8C1623C8-2C9B-4757-82A7-D7A698B58EEB@mpi-cbg.de>
+References: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+	<8C1623C8-2C9B-4757-82A7-D7A698B58EEB@mpi-cbg.de>
+Message-ID: <CO2PR05MB6819C3ED359F32F901ADDD1ECBD0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi HongKee, no worries on the delayed replies.  It kinda matches the pace at which I?m able to get to these things anyway.
+
+I found the section on the GUI, and I?ll take a look at those details as things progress.
+
+If you happen to draw or create and graphical representations of the code on your travels through its overhaul I?d be very interested in seeing those.  I think a block diagram of the basic steps needed to perform an acquisition might help us to implement the different and varying aspects of the MMCore for multiple hardware setups.  Just a thought, if that?s something that might help for you.
+
+I?ll keep you posted. Thanks for your time and your help.
+Neil
+
+
+
+
+From: HongKee Moon [mailto:moon at mpi-cbg.de]
+Sent: Monday, February 29, 2016 8:15 AM
+To: Anthony, Neil
+Cc: openspim at openspim.org
+Subject: Re: SPIM Acquisition Java plugin
+
+Dear Neil,
+
+First of all, I have to say that I am so sorry for the late reply.
+
+I am trying to explain as possible as I can.
+
+On Feb 18, 2016, at 6:31 PM, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+
+Hi HongKee, I hope the code is treating you well.
+
+Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called "Why do SPIM and Micro-Manager use different TIFF packages?" that I hijacked at the start of the year.
+
+Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+Unfortunately, SPIMAcquisition builds GUI programmatically and lack of comments on this part. Personally, I would like to remove all the unnecessary GUI parts except ?Acquisition?. However, I cannot check whether all those things are still being used by users or not, and there are differently associated tasks(video recording, etc) depending on which tab selected. My idea to handle your case is that you can build your own Tab including your controls or add ?Customize? button to open your customized panel by ?clicking? event. Then, you can manage to implement your logics there.
+
+
+
+You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+The first thing for you to look at is "spim.SPIMAcquisition#initUI()? part, which contains long lines of codes for initializing GUI controls. I tried to make it little bit readable by ?//? and following short description for only small parts. Let me know if you have complicated codes in the file. I will explain it.
+
+
+My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+That would be a really good idea if we can bring the modularity from the implemented MM parts and reuse them inside the plugin context. Actually, I have not investigated MM codes enough to be able to judge. However, it would be much nicer and compact if we can reuse the components from the MM packages. It will involve that I need study MM codes more. It is hard to tell you how much time it could be expected.
+
+
+
+Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+No problem! I will be always on your side. Please, let me know whenever you have questions/feedbacks regarding SPIMAcquisition plugin. I try to do my best to answer you as much as I can.
+
+Best Regards,
+
+HongKee
+
+
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de<http://www.mpi-cbg.de>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160303/ad13d208/attachment-0001.html>
+
+From tnf8 at pitt.edu  Mon Mar 21 14:34:02 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 21 Mar 2016 19:34:02 +0000
+Subject: [OpenSPIM] Suboptimal acquisition speed
+Message-ID: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+
+Hello all,
+
+Does anyone have experience troubleshooting frame rate problems?  We have a Hamamatsu Flash 4.0 v2 that is theoretically capable of 100 FPS with a CameraLink card, but we get about half that using Micro-Manager/openSPIM.  I have spent some time with Hamamatsu engineers and as far as we can tell the hardware works fine; we can reach expected speeds with Hamamatsu's diagnostic software (XCAP).  Rather it seems like MM is inefficiently communicating with the API, possibly not 'expecting' or 'asking for' frames at the same interval that they are being delivered from the camera.  I really do not want to pay huge premium for Metamorph unless we absolutely have to, especially without knowing whether that will help.
+
+Thanks for any suggestions.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160321/b52302e9/attachment.html>
+
+From pitrone at mpi-cbg.de  Tue Mar 22 12:35:12 2016
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Tue, 22 Mar 2016 18:35:12 +0100 (CET)
+Subject: [OpenSPIM] Suboptimal acquisition speed
+In-Reply-To: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+References: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+Message-ID: <650262325.266233.1458668112567.JavaMail.zimbra@mpi-cbg.de>
+
+Hello Tim,
+
+Two questions need answering first:
+
+1.) Are you in "Lightsheet mode"?!
+
+This would "half" your frame rate, as the camera would read in only one direction (top to bottom) instead of bi-directional (from the center to the top and bottom).
+
+And
+
+2.) Assuming you are using the Picard stage: What is your motor dwell time set to?
+
+As a standard setting it is set to 10 ms as to settle the sample from swinging, which could be your issue if you already set your exposure to 10 ms...
+
+I hope that helps explain the problems you could be facing, if not good luck finding what else it could be.
+
+
+Regards,
+Pete
+
+----- Original Message -----
+From: "Feinstein, Timothy N" <tnf8 at pitt.edu>
+To: openspim at openspim.org
+Sent: Monday, March 21, 2016 7:34:02 PM
+Subject: [OpenSPIM] Suboptimal acquisition speed
+
+Hello all, 
+
+
+
+Does anyone have experience troubleshooting frame rate problems? We have a Hamamatsu Flash 4.0 v2 that is theoretically capable of 100 FPS with a CameraLink card, but we get about half that using Micro-Manager/openSPIM. I have spent some time with Hamamatsu engineers and as far as we can tell the hardware works fine; we can reach expected speeds with Hamamatsu?s diagnostic software (XCAP). Rather it seems like MM is inefficiently communicating with the API, possibly not ?expecting? or ?asking for? frames at the same interval that they are being delivered from the camera. I really do not want to pay huge premium for Metamorph unless we absolutely have to, especially without knowing whether that will help. 
+
+
+
+Thanks for any suggestions. 
+
+
+Best, 
+
+
+
+
+Tim 
+
+
+
+Timothy Feinstein, Ph.D. 
+
+Research Scientist 
+
+University of Pittsburgh Department of Developmental Biology 
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+From tnf8 at pitt.edu  Tue Mar 22 12:45:43 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 22 Mar 2016 17:45:43 +0000
+Subject: [OpenSPIM] Suboptimal acquisition speed
+In-Reply-To: <650262325.266233.1458668112567.JavaMail.zimbra@mpi-cbg.de>
+References: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+	<650262325.266233.1458668112567.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <40c6ab96a5334d5bb66b0641b133e1fe@pitt-prodx-02.univ.pitt.edu>
+
+Thanks Pete, no, after consulting with Hamamatsu engineers I realized that "lighsheet mode" is exclusively for instruments that use a scanned Bessel beam or Airy beam.  Standard cylinder-lens light sheets have to use standard acquisition modes.  In this case I keep the stage still during my acquisitions so the camera can run at its theoretical max speed.  
+
+After exploring some a bit it looks like our FLASH4 v2 only gives its theoretical max FPS in 'streaming mode', which means it dumps data straight from the camera into memory and then saves it out of the circular buffer when it's done.  I can set that up in the proprietary Hamamatsu software (HCImage Live) but I cannot figure out how to do it in Micro-Manager 1.4.3/openSPIM.  Other people have pulled it off in the past by writing beanshell scripts.  
+
+BTW, earlier I promised to report on the Space Mouse.  It works fantastic with the Picard stage.  Using it speeds up our acquisitions dramatically relative to moving the stage with sliders in the openSPIM plugin.  My only complaint is that the rotation is far too coarse; no matter what the settings I cannot get it to rotate less than 20 degrees at a time.  Picard recommended that I buy a kit to upgrade from the O-ring to a toothed belt to get more rotational precision.  I will post a note if that helps.  
+
+All the best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-----Original Message-----
+From: Peter Gabriel Pitrone [mailto:pitrone at mpi-cbg.de] 
+Sent: Tuesday, March 22, 2016 1:35 PM
+To: Feinstein, Timothy N
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Suboptimal acquisition speed
+
+Hello Tim,
+
+Two questions need answering first:
+
+1.) Are you in "Lightsheet mode"?!
+
+This would "half" your frame rate, as the camera would read in only one direction (top to bottom) instead of bi-directional (from the center to the top and bottom).
+
+And
+
+2.) Assuming you are using the Picard stage: What is your motor dwell time set to?
+
+As a standard setting it is set to 10 ms as to settle the sample from swinging, which could be your issue if you already set your exposure to 10 ms...
+
+I hope that helps explain the problems you could be facing, if not good luck finding what else it could be.
+
+
+Regards,
+Pete
+
+----- Original Message -----
+From: "Feinstein, Timothy N" <tnf8 at pitt.edu>
+To: openspim at openspim.org
+Sent: Monday, March 21, 2016 7:34:02 PM
+Subject: [OpenSPIM] Suboptimal acquisition speed
+
+Hello all, 
+
+
+
+Does anyone have experience troubleshooting frame rate problems? We have a Hamamatsu Flash 4.0 v2 that is theoretically capable of 100 FPS with a CameraLink card, but we get about half that using Micro-Manager/openSPIM. I have spent some time with Hamamatsu engineers and as far as we can tell the hardware works fine; we can reach expected speeds with Hamamatsu?s diagnostic software (XCAP). Rather it seems like MM is inefficiently communicating with the API, possibly not ?expecting? or ?asking for? frames at the same interval that they are being delivered from the camera. I really do not want to pay huge premium for Metamorph unless we absolutely have to, especially without knowing whether that will help. 
+
+
+
+Thanks for any suggestions. 
+
+
+Best, 
+
+
+
+
+Tim 
+
+
+
+Timothy Feinstein, Ph.D. 
+
+Research Scientist 
+
+University of Pittsburgh Department of Developmental Biology 
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+From mredd at cores.utah.edu  Wed Mar 23 16:16:08 2016
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Wed, 23 Mar 2016 21:16:08 +0000
+Subject: [OpenSPIM] GPU for de-convolution
+Message-ID: <AC410E7D-0C6A-4899-B71A-89CA1CAB36AB@cores.utah.edu>
+
+We have been unable to use the GPU to speed up deconvolution of multi-view images. Has anyone de-bugged the CUDA code to be compatible with CUDA 7/7.5?
+
+thanks
+Michael Redd
+
+From 709314090 at qq.com  Tue Mar  1 05:50:51 2016
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Tue, 1 Mar 2016 19:50:51 +0800
+Subject: [OpenSPIM] MicroManager error when configure an andor camera
+In-Reply-To: <AM4PR03MB1475F9AB05B9082774A08092DDBA0@AM4PR03MB1475.eurprd03.prod.outlook.com>
+References: <tencent_20A6857A560E1D527E3F53D0@qq.com>
+	<AM4PR03MB1475F9AB05B9082774A08092DDBA0@AM4PR03MB1475.eurprd03.prod.outlook.com>
+Message-ID: <tencent_4DE2645A00B59633393B380F@qq.com>
+
+Dear Dylan,
+      Thank you for your answer, and the problem was solved.
+      Besides, the update problem was answerd by Hongkee:
+
+
+      "Curtis and I have found the bug and I thought we managed it.
+       Please, refer http://fiji.sc/bugzilla/show_bug.cgi?id=1214.
+
+
+       "To repair your local installation, remove all plugins/Micro-Manager/scijava-common-*.jar files from your         installation. Then launch OpenSPIM and run the updater (which should now launch successfully) to update everything else.”
+
+
+       I tried it and it worked well. Hope this message useful to you.
+
+
+Kind regards,
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ Original ------------------
+From:  "Windell, Dylan";<dw388 at exeter.ac.uk>;
+Date:  Mon, Feb 29, 2016 06:36 PM
+To:  "政"<709314090 at qq.com>; "openspim"<openspim at openspim.org>; 
+
+Subject:  RE: [OpenSPIM] MicroManager error when configure an andor camera
+
+
+
+  
+Dear Zheng,
+ 
+ 
+ 
+I too use an Andor camera and also had problems in the beginning. I followed all the steps listed here first (http://openspim.org/64bit_OpenSPIM).  The drivers work if installed in the OpenSPIM directory and when loading into the config choose the Andor SDK option. The C-states can also be named slightly different in your BIOS settings depending on the make of your PC. The PCI card that Andor provide  is essential, you need to run the camera through the card if you have a USB 3.0 model otherwise it definitely won’t load into the configuration.
+ 
+ 
+ 
+If you have done all these, I contacted the Andor support and they are extremely helpful in helping out. They also updated the camera firmware through a remote  session.
+ 
+ 
+ 
+As for the update error, I find downloading a fresh OpenSPIM and updating from scratch sometimes helps.
+ 
+ 
+ 
+Kind regards,
+ 
+
+ Dylan
+ 
+ 
+ 
+From: openspim-bounces at openspim.org  [mailto:openspim-bounces at openspim.org] On Behalf Of ?
+ Sent: 29 February 2016 06:22
+ To: openspim
+ Subject: [OpenSPIM] MicroManager error when configure an andor camera
+ 
+ 
+  
+Hi, all 
+ 
+  
+     Does anyone use andor camera? I wanted to change my camera to an andor camera. But the micro-manager crashed when I configured the camera.  The SPIM software is 64bit. And there is a error log(see the attachment). Besides, the camera  can be used by its owned software correctly.
+ 
+  
+     I tried to update the OpenSPIM. However, the OpenSPIM reported error every time when you started it, and could not be updated.
+ 
+  
+     
+ 
+   
+------------------
+ 
+   
+Zheng Huang
+ 
+  
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+ 
+  
+Address: No.390, Qinghe Road, Jiading, Shanghai 201800 China
+ 
+  
+Tel: 13120836853
+ 
+  
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160301/fe304481/attachment-0002.html>
+
+From tnf8 at pitt.edu  Wed Mar  2 11:33:55 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 2 Mar 2016 17:33:55 +0000
+Subject: [OpenSPIM] Z axis wheel
+Message-ID: <D2FC8E30.BC5C%tnf8@pitt.edu>
+
+Hello,
+
+Has anyone tried using a digital focus wheel to control one of the axes of the Picard stage in OpenSpim/Micro-Manager?  In theory a joystick with a wheel on it would be even better.  Any experience appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160302/9fd6e9a5/attachment-0002.html>
+
+From winfrees at iu.edu  Wed Mar  2 11:54:15 2016
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Wed, 2 Mar 2016 17:54:15 +0000
+Subject: [OpenSPIM] Z axis wheel
+In-Reply-To: <D2FC8E30.BC5C%tnf8@pitt.edu>
+References: <D2FC8E30.BC5C%tnf8@pitt.edu>
+Message-ID: <0EC46576-5055-49AE-93B9-A43D5B6C32EB@iu.edu>
+
+Something like this?  Like a lot of things, still needs to be finished, micromanager through arduino and openspim integration...
+
+Looks cool though.
+
+Seth
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: image1.JPG
+Type: image/jpeg
+Size: 668435 bytes
+Desc: image1.JPG
+URL: <http://openspim.org/pipermail/openspim/attachments/20160302/2a3456d6/attachment-0002.jpe>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: ATT00001.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20160302/2a3456d6/attachment-0002.txt>
+
+From tnf8 at pitt.edu  Thu Mar  3 08:18:18 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Thu, 3 Mar 2016 14:18:18 +0000
+Subject: [OpenSPIM] Z axis wheel
+In-Reply-To: <D2FC8E30.BC5C%tnf8@pitt.edu>
+References: <D2FC8E30.BC5C%tnf8@pitt.edu>
+Message-ID: <5881849018a847e5b10c7d154ed6bbd0@pitt-prodx-02.univ.pitt.edu>
+
+Hi folks,
+
+Jean-Francois Depatie from Picard just let me know that the new version of their controller software is fully compatible with a 3D controller called 'Space Mouse'.  Apparently you just plug it in and the updated stage GUI detects it.
+
+http://www.3dconnexion.com/products/spacemouse/spacemousewireless.html?gclid=CIimr8rNossCFQgaaQodu1cIpg
+
+I just ordered one and will report back how it works.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Dept. of Developmental Biology
+
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Wednesday, March 02, 2016 12:34 PM
+To: openspim at openspim.org
+Subject: [OpenSPIM] Z axis wheel
+
+Hello,
+
+Has anyone tried using a digital focus wheel to control one of the axes of the Picard stage in OpenSpim/Micro-Manager?  In theory a joystick with a wheel on it would be even better.  Any experience appreciated.
+
+Thanks and all the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160303/416eef5d/attachment-0002.html>
+
+From nantho2 at emory.edu  Thu Mar  3 12:33:17 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 3 Mar 2016 18:33:17 +0000
+Subject: [OpenSPIM] SPIM Acquisition Java plugin
+In-Reply-To: <8C1623C8-2C9B-4757-82A7-D7A698B58EEB@mpi-cbg.de>
+References: <CO2PR05MB6811444ECEB62F35270F009ECAF0@CO2PR05MB681.namprd05.prod.outlook.com>
+	<8C1623C8-2C9B-4757-82A7-D7A698B58EEB@mpi-cbg.de>
+Message-ID: <CO2PR05MB6819C3ED359F32F901ADDD1ECBD0@CO2PR05MB681.namprd05.prod.outlook.com>
+
+Hi HongKee, no worries on the delayed replies.  It kinda matches the pace at which I’m able to get to these things anyway.
+
+I found the section on the GUI, and I’ll take a look at those details as things progress.
+
+If you happen to draw or create and graphical representations of the code on your travels through its overhaul I’d be very interested in seeing those.  I think a block diagram of the basic steps needed to perform an acquisition might help us to implement the different and varying aspects of the MMCore for multiple hardware setups.  Just a thought, if that’s something that might help for you.
+
+I’ll keep you posted. Thanks for your time and your help.
+Neil
+
+
+
+
+From: HongKee Moon [mailto:moon at mpi-cbg.de]
+Sent: Monday, February 29, 2016 8:15 AM
+To: Anthony, Neil
+Cc: openspim at openspim.org
+Subject: Re: SPIM Acquisition Java plugin
+
+Dear Neil,
+
+First of all, I have to say that I am so sorry for the late reply.
+
+I am trying to explain as possible as I can.
+
+On Feb 18, 2016, at 6:31 PM, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+
+Hi HongKee, I hope the code is treating you well.
+
+Sorry for the delay; I've been pulled in a couple of different directions recently, but have been coming back to the plugin code a little more now.  For completeness, I've cc'd the openspim list, and for reference our last conversation was part of a thread called "Why do SPIM and Micro-Manager use different TIFF packages?" that I hijacked at the start of the year.
+
+Thanks for the details on SPIMTestDrive section of the code.  It's great to now have the option to step through and figure things out.  One thing that I'm not sure about is the location of the code that builds the GUI form.  In other code I see the option to show the design of the form in Netbeans, but I don't see that here.  Is the GUI programmatically created without IDE assistance?  If so, how hard would it be to pull that into a form design type file in Netbeans?  It really speeds up my understanding of the code if I can quickly reference the buttons and sliders etc. in the exploration and debug stages.
+Unfortunately, SPIMAcquisition builds GUI programmatically and lack of comments on this part. Personally, I would like to remove all the unnecessary GUI parts except “Acquisition”. However, I cannot check whether all those things are still being used by users or not, and there are differently associated tasks(video recording, etc) depending on which tab selected. My idea to handle your case is that you can build your own Tab including your controls or add “Customize” button to open your customized panel by “clicking” event. Then, you can manage to implement your logics there.
+
+
+
+You had previously asked about my direction in the plugin, and a large part of it would be to make the interface more user friendly and graphical.  My setup will be part of our core facility and I hope to have researchers here using the software once things are up and rolling.  If the GUI it is more programmatic, could you point me to that structure/code/... and maybe I could start from there.
+The first thing for you to look at is "spim.SPIMAcquisition#initUI()” part, which contains long lines of codes for initializing GUI controls. I tried to make it little bit readable by “//“ and following short description for only small parts. Let me know if you have complicated codes in the file. I will explain it.
+
+
+My second direction would be to add the option of different hardware to the plugin.  Would it be possible to bring some sort of modularity to the GUI, that draws from the MM hardware settings and available core options?  Alternatively, might it be easier to add to the multidimensional acquisition panel in MM by including a rotation section?  You could then call that panel from the SPIM Acquisition plugin.
+That would be a really good idea if we can bring the modularity from the implemented MM parts and reuse them inside the plugin context. Actually, I have not investigated MM codes enough to be able to judge. However, it would be much nicer and compact if we can reuse the components from the MM packages. It will involve that I need study MM codes more. It is hard to tell you how much time it could be expected.
+
+
+
+Sorry for the my somewhat fragmented questions/suggestions.  I'm sure it'll make more sense once I get into the details, and I appreciate any pointers you can offer as I get started.
+No problem! I will be always on your side. Please, let me know whenever you have questions/feedbacks regarding SPIMAcquisition plugin. I try to do my best to answer you as much as I can.
+
+Best Regards,
+
+HongKee
+
+
+
+Thanks in advance for your time.
+
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de<http://www.mpi-cbg.de>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160303/ad13d208/attachment-0002.html>
+
+From tnf8 at pitt.edu  Mon Mar 21 14:34:02 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 21 Mar 2016 19:34:02 +0000
+Subject: [OpenSPIM] Suboptimal acquisition speed
+Message-ID: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+
+Hello all,
+
+Does anyone have experience troubleshooting frame rate problems?  We have a Hamamatsu Flash 4.0 v2 that is theoretically capable of 100 FPS with a CameraLink card, but we get about half that using Micro-Manager/openSPIM.  I have spent some time with Hamamatsu engineers and as far as we can tell the hardware works fine; we can reach expected speeds with Hamamatsu's diagnostic software (XCAP).  Rather it seems like MM is inefficiently communicating with the API, possibly not 'expecting' or 'asking for' frames at the same interval that they are being delivered from the camera.  I really do not want to pay huge premium for Metamorph unless we absolutely have to, especially without knowing whether that will help.
+
+Thanks for any suggestions.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160321/b52302e9/attachment-0002.html>
+
+From pitrone at mpi-cbg.de  Tue Mar 22 12:35:12 2016
+From: pitrone at mpi-cbg.de (Peter Gabriel Pitrone)
+Date: Tue, 22 Mar 2016 18:35:12 +0100 (CET)
+Subject: [OpenSPIM] Suboptimal acquisition speed
+In-Reply-To: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+References: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+Message-ID: <650262325.266233.1458668112567.JavaMail.zimbra@mpi-cbg.de>
+
+Hello Tim,
+
+Two questions need answering first:
+
+1.) Are you in "Lightsheet mode"?!
+
+This would "half" your frame rate, as the camera would read in only one direction (top to bottom) instead of bi-directional (from the center to the top and bottom).
+
+And
+
+2.) Assuming you are using the Picard stage: What is your motor dwell time set to?
+
+As a standard setting it is set to 10 ms as to settle the sample from swinging, which could be your issue if you already set your exposure to 10 ms...
+
+I hope that helps explain the problems you could be facing, if not good luck finding what else it could be.
+
+
+Regards,
+Pete
+
+----- Original Message -----
+From: "Feinstein, Timothy N" <tnf8 at pitt.edu>
+To: openspim at openspim.org
+Sent: Monday, March 21, 2016 7:34:02 PM
+Subject: [OpenSPIM] Suboptimal acquisition speed
+
+Hello all, 
+
+
+
+Does anyone have experience troubleshooting frame rate problems? We have a Hamamatsu Flash 4.0 v2 that is theoretically capable of 100 FPS with a CameraLink card, but we get about half that using Micro-Manager/openSPIM. I have spent some time with Hamamatsu engineers and as far as we can tell the hardware works fine; we can reach expected speeds with Hamamatsu’s diagnostic software (XCAP). Rather it seems like MM is inefficiently communicating with the API, possibly not ‘expecting’ or ‘asking for’ frames at the same interval that they are being delivered from the camera. I really do not want to pay huge premium for Metamorph unless we absolutely have to, especially without knowing whether that will help. 
+
+
+
+Thanks for any suggestions. 
+
+
+Best, 
+
+
+
+
+Tim 
+
+
+
+Timothy Feinstein, Ph.D. 
+
+Research Scientist 
+
+University of Pittsburgh Department of Developmental Biology 
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+From tnf8 at pitt.edu  Tue Mar 22 12:45:43 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Tue, 22 Mar 2016 17:45:43 +0000
+Subject: [OpenSPIM] Suboptimal acquisition speed
+In-Reply-To: <650262325.266233.1458668112567.JavaMail.zimbra@mpi-cbg.de>
+References: <fc7c4e3b790c4f5cb7e5135c87e3c762@pitt-prodx-02.univ.pitt.edu>
+	<650262325.266233.1458668112567.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <40c6ab96a5334d5bb66b0641b133e1fe@pitt-prodx-02.univ.pitt.edu>
+
+Thanks Pete, no, after consulting with Hamamatsu engineers I realized that "lighsheet mode" is exclusively for instruments that use a scanned Bessel beam or Airy beam.  Standard cylinder-lens light sheets have to use standard acquisition modes.  In this case I keep the stage still during my acquisitions so the camera can run at its theoretical max speed.  
+
+After exploring some a bit it looks like our FLASH4 v2 only gives its theoretical max FPS in 'streaming mode', which means it dumps data straight from the camera into memory and then saves it out of the circular buffer when it's done.  I can set that up in the proprietary Hamamatsu software (HCImage Live) but I cannot figure out how to do it in Micro-Manager 1.4.3/openSPIM.  Other people have pulled it off in the past by writing beanshell scripts.  
+
+BTW, earlier I promised to report on the Space Mouse.  It works fantastic with the Picard stage.  Using it speeds up our acquisitions dramatically relative to moving the stage with sliders in the openSPIM plugin.  My only complaint is that the rotation is far too coarse; no matter what the settings I cannot get it to rotate less than 20 degrees at a time.  Picard recommended that I buy a kit to upgrade from the O-ring to a toothed belt to get more rotational precision.  I will post a note if that helps.  
+
+All the best, 
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+-----Original Message-----
+From: Peter Gabriel Pitrone [mailto:pitrone at mpi-cbg.de] 
+Sent: Tuesday, March 22, 2016 1:35 PM
+To: Feinstein, Timothy N
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Suboptimal acquisition speed
+
+Hello Tim,
+
+Two questions need answering first:
+
+1.) Are you in "Lightsheet mode"?!
+
+This would "half" your frame rate, as the camera would read in only one direction (top to bottom) instead of bi-directional (from the center to the top and bottom).
+
+And
+
+2.) Assuming you are using the Picard stage: What is your motor dwell time set to?
+
+As a standard setting it is set to 10 ms as to settle the sample from swinging, which could be your issue if you already set your exposure to 10 ms...
+
+I hope that helps explain the problems you could be facing, if not good luck finding what else it could be.
+
+
+Regards,
+Pete
+
+----- Original Message -----
+From: "Feinstein, Timothy N" <tnf8 at pitt.edu>
+To: openspim at openspim.org
+Sent: Monday, March 21, 2016 7:34:02 PM
+Subject: [OpenSPIM] Suboptimal acquisition speed
+
+Hello all, 
+
+
+
+Does anyone have experience troubleshooting frame rate problems? We have a Hamamatsu Flash 4.0 v2 that is theoretically capable of 100 FPS with a CameraLink card, but we get about half that using Micro-Manager/openSPIM. I have spent some time with Hamamatsu engineers and as far as we can tell the hardware works fine; we can reach expected speeds with Hamamatsu’s diagnostic software (XCAP). Rather it seems like MM is inefficiently communicating with the API, possibly not ‘expecting’ or ‘asking for’ frames at the same interval that they are being delivered from the camera. I really do not want to pay huge premium for Metamorph unless we absolutely have to, especially without knowing whether that will help. 
+
+
+
+Thanks for any suggestions. 
+
+
+Best, 
+
+
+
+
+Tim 
+
+
+
+Timothy Feinstein, Ph.D. 
+
+Research Scientist 
+
+University of Pittsburgh Department of Developmental Biology 
+
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+From mredd at cores.utah.edu  Wed Mar 23 16:16:08 2016
+From: mredd at cores.utah.edu (Michael Redd)
+Date: Wed, 23 Mar 2016 21:16:08 +0000
+Subject: [OpenSPIM] GPU for de-convolution
+Message-ID: <AC410E7D-0C6A-4899-B71A-89CA1CAB36AB@cores.utah.edu>
+
+We have been unable to use the GPU to speed up deconvolution of multi-view images. Has anyone de-bugged the CUDA code to be compatible with CUDA 7/7.5?
+
+thanks
+Michael Redd
+
+

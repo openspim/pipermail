@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] 64-bit Fiji Memory Limit Issue
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%2064-bit%20Fiji%20Memory%20Limit%20Issue&In-Reply-To=%3C1429543916741.90268%40ucl.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000687.html">
+   <LINK REL="Next"  HREF="000692.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] 64-bit Fiji Memory Limit Issue</H1>
+    <B>Roberts, Thomas</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%2064-bit%20Fiji%20Memory%20Limit%20Issue&In-Reply-To=%3C1429543916741.90268%40ucl.ac.uk%3E"
+       TITLE="[OpenSPIM] 64-bit Fiji Memory Limit Issue">thomas.roberts.10 at ucl.ac.uk
+       </A><BR>
+    <I>Mon Apr 20 10:31:57 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000687.html">[OpenSPIM] HiRes Picard stage: the solution!
+</A></li>
+        <LI>Next message: <A HREF="000692.html">[OpenSPIM] 64-bit Fiji Memory Limit Issue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#691">[ date ]</a>
+              <a href="thread.html#691">[ thread ]</a>
+              <a href="subject.html#691">[ subject ]</a>
+              <a href="author.html#691">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi everyone,
+
+
+This is probably a wider issue with Fiji than OpenSPIM, but I was wondering if anyone else encountered the same problem we are having.
+
+
+For reference, we are running 64-bit Windows 7 on a monster machine with 64GB RAM, an Intel Xeon E5-2650 and an nVidia Quadro 5000.
+
+
+We generally run the 32-bit version of OpenSPIM for acquisition, but opening large image datasets (such as the ones in the Registation tutorial: <A HREF="http://openspim.org/Registration">http://openspim.org/Registration</A>) results in Fiji reaching its memory limit. Because of this, I downloaded the 64-bit version of OpenSPIM/MM/Fiji in an attempt to increase the memory limit.
+
+
+If I set the memory limit to a large value (20,000 MB) by going to Edit &gt; Options &gt; Memory &amp; Threads, I get the same error message, as below:
+
+
+Loading C:\Users\SPIM\Documents\OpenSPIM Dresden Data\tiffs\\spim_TL05_Angle0.tif
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&lt;Out of memory&gt;
+&lt;All available memory (505MB) has been&gt;
+&lt;used. To make more available, use the&gt;
+&lt;Edit&gt;Options&gt;Memory &amp; Threads command.&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>
+This is really odd, because if I go to Help &gt; About ImageJ, it says that 13MB out of 20000MB (&lt;1%) is in use. Put another way, Fiji accepts that I want to increase the memory limit, but it still doesn't use more than 505MB of memory.
+
+As a sanity check, I have installed 64-bit Fiji on my office computer and I can open the Registration tutorial data there, but my personal computer is really slow at manipulating the large datasets!
+
+Has anyone else experienced this problem? Or does anyone have any suggestions for how to solve the issue?
+
+It's really frustrating as our behemoth PC refuses to do what it was bought to do!
+
+Many thanks in advance for any replies.
+Tom Roberts
+
+-----
+Research Associate
+UCL Centre for Advanced Biomedical Imaging
+<A HREF="http://openspim.org/mailman/listinfo/openspim">thomas.roberts.10 at ucl.ac.uk</A>
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150420/2805dfd5/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000687.html">[OpenSPIM] HiRes Picard stage: the solution!
+</A></li>
+	<LI>Next message: <A HREF="000692.html">[OpenSPIM] 64-bit Fiji Memory Limit Issue
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#691">[ date ]</a>
+              <a href="thread.html#691">[ thread ]</a>
+              <a href="subject.html#691">[ subject ]</a>
+              <a href="author.html#691">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

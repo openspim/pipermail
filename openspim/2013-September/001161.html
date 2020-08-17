@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SPIMage plugin_Stack at this Z plus
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIMage%20plugin_Stack%20at%20this%20Z%20plus&In-Reply-To=%3COFA0943AB6.34771316-ONC1257BF6.00356819-C1257BF6.00356820%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001158.html">
+   <LINK REL="Next"  HREF="001156.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SPIMage plugin_Stack at this Z plus</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SPIMage%20plugin_Stack%20at%20this%20Z%20plus&In-Reply-To=%3COFA0943AB6.34771316-ONC1257BF6.00356819-C1257BF6.00356820%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] SPIMage plugin_Stack at this Z plus">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Mon Sep 30 04:43:20 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001158.html">[OpenSPIM] SPIMage plugin_Stack at this Z plus
+</A></li>
+        <LI>Next message: <A HREF="001156.html">[OpenSPIM] SPIMage plugin_Stack at this Z plus
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1161">[ date ]</a>
+              <a href="thread.html#1161">[ thread ]</a>
+              <a href="subject.html#1161">[ subject ]</a>
+              <a href="author.html#1161">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE> Hi Johannes,
+
+Now I have taken the threaddump after pressing the button that gets stuck
+and I didn't find anything about a dead lock.
+
+Anyway I post the threaddump here, maybe you can find something since I
+really don't what every line means.
+
+2013-09-30 11:29:41
+Full thread dump Java HotSpot(TM) Client VM (19.1-b02 mixed mode):
+
+&quot;AWT-EventQueue-0&quot; prio=6 tid=0x066a4800 nid=0x15e0 in Object.wait() [0x6376f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    at java.lang.Object.wait(Object.java:485)
+    at java.awt.EventQueue.getNextEvent(EventQueue.java:485)
+    - locked &lt;0x1258db18&gt; (a java.awt.EventQueue)
+    at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:236)
+    at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+    at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+    at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+   Locked ownable synchronizers:
+    - None
+
+&quot;RMI TCP Connection(2)-10.84.201.117&quot; daemon prio=6 tid=0x09c7c000 nid=0x123c runnable [0x63d6f000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.SocketInputStream.socketRead0(Native Method)
+    at java.net.SocketInputStream.read(SocketInputStream.java:129)
+    at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+    - locked &lt;0x12da32e8&gt; (a java.io.BufferedInputStream)
+    at java.io.FilterInputStream.read(FilterInputStream.java:66)
+    at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+    at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+    - &lt;0x12da49b8&gt; (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+&quot;JMX server connection timeout 60&quot; daemon prio=6 tid=0x082ae400 nid=0x120c in Object.wait() [0x63b6f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+    at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:150)
+    - locked &lt;0x136d62c0&gt; (a [I)
+    at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+    - None
+
+&quot;RMI Scheduler(0)&quot; daemon prio=6 tid=0x07f0b400 nid=0x5f8 waiting on condition [0x6396f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for  &lt;0x1259f038&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:198)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2025)
+    at java.util.concurrent.DelayQueue.take(DelayQueue.java:164)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:609)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:602)
+    at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+    at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+    - None
+
+&quot;RMI TCP Accept-0&quot; daemon prio=6 tid=0x09e1b400 nid=0x179c runnable [0x633ef000]
+   java.lang.Thread.State: RUNNABLE
+    at java.net.PlainSocketImpl.socketAccept(Native Method)
+    at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+    - locked &lt;0x12905d18&gt; (a java.net.SocksSocketImpl)
+    at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+    at java.net.ServerSocket.accept(ServerSocket.java:430)
+    at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:34)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+    at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+    at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+    - None
+
+&quot;Display thread&quot; prio=6 tid=0x09e6e400 nid=0xd84 waiting on condition [0x630ef000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for  &lt;0x133dd148&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+    at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+    at org.micromanager.MMStudioMainFrame$9.run(MMStudioMainFrame.java:681)
+
+   Locked ownable synchronizers:
+    - None
+
+&quot;zSelector&quot; prio=6 tid=0x09e1fc00 nid=0x1390 in Object.wait() [0x62eef000]
+   java.lang.Thread.State: WAITING (on object monitor)
+    at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.Object.wait(Object.java:485)
+ÿÿÿ at ij.gui.StackWindow.run(StackWindow.java:205)
+ÿÿÿ - locked &lt;0x1339f840&gt; (a org.micromanager.acquisition.VirtualAcquisitionDisplay$DisplayWindow)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Timer-2&quot; prio=6 tid=0x0a0c1400 nid=0xeb8 in Object.wait() [0x62aef000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.Object.wait(Object.java:485)
+ÿÿÿ at java.util.TimerThread.mainLoop(Timer.java:483)
+ÿÿÿ - locked &lt;0x12a44bc0&gt; (a java.util.TaskQueue)
+ÿÿÿ at java.util.TimerThread.run(Timer.java:462)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Timer-1&quot; prio=6 tid=0x0a0c3c00 nid=0x1564 in Object.wait() [0x628ef000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.Object.wait(Object.java:485)
+ÿÿÿ at java.util.TimerThread.mainLoop(Timer.java:483)
+ÿÿÿ - locked &lt;0x12bed7b0&gt; (a java.util.TaskQueue)
+ÿÿÿ at java.util.TimerThread.run(Timer.java:462)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Live mode timer&quot; prio=6 tid=0x09e8e400 nid=0xfdc in Object.wait() [0x60b3f000]
+ÿÿ java.lang.Thread.State: TIMED_WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.util.TimerThread.mainLoop(Timer.java:509)
+ÿÿÿ - locked &lt;0x12bed990&gt; (a java.util.TaskQueue)
+ÿÿÿ at java.util.TimerThread.run(Timer.java:462)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Timer-0&quot; daemon prio=6 tid=0x09efd400 nid=0x1518 runnable [0x0e98f000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+ÿÿÿ at mmcorej.MMCoreJJNI.CMMCore_getYPosition(Native Method)
+ÿÿÿ at mmcorej.CMMCore.getYPosition(CMMCore.java:1055)
+ÿÿÿ at spim.setup.GenericXYStage$SubStage.getPosition(GenericXYStage.java:78)
+ÿÿÿ at spim.SPIMAcquisition.updateMotorPositions(SPIMAcquisition.java:1236)
+ÿÿÿ at spim.SPIMAcquisition.access$600(SPIMAcquisition.java:92)
+ÿÿÿ at spim.SPIMAcquisition$18.run(SPIMAcquisition.java:1014)
+ÿÿÿ at java.util.TimerThread.mainLoop(Timer.java:512)
+ÿÿÿ at java.util.TimerThread.run(Timer.java:462)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Beanshell interpreter&quot; prio=6 tid=0x0a172400 nid=0x1174 in Object.wait() [0x0e78f000]
+ÿÿ java.lang.Thread.State: TIMED_WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.io.PipedInputStream.read(PipedInputStream.java:310)
+ÿÿÿ - locked &lt;0x12d90f30&gt; (a java.io.PipedInputStream)
+ÿÿÿ at java.io.PipedInputStream.read(PipedInputStream.java:361)
+ÿÿÿ - locked &lt;0x12d90f30&gt; (a java.io.PipedInputStream)
+ÿÿÿ at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+ÿÿÿ at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+ÿÿÿ at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+ÿÿÿ - locked &lt;0x12d8ada8&gt; (a java.io.InputStreamReader)
+ÿÿÿ at java.io.InputStreamReader.read(InputStreamReader.java:167)
+ÿÿÿ at bsh.JavaCharStream.FillBuff(Unknown Source)
+ÿÿÿ at bsh.JavaCharStream.ReadByte(Unknown Source)
+ÿÿÿ at bsh.JavaCharStream.readChar(Unknown Source)
+ÿÿÿ at bsh.JavaCharStream.BeginToken(Unknown Source)
+ÿÿÿ at bsh.ParserTokenManager.getNextToken(Unknown Source)
+ÿÿÿ at bsh.Parser.jj_ntk(Unknown Source)
+ÿÿÿ at bsh.Parser.Line(Unknown Source)
+ÿÿÿ at bsh.Interpreter.Line(Unknown Source)
+ÿÿÿ at bsh.Interpreter.run(Unknown Source)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Thread-6&quot; prio=6 tid=0x09fdb800 nid=0xd88 in Object.wait() [0x0b0df000]
+ÿÿ java.lang.Thread.State: TIMED_WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at bsh.util.JConsole$BlockingPipedInputStream.read(Unknown Source)
+ÿÿÿ - locked &lt;0x12cea9a8&gt; (a bsh.util.JConsole$BlockingPipedInputStream)
+ÿÿÿ at java.io.PipedInputStream.read(PipedInputStream.java:361)
+ÿÿÿ - locked &lt;0x12cea9a8&gt; (a bsh.util.JConsole$BlockingPipedInputStream)
+ÿÿÿ at java.io.InputStream.read(InputStream.java:85)
+ÿÿÿ at bsh.util.JConsole.inPipeWatcher(Unknown Source)
+ÿÿÿ at bsh.util.JConsole.run(Unknown Source)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Swing-Shell&quot; daemon prio=6 tid=0x09e8fc00 nid=0x10a8 waiting on condition [0x0b2df000]
+ÿÿ java.lang.Thread.State: WAITING (parking)
+ÿÿÿ at sun.misc.Unsafe.park(Native Method)
+ÿÿÿ - parking to wait forÿ &lt;0x12ceab50&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+ÿÿÿ at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+ÿÿÿ at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+ÿÿÿ at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+ÿÿÿ at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+ÿÿÿ at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+ÿÿÿ at sun.awt.shell.Win32ShellFolderManager2$ComInvoker$3.run(Win32ShellFolderManager2.java:492)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;TimerQueue&quot; daemon prio=6 tid=0x09c7d000 nid=0x1684 in Object.wait() [0x0aedf000]
+ÿÿ java.lang.Thread.State: TIMED_WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at javax.swing.TimerQueue.run(TimerQueue.java:232)
+ÿÿÿ - locked &lt;0x120b0820&gt; (a javax.swing.TimerQueue)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;DestroyJavaVM&quot; prio=6 tid=0x00a3ac00 nid=0xf14 waiting on condition [0x00000000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;GC Daemon&quot; daemon prio=2 tid=0x07b79400 nid=0x177c in Object.wait() [0x0948f000]
+ÿÿ java.lang.Thread.State: TIMED_WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ - waiting on &lt;0x12595b38&gt; (a sun.misc.GC$LatencyLock)
+ÿÿÿ at sun.misc.GC$Daemon.run(GC.java:100)
+ÿÿÿ - locked &lt;0x12595b38&gt; (a sun.misc.GC$LatencyLock)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;RMI Reaper&quot; prio=6 tid=0x06689400 nid=0xdf4 in Object.wait() [0x0928f000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ - waiting on &lt;0x12595b48&gt; (a java.lang.ref.ReferenceQueue$Lock)
+ÿÿÿ at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+ÿÿÿ - locked &lt;0x12595b48&gt; (a java.lang.ref.ReferenceQueue$Lock)
+ÿÿÿ at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+ÿÿÿ at sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:333)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;RMI TCP Accept-0&quot; daemon prio=6 tid=0x07bdf400 nid=0x16ac runnable [0x0908f000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+ÿÿÿ at java.net.PlainSocketImpl.socketAccept(Native Method)
+ÿÿÿ at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+ÿÿÿ - locked &lt;0x125308d0&gt; (a java.net.SocksSocketImpl)
+ÿÿÿ at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+ÿÿÿ at java.net.ServerSocket.accept(ServerSocket.java:430)
+ÿÿÿ at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+ÿÿÿ at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;AWT-Windows&quot; daemon prio=6 tid=0x07af9400 nid=0x14d8 runnable [0x08dff000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+ÿÿÿ at sun.awt.windows.WToolkit.eventLoop(Native Method)
+ÿÿÿ at sun.awt.windows.WToolkit.run(WToolkit.java:293)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;AWT-Shutdown&quot; prio=6 tid=0x07aa8400 nid=0x17d8 in Object.wait() [0x08bff000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.Object.wait(Object.java:485)
+ÿÿÿ at sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:265)
+ÿÿÿ - locked &lt;0x125957c8&gt; (a java.lang.Object)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Java2D Disposer&quot; daemon prio=10 tid=0x06600400 nid=0xef0 in Object.wait() [0x089ff000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+ÿÿÿ - locked &lt;0x1258f1f8&gt; (a java.lang.ref.ReferenceQueue$Lock)
+ÿÿÿ at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+ÿÿÿ at sun.java2d.Disposer.run(Disposer.java:127)
+ÿÿÿ at java.lang.Thread.run(Thread.java:662)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Low Memory Detector&quot; daemon prio=6 tid=0x0656f800 nid=0x171c runnable [0x00000000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;CompilerThread0&quot; daemon prio=10 tid=0x06569400 nid=0x778 waiting on condition [0x00000000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Attach Listener&quot; daemon prio=10 tid=0x06567c00 nid=0x14a4 waiting on condition [0x00000000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Signal Dispatcher&quot; daemon prio=10 tid=0x06566800 nid=0x16d8 runnable [0x00000000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Surrogate Locker Thread (CMS)&quot; daemon prio=6 tid=0x06565000 nid=0x4e4 waiting on condition [0x00000000]
+ÿÿ java.lang.Thread.State: RUNNABLE
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Finalizer&quot; daemon prio=8 tid=0x06553400 nid=0x1458 in Object.wait() [0x06e9f000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+ÿÿÿ - locked &lt;0x12165290&gt; (a java.lang.ref.ReferenceQueue$Lock)
+ÿÿÿ at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+ÿÿÿ at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;Reference Handler&quot; daemon prio=10 tid=0x06552000 nid=0x16e4 in Object.wait() [0x06c9f000]
+ÿÿ java.lang.Thread.State: WAITING (on object monitor)
+ÿÿÿ at java.lang.Object.wait(Native Method)
+ÿÿÿ at java.lang.Object.wait(Object.java:485)
+ÿÿÿ at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+ÿÿÿ - locked &lt;0x121652a0&gt; (a java.lang.ref.Reference$Lock)
+
+ÿÿ Locked ownable synchronizers:
+ÿÿÿ - None
+
+&quot;VM Thread&quot; prio=10 tid=0x0654e400 nid=0x16dc runnable 
+
+&quot;Gang worker#0 (Parallel GC Threads)&quot; prio=10 tid=0x009a7400 nid=0xc40 runnable 
+
+&quot;Gang worker#1 (Parallel GC Threads)&quot; prio=10 tid=0x009a9000 nid=0x1620 runnable 
+
+&quot;Concurrent Mark-Sweep GC Thread&quot; prio=10 tid=0x009afc00 nid=0xa58 runnable 
+&quot;VM Periodic Task Thread&quot; prio=10 tid=0x0657a000 nid=0xacc waiting on condition 
+
+JNI global references: 4648
+
+
+Kind regards, 
+Edgar
+
+ _________________________________________________________________________
+
+Fraunhofer-Institut fr Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraáe 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; schrieb: -----
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+Von: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt;
+Datum: 27.09.2013 20:40
+Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+Betreff: Re: [OpenSPIM] SPIMage plugin_Stack at this Z plus
+
+Hi Edgar,
+
+On Fri, 27 Sep 2013, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+
+&gt;<i> Sorry for the late reply, it was a little bit hard to understand the
+</I>&gt;<i> instructions about finding the &quot;dead lock&quot; since I am not a programming
+</I>&gt;<i> guy :-/. It is the first time I do that.
+</I>&gt;<i> 
+</I>&gt;<i> I already look through the lines of the threaddump and I didn't find
+</I>&gt;<i> anything like &quot;dead lock detected between thread 2 and 17&quot; so, is there
+</I>&gt;<i> something else I could do in order to find a solution to this?
+</I>
+Have you taken the thread dump after pressing that button that gets stuck?
+How about posting the thread dump here?
+
+Ciao,
+Johannes
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130930/60ef7f91/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20130930/60ef7f91/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001158.html">[OpenSPIM] SPIMage plugin_Stack at this Z plus
+</A></li>
+	<LI>Next message: <A HREF="001156.html">[OpenSPIM] SPIMage plugin_Stack at this Z plus
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1161">[ date ]</a>
+              <a href="thread.html#1161">[ thread ]</a>
+              <a href="subject.html#1161">[ subject ]</a>
+              <a href="author.html#1161">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Information on T-SPIM construction
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Information%20on%20T-SPIM%20construction&In-Reply-To=%3CCAHmt5Uf%3DeCPwmecvNxV0BgfUEAvisVh373go3ZLrJfnww6Ygwg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000650.html">
+   <LINK REL="Next"  HREF="000648.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Information on T-SPIM construction</H1>
+    <B>David Burk</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Information%20on%20T-SPIM%20construction&In-Reply-To=%3CCAHmt5Uf%3DeCPwmecvNxV0BgfUEAvisVh373go3ZLrJfnww6Ygwg%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Information on T-SPIM construction">davidburk1972 at gmail.com
+       </A><BR>
+    <I>Mon Feb 23 17:00:20 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000650.html">[OpenSPIM] Information on T-SPIM construction
+</A></li>
+        <LI>Next message: <A HREF="000648.html">[OpenSPIM] OpenSPIM Digest, Vol 22, Issue 13
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#654">[ date ]</a>
+              <a href="thread.html#654">[ thread ]</a>
+              <a href="subject.html#654">[ subject ]</a>
+              <a href="author.html#654">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks, Michael. And thanks, Carsten for your link to the T-SPIM chamber
+picture.
+
+Best,
+David
+
+On Sat, Feb 21, 2015 at 6:24 AM, Michael Weber &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">weber at mpi-cbg.de</A>&gt; wrote:
+
+&gt;<i> Hi David,
+</I>&gt;<i>
+</I>&gt;<i> you are right, with &quot;blurry&quot; I was referring to those parts of an image
+</I>&gt;<i> that are illuminated with a scattered/absorbed/refracted light sheet. You
+</I>&gt;<i> can of course adjust your system in several ways, either by making the
+</I>&gt;<i> light sheets more homogeneous and using simultaneous illumination, or by
+</I>&gt;<i> placing the waists of two thin &quot;left&quot; and &quot;right&quot; light sheets next to each
+</I>&gt;<i> other and using sequential acquisitions. Something to keep in mind is that
+</I>&gt;<i> sequential acquisitions take at least twice as long, require twice as much
+</I>&gt;<i> space and you have to merge both sides in a post-processing step. My
+</I>&gt;<i> recommendation is, as you already suggested, to start with a simple system
+</I>&gt;<i> with a 50/50 splitter and manual shutters.
+</I>&gt;<i>
+</I>&gt;<i> Best,
+</I>&gt;<i> Michael
+</I>&gt;<i>
+</I>&gt;<i> On Feb 20, 2015, at 3:58 PM, David Burk &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">davidburk1972 at gmail.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Thanks, Michael.
+</I>&gt;<i>
+</I>&gt;<i> Depending on the sample, this might not be ideal, as you get an overlay of
+</I>&gt;&gt;<i> &quot;sharp&quot; and &quot;blurry&quot; images.
+</I>&gt;<i>
+</I>&gt;<i> Is this due to the fact that one light sheet, say from the left, may not
+</I>&gt;<i> have its minimum beam waist at the same position as that from that of the
+</I>&gt;<i> right sheet? Or more due to scattering, absorption, etc. of the light as it
+</I>&gt;<i> interacts with the specimen?
+</I>&gt;<i> I found some images that showed what you are talking about. I just thought
+</I>&gt;<i> there may be some 'middle ground' you could settle on by adjusting the
+</I>&gt;<i> sheets from either side that would give relatively uniform illumination
+</I>&gt;<i> (but with a loss of resolution).
+</I>&gt;<i> It does sound like - if you choose the slow manual method - this could be
+</I>&gt;<i> doable. Illuminate from left &gt; capture images &gt; close left shutter &gt;
+</I>&gt;<i> illuminate from right &gt; capture &gt; merge?
+</I>&gt;<i> Perhaps detailed designs of a T-SPIM system will eventually be uploaded to
+</I>&gt;<i> the web along with the modifications to the software to drive the
+</I>&gt;<i> additional hardware.
+</I>&gt;<i>
+</I>&gt;<i> Have a great weekend,
+</I>&gt;<i> David
+</I>&gt;<i>
+</I>&gt;<i> On Fri, Feb 20, 2015 at 6:40 AM, Michael Weber &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">weber at mpi-cbg.de</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hey David,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Pete might have a step file for the 3-objective chamber. And yes, in
+</I>&gt;&gt;<i> principle you just need two arms and a 50/50 splitter, but there are some
+</I>&gt;&gt;<i> limitations. Unless you add shutters or AOTFs, you simultaneously
+</I>&gt;&gt;<i> illuminate from both sides. Depending on the sample, this might not be
+</I>&gt;&gt;<i> ideal, as you get an overlay of &quot;sharp&quot; and &quot;blurry&quot; images. This typically
+</I>&gt;&gt;<i> gets worse with larger samples. You can add manual shutters to be able to
+</I>&gt;&gt;<i> choose the side of illumination. If you want to be able to quickly record
+</I>&gt;&gt;<i> images with sequential double-sided illumination, you need to integrate
+</I>&gt;&gt;<i> shutters/AOTFs into the software.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best,
+</I>&gt;&gt;<i> Michael
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Feb 18, 2015, at 8:41 PM, David Burk &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">davidburk1972 at gmail.com</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I apologize in advance if the answer to my question is somewhere in the
+</I>&gt;&gt;<i> archives.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I am interested in building a T-SPIM system and ran across an archived
+</I>&gt;&gt;<i> conversation on this from June 2014. There was mention that such a setup
+</I>&gt;&gt;<i> had been built as well as a possible 3D model of the imaging chamber being
+</I>&gt;&gt;<i> available. I couldn't find any additional information on the OpenSPIM.org
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/">http://openspim.org/</A>&gt; site and just wanted to ask if there was a link
+</I>&gt;&gt;<i> to this information somewhere. Based on the 3D model on the site it looks
+</I>&gt;&gt;<i> like you really just need to replicate one arm of the laser path and add a
+</I>&gt;&gt;<i> 50/50 splitter near the laser. Would there be needed changes to the
+</I>&gt;&gt;<i> operating software? If so, that is beyond my (rather limited) capabilities.
+</I>&gt;&gt;<i> However, if instructions exist that'd be great!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I appreciate any information you may have on this.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best,
+</I>&gt;&gt;<i> David
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _____________
+</I>&gt;<i>
+</I>&gt;<i> Michael Weber
+</I>&gt;<i> Postdoc, Huisken lab
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstrasse 108, 01307 Dresden
+</I>&gt;<i> Tel. 0049 351/2102837
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150223/a43801ac/attachment.html">http://openspim.org/pipermail/openspim/attachments/20150223/a43801ac/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000650.html">[OpenSPIM] Information on T-SPIM construction
+</A></li>
+	<LI>Next message: <A HREF="000648.html">[OpenSPIM] OpenSPIM Digest, Vol 22, Issue 13
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#654">[ date ]</a>
+              <a href="thread.html#654">[ thread ]</a>
+              <a href="subject.html#654">[ subject ]</a>
+              <a href="author.html#654">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

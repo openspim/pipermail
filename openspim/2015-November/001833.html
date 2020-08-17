@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] &quot;Acquire SPIM image&quot; crash
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Acquire%20SPIM%20image%22%20crash&In-Reply-To=%3C493D55A9-28DE-42C3-9753-C4A8705A4B1F%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001832.html">
+   <LINK REL="Next"  HREF="001834.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] &quot;Acquire SPIM image&quot; crash</H1>
+    <B>HongKee Moon</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20%22Acquire%20SPIM%20image%22%20crash&In-Reply-To=%3C493D55A9-28DE-42C3-9753-C4A8705A4B1F%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] &quot;Acquire SPIM image&quot; crash">moon at mpi-cbg.de
+       </A><BR>
+    <I>Wed Nov 11 04:19:58 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001832.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+        <LI>Next message: <A HREF="001834.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1833">[ date ]</a>
+              <a href="thread.html#1833">[ thread ]</a>
+              <a href="subject.html#1833">[ subject ]</a>
+              <a href="author.html#1833">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Martin,
+
+Maybe, I can help in this case. However, the problem is that I cannot reproduce that error because I have a different setup.
+One of my doubts is that we try to get the values from stages in the source code(<A HREF="https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/SPIMAcquisition.java#L1057-L1077">https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/SPIMAcquisition.java#L1057-L1077</A> &lt;<A HREF="https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/SPIMAcquisition.java#L1057-L1077">https://github.com/openspim/SPIMAcquisition/blob/master/src/main/java/spim/SPIMAcquisition.java#L1057-L1077</A>&gt;).
+It seemed to cause the error.
+
+If you would not mind, I can provide you a custom-made plugin for verifying the problem, which might involve several (sending a plugin | receiving a result)+.
+Then, I would be able to fix the bug. Please, let me know if you like this way.
+
+Cheers,
+HongKee
+
+
+&gt;<i> On Nov 10, 2015, at 6:40 PM, Martin Capek &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">martin.capek at fgu.cas.cz</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Dear all,
+</I>&gt;<i> could anybody help me with the following software problem? 
+</I>&gt;<i> 
+</I>&gt;<i> Micromanager knows all components of our SPIM system: CUBE laser, Picard stage, Andor camera. I can use all of them independently without troubles in MM: opening and closing laser shutter, moving with the stage in &quot;Stage Control&quot;, seeing images in &quot;Live&quot; view. However, when opening &quot;Acquire SPIM image&quot;, nothing happens and the Java exceptions are then in the corelog,  please, see the attachments.
+</I>&gt;<i> 
+</I>&gt;<i> Thank you very much for your help and comments!
+</I>&gt;<i> Martin
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----------------------
+</I>&gt;<i> Martin Capek, Ph.D. 
+</I>&gt;<i> Dpt. Biomathematics
+</I>&gt;<i> Institute of Physiology ASCR, v.v.i. 
+</I>&gt;<i> Videnska 1083
+</I>&gt;<i> 142 20 Praha 4
+</I>&gt;<i> 
+</I>&gt;<i> Tel. +420 241 062 334
+</I>&gt;<i> <A HREF="http://fgu.cas.cz">http://fgu.cas.cz</A> &lt;<A HREF="http://fgu.cas.cz/">http://fgu.cas.cz/</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Upozornění: Není-li v této zprávě výslovně uvedeno jinak, má tato E-mailová zpráva nebo její přílohy pouze informativní charakter. Tato zpráva ani její přílohy v žádném ohledu Fyziologický ústav AV ČR, v. v. i. k ničemu nezavazují. Text této zprávy nebo jejích příloh není návrhem na uzavření smlouvy, ani přijetím případného návrhu na uzavření smlouvy, ani jiným právním jednáním směřujícím k uzavření jakékoliv smlouvy a nezakládá předsmluvní odpovědnost Fyziologického ústavu AV ČR, v. v. i. 
+</I>&gt;<i> 
+</I>&gt;<i> Disclaimer: If not expressly stated otherwise, this e-mail message (including any attached files) is intended purely for informational purposes and does not represent a binding agreement on the part of Institute of Physiology AS CR. The text of this message and its attachments cannot be considered as a proposal to conclude a contract, nor the acceptance of a proposal to conclude a contract, nor any other legal act leading to concluding any contract; nor does it create any pre-contractual liability on the part of Institute of Physiology AS CR.
+</I>&gt;<i> 
+</I>&gt;<i> &lt;CoreLog20151110T164802_pid5508.txt&gt;_______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+--
+HongKee Moon
+Software Engineer
+Scientific Computing Facility
+
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108
+01307 Dresden
+Germany
+
+fon: +49 351 210 2740
+fax: +49 351 210 1689
+www.mpi-cbg.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20151111/3d383e1b/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20151111/3d383e1b/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001832.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+	<LI>Next message: <A HREF="001834.html">[OpenSPIM] &quot;Acquire SPIM image&quot; crash
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1833">[ date ]</a>
+              <a href="thread.html#1833">[ thread ]</a>
+              <a href="subject.html#1833">[ subject ]</a>
+              <a href="author.html#1833">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

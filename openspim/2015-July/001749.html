@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] opening SPIM data with Bio-formats plugin
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20opening%20SPIM%20data%20with%20Bio-formats%20plugin&In-Reply-To=%3C3ae2f566cfac7070863073cc2583bfa1%40nencki.gov.pl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001748.html">
+   <LINK REL="Next"  HREF="001750.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] opening SPIM data with Bio-formats plugin</H1>
+    <B>m.pawlowska at nencki.gov.pl</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20opening%20SPIM%20data%20with%20Bio-formats%20plugin&In-Reply-To=%3C3ae2f566cfac7070863073cc2583bfa1%40nencki.gov.pl%3E"
+       TITLE="[OpenSPIM] opening SPIM data with Bio-formats plugin">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Thu Jul 23 04:46:23 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001748.html">[OpenSPIM] OpenSPIM (or very similar) publications
+</A></li>
+        <LI>Next message: <A HREF="001750.html">[OpenSPIM] Fwd: Open Imaging: Micro-Manager's new home
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1749">[ date ]</a>
+              <a href="thread.html#1749">[ thread ]</a>
+              <a href="subject.html#1749">[ subject ]</a>
+              <a href="author.html#1749">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+recently some people were writing about some issues when opening 
+acquired images with Bio-formats. It seems that the super-slowness was 
+at leats partly the fault of the Bio-formats: at least in my case, after 
+the recent Fiji update that included Bio-formats 5.1.3, speed improved.
+
+There is another issue though. When I open data that consists of several 
+files, the Bio-formats plugin asks me which sries to open, but no matter 
+what I choose, ALL the open files have the same header: 
+spim_TL01_Angle0.ome . Always Angle0. This makes opening all files and 
+doing something with them impossible because the info which is which is 
+lost. Also, in the metadata there is a line: &quot; Series 2 Name	null&quot; or 
+similar. When collecting images directly with micromanager, this line 
+looks more like &quot; Series 0 Name	XYseries_1_MMStack_Pos1&quot; and then the 
+open windows have collect headers. So the metadata is not saved 
+correctly.
+
+If somebody knows how to fix quickly, I'll be grateful for a hint, 
+otherwise I'll try myself.
+
+Regards,
+Monika
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001748.html">[OpenSPIM] OpenSPIM (or very similar) publications
+</A></li>
+	<LI>Next message: <A HREF="001750.html">[OpenSPIM] Fwd: Open Imaging: Micro-Manager's new home
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1749">[ date ]</a>
+              <a href="thread.html#1749">[ thread ]</a>
+              <a href="subject.html#1749">[ subject ]</a>
+              <a href="author.html#1749">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

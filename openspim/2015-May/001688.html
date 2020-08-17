@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] New Micro-Manager API: Home()
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20Micro-Manager%20API%3A%20Home%28%29&In-Reply-To=%3C93acf586b841b29c1d261c4d55bb95e8%40www.dscho.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001687.html">
+   <LINK REL="Next"  HREF="001706.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] New Micro-Manager API: Home()</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20New%20Micro-Manager%20API%3A%20Home%28%29&In-Reply-To=%3C93acf586b841b29c1d261c4d55bb95e8%40www.dscho.org%3E"
+       TITLE="[OpenSPIM] New Micro-Manager API: Home()">johannes.schindelin at gmx.de
+       </A><BR>
+    <I>Fri May  8 05:31:24 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001687.html">[OpenSPIM] New Micro-Manager API: Home()
+</A></li>
+        <LI>Next message: <A HREF="001706.html">[OpenSPIM] New Micro-Manager API: Home()
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1688">[ date ]</a>
+              <a href="thread.html#1688">[ thread ]</a>
+              <a href="subject.html#1688">[ subject ]</a>
+              <a href="author.html#1688">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Monika,
+
+On 2015-05-07 19:11, <A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A> wrote:
+&gt;<i> I tried to do it, just to see whether I can, but I can't and I feel
+</I>&gt;<i> that again the problem is not having sufficient information :/ How can
+</I>&gt;<i> I find out how this &quot;SVN r15408&quot; relates to the version available via
+</I>&gt;<i> Micro-Manager-Dev update site?
+</I>
+Unfortunately, it is not recorded. However, you can see the original 
+Subversion revision (which the &quot;SVN r15408&quot; is referring to) in the 
+commit message of our Git mirror, on the bottom of the commit messages. 
+For example, r15408 corresponds to 
+<A HREF="https://github.com/openspim/micromanager/commit/c46cd66d43e7fd55045ee690e281833dc0583d99">https://github.com/openspim/micromanager/commit/c46cd66d43e7fd55045ee690e281833dc0583d99</A> 
+which was committed on Tuesday, May 5th, so it should be in the nightly 
+build as of Wednesday, May 6th (and as a consequence on the 
+Micro-Manager-dev update site the same day, or at least one day later).
+
+&gt;<i> 2015-05-07T18:49:23.194887 tid5692 [dbg,Core] Will home xy stage Picard 
+</I>&gt;<i> XY Stage
+</I>&gt;<i> 2015-05-07T18:49:23.208887 tid5692 [dbg,Core] Did home xy stage Picard 
+</I>&gt;<i> XY Stage
+</I>&gt;<i> 2015-05-07T18:49:23.208887 tid5692 [dbg,Core] Will home xy stage Picard 
+</I>&gt;<i> XY Stage
+</I>&gt;<i> 2015-05-07T18:49:23.224888 tid5692 [dbg,Core] Did home xy stage Picard 
+</I>&gt;<i> XY Stage
+</I>&gt;<i> 2015-05-07T18:49:23.224888 tid5692 [IFO,App] Could not home Z stage.
+</I>&gt;<i>                                    [       ] java.lang.Exception:
+</I>&gt;<i> Device &quot;Picard Z Stage&quot; is of the wrong type for the requested
+</I>&gt;<i> operation in Thread[AWT-EventQueue-0,6,main]
+</I>
+It appears that this error message comes from 
+<A HREF="https://github.com/openspim/micromanager/blob/f88b6b5ff341061d777511e33c7291a3d498d431/MMCore/DeviceManager.h#L97">https://github.com/openspim/micromanager/blob/f88b6b5ff341061d777511e33c7291a3d498d431/MMCore/DeviceManager.h#L97</A> 
+(I called `git grep &quot;of the wrong type&quot;` to find out).
+
+The commit you referenced replaced the `GetDeviceOfType()` call in 
+`MMCore::home()` with a `GetDevice()` call: 
+<A HREF="https://github.com/openspim/micromanager/commit/c46cd66d43e7fd55045ee690e281833dc0583d99#diff-66e4d1b12dce965612b0d94db6c9f1d6R1619">https://github.com/openspim/micromanager/commit/c46cd66d43e7fd55045ee690e281833dc0583d99#diff-66e4d1b12dce965612b0d94db6c9f1d6R1619</A> 
+-- therefore I think that this line:
+
+&gt;<i>                                    [       ]   at
+</I>&gt;<i> mmcorej.MMCoreJJNI.CMMCore_home(Native Method)
+</I>
+hints at outdated Micro-Manager binaries. Having said that, it appears 
+as if the Micro-Manager-dev update site has not been updated in a couple 
+of days: <A HREF="http://sites.imagej.net/Micro-Manager-dev/mm/win64/?C=M;O=D">http://sites.imagej.net/Micro-Manager-dev/mm/win64/?C=M;O=D</A>
+
+I have to run right now, but will investigate more later.
+
+Thank you,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001687.html">[OpenSPIM] New Micro-Manager API: Home()
+</A></li>
+	<LI>Next message: <A HREF="001706.html">[OpenSPIM] New Micro-Manager API: Home()
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1688">[ date ]</a>
+              <a href="thread.html#1688">[ thread ]</a>
+              <a href="subject.html#1688">[ subject ]</a>
+              <a href="author.html#1688">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

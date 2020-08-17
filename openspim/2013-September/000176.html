@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard Stage Adapter problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20Stage%20Adapter%20problem&In-Reply-To=%3COF99E11DED.05A8FCAC-ONC1257BF1.0034ACA4-C1257BF1.0034ACAA%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000175.html">
+   <LINK REL="Next"  HREF="000177.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard Stage Adapter problem</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20Stage%20Adapter%20problem&In-Reply-To=%3COF99E11DED.05A8FCAC-ONC1257BF1.0034ACA4-C1257BF1.0034ACAA%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] Picard Stage Adapter problem">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Wed Sep 25 04:35:20 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000175.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+        <LI>Next message: <A HREF="000177.html">[OpenSPIM] WG: Re:  Picard Stage Adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#176">[ date ]</a>
+              <a href="thread.html#176">[ thread ]</a>
+              <a href="subject.html#176">[ subject ]</a>
+              <a href="author.html#176">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes,
+
+Normally the files from the The Imaging Source camera needed to work with &#181;Manager are 
+TIS_UDSHL09_vc9.dll (which in turn requires TIS_DShowLib09.dll)
+
+<A HREF="http://www.micro-manager.org/wiki/TIScam">http://www.micro-manager.org/wiki/TIScam</A>
+
+When I opened the mmgr_dal_TISCam.dll from the no-updated version there were
+no dependencies missing and of course the file TIS_UDSHL09_vc9.dll was on the list.
+
+As long as I opened the mmgr_dal_TISCam.dll from the updated version there was
+a dependency missing: TIS_UDSHL09_vc10.dll
+
+So, maybe the problem is that the mmgr_dal_TISCam.dll from the updated version is
+retrieving TIS_UDSHL09_vc10.dll but this file actually must be TIS_UDSHL09_vc9.dll
+
+
+I just rename the file to TIS_UDSHL09_vc10.dll, then I didn't have dependencies missing when
+opening the mmgr_dal_TISCam.dll
+
+
+When starting the hardware configuration wizard from &#181;Manager, TIScam was available but as long
+as I add the device and click OK, &#181;Manager suddenly closes :-/
+
+
+So I think the mmgr_dal_TISCam.dllmmgr_dal_TISCam.dll from the updated version should be re-programmed but I don't know how
+to do it and if it is such a complicated task.
+
+
+Kind regards,
+Edgar mmgr_dal_TISCamasd.dll _________________________________________________________________________
+
+Fraunhofer-Institut f&#252;r Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstra&#223;e 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; schrieb: -----
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+Von: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt;
+Datum: 24.09.2013 18:37
+Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: Re: [OpenSPIM] Picard Stage Adapter problem
+
+Hi Edgar,
+
+On Tue, 24 Sep 2013, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+
+&gt;<i> LOG(2013-09-24T15:30:41.659952, 5656, 00279590:): &gt; TIScam
+</I>&gt;<i> LOG(2013-09-24T15:30:41.706861, 5656, 00279590:): &gt; Error: Unable to load TIScam library.
+</I>
+Hmm. That is not very verbose now, is it...? ;-)
+
+The best bet I have is to download <A HREF="http://www.dependencywalker.com/&#160;and">http://www.dependencywalker.com/&#160;and</A>
+open OpenSPIM.app/mm/win32/mmgr_dal_TISCam.dll with it, to find out which
+dependencies it is missing.
+
+Ciao,
+Johannes
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130925/00fcef39/attachment-0001.html">http://openspim.org/pipermail/openspim/attachments/20130925/00fcef39/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000175.html">[OpenSPIM] Picard Stage Adapter problem
+</A></li>
+	<LI>Next message: <A HREF="000177.html">[OpenSPIM] WG: Re:  Picard Stage Adapter problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#176">[ date ]</a>
+              <a href="thread.html#176">[ thread ]</a>
+              <a href="subject.html#176">[ subject ]</a>
+              <a href="author.html#176">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

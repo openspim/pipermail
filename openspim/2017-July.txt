@@ -1,0 +1,568 @@
+From S.Hoehn at damtp.cam.ac.uk  Thu Jul 20 06:54:24 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 20 Jul 2017 12:54:24 +0100
+Subject: [OpenSPIM] which C-mount adapter
+Message-ID: <0947c5ae3fcb84f0f85cf96857c4d46c@cam.ac.uk>
+
+Dear All,
+
+I wanted to ask why there is a choice of two different C-mount adapters, 
+one is 1x and the other 0.5x magnifying?
+
+Does this have anything to do with matching the microscope resolution 
+with the pixel size of the used camera?
+
+Or is the 0.5x magnifying one used to increase the field of view?
+
+Thanks a lot.
+
+Best wishes,
+Stephanie
+
+-----------------------------------
+
+Dr. Stephanie Hoehn
+DAMTP, Biological Physics
+Centre for Mathematical Sciences
+Wilberforce Road
+Cambridge
+CB3 0WA
+United Kingdom
+Office Tel: 01223 337859
+Office: H0.03
+
+
+From ctr26 at cam.ac.uk  Thu Jul 20 07:07:38 2017
+From: ctr26 at cam.ac.uk (Craig Russell)
+Date: Thu, 20 Jul 2017 13:07:38 +0100
+Subject: [OpenSPIM] which C-mount adapter
+In-Reply-To: <0947c5ae3fcb84f0f85cf96857c4d46c@cam.ac.uk>
+References: <0947c5ae3fcb84f0f85cf96857c4d46c@cam.ac.uk>
+Message-ID: <0d64e231be595e6e4f1ef8fd9a4aea3e@cam.ac.uk>
+
+> I wanted to ask why there is a choice of two different C-mount
+> adapters, one is 1x and the other 0.5x magnifying?
+
+The 0.5x will increase the FOV.
+
+> Does this have anything to do with matching the microscope resolution
+> with the pixel size of the used camera?
+
+To maximise your resolution without having "empty magnification" you 
+would need to ensure that for a single PSF you have roughly 4 square 
+pixels to image it with. Anything less and you will be under sampling 
+your image, too many more and you'll be distributing unnecessary shot 
+noise into your image.
+
+For the magnifications and NAs that the openSPIM uses the nyquist 
+criterion is likely never reached or even needed.
+
+Best
+
+Craig
+
+On 2017-07-20 12:54, Dr S. Hoehn wrote:
+> Dear All,
+> 
+> I wanted to ask why there is a choice of two different C-mount
+> adapters, one is 1x and the other 0.5x magnifying?
+> 
+> Does this have anything to do with matching the microscope resolution
+> with the pixel size of the used camera?
+> 
+> Or is the 0.5x magnifying one used to increase the field of view?
+> 
+> Thanks a lot.
+> 
+> Best wishes,
+> Stephanie
+> 
+> -----------------------------------
+> 
+> Dr. Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> Office Tel: 01223 337859
+> Office: H0.03
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Craig Russell, PhD Candidate
+Dept. Chemical Engineering and Biotechnology, Cambridge
++44 (0)7521650931 | laser.ceb.cam.ac.uk
+
+
+From huisken at mpi-cbg.de  Tue Jul 25 11:44:42 2017
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Tue, 25 Jul 2017 11:44:42 -0500
+Subject: [OpenSPIM] which C-mount adapter
+In-Reply-To: <0947c5ae3fcb84f0f85cf96857c4d46c@cam.ac.uk>
+References: <0947c5ae3fcb84f0f85cf96857c4d46c@cam.ac.uk>
+Message-ID: <4B407F26-BAAB-4300-9BA5-DDDB9D982C05@mpi-cbg.de>
+
+Dear Stephanie
+
+The Olympus lenses have a field number of 26.5 mm. This is the diameter of the (circular) image that you get after the tubelens and that you try to capture with your camera. It thereby defines the maximally achievable field of view, e.g. for a 10x lens it is 26.5/10 = 2.65mm. If your camera chip, however, is smaller, then you will not capture the full field of view. For example a Zyla 5.5 sCMOS camera has a diagonal of 21.8mm, which is pretty big but not big enough. The 0.5x adapter will demagnify the image to 26.5/2=13.25mm. It is specifically designed for 1/2in CCD chips since these have a diagonal of 25.4/2=12.7mm, which fits well into the smaller image. It is important to understand that the adapter does not increase the field of view; it only makes the image smaller and adapts it to your chip. You cannot use the 0.5x adapter with an sCMOS camera, e.g. to get twice the field of view.
+
+Hope this helps
+Jan
+
+> On Jul 20, 2017, at 6:54 AM, Dr S. Hoehn <S.Hoehn at damtp.cam.ac.uk> wrote:
+> 
+> Dear All,
+> 
+> I wanted to ask why there is a choice of two different C-mount adapters, one is 1x and the other 0.5x magnifying?
+> 
+> Does this have anything to do with matching the microscope resolution with the pixel size of the used camera?
+> 
+> Or is the 0.5x magnifying one used to increase the field of view?
+> 
+> Thanks a lot.
+> 
+> Best wishes,
+> Stephanie
+> 
+> -----------------------------------
+> 
+> Dr. Stephanie Hoehn
+> DAMTP, Biological Physics
+> Centre for Mathematical Sciences
+> Wilberforce Road
+> Cambridge
+> CB3 0WA
+> United Kingdom
+> Office Tel: 01223 337859
+> Office: H0.03
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+
+From chens18 at rpi.edu  Mon Jul 31 10:22:34 2017
+From: chens18 at rpi.edu (Kathleen Chen)
+Date: Mon, 31 Jul 2017 11:22:34 -0400
+Subject: [OpenSPIM] Alignment of light sheet
+Message-ID: <CAGv7iOjDuqO-u0CWUrP+pN5ooz6PKor5iTHej1mcYWD2PfPObQ@mail.gmail.com>
+
+Hello OpenSPIM members,
+
+I was wondering how other members performed the alignment of the light
+sheet.
+
+The wiki suggests the use of a portion of the Edmund Optics Multi-Grid test
+grid glued to a syringe with a small mirror. However, there are not many
+details regarding the making of this test grid/mirror syringe part so I
+have been having some trouble with the alignment.
+
+This method seems to require cutting out the grid from the EO part, which
+from the images seems to be metal. Also, can this grid/mirror syringe setup
+be reused or do we need to use a new grid every time the sheet needs to be
+aligned? Have others experienced any trouble with this or do you have any
+tips/suggestions?
+
+Thank you,
+Kathleen Chen
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170731/4285520b/attachment.html>
+
+From jahr at mpi-cbg.de  Mon Jul 31 10:44:29 2017
+From: jahr at mpi-cbg.de (Wiebke Jahr)
+Date: Mon, 31 Jul 2017 17:44:29 +0200
+Subject: [OpenSPIM] Alignment of light sheet
+In-Reply-To: <CAGv7iOjDuqO-u0CWUrP+pN5ooz6PKor5iTHej1mcYWD2PfPObQ@mail.gmail.com>
+References: <CAGv7iOjDuqO-u0CWUrP+pN5ooz6PKor5iTHej1mcYWD2PfPObQ@mail.gmail.com>
+Message-ID: <9bfbf717-12e7-f8a4-5585-3d1a8ed6135f@mpi-cbg.de>
+
+Hello Kathleen,
+
+attached is an image of the tools that you can use for alignment: left a 
+homebuild version (without grids), right a professional version 
+(unfortunately not for sale).
+
+The Edmund Multi-Grid test is based on a standard glass coverslip; the 
+patterns are a very thin metal coating. You can cut the glass coverslip 
+with a diamond pen, but getting the small pieces you need is somewhat 
+tricky. Apparently it works better when you first make all the cuts 
+needed, then break the coverslip.
+
+The test target can be reused. Ideally, just use distilled water in your 
+chamber while aligning. If you need to use buffer, inspect the glue 
+regularly to make sure it does not dissolve (may damage your objektives 
+if it's in solution and then deposits on them) and rinse the test target 
+afterwards.
+
+Best, Wiebke
+
+-- 
+------------------------------------------------------------
+Wiebke Jahr
+PhD Student
+Tel. +49 351 210-2768
+
+Huisken Lab,
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauer Str. 108, 01307 Dresden
+------------------------------------------------------------
+
+On 31/07/2017 17:22, Kathleen Chen wrote:
+> Hello OpenSPIM members,
+>
+> I was wondering how other members performed the alignment of the light 
+> sheet.
+>
+> The wiki suggests the use of a portion of the Edmund Optics Multi-Grid 
+> test grid glued to a syringe with a small mirror. However, there are 
+> not many details regarding the making of this test grid/mirror syringe 
+> part so I have been having some trouble with the alignment.
+>
+> This method seems to require cutting out the grid from the EO part, 
+> which from the images seems to be metal. Also, can this grid/mirror 
+> syringe setup be reused or do we need to use a new grid every time the 
+> sheet needs to be aligned? Have others experienced any trouble with 
+> this or do you have any tips/suggestions?
+>
+> Thank you,
+> Kathleen Chen
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170731/7ee651ae/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: tools.png
+Type: image/png
+Size: 405295 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20170731/7ee651ae/attachment-0001.png>
+
+From KWeiss at morgridge.org  Mon Jul 31 14:17:20 2017
+From: KWeiss at morgridge.org (Weiss, Kurt)
+Date: Mon, 31 Jul 2017 19:17:20 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 47, Issue 3
+In-Reply-To: <mailman.7052.1501515792.1931.openspim@openspim.org>
+References: <mailman.7052.1501515792.1931.openspim@openspim.org>
+Message-ID: <05B1384DEE0EA04295A8A5F4557425C204E600F4@MIRIS1W.Morgridge.net>
+
+Dear All, 
+
+I would also suggest that if you have access to a micro-fabrication or photolithography lab cutting the glass with a dicing saw (made to cut silicon or glass wafers) did a very nice job cutting the Edmund slide to size per Wiebke's instructions. 
+
+We are also designing a more SPIM- and user-friendly alignment tool similar to the commercial version which we hope to produce at scale and make available to the community soon. 
+
+Regards, 
+Kurt
+
+-----Original Message-----
+From: OpenSPIM [mailto:openspim-bounces at openspim.org] On Behalf Of openspim-request at openspim.org
+Sent: Monday, July 31, 2017 10:43 AM
+To: openspim at openspim.org
+Subject: OpenSPIM Digest, Vol 47, Issue 3
+
+Send OpenSPIM mailing list submissions to
+	openspim at openspim.org
+
+To subscribe or unsubscribe via the World Wide Web, visit
+	http://openspim.org/mailman/listinfo/openspim
+or, via email, send a message with subject or body 'help' to
+	openspim-request at openspim.org
+
+You can reach the person managing the list at
+	openspim-owner at openspim.org
+
+When replying, please edit your Subject line so it is more specific than "Re: Contents of OpenSPIM digest..."
+
+
+Today's Topics:
+
+   1. Alignment of light sheet (Kathleen Chen)
+   2. Re: Alignment of light sheet (Wiebke Jahr)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Mon, 31 Jul 2017 11:22:34 -0400
+From: Kathleen Chen <chens18 at rpi.edu>
+To: openspim at openspim.org
+Subject: [OpenSPIM] Alignment of light sheet
+Message-ID:
+	<CAGv7iOjDuqO-u0CWUrP+pN5ooz6PKor5iTHej1mcYWD2PfPObQ at mail.gmail.com>
+Content-Type: text/plain; charset="utf-8"
+
+Hello OpenSPIM members,
+
+I was wondering how other members performed the alignment of the light sheet.
+
+The wiki suggests the use of a portion of the Edmund Optics Multi-Grid test grid glued to a syringe with a small mirror. However, there are not many details regarding the making of this test grid/mirror syringe part so I have been having some trouble with the alignment.
+
+This method seems to require cutting out the grid from the EO part, which from the images seems to be metal. Also, can this grid/mirror syringe setup be reused or do we need to use a new grid every time the sheet needs to be aligned? Have others experienced any trouble with this or do you have any tips/suggestions?
+
+Thank you,
+Kathleen Chen
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170731/4285520b/attachment-0001.html>
+
+------------------------------
+
+Message: 2
+Date: Mon, 31 Jul 2017 17:44:29 +0200
+From: Wiebke Jahr <jahr at mpi-cbg.de>
+To: openspim at openspim.org
+Subject: Re: [OpenSPIM] Alignment of light sheet
+Message-ID: <9bfbf717-12e7-f8a4-5585-3d1a8ed6135f at mpi-cbg.de>
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
+
+Hello Kathleen,
+
+attached is an image of the tools that you can use for alignment: left a homebuild version (without grids), right a professional version (unfortunately not for sale).
+
+The Edmund Multi-Grid test is based on a standard glass coverslip; the patterns are a very thin metal coating. You can cut the glass coverslip with a diamond pen, but getting the small pieces you need is somewhat tricky. Apparently it works better when you first make all the cuts needed, then break the coverslip.
+
+The test target can be reused. Ideally, just use distilled water in your chamber while aligning. If you need to use buffer, inspect the glue regularly to make sure it does not dissolve (may damage your objektives if it's in solution and then deposits on them) and rinse the test target afterwards.
+
+Best, Wiebke
+
+--
+------------------------------------------------------------
+Wiebke Jahr
+PhD Student
+Tel. +49 351 210-2768
+
+Huisken Lab,
+Max Planck Institute of Molecular Cell Biology and Genetics Pfotenhauer Str. 108, 01307 Dresden
+------------------------------------------------------------
+
+On 31/07/2017 17:22, Kathleen Chen wrote:
+> Hello OpenSPIM members,
+>
+> I was wondering how other members performed the alignment of the light 
+> sheet.
+>
+> The wiki suggests the use of a portion of the Edmund Optics Multi-Grid 
+> test grid glued to a syringe with a small mirror. However, there are 
+> not many details regarding the making of this test grid/mirror syringe 
+> part so I have been having some trouble with the alignment.
+>
+> This method seems to require cutting out the grid from the EO part, 
+> which from the images seems to be metal. Also, can this grid/mirror 
+> syringe setup be reused or do we need to use a new grid every time the 
+> sheet needs to be aligned? Have others experienced any trouble with 
+> this or do you have any tips/suggestions?
+>
+> Thank you,
+> Kathleen Chen
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170731/7ee651ae/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: tools.png
+Type: image/png
+Size: 405295 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20170731/7ee651ae/attachment.png>
+
+------------------------------
+
+Subject: Digest Footer
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org
+http://openspim.org/mailman/listinfo/openspim
+
+
+------------------------------
+
+End of OpenSPIM Digest, Vol 47, Issue 3
+***************************************
+
+From tnf8 at pitt.edu  Mon Jul 31 14:19:30 2017
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 31 Jul 2017 19:19:30 +0000
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 47, Issue 3
+Message-ID: <0FFC291F-9161-47E2-B64C-128EB09D50EA@pitt.edu>
+
+I had no problem using a Dremel tool with the round diamond tip.
+
+Best, 
+
+
+Tim  
+
+On 7/31/17, 3:17 PM, "OpenSPIM on behalf of Weiss, Kurt" <openspim-bounces at openspim.org on behalf of KWeiss at morgridge.org> wrote:
+
+    Dear All, 
+    
+    I would also suggest that if you have access to a micro-fabrication or photolithography lab cutting the glass with a dicing saw (made to cut silicon or glass wafers) did a very nice job cutting the Edmund slide to size per Wiebke's instructions. 
+    
+    We are also designing a more SPIM- and user-friendly alignment tool similar to the commercial version which we hope to produce at scale and make available to the community soon. 
+    
+    Regards, 
+    Kurt
+    
+    -----Original Message-----
+    From: OpenSPIM [mailto:openspim-bounces at openspim.org] On Behalf Of openspim-request at openspim.org
+    Sent: Monday, July 31, 2017 10:43 AM
+    To: openspim at openspim.org
+    Subject: OpenSPIM Digest, Vol 47, Issue 3
+    
+    Send OpenSPIM mailing list submissions to
+    	openspim at openspim.org
+    
+    To subscribe or unsubscribe via the World Wide Web, visit
+    	https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=VOCGLh9mQAW4pYm9jBmu8x%2FDWkHx2IDCmOEu9WmC%2BDc%3D&reserved=0
+    or, via email, send a message with subject or body 'help' to
+    	openspim-request at openspim.org
+    
+    You can reach the person managing the list at
+    	openspim-owner at openspim.org
+    
+    When replying, please edit your Subject line so it is more specific than "Re: Contents of OpenSPIM digest..."
+    
+    
+    Today's Topics:
+    
+       1. Alignment of light sheet (Kathleen Chen)
+       2. Re: Alignment of light sheet (Wiebke Jahr)
+    
+    
+    ----------------------------------------------------------------------
+    
+    Message: 1
+    Date: Mon, 31 Jul 2017 11:22:34 -0400
+    From: Kathleen Chen <chens18 at rpi.edu>
+    To: openspim at openspim.org
+    Subject: [OpenSPIM] Alignment of light sheet
+    Message-ID:
+    	<CAGv7iOjDuqO-u0CWUrP+pN5ooz6PKor5iTHej1mcYWD2PfPObQ at mail.gmail.com>
+    Content-Type: text/plain; charset="utf-8"
+    
+    Hello OpenSPIM members,
+    
+    I was wondering how other members performed the alignment of the light sheet.
+    
+    The wiki suggests the use of a portion of the Edmund Optics Multi-Grid test grid glued to a syringe with a small mirror. However, there are not many details regarding the making of this test grid/mirror syringe part so I have been having some trouble with the alignment.
+    
+    This method seems to require cutting out the grid from the EO part, which from the images seems to be metal. Also, can this grid/mirror syringe setup be reused or do we need to use a new grid every time the sheet needs to be aligned? Have others experienced any trouble with this or do you have any tips/suggestions?
+    
+    Thank you,
+    Kathleen Chen
+    -------------- next part --------------
+    An HTML attachment was scrubbed...
+    URL: <https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fpipermail%2Fopenspim%2Fattachments%2F20170731%2F4285520b%2Fattachment-0001.html&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=NF%2B8OxYXM%2Fq1%2Fkj9FvM9HDhYakyp%2BMp8W%2FedX9sF75U%3D&reserved=0>
+    
+    ------------------------------
+    
+    Message: 2
+    Date: Mon, 31 Jul 2017 17:44:29 +0200
+    From: Wiebke Jahr <jahr at mpi-cbg.de>
+    To: openspim at openspim.org
+    Subject: Re: [OpenSPIM] Alignment of light sheet
+    Message-ID: <9bfbf717-12e7-f8a4-5585-3d1a8ed6135f at mpi-cbg.de>
+    Content-Type: text/plain; charset="utf-8"; Format="flowed"
+    
+    Hello Kathleen,
+    
+    attached is an image of the tools that you can use for alignment: left a homebuild version (without grids), right a professional version (unfortunately not for sale).
+    
+    The Edmund Multi-Grid test is based on a standard glass coverslip; the patterns are a very thin metal coating. You can cut the glass coverslip with a diamond pen, but getting the small pieces you need is somewhat tricky. Apparently it works better when you first make all the cuts needed, then break the coverslip.
+    
+    The test target can be reused. Ideally, just use distilled water in your chamber while aligning. If you need to use buffer, inspect the glue regularly to make sure it does not dissolve (may damage your objektives if it's in solution and then deposits on them) and rinse the test target afterwards.
+    
+    Best, Wiebke
+    
+    --
+    ------------------------------------------------------------
+    Wiebke Jahr
+    PhD Student
+    Tel. +49 351 210-2768
+    
+    Huisken Lab,
+    Max Planck Institute of Molecular Cell Biology and Genetics Pfotenhauer Str. 108, 01307 Dresden
+    ------------------------------------------------------------
+    
+    On 31/07/2017 17:22, Kathleen Chen wrote:
+    > Hello OpenSPIM members,
+    >
+    > I was wondering how other members performed the alignment of the light 
+    > sheet.
+    >
+    > The wiki suggests the use of a portion of the Edmund Optics Multi-Grid 
+    > test grid glued to a syringe with a small mirror. However, there are 
+    > not many details regarding the making of this test grid/mirror syringe 
+    > part so I have been having some trouble with the alignment.
+    >
+    > This method seems to require cutting out the grid from the EO part, 
+    > which from the images seems to be metal. Also, can this grid/mirror 
+    > syringe setup be reused or do we need to use a new grid every time the 
+    > sheet needs to be aligned? Have others experienced any trouble with 
+    > this or do you have any tips/suggestions?
+    >
+    > Thank you,
+    > Kathleen Chen
+    >
+    >
+    > _______________________________________________
+    > OpenSPIM mailing list
+    > OpenSPIM at openspim.org
+    > https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=VOCGLh9mQAW4pYm9jBmu8x%2FDWkHx2IDCmOEu9WmC%2BDc%3D&reserved=0
+    
+    -------------- next part --------------
+    An HTML attachment was scrubbed...
+    URL: <https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fpipermail%2Fopenspim%2Fattachments%2F20170731%2F7ee651ae%2Fattachment.html&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=yhCWXml8vvLGdPYYxkqIObuBKq0dx7Nd5gokgIoIE%2BM%3D&reserved=0>
+    -------------- next part --------------
+    A non-text attachment was scrubbed...
+    Name: tools.png
+    Type: image/png
+    Size: 405295 bytes
+    Desc: not available
+    URL: <https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fpipermail%2Fopenspim%2Fattachments%2F20170731%2F7ee651ae%2Fattachment.png&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=jaBXTZj%2FpJ3WYzpHATJMkm66UKfvFlv8G0wxSMi8nko%3D&reserved=0>
+    
+    ------------------------------
+    
+    Subject: Digest Footer
+    
+    _______________________________________________
+    OpenSPIM mailing list
+    OpenSPIM at openspim.org
+    https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=VOCGLh9mQAW4pYm9jBmu8x%2FDWkHx2IDCmOEu9WmC%2BDc%3D&reserved=0
+    
+    
+    ------------------------------
+    
+    End of OpenSPIM Digest, Vol 47, Issue 3
+    ***************************************
+    _______________________________________________
+    OpenSPIM mailing list
+    OpenSPIM at openspim.org
+    https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fopenspim.org%2Fmailman%2Flistinfo%2Fopenspim&data=01%7C01%7Ctnf8%40pitt.edu%7C9804735456274d82ba5608d4d848d488%7C9ef9f489e0a04eeb87cc3a526112fd0d%7C1&sdata=VOCGLh9mQAW4pYm9jBmu8x%2FDWkHx2IDCmOEu9WmC%2BDc%3D&reserved=0
+    
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard stage adapter problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20stage%20adapter%20problem&In-Reply-To=%3C7730f6c14906.5239c263%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000164.html">
+   <LINK REL="Next"  HREF="000166.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard stage adapter problem</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20stage%20adapter%20problem&In-Reply-To=%3C7730f6c14906.5239c263%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] Picard stage adapter problem">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Sep 18 15:10:27 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000164.html">[OpenSPIM] Picard stage adapter problem
+</A></li>
+        <LI>Next message: <A HREF="000166.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#165">[ date ]</a>
+              <a href="thread.html#165">[ thread ]</a>
+              <a href="subject.html#165">[ subject ]</a>
+              <a href="author.html#165">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Aurelia,
+
+On 09/18/13, Aurelia Honerkamp-Smith  wrote:
+&gt;<i> I'm running into a problem when I try to configure my 4D stage. If I configure using the January 31 2013 OpenSPIM download, without updating through the website first, the Picard stage loads and works normally. However once I run the update, the stage can't be found (I get the error message, &quot;OpenSPIM Unable to load library: file not accessible or corrupted,&quot; and it appears as &quot;Picard stage (unavailable)&quot; in the hardware configuration wizard list of devices. Has anyone else had this problem?
+</I>The error message itself is expected now; the old mmgr_dal_OpenSPIM.dll file is deprecated (meaning when you update, it deletes that file). As Johannes explained, you'll need to re-make the configuration file to use the new device adapter.
+
+
+In the list of devices, is there also a 'PicardStage' subtree you can see? If so, the devices there should be used instead of those under OpenSPIM. Once your configuration files no longer try to use OpenSPIM, 
+
+
+If not (which is what the &quot;(unavailable)&quot; seems to be indicating), please make sure that the PiUsb.dll file exists in the same directory as mmgr_dal_PicardStage.dll (which should be, from the ImageJ/Fiji directory, in &quot;mm/win32/&quot;). If this file is missing for some reason, running the Fiji Updater might restore it.
+
+
+If the above doesn't help solve the problem, you can try using the Fiji Updater's advanced mode: After launching the updater, click &quot;Advanced Mode&quot;. At the top of the window is &quot;View Options:&quot; -- set it to &quot;View files of the 'OpenSPIM' site&quot;. In the list of files, look for &quot;mm/win32/PiUsb.dll&quot;. The second column should show the status of that file: &quot;Up-to-date&quot; or perhaps &quot;Not installed&quot;. If the file is marked as &quot;Not installed&quot; or &quot;Update available&quot;, clicking on that text should allow you to set it to &quot;Install / Update&quot;; from there, clicking &quot;Apply Changes&quot; will install the missing file. (If the file is marked as &quot;Up-to-date&quot;, then some other problem is making the PicardStage adapter unavailable -- please let me know if this is the case.)
+
+
+&gt;<i> Also, the MicroManager version changes to 1.4.x dev after I run the updater; is that as it should be? I would simply not update, except that I need to do so for my camera to be recognized. 
+</I>The change in Micro-Manager version is also expected; part of the recent updates was to switch to a newer version of the underlying Micro-Manager code.
+
+
+
+&gt;<i> A second question: is there any possibility or plan for the OpenSPIM software to be made compatible with Windows 7? I can&#39;t acquire a new computer and run XP on it anymore, as our computing department won&#39;t purchase XP now that it&#39;s not supported. I&#39;m using an older machine with XP now, to set up, but I suspect it will be inadequate once I&#39;m acquiring real data sets. 
+</I>As Johannes pointed out, this may already be possible provided the latest DCAM driver is used. There are plans to make Windows 7 officially supported in the future.
+
+
+
+Please let me know if this doesn't help solve the problem!
+
+
+Thanks,
+Luke Stuyvenberg
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000164.html">[OpenSPIM] Picard stage adapter problem
+</A></li>
+	<LI>Next message: <A HREF="000166.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#165">[ date ]</a>
+              <a href="thread.html#165">[ thread ]</a>
+              <a href="subject.html#165">[ subject ]</a>
+              <a href="author.html#165">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

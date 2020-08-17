@@ -1,0 +1,2090 @@
+From tnf8 at pitt.edu  Wed Aug  5 08:07:50 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 5 Aug 2015 13:07:50 +0000
+Subject: [OpenSPIM] ID'ing a part
+Message-ID: <D1E782E5.4A5D%tnf8@pitt.edu>
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/b62fc877/attachment.html>
+
+From winfrees at iu.edu  Wed Aug  5 08:13:45 2015
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Wed, 5 Aug 2015 13:13:45 +0000
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <D1E782E5.4A5D%tnf8@pitt.edu>
+References: <D1E782E5.4A5D%tnf8@pitt.edu>
+Message-ID: <2d3b14e8c61b4f0fb265aef106d5338c@bl-cci-exch04.ads.iu.edu>
+
+Tim,
+
+Any 3 axis adjuster should work-that fits your optics.  I ordered three identical 1" Polaris mounts for the recommended 1" mirrors.  I like the 1" because of my big fat thumbs more than anything.  I think the difference in the images might be mounts for ? vs 1" optics.
+
+Seth
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Wednesday, August 05, 2015 9:08 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] ID'ing a part
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/205a29a3/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Wed Aug  5 09:07:54 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Wed, 05 Aug 2015 16:07:54 +0200
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <D1E782E5.4A5D%tnf8@pitt.edu>
+References: <D1E782E5.4A5D%tnf8@pitt.edu>
+Message-ID: <op.x2wevgkfahhlbl@pc507-99ff.ibd>
+
+Do you mean a gimbal mount, something like this?  
+http://www.thorlabs.de/thorProduct.cfm?partNumber=GM100/M
+
+Regards,
+Monika
+
+W dniu .08.2015 o 15:07 Feinstein, Timothy N <tnf8 at pitt.edu> pisze:
+
+> Hello,
+> Please forgive the super-basic question.  In most diagrams on  
+> openspim.org the last mirror housing before the sample chamber is  
+> another >POLARIS, but in more advanced designs the mirror housing is a  
+> larger and unique item not specified in the basic build list.  Can  
+> someone let me >know what that is?  Many thanks and apologies if this is  
+> answered somewhere else,
+>
+> Tim
+>
+> Timothy Feinstein, Ph.D.Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+
+
+
+-- 
+Dr Monika Paw?owska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/655f3cff/attachment.html>
+
+From tnf8 at pitt.edu  Wed Aug  5 09:22:17 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 5 Aug 2015 14:22:17 +0000
+Subject: [OpenSPIM] ID'ing a part
+Message-ID: <D1E7926B.4A95%tnf8@pitt.edu>
+
+Thanks folks, I got it.  It's a GM100 ?1" gimbal mirror mount, for adjusting the mirror without changing the axis of rotation.  I can see how a POLARIS in that position can be a little like adjusting cantilever brakes on a bike - lots of axes of adjustment and changing one effects all the others.  Having something there that adjusts like 'V' brakes do (independent axes, less frustration) seems like a good idea.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>
+Date: Wednesday, August 5, 2015 at 9:07 AM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] ID'ing a part
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/8d888bce/attachment-0001.html>
+
+From huisken at mpi-cbg.de  Wed Aug  5 09:56:17 2015
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Wed, 5 Aug 2015 16:56:17 +0200
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <D1E7926B.4A95%tnf8@pitt.edu>
+References: <D1E7926B.4A95%tnf8@pitt.edu>
+Message-ID: <621727A3-3E0C-4428-9E68-BBFCD2AEC0A8@mpi-cbg.de>
+
+Hi Tim
+
+Correct. This must be a gimbal mirror mount. Sitting in the conjugate plane to the back focal plane you use this mirror to move the light sheet into the focal plane of your detection system (panel C below). If you used a regular (3-screw) mount you would not only translate the sheet but also introduce a tilt (panel D).
+
+This is also illustrated in Fig. 2 of [Huisken, Jan, and Didier Y R Stainier. 2007. ?Even Fluorescence Excitation by Multidirectional Selective Plane Illumination Microscopy (mSPIM).? Optics Letters 32 (17): 2608?10.] 
+
+Best
+Jan Huisken
+
+
+Figure from Weber, Michael, Michaela Mickoleit, and Jan Huisken. 2014. ?Light Sheet Microscopy.? Methods in Cell Biology 123: 193?215. doi:10.1016/B978-0-12-420138-5.00011-2.
+
+
+
+
+
+
+
+> On Aug 5, 2015, at 4:22 PM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+> 
+> Thanks folks, I got it.  It's a GM100 ?1" gimbal mirror mount, for adjusting the mirror without changing the axis of rotation.  I can see how a POLARIS in that position can be a little like adjusting cantilever brakes on a bike ? lots of axes of adjustment and changing one effects all the others.  Having something there that adjusts like 'V' brakes do (independent axes, less frustration) seems like a good idea.  
+> 
+> All the best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> From: <openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu <mailto:tnf8 at pitt.edu>>
+> Date: Wednesday, August 5, 2015 at 9:07 AM
+> To: "openspim at openspim.org <mailto:openspim at openspim.org>" <openspim at openspim.org <mailto:openspim at openspim.org>>
+> Subject: [OpenSPIM] ID'ing a part
+> 
+> Hello, 
+> 
+> Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/baed8609/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screen Shot 2015-08-05 at 4.49.25 PM.png
+Type: image/png
+Size: 50758 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/baed8609/attachment-0001.png>
+
+From p.drapeau at umontreal.ca  Wed Aug  5 15:24:21 2015
+From: p.drapeau at umontreal.ca (Pierre Drapeau)
+Date: Wed, 5 Aug 2015 16:24:21 -0400
+Subject: [OpenSPIM] construction of light sheet
+Message-ID: <CAD_dtL7uspiWQT9v9i_PDWYYwyB-w7PpjArJGpqOWrqUZN+1+w@mail.gmail.com>
+
+?
+I'm looking into the possibility of having a lighsheet microscope built.
+Do you offer this service or know of anyone competent in building such a
+device? Thanks.
+
+><<o>                    Pierre Drapeau, Ph.D.                 <o>><
+                 Professeur | Neurosciences | U. Montr?al
+CRCHUM Tour Viger  R09.482           t?l 514-890-8000 # 31281
+900 Saint-Denis, Montr?al, Qc            cell / text    514-998-8641
+Canada H2X 0A9                                p.drapeau at umontreal.ca
+http://crchum.chumontreal.qc.ca/en/researchers/drapeau-pierre
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/92e37bac/attachment.html>
+
+From jon at asiimaging.com  Wed Aug  5 15:41:12 2015
+From: jon at asiimaging.com (Jon Daniels)
+Date: Wed, 5 Aug 2015 13:41:12 -0700
+Subject: [OpenSPIM] construction of light sheet
+In-Reply-To: <CAD_dtL7uspiWQT9v9i_PDWYYwyB-w7PpjArJGpqOWrqUZN+1+w@mail.gmail.com>
+Message-ID: <SUpVWTJKVChfPUBTJCtSNzg3NjI0OTc3@Jonio>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/fd4435aa/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Aug  7 12:47:55 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 07 Aug 2015 19:47:55 +0200
+Subject: [OpenSPIM] Acquisition Error (setBigTIff)
+In-Reply-To: <005022868505164C94291D8DD2D8EBAA788808E3@000S-EX-MBX-QS4.unimelb.edu.au>
+References: <005022868505164C94291D8DD2D8EBAA788808E3@000S-EX-MBX-QS4.unimelb.edu.au>
+Message-ID: <op.x20ed5i5ahhlbl@monika-thinkpad.rz.uni-wuerzburg.de>
+
+Hi,
+
+I'm not sure if there is a way to get around it. I also had a similar  
+error. That is, one way is to use the Multidimensional acquisition of  
+Micro-manager itself, although then you can't use rotation.
+
+BTW, my Micro-manager doesn't save files larger than 4GB as well, instead  
+it splits the stack in one with 3.99 GB size and another one with the  
+rest. So the long-term solution is to change the code of the plugin to  
+either do the same - slipt the file - or by adding the  "setBigTiff(true)"  
+line (if it really works).
+
+Greetings,
+Monika
+
+W dniu .07.2015 o 01:37 Gabriel Davis Jones <gabriel.jones at florey.edu.au>  
+pisze:
+
+>
+> Hi All,
+>
+>
+>
+> I'm constantly receiving this error when I try and acquire an image >4GB:
+>
+>
+>
+>
+>
+>
+> java.lang.RuntimeException: loci.formats.FormatException: File is too  
+> large; call setBigTiff(true)
+>
+>
+> at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:113)
+>
+>
+> at java.lang.Thread.run(Thread.java:745)
+>
+>
+> Caused by: loci.formats.FormatException: File is too large; call  
+> setBigTiff(true)
+>
+>
+> at loci.formats.out.TiffWriter.prepareToWriteImage(TiffWriter.java:343)
+>
+>
+> at loci.formats.out.TiffWriter.saveBytes(TiffWriter.java:221)
+>
+>
+> at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:190)
+>
+>
+> at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:180)
+>
+>
+> at loci.formats.FormatWriter.saveBytes(FormatWriter.java:124)
+>
+>
+> at spim.progacq.OMETIFFHandler.processSlice(OMETIFFHandler.java:175)
+>
+>
+> at  
+> spim.progacq.AsyncOutputWrapper.handleNext(AsyncOutputWrapper.java:232)
+>
+>
+> at spim.progacq.AsyncOutputWrapper.access$300(AsyncOutputWrapper.java:18)
+>
+>
+> at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:98)
+>
+>
+>
+>
+> Any ideas how I may get around it, or are we restricted to image sizes  
+> <4GB for now?
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> Kind regards,
+>
+>
+>
+>
+>>
+>
+>
+>
+>
+> Gabriel Davis Jones
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
+
+
+-- 
+Monika Paw?owska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 382
+
+
+From 709314090 at qq.com  Tue Aug 11 02:41:29 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Tue, 11 Aug 2015 15:41:29 +0800
+Subject: [OpenSPIM] How to measure the width of the light sheet and minimize
+	the light sheet width?
+Message-ID: <tencent_035940B15B0043995CBD670F@qq.com>
+
+Dear, all!
+    Now, I have assembled the OpenSPIM as the website described. Also, I have put a grid mirror with a DIV=200um to calibrate the light sheet, and adjusted the position of the telescope system and illumination objective to minimize the width of the light sheet. Then, the image screen showed that the minmum width of the light sheet in the grid mirror was about 11um.(The light sheet width was estimate with the grid size in the same image screen) But I wonder that it is right to estimate the width in this way. Is there any other methods to measure the light sheet width?
+    And how can I minimize the light sheet width, since it's also too wide now? 
+
+
+Thanks, best wishes!
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150811/c810e2b8/attachment.html>
+
+From johannes.schindelin at gmx.de  Sat Aug 15 03:14:07 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Sat, 15 Aug 2015 10:14:07 +0200
+Subject: [OpenSPIM] Fwd: [micro-manager-general] New release: Micro-Manager
+	1.4.22
+In-Reply-To: <CAKGYTBmCcA1Wrjdk3mCo5PG=5=A9+ynOSZqeqw67Pn9H7fHgPw@mail.gmail.com>
+References: <CAKGYTBmCcA1Wrjdk3mCo5PG=5=A9+ynOSZqeqw67Pn9H7fHgPw@mail.gmail.com>
+Message-ID: <cc6ff24e53c34b4b8e43e622b620e304@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] New release: Micro-Manager 1.4.22
+Date: 2015-08-15 03:12
+ From: Mark Tsuchida <marktsuchida at gmail.com>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Reply-To: Micro-Manager General 
+<micro-manager-general at lists.sourceforge.net>
+
+Hi All,
+
+We have just released Micro-Manager 1.4.22.
+This is a maintenance release for the main application, with bugfixes
+and minor enhancements. There are also enhancements for various
+devices and some new device adapters.
+
+It can be downloaded (for Windows and Mac) from
+http://micro-manager.org/wiki/Download_Micro-Manager_Latest_Release
+where you can also view a list of changes since 1.4.21.
+
+Thank you all for your contributions and feedback. It's what keeps
+Micro-Manager going, so please keep it coming! If you find any issues
+in version 1.4.22, please report them by starting a new thread on this
+mailing list or sending a Problem Report (from Micro-Manager's Help
+menu).
+
+This will most likely be the last release version published by the
+UCSF Micro-Manager Team. As previously announced on this mailing list
+and elsewhere, Micro-Manager development will be continued by Open
+Imaging (https://open-imaging.com/) starting in October. Open Imaging
+will be providing future release version binaries as free downloads.
+
+If you are wondering about Micro-Manager 2.0: the plan is to have a
+beta version and then an official 2.0.0 release later this year, if
+things go smoothly. After that point in time, 1.4.x will be maintained
+in parallel for at least a year, perhaps longer.
+
+Best regards,
+The Micro-Manager Team
+
+------------------------------------------------------------------------------
+_______________________________________________
+micro-manager-general mailing list
+micro-manager-general at lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+
+From 709314090 at qq.com  Fri Aug 21 06:12:38 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Fri, 21 Aug 2015 19:12:38 +0800
+Subject: [OpenSPIM] An error occured when click the "Acquire SPIM image"
+	menu button
+Message-ID: <tencent_45A971427E3D675750332F05@qq.com>
+
+Hi, all!
+   Sorry to disturb you, but I met some troubles.
+   When I clicked the  "Acquire SPIM image" menu button to open the SPIM acquired program, there was no reaction. I closed fiji and tried many times and the results were the same. So, I checked the corelog and found some errors.
+  The log from the CoreLogs folder shows that :Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4).  detail error log is at the bottom. 
+  What cofused me is that the SPIM program could be open last week, and I had done nothing with the software until now.
+  The program is the lastest version.
+
+
+best wish!
+
+
+Detail error log:
+
+
+2015-08-21T17:22:41.751288 tid5908 [IFO,App] Plugin command: Acquire SPIM image
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize 6 devices
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device Omicron
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4)
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device setPixelSizeConfig: Device error encountered.
+2015-08-21T17:22:42.824349 tid5908 [IFO,App] Couldn't define uncalibrated pixel size: 
+                                   [       ] java.lang.Exception: Error in device "Omicron": Duplicate property names are not allowed:  (4) in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ]   at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:761)
+                                   [       ]   at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:268)
+                                   [       ]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:225)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.Component.processMouseEvent(Unknown Source)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$000(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition$20.<init>(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:372)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:226)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.access$000(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.run(Unknown Source)
+
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150821/d7692212/attachment-0001.html>
+
+From 709314090 at qq.com  Mon Aug 24 00:55:39 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 24 Aug 2015 13:55:39 +0800
+Subject: [OpenSPIM] =?gb18030?b?u9i4tKO6IEFuIGVycm9yIG9jY3VyZWQgd2hlbiBj?=
+ =?gb18030?q?lick_the_=22Acquire_SPIM_image=22menu_button?=
+In-Reply-To: <tencent_45A971427E3D675750332F05@qq.com>
+References: <tencent_45A971427E3D675750332F05@qq.com>
+Message-ID: <tencent_06B445482A6EB916523AEC9C@qq.com>
+
+Hi, All, 
+    Sorry to disturb you again. I solved the error I reported last time. It's nothing to do with the laser property name :Workinghours . The real error to terminate the software is : java.lang.IllegalArgumentException: invalid range properties.
+    It maybe the number of twister of the PicardStage is beyond the SPIM software can hold. After I set the number to zero with the PicardStage control software, the SPIM software can open.
+    Sorry again!
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ ???? ------------------
+???: "??????";<709314090 at qq.com>;
+????: 2015?8?21?(???) ??7:12
+???: "openspim"<openspim at openspim.org>; 
+
+??: [OpenSPIM] An error occured when click the "Acquire SPIM image"menu button
+
+
+
+Hi, all!
+   Sorry to disturb you, but I met some troubles.
+   When I clicked the  "Acquire SPIM image" menu button to open the SPIM acquired program, there was no reaction. I closed fiji and tried many times and the results were the same. So, I checked the corelog and found some errors.
+  The log from the CoreLogs folder shows that :Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4).  detail error log is at the bottom. 
+  What cofused me is that the SPIM program could be open last week, and I had done nothing with the software until now.
+  The program is the lastest version.
+
+
+best wish!
+
+
+Detail error log:
+
+
+2015-08-21T17:22:41.751288 tid5908 [IFO,App] Plugin command: Acquire SPIM image
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize 6 devices
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device Omicron
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4)
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device setPixelSizeConfig: Device error encountered.
+2015-08-21T17:22:42.824349 tid5908 [IFO,App] Couldn't define uncalibrated pixel size: 
+                                   [       ] java.lang.Exception: Error in device "Omicron": Duplicate property names are not allowed:  (4) in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ]   at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:761)
+                                   [       ]   at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:268)
+                                   [       ]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:225)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.Component.processMouseEvent(Unknown Source)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$000(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition$20.<init>(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:372)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:226)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.access$000(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.run(Unknown Source)
+
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150824/258be594/attachment-0001.html>
+
+From johannes.schindelin at gmx.de  Thu Aug 27 03:18:19 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 27 Aug 2015 10:18:19 +0200
+Subject: [OpenSPIM] Open Spim Questions
+In-Reply-To: <B3CC0617379EFA44B0330157567A7A6608788C8E@CSGMBX204W.pu.win.princeton.edu>
+References: <B3CC0617379EFA44B0330157567A7A6608788C8E@CSGMBX204W.pu.win.princeton.edu>
+Message-ID: <faeedb39361dab7872777f6f8752d36d@www.dscho.org>
+
+Hi Evangelos,
+
+I am replacing the obsolete OpenSPIM mailing list address with the one 
+that we use since May 2013, so that the OpenSPIM mailing list 
+subscribers can see it.
+
+Ciao,
+Johannes
+
+On 2015-08-26 20:29, Evangelos G. Gatzogiannis wrote:
+> Dear Peter and OpenSpim team,
+> 
+> In brief, I have built a custom light-sheet microscope based off of
+> micromanager.  Future experiment will focus on early embryos and need
+> high speed imaging and fast rotation with 2 cameras.
+> 
+> I have a few detailed questions that could help make OpenSpim even
+> more versatile by supporting faster Physik Instrumente hardware, such
+> as for early embryos and fast developing small organisms.
+> 
+> I appreciate any comments and help, as described below.
+> 
+> 
+> Is it  possible that OpenSPIM only needs minor enhancement to allow
+> the use of Physik Instrumente hardware for 4-D positioning? I would
+> like to use PI Hera piezos PI-Hera P-629.1CD and PI U-628.03 rotation
+> for moving sample through the sheet, and rotating the sample, in
+> addition to an x stage PI Z-522.040 for repositioning the sample in z.
+> These are faster, more precise and have less hysteresis and backlash
+> than existing motors.
+> 
+> 
+> 
+> ----
+> 
+> We are using Micro-Manager on a 64-bit Windows 7 platform to build a
+> light sheet microscope. We are interested in trying OpenSPIM since its
+> write-up indicates that it addresses issues that face us. One issue is
+> handling loss of focus when rotating a specimen. The other is drift.
+> 
+> 
+> 
+> Our application positioning the specimen in X, Y, and Z, and rotating
+> it (in axis Theta). The mount for our specimen requires that we treat
+> the Y axis a Z, and the Z axis as Y.
+> 
+> 
+> 
+> Our goal is dual-camera acquisition of Z-series at multiple angles of 
+> rotation.
+> 
+> 
+> 
+> For proof of concept with Micro-Manager, we are using a Physik
+> Instrumente C-884.4D stepper motor controller with the Physik
+> Instrumente GCS-2 device adapter, which we have configured to work
+> specifically with the C-884.4D controller. The result works, but (a)
+> rotation is too slow, and (b) slewing in our "Z" axis is too slow. We
+> must replace that controller and the stepper motors. Physik
+> Instrumente has offered us a (fill in) controller.
+> 
+> 
+> 
+> To our knowledge, we face these problems:
+> 
+> 
+> 
+> 1. Constraint in choice of hardware. Micro-Manager (and therefor
+> OpenSPIM) does not allow one to treat two linear stages as an X-Y
+> stage using arbitrary single-axis controllers or using one axis of a
+> multi-axis controller. Unless that is changed, our choices of vendor
+> are limited. Physik Instrumente implements a scheme in which for the X
+> and Y axes one specifies the controller that is used. If we do not use
+> a Physik Instrumente controller, we are restricted to a controller
+> that implements a similar scheme, or we must use a controller that
+> implements all the axes.
+> 
+> 
+> 
+> 2. We know that OpenSPIM is written for a Picard Industries
+> USB-4D-Stage. It appears that the SpimAcquisition plugin includes
+> specific code for interfacing the Picard USB-4D's Z-Stage, X-Y Stage
+> and Rotator (its Theta axis). We would need analogous code to allow us
+> to use the controller or controllers on which we settle. Links below
+> show the specific code for the Picard USB-4D, written in Java.
+> 
+> 
+> 
+> How complicated would it be for us to extend OpenSPIM to allow us to
+> use four axes of Physik Instrumente devices for our purpose?
+> 
+> 
+> 
+> 3. We would try modifying the SPIMAcquisition plug-in ourselves, but
+> the documentation for OpenSPIM leaves us wondering about the version
+> of the Java SE Development Kit that is required. The documentation for
+> Micro-Manager indicates that OpenSPIM is built with the Version 1.6
+> Development Kit, which is outdated at this point - the latest release
+> is version 6u45. Would we run into trouble using the Version 1.8 ?
+> 
+> 
+> 
+> 
+> 
+> 
+> I greatly appreciate your comments and help.
+> 
+> Best,
+> Evangelos
+
+
+From m.pawlowska at nencki.gov.pl  Thu Aug 27 05:07:58 2015
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Thu, 27 Aug 2015 12:07:58 +0200
+Subject: [OpenSPIM] Open Spim Questions
+In-Reply-To: <faeedb39361dab7872777f6f8752d36d@www.dscho.org>
+References: <B3CC0617379EFA44B0330157567A7A6608788C8E@CSGMBX204W.pu.win.princeton.edu>
+	<faeedb39361dab7872777f6f8752d36d@www.dscho.org>
+Message-ID: <1689eb8ad1ff5ee2c8542b160264ec05@nencki.gov.pl>
+
+Hi,
+
+I can only help with point 3.
+
+The newest version of the code is her:
+https://github.com/openspim/SPIMAcquisition
+As far as I remember, the procedure is to install Fiji and then switch 
+on the OpenSPIM update site, then Fiji will install the newest version 
+automatically. I was doing some minor changes to the plugin and then 
+doing as that page says: building my own plugin, replacing the plugin in 
+the Fiji directory. Last time I did it I used jdk1.8.0_51 and it worked.
+
+Regards,
+Monika
+
+W dniu 2015-08-27 10:18, Johannes Schindelin napisa?(a):
+> Hi Evangelos,
+> 
+> I am replacing the obsolete OpenSPIM mailing list address with the one
+> that we use since May 2013, so that the OpenSPIM mailing list
+> subscribers can see it.
+> 
+> Ciao,
+> Johannes
+> 
+> On 2015-08-26 20:29, Evangelos G. Gatzogiannis wrote:
+>> Dear Peter and OpenSpim team,
+>> 
+>> In brief, I have built a custom light-sheet microscope based off of
+>> micromanager.  Future experiment will focus on early embryos and need
+>> high speed imaging and fast rotation with 2 cameras.
+>> 
+>> I have a few detailed questions that could help make OpenSpim even
+>> more versatile by supporting faster Physik Instrumente hardware, such
+>> as for early embryos and fast developing small organisms.
+>> 
+>> I appreciate any comments and help, as described below.
+>> 
+>> 
+>> Is it  possible that OpenSPIM only needs minor enhancement to allow
+>> the use of Physik Instrumente hardware for 4-D positioning? I would
+>> like to use PI Hera piezos PI-Hera P-629.1CD and PI U-628.03 rotation
+>> for moving sample through the sheet, and rotating the sample, in
+>> addition to an x stage PI Z-522.040 for repositioning the sample in z.
+>> These are faster, more precise and have less hysteresis and backlash
+>> than existing motors.
+>> 
+>> 
+>> 
+>> ----
+>> 
+>> We are using Micro-Manager on a 64-bit Windows 7 platform to build a
+>> light sheet microscope. We are interested in trying OpenSPIM since its
+>> write-up indicates that it addresses issues that face us. One issue is
+>> handling loss of focus when rotating a specimen. The other is drift.
+>> 
+>> 
+>> 
+>> Our application positioning the specimen in X, Y, and Z, and rotating
+>> it (in axis Theta). The mount for our specimen requires that we treat
+>> the Y axis a Z, and the Z axis as Y.
+>> 
+>> 
+>> 
+>> Our goal is dual-camera acquisition of Z-series at multiple angles of 
+>> rotation.
+>> 
+>> 
+>> 
+>> For proof of concept with Micro-Manager, we are using a Physik
+>> Instrumente C-884.4D stepper motor controller with the Physik
+>> Instrumente GCS-2 device adapter, which we have configured to work
+>> specifically with the C-884.4D controller. The result works, but (a)
+>> rotation is too slow, and (b) slewing in our "Z" axis is too slow. We
+>> must replace that controller and the stepper motors. Physik
+>> Instrumente has offered us a (fill in) controller.
+>> 
+>> 
+>> 
+>> To our knowledge, we face these problems:
+>> 
+>> 
+>> 
+>> 1. Constraint in choice of hardware. Micro-Manager (and therefor
+>> OpenSPIM) does not allow one to treat two linear stages as an X-Y
+>> stage using arbitrary single-axis controllers or using one axis of a
+>> multi-axis controller. Unless that is changed, our choices of vendor
+>> are limited. Physik Instrumente implements a scheme in which for the X
+>> and Y axes one specifies the controller that is used. If we do not use
+>> a Physik Instrumente controller, we are restricted to a controller
+>> that implements a similar scheme, or we must use a controller that
+>> implements all the axes.
+>> 
+>> 
+>> 
+>> 2. We know that OpenSPIM is written for a Picard Industries
+>> USB-4D-Stage. It appears that the SpimAcquisition plugin includes
+>> specific code for interfacing the Picard USB-4D's Z-Stage, X-Y Stage
+>> and Rotator (its Theta axis). We would need analogous code to allow us
+>> to use the controller or controllers on which we settle. Links below
+>> show the specific code for the Picard USB-4D, written in Java.
+>> 
+>> 
+>> 
+>> How complicated would it be for us to extend OpenSPIM to allow us to
+>> use four axes of Physik Instrumente devices for our purpose?
+>> 
+>> 
+>> 
+>> 3. We would try modifying the SPIMAcquisition plug-in ourselves, but
+>> the documentation for OpenSPIM leaves us wondering about the version
+>> of the Java SE Development Kit that is required. The documentation for
+>> Micro-Manager indicates that OpenSPIM is built with the Version 1.6
+>> Development Kit, which is outdated at this point - the latest release
+>> is version 6u45. Would we run into trouble using the Version 1.8 ?
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> I greatly appreciate your comments and help.
+>> 
+>> Best,
+>> Evangelos
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+From tnf8 at pitt.edu  Wed Aug  5 08:07:50 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 5 Aug 2015 13:07:50 +0000
+Subject: [OpenSPIM] ID'ing a part
+Message-ID: <D1E782E5.4A5D%tnf8@pitt.edu>
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/b62fc877/attachment-0002.html>
+
+From winfrees at iu.edu  Wed Aug  5 08:13:45 2015
+From: winfrees at iu.edu (Winfree, Seth)
+Date: Wed, 5 Aug 2015 13:13:45 +0000
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <D1E782E5.4A5D%tnf8@pitt.edu>
+References: <D1E782E5.4A5D%tnf8@pitt.edu>
+Message-ID: <2d3b14e8c61b4f0fb265aef106d5338c@bl-cci-exch04.ads.iu.edu>
+
+Tim,
+
+Any 3 axis adjuster should work-that fits your optics.  I ordered three identical 1" Polaris mounts for the recommended 1" mirrors.  I like the 1" because of my big fat thumbs more than anything.  I think the difference in the images might be mounts for ½ vs 1" optics.
+
+Seth
+
+From: openspim-bounces at openspim.org [mailto:openspim-bounces at openspim.org] On Behalf Of Feinstein, Timothy N
+Sent: Wednesday, August 05, 2015 9:08 AM
+To: openspim at openspim.org
+Subject: [OpenSPIM] ID'ing a part
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/205a29a3/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Wed Aug  5 09:07:54 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Wed, 05 Aug 2015 16:07:54 +0200
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <D1E782E5.4A5D%tnf8@pitt.edu>
+References: <D1E782E5.4A5D%tnf8@pitt.edu>
+Message-ID: <op.x2wevgkfahhlbl@pc507-99ff.ibd>
+
+Do you mean a gimbal mount, something like this?  
+http://www.thorlabs.de/thorProduct.cfm?partNumber=GM100/M
+
+Regards,
+Monika
+
+W dniu .08.2015 o 15:07 Feinstein, Timothy N <tnf8 at pitt.edu> pisze:
+
+> Hello,
+> Please forgive the super-basic question.  In most diagrams on  
+> openspim.org the last mirror housing before the sample chamber is  
+> another >POLARIS, but in more advanced designs the mirror housing is a  
+> larger and unique item not specified in the basic build list.  Can  
+> someone let me >know what that is?  Many thanks and apologies if this is  
+> answered somewhere else,
+>
+> Tim
+>
+> Timothy Feinstein, Ph.D.Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/655f3cff/attachment-0002.html>
+
+From tnf8 at pitt.edu  Wed Aug  5 09:22:17 2015
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Wed, 5 Aug 2015 14:22:17 +0000
+Subject: [OpenSPIM] ID'ing a part
+Message-ID: <D1E7926B.4A95%tnf8@pitt.edu>
+
+Thanks folks, I got it.  It's a GM100 Ø1" gimbal mirror mount, for adjusting the mirror without changing the axis of rotation.  I can see how a POLARIS in that position can be a little like adjusting cantilever brakes on a bike - lots of axes of adjustment and changing one effects all the others.  Having something there that adjusts like 'V' brakes do (independent axes, less frustration) seems like a good idea.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+
+From: <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu<mailto:tnf8 at pitt.edu>>
+Date: Wednesday, August 5, 2015 at 9:07 AM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] ID'ing a part
+
+Hello,
+
+Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/8d888bce/attachment-0002.html>
+
+From huisken at mpi-cbg.de  Wed Aug  5 09:56:17 2015
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Wed, 5 Aug 2015 16:56:17 +0200
+Subject: [OpenSPIM] ID'ing a part
+In-Reply-To: <D1E7926B.4A95%tnf8@pitt.edu>
+References: <D1E7926B.4A95%tnf8@pitt.edu>
+Message-ID: <621727A3-3E0C-4428-9E68-BBFCD2AEC0A8@mpi-cbg.de>
+
+Hi Tim
+
+Correct. This must be a gimbal mirror mount. Sitting in the conjugate plane to the back focal plane you use this mirror to move the light sheet into the focal plane of your detection system (panel C below). If you used a regular (3-screw) mount you would not only translate the sheet but also introduce a tilt (panel D).
+
+This is also illustrated in Fig. 2 of [Huisken, Jan, and Didier Y R Stainier. 2007. “Even Fluorescence Excitation by Multidirectional Selective Plane Illumination Microscopy (mSPIM).” Optics Letters 32 (17): 2608–10.] 
+
+Best
+Jan Huisken
+
+
+Figure from Weber, Michael, Michaela Mickoleit, and Jan Huisken. 2014. “Light Sheet Microscopy.” Methods in Cell Biology 123: 193–215. doi:10.1016/B978-0-12-420138-5.00011-2.
+
+
+
+
+
+
+
+> On Aug 5, 2015, at 4:22 PM, Feinstein, Timothy N <tnf8 at PITT.EDU> wrote:
+> 
+> Thanks folks, I got it.  It's a GM100 Ø1" gimbal mirror mount, for adjusting the mirror without changing the axis of rotation.  I can see how a POLARIS in that position can be a little like adjusting cantilever brakes on a bike – lots of axes of adjustment and changing one effects all the others.  Having something there that adjusts like 'V' brakes do (independent axes, less frustration) seems like a good idea.  
+> 
+> All the best, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> 
+> 
+> From: <openspim-bounces at openspim.org <mailto:openspim-bounces at openspim.org>> on behalf of Timothy Feinstein <tnf8 at pitt.edu <mailto:tnf8 at pitt.edu>>
+> Date: Wednesday, August 5, 2015 at 9:07 AM
+> To: "openspim at openspim.org <mailto:openspim at openspim.org>" <openspim at openspim.org <mailto:openspim at openspim.org>>
+> Subject: [OpenSPIM] ID'ing a part
+> 
+> Hello, 
+> 
+> Please forgive the super-basic question.  In most diagrams on openspim.org the last mirror housing before the sample chamber is another POLARIS, but in more advanced designs the mirror housing is a larger and unique item not specified in the basic build list.  Can someone let me know what that is?  Many thanks and apologies if this is answered somewhere else, 
+> 
+> 
+> Tim
+> 
+> Timothy Feinstein, Ph.D. 
+> Research Scientist
+> University of Pittsburgh Department of Developmental Biology
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/baed8609/attachment-0002.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screen Shot 2015-08-05 at 4.49.25 PM.png
+Type: image/png
+Size: 50758 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/baed8609/attachment-0002.png>
+
+From p.drapeau at umontreal.ca  Wed Aug  5 15:24:21 2015
+From: p.drapeau at umontreal.ca (Pierre Drapeau)
+Date: Wed, 5 Aug 2015 16:24:21 -0400
+Subject: [OpenSPIM] construction of light sheet
+Message-ID: <CAD_dtL7uspiWQT9v9i_PDWYYwyB-w7PpjArJGpqOWrqUZN+1+w@mail.gmail.com>
+
+​
+I'm looking into the possibility of having a lighsheet microscope built.
+Do you offer this service or know of anyone competent in building such a
+device? Thanks.
+
+><<o>                    Pierre Drapeau, Ph.D.                 <o>><
+                 Professeur | Neurosciences | U. Montréal
+CRCHUM Tour Viger  R09.482           tél 514-890-8000 # 31281
+900 Saint-Denis, Montréal, Qc            cell / text    514-998-8641
+Canada H2X 0A9                                p.drapeau at umontreal.ca
+http://crchum.chumontreal.qc.ca/en/researchers/drapeau-pierre
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/92e37bac/attachment-0002.html>
+
+From jon at asiimaging.com  Wed Aug  5 15:41:12 2015
+From: jon at asiimaging.com (Jon Daniels)
+Date: Wed, 5 Aug 2015 13:41:12 -0700
+Subject: [OpenSPIM] construction of light sheet
+In-Reply-To: <CAD_dtL7uspiWQT9v9i_PDWYYwyB-w7PpjArJGpqOWrqUZN+1+w@mail.gmail.com>
+Message-ID: <SUpVWTJKVChfPUBTJCtSNzg3NjI0OTc3@Jonio>
+
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150805/fd4435aa/attachment-0002.html>
+
+From m.pawlowska at nencki.gov.pl  Fri Aug  7 12:47:55 2015
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Fri, 07 Aug 2015 19:47:55 +0200
+Subject: [OpenSPIM] Acquisition Error (setBigTIff)
+In-Reply-To: <005022868505164C94291D8DD2D8EBAA788808E3@000S-EX-MBX-QS4.unimelb.edu.au>
+References: <005022868505164C94291D8DD2D8EBAA788808E3@000S-EX-MBX-QS4.unimelb.edu.au>
+Message-ID: <op.x20ed5i5ahhlbl@monika-thinkpad.rz.uni-wuerzburg.de>
+
+Hi,
+
+I'm not sure if there is a way to get around it. I also had a similar  
+error. That is, one way is to use the Multidimensional acquisition of  
+Micro-manager itself, although then you can't use rotation.
+
+BTW, my Micro-manager doesn't save files larger than 4GB as well, instead  
+it splits the stack in one with 3.99 GB size and another one with the  
+rest. So the long-term solution is to change the code of the plugin to  
+either do the same - slipt the file - or by adding the  "setBigTiff(true)"  
+line (if it really works).
+
+Greetings,
+Monika
+
+W dniu .07.2015 o 01:37 Gabriel Davis Jones <gabriel.jones at florey.edu.au>  
+pisze:
+
+>
+> Hi All,
+>
+>
+>
+> I'm constantly receiving this error when I try and acquire an image >4GB:
+>
+>
+>
+>
+>
+>
+> java.lang.RuntimeException: loci.formats.FormatException: File is too  
+> large; call setBigTiff(true)
+>
+>
+> at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:113)
+>
+>
+> at java.lang.Thread.run(Thread.java:745)
+>
+>
+> Caused by: loci.formats.FormatException: File is too large; call  
+> setBigTiff(true)
+>
+>
+> at loci.formats.out.TiffWriter.prepareToWriteImage(TiffWriter.java:343)
+>
+>
+> at loci.formats.out.TiffWriter.saveBytes(TiffWriter.java:221)
+>
+>
+> at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:190)
+>
+>
+> at loci.formats.out.OMETiffWriter.saveBytes(OMETiffWriter.java:180)
+>
+>
+> at loci.formats.FormatWriter.saveBytes(FormatWriter.java:124)
+>
+>
+> at spim.progacq.OMETIFFHandler.processSlice(OMETIFFHandler.java:175)
+>
+>
+> at  
+> spim.progacq.AsyncOutputWrapper.handleNext(AsyncOutputWrapper.java:232)
+>
+>
+> at spim.progacq.AsyncOutputWrapper.access$300(AsyncOutputWrapper.java:18)
+>
+>
+> at spim.progacq.AsyncOutputWrapper$2.run(AsyncOutputWrapper.java:98)
+>
+>
+>
+>
+> Any ideas how I may get around it, or are we restricted to image sizes  
+> <4GB for now?
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> Kind regards,
+>
+>
+>
+>
+>>
+>
+>
+>
+>
+> Gabriel Davis Jones
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
+
+
+-- 
+Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 382
+
+
+
+From 709314090 at qq.com  Tue Aug 11 02:41:29 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Tue, 11 Aug 2015 15:41:29 +0800
+Subject: [OpenSPIM] How to measure the width of the light sheet and minimize
+	the light sheet width?
+Message-ID: <tencent_035940B15B0043995CBD670F@qq.com>
+
+Dear, all!
+    Now, I have assembled the OpenSPIM as the website described. Also, I have put a grid mirror with a DIV=200um to calibrate the light sheet, and adjusted the position of the telescope system and illumination objective to minimize the width of the light sheet. Then, the image screen showed that the minmum width of the light sheet in the grid mirror was about 11um.(The light sheet width was estimate with the grid size in the same image screen) But I wonder that it is right to estimate the width in this way. Is there any other methods to measure the light sheet width?
+    And how can I minimize the light sheet width, since it's also too wide now? 
+
+
+Thanks, best wishes!
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150811/c810e2b8/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Sat Aug 15 03:14:07 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Sat, 15 Aug 2015 10:14:07 +0200
+Subject: [OpenSPIM] Fwd: [micro-manager-general] New release: Micro-Manager
+	1.4.22
+In-Reply-To: <CAKGYTBmCcA1Wrjdk3mCo5PG=5=A9+ynOSZqeqw67Pn9H7fHgPw@mail.gmail.com>
+References: <CAKGYTBmCcA1Wrjdk3mCo5PG=5=A9+ynOSZqeqw67Pn9H7fHgPw@mail.gmail.com>
+Message-ID: <cc6ff24e53c34b4b8e43e622b620e304@www.dscho.org>
+
+FYI
+
+-------- Original Message --------
+Subject: [micro-manager-general] New release: Micro-Manager 1.4.22
+Date: 2015-08-15 03:12
+ From: Mark Tsuchida <marktsuchida at gmail.com>
+To: Micro-Manager General <micro-manager-general at lists.sourceforge.net>
+Reply-To: Micro-Manager General 
+<micro-manager-general at lists.sourceforge.net>
+
+Hi All,
+
+We have just released Micro-Manager 1.4.22.
+This is a maintenance release for the main application, with bugfixes
+and minor enhancements. There are also enhancements for various
+devices and some new device adapters.
+
+It can be downloaded (for Windows and Mac) from
+http://micro-manager.org/wiki/Download_Micro-Manager_Latest_Release
+where you can also view a list of changes since 1.4.21.
+
+Thank you all for your contributions and feedback. It's what keeps
+Micro-Manager going, so please keep it coming! If you find any issues
+in version 1.4.22, please report them by starting a new thread on this
+mailing list or sending a Problem Report (from Micro-Manager's Help
+menu).
+
+This will most likely be the last release version published by the
+UCSF Micro-Manager Team. As previously announced on this mailing list
+and elsewhere, Micro-Manager development will be continued by Open
+Imaging (https://open-imaging.com/) starting in October. Open Imaging
+will be providing future release version binaries as free downloads.
+
+If you are wondering about Micro-Manager 2.0: the plan is to have a
+beta version and then an official 2.0.0 release later this year, if
+things go smoothly. After that point in time, 1.4.x will be maintained
+in parallel for at least a year, perhaps longer.
+
+Best regards,
+The Micro-Manager Team
+
+------------------------------------------------------------------------------
+_______________________________________________
+micro-manager-general mailing list
+micro-manager-general at lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/micro-manager-general
+
+
+
+From 709314090 at qq.com  Fri Aug 21 06:12:38 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Fri, 21 Aug 2015 19:12:38 +0800
+Subject: [OpenSPIM] An error occured when click the "Acquire SPIM image"
+	menu button
+Message-ID: <tencent_45A971427E3D675750332F05@qq.com>
+
+Hi, all!
+   Sorry to disturb you, but I met some troubles.
+   When I clicked the  "Acquire SPIM image" menu button to open the SPIM acquired program, there was no reaction. I closed fiji and tried many times and the results were the same. So, I checked the corelog and found some errors.
+  The log from the CoreLogs folder shows that :Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4).  detail error log is at the bottom. 
+  What cofused me is that the SPIM program could be open last week, and I had done nothing with the software until now.
+  The program is the lastest version.
+
+
+best wish!
+
+
+Detail error log:
+
+
+2015-08-21T17:22:41.751288 tid5908 [IFO,App] Plugin command: Acquire SPIM image
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize 6 devices
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device Omicron
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4)
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device setPixelSizeConfig: Device error encountered.
+2015-08-21T17:22:42.824349 tid5908 [IFO,App] Couldn't define uncalibrated pixel size: 
+                                   [       ] java.lang.Exception: Error in device "Omicron": Duplicate property names are not allowed:  (4) in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ]   at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:761)
+                                   [       ]   at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:268)
+                                   [       ]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:225)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.Component.processMouseEvent(Unknown Source)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$000(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition$20.<init>(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:372)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:226)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.access$000(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.run(Unknown Source)
+
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150821/d7692212/attachment-0002.html>
+
+From 709314090 at qq.com  Mon Aug 24 00:55:39 2015
+From: 709314090 at qq.com (=?gb18030?B?1f4=?=)
+Date: Mon, 24 Aug 2015 13:55:39 +0800
+Subject: [OpenSPIM] =?gb18030?b?u9i4tKO6IEFuIGVycm9yIG9jY3VyZWQgd2hlbiBj?=
+ =?gb18030?q?lick_the_=22Acquire_SPIM_image=22menu_button?=
+In-Reply-To: <tencent_45A971427E3D675750332F05@qq.com>
+References: <tencent_45A971427E3D675750332F05@qq.com>
+Message-ID: <tencent_06B445482A6EB916523AEC9C@qq.com>
+
+Hi, All, 
+    Sorry to disturb you again. I solved the error I reported last time. It's nothing to do with the laser property name :Workinghours . The real error to terminate the software is : java.lang.IllegalArgumentException: invalid range properties.
+    It maybe the number of twister of the PicardStage is beyond the SPIM software can hold. After I set the number to zero with the PicardStage control software, the SPIM software can open.
+    Sorry again!
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+
+
+ 
+
+
+
+
+------------------ 原始邮件 ------------------
+发件人: "我自己的邮箱";<709314090 at qq.com>;
+发送时间: 2015年8月21日(星期五) 晚上7:12
+收件人: "openspim"<openspim at openspim.org>; 
+
+主题: [OpenSPIM] An error occured when click the "Acquire SPIM image"menu button
+
+
+
+Hi, all!
+   Sorry to disturb you, but I met some troubles.
+   When I clicked the  "Acquire SPIM image" menu button to open the SPIM acquired program, there was no reaction. I closed fiji and tried many times and the results were the same. So, I checked the corelog and found some errors.
+  The log from the CoreLogs folder shows that :Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4).  detail error log is at the bottom. 
+  What cofused me is that the SPIM program could be open last week, and I had done nothing with the software until now.
+  The program is the lastest version.
+
+
+best wish!
+
+
+Detail error log:
+
+
+2015-08-21T17:22:41.751288 tid5908 [IFO,App] Plugin command: Acquire SPIM image
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize 6 devices
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device Omicron
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device Omicron: Error in device "Omicron": Duplicate property names are not allowed: Workinghours [h] (4)
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device setPixelSizeConfig: Device error encountered.
+2015-08-21T17:22:42.824349 tid5908 [IFO,App] Couldn't define uncalibrated pixel size: 
+                                   [       ] java.lang.Exception: Error in device "Omicron": Duplicate property names are not allowed:  (4) in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ]   at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:761)
+                                   [       ]   at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:268)
+                                   [       ]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:225)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.Component.processMouseEvent(Unknown Source)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$000(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.<init>(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SteppedSlider.<init>(SteppedSlider.java:63)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition$20.<init>(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:372)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:226)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.access$000(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.run(Unknown Source)
+
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: 709314090 at qq.com
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20150824/258be594/attachment-0002.html>
+
+From johannes.schindelin at gmx.de  Thu Aug 27 03:18:19 2015
+From: johannes.schindelin at gmx.de (Johannes Schindelin)
+Date: Thu, 27 Aug 2015 10:18:19 +0200
+Subject: [OpenSPIM] Open Spim Questions
+In-Reply-To: <B3CC0617379EFA44B0330157567A7A6608788C8E@CSGMBX204W.pu.win.princeton.edu>
+References: <B3CC0617379EFA44B0330157567A7A6608788C8E@CSGMBX204W.pu.win.princeton.edu>
+Message-ID: <faeedb39361dab7872777f6f8752d36d@www.dscho.org>
+
+Hi Evangelos,
+
+I am replacing the obsolete OpenSPIM mailing list address with the one 
+that we use since May 2013, so that the OpenSPIM mailing list 
+subscribers can see it.
+
+Ciao,
+Johannes
+
+On 2015-08-26 20:29, Evangelos G. Gatzogiannis wrote:
+> Dear Peter and OpenSpim team,
+> 
+> In brief, I have built a custom light-sheet microscope based off of
+> micromanager.  Future experiment will focus on early embryos and need
+> high speed imaging and fast rotation with 2 cameras.
+> 
+> I have a few detailed questions that could help make OpenSpim even
+> more versatile by supporting faster Physik Instrumente hardware, such
+> as for early embryos and fast developing small organisms.
+> 
+> I appreciate any comments and help, as described below.
+> 
+> 
+> Is it  possible that OpenSPIM only needs minor enhancement to allow
+> the use of Physik Instrumente hardware for 4-D positioning? I would
+> like to use PI Hera piezos PI-Hera P-629.1CD and PI U-628.03 rotation
+> for moving sample through the sheet, and rotating the sample, in
+> addition to an x stage PI Z-522.040 for repositioning the sample in z.
+> These are faster, more precise and have less hysteresis and backlash
+> than existing motors.
+> 
+> 
+> 
+> ----
+> 
+> We are using Micro-Manager on a 64-bit Windows 7 platform to build a
+> light sheet microscope. We are interested in trying OpenSPIM since its
+> write-up indicates that it addresses issues that face us. One issue is
+> handling loss of focus when rotating a specimen. The other is drift.
+> 
+> 
+> 
+> Our application positioning the specimen in X, Y, and Z, and rotating
+> it (in axis Theta). The mount for our specimen requires that we treat
+> the Y axis a Z, and the Z axis as Y.
+> 
+> 
+> 
+> Our goal is dual-camera acquisition of Z-series at multiple angles of 
+> rotation.
+> 
+> 
+> 
+> For proof of concept with Micro-Manager, we are using a Physik
+> Instrumente C-884.4D stepper motor controller with the Physik
+> Instrumente GCS-2 device adapter, which we have configured to work
+> specifically with the C-884.4D controller. The result works, but (a)
+> rotation is too slow, and (b) slewing in our "Z" axis is too slow. We
+> must replace that controller and the stepper motors. Physik
+> Instrumente has offered us a (fill in) controller.
+> 
+> 
+> 
+> To our knowledge, we face these problems:
+> 
+> 
+> 
+> 1. Constraint in choice of hardware. Micro-Manager (and therefor
+> OpenSPIM) does not allow one to treat two linear stages as an X-Y
+> stage using arbitrary single-axis controllers or using one axis of a
+> multi-axis controller. Unless that is changed, our choices of vendor
+> are limited. Physik Instrumente implements a scheme in which for the X
+> and Y axes one specifies the controller that is used. If we do not use
+> a Physik Instrumente controller, we are restricted to a controller
+> that implements a similar scheme, or we must use a controller that
+> implements all the axes.
+> 
+> 
+> 
+> 2. We know that OpenSPIM is written for a Picard Industries
+> USB-4D-Stage. It appears that the SpimAcquisition plugin includes
+> specific code for interfacing the Picard USB-4D's Z-Stage, X-Y Stage
+> and Rotator (its Theta axis). We would need analogous code to allow us
+> to use the controller or controllers on which we settle. Links below
+> show the specific code for the Picard USB-4D, written in Java.
+> 
+> 
+> 
+> How complicated would it be for us to extend OpenSPIM to allow us to
+> use four axes of Physik Instrumente devices for our purpose?
+> 
+> 
+> 
+> 3. We would try modifying the SPIMAcquisition plug-in ourselves, but
+> the documentation for OpenSPIM leaves us wondering about the version
+> of the Java SE Development Kit that is required. The documentation for
+> Micro-Manager indicates that OpenSPIM is built with the Version 1.6
+> Development Kit, which is outdated at this point - the latest release
+> is version 6u45. Would we run into trouble using the Version 1.8 ?
+> 
+> 
+> 
+> 
+> 
+> 
+> I greatly appreciate your comments and help.
+> 
+> Best,
+> Evangelos
+
+
+
+From m.pawlowska at nencki.gov.pl  Thu Aug 27 05:07:58 2015
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Thu, 27 Aug 2015 12:07:58 +0200
+Subject: [OpenSPIM] Open Spim Questions
+In-Reply-To: <faeedb39361dab7872777f6f8752d36d@www.dscho.org>
+References: <B3CC0617379EFA44B0330157567A7A6608788C8E@CSGMBX204W.pu.win.princeton.edu>
+	<faeedb39361dab7872777f6f8752d36d@www.dscho.org>
+Message-ID: <1689eb8ad1ff5ee2c8542b160264ec05@nencki.gov.pl>
+
+Hi,
+
+I can only help with point 3.
+
+The newest version of the code is her:
+https://github.com/openspim/SPIMAcquisition
+As far as I remember, the procedure is to install Fiji and then switch 
+on the OpenSPIM update site, then Fiji will install the newest version 
+automatically. I was doing some minor changes to the plugin and then 
+doing as that page says: building my own plugin, replacing the plugin in 
+the Fiji directory. Last time I did it I used jdk1.8.0_51 and it worked.
+
+Regards,
+Monika
+
+W dniu 2015-08-27 10:18, Johannes Schindelin napisał(a):
+> Hi Evangelos,
+> 
+> I am replacing the obsolete OpenSPIM mailing list address with the one
+> that we use since May 2013, so that the OpenSPIM mailing list
+> subscribers can see it.
+> 
+> Ciao,
+> Johannes
+> 
+> On 2015-08-26 20:29, Evangelos G. Gatzogiannis wrote:
+>> Dear Peter and OpenSpim team,
+>> 
+>> In brief, I have built a custom light-sheet microscope based off of
+>> micromanager.  Future experiment will focus on early embryos and need
+>> high speed imaging and fast rotation with 2 cameras.
+>> 
+>> I have a few detailed questions that could help make OpenSpim even
+>> more versatile by supporting faster Physik Instrumente hardware, such
+>> as for early embryos and fast developing small organisms.
+>> 
+>> I appreciate any comments and help, as described below.
+>> 
+>> 
+>> Is it  possible that OpenSPIM only needs minor enhancement to allow
+>> the use of Physik Instrumente hardware for 4-D positioning? I would
+>> like to use PI Hera piezos PI-Hera P-629.1CD and PI U-628.03 rotation
+>> for moving sample through the sheet, and rotating the sample, in
+>> addition to an x stage PI Z-522.040 for repositioning the sample in z.
+>> These are faster, more precise and have less hysteresis and backlash
+>> than existing motors.
+>> 
+>> 
+>> 
+>> ----
+>> 
+>> We are using Micro-Manager on a 64-bit Windows 7 platform to build a
+>> light sheet microscope. We are interested in trying OpenSPIM since its
+>> write-up indicates that it addresses issues that face us. One issue is
+>> handling loss of focus when rotating a specimen. The other is drift.
+>> 
+>> 
+>> 
+>> Our application positioning the specimen in X, Y, and Z, and rotating
+>> it (in axis Theta). The mount for our specimen requires that we treat
+>> the Y axis a Z, and the Z axis as Y.
+>> 
+>> 
+>> 
+>> Our goal is dual-camera acquisition of Z-series at multiple angles of 
+>> rotation.
+>> 
+>> 
+>> 
+>> For proof of concept with Micro-Manager, we are using a Physik
+>> Instrumente C-884.4D stepper motor controller with the Physik
+>> Instrumente GCS-2 device adapter, which we have configured to work
+>> specifically with the C-884.4D controller. The result works, but (a)
+>> rotation is too slow, and (b) slewing in our "Z" axis is too slow. We
+>> must replace that controller and the stepper motors. Physik
+>> Instrumente has offered us a (fill in) controller.
+>> 
+>> 
+>> 
+>> To our knowledge, we face these problems:
+>> 
+>> 
+>> 
+>> 1. Constraint in choice of hardware. Micro-Manager (and therefor
+>> OpenSPIM) does not allow one to treat two linear stages as an X-Y
+>> stage using arbitrary single-axis controllers or using one axis of a
+>> multi-axis controller. Unless that is changed, our choices of vendor
+>> are limited. Physik Instrumente implements a scheme in which for the X
+>> and Y axes one specifies the controller that is used. If we do not use
+>> a Physik Instrumente controller, we are restricted to a controller
+>> that implements a similar scheme, or we must use a controller that
+>> implements all the axes.
+>> 
+>> 
+>> 
+>> 2. We know that OpenSPIM is written for a Picard Industries
+>> USB-4D-Stage. It appears that the SpimAcquisition plugin includes
+>> specific code for interfacing the Picard USB-4D's Z-Stage, X-Y Stage
+>> and Rotator (its Theta axis). We would need analogous code to allow us
+>> to use the controller or controllers on which we settle. Links below
+>> show the specific code for the Picard USB-4D, written in Java.
+>> 
+>> 
+>> 
+>> How complicated would it be for us to extend OpenSPIM to allow us to
+>> use four axes of Physik Instrumente devices for our purpose?
+>> 
+>> 
+>> 
+>> 3. We would try modifying the SPIMAcquisition plug-in ourselves, but
+>> the documentation for OpenSPIM leaves us wondering about the version
+>> of the Java SE Development Kit that is required. The documentation for
+>> Micro-Manager indicates that OpenSPIM is built with the Version 1.6
+>> Development Kit, which is outdated at this point - the latest release
+>> is version 6u45. Would we run into trouble using the Version 1.8 ?
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> I greatly appreciate your comments and help.
+>> 
+>> Best,
+>> Evangelos
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+

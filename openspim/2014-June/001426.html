@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Problems with OpenSPIM system
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20OpenSPIM%20system&In-Reply-To=%3CCANQL1FuTdzzEm6YrpOxp8Z%2B7%3Dv7%3DNzHYw0Ow97DsUbFhrPcu6w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001425.html">
+   <LINK REL="Next"  HREF="001427.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Problems with OpenSPIM system</H1>
+    <B>Ke Li</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Problems%20with%20OpenSPIM%20system&In-Reply-To=%3CCANQL1FuTdzzEm6YrpOxp8Z%2B7%3Dv7%3DNzHYw0Ow97DsUbFhrPcu6w%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Problems with OpenSPIM system">tianlankeke at gmail.com
+       </A><BR>
+    <I>Fri Jun 27 17:17:54 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001425.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+        <LI>Next message: <A HREF="001427.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1426">[ date ]</a>
+              <a href="thread.html#1426">[ thread ]</a>
+              <a href="subject.html#1426">[ subject ]</a>
+              <a href="author.html#1426">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+Thanks so much. Could you please send the link of the changed version to
+me? And since my system is 64-bit, how can I solve the Z stage problem (no
+field to change the serial number since I can't add the Z stage first)?
+
+Thanks,
+Ke
+
+Ke Li
+Research Assistant
+Biomedical Engineering
+Johns Hopkins University
+Phone: 410-934-9802
+Email: <A HREF="http://openspim.org/mailman/listinfo/openspim">kli26 at jhu.edu</A>
+
+
+On Fri, Jun 27, 2014 at 2:55 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+wrote:
+
+&gt;<i> Hi everyone,
+</I>&gt;<i>
+</I>&gt;<i> On 06/27/14, Luke Stuyvenberg wrote:
+</I>&gt;<i> &gt; I'll report back after fixing/testing and committing/uploading the
+</I>&gt;<i> device adapter.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> And so here I am. I've committed the changes to SVN and uploaded the
+</I>&gt;<i> 32-bit version of the DLL to the OpenSPIM update site.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Mark -- Following your suggestion, those lines were removed -- in
+</I>&gt;<i> hindsight, it's not really the correct behavior, and the possible issue
+</I>&gt;<i> with obtaining an invalid serial number shouldn't be common at all. Thanks!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Kieran -- I recently became aware of the homing problem; the stage
+</I>&gt;<i> sometimes resets its internal location (when it loses power, perhaps?), so
+</I>&gt;<i> over time it will be pushed away. The X/Y stage can be homed using the MM
+</I>&gt;<i> Script Panel, running mmc.home(&quot;Picard XY Stage&quot;) -- the Z stage has no
+</I>&gt;<i> appropriate API call, so for the time being, there is a property &quot;GoHome&quot;
+</I>&gt;<i> that will home that stage when set to 1. It's a workaround until I can
+</I>&gt;<i> submit a more useful patch to the MM team (though, as an API change, that
+</I>&gt;<i> may take a little while).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Ke -- Please let me know if there are any more problems; hope this helps!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Luke
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 06/27/14, Luke Stuyvenberg  wrote:
+</I>&gt;<i> &gt; Hi Ke, Mark, Johannes,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On 06/26/14, Mark Tsuchida wrote:
+</I>&gt;<i> &gt; &gt; Johannes, I also found the cause: OnSerialGeneric() is calling the
+</I>&gt;<i> &gt; &gt; Initialize() function, which fails. This happens before the Hardware
+</I>&gt;<i> &gt; &gt; Wizard calls Initialize (actually, when the wizard is trying to get
+</I>&gt;<i> &gt; &gt; the initial values of the pre-init properties), so the wizard has no
+</I>&gt;<i> &gt; &gt; chance to display the configuration dialog.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Simply taking out the calls to Initialize (PicardStage.cpp lines
+</I>&gt;<i> &gt; &gt; 243-245, 258) seems to fix this, but I'm not sure if that is all that
+</I>&gt;<i> &gt; &gt; needs to be done (since I don't have a Picard stage and cannot figure
+</I>&gt;<i> &gt; &gt; out what the intent of calling Initialize() at this point was).
+</I>&gt;<i> &gt; &gt; Johannes, can you take a look at this?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; The intent of the Initialize call was to test the serial number received
+</I>&gt;<i> from the Pi-detector, but I didn't account for the possibility of
+</I>&gt;<i> CPiDetector returning DEFAULT_SERIAL_UNKNOWN, which it does if the
+</I>&gt;<i> requested device hadn't been found. I'm preparing a fix for this that I
+</I>&gt;<i> will submit via SVN as soon as possible.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; The ultimate issue is this: The Pi-detector only tested serial numbers
+</I>&gt;<i> up to 250. I've doubled this for now, but this is a stop-gap measure that
+</I>&gt;<i> causes an ugly pause in the device adding process while it probes the
+</I>&gt;<i> serial numbers; I will need to seek a different approach to detecting the
+</I>&gt;<i> motors.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I'll report back after fixing/testing and committing/uploading the
+</I>&gt;<i> device adapter.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Luke
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On 06/26/14, Mark Tsuchida wrote:
+</I>&gt;<i> &gt; &gt; Hi Ke and Johannes,
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; On Thu, Jun 26, 2014 at 11:57 AM, Mark Tsuchida &lt;
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>&gt; wrote:
+</I>&gt;<i> &gt; &gt; &gt; On Wed, Jun 25, 2014 at 10:27:54PM -0400, Ke Li wrote:
+</I>&gt;<i> &gt; &gt; &gt;&gt; 1. I still can't add the Z stage when I create the hardware
+</I>&gt;<i> configuration.
+</I>&gt;<i> &gt; &gt; &gt;&gt; I tried both 64-bit and 32-bit Windows system, neither can work.
+</I>&gt;<i> Since the
+</I>&gt;<i> &gt; &gt; &gt;&gt; problem report doesn't give much info, I'm not sure whether there
+</I>&gt;<i> are other
+</I>&gt;<i> &gt; &gt; &gt;&gt; ways to solve this problem? And what possible reasons can cause the
+</I>&gt;<i> &gt; &gt; &gt;&gt; problem?
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Are you sure you have the correct serial number for the Z stage (as
+</I>&gt;<i> &gt; &gt; &gt; Johannes suggested)? In the problem report you sent us, it looked
+</I>&gt;<i> like
+</I>&gt;<i> &gt; &gt; &gt; you had not set the serial number when adding the Z stage in the
+</I>&gt;<i> &gt; &gt; &gt; Hardware Configuration Wizard. This causes the device adapter to use
+</I>&gt;<i> the
+</I>&gt;<i> &gt; &gt; &gt; serial number &quot;-1&quot;, which always results in an error.
+</I>&gt;<i> &gt; &gt; &gt;
+</I>&gt;<i> &gt; &gt; &gt; Do you see a field to enter the serial number for the Z stage? If
+</I>&gt;<i> you cannot
+</I>&gt;<i> &gt; &gt; &gt; get it to work even when entering the correct serial number, could
+</I>&gt;<i> you try
+</I>&gt;<i> &gt; &gt; &gt; sending another Problem Report?
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Sorry, I hadn't seen your reply to Johannes that answered that
+</I>&gt;<i> question of mine.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; I can reproduce the problem: with no Picard hardware connected to the
+</I>&gt;<i> &gt; &gt; computer, no configuration dialog for the pre-initialization settings
+</I>&gt;<i> &gt; &gt; (including the serial number) is displayed in the hardware
+</I>&gt;<i> &gt; &gt; configuration wizard. This is the case for the Twister and Z stage,
+</I>&gt;<i> &gt; &gt; but not the XY stage (at least on my computer).
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Johannes, I also found the cause: OnSerialGeneric() is calling the
+</I>&gt;<i> &gt; &gt; Initialize() function, which fails. This happens before the Hardware
+</I>&gt;<i> &gt; &gt; Wizard calls Initialize (actually, when the wizard is trying to get
+</I>&gt;<i> &gt; &gt; the initial values of the pre-init properties), so the wizard has no
+</I>&gt;<i> &gt; &gt; chance to display the configuration dialog.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Simply taking out the calls to Initialize (PicardStage.cpp lines
+</I>&gt;<i> &gt; &gt; 243-245, 258) seems to fix this, but I'm not sure if that is all that
+</I>&gt;<i> &gt; &gt; needs to be done (since I don't have a Picard stage and cannot figure
+</I>&gt;<i> &gt; &gt; out what the intent of calling Initialize() at this point was).
+</I>&gt;<i> &gt; &gt; Johannes, can you take a look at this?
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Best,
+</I>&gt;<i> &gt; &gt; Mark
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; --
+</I>&gt;<i> &gt; &gt; Mark Tsuchida
+</I>&gt;<i> &gt; &gt; Micro-Manager Team (UCSF Vale Lab)
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; _______________________________________________
+</I>&gt;<i> &gt; &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> &gt; &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; OpenSPIM mailing list
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> &gt; <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140627/f61be248/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20140627/f61be248/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001425.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+	<LI>Next message: <A HREF="001427.html">[OpenSPIM] Problems with OpenSPIM system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1426">[ date ]</a>
+              <a href="thread.html#1426">[ thread ]</a>
+              <a href="subject.html#1426">[ subject ]</a>
+              <a href="author.html#1426">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

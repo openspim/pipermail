@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] MultiChannel Acquisition Implementation
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20MultiChannel%20Acquisition%20Implementation&In-Reply-To=%3C0BB84AC4E46D2D4AB1AE4C111324E8D63DBB81E3%40IU-MSSG-MBX107.ads.iu.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001627.html">
+   <LINK REL="Next"  HREF="001629.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] MultiChannel Acquisition Implementation</H1>
+    <B>Winfree, Seth</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20MultiChannel%20Acquisition%20Implementation&In-Reply-To=%3C0BB84AC4E46D2D4AB1AE4C111324E8D63DBB81E3%40IU-MSSG-MBX107.ads.iu.edu%3E"
+       TITLE="[OpenSPIM] MultiChannel Acquisition Implementation">winfrees at iu.edu
+       </A><BR>
+    <I>Wed Mar  4 09:03:25 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001627.html">[OpenSPIM] Fwd: OpenSPIM Digest, Vol 23, Issue 2
+</A></li>
+        <LI>Next message: <A HREF="001629.html">[OpenSPIM] MultiChannel Acquisition Implementation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1628">[ date ]</a>
+              <a href="thread.html#1628">[ thread ]</a>
+              <a href="subject.html#1628">[ subject ]</a>
+              <a href="author.html#1628">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jon,
+
+Thanks for your input.  For now I am trying to implement multichannel acquisition with the approach that the OpenSPIM plugin takes.  From what I've gathered the approach is not through the MDA but through direct manipulation of device properties-historically because of support for the theta axis?  Disclaimer: I'm not an expert of either.  In any event, one of the goals that has been discussed on the list is getting the OpenSPIM plugin more in-step with ongoing releases of micromanager and perhaps use of MDA might be an avenue to explore.  But, again this is beyond my experience with the plugin thus far(and its design) and better left to a discussion with Johannes.
+
+Since last week, I am able to capture with specific filterwheel and DAC settings with the OpenSPIM plugin.  The gui I've implemented thus far is simple and built around the SteppedSlider class Johannes included with the OpenSPIM plugin-I'll take a look at your suggestions for inspiration.   There are some outstanding things (of course) including, getting micromanager to use blanking of the DACs as a shutter-not difficult, but critical, z bidirectionality and some image handling details(dealing with the multiple channels correctly, which you mention).
+
+Once the dust settles I figure out how to push some of this back to micromanager, especially the DAC controller(hardware and software) which can be implemented for around $100 (custom shield, Arduino and the open micromanager device adapter I've modified).  Significantly cheaper than any of the other options out there.  In any event... I've rambled a bit.
+
+Thanks again for your input!
+
+Cheers,
+
+Seth
+
+From: Jon Daniels [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">jon at asiimaging.com</A>]
+Sent: Wednesday, February 25, 2015 6:36 PM
+To: Winfree, Seth; Johannes Schindelin (<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>)
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: re: [OpenSPIM] MultiChannel Acquisition Implementation
+
+Hi Seth,
+
+I'm no expert in the OpenSPIM code, but I am very familiar with the diSPIM plugin in Micro-Manager which does something very similar.
+
+If I understand the question correctly, you want to know how to tell Micro-Manager which images are from which channels so they will get saved correctly in a multi-dimensional dataset.  Make sure you add the metadata tag &quot;ChannelIndex&quot; to the TaggedImage you are presumably getting from the camera's circular buffer and then passing along to the Micro-Manager internals.  You'll also want to call setChannelName() so that the index is linked to a meaningful name.  See code at <A HREF="https://valelab.ucsf.edu/trac/micromanager/browser/plugins/ASIdiSPIM/src/org/micromanager/asidispim/AcquisitionPanel.java,">https://valelab.ucsf.edu/trac/micromanager/browser/plugins/ASIdiSPIM/src/org/micromanager/asidispim/AcquisitionPanel.java,</A> look at runAcquisitionPrivate() (line 1506) which sets up the acquisition and then calls addImageToAcquisition() (line 2210) which adds the correct metadata and inserts the images into the ImageCache queue.  See also <A HREF="https://micro-manager.org/wiki/Multi-Dimensional_Acquisition_Programming.">https://micro-manager.org/wiki/Multi-Dimensional_Acquisition_Programming.</A>
+
+If you are interested in the GUI aspects, see Micro-Manager's MDA window or the diSPIM plugin's simplified channel selection table.
+
+Good luck!
+
+Jon
+
+
+
+&gt;<i>  Johannes and list,
+</I>&gt;<i>
+</I>&gt;<i>  I've made pretty good progress on the hardware implementation of multiple
+</I>&gt;<i>  channels for our L-SPIM. On the software side I've adapted drivers and
+</I>&gt;<i>  firmware to control my homebuilt DAC (6ch for now) and NEOS-AOTF setup in
+</I>&gt;<i>  micromanager and pulled everything into the SPIMAcquisition plugin with the
+</I>&gt;<i>  Device abstraction, a new DAC class and DAC voltage GUI. Eventually there
+</I>&gt;<i>  will be a wattage calibration. I also have a Sutter 10-2 implemented inthe
+</I>&gt;<i>  SPIMAcquisition plugin via Device and a FilterWheel class. Right now these
+</I>&gt;<i>  new devices can be accessed and controlled through SPIMsetup. I do need to
+</I>&gt;<i>  push all these changes to a new branch... getting there.
+</I>&gt;<i>
+</I>&gt;<i>  I'm now thinking through the acquisition side of things and before I get to
+</I>&gt;<i>  far down a particular path I wanted to see if there were any strong opinions
+</I>&gt;<i>  about the implementation of multiple channels. I believe I understand how
+</I>&gt;<i>  you've implemented acquisition and haven't found a simple way to add the
+</I>&gt;<i>  extra dimension of channels (DAC and filter wheel). This could be because
+</I>&gt;<i>  I'm missing something in the implementation though.
+</I>&gt;<i>
+</I>&gt;<i>  Thanks in advance for your thoughts!
+</I>&gt;<i>
+</I>&gt;<i>  Seth
+</I>&gt;<i>
+</I>&gt;<i>  Seth Winfree
+</I>&gt;<i>  Indiana Center for Biological Microscopy
+</I>&gt;<i>  Indiana University Medical Center
+</I>&gt;<i>  950 West Walnut St, R2-202
+</I>&gt;<i>  Indianapolis, IN 46202-5116
+</I>&gt;<i>
+</I>&gt;<i>  _______________________________________________
+</I>&gt;<i>  OpenSPIM mailing list
+</I>&gt;<i>  <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+</I>&gt;<i>  <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+
+
+[ASI]
+
+
+Jon Daniels
+Applied Scientific Instrumentation&lt;<A HREF="http://www.ASIimaging.com">http://www.ASIimaging.com</A>&gt;
+29391 West Enid Rd, Eugene, OR 97402
+Phone: (541) 461-8181 x118
+US &amp; Canada: (800) 706-2284
+Fax: (541) 461-4018
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150304/f1baba18/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150304/f1baba18/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001627.html">[OpenSPIM] Fwd: OpenSPIM Digest, Vol 23, Issue 2
+</A></li>
+	<LI>Next message: <A HREF="001629.html">[OpenSPIM] MultiChannel Acquisition Implementation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1628">[ date ]</a>
+              <a href="thread.html#1628">[ thread ]</a>
+              <a href="subject.html#1628">[ subject ]</a>
+              <a href="author.html#1628">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

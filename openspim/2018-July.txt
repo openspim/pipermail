@@ -1,0 +1,96 @@
+From marbrow at iu.edu  Fri Jul 13 12:20:15 2018
+From: marbrow at iu.edu (Brown, Mary E.)
+Date: Fri, 13 Jul 2018 17:20:15 +0000
+Subject: [OpenSPIM] Problems with Stage Mount
+Message-ID: <8caa91d97c374e82bb5ee23f132de764@IN-CCI-D1S13.ads.iu.edu>
+
+Hello Openspimmers,
+
+I am brand new to SPIM and I recently inherited a home-built SPIM system based on OpenSPIM. The system has a Picard Industries USB 4D stage mount with the serial number 056. I discovered that, after setting my angles and positions in the MicroManager software, the stage mount does not return to its original position, which throws off all of the positions and angles I had set. Has anyone encountered this before? Is this a software or mechanical problem? How did you manage it? Thank you for your consideration.
+_____________________________
+Mary E. Brown, Pharm.D.
+Microscopy Technologist
+The Indiana Center for Biological Microscopy
+Division of Nephrology
+Indiana University School of Medicine
+950 West Walnut St., Ste. 202
+Indianapolis, IN 46202
+marbrow at iu.edu
+317-278-0491
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180713/69954b75/attachment.html>
+
+From marbrow at iu.edu  Tue Jul 17 04:47:53 2018
+From: marbrow at iu.edu (Brown, Mary E.)
+Date: Tue, 17 Jul 2018 09:47:53 +0000
+Subject: [OpenSPIM] sponge sample holder
+Message-ID: <1531820873304.8091@iu.edu>
+
+Can someone tell me where I can order one of these sponge sample holders? I've searched several companies and cannot find one or I'm using the wrong name for the part. The company and part # is not listed in the OpenSPIM website. Thank you.
+
+[cid:0a29c39a-3ce2-4b7b-966e-84546a388422]?
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180717/af371963/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: syringe&holder.jpg
+Type: image/jpeg
+Size: 141487 bytes
+Desc: syringe&holder.jpg
+URL: <http://openspim.org/pipermail/openspim/attachments/20180717/af371963/attachment-0002.jpg>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: syringe&holder.jpg
+Type: image/jpeg
+Size: 141487 bytes
+Desc: syringe&holder.jpg
+URL: <http://openspim.org/pipermail/openspim/attachments/20180717/af371963/attachment-0003.jpg>
+
+From emmanuel.reynaud at ucd.ie  Tue Jul 17 04:51:30 2018
+From: emmanuel.reynaud at ucd.ie (Emmanuel Reynaud)
+Date: Tue, 17 Jul 2018 10:51:30 +0100
+Subject: [OpenSPIM] sponge sample holder
+In-Reply-To: <1531820873304.8091@iu.edu>
+References: <1531820873304.8091@iu.edu>
+Message-ID: <CADdnFio5QhEL+tvBmJW1OB8AYuyyBc98YQ5oR-NqMeszGKFA3g@mail.gmail.com>
+
+Well you can make it yourself as it is the thickness of yoga mat or any
+foam based material hanging around (packing material, eppendorf floating
+raft.)
+Make a nice template and then you are.
+
+Best
+
+Emmanuel
+
+*Dr Emmanuel G. Reynaud*
+Principal Investigator, Integrative Biology
+Conway Institute of Biomolecular and Biomedical Science
+UCD Centre for Biomedical Engineering (
+http://www.ucd.ie/biomedicalengineering/)
+
+Twitter:@ReynaudEmmanuel <https://twitter.com/ReynaudEmmanuel>
+Website:http://cellbiology.ucd.ie/
+
+On 17 July 2018 at 10:47, Brown, Mary E. <marbrow at iu.edu> wrote:
+
+> Can someone tell me where I can order one of these sponge sample holders?
+> I've searched several companies and cannot find one or I'm using the
+> wrong name for the part. The company and part # is not listed in the
+> OpenSPIM website. Thank you.
+>
+> ​
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180717/391e49ef/attachment.html>
+

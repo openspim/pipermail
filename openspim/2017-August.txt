@@ -1,0 +1,236 @@
+From emmanuel.reynaud at ucd.ie  Tue Aug 22 05:28:53 2017
+From: emmanuel.reynaud at ucd.ie (Emmanuel Reynaud)
+Date: Tue, 22 Aug 2017 11:28:53 +0100
+Subject: [OpenSPIM] Fluorescent solution for light sheet alignment
+Message-ID: <CADdnFiq=XStJ=4S_+km3wjep=4bcR=G6MRdQaqgmnZ3fmAgQVw@mail.gmail.com>
+
+Hi,
+
+Did anybody ever used a chamber filled with fluorescent solution (e.g.
+fluorescein) to align the light sheet? Got a request from another group who
+planned to use such method to align detection vs illumination objectives?
+
+Any ideas welcome,
+
+Emmanuel
+
+*Dr Emmanuel G. Reynaud*
+Principal Investigator, Integrative Biology
+Conway Institute of Biomolecular and Biomedical Science
+UCD Centre for Biomedical Engineering (
+http://www.ucd.ie/biomedicalengineering/)
+
+e-mail: emmanuel.reynaud at ucd.ie <matthias.wilm at ucd.ie>
+Website:http://cellbiology.ucd.ie/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170822/22a59768/attachment.html>
+
+From nvladimus at gmail.com  Tue Aug 22 07:23:29 2017
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Tue, 22 Aug 2017 14:23:29 +0200
+Subject: [OpenSPIM] Fluorescent solution for light sheet alignment
+In-Reply-To: <CADdnFiq=XStJ=4S_+km3wjep=4bcR=G6MRdQaqgmnZ3fmAgQVw@mail.gmail.com>
+References: <CADdnFiq=XStJ=4S_+km3wjep=4bcR=G6MRdQaqgmnZ3fmAgQVw@mail.gmail.com>
+Message-ID: <CAC+J2j=Y5ML+usUK_diGB2MhyhUprv9fZ4+VGKDCBPe-_QZOsw@mail.gmail.com>
+
+Yes, I did, it worked nicely with fluorescein, for finding the beam waist
+in the field of view, and checking the XY tilt.
+
+Nikita Vladimirov
+
+On Tue, Aug 22, 2017 at 12:28 PM, Emmanuel Reynaud <emmanuel.reynaud at ucd.ie>
+wrote:
+
+> Hi,
+>
+> Did anybody ever used a chamber filled with fluorescent solution (e.g.
+> fluorescein) to align the light sheet? Got a request from another group who
+> planned to use such method to align detection vs illumination objectives?
+>
+> Any ideas welcome,
+>
+> Emmanuel
+>
+> *Dr Emmanuel G. Reynaud*
+> Principal Investigator, Integrative Biology
+> Conway Institute of Biomolecular and Biomedical Science
+> UCD Centre for Biomedical Engineering (http://www.ucd.ie/
+> biomedicalengineering/)
+>
+> e-mail: emmanuel.reynaud at ucd.ie <matthias.wilm at ucd.ie>
+> Website:http://cellbiology.ucd.ie/
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170822/2659564d/attachment.html>
+
+From david.potter at monash.edu  Tue Aug 22 20:10:08 2017
+From: david.potter at monash.edu (David Potter)
+Date: Wed, 23 Aug 2017 11:10:08 +1000
+Subject: [OpenSPIM] Fluorescent solution for light sheet alignment
+Message-ID: <CAHmtN7kU30CHdTdKV=TbQ5aSONSawwCocubNwKY4M_=JqPd2ug@mail.gmail.com>
+
+Emmanuel,
+
+I use both a fluorophore in the bath and beads in agarose. I find the
+approximate focal point and in plane tilt of the beam/sheet with the bath.
+For sheet tilt out of the detection focal plane, and setting cylindrical
+lens rotation angle, I use free floating beads in the bath or beads held in
+an agarose plug. Beads can be quite a problem to get out of the bath,
+though this may not impact some imaging sessions, so I use an agarose plug.
+I accept that lensing occurs when shooting through the agarose cylinder so
+I shoot through the centre as best I can.
+
+I tend to use Alexa dyes in the bath as I think the dyes are less likely to
+get taken up into cells. TetraSpeck beads are great for fine aligning
+second or third lasers to the alignment laser.
+
+Cheers,
+
+- David
+
+David Potter
+Lattice Light Sheet Microscopy Manager
+Monash Micro Imaging - Advanced Optical Microscopy
+Monash University Clayton, VIC 3800, Australia
+
+
+
+On 23 August 2017 at 03:00, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Fluorescent solution for light sheet alignment (Emmanuel Reynaud)
+>    2. Re: Fluorescent solution for light sheet alignment
+>       (Nikita Vladimirov)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Tue, 22 Aug 2017 11:28:53 +0100
+> From: Emmanuel Reynaud <emmanuel.reynaud at ucd.ie>
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Fluorescent solution for light sheet alignment
+> Message-ID:
+>         <CADdnFiq=XStJ=4S_+km3wjep=4bcR=G6MRdQaqgmnZ3fmAgQVw@
+> mail.gmail.com>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Hi,
+>
+> Did anybody ever used a chamber filled with fluorescent solution (e.g.
+> fluorescein) to align the light sheet? Got a request from another group who
+> planned to use such method to align detection vs illumination objectives?
+>
+> Any ideas welcome,
+>
+> Emmanuel
+>
+> *Dr Emmanuel G. Reynaud*
+> Principal Investigator, Integrative Biology
+> Conway Institute of Biomolecular and Biomedical Science
+> UCD Centre for Biomedical Engineering (
+> http://www.ucd.ie/biomedicalengineering/)
+>
+> e-mail: emmanuel.reynaud at ucd.ie <matthias.wilm at ucd.ie>
+> Website:http://cellbiology.ucd.ie/
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20170822/22a59768/attachment-0001.html>
+>
+> ------------------------------
+>
+> Message: 2
+> Date: Tue, 22 Aug 2017 14:23:29 +0200
+> From: Nikita Vladimirov <nvladimus at gmail.com>
+> To: Emmanuel Reynaud <emmanuel.reynaud at ucd.ie>
+> Cc: openspim at openspim.org
+> Subject: Re: [OpenSPIM] Fluorescent solution for light sheet alignment
+> Message-ID:
+>         <CAC+J2j=Y5ML+usUK_diGB2MhyhUprv9fZ4+VGKDCBPe-_
+> QZOsw at mail.gmail.com>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Yes, I did, it worked nicely with fluorescein, for finding the beam waist
+> in the field of view, and checking the XY tilt.
+>
+> Nikita Vladimirov
+>
+> On Tue, Aug 22, 2017 at 12:28 PM, Emmanuel Reynaud <
+> emmanuel.reynaud at ucd.ie>
+> wrote:
+>
+> > Hi,
+> >
+> > Did anybody ever used a chamber filled with fluorescent solution (e.g.
+> > fluorescein) to align the light sheet? Got a request from another group
+> who
+> > planned to use such method to align detection vs illumination objectives?
+> >
+> > Any ideas welcome,
+> >
+> > Emmanuel
+> >
+> > *Dr Emmanuel G. Reynaud*
+> > Principal Investigator, Integrative Biology
+> > Conway Institute of Biomolecular and Biomedical Science
+> > UCD Centre for Biomedical Engineering (http://www.ucd.ie/
+> > biomedicalengineering/)
+> >
+> > e-mail: emmanuel.reynaud at ucd.ie <matthias.wilm at ucd.ie>
+> > Website:http://cellbiology.ucd.ie/
+> >
+> > _______________________________________________
+> > OpenSPIM mailing list
+> > OpenSPIM at openspim.org
+> > http://openspim.org/mailman/listinfo/openspim
+> >
+> >
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20170822/2659564d/attachment-0001.html>
+>
+> ------------------------------
+>
+> Subject: Digest Footer
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> ------------------------------
+>
+> End of OpenSPIM Digest, Vol 48, Issue 2
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20170823/b9bb3e6f/attachment.html>
+

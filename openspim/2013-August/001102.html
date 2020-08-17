@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3CF58F755A-F260-4B0E-A467-B7D4E241A459%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001101.html">
+   <LINK REL="Next"  HREF="000136.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3CF58F755A-F260-4B0E-A467-B7D4E241A459%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Wed Aug 14 09:54:59 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001101.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+        <LI>Next message: <A HREF="000136.html">[OpenSPIM] OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1102">[ date ]</a>
+              <a href="thread.html#1102">[ thread ]</a>
+              <a href="subject.html#1102">[ subject ]</a>
+              <a href="author.html#1102">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>hi,
+&gt;<i> Regarding the stack issue - you mentioned that it takes about 3 min to write 400 MB to disk, that might be an issue on the computer hardware side. A simple hard drive should give you around 100 MB/s, with smaller data packages it might be less but 3 min sounds way to slow. Can you reduce the data rate and see if that helps?For example by reducing the frame rate or using binning while keeping the frame rate constant. Or if you can, try an SSD drive or a RAID system for data acquisition. Streaming data can also be very sensitive to background activities, such as virus scanners, cloud syncing, update scanners.
+</I>
+I do not think that the problem comes from the hard drive:
+1) reducing the file size by a factor of 2 or 4 (binning) did not make the writing to disk faster. With the asynchronous writing ON, the planes are always written to disk in a peppered manner between two consecutive time lapse, with the last image(s)  written right before the next time point.
+
+2) When  asynchronous writing os OFF (i-e writing to disk is occurring immediately, which should be a good readout of the hard drive speed) the stacks are written in about 20sec (for ~200Mb)
+
+With my best regards,
+
+Alexis
+
+
+&gt;<i> Best regards,
+</I>&gt;<i> Michael
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Aug 14, 2013, at 10:20 AM, Alexis Maizel &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Alexis.Maizel at cos.uni-heidelberg.de</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Hi Jan,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> BTW the images are not in focus and you seem to collect quite a bit of laser speckles. Clearly a sign for a bad emission filter or that your laser needs a clean-up filter.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Yes, the laser does need a clean up filter quite a bit of green light in it, especially at low power; it is ordered. The emission filter (<A HREF="http://www.semrock.com/FilterDetails.aspx?id=FF03-525/50-25">http://www.semrock.com/FilterDetails.aspx?id=FF03-525/50-25</A>) seems right, no? 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> As for focus, this is the best we could get so far :-/
+</I>&gt;&gt;<i> Our LS is ~10µm thick and nicely shaped. The excitation lens is a Nikon CFI FLUOR 10x/0.30.
+</I>&gt;&gt;<i> Do you have suggestions to improve the focus?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> With my best regards,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Alexis
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> On 14 Aug 2013, at 10:11, Jan Huisken &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">huisken at mpi-cbg.de</A>&gt; wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Hi Alexis,
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> this is clearly a camera issue. Sometimes this goes along with missing or partial frames. We have seen it happening when something goes wrong with the spooling, e.g. when the hard drive is too slow or too full or too many files in one folder.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Best
+</I>&gt;&gt;&gt;<i> Jan
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Dr. Jan Huisken
+</I>&gt;&gt;&gt;<i> MPI of Molecular Cell Biology and Genetics
+</I>&gt;&gt;&gt;<i> Pfotenhauerstr. 108, 01307 Dresden, Germany
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> On Aug 13, 2013, at 8:14 PM, Alexis Maizel wrote:
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> Hi,
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> I have noticed that when acquiring stacks during a time lapse and writing them to disk, using the 'asynchronous writing' option, the order in which the individual images are laid into the stack is imprecise. What I mean is that an image obviously in the middle of the stack is shifted toward the end. I did not observed a fixed pattern, except that usually the first 15-20 planes are in the right order and the mess is a the end.
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> I have carefully observed and the problem does not come from the stage 'going back and forth' during acquisition. It is upon writing to the disk that the problem seems to occur. Also I have noticed that it takes quite a long time (up to 3 minutes) to write to disk a ~400Mb stack. 
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> You can see more precisely what I am talking about by looking at two representative stacks: <A HREF="http://dl.dropbox.com/u/484859/Stacks.zip">http://dl.dropbox.com/u/484859/Stacks.zip</A>
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> With my best regards,
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> Alexis
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>&gt;<i> 
+</I>&gt;<i> _____________
+</I>&gt;<i> 
+</I>&gt;<i> Michael Weber
+</I>&gt;<i> PhD Student, Huisken lab
+</I>&gt;<i> Max Planck Institute of Molecular Cell Biology and Genetics
+</I>&gt;<i> Pfotenhauerstrasse 108, 01307 Dresden
+</I>&gt;<i> Tel. 0049 351/2102837
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130814/614a38d3/attachment.sig">http://openspim.org/pipermail/openspim/attachments/20130814/614a38d3/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001101.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+	<LI>Next message: <A HREF="000136.html">[OpenSPIM] OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1102">[ date ]</a>
+              <a href="thread.html#1102">[ thread ]</a>
+              <a href="subject.html#1102">[ subject ]</a>
+              <a href="author.html#1102">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

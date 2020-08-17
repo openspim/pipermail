@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Temperature control for the SPIM chamber
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3COF98E1B8CD.63F90A89-ONC1257BE9.0057D4C1-C1257BE9.0057D4C7%40ipt.rwth-aachen.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001127.html">
+   <LINK REL="Next"  HREF="001129.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Temperature control for the SPIM chamber</H1>
+    <B>edgar.escobar.nieto at ipt.fraunhofer.de</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Temperature%20control%20for%20the%20SPIM%20chamber&In-Reply-To=%3COF98E1B8CD.63F90A89-ONC1257BE9.0057D4C1-C1257BE9.0057D4C7%40ipt.rwth-aachen.de%3E"
+       TITLE="[OpenSPIM] Temperature control for the SPIM chamber">edgar.escobar.nieto at ipt.fraunhofer.de
+       </A><BR>
+    <I>Tue Sep 17 10:59:21 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001127.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+        <LI>Next message: <A HREF="001129.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1128">[ date ]</a>
+              <a href="thread.html#1128">[ thread ]</a>
+              <a href="subject.html#1128">[ subject ]</a>
+              <a href="author.html#1128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes,
+
+Thanks a lot for your feedback!! 
+
+I think that you mean aluminum, not plexiglas.
+
+I will add glass windows to the chamber then, because it will look
+nicer and I think it will be easier to visualize the sample when positioning it
+or to illuminate it.
+
+My case is that I need to get a stable temperature, let's say 37 °C
+
+You're right about the gradients, so I will take that into consideration using
+two sensors, only to be sure that I get an uniform tempereture through the
+media. 
+
+Kind regards,
+Edgar
+ _________________________________________________________________________
+
+Fraunhofer-Institut für Produktionstechnologie IPT 
+Edgar Escobar Nieto  
+ 
+
+ 
+ 
+Steinbachstraße 17 
+52074 Aachen 
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> 
+<A HREF="http://www.ipt.fraunhofer.de">http://www.ipt.fraunhofer.de</A>
+_________________________________________________________________________
+ 
+ 
+ 
+
+
+-----Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt; schrieb: -----
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A>
+Von: Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">Johannes.Schindelin at gmx.de</A>&gt;
+Datum: 17.09.2013 16:55
+Kopie: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: Re: [OpenSPIM] Temperature control for the SPIM chamber
+
+Hi Edgar,
+
+On Tue, 17 Sep 2013, <A HREF="http://openspim.org/mailman/listinfo/openspim">edgar.escobar.nieto at ipt.fraunhofer.de</A> wrote:
+
+&gt;<i> I would like to add a temperature control to the SPIM chamber, so I was
+</I>&gt;<i> thinking to build a new SPIM chamber but made of aluminum instead of
+</I>&gt;<i> acrylic because of the better heat transmission of the aluminum. The
+</I>&gt;<i> think is that I don't know if the illumination of the sample will be
+</I>&gt;<i> affected (the lightsheet could be reflected inside the aluminum
+</I>&gt;<i> chamber). Do you think would make sense to to add some glass windows to
+</I>&gt;<i> the chamber?
+</I>
+Interesting idea about the temperature control! We had the idea already
+but too many other things to do so far.
+
+Regarding the reflection: yes, I would expect the scattered laser light to
+provide reason for a lot of problems.
+
+Depending how fast your temperature control needs to react (i.e. do you
+need to keep the temperature just stable? In that case, a big peltier
+underneath the plexi glass chamber should be good enough), you might need
+to anodize the side of the chamber, or put in a window as you say.
+
+Another idea would be to embed the peltier *inside* the chamber rather
+than underneath, so that you do not have to go through the complete
+centimeter or so of plexi glass.
+
+Also keep in mind that you need to have a precise temperature sensor
+inside the chamber, preferably two: one close to the peltier, one as far
+from it as possible, to account for temperature gradients.
+
+But please keep in mind, too, that I am a software guy, not a hardware
+guy, so hopefully scientists with more experience in the matters at hand
+will respond soon (I know that PAvel is at a workshop these days,
+introducing the OpenSPIM to yet another crowd of scientists, so he'll be
+busy, I suspect).
+
+Ciao,
+Johannes
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20130917/8aadf07b/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20130917/8aadf07b/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001127.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+	<LI>Next message: <A HREF="001129.html">[OpenSPIM] Temperature control for the SPIM chamber
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1128">[ date ]</a>
+              <a href="thread.html#1128">[ thread ]</a>
+              <a href="subject.html#1128">[ subject ]</a>
+              <a href="author.html#1128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

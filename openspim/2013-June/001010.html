@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3Calpine.DEB.1.00.1306061816190.28957%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001006.html">
+   <LINK REL="Next"  HREF="001012.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3Calpine.DEB.1.00.1306061816190.28957%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Thu Jun  6 11:17:59 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001006.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001012.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1010">[ date ]</a>
+              <a href="thread.html#1010">[ thread ]</a>
+              <a href="subject.html#1010">[ subject ]</a>
+              <a href="author.html#1010">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+On Thu, 6 Jun 2013, Alexis Maizel wrote:
+
+&gt;<i> The 64'000$ question: how do I make a device a shutter? Can you point me
+</I>&gt;<i> to the appropriate documentation or code example? Although I have only
+</I>&gt;<i> limited C coding experience, the Cobolt device adapter code is
+</I>&gt;<i> definitively something in my league.
+</I>
+I *think* all you have to do is extend the CShutterBase class:
+<A HREF="https://github.com/openspim/micromanager/blob/openspim/DeviceAdapters/DemoCamera/DemoCamera.h#L695">https://github.com/openspim/micromanager/blob/openspim/DeviceAdapters/DemoCamera/DemoCamera.h#L695</A>
+
+(instead of CGenericBase:
+<A HREF="https://github.com/openspim/micromanager/blob/openspim/DeviceAdapters/Cobolt/Cobolt.h#L30">https://github.com/openspim/micromanager/blob/openspim/DeviceAdapters/Cobolt/Cobolt.h#L30</A>)
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001006.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001012.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1010">[ date ]</a>
+              <a href="thread.html#1010">[ thread ]</a>
+              <a href="subject.html#1010">[ subject ]</a>
+              <a href="author.html#1010">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

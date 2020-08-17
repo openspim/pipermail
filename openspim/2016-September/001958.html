@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Multiview Reconstruction- optimizing settings?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Multiview%20Reconstruction-%20optimizing%20settings%3F&In-Reply-To=%3CCO2PR05MB252072D200DAFF98AFF8CD66ECE50%40CO2PR05MB2520.namprd05.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="001960.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Multiview Reconstruction- optimizing settings?</H1>
+    <B>Anthony, Neil</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Multiview%20Reconstruction-%20optimizing%20settings%3F&In-Reply-To=%3CCO2PR05MB252072D200DAFF98AFF8CD66ECE50%40CO2PR05MB2520.namprd05.prod.outlook.com%3E"
+       TITLE="[OpenSPIM] Multiview Reconstruction- optimizing settings?">nantho2 at emory.edu
+       </A><BR>
+    <I>Fri Sep  2 11:50:43 CDT 2016</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="001960.html">[OpenSPIM] Multiview Reconstruction- optimizing settings?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1958">[ date ]</a>
+              <a href="thread.html#1958">[ thread ]</a>
+              <a href="subject.html#1958">[ subject ]</a>
+              <a href="author.html#1958">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Maarten, I hope the science treats you well.
+
+When I get a registration result that works I feel the overlap in the BDV looks good, although this is a little subjective.  Can I ask what kind or errors you get in the log during the registration?  I've found that I can get it down to less than a pixel and it looks ok.*, **
+
+I find that the allowed pixel error helps (I use 1 px), and the significance is less sensitive, but I've found 10-15 appears better.  Following that the lambda value is better when higher as far as I can tell.  I started to look into the literature, but these things are not so accessible on just skimming the papers.
+
+I don't know how much the transformation model and model to regularize with affects things as I haven't played with those much.  Also, I don't know how the sigma values and thresholds of the bead detection affect the registration, if at all.
+
+Thanks
+Neil
+
+* I have a camera that is not properly sampling. I've opted to get a larger area and sacrifice resolution on the old ORCA's we're using. I have a pixel spacing of 0.64 um, which is approximately the resolution with the 20XW lens.  Can I ask if anybody knows how my resolution is affected?  I assumed that doubling the field of view in this way would leave me with a resolution ~ 1um...?
+** My calibration samples, registrations, and MVdecons are looking pretty nice, but I'm struggling with the real world samples for some reason...  I topic for another post once I've tried a few things.
+
+
+
+From: OpenSPIM [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] On Behalf Of Maarten Hilbrant
+Sent: Monday, August 22, 2016 9:26 AM
+To: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: [OpenSPIM] Multiview Reconstruction- optimizing settings?
+
+Dear all,
+
+nice to see some questions on the mailing list lately regarding Stephan Preibisch' multview plugin. After attending the EMBO workshop in Dresden in 2014,  I've been using the plugin for two years now and it is an essential part of our light sheet workflow. In a nutshell, we image insect embryos, embedded in agarose containing sub-resolution beads, using single-sided illumination with 8 or 16 angles per time point. In order to infer the biological relevance of RNAi phenotypes, we tend to look at many different specimens for few time points, rather than collecting time-lapse data for a small number of specimens. In practice, this means a lot of reconstructing and adjusting settings, although I find that, for most of our datasets, default settings work nicely for bead detection, registration and deconvolution (&quot;Nicely&quot; in this case meaning a significant increase in local contrast). Sometimes, however, registration is sub-optimal (and who knows, maybe it is also for the analyses that I normally quality as &quot;nice''-). In these cases, as a first hint, inspection with the BigDataViewer reveals that the psf's of the different angles don't overlap properly.
+
+- Does this sound familiar to other users of the plugin?
+- What reconstruction parameters do you generally tinker with first?
+- for example: do you spend a lot of time on bead detection (and subsequent exclusion)?
+- Do you sometimes reject datasets for multi view reconstruction and if so, on what grounds? For example, I like to image &quot;a lot&quot; of agarose surrounding the embryo in order to have a large set of beads for reconstruction, but am not always very systematic about this. Is this crucial in your data acquisition?
+
+any ideas appreciated, basically to make better use of this great tool.
+
+cheers,
+Maarten
+
+******************************
+Dr. Maarten Hilbrant
+Postdoctoral Researcher
+Zoological Institute
+University of Cologne
+Cologne Biocenter
+Zülpicher Str. 47b
+50674 Cologne
+Germany
++49(0)221-4703238
+<A HREF="http://openspim.org/mailman/listinfo/openspim">m.hilbrant at uni-koeln.de</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">m.hilbrant at uni-koeln.de</A>&gt;
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20160902/125cbcb4/attachment.html">http://openspim.org/pipermail/openspim/attachments/20160902/125cbcb4/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="001960.html">[OpenSPIM] Multiview Reconstruction- optimizing settings?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1958">[ date ]</a>
+              <a href="thread.html#1958">[ thread ]</a>
+              <a href="subject.html#1958">[ subject ]</a>
+              <a href="author.html#1958">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

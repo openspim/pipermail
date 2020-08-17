@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Alignment / Calibration Slides
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Alignment%20/%20Calibration%20Slides&In-Reply-To=%3C4F91222C659D5B4E8C89CE4D710BB08E0126E87241D6%40DKFZEX01.ad.dkfz-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000825.html">
+   <LINK REL="Next"  HREF="000827.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Alignment / Calibration Slides</H1>
+    <B>Krieger, Jan</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Alignment%20/%20Calibration%20Slides&In-Reply-To=%3C4F91222C659D5B4E8C89CE4D710BB08E0126E87241D6%40DKFZEX01.ad.dkfz-heidelberg.de%3E"
+       TITLE="[OpenSPIM] Alignment / Calibration Slides">j.krieger at Dkfz-Heidelberg.de
+       </A><BR>
+    <I>Fri Oct  2 10:32:07 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000825.html">[OpenSPIM] Alignment / Calibration Slides
+</A></li>
+        <LI>Next message: <A HREF="000827.html">[OpenSPIM] Alignment / Calibration Slides
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#826">[ date ]</a>
+              <a href="thread.html#826">[ thread ]</a>
+              <a href="subject.html#826">[ subject ]</a>
+              <a href="author.html#826">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Neil!
+
+We use a slightly simpler alignment scheme: I designed a mount for a simple 5x5x1mm&#179; surface mirror that fits in our SPIM (see Fig. 6.12d on p. 94 in <A HREF="http://www.jkrieger.de/dissertation_final.pdf">http://www.jkrieger.de/dissertation_final.pdf</A>). If you hvae just a little bit of dirt on the mirror (e.g. by touching it and then cleaning it with a fine cloth, you can easily focus such a bit of dirt and then know where the sharp line on your mirror is. If you're interested, I can send you the design for the mirror mount, which is pretty simple to make for any mechanics workshop.
+
+Also we have a simple plugin for a beadscan evaluation (PSF determination from z-stack) and to characterize a lightsheet in our SPIM-FCS/FCCS software:
+<A HREF="http://www.dkfz.de/Macromol/quickfit/">http://www.dkfz.de/Macromol/quickfit/</A>
+or as a Matlab script:
+<A HREF="https://github.com/jkriege2/B040_BeadScanEvaluation">https://github.com/jkriege2/B040_BeadScanEvaluation</A>
+
+Detailed instructions for this eval scheme will appear in a few weeks (I hope) in Nature Protocols in a (just-accepted) paper on imaging FCS/FCCS on a SPIM or TIRF. If you're interested, I can send you a preprint-version privately.
+
+Best,
+JAN
+
+
+
+
+Dr. Jan W. Krieger
+German Cancer Research Center (dkfz)
+Department B040 - Biophysics of Macromolecules (Prof. J. Langowski)
+Im Neuenheimer Feld 580
+69120 Heidelberg
+
+fon: +49 / 6221 / 42-3395
+fax: +49 / 6221 / 42-3391
+e-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">j.krieger at dkfz.de</A>
+www: <A HREF="http://www.dkfz.de/Macromol/">http://www.dkfz.de/Macromol/</A>
+
+Confidentiality Note:
+This message is intended only for the use of the named recipient(s) and may obtain confidential and/or privileged information. If you are not the intended recipient, please contact the sender and delete the message. Any unauthorized use of the information contained in this message is prohibited.
+________________________________________
+Von: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A> [<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim-bounces at openspim.org</A>] im Auftrag von Michael Weber [<A HREF="http://openspim.org/mailman/listinfo/openspim">weber at mpi-cbg.de</A>]
+Gesendet: Freitag, 2. Oktober 2015 16:22
+An: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Betreff: Re: [OpenSPIM] Alignment / Calibration Slides
+
+Dear Neil,
+
+hope you enjoyed reading the paper :). We use a home-made mirror/grid for aligning our setups. The &quot;mirror/grid&quot; part is cut from a stage micrometer:
+
+Edmund Optics &quot;Multi-Grid Standard Stage Micrometer&quot;
+<A HREF="http://www.edmundoptics.com/test-targets/image-analysis-test-targets/multi-grid-standard-stage-micrometer/2700/">http://www.edmundoptics.com/test-targets/image-analysis-test-targets/multi-grid-standard-stage-micrometer/2700/</A>
+
+Cutting the glass is tricky - maybe you have access to a workshop. You want to have both mirror and grid on top of each other on the same piece of glass, such that you just have to move the sample up and down to switch between them. One end of this piece of glass is then mounted in the tip of a 1 ml Braun Omnifix-F syringe using glue. That's the second difficult step. Ideally, the glass surface ends up straight in the rotation axis of your setup. Again, if you have access to a workshop, they might be able to help you with that. The syringe is then mounted in the sample holder. Make sure that the syringe has the right length for positioning the glass in the focal plane. One can also think of a machined or 3D-printed adapter (or entire holder) for the piece of glass.
+
+Another tool that is really useful for alignment are fluorescent beads / microspheres in 1.5% agarose. This is especially good for the fine tuning of the light sheet position, PSF measurements and so on. Mirror/grid are more suitable for a coarse alignment.
+
+Best,
+Michael
+
+
+On Oct 1, 2015, at 6:35 PM, &quot;Anthony, Neil&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at EMORY.EDU</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">nantho2 at EMORY.EDU</A>&gt;&gt; wrote:
+
+Hi all,
+
+I was just reading the paper suggested by Jan in Aug (Weber, Michael, Michaela Mickoleit, and Jan Huisken. 2014. &#8220;Light Sheet Microscopy.&#8221; Methods in Cell Biology 123: 193&#8211;215. doi:10.1016/B978-0-12-420138-5.00011-2.), thinking ahead to the calibration/alignment part of the setup.
+
+Does anybody have part numbers and/or websites for the required pieces?  Also, I&#8217;d be interested in how you&#8217;ve positioned and held them at the objective focus, and ensured their correct orientation.
+
+Thanks
+Neil
+
+Neil Anthony, PhD  | Research Imaging Specialist
+Health Sciences Research Building (HSRB), Room EG21
+1760 Haygood Drive, Atlanta, GA 30322
+
+<A HREF="http://openspim.org/mailman/listinfo/openspim">neil.anthony at emory.edu</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">neil.anthony at emory.edu</A>&gt;
+ici.emory.edu&lt;<A HREF="http://www.cores.emory.edu/ici/">http://www.cores.emory.edu/ici/</A>&gt;
+404 969-CORE
+
+&lt;image001.png&gt;&lt;<A HREF="http://www.cores.emory.edu/ici/">http://www.cores.emory.edu/ici/</A>&gt;
+
+&lt;image002.png&gt;&lt;<A HREF="https://www.facebook.com/ICIEmory">https://www.facebook.com/ICIEmory</A>&gt;
+
+&lt;image003.png&gt;&lt;<A HREF="http://www.linkedin.com/pub/neil-anthony/35/a0b/126">http://www.linkedin.com/pub/neil-anthony/35/a0b/126</A>&gt;
+
+&lt;image004.png&gt;&lt;<A HREF="https://www.researchgate.net/profile/Neil_Anthony/">https://www.researchgate.net/profile/Neil_Anthony/</A>&gt;
+
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+_______________________________________________
+OpenSPIM mailing list
+<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&lt;mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>&gt;
+<A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+
+_____________
+
+Michael Weber
+Postdoc, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+<A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000825.html">[OpenSPIM] Alignment / Calibration Slides
+</A></li>
+	<LI>Next message: <A HREF="000827.html">[OpenSPIM] Alignment / Calibration Slides
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#826">[ date ]</a>
+              <a href="thread.html#826">[ thread ]</a>
+              <a href="subject.html#826">[ subject ]</a>
+              <a href="author.html#826">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Lasers for SPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Lasers%20for%20SPIM&In-Reply-To=%3C7949EDDA-4B00-4523-A534-934FA95C3F55%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000302.html">
+   <LINK REL="Next"  HREF="000308.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Lasers for SPIM</H1>
+    <B>Michael Weber</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Lasers%20for%20SPIM&In-Reply-To=%3C7949EDDA-4B00-4523-A534-934FA95C3F55%40mpi-cbg.de%3E"
+       TITLE="[OpenSPIM] Lasers for SPIM">weber at mpi-cbg.de
+       </A><BR>
+    <I>Fri Dec 20 07:06:25 CST 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000302.html">[OpenSPIM] Lasers for SPIM
+</A></li>
+        <LI>Next message: <A HREF="000308.html">[OpenSPIM] Lasers for SPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#306">[ date ]</a>
+              <a href="thread.html#306">[ thread ]</a>
+              <a href="subject.html#306">[ subject ]</a>
+              <a href="author.html#306">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Frederik,
+
+here are my thoughts.
+
+I agree that running DPSS lasers on low power is not ideal, they get unstable and the beam profile gets worse. But you can always install a neutral density filter in your illumination path, so that should not be an issue. Or you use an AOTF anyway. The laser power necessary for your experiment depends on a lot of factors: how the illumination path is set up, how sensitive your camera is, how bright your signal is and so on. Around 50 mW out of the laser/fiber per illumination side should typically be enough for normal imaging of fluorescent proteins in zebrafish with light sheet microscopy. But a bit more does never harm.
+
+Fiber-coupling allows you to &quot;quickly&quot; swap lasers without complete realignment and increases beam quality, which is nice for diode lasers but typically not needed for DPSS or gas lasers. But you lose some power in the fiber. From my experience, open beam setups are more stable over time, whereas fiber couplers can drift over time or because of temperature changes.
+
+Laser units are nice to have, you have everything in one box and can call the service if power drops or something does not work. Definitely nice for multi-user environment. On the other hand they are more expensive and might not have exactly the laser lines / powers you want.
+
+I like AOTFs, they add a lot of comfort, are fast and reliable. But they do require precise alignment and add cost to the system. A cheap alternative are neutral density filters (e.g. in a filter wheel) plus shutters, although shutters are not as fast and wear out over time.
+
+Good luck with your setup!
+
+Michael
+
+On Dec 19, 2013, at 10:23 PM, Fredrik Ek &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">fredrik.ek at med.lu.se</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> we are setting up a SPIM system based on the openspim configuration with some additional features (Orca Flash 4, 3 lasers and emission filter Wheel). We are in the process of purchasing lasers and I have some questions:
+</I>&gt;<i> 
+</I>&gt;<i> 1. What is your opinion when it comes to the power of lasermodules. I noted that Jan Krieger in a recent mail pointed out the DPSS lasers could be flucturating once below 10% of their nominal power. We are going to use them for analysis of zebrafish larvae and what is a typical power setting for running these kind of experiments.
+</I>&gt;<i> 
+</I>&gt;<i> 2. Fiberconnected or open beam. Your opinions.
+</I>&gt;<i> 
+</I>&gt;<i> 3. Beamcombiners (light hub Sole or similar) or seperate lasers? Other than Jan that have similar experiences of problems with alignment.
+</I>&gt;<i> 
+</I>&gt;<i> 4. AOTF module or not?
+</I>&gt;<i> 
+</I>&gt;<i> Your input is highly appreciated. 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks!
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Fredrik Ek, 
+</I>&gt;<i> Researcher, Lund University Sweden
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+_____________
+
+Michael Weber
+PhD Student, Huisken lab
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstrasse 108, 01307 Dresden
+Tel. 0049 351/2102837
+
+<A HREF="http://www.mpi-cbg.de/huisken">http://www.mpi-cbg.de/huisken</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20131220/494652fd/attachment.html">http://openspim.org/pipermail/openspim/attachments/20131220/494652fd/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000302.html">[OpenSPIM] Lasers for SPIM
+</A></li>
+	<LI>Next message: <A HREF="000308.html">[OpenSPIM] Lasers for SPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#306">[ date ]</a>
+              <a href="thread.html#306">[ thread ]</a>
+              <a href="subject.html#306">[ subject ]</a>
+              <a href="author.html#306">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Image Stitching Best Practices
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Image%20Stitching%20Best%20Practices&In-Reply-To=%3C7413615D-B6BD-4775-92D1-A9E711BCE1AC%40pitt.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001733.html">
+   <LINK REL="Next"  HREF="001735.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Image Stitching Best Practices</H1>
+    <B>Feinstein, Timothy N</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Image%20Stitching%20Best%20Practices&In-Reply-To=%3C7413615D-B6BD-4775-92D1-A9E711BCE1AC%40pitt.edu%3E"
+       TITLE="[OpenSPIM] Image Stitching Best Practices">tnf8 at pitt.edu
+       </A><BR>
+    <I>Mon Jun 29 08:50:00 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001733.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+        <LI>Next message: <A HREF="001735.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1734">[ date ]</a>
+              <a href="thread.html#1734">[ thread ]</a>
+              <a href="subject.html#1734">[ subject ]</a>
+              <a href="author.html#1734">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Monika,
+
+Yeah, terastitcher requires file naming convention that are a real pain in the rear. You need to find a bulk file renaming app or you will go crazy. It literally took us over a week to figure it out. The trick is you need to 'prime' the alignment by working out roughly where your columns sit relative to each other in XYZ coordinate space. In other words the program offloads the hardest part of alignment to the best pattern recognition out there, which is you. ImageJ was useful for estimating overlap and misalignment in Z.  
+
+I am away from my desk but I will post a dropbox link to the list as soon as I can. 
+
+Best,
+
+
+Timothy Feinstein, Ph.D.
+
+
+&gt;<i> On Jun 29, 2015, at 9:40 AM, &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi Timothy,
+</I>&gt;<i> 
+</I>&gt;<i> I heard about TeraStitcher and I tried to use it on my SPIM data, but I got stuck. TeraStitcher expects a certain format of data, OpenSPIM data is quite different, so either the data has to be converted or TeraStitcher settings changed, but I failed at it. Could you describe in more detail how you do it? You mention a &quot;cheat sheet&quot; in the other message.
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> Monika
+</I>&gt;<i> 
+</I>&gt;<i> W dniu 2015-06-29 15:18, Feinstein, Timothy N napisał(a):
+</I>&gt;&gt;<i> Hi Gabriel,
+</I>&gt;&gt;<i> Among the open source options I have had great results with the
+</I>&gt;&gt;<i> TeraStitcher plugin for Vaa3d. See my message about it in another
+</I>&gt;&gt;<i> forum here:
+</I>&gt;&gt;<i> <A HREF="http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;L=CONFOCALMICROSCOPY&amp;P=R10149">http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;L=CONFOCALMICROSCOPY&amp;P=R10149</A>
+</I>&gt;&gt;<i> [1]
+</I>&gt;&gt;<i> Best,
+</I>&gt;&gt;<i> Tim
+</I>&gt;&gt;<i> Timothy Feinstein, Ph.D.
+</I>&gt;&gt;<i> Research Scientist
+</I>&gt;&gt;<i> University of Pittsburgh Department of Developmental Biology
+</I>&gt;&gt;<i> From: Gabriel Davis Jones &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">gabriel.jones at florey.edu.au</A>&gt;
+</I>&gt;&gt;<i> Date: Saturday, June 27, 2015 at 1:18 AM
+</I>&gt;&gt;<i> To: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;&gt;<i> Subject: [OpenSPIM] Image Stitching Best Practices
+</I>&gt;&gt;<i> Hi All,
+</I>&gt;&gt;<i> We are currently imaging large volumes that require us to acquire
+</I>&gt;&gt;<i> multiple stacks of the same angle.
+</I>&gt;&gt;<i> Is there currently a best way to stitch images acquired OpenSPIM?
+</I>&gt;&gt;<i> Should we use the grid/collection stitching plugin or is there a
+</I>&gt;&gt;<i> better way to go about it?
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> Gabriel
+</I>&gt;&gt;<i> Links:
+</I>&gt;&gt;<i> ------
+</I>&gt;&gt;<i> [1]
+</I>&gt;&gt;<i> <A HREF="http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;amp;L=CONFOCALMICROSCOPY&amp;amp;P=R10149">http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;L=CONFOCALMICROSCOPY&amp;P=R10149</A>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> OpenSPIM mailing list
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001733.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+	<LI>Next message: <A HREF="001735.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1734">[ date ]</a>
+              <a href="thread.html#1734">[ thread ]</a>
+              <a href="subject.html#1734">[ subject ]</a>
+              <a href="author.html#1734">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Picard hi-res stage
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20hi-res%20stage&In-Reply-To=%3Cop.xsvfmdepahhlbl%40pc511-7cad.ibd%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000604.html">
+   <LINK REL="Next"  HREF="000597.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Picard hi-res stage</H1>
+    <B>Monika Paw&#322;owska</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Picard%20hi-res%20stage&In-Reply-To=%3Cop.xsvfmdepahhlbl%40pc511-7cad.ibd%3E"
+       TITLE="[OpenSPIM] Picard hi-res stage">m.pawlowska at nencki.gov.pl
+       </A><BR>
+    <I>Thu Jan 22 09:50:27 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000604.html">[OpenSPIM] Picard hi-res stage
+</A></li>
+        <LI>Next message: <A HREF="000597.html">[OpenSPIM] Big TIFF Support
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#606">[ date ]</a>
+              <a href="thread.html#606">[ thread ]</a>
+              <a href="subject.html#606">[ subject ]</a>
+              <a href="author.html#606">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ulrik &amp; Johannes,
+
+I hope this is the screenshot you need. Not much in it though.
+
+What I meant about two separate issues is that there is on one hand the  
+32767 limit and on the other - the value 9000 which is hard-coded in  
+several places as Johannes noted. (My programming skills are rusty these  
+days, but from my undergrad times I remember that hard-coding constants  
+into random places in code is not nice. :) )
+
+Regards,
+Monika
+
+W dniu .01.2015 o 14:58 Johannes Schindelin &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">johannes.schindelin at gmx.de</A>&gt;  
+pisze:
+
+&gt;<i> Hi Ulrik &amp; Monika,
+</I>&gt;<i>
+</I>&gt;<i> On 2015-01-22 14:48, Ulrik G&#252;nther wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> On Jan 22, 2015, at 11:54 AM, Monika Paw&#322;owska  
+</I>&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> thanks to the help of Ulrik I was able to install and run the OpenSPIM 
+</I>&gt;&gt;&gt;<i> plugin in my lab.
+</I>&gt;&gt;&gt;<i> Glad it worked for you :-)
+</I>&gt;&gt;&gt;<i>  -integer range issue: I have bought the new Hi-Res Picard stage which  
+</I>&gt;&gt;&gt;<i> cando 45 000 steps. However, in the OpenSPIM plugin I can only do 32  
+</I>&gt;&gt;&gt;<i> 767steps (16bit integer range if I'm not wrong)
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>  I doubt the OpenSPIM plugin even knows about the existence of a
+</I>&gt;&gt;<i> high-res version of the stage, but we can incorporate that.
+</I>&gt;<i>
+</I>&gt;<i> I guess it is time to address the TODO here:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/openspim/SPIMAcquisition/blob/d0276596c91b5764b21b11146a60e248f5f74506/src/main/java/spim/SPIMAcquisition.java#L124-L126">https://github.com/openspim/SPIMAcquisition/blob/d0276596c91b5764b21b11146a60e248f5f74506/src/main/java/spim/SPIMAcquisition.java#L124-L126</A>
+</I>&gt;<i>
+</I>&gt;<i> and while at it, we must not forget
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/openspim/SPIMAcquisition/blob/d0276596c91b5764b21b11146a60e248f5f74506/src/main/java/spim/setup/PicardStage.java#L34-L42">https://github.com/openspim/SPIMAcquisition/blob/d0276596c91b5764b21b11146a60e248f5f74506/src/main/java/spim/setup/PicardStage.java#L34-L42</A>
+</I>&gt;<i>
+</I>&gt;<i> nor
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/openspim/SPIMAcquisition/blob/d0276596c91b5764b21b11146a60e248f5f74506/src/main/java/spim/setup/PicardXYStage.java#L51-L59">https://github.com/openspim/SPIMAcquisition/blob/d0276596c91b5764b21b11146a60e248f5f74506/src/main/java/spim/setup/PicardXYStage.java#L51-L59</A>
+</I>&gt;<i>
+</I>&gt;<i> Ciao,
+</I>&gt;<i> Johannes
+</I>&gt;<i>
+</I>&gt;<i> P.S.: I cheated and let Git do all the work: `git grep 9000`...
+</I>
+
+-- 
+Monika Paw&#322;owska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 427
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: mm_devicepropertybrowser_screenshot.png
+Type: image/png
+Size: 52621 bytes
+Desc: not available
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150122/5eba4186/attachment-0001.png">http://openspim.org/pipermail/openspim/attachments/20150122/5eba4186/attachment-0001.png</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000604.html">[OpenSPIM] Picard hi-res stage
+</A></li>
+	<LI>Next message: <A HREF="000597.html">[OpenSPIM] Big TIFF Support
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#606">[ date ]</a>
+              <a href="thread.html#606">[ thread ]</a>
+              <a href="subject.html#606">[ subject ]</a>
+              <a href="author.html#606">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

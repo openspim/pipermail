@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3Calpine.DEB.1.00.1306041716140.28957%40s15462909.onlinehome-server.info%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000028.html">
+   <LINK REL="Next"  HREF="000030.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3Calpine.DEB.1.00.1306041716140.28957%40s15462909.onlinehome-server.info%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Tue Jun  4 10:23:04 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000028.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="000030.html">[OpenSPIM] [CONFOCALMICROSCOPY] Light-Sheet Microscopy Workshop	(fwd)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+On Tue, 4 Jun 2013, Alexis Maizel wrote:
+
+&gt;<i> &gt; I just tested now (Windows XP, freshly up-to-date
+</I>&gt;<i> &gt; OpenSPIM-20130131.zip, with an Orca R^2), and the software can load
+</I>&gt;<i> &gt; the mmgr_dal_HamamatsuHam.dll file included in the latest MM nightly
+</I>&gt;<i> &gt; build
+</I>&gt;<i> 
+</I>&gt;<i> Indeed it can now load the mmgr_dal_HamamatsuHam.dll
+</I>&gt;<i>
+</I>&gt;<i> Unfortunately, it still can not communicate properly with the Camera
+</I>&gt;<i> (OrcaFlash4). The errors messages I get are:
+</I>&gt;<i> Device HamamatsuHam_DCAM. Error in device HamamatsuHam_DCAM: Error code 40 (28 hex)
+</I>&gt;<i> Device HamamatsuHam_DCAM. Error in device HamamatsuHam_DCAM: Native Module failed to load
+</I>
+This might be the &quot;new&quot; error message instead of the old &quot;core property is
+read-only&quot; red herring. In our FAQ, we describe the real reason:
+
+<A HREF="http://openspim.org/FAQ#I_get_the_error_that_a_core_property_is_read-only.3F">http://openspim.org/FAQ#I_get_the_error_that_a_core_property_is_read-only.3F</A>
+
+It is simply a mismatch between the memory management of the device
+adapter layer and the Java memory management: Fiji tries to grab as much
+memory as possible, not leaving enough for the Hamamatsu driver. So: just
+go to Edit&gt;Options&gt;Memory &amp; Threads and limit the RAM to leave enough
+space for the low-level driver.
+
+&gt;<i> What is really surprising is that the same device Adapter works
+</I>&gt;<i> perfectly (camera is operated and live stream works) when run into a
+</I>&gt;<i> 'standalone' MicroManager (tested: latest nightly build, v1.4.13 and
+</I>&gt;<i> v1.4.14). Therefore it seems that the issue resides into the MM version
+</I>&gt;<i> embedded into OpenSPIM (and/or that I am running Windows 7).
+</I>
+Yep, this is the tell-tale for the memory problem described above.
+Unfortunately, we did not get the Hamamatsu people to provide a sensible
+error message, and the driver is closed source, so we really cannot do
+anything about it.
+
+&gt;<i> &gt; I can't make any certain statements about support for Windows 7,
+</I>&gt;<i> &gt; unfortunately, since our goal at present is to maximize support for
+</I>&gt;<i> &gt; Windows XP first.
+</I>&gt;<i> 
+</I>&gt;<i> Trying to downgrade to windows XP is  something I have tried at the very
+</I>&gt;<i> beginning, but it seems the laptop we use is too modern for XP and after
+</I>&gt;<i> hours of attempts, I dropped that option. (I might add that in the
+</I>&gt;<i> medium-long term only supporting XP may really impair the 'Open' nature
+</I>&gt;<i> of OpenSPIM). 
+</I>
+Fair enough. You'll probably not be the only person to have that problem,
+so I'd appreciate you helping us to get the software working on Windows 7,
+too.
+
+&gt;<i> &gt; Regarding the development environment, I'm actively working on
+</I>&gt;<i> &gt; bringing it up-to-date, and your assistance in this would be
+</I>&gt;<i> &gt; invaluable -- I was hoping you might test something for me: Please try
+</I>&gt;<i> &gt; downloading
+</I>&gt;<i> &gt; <A HREF="https://dl.dropboxusercontent.com/u/57890359/OpenSPIM-dev-env-20130529.exe">https://dl.dropboxusercontent.com/u/57890359/OpenSPIM-dev-env-20130529.exe</A>
+</I>&gt;<i> &gt; and installing it. This is a newer version of the installer, and
+</I>&gt;<i> &gt; hopefully should at least finish putting everything into place.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks for this. I am certainly willing/wanting to serve as your
+</I>&gt;<i> guinea-pig for this. Idiot-testing  is always useful. 
+</I>&gt;<i> 
+</I>&gt;<i> Basically, it seems that the 7z archive extracts Git-related files, then
+</I>&gt;<i> I am presented with a command prompt inviting me to install Visual
+</I>&gt;<i> Express Studio (see screenshot). Nothing beyond this point. 
+</I>&gt;<i> 
+</I>&gt;<i> I am motivated to get this to work, so please involve me. 
+</I>
+Thank you so much! We really need this to work for all people willing to
+contribute, and solving the obstacles you face will help that.
+
+I take it you already have Visual Express Studio installed? If so, which
+one? And do you you see the file
+
+	C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/VCExpress.exe
+
+or similar?
+
+Ciao,
+Johannes
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000028.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="000030.html">[OpenSPIM] [CONFOCALMICROSCOPY] Light-Sheet Microscopy Workshop	(fwd)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

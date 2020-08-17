@@ -1,0 +1,270 @@
+2016-12-20T15:22:33.740162 tid5404 [IFO,LogManager] Enabled primary log file C:\OpenSPIM-20150427\OpenSPIM.app\CoreLogs\CoreLog20161220T152233_pid2024.txt
+2016-12-20T15:22:33.740162 tid5404 [IFO,LogManager] Switching primary log level from info to trace
+2016-12-20T15:22:33.755762 tid5404 [IFO,LogManager] Switched primary log level from info to trace
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] EDTHangLogger: Started monitoring of EDT hangs
+                                   [       ] [heartbeat timeout = 4500 ms, hang check interval = 1000 ms]
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] User: MPawlowska
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] Host: PC507-E2AA
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] MM Studio version: 1.4.23 20161219
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] MMCore version 8.4.0
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] Device API version 67, Module API version 10
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] Operating System: Windows 7 (amd64) 6.1
+2016-12-20T15:22:33.755762 tid5404 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_51, 64-bit
+2016-12-20T15:22:33.755762 tid5404 [dbg,Core] Will set circular buffer size to 250 MB
+2016-12-20T15:22:33.755762 tid5404 [dbg,Core] Did set circular buffer size to 250 MB
+2016-12-20T15:22:33.818162 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmplugins/
+2016-12-20T15:22:33.818162 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Big.jar!/
+2016-12-20T15:22:33.818162 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\DataBrowser.jar!/
+2016-12-20T15:22:34.161363 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\PixelCalibrator.jar!/
+2016-12-20T15:22:34.176963 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Recall.jar!/
+2016-12-20T15:22:34.176963 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\SPIMAcquisition-1.0.1-SNAPSHOT.jar!/
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Installing plugin org.micromanager.browser.Data_Browser...
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Error: Plugin [org.micromanager.browser.Data_Browser] has no menuName field
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] org.micromanager.browser.Data_Browser fails to implement static String tooltipDescription.
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Installing plugin org.micromanager.pixelcalibrator.PixelCalibratorPlugin...
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Installing plugin org.micromanager.recall.RecallPlugin...
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Installing plugin spim.SPIMAcquisition...
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmplugins/Acquisition_Tools/
+2016-12-20T15:22:34.317363 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\AcquireMultipleRegions.jar!/
+2016-12-20T15:22:34.332963 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\Gaussian.jar!/
+2016-12-20T15:22:34.504563 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\HCS.jar!/
+2016-12-20T15:22:34.520163 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\IntelligentAcquisition.jar!/
+2016-12-20T15:22:34.551364 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\Magellan.jar!/
+2016-12-20T15:22:34.925764 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\MMTracker.jar!/
+2016-12-20T15:22:34.925764 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\PatternOverlay.jar!/
+2016-12-20T15:22:34.941364 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Acquisition_Tools\SlideExplorer.jar!/
+2016-12-20T15:22:34.972564 tid5556 [IFO,App] Installing plugin org.micromanager.acquiremultipleregions.AcquireMultipleRegions...
+2016-12-20T15:22:34.972564 tid5556 [IFO,App] Installing plugin GaussianTrack_...
+2016-12-20T15:22:34.972564 tid5556 [IFO,App] Installing plugin org.micromanager.hcs.SiteGenerator...
+2016-12-20T15:22:34.972564 tid5556 [IFO,App] Installing plugin org.micromanager.intelligentacquisition.IntelligentAcquisition...
+2016-12-20T15:22:34.972564 tid5556 [IFO,App] Installing plugin org.micromanager.plugins.magellan.main.Magellan...
+2016-12-20T15:22:34.972564 tid5556 [IFO,App] Installing plugin com.imaging100x.tracker.TrackerControl...
+2016-12-20T15:22:34.988164 tid5556 [IFO,App] Installing plugin org.micromanager.patternoverlay.PatternOverlayPlugin...
+2016-12-20T15:22:34.988164 tid5556 [IFO,App] Installing plugin org.micromanager.slideexplorer.SlideExplorerPlugin...
+2016-12-20T15:22:34.988164 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmplugins/Beta/
+2016-12-20T15:22:34.988164 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Beta\CRISPv2.jar!/
+2016-12-20T15:22:35.003764 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Beta\SlideExplorer2.jar!/
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] Installing plugin com.asiimaging.CRISPv2.ASI_CRISP_V2...
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] Installing plugin org.micromanager.SlideExplorer2...
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] Error: Plugin [org.micromanager.SlideExplorer2] has no menuName field
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] org.micromanager.SlideExplorer2 fails to implement static String tooltipDescription.
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmplugins/Developer_Tools/
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Developer_Tools\ClojureEditor.jar!/
+2016-12-20T15:22:36.158166 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Developer_Tools\DLLAutoReloader.jar!/
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Developer_Tools\SequenceBufferMonitor.jar!/
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Installing plugin org.micromanager.clojureeditor.ClojureEditorPlugin...
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Installing plugin org.micromanager.DLLAutoReloader...
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Error: Plugin [org.micromanager.DLLAutoReloader] has no menuName field
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] org.micromanager.DLLAutoReloader fails to implement static String tooltipDescription.
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Installing plugin org.micromanager.plugins.sequencebuffermonitor.SequenceBufferMonitor...
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmplugins/Device_Control/
+2016-12-20T15:22:36.251767 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\ASIdiSPIM.jar!/
+2016-12-20T15:22:36.485767 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\AutoLase.jar!/
+2016-12-20T15:22:36.516967 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\CRISP.jar!/
+2016-12-20T15:22:36.532567 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\MightexPolygon.jar!/
+2016-12-20T15:22:36.594967 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\MultiCamera.jar!/
+2016-12-20T15:22:36.610567 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\pgFocus.jar!/
+2016-12-20T15:22:36.626167 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\Projector.jar!/
+2016-12-20T15:22:36.704167 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\StageControl.jar!/
+2016-12-20T15:22:36.735367 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\Device_Control\WhiteBalance.jar!/
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin org.micromanager.asidispim.ASIdiSPIM...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin ch.epfl.leb.autolase.AutoLasePlugin...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin org.micromanager.CRISP.CRISP...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin org.micromanager.polygon.PolygonPlugin...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin org.micromanager.multicamera.MultiCamera...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin edu.umassmed.pgfocus.pgFocus...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin org.micromanager.projector.ProjectorPlugin...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin org.micromanager.stagecontrol.StageControl...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Installing plugin PMQI.AutoWB...
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmplugins/On-The-Fly_Processors/
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\On-The-Fly_Processors\ImageFlipper.jar!/
+2016-12-20T15:22:36.750967 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\On-The-Fly_Processors\MultiChannelShading.jar!/
+2016-12-20T15:22:36.782167 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmplugins\On-The-Fly_Processors\SplitView.jar!/
+2016-12-20T15:22:36.782167 tid5556 [IFO,App] Installing plugin org.micromanager.newimageflipper.NewTaggedImageFlipper...
+2016-12-20T15:22:36.797767 tid5556 [IFO,App] Installing plugin org.micromanager.multichannelshading.MultiChannelShading...
+2016-12-20T15:22:36.797767 tid5556 [IFO,App] Installing plugin org.micromanager.splitview.SplitView...
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: file:/C:/OpenSPIM-20150427/OpenSPIM.app/mmautofocus/
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmautofocus\HardwareFocusExtender.jar!/
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmautofocus\MMAutofocus.jar!/
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmautofocus\MMAutofocusDuo.jar!/
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmautofocus\MMAutofocusTB.jar!/
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmautofocus\MMNullAutofocus.jar!/
+2016-12-20T15:22:36.828968 tid5556 [IFO,App] Added URL to system class loader: jar:file:C:\OpenSPIM-20150427\OpenSPIM.app\mmautofocus\MMOughtaFocus.jar!/
+2016-12-20T15:22:36.844568 tid5556 [IFO,App] Attempting to install autofocus plugin HardwareFocusExtender
+2016-12-20T15:22:36.844568 tid5556 [IFO,App] Attempting to install autofocus plugin Autofocus
+2016-12-20T15:22:36.844568 tid5556 [IFO,App] Attempting to install autofocus plugin AutofocusDuo
+2016-12-20T15:22:36.844568 tid5556 [IFO,App] Attempting to install autofocus plugin AutofocusTB
+2016-12-20T15:22:36.844568 tid5556 [IFO,App] Attempting to install autofocus plugin NullAutofocus
+2016-12-20T15:22:36.844568 tid5556 [IFO,App] Attempting to install autofocus plugin OughtaFocus
+2016-12-20T15:22:39.278172 tid5404 [IFO,App] Finished waiting for plugins to load
+2016-12-20T15:22:39.324972 tid5404 [dbg,Core] Will set Core property: Initialize = 0
+2016-12-20T15:22:39.324972 tid5404 [dbg,Core] Will unload all devices
+2016-12-20T15:22:39.324972 tid5404 [IFO,Core] Did unload all devices
+2016-12-20T15:22:39.324972 tid5404 [dbg,App] Notification for Device: Core Property: Initialize changed to value: 0 ignored since the system is still loading
+2016-12-20T15:22:39.324972 tid5404 [dbg,Core] Did set Core property: Initialize = 0
+2016-12-20T15:22:39.324972 tid5404 [dbg,Core] Will load device HamamatsuHam_DCAM from HamamatsuHam
+2016-12-20T15:22:39.340572 tid5404 [IFO,Core] Did load device HamamatsuHam_DCAM from HamamatsuHam; label = HamamatsuHam_DCAM
+2016-12-20T15:22:39.340572 tid5404 [dbg,Core] Will load device Standa8SMC4Z from Standa8SMC4
+2016-12-20T15:22:39.356172 tid5404 [IFO,Core] Did load device Standa8SMC4Z from Standa8SMC4; label = Standa8SMC4Z
+2016-12-20T15:22:39.356172 tid5404 [dbg,Core] Will load device Standa8SMC4XY from Standa8SMC4
+2016-12-20T15:22:39.356172 tid5404 [IFO,Core] Did load device Standa8SMC4XY from Standa8SMC4; label = Standa8SMC4XY
+2016-12-20T15:22:39.356172 tid5404 [dbg,Core] Will load device Picard Twister from PicardStage
+2016-12-20T15:22:39.371772 tid5404 [IFO,Core] Did load device Picard Twister from PicardStage; label = Picard Twister
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4Z] Will set property "Port Z" to "xi-com:%5C%5C.%5CCOM3"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4Z] Did set property "Port Z" to "xi-com:%5C%5C.%5CCOM3"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4Z] Will set property "UnitMultiplier" to "1.2500"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4Z] Did set property "UnitMultiplier" to "1.2500"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Will set property "Port X" to "xi-com:%5C%5C.%5CCOM4"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Did set property "Port X" to "xi-com:%5C%5C.%5CCOM4"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Will set property "Port Y" to "xi-com:%5C%5C.%5CCOM5"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Did set property "Port Y" to "xi-com:%5C%5C.%5CCOM5"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Will set property "UnitMultiplierX" to "1.2500"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Did set property "UnitMultiplierX" to "1.2500"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Will set property "UnitMultiplierY" to "1.2500"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Standa8SMC4XY] Did set property "UnitMultiplierY" to "1.2500"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Picard Twister] Will set property "Max" to "32767"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Picard Twister] Did set property "Max" to "32767"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Picard Twister] Will set property "Min" to "-32767"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Picard Twister] Did set property "Min" to "-32767"
+2016-12-20T15:22:39.371772 tid5404 [dbg,Core:dev:Picard Twister] Will set property "Serial Number" to "99"
+2016-12-20T15:22:39.387372 tid5404 [dbg,Core:dev:Picard Twister] Did set property "Serial Number" to "99"
+2016-12-20T15:22:39.387372 tid5404 [dbg,Core:dev:Picard Twister] Will set property "StepSize" to "1.0000"
+2016-12-20T15:22:39.387372 tid5404 [dbg,Core:dev:Picard Twister] Did set property "StepSize" to "1.0000"
+2016-12-20T15:22:39.387372 tid5404 [dbg,Core] Will set Core property: Initialize = 1
+2016-12-20T15:22:39.387372 tid5404 [IFO,Core] Will initialize 4 devices
+2016-12-20T15:22:39.387372 tid5404 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2016-12-20T15:22:40.510833 tid5404 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2016-12-20T15:22:40.510833 tid5404 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2016-12-20T15:22:40.510833 tid5404 [IFO,Core] Will initialize device Standa8SMC4Z
+2016-12-20T15:22:40.510833 tid5404 [dbg,dev:Standa8SMC4Z] In Standa8SMC4Z::initialize
+2016-12-20T15:22:40.510833 tid5404 [dbg,dev:Standa8SMC4Z] using port xi-com:%5C%5C.%5CCOM3
+2016-12-20T15:22:40.511833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] semaphore 3808 inited
+2016-12-20T15:22:40.511833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] semaphore 3008 inited
+2016-12-20T15:22:40.511833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] semaphore 4220 inited
+2016-12-20T15:22:40.511833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] Name xi-com:%5C%5C.%5CCOM3 resolved to dt 'xi-com', host '' and path '%5C%5C.%5CCOM3' decoded path '\\.\COM3', abs path '\\.\COM3'
+2016-12-20T15:22:40.513833 tid5404 [IFO,Core] Did initialize device Standa8SMC4Z
+2016-12-20T15:22:40.513833 tid5404 [IFO,Core] Will initialize device Standa8SMC4XY
+2016-12-20T15:22:40.513833 tid5404 [dbg,dev:Standa8SMC4XY] In Standa8SMC4XY::initialize
+2016-12-20T15:22:40.513833 tid5404 [dbg,dev:Standa8SMC4XY] using ports xi-com:%5C%5C.%5CCOM4 and xi-com:%5C%5C.%5CCOM5
+2016-12-20T15:22:40.513833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] semaphore 4228 inited
+2016-12-20T15:22:40.513833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] Name xi-com:%5C%5C.%5CCOM4 resolved to dt 'xi-com', host '' and path '%5C%5C.%5CCOM4' decoded path '\\.\COM4', abs path '\\.\COM4'
+2016-12-20T15:22:40.514833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] semaphore 4236 inited
+2016-12-20T15:22:40.514833 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4 4: [151c] Name xi-com:%5C%5C.%5CCOM5 resolved to dt 'xi-com', host '' and path '%5C%5C.%5CCOM5' decoded path '\\.\COM5', abs path '\\.\COM5'
+2016-12-20T15:22:40.516833 tid5404 [IFO,Core] Did initialize device Standa8SMC4XY
+2016-12-20T15:22:40.516833 tid5404 [IFO,Core] Default xy stage set to Standa8SMC4XY
+2016-12-20T15:22:40.516833 tid5404 [IFO,Core] Will initialize device Picard Twister
+2016-12-20T15:22:40.545835 tid5404 [IFO,Core] Did initialize device Picard Twister
+2016-12-20T15:22:40.545835 tid5404 [IFO,Core] Finished initializing 4 devices
+2016-12-20T15:22:40.545835 tid5404 [dbg,App] Notification for Device: Core Property: Initialize changed to value: 1 ignored since the system is still loading
+2016-12-20T15:22:40.545835 tid5404 [dbg,Core] Did set Core property: Initialize = 1
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Will set Core property: Camera = HamamatsuHam_DCAM
+2016-12-20T15:22:40.546835 tid5404 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2016-12-20T15:22:40.546835 tid5404 [dbg,App] Notification for Device: Core Property: Camera changed to value: HamamatsuHam_DCAM ignored since the system is still loading
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Did set Core property: Camera = HamamatsuHam_DCAM
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Will set Core property: Focus = Standa8SMC4Z
+2016-12-20T15:22:40.546835 tid5404 [IFO,Core] Default stage set to Standa8SMC4Z
+2016-12-20T15:22:40.546835 tid5404 [dbg,App] Notification for Device: Core Property: Focus changed to value: Standa8SMC4Z ignored since the system is still loading
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Did set Core property: Focus = Standa8SMC4Z
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Will set Core property: AutoShutter = 0
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Autoshutter turned off
+2016-12-20T15:22:40.546835 tid5404 [dbg,App] Notification for Device: Core Property: AutoShutter changed to value: 0 ignored since the system is still loading
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Did set Core property: AutoShutter = 0
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Config group camera: preset 2x2 350: added setting HamamatsuHam_DCAM-Binning = 2x2
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Config group camera: preset 2x2 350: added setting HamamatsuHam_DCAM-Exposure = 350.0070
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Config group camera: preset cam 80ms 2x2bin: added setting HamamatsuHam_DCAM-Binning = 2x2
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Config group camera: preset cam 80ms 2x2bin: added setting HamamatsuHam_DCAM-Exposure = 80.0012
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Config group timeout: preset longest: added setting Core-TimeoutMs = 50000
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Config group timeout: preset longer: added setting Core-TimeoutMs = 25000
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Pixel size config: preset SPIM: added setting : Core-Initialize = 1
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Pixel size config: preset SPIM: set resolution to 1.57213 um/px
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Pixel size config: preset Uncalibrated: added setting : Core-Initialize = 1
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Pixel size config: preset Uncalibrated: set resolution to 1.00000 um/px
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Waiting for device HamamatsuHam_DCAM...
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Finished waiting for device HamamatsuHam_DCAM
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Waiting for device Standa8SMC4Z...
+2016-12-20T15:22:40.546835 tid5404 [dbg,dev:Standa8SMC4Z] Standa8SMC4Z::Busy
+2016-12-20T15:22:40.546835 tid5404 [dbg,dev:Standa8SMC4Z] Standa8SMC4Z::Busy returned 0
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Finished waiting for device Standa8SMC4Z
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Waiting for device Standa8SMC4XY...
+2016-12-20T15:22:40.546835 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::Busy
+2016-12-20T15:22:40.546835 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::Busy returned 0
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Finished waiting for device Standa8SMC4XY
+2016-12-20T15:22:40.546835 tid5404 [dbg,Core] Waiting for device Picard Twister...
+2016-12-20T15:22:40.577837 tid5404 [dbg,Core] Finished waiting for device Picard Twister
+2016-12-20T15:22:40.577837 tid5404 [dbg,Core] Will update system state cache
+2016-12-20T15:22:40.578837 tid5404 [IFO,Core] Did update system state cache
+2016-12-20T15:22:40.580837 tid5404 [dbg,dev:Standa8SMC4Z] Standa8SMC4Z::GetPositionUm
+2016-12-20T15:22:40.581837 tid5404 [dbg,dev:Standa8SMC4Z] Standa8SMC4Z::GetPositionUm returned  pos=13200.00
+2016-12-20T15:22:40.581837 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:40.582837 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:40.585837 tid5404 [IFO,App] Updating GUI; config pad = true; from cache = false
+2016-12-20T15:22:40.585837 tid5404 [dbg,dev:Standa8SMC4Z] Standa8SMC4Z::GetPositionUm
+2016-12-20T15:22:40.585837 tid5404 [dbg,dev:Standa8SMC4Z] Standa8SMC4Z::GetPositionUm returned  pos=13200.00
+2016-12-20T15:22:40.585837 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:40.586837 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:40.588837 tid5404 [dbg,Core] Will update system state cache
+2016-12-20T15:22:40.589837 tid5404 [IFO,Core] Did update system state cache
+2016-12-20T15:22:40.589837 tid5404 [IFO,App] Finished updating GUI
+2016-12-20T15:22:40.590837 tid5404 [IFO,App] Startup script file (C:\OpenSPIM-20150427\OpenSPIM.app\MMStartup.bsh) not present.
+2016-12-20T15:22:40.733846 tid5404 [IFO,App] Rebuilding config group table
+2016-12-20T15:22:40.734846 tid5404 [IFO,App] Finished rebuilding config group table
+2016-12-20T15:22:40.756847 tid5404 [IFO,App] [UI] JButton "OK" clicked in MMIntroDlg.
+2016-12-20T15:22:49.835366 tid5404 [IFO,App] [UI] JMenu "Plugins" clicked in MainFrame.
+2016-12-20T15:22:50.467402 tid5404 [IFO,App] Plugin command: Acquire SPIM image
+2016-12-20T15:22:50.469402 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:50.470402 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:50.477403 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:50.478403 tid5404 [dbg,dev:Standa8SMC4XY] Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:50.478403 tid5404 [IFO,App] Thread 16 (AWT-EventQueue-0) terminated with uncaught exception
+2016-12-20T15:22:50.478403 tid5404 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:102)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.JSlider.<init>(JSlider.java:274)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.JSlider.<init>(JSlider.java:241)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at spim.gui.component.SteppedSlider.<init>(SteppedSlider.java:65)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at spim.SPIMAcquisition$23.<init>(SPIMAcquisition.java:1264)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1264)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:376)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:237)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager.displayPlugin(PluginManager.java:114)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager.access$100(PluginManager.java:22)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at org.micromanager.pluginmanagement.PluginManager$2.run(PluginManager.java:64)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:362)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Component.processMouseEvent(Component.java:6525)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Component.processEvent(Component.java:6290)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Container.processEvent(Container.java:2234)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Component.dispatchEventImpl(Component.java:4881)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2292)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4703)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Container.dispatchEventImpl(Container.java:2278)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Window.dispatchEventImpl(Window.java:2750)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.Component.dispatchEvent(Component.java:4703)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue.access$500(EventQueue.java:97)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue$3.run(EventQueue.java:709)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue$3.run(EventQueue.java:703)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue$4.run(EventQueue.java:731)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue$4.run(EventQueue.java:729)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)

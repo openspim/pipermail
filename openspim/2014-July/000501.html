@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Anti-drift
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift&In-Reply-To=%3CCAHAw%2B8YGwVDOdfyVvkpqMFBno%3DPbNRaXAVgjwvqM5TQ34PX74Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000500.html">
+   <LINK REL="Next"  HREF="000502.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Anti-drift</H1>
+    <B>Aurelia Honerkamp-Smith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Anti-drift&In-Reply-To=%3CCAHAw%2B8YGwVDOdfyVvkpqMFBno%3DPbNRaXAVgjwvqM5TQ34PX74Q%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] Anti-drift">aureliaomega at gmail.com
+       </A><BR>
+    <I>Wed Jul 23 10:08:24 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000500.html">[OpenSPIM] Anti-drift
+</A></li>
+        <LI>Next message: <A HREF="000502.html">[OpenSPIM] Anti-drift update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#501">[ date ]</a>
+              <a href="thread.html#501">[ thread ]</a>
+              <a href="subject.html#501">[ subject ]</a>
+              <a href="author.html#501">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+Right!  I've never actually had the 'mouse moves stage' function working,
+but thought it wasn't a big problem and used the stage controls tab
+instead.  I have just found the 'Mouse moves stage' item that needs to be
+clicked in the Tools menu, which I hadn't seen before, and did have to
+transpose X and Y in my camera properties to get it to behave correctly.  I
+think the X and Y transposition probably explains the interesting
+&quot;spiraling out of the frame&quot; behavior I was seeing!  I'll try a timelapse
+now and see if it works better. Thank you!
+Aurelia
+
+
+
+On Tue, Jul 22, 2014 at 6:07 PM, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+wrote:
+
+&gt;<i> Hi Aurelia,
+</I>&gt;<i> On 07/21/14, Aurelia Honerkamp-Smith wrote:
+</I>&gt;<i> &gt; Hello, First, I wanted to say that after last week&#39;s updates, the
+</I>&gt;<i> MicroManager error I was seeing on starting my camera is gone and
+</I>&gt;<i> configurations are loading correctly, so thanks for those! And, I have a
+</I>&gt;<i> question about the anti-drift function. Is it supposed to be autonomous at
+</I>&gt;<i> all, or does one need to be present, correcting the sample position for
+</I>&gt;<i> each timepoint? I had assumed that it was supposed to run on its own, but
+</I>&gt;<i> my samples always end up spiraling out of the field of view. Maybe I have
+</I>&gt;<i> inappropriate expectations of it? My pixel size is set correctly, and I
+</I>&gt;<i> don&#39;t know what else would affect it.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> In theory, the user shouldn't need to interact with it at all, though
+</I>&gt;<i> sometimes it helps to provide the first few corrections to get the sample
+</I>&gt;<i> in place. I've only seen it wildly overcorrect when the pixel size is
+</I>&gt;<i> missing/defaulted to 1... Could you possibly verify your pixel size
+</I>&gt;<i> setting, using Micro-Manager's 'mouse moves stage' feature? Try to drag a
+</I>&gt;<i> particular structure around in the view, making sure it follows the mouse
+</I>&gt;<i> pointer closely across the entire field of view. (You might need to flip
+</I>&gt;<i> the camera's view using properties in the Property Browser, if the stage is
+</I>&gt;<i> moving in the wrong direction.) I suggest this particular test since, at
+</I>&gt;<i> its basic level, this is precisely what anti-drift does: move particular
+</I>&gt;<i> features around to 'keep' their positions. Please also make sure that the
+</I>&gt;<i> pixel size you set is still in use after starting the OpenSPIM plugin, and
+</I>&gt;<i> that your configuration is saved with the correct pixel size set.
+</I>&gt;<i> (Importantly, also make sure that the property criteria set for your pixel
+</I>&gt;<i> size are being fulfilled by your setup -- usually the only property I
+</I>&gt;<i> specify is &quot;Core-Initialize&quot; must be &quot;1&quot;.) One final idea is to try
+</I>&gt;<i> over-setting the pixel size slightly; this should reduce the offset size of
+</I>&gt;<i> the anti-drift somewhat.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Barring this most likely possibility, the problem could also be something
+</I>&gt;<i> physical -- a motor snagging on its track or something like that,
+</I>&gt;<i> distorting the plugin's perception of position or interfering with the
+</I>&gt;<i> stage's ability to adjust its position. Alternatively, depending on the
+</I>&gt;<i> nature of the sample, the phase correlation may be having trouble
+</I>&gt;<i> automatically determining the offset (looking through the diffs directory
+</I>&gt;<i> might help). Another source of information may be the 'log.txt' file in the
+</I>&gt;<i> acquisition directory (though it is only made in the output directory of
+</I>&gt;<i> the first acquisition each time after the software is started);
+</I>&gt;<i> historically the plugin has logged the offsets applied to each view to that
+</I>&gt;<i> file.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> And of course, if you're okay with not getting any sleep, you CAN manually
+</I>&gt;<i> intercede at each timepoint. ;-)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I'm sorry I can't immediately be of more help; ruling out pixel size
+</I>&gt;<i> leaves many equally unlikely explanations that are more difficult to
+</I>&gt;<i> verify. If you find the problem, or need more help, please feel free to
+</I>&gt;<i> write the list again; I'll see what I can do. Thanks,
+</I>&gt;<i> Luke
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 07/21/14, Aurelia Honerkamp-Smith  wrote:
+</I>&gt;<i> &gt; Hello, First, I wanted to say that after last week&#39;s updates, the
+</I>&gt;<i> MicroManager error I was seeing on starting my camera is gone and
+</I>&gt;<i> configurations are loading correctly, so thanks for those! And, I have a
+</I>&gt;<i> question about the anti-drift function. Is it supposed to be autonomous at
+</I>&gt;<i> all, or does one need to be present, correcting the sample position for
+</I>&gt;<i> each timepoint? I had assumed that it was supposed to run on its own, but
+</I>&gt;<i> my samples always end up spiraling out of the field of view. Maybe I have
+</I>&gt;<i> inappropriate expectations of it? My pixel size is set correctly, and I
+</I>&gt;<i> don&#39;t know what else would affect it.
+</I>&gt;<i> &gt; Thanks,
+</I>&gt;<i> &gt; Aurelia
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140723/2d2e95e9/attachment.html">http://openspim.org/pipermail/openspim/attachments/20140723/2d2e95e9/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000500.html">[OpenSPIM] Anti-drift
+</A></li>
+	<LI>Next message: <A HREF="000502.html">[OpenSPIM] Anti-drift update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#501">[ date ]</a>
+              <a href="thread.html#501">[ thread ]</a>
+              <a href="subject.html#501">[ subject ]</a>
+              <a href="author.html#501">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

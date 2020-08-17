@@ -1,0 +1,2197 @@
+From nantho2 at emory.edu  Thu Aug  4 10:06:15 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 4 Aug 2016 15:06:15 +0000
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+Message-ID: <CO2PR05MB25206D88535B5F5918026805EC070@CO2PR05MB2520.namprd05.prod.outlook.com>
+
+Hi guys, I hope the scope are treating you well.
+
+I was wondering what the output image scaling is after the Multiview deconvolution.  I provide the input image scaling of 0.64 x 0.64 x 3 um, and I'm assuming after the different angles have been factored in the output would have a more isotropic scaling...?
+
+Does anybody know where to find that information?
+
+Thanks
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160804/38be160e/attachment.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Fri Aug  5 03:46:36 2016
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Fri, 5 Aug 2016 08:46:36 +0000
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+In-Reply-To: <12E19E32-956F-4B68-854B-2F5C4268A62E@mpi-cbg.de>
+References: <CO2PR05MB25206D88535B5F5918026805EC070@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <12E19E32-956F-4B68-854B-2F5C4268A62E@mpi-cbg.de>
+Message-ID: <0978B2AC-5847-4D1C-9D60-30E01F3DCC56@mdc-berlin.de>
+
+Hi, by default the resolution of the output image is equal to the highest resolved dimension, so in your case 0.64x0.64x0.64 um. If you, however, manually apply any scaling during the alignment process it can be different.
+
+All the best,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 05 Aug 2016, at 08:55, Pavel Tomancak <tomancak at mpi-cbg.de<mailto:tomancak at mpi-cbg.de>> wrote:
+
+FYI
+
+From: "Anthony, Neil" <nantho2 at emory.edu<mailto:nantho2 at emory.edu>>
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+Date: August 4, 2016 5:06:15 PM GMT+02:00
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+
+Hi guys, I hope the scope are treating you well.
+
+I was wondering what the output image scaling is after the Multiview deconvolution.  I provide the input image scaling of 0.64 x 0.64 x 3 um, and I’m assuming after the different angles have been factored in the output would have a more isotropic scaling…?
+
+Does anybody know where to find that information?
+
+Thanks
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160805/1fb04ebc/attachment.html>
+
+From nantho2 at emory.edu  Fri Aug  5 08:08:29 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Fri, 5 Aug 2016 13:08:29 +0000
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+In-Reply-To: <0978B2AC-5847-4D1C-9D60-30E01F3DCC56@mdc-berlin.de>
+References: <CO2PR05MB25206D88535B5F5918026805EC070@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <12E19E32-956F-4B68-854B-2F5C4268A62E@mpi-cbg.de>
+ <0978B2AC-5847-4D1C-9D60-30E01F3DCC56@mdc-berlin.de>
+Message-ID: <CO2PR05MB252042E216321B5F442FDC86EC180@CO2PR05MB2520.namprd05.prod.outlook.com>
+
+Thank you Stephan for your speedy response.
+
+I do downsample x4 in xy when defining the beads...  Does this downsampling continue through to the alignment and MV decon too?  If so, would the output image be  2.56 um instead?
+
+Assuming the above, should I only use downsampling when I'm checking that the alignment will work, but then start fresh without downsampling to attain the full resolution?
+
+Thanks again for your time.
+Neil
+
+From: Stephan.Preibisch at mdc-berlin.de [mailto:Stephan.Preibisch at mdc-berlin.de]
+Sent: Friday, August 05, 2016 4:47 AM
+To: openspim at openspim.org
+Cc: Pavel Tomancak <tomancak at mpi-cbg.de>; Anthony, Neil <nantho2 at emory.edu>
+Subject: Re: [OpenSPIM] Multiview deconvolution - output image scaling
+
+Hi, by default the resolution of the output image is equal to the highest resolved dimension, so in your case 0.64x0.64x0.64 um. If you, however, manually apply any scaling during the alignment process it can be different.
+
+All the best,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 05 Aug 2016, at 08:55, Pavel Tomancak <tomancak at mpi-cbg.de<mailto:tomancak at mpi-cbg.de>> wrote:
+
+FYI
+
+
+From: "Anthony, Neil" <nantho2 at emory.edu<mailto:nantho2 at emory.edu>>
+
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+
+Date: August 4, 2016 5:06:15 PM GMT+02:00
+
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+
+
+Hi guys, I hope the scope are treating you well.
+
+I was wondering what the output image scaling is after the Multiview deconvolution.  I provide the input image scaling of 0.64 x 0.64 x 3 um, and I'm assuming after the different angles have been factored in the output would have a more isotropic scaling...?
+
+Does anybody know where to find that information?
+
+Thanks
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160805/435eab8e/attachment-0001.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Fri Aug  5 10:50:08 2016
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Fri, 5 Aug 2016 15:50:08 +0000
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+In-Reply-To: <CO2PR05MB252042E216321B5F442FDC86EC180@CO2PR05MB2520.namprd05.prod.outlook.com>
+References: <CO2PR05MB25206D88535B5F5918026805EC070@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <12E19E32-956F-4B68-854B-2F5C4268A62E@mpi-cbg.de>
+ <0978B2AC-5847-4D1C-9D60-30E01F3DCC56@mdc-berlin.de>
+ <CO2PR05MB252042E216321B5F442FDC86EC180@CO2PR05MB2520.namprd05.prod.outlook.com>
+Message-ID: <DD1E80C7-F9B1-4F52-90D9-55937290930E@mdc-berlin.de>
+
+Hi, no, this is only faster for finding the beads but does not influence the scaling. Only if you explicitly concatenate a transformation that does so (Right Click > Apply Transformation).
+
+Feel free to ask more if it is unclear ...
+
+All the best,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 05 Aug 2016, at 15:08, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+
+Thank you Stephan for your speedy response.
+
+I do downsample x4 in xy when defining the beads…  Does this downsampling continue through to the alignment and MV decon too?  If so, would the output image be  2.56 um instead?
+
+Assuming the above, should I only use downsampling when I’m checking that the alignment will work, but then start fresh without downsampling to attain the full resolution?
+
+Thanks again for your time.
+Neil
+
+From: Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> [mailto:Stephan.Preibisch at mdc-berlin.de]
+Sent: Friday, August 05, 2016 4:47 AM
+To: openspim at openspim.org<mailto:openspim at openspim.org>
+Cc: Pavel Tomancak <tomancak at mpi-cbg.de>; Anthony, Neil <nantho2 at emory.edu>
+Subject: Re: [OpenSPIM] Multiview deconvolution - output image scaling
+
+Hi, by default the resolution of the output image is equal to the highest resolved dimension, so in your case 0.64x0.64x0.64 um. If you, however, manually apply any scaling during the alignment process it can be different.
+
+All the best,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 05 Aug 2016, at 08:55, Pavel Tomancak <tomancak at mpi-cbg.de<mailto:tomancak at mpi-cbg.de>> wrote:
+
+FYI
+
+
+From: "Anthony, Neil" <nantho2 at emory.edu<mailto:nantho2 at emory.edu>>
+
+Subject: [OpenSPIM] Multiview deconvolution - output image scaling
+
+Date: August 4, 2016 5:06:15 PM GMT+02:00
+
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+
+
+Hi guys, I hope the scope are treating you well.
+
+I was wondering what the output image scaling is after the Multiview deconvolution.  I provide the input image scaling of 0.64 x 0.64 x 3 um, and I’m assuming after the different angles have been factored in the output would have a more isotropic scaling…?
+
+Does anybody know where to find that information?
+
+Thanks
+Neil
+
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160805/bc81a035/attachment-0001.html>
+
+From tvmendonca1 at sheffield.ac.uk  Fri Aug 19 10:16:01 2016
+From: tvmendonca1 at sheffield.ac.uk (Tania Mendonca)
+Date: Fri, 19 Aug 2016 16:16:01 +0100
+Subject: [OpenSPIM] Multiview registration - no inliers
+Message-ID: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've
+missed this conversation before but I was wondering if any of you have had
+similar problems as me with trying to get the Fiji multiview reconstruction
+plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and
+different concentrations but it never seems to find enough correspondences
+between views. I've been primarily experimenting with interactively
+detec​​ting interest points. I've tried the presets as well but with no
+luck. I've tried to systematically work through various combinations of
+sigma and threshold but always end up with 0 inliers. Registrations always
+terminates with the following error: "There are no connected tiles, cannot
+do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as
+.cxd files which I convert to .tifs before processing. I'm attaching some
+of my test data - https://drive.google.com/file/d/0B-he-_wcys_-
+aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads
+(1:50 dilution) with the idea of using the 1µm beads to reconstruct the
+10µm beads. I use the same objectives as on the OpenSPIM system (10X for
+illumination and 20X for detection), magnification on the system is 27.7X.
+The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what
+I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly
+appreciated!
+
+Best wishes
+Tania
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160819/a9fc57f8/attachment.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Fri Aug 19 10:58:48 2016
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Fri, 19 Aug 2016 15:58:48 +0000
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+Message-ID: <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+
+Hi, my first guess would be that your calibration (pixel size is x,y and z) is wrong ... Can you make sure this is correct when you define your dataset?
+
+All the best,
+Stephan
+
+On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've missed this conversation before but I was wondering if any of you have had similar problems as me with trying to get the Fiji multiview reconstruction plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and different concentrations but it never seems to find enough correspondences between views. I've been primarily experimenting with interactively detec​​ting interest points. I've tried the presets as well but with no luck. I've tried to systematically work through various combinations of sigma and threshold but always end up with 0 inliers. Registrations always terminates with the following error: "There are no connected tiles, cannot do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as .cxd files which I convert to .tifs before processing. I'm attaching some of my test data - https://drive.google.com/file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct the 10µm beads. I use the same objectives as on the OpenSPIM system (10X for illumination and 20X for detection), magnification on the system is 27.7X. The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly appreciated!
+
+Best wishes
+Tania
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160819/a0d5da24/attachment.html>
+
+From tvmendonca1 at sheffield.ac.uk  Fri Aug 19 14:00:18 2016
+From: tvmendonca1 at sheffield.ac.uk (Tania Mendonca)
+Date: Fri, 19 Aug 2016 20:00:18 +0100
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+Message-ID: <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+
+Hi
+
+I've just checked to make sure but yes I have corrected the voxel size on
+the image stacks and there shouldn't be a mistake in that. However, your
+reply gave me an idea and I did a quick test. I duplicated one of the
+images and ran the multiview reconstruction plugin for the two duplicates.
+It worked, so it makes me think that there's nothing wrong with the files
+themselves and you might be right about the issue being with my voxel
+depth. I've referred to SVI's Nyquist calculator to workout my step size,
+is there a recommended step size that people use?
+
+Best wishes
+Tania
+
+On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de <
+Stephan.Preibisch at mdc-berlin.de> wrote:
+
+> Hi, my first guess would be that your calibration (pixel size is x,y and
+> z) is wrong ... Can you make sure this is correct when you define your
+> dataset?
+>
+> All the best,
+> Stephan
+>
+> On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+> wrote:
+>
+> Hi all
+>
+> Hope your microscopes are aligned and treating you well! I'm sorry if I've
+> missed this conversation before but I was wondering if any of you have had
+> similar problems as me with trying to get the Fiji multiview reconstruction
+> plugin to like my data.
+>
+> I've tried a range of microspheres - different colours, different sizes
+> and different concentrations but it never seems to find enough
+> correspondences between views. I've been primarily experimenting with
+> interactively detec​​ting interest points. I've tried the presets as well
+> but with no luck. I've tried to systematically work through various
+> combinations of sigma and threshold but always end up with 0 inliers.
+> Registrations always terminates with the following error: "There are no
+> connected tiles, cannot do an optimization. Quitting."
+>
+> My home built system doesn't run on µManager and my images are acquired as
+> .cxd files which I convert to .tifs before processing. I'm attaching some
+> of my test data - https://drive.google.com/file/
+> d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+> the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm
+> beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct
+> the 10µm beads. I use the same objectives as on the OpenSPIM system (10X
+> for illumination and 20X for detection), magnification on the system is
+> 27.7X. The illumination here is 473nm and detection at 520nm.​​
+>
+> A log file has been included in the zip file to give you an idea of what
+> I've been trying.
+>
+> I hope I'm just missing a trick somewhere. Any help would be greatly
+> appreciated!
+>
+> Best wishes
+> Tania
+> --
+> -------------------------
+> Tania Mendonca
+> Doctoral Research Student
+> University of Sheffield
+> S10 2TN
+> -------------------------
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+
+
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160819/42b916bf/attachment.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Fri Aug 19 14:13:05 2016
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Fri, 19 Aug 2016 19:13:05 +0000
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>,
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+Message-ID: <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+
+Hi, I just think that in the beginning when you define your dataset the pixel sizes were wrong which potentially corrupts the downstream workflow. Try to start from the very beginning, and define a new dataset and manually put in the correct calibration. This might just work ...
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi
+
+I've just checked to make sure but yes I have corrected the voxel size on the image stacks and there shouldn't be a mistake in that. However, your reply gave me an idea and I did a quick test. I duplicated one of the images and ran the multiview reconstruction plugin for the two duplicates. It worked, so it makes me think that there's nothing wrong with the files themselves and you might be right about the issue being with my voxel depth. I've referred to SVI's Nyquist calculator to workout my step size, is there a recommended step size that people use?
+
+Best wishes
+Tania
+
+On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, my first guess would be that your calibration (pixel size is x,y and z) is wrong ... Can you make sure this is correct when you define your dataset?
+
+All the best,
+Stephan
+
+On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've missed this conversation before but I was wondering if any of you have had similar problems as me with trying to get the Fiji multiview reconstruction plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and different concentrations but it never seems to find enough correspondences between views. I've been primarily experimenting with interactively detec​​ting interest points. I've tried the presets as well but with no luck. I've tried to systematically work through various combinations of sigma and threshold but always end up with 0 inliers. Registrations always terminates with the following error: "There are no connected tiles, cannot do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as .cxd files which I convert to .tifs before processing. I'm attaching some of my test data - https://drive.google.com/file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct the 10µm beads. I use the same objectives as on the OpenSPIM system (10X for illumination and 20X for detection), magnification on the system is 27.7X. The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly appreciated!
+
+Best wishes
+Tania
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160819/c1c31196/attachment.html>
+
+From tvmendonca1 at sheffield.ac.uk  Fri Aug 19 14:31:08 2016
+From: tvmendonca1 at sheffield.ac.uk (Tania Mendonca)
+Date: Fri, 19 Aug 2016 20:31:08 +0100
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+Message-ID: <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+
+Hi
+
+Just tried it but it still doesn't work.
+
+Thanks
+Tania
+
+On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de <
+Stephan.Preibisch at mdc-berlin.de> wrote:
+
+> Hi, I just think that in the beginning when you define your dataset the
+> pixel sizes were wrong which potentially corrupts the downstream workflow.
+> Try to start from the very beginning, and define a new dataset and manually
+> put in the correct calibration. This might just work ...
+>
+> All the best,
+> Stephan
+>
+> Sent from my iPhone
+>
+> On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+> wrote:
+>
+> Hi
+>
+> I've just checked to make sure but yes I have corrected the voxel size on
+> the image stacks and there shouldn't be a mistake in that. However, your
+> reply gave me an idea and I did a quick test. I duplicated one of the
+> images and ran the multiview reconstruction plugin for the two duplicates.
+> It worked, so it makes me think that there's nothing wrong with the files
+> themselves and you might be right about the issue being with my voxel
+> depth. I've referred to SVI's Nyquist calculator to workout my step size,
+> is there a recommended step size that people use?
+>
+> Best wishes
+> Tania
+>
+> On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de <
+> Stephan.Preibisch at mdc-berlin.de> wrote:
+>
+>> Hi, my first guess would be that your calibration (pixel size is x,y and
+>> z) is wrong ... Can you make sure this is correct when you define your
+>> dataset?
+>>
+>> All the best,
+>> Stephan
+>>
+>> On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+>> wrote:
+>>
+>> Hi all
+>>
+>> Hope your microscopes are aligned and treating you well! I'm sorry if
+>> I've missed this conversation before but I was wondering if any of you have
+>> had similar problems as me with trying to get the Fiji multiview
+>> reconstruction plugin to like my data.
+>>
+>> I've tried a range of microspheres - different colours, different sizes
+>> and different concentrations but it never seems to find enough
+>> correspondences between views. I've been primarily experimenting with
+>> interactively detec​​ting interest points. I've tried the presets as well
+>> but with no luck. I've tried to systematically work through various
+>> combinations of sigma and threshold but always end up with 0 inliers.
+>> Registrations always terminates with the following error: "There are no
+>> connected tiles, cannot do an optimization. Quitting."
+>>
+>> My home built system doesn't run on µManager and my images are acquired
+>> as .cxd files which I convert to .tifs before processing. I'm attaching
+>> some of my test data - https://drive.google.com/file/
+>> d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+>> the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm
+>> beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct
+>> the 10µm beads. I use the same objectives as on the OpenSPIM system (10X
+>> for illumination and 20X for detection), magnification on the system is
+>> 27.7X. The illumination here is 473nm and detection at 520nm.​​
+>>
+>> A log file has been included in the zip file to give you an idea of what
+>> I've been trying.
+>>
+>> I hope I'm just missing a trick somewhere. Any help would be greatly
+>> appreciated!
+>>
+>> Best wishes
+>> Tania
+>> --
+>> -------------------------
+>> Tania Mendonca
+>> Doctoral Research Student
+>> University of Sheffield
+>> S10 2TN
+>> -------------------------
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>>
+>
+>
+> --
+> -------------------------
+> Tania Mendonca
+> Doctoral Research Student
+> University of Sheffield
+> S10 2TN
+> -------------------------
+>
+>
+
+
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160819/b132d639/attachment-0001.html>
+
+From m.hilbrant at uni-koeln.de  Mon Aug 22 08:25:53 2016
+From: m.hilbrant at uni-koeln.de (Maarten Hilbrant)
+Date: Mon, 22 Aug 2016 15:25:53 +0200
+Subject: [OpenSPIM] Multiview Reconstruction- optimizing settings?
+Message-ID: <3216EBAC-2CD8-4C45-BC93-CDB05FB34755@uni-koeln.de>
+
+Dear all,
+
+nice to see some questions on the mailing list lately regarding Stephan Preibisch' multview plugin. After attending the EMBO workshop in Dresden in 2014,  I've been using the plugin for two years now and it is an essential part of our light sheet workflow. In a nutshell, we image insect embryos, embedded in agarose containing sub-resolution beads, using single-sided illumination with 8 or 16 angles per time point. In order to infer the biological relevance of RNAi phenotypes, we tend to look at many different specimens for few time points, rather than collecting time-lapse data for a small number of specimens. In practice, this means a lot of reconstructing and adjusting settings, although I find that, for most of our datasets, default settings work nicely for bead detection, registration and deconvolution ("Nicely" in this case meaning a significant increase in local contrast). Sometimes, however, registration is sub-optimal (and who knows, maybe it is also for the analyses that I normally quality as "nice''-). In these cases, as a first hint, inspection with the BigDataViewer reveals that the psf's of the different angles don't overlap properly.
+
+- Does this sound familiar to other users of the plugin?
+- What reconstruction parameters do you generally tinker with first?
+- for example: do you spend a lot of time on bead detection (and subsequent exclusion)?
+- Do you sometimes reject datasets for multi view reconstruction and if so, on what grounds? For example, I like to image "a lot" of agarose surrounding the embryo in order to have a large set of beads for reconstruction, but am not always very systematic about this. Is this crucial in your data acquisition?
+
+any ideas appreciated, basically to make better use of this great tool.
+
+cheers,
+Maarten
+
+******************************
+Dr. Maarten Hilbrant
+Postdoctoral Researcher
+Zoological Institute
+University of Cologne
+Cologne Biocenter
+Zülpicher Str. 47b
+50674 Cologne
+Germany
++49(0)221-4703238
+m.hilbrant at uni-koeln.de
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160822/7f277acf/attachment.html>
+
+From nantho2 at emory.edu  Wed Aug 24 11:55:29 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Wed, 24 Aug 2016 16:55:29 +0000
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+ <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+Message-ID: <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+
+Hi Tania,
+
+Can I please ask what the z voxel size is?  I see in the test.xml that you have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup tag.  When I create a xml from scratch here, setting xy to 0.235 and z to 1.5 (the smallest on the standard Picard 4D stage) I see each id in the xml has a size of “0.235 0.235 1.5”.
+
+Stephan, I assume these are the voxel sizes used for the BDV.  Would I be correct in assuming some more and saying that if only one value is seen it’s used for xy and z?
+
+…  interlude …  etc. etc.  lalalalala …  coffee etc.
+
+I now see what the problem is.  Well, what some of the problems might be.
+
+I did a manual transform around the y axis and manually overlapped the big bead.  See attached.  Is this how is should look?  If I have it laid out correctly I think you have a combination of not enough beads, combined with not enough overlap of physical volumes given the low number of beads.  On top of that I feel the small bead signal is so low that it’s approaching the camera noise*.
+
+It is difficult as the big beads are so bright, and you might want to find a better sample to test with.  I’ve done some testing on spheroids that are really bright, and I had to swap my 100nm tetra spec beads for some really bright 1um green beads to be able to get good signal on the beads and not saturate the sample of interest.
+
+I started with just little beads to figure out the basics, and I take just sub-res bead data to get my PSF output from the decon too.
+
+Neil
+
+
+* inspect the data stacks with orthogonal view and you’ll see the vertical lines running down the stack.  For this kind of noise you can run a few line scans across your beads and noise to get an idea of the intensity difference and then use remove outliers
+
+
+
+From: OpenSPIM [mailto:openspim-bounces at openspim.org] On Behalf Of Tania Mendonca
+Sent: Friday, August 19, 2016 3:31 PM
+To: Stephan.Preibisch at mdc-berlin.de
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Multiview registration - no inliers
+
+Hi
+
+Just tried it but it still doesn't work.
+
+Thanks
+Tania
+
+On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, I just think that in the beginning when you define your dataset the pixel sizes were wrong which potentially corrupts the downstream workflow. Try to start from the very beginning, and define a new dataset and manually put in the correct calibration. This might just work ...
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi
+
+I've just checked to make sure but yes I have corrected the voxel size on the image stacks and there shouldn't be a mistake in that. However, your reply gave me an idea and I did a quick test. I duplicated one of the images and ran the multiview reconstruction plugin for the two duplicates. It worked, so it makes me think that there's nothing wrong with the files themselves and you might be right about the issue being with my voxel depth. I've referred to SVI's Nyquist calculator to workout my step size, is there a recommended step size that people use?
+
+Best wishes
+Tania
+
+On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, my first guess would be that your calibration (pixel size is x,y and z) is wrong ... Can you make sure this is correct when you define your dataset?
+
+All the best,
+Stephan
+
+On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've missed this conversation before but I was wondering if any of you have had similar problems as me with trying to get the Fiji multiview reconstruction plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and different concentrations but it never seems to find enough correspondences between views. I've been primarily experimenting with interactively detec​​ting interest points. I've tried the presets as well but with no luck. I've tried to systematically work through various combinations of sigma and threshold but always end up with 0 inliers. Registrations always terminates with the following error: "There are no connected tiles, cannot do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as .cxd files which I convert to .tifs before processing. I'm attaching some of my test data - https://drive.google.com/file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct the 10µm beads. I use the same objectives as on the OpenSPIM system (10X for illumination and 20X for detection), magnification on the system is 27.7X. The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly appreciated!
+
+Best wishes
+Tania
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160824/d605e19e/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: BDV_manTrans.JPG
+Type: image/jpeg
+Size: 78754 bytes
+Desc: BDV_manTrans.JPG
+URL: <http://openspim.org/pipermail/openspim/attachments/20160824/d605e19e/attachment-0001.jpe>
+
+From tvmendonca1 at sheffield.ac.uk  Wed Aug 24 12:49:15 2016
+From: tvmendonca1 at sheffield.ac.uk (Tania Mendonca)
+Date: Wed, 24 Aug 2016 18:49:15 +0100
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+ <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+ <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+Message-ID: <CAC9TZAM0HVA1pqf2P5+mJSFp4aQr=HLPQUmQEUbf7y40yREA6w@mail.gmail.com>
+
+Hi Neil
+
+Thanks for your email! The stacks should have the voxel size correctly set
+to 0.235 x 0.235 x 0.750. I'm assuming you've looked at the data on
+µManager as I'm unfamiliar with the ViewSetup tag that you mention. My
+system is not quite an OpenSPIM - I use LabView to control and don't have
+the Picard 4D stage (I use a Piezo for scanning instead).
+
+Your manual transform looks about right, the stacks are about 120º apart
+with the big bead somewhere near the middle. I have tried a few different
+µbeads and the ones in these stacks are 1µm green beads but as you say they
+are nowhere near as bright as the big beads. Perhaps I do need to dump the
+large beads and find something else to try and reconstruct. I've been
+finding about 400-ish interest points in my stacks- is there a magic number
+that works for you? I've been imaging to about 100µm depth, how much would
+you recommend? Don't the stacks start getting too large to handle?
+
+Thanks for the tip on the camera noise! I think I'll try again tomorrow
+with brighter beads, no big beads and larger volumes - I'll let you know
+how it goes!
+
+Best wishes
+Tania
+
+On 24 August 2016 at 17:55, Anthony, Neil <nantho2 at emory.edu> wrote:
+
+> Hi Tania,
+>
+>
+> Can I please ask what the z voxel size is?  I see in the test.xml that you
+> have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup tag.
+> When I create a xml from scratch here, setting xy to 0.235 and z to 1.5
+> (the smallest on the standard Picard 4D stage) I see each id in the xml has
+> a size of “0.235 0.235 1.5”.
+>
+>
+>
+> Stephan, I assume these are the voxel sizes used for the BDV.  Would I be
+> correct in assuming some more and saying that if only one value is seen
+> it’s used for xy and z?
+>
+>
+>
+> …  interlude …  etc. etc.  lalalalala …  coffee etc.
+>
+>
+>
+> I now see what the problem is.  Well, what some of the problems might be.
+>
+>
+>
+> I did a manual transform around the y axis and manually overlapped the big
+> bead.  See attached.  Is this how is should look?  If I have it laid out
+> correctly I think you have a combination of not enough beads, combined with
+> not enough overlap of physical volumes given the low number of beads.  On
+> top of that I feel the small bead signal is so low that it’s approaching
+> the camera noise*.
+>
+>
+>
+> It is difficult as the big beads are so bright, and you might want to find
+> a better sample to test with.  I’ve done some testing on spheroids that are
+> really bright, and I had to swap my 100nm tetra spec beads for some really
+> bright 1um green beads to be able to get good signal on the beads and not
+> saturate the sample of interest.
+>
+>
+>
+> I started with just little beads to figure out the basics, and I take just
+> sub-res bead data to get my PSF output from the decon too.
+>
+>
+>
+> Neil
+>
+>
+>
+>
+>
+> * inspect the data stacks with orthogonal view and you’ll see the vertical
+> lines running down the stack.  For this kind of noise you can run a few
+> line scans across your beads and noise to get an idea of the intensity
+> difference and then use remove outliers
+>
+>
+>
+>
+>
+>
+>
+> *From:* OpenSPIM [mailto:openspim-bounces at openspim.org] *On Behalf Of *Tania
+> Mendonca
+> *Sent:* Friday, August 19, 2016 3:31 PM
+> *To:* Stephan.Preibisch at mdc-berlin.de
+> *Cc:* openspim at openspim.org
+> *Subject:* Re: [OpenSPIM] Multiview registration - no inliers
+>
+>
+>
+> Hi
+>
+>
+>
+> Just tried it but it still doesn't work.
+>
+>
+>
+> Thanks
+>
+> Tania
+>
+>
+>
+> On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de <
+> Stephan.Preibisch at mdc-berlin.de> wrote:
+>
+> Hi, I just think that in the beginning when you define your dataset the
+> pixel sizes were wrong which potentially corrupts the downstream workflow.
+> Try to start from the very beginning, and define a new dataset and manually
+> put in the correct calibration. This might just work ...
+>
+>
+>
+> All the best,
+>
+> Stephan
+>
+> Sent from my iPhone
+>
+>
+> On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+> wrote:
+>
+> Hi
+>
+>
+>
+> I've just checked to make sure but yes I have corrected the voxel size on
+> the image stacks and there shouldn't be a mistake in that. However, your
+> reply gave me an idea and I did a quick test. I duplicated one of the
+> images and ran the multiview reconstruction plugin for the two duplicates.
+> It worked, so it makes me think that there's nothing wrong with the files
+> themselves and you might be right about the issue being with my voxel
+> depth. I've referred to SVI's Nyquist calculator to workout my step size,
+> is there a recommended step size that people use?
+>
+>
+>
+> Best wishes
+>
+> Tania
+>
+>
+>
+> On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de <
+> Stephan.Preibisch at mdc-berlin.de> wrote:
+>
+> Hi, my first guess would be that your calibration (pixel size is x,y and
+> z) is wrong ... Can you make sure this is correct when you define your
+> dataset?
+>
+>
+>
+> All the best,
+>
+> Stephan
+>
+>
+> On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+> wrote:
+>
+> Hi all
+>
+>
+>
+> Hope your microscopes are aligned and treating you well! I'm sorry if I've
+> missed this conversation before but I was wondering if any of you have had
+> similar problems as me with trying to get the Fiji multiview reconstruction
+> plugin to like my data.
+>
+>
+>
+> I've tried a range of microspheres - different colours, different sizes
+> and different concentrations but it never seems to find enough
+> correspondences between views. I've been primarily experimenting with
+> interactively detec​​ting interest points. I've tried the presets as well
+> but with no luck. I've tried to systematically work through various
+> combinations of sigma and threshold but always end up with 0 inliers.
+> Registrations always terminates with the following error: "There are no
+> connected tiles, cannot do an optimization. Quitting."
+>
+>
+>
+> My home built system doesn't run on µManager and my images are acquired as
+> .cxd files which I convert to .tifs before processing. I'm attaching some
+> of my test data - https://drive.google.com/file/d/0B-he-_wcys_-
+> aUtRZ0pidFhyUlk/view?usp=sharing
+>
+> the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm
+> beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct
+> the 10µm beads. I use the same objectives as on the OpenSPIM system (10X
+> for illumination and 20X for detection), magnification on the system is
+> 27.7X. The illumination here is 473nm and detection at 520nm.​​
+>
+>
+>
+> A log file has been included in the zip file to give you an idea of what
+> I've been trying.
+>
+>
+>
+> I hope I'm just missing a trick somewhere. Any help would be greatly
+> appreciated!
+>
+>
+>
+> Best wishes
+>
+> Tania
+>
+> --
+>
+> -------------------------
+>
+> Tania Mendonca
+>
+> Doctoral Research Student
+>
+> University of Sheffield
+>
+> S10 2TN
+>
+> -------------------------
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+>
+>
+>
+> --
+>
+> -------------------------
+>
+> Tania Mendonca
+>
+> Doctoral Research Student
+>
+> University of Sheffield
+>
+> S10 2TN
+>
+> -------------------------
+>
+>
+>
+>
+>
+> --
+>
+> -------------------------
+>
+> Tania Mendonca
+>
+> Doctoral Research Student
+>
+> University of Sheffield
+>
+> S10 2TN
+>
+> -------------------------
+>
+> ------------------------------
+>
+> This e-mail message (including any attachments) is for the sole use of
+> the intended recipient(s) and may contain confidential and privileged
+> information. If the reader of this message is not the intended
+> recipient, you are hereby notified that any dissemination, distribution
+> or copying of this message (including any attachments) is strictly
+> prohibited.
+>
+> If you have received this message in error, please contact
+> the sender by reply e-mail message and destroy all copies of the
+> original message (including attachments).
+>
+
+
+
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160824/99221a95/attachment.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Thu Aug 25 02:41:46 2016
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Thu, 25 Aug 2016 07:41:46 +0000
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <CAC9TZAM0HVA1pqf2P5+mJSFp4aQr=HLPQUmQEUbf7y40yREA6w@mail.gmail.com>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+ <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+ <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <CAC9TZAM0HVA1pqf2P5+mJSFp4aQr=HLPQUmQEUbf7y40yREA6w@mail.gmail.com>
+Message-ID: <FC5E25CF-01E2-4127-81AA-AE5CA059E598@mdc-berlin.de>
+
+Hi Tania,
+
+from looking at the data I agree with Anthony, there are some problems which make it hard. But trying different calibrations and not getting a result makes me believe that there is maybe no overlap in between the stacks. You have quite a few of these big blobs apparently, so is it possible that these are different blobs?
+
+If you run it again, make the stacks way bigger in z to make sure that there is overlap, increase the laser power, and maybe put some simple auto fluorescent sample in there so it is possible to judge if the calibration is right and if there is overlap.
+
+Good luck,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 24 Aug 2016, at 19:49, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi Neil
+
+Thanks for your email! The stacks should have the voxel size correctly set to 0.235 x 0.235 x 0.750. I'm assuming you've looked at the data on µManager as I'm unfamiliar with the ViewSetup tag that you mention. My system is not quite an OpenSPIM - I use LabView to control and don't have the Picard 4D stage (I use a Piezo for scanning instead).
+
+Your manual transform looks about right, the stacks are about 120º apart with the big bead somewhere near the middle. I have tried a few different µbeads and the ones in these stacks are 1µm green beads but as you say they are nowhere near as bright as the big beads. Perhaps I do need to dump the large beads and find something else to try and reconstruct. I've been finding about 400-ish interest points in my stacks- is there a magic number that works for you? I've been imaging to about 100µm depth, how much would you recommend? Don't the stacks start getting too large to handle?
+
+Thanks for the tip on the camera noise! I think I'll try again tomorrow with brighter beads, no big beads and larger volumes - I'll let you know how it goes!
+
+Best wishes
+Tania
+
+On 24 August 2016 at 17:55, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+Hi Tania,
+
+Can I please ask what the z voxel size is?  I see in the test.xml that you have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup tag.  When I create a xml from scratch here, setting xy to 0.235 and z to 1.5 (the smallest on the standard Picard 4D stage) I see each id in the xml has a size of “0.235 0.235 1.5”.
+
+Stephan, I assume these are the voxel sizes used for the BDV.  Would I be correct in assuming some more and saying that if only one value is seen it’s used for xy and z?
+
+…  interlude …  etc. etc.  lalalalala …  coffee etc.
+
+I now see what the problem is.  Well, what some of the problems might be.
+
+I did a manual transform around the y axis and manually overlapped the big bead.  See attached.  Is this how is should look?  If I have it laid out correctly I think you have a combination of not enough beads, combined with not enough overlap of physical volumes given the low number of beads.  On top of that I feel the small bead signal is so low that it’s approaching the camera noise*.
+
+It is difficult as the big beads are so bright, and you might want to find a better sample to test with.  I’ve done some testing on spheroids that are really bright, and I had to swap my 100nm tetra spec beads for some really bright 1um green beads to be able to get good signal on the beads and not saturate the sample of interest.
+
+I started with just little beads to figure out the basics, and I take just sub-res bead data to get my PSF output from the decon too.
+
+Neil
+
+
+* inspect the data stacks with orthogonal view and you’ll see the vertical lines running down the stack.  For this kind of noise you can run a few line scans across your beads and noise to get an idea of the intensity difference and then use remove outliers
+
+
+
+From: OpenSPIM [mailto:openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>] On Behalf Of Tania Mendonca
+Sent: Friday, August 19, 2016 3:31 PM
+To: Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] Multiview registration - no inliers
+
+Hi
+
+Just tried it but it still doesn't work.
+
+Thanks
+Tania
+
+On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, I just think that in the beginning when you define your dataset the pixel sizes were wrong which potentially corrupts the downstream workflow. Try to start from the very beginning, and define a new dataset and manually put in the correct calibration. This might just work ...
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi
+
+I've just checked to make sure but yes I have corrected the voxel size on the image stacks and there shouldn't be a mistake in that. However, your reply gave me an idea and I did a quick test. I duplicated one of the images and ran the multiview reconstruction plugin for the two duplicates. It worked, so it makes me think that there's nothing wrong with the files themselves and you might be right about the issue being with my voxel depth. I've referred to SVI's Nyquist calculator to workout my step size, is there a recommended step size that people use?
+
+Best wishes
+Tania
+
+On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, my first guess would be that your calibration (pixel size is x,y and z) is wrong ... Can you make sure this is correct when you define your dataset?
+
+All the best,
+Stephan
+
+On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've missed this conversation before but I was wondering if any of you have had similar problems as me with trying to get the Fiji multiview reconstruction plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and different concentrations but it never seems to find enough correspondences between views. I've been primarily experimenting with interactively detec​​ting interest points. I've tried the presets as well but with no luck. I've tried to systematically work through various combinations of sigma and threshold but always end up with 0 inliers. Registrations always terminates with the following error: "There are no connected tiles, cannot do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as .cxd files which I convert to .tifs before processing. I'm attaching some of my test data -https://drive.google.com/file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct the 10µm beads. I use the same objectives as on the OpenSPIM system (10X for illumination and 20X for detection), magnification on the system is 27.7X. The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly appreciated!
+
+Best wishes
+Tania
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160825/52d59a39/attachment-0001.html>
+
+From nantho2 at emory.edu  Thu Aug 25 09:08:05 2016
+From: nantho2 at emory.edu (Anthony, Neil)
+Date: Thu, 25 Aug 2016 14:08:05 +0000
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <FC5E25CF-01E2-4127-81AA-AE5CA059E598@mdc-berlin.de>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+ <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+ <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <CAC9TZAM0HVA1pqf2P5+mJSFp4aQr=HLPQUmQEUbf7y40yREA6w@mail.gmail.com>,
+ <FC5E25CF-01E2-4127-81AA-AE5CA059E598@mdc-berlin.de>
+Message-ID: <2543231b-eb71-4561-b855-6b7e8af44f01@emory.edu>
+
+Hi Tania,
+
+I'd agree with Stephan on the larger z stacks. I usually take >300 um, but it kinda depends on the field of view of the camera, as at some point you're taking images in an area that will no longer overlap.
+
+400 interest points would be sufficient if they all overlapped, but more are required in general. I believe Stephan's articles suggest 1000-2000 to get the best results. All depends on overlap percentage.
+
+When defining the beads I aim to use a sigma and threshold that picks out the peak of the bead if possible. Stephan, can I ask if it's detrimental when the threshold is too low and I'm identifying the same bead on many z planes? Also, I assume the sigma value determines the steepness of the point, but it still seems to pick up on larger aggregated beads etc, so I'm not too sure about that part.
+
+Neil
+
+
+
+
+________________________________
+From: Stephan.Preibisch at mdc-berlin.de
+Sent: Aug 25, 2016 3:41 AM
+To: Tania Mendonca
+Cc: Anthony, Neil; openspim at openspim.org
+Subject: Re: [OpenSPIM] Multiview registration - no inliers
+
+Hi Tania,
+
+from looking at the data I agree with Anthony, there are some problems which make it hard. But trying different calibrations and not getting a result makes me believe that there is maybe no overlap in between the stacks. You have quite a few of these big blobs apparently, so is it possible that these are different blobs?
+
+If you run it again, make the stacks way bigger in z to make sure that there is overlap, increase the laser power, and maybe put some simple auto fluorescent sample in there so it is possible to judge if the calibration is right and if there is overlap.
+
+Good luck,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 24 Aug 2016, at 19:49, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi Neil
+
+Thanks for your email! The stacks should have the voxel size correctly set to 0.235 x 0.235 x 0.750. I'm assuming you've looked at the data on µManager as I'm unfamiliar with the ViewSetup tag that you mention. My system is not quite an OpenSPIM - I use LabView to control and don't have the Picard 4D stage (I use a Piezo for scanning instead).
+
+Your manual transform looks about right, the stacks are about 120º apart with the big bead somewhere near the middle. I have tried a few different µbeads and the ones in these stacks are 1µm green beads but as you say they are nowhere near as bright as the big beads. Perhaps I do need to dump the large beads and find something else to try and reconstruct. I've been finding about 400-ish interest points in my stacks- is there a magic number that works for you? I've been imaging to about 100µm depth, how much would you recommend? Don't the stacks start getting too large to handle?
+
+Thanks for the tip on the camera noise! I think I'll try again tomorrow with brighter beads, no big beads and larger volumes - I'll let you know how it goes!
+
+Best wishes
+Tania
+
+On 24 August 2016 at 17:55, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+Hi Tania,
+
+Can I please ask what the z voxel size is?  I see in the test.xml that you have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup tag.  When I create a xml from scratch here, setting xy to 0.235 and z to 1.5 (the smallest on the standard Picard 4D stage) I see each id in the xml has a size of “0.235 0.235 1.5”.
+
+Stephan, I assume these are the voxel sizes used for the BDV.  Would I be correct in assuming some more and saying that if only one value is seen it’s used for xy and z?
+
+…  interlude …  etc. etc.  lalalalala …  coffee etc.
+
+I now see what the problem is.  Well, what some of the problems might be.
+
+I did a manual transform around the y axis and manually overlapped the big bead.  See attached.  Is this how is should look?  If I have it laid out correctly I think you have a combination of not enough beads, combined with not enough overlap of physical volumes given the low number of beads.  On top of that I feel the small bead signal is so low that it’s approaching the camera noise*.
+
+It is difficult as the big beads are so bright, and you might want to find a better sample to test with.  I’ve done some testing on spheroids that are really bright, and I had to swap my 100nm tetra spec beads for some really bright 1um green beads to be able to get good signal on the beads and not saturate the sample of interest.
+
+I started with just little beads to figure out the basics, and I take just sub-res bead data to get my PSF output from the decon too.
+
+Neil
+
+
+* inspect the data stacks with orthogonal view and you’ll see the vertical lines running down the stack.  For this kind of noise you can run a few line scans across your beads and noise to get an idea of the intensity difference and then use remove outliers
+
+
+
+From: OpenSPIM [mailto:openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>] On Behalf Of Tania Mendonca
+Sent: Friday, August 19, 2016 3:31 PM
+To: Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] Multiview registration - no inliers
+
+Hi
+
+Just tried it but it still doesn't work.
+
+Thanks
+Tania
+
+On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, I just think that in the beginning when you define your dataset the pixel sizes were wrong which potentially corrupts the downstream workflow. Try to start from the very beginning, and define a new dataset and manually put in the correct calibration. This might just work ...
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi
+
+I've just checked to make sure but yes I have corrected the voxel size on the image stacks and there shouldn't be a mistake in that. However, your reply gave me an idea and I did a quick test. I duplicated one of the images and ran the multiview reconstruction plugin for the two duplicates. It worked, so it makes me think that there's nothing wrong with the files themselves and you might be right about the issue being with my voxel depth. I've referred to SVI's Nyquist calculator to workout my step size, is there a recommended step size that people use?
+
+Best wishes
+Tania
+
+On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, my first guess would be that your calibration (pixel size is x,y and z) is wrong ... Can you make sure this is correct when you define your dataset?
+
+All the best,
+Stephan
+
+On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've missed this conversation before but I was wondering if any of you have had similar problems as me with trying to get the Fiji multiview reconstruction plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and different concentrations but it never seems to find enough correspondences between views. I've been primarily experimenting with interactively detec​​ting interest points. I've tried the presets as well but with no luck. I've tried to systematically work through various combinations of sigma and threshold but always end up with 0 inliers. Registrations always terminates with the following error: "There are no connected tiles, cannot do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as .cxd files which I convert to .tifs before processing. I'm attaching some of my test data -https://drive.google.com/file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct the 10µm beads. I use the same objectives as on the OpenSPIM system (10X for illumination and 20X for detection), magnification on the system is 27.7X. The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly appreciated!
+
+Best wishes
+Tania
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160825/c3734985/attachment-0001.html>
+
+From tvmendonca1 at sheffield.ac.uk  Mon Aug 29 09:29:03 2016
+From: tvmendonca1 at sheffield.ac.uk (Tania Mendonca)
+Date: Mon, 29 Aug 2016 15:29:03 +0100
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <2543231b-eb71-4561-b855-6b7e8af44f01@emory.edu>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+ <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+ <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <CAC9TZAM0HVA1pqf2P5+mJSFp4aQr=HLPQUmQEUbf7y40yREA6w@mail.gmail.com>
+ <FC5E25CF-01E2-4127-81AA-AE5CA059E598@mdc-berlin.de>
+ <2543231b-eb71-4561-b855-6b7e8af44f01@emory.edu>
+Message-ID: <CAC9TZAOKWuHVXQU8y976V0nU+MWqV+BxgzFtbAzdkB3sfXERdA@mail.gmail.com>
+
+Hi Neil and Stephan
+
+Thanks for the tips and all the help! I tried again with a higher
+concentration of the 1µm beads, got rid of the bright big beads and
+increased the z acquisition distance to increase the region of overlap and
+was finally successful!
+
+I hope to meet many of you OpenSPIMmers in Sheffield this week!
+
+Best wishes
+Tania
+
+On 25 August 2016 at 15:08, Anthony, Neil <nantho2 at emory.edu> wrote:
+
+> Hi Tania,
+>
+> I'd agree with Stephan on the larger z stacks. I usually take >300 um, but
+> it kinda depends on the field of view of the camera, as at some point
+> you're taking images in an area that will no longer overlap.
+>
+> 400 interest points would be sufficient if they all overlapped, but more
+> are required in general. I believe Stephan's articles suggest 1000-2000 to
+> get the best results. All depends on overlap percentage.
+>
+> When defining the beads I aim to use a sigma and threshold that picks out
+> the peak of the bead if possible. Stephan, can I ask if it's detrimental
+> when the threshold is too low and I'm identifying the same bead on many z
+> planes? Also, I assume the sigma value determines the steepness of the
+> point, but it still seems to pick up on larger aggregated beads etc, so I'm
+> not too sure about that part.
+>
+> Neil
+>
+>
+>
+>
+> ------------------------------
+> *From:* Stephan.Preibisch at mdc-berlin.de
+> *Sent:* Aug 25, 2016 3:41 AM
+> *To:* Tania Mendonca
+> *Cc:* Anthony, Neil; openspim at openspim.org
+>
+> *Subject:* Re: [OpenSPIM] Multiview registration - no inliers
+>
+> Hi Tania,
+>
+> from looking at the data I agree with Anthony, there are some problems
+> which make it hard. But trying different calibrations and not getting a
+> result makes me believe that there is maybe no overlap in between the
+> stacks. You have quite a few of these big blobs apparently, so is it
+> possible that these are different blobs?
+>
+> If you run it again, make the stacks way bigger in z to make sure that
+> there is overlap, increase the laser power, and maybe put some simple auto
+> fluorescent sample in there so it is possible to judge if the calibration
+> is right and if there is overlap.
+>
+> Good luck,
+> Stephan
+> ---
+>
+> Dr. Stephan Preibisch
+> Group Leader
+>
+> Berlin Institute of Medical Systems Biology of the MDC
+> Building 89, 1.08b
+>
+> email: stephan.preibisch at mdc-berlin.de
+> web: http://www.preibisch.net/ <http://fly.mpi-cbg.de/preibisch>
+>
+> On 24 Aug 2016, at 19:49, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+> wrote:
+>
+> Hi Neil
+>
+> Thanks for your email! The stacks should have the voxel size correctly set
+> to 0.235 x 0.235 x 0.750. I'm assuming you've looked at the data on
+> µManager as I'm unfamiliar with the ViewSetup tag that you mention. My
+> system is not quite an OpenSPIM - I use LabView to control and don't have
+> the Picard 4D stage (I use a Piezo for scanning instead).
+>
+> Your manual transform looks about right, the stacks are about 120º apart
+> with the big bead somewhere near the middle. I have tried a few different
+> µbeads and the ones in these stacks are 1µm green beads but as you say they
+> are nowhere near as bright as the big beads. Perhaps I do need to dump the
+> large beads and find something else to try and reconstruct. I've been
+> finding about 400-ish interest points in my stacks- is there a magic number
+> that works for you? I've been imaging to about 100µm depth, how much would
+> you recommend? Don't the stacks start getting too large to handle?
+>
+> Thanks for the tip on the camera noise! I think I'll try again tomorrow
+> with brighter beads, no big beads and larger volumes - I'll let you know
+> how it goes!
+>
+> Best wishes
+> Tania
+>
+> On 24 August 2016 at 17:55, Anthony, Neil <nantho2 at emory.edu> wrote:
+>
+>> Hi Tania,
+>>
+>>
+>> Can I please ask what the z voxel size is?  I see in the test.xml that
+>> you have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup
+>> tag.  When I create a xml from scratch here, setting xy to 0.235 and z to
+>> 1.5 (the smallest on the standard Picard 4D stage) I see each id in the xml
+>> has a size of “0.235 0.235 1.5”.
+>>
+>>
+>>
+>> Stephan, I assume these are the voxel sizes used for the BDV.  Would I be
+>> correct in assuming some more and saying that if only one value is seen
+>> it’s used for xy and z?
+>>
+>>
+>>
+>> …  interlude …  etc. etc.  lalalalala …  coffee etc.
+>>
+>>
+>>
+>> I now see what the problem is.  Well, what some of the problems might be.
+>>
+>>
+>>
+>> I did a manual transform around the y axis and manually overlapped the
+>> big bead.  See attached.  Is this how is should look?  If I have it laid
+>> out correctly I think you have a combination of not enough beads, combined
+>> with not enough overlap of physical volumes given the low number of beads.
+>> On top of that I feel the small bead signal is so low that it’s approaching
+>> the camera noise*.
+>>
+>>
+>>
+>> It is difficult as the big beads are so bright, and you might want to
+>> find a better sample to test with.  I’ve done some testing on spheroids
+>> that are really bright, and I had to swap my 100nm tetra spec beads for
+>> some really bright 1um green beads to be able to get good signal on the
+>> beads and not saturate the sample of interest.
+>>
+>>
+>>
+>> I started with just little beads to figure out the basics, and I take
+>> just sub-res bead data to get my PSF output from the decon too.
+>>
+>>
+>>
+>> Neil
+>>
+>>
+>>
+>>
+>>
+>> * inspect the data stacks with orthogonal view and you’ll see the
+>> vertical lines running down the stack.  For this kind of noise you can run
+>> a few line scans across your beads and noise to get an idea of the
+>> intensity difference and then use remove outliers
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>> *From:* OpenSPIM [mailto:openspim-bounces at openspim.org] *On Behalf Of *Tania
+>> Mendonca
+>> *Sent:* Friday, August 19, 2016 3:31 PM
+>> *To:* Stephan.Preibisch at mdc-berlin.de
+>> *Cc:* openspim at openspim.org
+>> *Subject:* Re: [OpenSPIM] Multiview registration - no inliers
+>>
+>>
+>>
+>> Hi
+>>
+>>
+>>
+>> Just tried it but it still doesn't work.
+>>
+>>
+>>
+>> Thanks
+>>
+>> Tania
+>>
+>>
+>>
+>> On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de <
+>> Stephan.Preibisch at mdc-berlin.de> wrote:
+>>
+>> Hi, I just think that in the beginning when you define your dataset the
+>> pixel sizes were wrong which potentially corrupts the downstream workflow.
+>> Try to start from the very beginning, and define a new dataset and manually
+>> put in the correct calibration. This might just work ...
+>>
+>>
+>>
+>> All the best,
+>>
+>> Stephan
+>>
+>> Sent from my iPhone
+>>
+>>
+>> On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+>> wrote:
+>>
+>> Hi
+>>
+>>
+>>
+>> I've just checked to make sure but yes I have corrected the voxel size on
+>> the image stacks and there shouldn't be a mistake in that. However, your
+>> reply gave me an idea and I did a quick test. I duplicated one of the
+>> images and ran the multiview reconstruction plugin for the two duplicates.
+>> It worked, so it makes me think that there's nothing wrong with the files
+>> themselves and you might be right about the issue being with my voxel
+>> depth. I've referred to SVI's Nyquist calculator to workout my step size,
+>> is there a recommended step size that people use?
+>>
+>>
+>>
+>> Best wishes
+>>
+>> Tania
+>>
+>>
+>>
+>> On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de <
+>> Stephan.Preibisch at mdc-berlin.de> wrote:
+>>
+>> Hi, my first guess would be that your calibration (pixel size is x,y and
+>> z) is wrong ... Can you make sure this is correct when you define your
+>> dataset?
+>>
+>>
+>>
+>> All the best,
+>>
+>> Stephan
+>>
+>>
+>> On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk>
+>> wrote:
+>>
+>> Hi all
+>>
+>>
+>>
+>> Hope your microscopes are aligned and treating you well! I'm sorry if
+>> I've missed this conversation before but I was wondering if any of you have
+>> had similar problems as me with trying to get the Fiji multiview
+>> reconstruction plugin to like my data.
+>>
+>>
+>>
+>> I've tried a range of microspheres - different colours, different sizes
+>> and different concentrations but it never seems to find enough
+>> correspondences between views. I've been primarily experimenting with
+>> interactively detec​​ting interest points. I've tried the presets as well
+>> but with no luck. I've tried to systematically work through various
+>> combinations of sigma and threshold but always end up with 0 inliers.
+>> Registrations always terminates with the following error: "There are no
+>> connected tiles, cannot do an optimization. Quitting."
+>>
+>>
+>>
+>> My home built system doesn't run on µManager and my images are acquired
+>> as .cxd files which I convert to .tifs before processing. I'm attaching
+>> some of my test data -https://drive.google.com/
+>> file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+>>
+>> the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm
+>> beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct
+>> the 10µm beads. I use the same objectives as on the OpenSPIM system (10X
+>> for illumination and 20X for detection), magnification on the system is
+>> 27.7X. The illumination here is 473nm and detection at 520nm.​​
+>>
+>>
+>>
+>> A log file has been included in the zip file to give you an idea of what
+>> I've been trying.
+>>
+>>
+>>
+>> I hope I'm just missing a trick somewhere. Any help would be greatly
+>> appreciated!
+>>
+>>
+>>
+>> Best wishes
+>>
+>> Tania
+>>
+>> --
+>>
+>> -------------------------
+>>
+>> Tania Mendonca
+>>
+>> Doctoral Research Student
+>>
+>> University of Sheffield
+>>
+>> S10 2TN
+>>
+>> -------------------------
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>>
+>>
+>>
+>>
+>> --
+>>
+>> -------------------------
+>>
+>> Tania Mendonca
+>>
+>> Doctoral Research Student
+>>
+>> University of Sheffield
+>>
+>> S10 2TN
+>>
+>> -------------------------
+>>
+>>
+>>
+>>
+>>
+>> --
+>>
+>> -------------------------
+>>
+>> Tania Mendonca
+>>
+>> Doctoral Research Student
+>>
+>> University of Sheffield
+>>
+>> S10 2TN
+>>
+>> -------------------------
+>>
+>> ------------------------------
+>>
+>> This e-mail message (including any attachments) is for the sole use of
+>> the intended recipient(s) and may contain confidential and privileged
+>> information. If the reader of this message is not the intended
+>> recipient, you are hereby notified that any dissemination, distribution
+>> or copying of this message (including any attachments) is strictly
+>> prohibited.
+>>
+>> If you have received this message in error, please contact
+>> the sender by reply e-mail message and destroy all copies of the
+>> original message (including attachments).
+>>
+>
+>
+>
+> --
+> -------------------------
+> Tania Mendonca
+> Doctoral Research Student
+> University of Sheffield
+> S10 2TN
+> -------------------------
+>
+>
+>
+
+
+-- 
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160829/5b724657/attachment-0001.html>
+
+From Stephan.Preibisch at mdc-berlin.de  Mon Aug 29 12:43:24 2016
+From: Stephan.Preibisch at mdc-berlin.de (Stephan.Preibisch at mdc-berlin.de)
+Date: Mon, 29 Aug 2016 17:43:24 +0000
+Subject: [OpenSPIM] Multiview registration - no inliers
+In-Reply-To: <CAC9TZAOKWuHVXQU8y976V0nU+MWqV+BxgzFtbAzdkB3sfXERdA@mail.gmail.com>
+References: <CAC9TZAMCTB6ZD75Z+SnEonWKddnCHAd6i02zi079Bn4OoR6Wjg@mail.gmail.com>
+ <9D00EE08-402E-4957-8525-E6E6B34FDBBA@mdc-berlin.de>
+ <CAC9TZANkU7PPZmqcPwUKAOajCW1bMCM82zbU8j3hJMWukzg=cw@mail.gmail.com>
+ <40D989EA-7A20-40E3-BE18-996580B3D8AD@mdc-berlin.de>
+ <CAC9TZAPNNWu8ErgRZqQoUcKv1Gnerjje2zwNVXCcD7JeaBu=7A@mail.gmail.com>
+ <CO2PR05MB2520B2FC85B754982862F45CECEA0@CO2PR05MB2520.namprd05.prod.outlook.com>
+ <CAC9TZAM0HVA1pqf2P5+mJSFp4aQr=HLPQUmQEUbf7y40yREA6w@mail.gmail.com>
+ <FC5E25CF-01E2-4127-81AA-AE5CA059E598@mdc-berlin.de>
+ <2543231b-eb71-4561-b855-6b7e8af44f01@emory.edu>,
+ <CAC9TZAOKWuHVXQU8y976V0nU+MWqV+BxgzFtbAzdkB3sfXERdA@mail.gmail.com>
+Message-ID: <E19FDE6C-0B56-4BFA-8BC5-DADC60058803@mdc-berlin.de>
+
+Great! I will be there on Wednesday giving a course on Multiview reconstruction...hope to see you around!
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Aug 29, 2016, at 16:29, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi Neil and Stephan
+
+Thanks for the tips and all the help! I tried again with a higher concentration of the 1µm beads, got rid of the bright big beads and increased the z acquisition distance to increase the region of overlap and was finally successful!
+
+I hope to meet many of you OpenSPIMmers in Sheffield this week!
+
+Best wishes
+Tania
+
+On 25 August 2016 at 15:08, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+Hi Tania,
+
+I'd agree with Stephan on the larger z stacks. I usually take >300 um, but it kinda depends on the field of view of the camera, as at some point you're taking images in an area that will no longer overlap.
+
+400 interest points would be sufficient if they all overlapped, but more are required in general. I believe Stephan's articles suggest 1000-2000 to get the best results. All depends on overlap percentage.
+
+When defining the beads I aim to use a sigma and threshold that picks out the peak of the bead if possible. Stephan, can I ask if it's detrimental when the threshold is too low and I'm identifying the same bead on many z planes? Also, I assume the sigma value determines the steepness of the point, but it still seems to pick up on larger aggregated beads etc, so I'm not too sure about that part.
+
+Neil
+
+
+
+
+________________________________
+From: Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>
+Sent: Aug 25, 2016 3:41 AM
+To: Tania Mendonca
+Cc: Anthony, Neil; openspim at openspim.org<mailto:openspim at openspim.org>
+
+Subject: Re: [OpenSPIM] Multiview registration - no inliers
+
+Hi Tania,
+
+from looking at the data I agree with Anthony, there are some problems which make it hard. But trying different calibrations and not getting a result makes me believe that there is maybe no overlap in between the stacks. You have quite a few of these big blobs apparently, so is it possible that these are different blobs?
+
+If you run it again, make the stacks way bigger in z to make sure that there is overlap, increase the laser power, and maybe put some simple auto fluorescent sample in there so it is possible to judge if the calibration is right and if there is overlap.
+
+Good luck,
+Stephan
+---
+
+Dr. Stephan Preibisch
+Group Leader
+
+Berlin Institute of Medical Systems Biology of the MDC
+Building 89, 1.08b
+
+email: stephan.preibisch at mdc-berlin.de<mailto:stephan.preibisch at mdc-berlin.de>
+web: http://www.preibisch.net/<http://fly.mpi-cbg.de/preibisch>
+
+On 24 Aug 2016, at 19:49, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+
+Hi Neil
+
+Thanks for your email! The stacks should have the voxel size correctly set to 0.235 x 0.235 x 0.750. I'm assuming you've looked at the data on µManager as I'm unfamiliar with the ViewSetup tag that you mention. My system is not quite an OpenSPIM - I use LabView to control and don't have the Picard 4D stage (I use a Piezo for scanning instead).
+
+Your manual transform looks about right, the stacks are about 120º apart with the big bead somewhere near the middle. I have tried a few different µbeads and the ones in these stacks are 1µm green beads but as you say they are nowhere near as bright as the big beads. Perhaps I do need to dump the large beads and find something else to try and reconstruct. I've been finding about 400-ish interest points in my stacks- is there a magic number that works for you? I've been imaging to about 100µm depth, how much would you recommend? Don't the stacks start getting too large to handle?
+
+Thanks for the tip on the camera noise! I think I'll try again tomorrow with brighter beads, no big beads and larger volumes - I'll let you know how it goes!
+
+Best wishes
+Tania
+
+On 24 August 2016 at 17:55, Anthony, Neil <nantho2 at emory.edu<mailto:nantho2 at emory.edu>> wrote:
+Hi Tania,
+
+Can I please ask what the z voxel size is?  I see in the test.xml that you have a voxel size of 0.235 in xy and z for id 0,1,2 in the ViewSetup tag.  When I create a xml from scratch here, setting xy to 0.235 and z to 1.5 (the smallest on the standard Picard 4D stage) I see each id in the xml has a size of “0.235 0.235 1.5”.
+
+Stephan, I assume these are the voxel sizes used for the BDV.  Would I be correct in assuming some more and saying that if only one value is seen it’s used for xy and z?
+
+…  interlude …  etc. etc.  lalalalala …  coffee etc.
+
+I now see what the problem is.  Well, what some of the problems might be.
+
+I did a manual transform around the y axis and manually overlapped the big bead.  See attached.  Is this how is should look?  If I have it laid out correctly I think you have a combination of not enough beads, combined with not enough overlap of physical volumes given the low number of beads.  On top of that I feel the small bead signal is so low that it’s approaching the camera noise*.
+
+It is difficult as the big beads are so bright, and you might want to find a better sample to test with.  I’ve done some testing on spheroids that are really bright, and I had to swap my 100nm tetra spec beads for some really bright 1um green beads to be able to get good signal on the beads and not saturate the sample of interest.
+
+I started with just little beads to figure out the basics, and I take just sub-res bead data to get my PSF output from the decon too.
+
+Neil
+
+
+* inspect the data stacks with orthogonal view and you’ll see the vertical lines running down the stack.  For this kind of noise you can run a few line scans across your beads and noise to get an idea of the intensity difference and then use remove outliers
+
+
+
+From: OpenSPIM [mailto:openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>] On Behalf Of Tania Mendonca
+Sent: Friday, August 19, 2016 3:31 PM
+To: Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>
+Cc: openspim at openspim.org<mailto:openspim at openspim.org>
+Subject: Re: [OpenSPIM] Multiview registration - no inliers
+
+Hi
+
+Just tried it but it still doesn't work.
+
+Thanks
+Tania
+
+On 19 August 2016 at 20:13, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, I just think that in the beginning when you define your dataset the pixel sizes were wrong which potentially corrupts the downstream workflow. Try to start from the very beginning, and define a new dataset and manually put in the correct calibration. This might just work ...
+
+All the best,
+Stephan
+
+Sent from my iPhone
+
+On Aug 19, 2016, at 21:00, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi
+
+I've just checked to make sure but yes I have corrected the voxel size on the image stacks and there shouldn't be a mistake in that. However, your reply gave me an idea and I did a quick test. I duplicated one of the images and ran the multiview reconstruction plugin for the two duplicates. It worked, so it makes me think that there's nothing wrong with the files themselves and you might be right about the issue being with my voxel depth. I've referred to SVI's Nyquist calculator to workout my step size, is there a recommended step size that people use?
+
+Best wishes
+Tania
+
+On 19 August 2016 at 16:58, Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de> <Stephan.Preibisch at mdc-berlin.de<mailto:Stephan.Preibisch at mdc-berlin.de>> wrote:
+Hi, my first guess would be that your calibration (pixel size is x,y and z) is wrong ... Can you make sure this is correct when you define your dataset?
+
+All the best,
+Stephan
+
+On Aug 19, 2016, at 17:17, Tania Mendonca <tvmendonca1 at sheffield.ac.uk<mailto:tvmendonca1 at sheffield.ac.uk>> wrote:
+Hi all
+
+Hope your microscopes are aligned and treating you well! I'm sorry if I've missed this conversation before but I was wondering if any of you have had similar problems as me with trying to get the Fiji multiview reconstruction plugin to like my data.
+
+I've tried a range of microspheres - different colours, different sizes and different concentrations but it never seems to find enough correspondences between views. I've been primarily experimenting with interactively detec​​ting interest points. I've tried the presets as well but with no luck. I've tried to systematically work through various combinations of sigma and threshold but always end up with 0 inliers. Registrations always terminates with the following error: "There are no connected tiles, cannot do an optimization. Quitting."
+
+My home built system doesn't run on µManager and my images are acquired as .cxd files which I convert to .tifs before processing. I'm attaching some of my test data -https://drive.google.com/file/d/0B-he-_wcys_-aUtRZ0pidFhyUlk/view?usp=sharing
+the sample here is 1µm yellow-green beads (1:4000 dilution) and 10µm beads (1:50 dilution) with the idea of using the 1µm beads to reconstruct the 10µm beads. I use the same objectives as on the OpenSPIM system (10X for illumination and 20X for detection), magnification on the system is 27.7X. The illumination here is 473nm and detection at 520nm.​​
+
+A log file has been included in the zip file to give you an idea of what I've been trying.
+
+I hope I'm just missing a trick somewhere. Any help would be greatly appreciated!
+
+Best wishes
+Tania
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+________________________________
+
+This e-mail message (including any attachments) is for the sole use of
+the intended recipient(s) and may contain confidential and privileged
+information. If the reader of this message is not the intended
+recipient, you are hereby notified that any dissemination, distribution
+or copying of this message (including any attachments) is strictly
+prohibited.
+
+If you have received this message in error, please contact
+the sender by reply e-mail message and destroy all copies of the
+original message (including attachments).
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+
+
+
+
+--
+-------------------------
+Tania Mendonca
+Doctoral Research Student
+University of Sheffield
+S10 2TN
+-------------------------
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20160829/ff8506ef/attachment-0001.html>
+

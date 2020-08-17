@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] An error occured when click the &quot;Acquire SPIM image&quot;	menu button
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20An%20error%20occured%20when%20click%20the%20%22Acquire%20SPIM%20image%22%0A%09menu%20button&In-Reply-To=%3Ctencent_45A971427E3D675750332F05%40qq.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001763.html">
+   <LINK REL="Next"  HREF="001765.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] An error occured when click the &quot;Acquire SPIM image&quot;	menu button</H1>
+    <B>政</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20An%20error%20occured%20when%20click%20the%20%22Acquire%20SPIM%20image%22%0A%09menu%20button&In-Reply-To=%3Ctencent_45A971427E3D675750332F05%40qq.com%3E"
+       TITLE="[OpenSPIM] An error occured when click the &quot;Acquire SPIM image&quot;	menu button">709314090 at qq.com
+       </A><BR>
+    <I>Fri Aug 21 06:12:38 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001763.html">[OpenSPIM] Fwd: [micro-manager-general] New release: Micro-Manager	1.4.22
+</A></li>
+        <LI>Next message: <A HREF="001765.html">[OpenSPIM] 回复： An error occured when click the &quot;Acquire SPIM image&quot;menu button
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1764">[ date ]</a>
+              <a href="thread.html#1764">[ thread ]</a>
+              <a href="subject.html#1764">[ subject ]</a>
+              <a href="author.html#1764">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, all!
+   Sorry to disturb you, but I met some troubles.
+   When I clicked the  &quot;Acquire SPIM image&quot; menu button to open the SPIM acquired program, there was no reaction. I closed fiji and tried many times and the results were the same. So, I checked the corelog and found some errors.
+  The log from the CoreLogs folder shows that :Error occurred in device Omicron: Error in device &quot;Omicron&quot;: Duplicate property names are not allowed: Workinghours [h] (4).  detail error log is at the bottom. 
+  What cofused me is that the SPIM program could be open last week, and I had done nothing with the software until now.
+  The program is the lastest version.
+
+
+best wish!
+
+
+Detail error log:
+
+
+2015-08-21T17:22:41.751288 tid5908 [IFO,App] Plugin command: Acquire SPIM image
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize 6 devices
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device COM4
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Did initialize device HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Default camera set to HamamatsuHam_DCAM
+2015-08-21T17:22:41.758288 tid5908 [IFO,Core] Will initialize device Omicron
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device Omicron: Error in device &quot;Omicron&quot;: Duplicate property names are not allowed: Workinghours [h] (4)
+2015-08-21T17:22:42.824349 tid5908 [ERR,Core] Error occurred in device setPixelSizeConfig: Device error encountered.
+2015-08-21T17:22:42.824349 tid5908 [IFO,App] Couldn't define uncalibrated pixel size: 
+                                   [       ] java.lang.Exception: Error in device &quot;Omicron&quot;: Duplicate property names are not allowed:  (4) in Thread[AWT-EventQueue-0,6,main]
+                                   [       ]   at mmcorej.MMCoreJJNI.CMMCore_setPixelSizeConfig(Native Method)
+                                   [       ]   at mmcorej.CMMCore.setPixelSizeConfig(CMMCore.java:761)
+                                   [       ]   at spim.SPIMAcquisition.ensurePixelResolution(SPIMAcquisition.java:268)
+                                   [       ]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:225)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+                                   [       ]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+                                   [       ]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+                                   [       ]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+                                   [       ]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+                                   [       ]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+                                   [       ]   at javax.swing.AbstractButton.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+                                   [       ]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+                                   [       ]   at java.awt.Component.processMouseEvent(Unknown Source)
+                                   [       ]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.processEvent(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+                                   [       ]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.Component.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.access$000(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$1.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.awt.EventQueue$2.run(Unknown Source)
+                                   [       ]   at java.security.AccessController.doPrivileged(Native Method)
+                                   [       ]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+                                   [       ]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                   [       ]   at java.awt.EventDispatchThread.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] Uncaught exception in AWT/Swing event dispatch thread:
+2015-08-21T17:22:42.855351 tid5908 [IFO,App] java.lang.IllegalArgumentException: invalid range properties
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultBoundedRangeModel.&lt;init&gt;(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.&lt;init&gt;(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JSlider.&lt;init&gt;(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SteppedSlider.&lt;init&gt;(SteppedSlider.java:63)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition$20.&lt;init&gt;(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.makeStageSlider(SPIMAcquisition.java:1061)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.initUI(SPIMAcquisition.java:372)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at spim.SPIMAcquisition.show(SPIMAcquisition.java:226)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.displayPlugin(MMStudioMainFrame.java:2466)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame.access$3000(MMStudioMainFrame.java:176)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.MMStudioMainFrame$49.run(MMStudioMainFrame.java:2431)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at org.micromanager.utils.GUIUtils$3.actionPerformed(GUIUtils.java:303)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.AbstractButton.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at javax.swing.JComponent.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.processEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Container.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Window.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.Component.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.access$000(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$1.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue$2.run(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessController.doPrivileged(Native Method)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.security.AccessControlContext$1.doIntersectionPrivilege(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventQueue.dispatchEvent(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2015-08-21T17:22:42.855351 tid5908 [IFO,App]   at java.awt.EventDispatchThread.run(Unknown Source)
+
+
+
+
+
+
+
+------------------
+Zheng Huang
+State Key Laboratory of High Field Laser Physics, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences, Shanghai 201800, China
+Address: Qinghe Road No. 390, Jiading District, Shanghai 201800, China 
+Tel: 13120836853
+E-mail: <A HREF="http://openspim.org/mailman/listinfo/openspim">709314090 at qq.com</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150821/d7692212/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150821/d7692212/attachment-0002.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001763.html">[OpenSPIM] Fwd: [micro-manager-general] New release: Micro-Manager	1.4.22
+</A></li>
+	<LI>Next message: <A HREF="001765.html">[OpenSPIM] 回复： An error occured when click the &quot;Acquire SPIM image&quot;menu button
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1764">[ date ]</a>
+              <a href="thread.html#1764">[ thread ]</a>
+              <a href="subject.html#1764">[ subject ]</a>
+              <a href="author.html#1764">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

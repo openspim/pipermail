@@ -1,0 +1,334 @@
+From m.pawlowska at nencki.gov.pl  Mon Apr  3 04:59:31 2017
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 03 Apr 2017 11:59:31 +0200
+Subject: [OpenSPIM] light sheet characterization in solvents (BABB etc)
+Message-ID: <op.yx351h2bahhlbl@pc507-99ff.ibd>
+
+Hi,
+
+I know that most people here use samples in water, but I don't know where  
+else to ask, so:
+
+have you ever tried to characterize the light sheet thickness not in  
+water, but BABB (or other solvent)? Will it damage a silver mirror? Is  
+there any other way?
+
+We prepared an agarose sample with fluorescent beads and dehydrated it  
+like in this paper:  
+https://www.jove.com/video/50696/micron-scale-resolution-optical-tomography-entire-mouse-brains-with
+
+and the agarose stayed in one piece, but there is very little signal, so  
+I'm afraid that the beads might have dissolved.
+
+Regards,
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From claire.lionnet at ens-lyon.fr  Tue Apr  4 04:10:32 2017
+From: claire.lionnet at ens-lyon.fr (Claire Lionnet)
+Date: Tue, 4 Apr 2017 11:10:32 +0200
+Subject: [OpenSPIM] light sheet characterization in solvents (BABB etc)
+In-Reply-To: <op.yx351h2bahhlbl@pc507-99ff.ibd>
+References: <op.yx351h2bahhlbl@pc507-99ff.ibd>
+Message-ID: <6ddb035c-0646-ae67-9539-326aca517cb5@ens-lyon.fr>
+
+Hi Monika,
+
+Le 03/04/2017 à 11:59, Monika Pawłowska a écrit :
+> Hi,
+>
+> I know that most people here use samples in water, but I don't know 
+> where else to ask, so:
+>
+> have you ever tried to characterize the light sheet thickness not in 
+> water, but BABB (or other solvent)? Will it damage a silver mirror? Is 
+> there any other way?
+I don't use cleared tissue myself, and I don't know what BABB could do 
+to a silver mirror, but you could simply use a glass coverslip instead : 
+it requires more laser power/less attenuation than with a mirror, but 
+the reflection of the lightsheet is strong enough. And it's cheaper !
+
+Cheers,
+
+Claire
+
+
+-- 
+Claire LIONNET
+PLATIM
+US8 / UMS3444 BioSciences Gerland - Lyon Sud
+http://www.sfr-biosciences.fr/plateformes/Phenotypage-cellulaire/PLATIM
+
+
+From m.pawlowska at nencki.gov.pl  Tue Apr  4 04:34:21 2017
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Tue, 04 Apr 2017 11:34:21 +0200
+Subject: [OpenSPIM] light sheet characterization in solvents (BABB etc)
+In-Reply-To: <6ddb035c-0646-ae67-9539-326aca517cb5@ens-lyon.fr>
+References: <op.yx351h2bahhlbl@pc507-99ff.ibd>
+ <6ddb035c-0646-ae67-9539-326aca517cb5@ens-lyon.fr>
+Message-ID: <op.yx5zjjc0ahhlbl@pc507-99ff.ibd>
+
+Hi Claire!
+
+Thanks for the tip, but actually I already tried the glass. However, the  
+double reflection from both surfaces makes automatic analysis (ie fitting  
+curves to extract width) more difficult and besides I am getting some  
+weirdness in the results, so I was wondering if it can be caused by the  
+glass being uneven or something like that.
+
+Regards,
+Monika
+
+W dniu .04.2017 o 11:10 Claire Lionnet <claire.lionnet at ens-lyon.fr> pisze:
+
+> Hi Monika,
+>
+> Le 03/04/2017 à 11:59, Monika Pawłowska a écrit :
+>> Hi,
+>>
+>> I know that most people here use samples in water, but I don't know  
+>> where else to ask, so:
+>>
+>> have you ever tried to characterize the light sheet thickness not in  
+>> water, but BABB (or other solvent)? Will it damage a silver mirror? Is  
+>> there any other way?
+> I don't use cleared tissue myself, and I don't know what BABB could do  
+> to a silver mirror, but you could simply use a glass coverslip instead :  
+> it requires more laser power/less attenuation than with a mirror, but  
+> the reflection of the lightsheet is strong enough. And it's cheaper !
+>
+> Cheers,
+>
+> Claire
+>
+>
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
+From S.Hoehn at damtp.cam.ac.uk  Thu Apr  6 11:31:03 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Thu, 06 Apr 2017 17:31:03 +0100
+Subject: [OpenSPIM] acquisition error
+Message-ID: <3a630edfa2c819ebd131029ee1807c13@cam.ac.uk>
+
+Dear All,
+
+when I try to acquire a stack with the OpenSPIM software I get the error 
+below (it used to work before). I updated Fiji, but that didn't fix it. 
+Has anyone seen this and knows what to do?
+
+Thanks a lot!
+
+Best wishes,
+Stephanie
+
+
+
+Unable to retrieve constructor for class 
+loci.formats.services.OMEXMLServiceImpl
+	at 
+loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:190)
+	at 
+loci.common.services.ServiceFactory.getInstance(ServiceFactory.java:161)
+	at spim.io.OMETIFFHandler.<init>(OMETIFFHandler.java:73)
+	at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1982)
+	at 
+javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at 
+javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at 
+javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at 
+javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at 
+javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6505)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3320)
+	at java.awt.Component.processEvent(Component.java:6270)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4861)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at 
+java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at 
+java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at 
+java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at 
+java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at 
+java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+	at 
+java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at 
+java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at 
+java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at 
+java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at 
+java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NoClassDefFoundError: 
+loci/common/xml/XMLTools$SchemaReader
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at 
+loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:185)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: 
+loci.common.xml.XMLTools$SchemaReader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 42 more
+
+
+
+From S.Hoehn at damtp.cam.ac.uk  Fri Apr  7 07:20:25 2017
+From: S.Hoehn at damtp.cam.ac.uk (Dr S. Hoehn)
+Date: Fri, 07 Apr 2017 13:20:25 +0100
+Subject: [OpenSPIM] acquisition error
+In-Reply-To: <3a630edfa2c819ebd131029ee1807c13@cam.ac.uk>
+References: <3a630edfa2c819ebd131029ee1807c13@cam.ac.uk>
+Message-ID: <be881187e4f91606b0c1dbeabc4065b6@cam.ac.uk>
+
+I found this entry in the ImageJ Forum suggesting to disable the 
+BioFormats update site in the ImageJ updater. I did that and it fixed 
+the acquisition problem.
+
+http://imagej.1557.x6.nabble.com/Bio-Formats-problem-td5017863.html
+
+
+
+On 2017-04-06 17:31, Dr S. Hoehn wrote:
+> Dear All,
+> 
+> when I try to acquire a stack with the OpenSPIM software I get the
+> error below (it used to work before). I updated Fiji, but that didn't
+> fix it. Has anyone seen this and knows what to do?
+> 
+> Thanks a lot!
+> 
+> Best wishes,
+> Stephanie
+> 
+> 
+> 
+> Unable to retrieve constructor for class 
+> loci.formats.services.OMEXMLServiceImpl
+> at 
+> loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:190)
+> at 
+> loci.common.services.ServiceFactory.getInstance(ServiceFactory.java:161)
+> at spim.io.OMETIFFHandler.<init>(OMETIFFHandler.java:73)
+> at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1982)
+> at 
+> javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+> at 
+> javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+> at
+> javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+> at 
+> javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+> at
+> javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+> at java.awt.Component.processMouseEvent(Component.java:6505)
+> at javax.swing.JComponent.processMouseEvent(JComponent.java:3320)
+> at java.awt.Component.processEvent(Component.java:6270)
+> at java.awt.Container.processEvent(Container.java:2229)
+> at java.awt.Component.dispatchEventImpl(Component.java:4861)
+> at java.awt.Container.dispatchEventImpl(Container.java:2287)
+> at java.awt.Component.dispatchEvent(Component.java:4687)
+> at 
+> java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+> at 
+> java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+> at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+> at java.awt.Container.dispatchEventImpl(Container.java:2273)
+> at java.awt.Window.dispatchEventImpl(Window.java:2719)
+> at java.awt.Component.dispatchEvent(Component.java:4687)
+> at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+> at java.awt.EventQueue.access$200(EventQueue.java:103)
+> at java.awt.EventQueue$3.run(EventQueue.java:694)
+> at java.awt.EventQueue$3.run(EventQueue.java:692)
+> at java.security.AccessController.doPrivileged(Native Method)
+> at
+> java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+> at
+> java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+> at java.awt.EventQueue$4.run(EventQueue.java:708)
+> at java.awt.EventQueue$4.run(EventQueue.java:706)
+> at java.security.AccessController.doPrivileged(Native Method)
+> at
+> java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+> at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+> at
+> java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+> at
+> java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+> at
+> java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+> at 
+> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+> at 
+> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+> at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+> Caused by: java.lang.NoClassDefFoundError: 
+> loci/common/xml/XMLTools$SchemaReader
+> at java.lang.Class.forName0(Native Method)
+> at java.lang.Class.forName(Class.java:190)
+> at 
+> loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:185)
+> ... 39 more
+> Caused by: java.lang.ClassNotFoundException:
+> loci.common.xml.XMLTools$SchemaReader
+> at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+> at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+> at java.security.AccessController.doPrivileged(Native Method)
+> at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+> at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+> at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+> at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+> ... 42 more
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+

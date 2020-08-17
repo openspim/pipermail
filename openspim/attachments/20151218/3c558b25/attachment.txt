@@ -1,0 +1,421 @@
+cd C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition; "JAVA_HOME=C:\\Program Files\\Java\\jdk1.7.0_80" cmd /c "\"\"C:\\Program Files\\NetBeans 8.1\\java\\maven\\bin\\mvn.bat\" -Dexec.args=\"-classpath %classpath spim.SPIMAcquisition\" -Dexec.executable=\"C:\\Program Files\\Java\\jdk1.7.0_80\\bin\\java.exe\" -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 --debug --errors -e -X org.codehaus.mojo:exec-maven-plugin:1.2.1:exec\""
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 08:51:28-0500)
+Maven home: C:\Program Files\NetBeans 8.1\java\maven
+Java version: 1.7.0_80, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.7.0_80\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
+Populating class realm maven.ext
+  Included C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar
+Error stacktraces are turned on.
+Reading global settings from C:\Program Files\NetBeans 8.1\java\maven\conf\settings.xml
+Reading user settings from C:\Users\Admin\.m2\settings.xml
+Using local repository at C:\Users\Admin\.m2\repository
+Using manager EnhancedLocalRepositoryManager with priority 10 for C:\Users\Admin\.m2\repository
+Scanning for projects...
+org.apache.maven.wagon:wagon-webdav-jackrabbit:jar:1.0:
+   org.apache.maven.wagon:wagon-http-shared:jar:1.0:compile
+      commons-httpclient:commons-httpclient:jar:3.1:compile
+         commons-codec:commons-codec:jar:1.2:compile
+      commons-logging:commons-logging:jar:1.1.1:compile
+      commons-io:commons-io:jar:2.0.1:compile
+      org.jsoup:jsoup:jar:1.6.1:compile
+   org.apache.jackrabbit:jackrabbit-webdav:jar:1.5.0:compile
+      org.apache.jackrabbit:jackrabbit-jcr-commons:jar:1.5.0:compile
+      org.slf4j:slf4j-api:jar:1.5.3:compile
+   org.slf4j:slf4j-nop:jar:1.5.3:runtime
+   org.apache.maven.wagon:wagon-provider-api:jar:1.0:compile
+      org.codehaus.plexus:plexus-utils:jar:1.4.2:compile
+Created new class realm maven.api
+Importing foreign packages into class realm maven.api
+  Imported: org.apache.maven.wagon.events < maven.ext
+  Imported: org.sonatype.aether.transfer < maven.ext
+  Imported: org.apache.maven.exception < maven.ext
+  Imported: org.sonatype.aether.metadata < maven.ext
+  Imported: org.codehaus.plexus.util.xml.Xpp3Dom < maven.ext
+  Imported: org.sonatype.aether.collection < maven.ext
+  Imported: org.sonatype.aether.version < maven.ext
+  Imported: org.apache.maven.monitor < maven.ext
+  Imported: org.apache.maven.wagon.repository < maven.ext
+  Imported: org.apache.maven.repository < maven.ext
+  Imported: org.apache.maven.wagon.resource < maven.ext
+  Imported: org.codehaus.plexus.logging < maven.ext
+  Imported: org.apache.maven.profiles < maven.ext
+  Imported: org.sonatype.aether.repository < maven.ext
+  Imported: org.apache.maven.classrealm < maven.ext
+  Imported: org.apache.maven.execution < maven.ext
+  Imported: org.sonatype.aether.artifact < maven.ext
+  Imported: org.sonatype.aether.spi < maven.ext
+  Imported: org.apache.maven.reporting < maven.ext
+  Imported: org.apache.maven.usability < maven.ext
+  Imported: org.codehaus.plexus.container < maven.ext
+  Imported: org.codehaus.plexus.component < maven.ext
+  Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < maven.ext
+  Imported: org.apache.maven.wagon.authentication < maven.ext
+  Imported: org.apache.maven.lifecycle < maven.ext
+  Imported: org.codehaus.plexus.classworlds < maven.ext
+  Imported: org.sonatype.aether.graph < maven.ext
+  Imported: org.sonatype.aether.* < maven.ext
+  Imported: org.apache.maven.settings < maven.ext
+  Imported: org.codehaus.classworlds < maven.ext
+  Imported: org.sonatype.aether.impl < maven.ext
+  Imported: org.apache.maven.wagon.* < maven.ext
+  Imported: org.apache.maven.toolchain < maven.ext
+  Imported: org.sonatype.aether.deployment < maven.ext
+  Imported: org.apache.maven.wagon.observers < maven.ext
+  Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < maven.ext
+  Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < maven.ext
+  Imported: org.apache.maven.configuration < maven.ext
+  Imported: org.apache.maven.cli < maven.ext
+  Imported: org.sonatype.aether.installation < maven.ext
+  Imported: org.codehaus.plexus.context < maven.ext
+  Imported: org.apache.maven.wagon.authorization < maven.ext
+  Imported: org.apache.maven.project < maven.ext
+  Imported: org.apache.maven.rtinfo < maven.ext
+  Imported: org.codehaus.plexus.lifecycle < maven.ext
+  Imported: org.codehaus.plexus.configuration < maven.ext
+  Imported: org.apache.maven.artifact < maven.ext
+  Imported: org.apache.maven.model < maven.ext
+  Imported: org.apache.maven.* < maven.ext
+  Imported: org.apache.maven.wagon.proxy < maven.ext
+  Imported: org.sonatype.aether.resolution < maven.ext
+  Imported: org.apache.maven.plugin < maven.ext
+  Imported: org.codehaus.plexus.* < maven.ext
+  Imported: org.codehaus.plexus.personality < maven.ext
+Populating class realm maven.api
+Created new class realm extension>org.apache.maven.wagon:wagon-webdav-jackrabbit:1.0
+Importing foreign packages into class realm extension>org.apache.maven.wagon:wagon-webdav-jackrabbit:1.0
+  Imported:  < maven.api
+Populating class realm extension>org.apache.maven.wagon:wagon-webdav-jackrabbit:1.0
+  Included: org.apache.maven.wagon:wagon-webdav-jackrabbit:jar:1.0
+  Included: org.apache.maven.wagon:wagon-http-shared:jar:1.0
+  Included: commons-httpclient:commons-httpclient:jar:3.1
+  Included: commons-codec:commons-codec:jar:1.2
+  Included: commons-logging:commons-logging:jar:1.1.1
+  Included: commons-io:commons-io:jar:2.0.1
+  Included: org.jsoup:jsoup:jar:1.6.1
+  Included: org.apache.jackrabbit:jackrabbit-webdav:jar:1.5.0
+  Included: org.apache.jackrabbit:jackrabbit-jcr-commons:jar:1.5.0
+  Included: org.slf4j:slf4j-api:jar:1.5.3
+  Included: org.slf4j:slf4j-nop:jar:1.5.3
+  Included: org.codehaus.plexus:plexus-utils:jar:1.4.2
+Extension realms for project org.openspim:SPIMAcquisition:jar:1.0.1-SNAPSHOT: [ClassRealm[extension>org.apache.maven.wagon:wagon-webdav-jackrabbit:1.0, parent: sun.misc.Launcher$AppClassLoader@1c8825a5]]
+Created new class realm project>org.openspim:SPIMAcquisition:1.0.1-SNAPSHOT
+Populating class realm project>org.openspim:SPIMAcquisition:1.0.1-SNAPSHOT
+Looking up lifecyle mappings for packaging jar from ClassRealm[project>org.openspim:SPIMAcquisition:1.0.1-SNAPSHOT, parent: ClassRealm[maven.api, parent: null]]
+=== REACTOR BUILD PLAN ================================================
+Project: org.openspim:SPIMAcquisition:jar:1.0.1-SNAPSHOT
+Tasks:   [org.codehaus.mojo:exec-maven-plugin:1.2.1:exec]
+Style:   Regular
+=======================================================================
+                                                                        
+------------------------------------------------------------------------
+Building SPIMAcquisition 1.0.1-SNAPSHOT
+------------------------------------------------------------------------
+Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+Lifecycle clean -> [pre-clean, clean, post-clean]
+Lifecycle site -> [pre-site, site, post-site, site-deploy]
+=== PROJECT BUILD PLAN ================================================
+Project:       org.openspim:SPIMAcquisition:1.0.1-SNAPSHOT
+Dependencies (collect): []
+Dependencies (resolve): [test]
+Repositories (dependencies): [imagej.releases (http://maven.imagej.net/content/groups/public, releases+snapshots), fiji.releases (http://dev.loci.wisc.edu/maven2/releases, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+Repositories (plugins)     : [central (http://repo.maven.apache.org/maven2, releases)]
+-----------------------------------------------------------------------
+Goal:          org.codehaus.mojo:exec-maven-plugin:1.2.1:exec (default-cli)
+Style:         Regular
+Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <classpathScope default-value="runtime">${exec.classpathScope}</classpathScope>
+  <commandlineArgs>${exec.args}</commandlineArgs>
+  <executable>${exec.executable}</executable>
+  <longClasspath default-value="false">${exec.longClasspath}</longClasspath>
+  <outputFile>${exec.outputFile}</outputFile>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${skip}</skip>
+  <sourceRoot>${sourceRoot}</sourceRoot>
+  <testSourceRoot>${testSourceRoot}</testSourceRoot>
+  <workingDirectory>${exec.workingdir}</workingDirectory>
+</configuration>
+=======================================================================
+Could not find metadata org.micromanager:MMCoreJ:1.4.23-SNAPSHOT/maven-metadata.xml in local (C:\Users\Admin\.m2\repository)
+Skipped remote update check for org.micromanager:MMCoreJ:1.4.23-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+Failure to find org.micromanager:MMCoreJ:1.4.23-SNAPSHOT/maven-metadata.xml in http://dev.loci.wisc.edu/maven2/releases was cached in the local repository, resolution will not be reattempted until the update interval of fiji.releases has elapsed or updates are forced
+Could not find metadata org.micromanager:MMJ_:1.4.23-SNAPSHOT/maven-metadata.xml in local (C:\Users\Admin\.m2\repository)
+Skipped remote update check for org.micromanager:MMJ_:1.4.23-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+Failure to find org.micromanager:MMJ_:1.4.23-SNAPSHOT/maven-metadata.xml in http://dev.loci.wisc.edu/maven2/releases was cached in the local repository, resolution will not be reattempted until the update interval of fiji.releases has elapsed or updates are forced
+org.openspim:SPIMAcquisition:jar:1.0.1-SNAPSHOT
+   ome:formats-api:jar:5.1.2:compile
+      org.slf4j:slf4j-api:jar:1.7.6:compile
+   ome:formats-common:jar:5.1.2:compile
+      com.esotericsoftware.kryo:kryo:jar:2.24.0:compile
+         com.esotericsoftware.minlog:minlog:jar:1.2:compile
+         org.objenesis:objenesis:jar:2.1:compile
+      joda-time:joda-time:jar:2.3:compile (version managed from 2.2 by org.scijava:pom-scijava:8.5.0)
+      ch.qos.logback:logback-core:jar:1.1.1:compile
+      ch.qos.logback:logback-classic:jar:1.1.1:compile
+   ome:formats-gpl:jar:5.1.2:compile
+      ome:mdbtools-java:jar:5.1.2:compile
+      ome:metakit:jar:5.1.2:compile
+      ome:ome-poi:jar:5.1.2:compile
+         commons-logging:commons-logging:jar:1.1.1:compile
+      edu.ucar:netcdf:jar:4.3.19:compile
+      woolz:JWlz:jar:1.4.0:compile
+      ch.systems.cisd:jhdf5:jar:13.06.2:compile
+   ome:ome-xml:jar:5.1.2:compile
+   ome:formats-bsd:jar:5.1.2:compile
+      ome:jai_imageio:jar:5.1.2:compile
+      ome:specification:jar:5.1.2:compile
+      ome:turbojpeg:jar:5.1.2:compile
+      org.scijava:native-lib-loader:jar:2.1.1:compile (version managed from 2.0.2 by org.scijava:pom-scijava:8.5.0)
+      com.jgoodies:jgoodies-forms:jar:1.7.2:compile
+         com.jgoodies:jgoodies-common:jar:1.7.0:compile
+      org.perf4j:perf4j:jar:0.9.13:compile
+      com.drewnoakes:metadata-extractor:jar:2.6.2:compile
+         com.adobe.xmp:xmpcore:jar:5.1.2:compile
+         xerces:xercesImpl:jar:2.8.1:compile
+            xml-apis:xml-apis:jar:1.3.03:compile
+   net.imagej:ij:jar:1.50d:compile
+      com.sun:tools:jar:1.4.2:system
+   org.micromanager:MMCoreJ:jar:1.4.23-SNAPSHOT:compile
+   org.micromanager:MMJ_:jar:1.4.23-SNAPSHOT:compile
+   org.apache.commons:commons-math3:jar:3.4.1:compile
+   io.scif:scifio:jar:0.25.1:compile
+      io.scif:scifio-jai-imageio:jar:1.1.0:compile
+      net.imagej:imagej-common:jar:0.18.0:compile (version managed from 0.17.0 by net.imagej:pom-imagej:13.3.0)
+         edu.ucar:udunits:jar:4.3.18:compile
+      net.imglib2:imglib2:jar:2.4.0:compile
+      org.scijava:scijava-common:jar:2.48.0:compile (version managed from 2.45.0 by org.scijava:pom-scijava:8.5.0)
+         com.googlecode.gentyref:gentyref:jar:1.1.0:compile
+         org.bushe:eventbus:jar:1.4:compile
+      org.mapdb:mapdb:jar:1.0.3:compile
+   io.scif:scifio-bf-compat:jar:2.0.0:compile
+      io.scif:scifio-ome-xml:jar:0.13.0:compile
+         io.scif:scifio-cli:jar:0.3.2:compile
+            args4j:args4j:jar:2.0.25:compile
+   sc.fiji:3D_Viewer:jar:3.1.0:compile
+      sc.fiji:VIB-lib:jar:2.1.0:compile
+         sc.fiji:pal-optimization:jar:2.0.0:compile
+      gov.nist.math:jama:jar:1.0.3:compile
+   net.imglib2:imglib2-algorithm:jar:0.3.3:compile
+      net.imglib2:imglib2-roi:jar:0.4.2:compile (version managed from 0.3.2 by net.imagej:pom-imagej:13.3.0)
+         net.sf.trove4j:trove4j:jar:3.0.3:compile
+      net.imglib2:imglib2-realtransform:jar:2.0.0-beta-29:compile
+   net.imglib2:imglib2-algorithm-fft:jar:0.1.2:compile
+      edu.mines:mines-jtk:jar:20100113:compile
+   net.imglib2:imglib2-algorithm-gpl:jar:0.1.5:compile
+      mpicbg:mpicbg:jar:1.0.2:compile (version managed from 0.6.1 by sc.fiji:pom-fiji:16.2.0)
+   net.imglib2:imglib2-ij:jar:2.0.0-beta-31:compile
+   java3d:vecmath:jar:1.5.2:provided
+   java3d:j3d-core:jar:1.5.2:provided
+   java3d:j3d-core-utils:jar:1.5.2:provided
+   org.beanshell:bsh:jar:2.0b4:test
+   com.google.guava:guava:jar:18.0:test
+   com.fifesoft:rsyntaxtextarea:jar:2.5.6:test
+   org.clojure:clojure:jar:1.6.0:test
+   com.miglayout:miglayout-swing:jar:4.2:test
+      com.miglayout:miglayout-core:jar:4.2:test
+   org.apache.commons:commons-math:jar:2.2:test
+   junit:junit:jar:4.11:test
+      org.hamcrest:hamcrest-core:jar:1.3:test
+   sc.fiji:spim_data:jar:2.0.1:compile
+      org.jdom:jdom2:jar:2.0.6:compile (version managed from 2.0.5 by org.scijava:pom-scijava:8.5.0)
+   sc.fiji:bigdataviewer-core:jar:2.1.0:compile
+      net.imglib2:imglib2-ui:jar:2.0.0-beta-29:compile
+      cisd:jhdf5:jar:14.12.0:compile
+      com.google.code.gson:gson:jar:2.2.4:compile
+
+--- exec-maven-plugin:1.2.1:exec (default-cli) @ SPIMAcquisition ---
+org.codehaus.mojo:exec-maven-plugin:jar:1.2.1:
+   org.apache.maven:maven-toolchain:jar:1.0:compile
+   org.apache.maven:maven-project:jar:2.0.6:compile
+      org.apache.maven:maven-settings:jar:2.0.6:compile
+      org.apache.maven:maven-profile:jar:2.0.6:compile
+      org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+   org.apache.maven:maven-model:jar:2.0.6:compile
+   org.apache.maven:maven-artifact:jar:2.0.6:compile
+   org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+      org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+   org.apache.maven:maven-core:jar:2.0.6:compile
+      org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+      org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+         org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+      org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+      commons-cli:commons-cli:jar:1.0:compile
+      org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+      org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+      org.apache.maven:maven-monitor:jar:2.0.6:compile
+      classworlds:classworlds:jar:1.1:compile
+   org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+   org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:compile
+      junit:junit:jar:3.8.2:test (scope managed from compile) (version managed from 3.8.1)
+   org.apache.commons:commons-exec:jar:1.1:compile
+Created new class realm plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1
+Importing foreign packages into class realm plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1
+  Imported:  < project>org.openspim:SPIMAcquisition:1.0.1-SNAPSHOT
+Populating class realm plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1
+  Included: org.codehaus.mojo:exec-maven-plugin:jar:1.2.1
+  Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+  Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+  Included: commons-cli:commons-cli:jar:1.0
+  Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+  Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+  Included: org.apache.commons:commons-exec:jar:1.1
+  Excluded: org.apache.maven:maven-toolchain:jar:1.0
+  Excluded: org.apache.maven:maven-project:jar:2.0.6
+  Excluded: org.apache.maven:maven-settings:jar:2.0.6
+  Excluded: org.apache.maven:maven-profile:jar:2.0.6
+  Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+  Excluded: org.apache.maven:maven-model:jar:2.0.6
+  Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+  Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+  Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+  Excluded: org.apache.maven:maven-core:jar:2.0.6
+  Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+  Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+  Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+  Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+  Excluded: classworlds:classworlds:jar:1.1
+  Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+  Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+  Excluded: junit:junit:jar:3.8.2
+Configuring mojo org.codehaus.mojo:exec-maven-plugin:1.2.1:exec from plugin realm ClassRealm[plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1, parent: sun.misc.Launcher$AppClassLoader@1c8825a5]
+Configuring mojo 'org.codehaus.mojo:exec-maven-plugin:1.2.1:exec' with basic configurator -->
+  (f) basedir = C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition
+  (f) classpathScope = runtime
+  (f) commandlineArgs = -classpath %classpath spim.SPIMAcquisition
+  (f) executable = C:\Program Files\Java\jdk1.7.0_80\bin\java.exe
+  (f) longClasspath = false
+  (f) project = MavenProject: org.openspim:SPIMAcquisition:1.0.1-SNAPSHOT @ C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\pom.xml
+  (f) session = org.apache.maven.execution.MavenSession@7420387c
+  (f) skip = false
+-- end configuration --
+Collected project artifacts [ome:formats-api:jar:5.1.2:compile, org.slf4j:slf4j-api:jar:1.7.6:compile, ome:formats-common:jar:5.1.2:compile, com.esotericsoftware.kryo:kryo:jar:2.24.0:compile, com.esotericsoftware.minlog:minlog:jar:1.2:compile, org.objenesis:objenesis:jar:2.1:compile, joda-time:joda-time:jar:2.3:compile, ch.qos.logback:logback-core:jar:1.1.1:compile, ch.qos.logback:logback-classic:jar:1.1.1:compile, ome:formats-gpl:jar:5.1.2:compile, ome:mdbtools-java:jar:5.1.2:compile, ome:metakit:jar:5.1.2:compile, ome:ome-poi:jar:5.1.2:compile, commons-logging:commons-logging:jar:1.1.1:compile, edu.ucar:netcdf:jar:4.3.19:compile, woolz:JWlz:jar:1.4.0:compile, ch.systems.cisd:jhdf5:jar:13.06.2:compile, ome:ome-xml:jar:5.1.2:compile, ome:formats-bsd:jar:5.1.2:compile, ome:jai_imageio:jar:5.1.2:compile, ome:specification:jar:5.1.2:compile, ome:turbojpeg:jar:5.1.2:compile, org.scijava:native-lib-loader:jar:2.1.1:compile, com.jgoodies:jgoodies-forms:jar:1.7.2:compile, com.jgoodies:jgoodies-common:jar:1.7.0:compile, org.perf4j:perf4j:jar:0.9.13:compile, com.drewnoakes:metadata-extractor:jar:2.6.2:compile, com.adobe.xmp:xmpcore:jar:5.1.2:compile, xerces:xercesImpl:jar:2.8.1:compile, xml-apis:xml-apis:jar:1.3.03:compile, net.imagej:ij:jar:1.50d:compile, org.micromanager:MMCoreJ:jar:1.4.23-SNAPSHOT:compile, org.micromanager:MMJ_:jar:1.4.23-SNAPSHOT:compile, org.apache.commons:commons-math3:jar:3.4.1:compile, io.scif:scifio:jar:0.25.1:compile, io.scif:scifio-jai-imageio:jar:1.1.0:compile, net.imagej:imagej-common:jar:0.18.0:compile, edu.ucar:udunits:jar:4.3.18:compile, net.imglib2:imglib2:jar:2.4.0:compile, org.scijava:scijava-common:jar:2.48.0:compile, com.googlecode.gentyref:gentyref:jar:1.1.0:compile, org.bushe:eventbus:jar:1.4:compile, org.mapdb:mapdb:jar:1.0.3:compile, io.scif:scifio-bf-compat:jar:2.0.0:compile, io.scif:scifio-ome-xml:jar:0.13.0:compile, io.scif:scifio-cli:jar:0.3.2:compile, args4j:args4j:jar:2.0.25:compile, sc.fiji:3D_Viewer:jar:3.1.0:compile, sc.fiji:VIB-lib:jar:2.1.0:compile, sc.fiji:pal-optimization:jar:2.0.0:compile, gov.nist.math:jama:jar:1.0.3:compile, net.imglib2:imglib2-algorithm:jar:0.3.3:compile, net.imglib2:imglib2-roi:jar:0.4.2:compile, net.sf.trove4j:trove4j:jar:3.0.3:compile, net.imglib2:imglib2-realtransform:jar:2.0.0-beta-29:compile, net.imglib2:imglib2-algorithm-fft:jar:0.1.2:compile, edu.mines:mines-jtk:jar:20100113:compile, net.imglib2:imglib2-algorithm-gpl:jar:0.1.5:compile, mpicbg:mpicbg:jar:1.0.2:compile, net.imglib2:imglib2-ij:jar:2.0.0-beta-31:compile, sc.fiji:spim_data:jar:2.0.1:compile, org.jdom:jdom2:jar:2.0.6:compile, sc.fiji:bigdataviewer-core:jar:2.1.0:compile, net.imglib2:imglib2-ui:jar:2.0.0-beta-29:compile, cisd:jhdf5:jar:14.12.0:compile, com.google.code.gson:gson:jar:2.2.4:compile]
+Collected project classpath [C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target\classes]
+dealing with ome:formats-api:jar:5.1.2:compile
+dealing with org.slf4j:slf4j-api:jar:1.7.6:compile
+dealing with ome:formats-common:jar:5.1.2:compile
+dealing with com.esotericsoftware.kryo:kryo:jar:2.24.0:compile
+dealing with com.esotericsoftware.minlog:minlog:jar:1.2:compile
+dealing with org.objenesis:objenesis:jar:2.1:compile
+dealing with joda-time:joda-time:jar:2.3:compile
+dealing with ch.qos.logback:logback-core:jar:1.1.1:compile
+dealing with ch.qos.logback:logback-classic:jar:1.1.1:compile
+dealing with ome:formats-gpl:jar:5.1.2:compile
+dealing with ome:mdbtools-java:jar:5.1.2:compile
+dealing with ome:metakit:jar:5.1.2:compile
+dealing with ome:ome-poi:jar:5.1.2:compile
+dealing with commons-logging:commons-logging:jar:1.1.1:compile
+dealing with edu.ucar:netcdf:jar:4.3.19:compile
+dealing with woolz:JWlz:jar:1.4.0:compile
+dealing with ch.systems.cisd:jhdf5:jar:13.06.2:compile
+dealing with ome:ome-xml:jar:5.1.2:compile
+dealing with ome:formats-bsd:jar:5.1.2:compile
+dealing with ome:jai_imageio:jar:5.1.2:compile
+dealing with ome:specification:jar:5.1.2:compile
+dealing with ome:turbojpeg:jar:5.1.2:compile
+dealing with org.scijava:native-lib-loader:jar:2.1.1:compile
+dealing with com.jgoodies:jgoodies-forms:jar:1.7.2:compile
+dealing with com.jgoodies:jgoodies-common:jar:1.7.0:compile
+dealing with org.perf4j:perf4j:jar:0.9.13:compile
+dealing with com.drewnoakes:metadata-extractor:jar:2.6.2:compile
+dealing with com.adobe.xmp:xmpcore:jar:5.1.2:compile
+dealing with xerces:xercesImpl:jar:2.8.1:compile
+dealing with xml-apis:xml-apis:jar:1.3.03:compile
+dealing with net.imagej:ij:jar:1.50d:compile
+dealing with org.micromanager:MMCoreJ:jar:1.4.23-SNAPSHOT:compile
+dealing with org.micromanager:MMJ_:jar:1.4.23-SNAPSHOT:compile
+dealing with org.apache.commons:commons-math3:jar:3.4.1:compile
+dealing with io.scif:scifio:jar:0.25.1:compile
+dealing with io.scif:scifio-jai-imageio:jar:1.1.0:compile
+dealing with net.imagej:imagej-common:jar:0.18.0:compile
+dealing with edu.ucar:udunits:jar:4.3.18:compile
+dealing with net.imglib2:imglib2:jar:2.4.0:compile
+dealing with org.scijava:scijava-common:jar:2.48.0:compile
+dealing with com.googlecode.gentyref:gentyref:jar:1.1.0:compile
+dealing with org.bushe:eventbus:jar:1.4:compile
+dealing with org.mapdb:mapdb:jar:1.0.3:compile
+dealing with io.scif:scifio-bf-compat:jar:2.0.0:compile
+dealing with io.scif:scifio-ome-xml:jar:0.13.0:compile
+dealing with io.scif:scifio-cli:jar:0.3.2:compile
+dealing with args4j:args4j:jar:2.0.25:compile
+dealing with sc.fiji:3D_Viewer:jar:3.1.0:compile
+dealing with sc.fiji:VIB-lib:jar:2.1.0:compile
+dealing with sc.fiji:pal-optimization:jar:2.0.0:compile
+dealing with gov.nist.math:jama:jar:1.0.3:compile
+dealing with net.imglib2:imglib2-algorithm:jar:0.3.3:compile
+dealing with net.imglib2:imglib2-roi:jar:0.4.2:compile
+dealing with net.sf.trove4j:trove4j:jar:3.0.3:compile
+dealing with net.imglib2:imglib2-realtransform:jar:2.0.0-beta-29:compile
+dealing with net.imglib2:imglib2-algorithm-fft:jar:0.1.2:compile
+dealing with edu.mines:mines-jtk:jar:20100113:compile
+dealing with net.imglib2:imglib2-algorithm-gpl:jar:0.1.5:compile
+dealing with mpicbg:mpicbg:jar:1.0.2:compile
+dealing with net.imglib2:imglib2-ij:jar:2.0.0-beta-31:compile
+dealing with sc.fiji:spim_data:jar:2.0.1:compile
+dealing with org.jdom:jdom2:jar:2.0.6:compile
+dealing with sc.fiji:bigdataviewer-core:jar:2.1.0:compile
+dealing with net.imglib2:imglib2-ui:jar:2.0.0-beta-29:compile
+dealing with cisd:jhdf5:jar:14.12.0:compile
+dealing with com.google.code.gson:gson:jar:2.2.4:compile
+Toolchains are ignored, 'executable' parameter is set to C:\Program Files\Java\jdk1.7.0_80\bin\java.exe
+Executing command line: C:\Program Files\Java\jdk1.7.0_80\bin\java.exe -classpath C:\Users\Admin\Documents\NetBeansProjects\SPIMAcquisition\target\classes;C:\Users\Admin\.m2\repository\ome\formats-api\5.1.2\formats-api-5.1.2.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\Admin\.m2\repository\ome\formats-common\5.1.2\formats-common-5.1.2.jar;C:\Users\Admin\.m2\repository\com\esotericsoftware\kryo\kryo\2.24.0\kryo-2.24.0.jar;C:\Users\Admin\.m2\repository\com\esotericsoftware\minlog\minlog\1.2\minlog-1.2.jar;C:\Users\Admin\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Admin\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;C:\Users\Admin\.m2\repository\ch\qos\logback\logback-core\1.1.1\logback-core-1.1.1.jar;C:\Users\Admin\.m2\repository\ch\qos\logback\logback-classic\1.1.1\logback-classic-1.1.1.jar;C:\Users\Admin\.m2\repository\ome\formats-gpl\5.1.2\formats-gpl-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\mdbtools-java\5.1.2\mdbtools-java-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\metakit\5.1.2\metakit-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\ome-poi\5.1.2\ome-poi-5.1.2.jar;C:\Users\Admin\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\Admin\.m2\repository\edu\ucar\netcdf\4.3.19\netcdf-4.3.19.jar;C:\Users\Admin\.m2\repository\woolz\JWlz\1.4.0\JWlz-1.4.0.jar;C:\Users\Admin\.m2\repository\ch\systems\cisd\jhdf5\13.06.2\jhdf5-13.06.2.jar;C:\Users\Admin\.m2\repository\ome\ome-xml\5.1.2\ome-xml-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\formats-bsd\5.1.2\formats-bsd-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\jai_imageio\5.1.2\jai_imageio-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\specification\5.1.2\specification-5.1.2.jar;C:\Users\Admin\.m2\repository\ome\turbojpeg\5.1.2\turbojpeg-5.1.2.jar;C:\Users\Admin\.m2\repository\org\scijava\native-lib-loader\2.1.1\native-lib-loader-2.1.1.jar;C:\Users\Admin\.m2\repository\com\jgoodies\jgoodies-forms\1.7.2\jgoodies-forms-1.7.2.jar;C:\Users\Admin\.m2\repository\com\jgoodies\jgoodies-common\1.7.0\jgoodies-common-1.7.0.jar;C:\Users\Admin\.m2\repository\org\perf4j\perf4j\0.9.13\perf4j-0.9.13.jar;C:\Users\Admin\.m2\repository\com\drewnoakes\metadata-extractor\2.6.2\metadata-extractor-2.6.2.jar;C:\Users\Admin\.m2\repository\com\adobe\xmp\xmpcore\5.1.2\xmpcore-5.1.2.jar;C:\Users\Admin\.m2\repository\xerces\xercesImpl\2.8.1\xercesImpl-2.8.1.jar;C:\Users\Admin\.m2\repository\xml-apis\xml-apis\1.3.03\xml-apis-1.3.03.jar;C:\Users\Admin\.m2\repository\net\imagej\ij\1.50d\ij-1.50d.jar;C:\Users\Admin\.m2\repository\org\micromanager\MMCoreJ\1.4.23-SNAPSHOT\MMCoreJ-1.4.23-SNAPSHOT.jar;C:\Users\Admin\.m2\repository\org\micromanager\MMJ_\1.4.23-SNAPSHOT\MMJ_-1.4.23-SNAPSHOT.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-math3\3.4.1\commons-math3-3.4.1.jar;C:\Users\Admin\.m2\repository\io\scif\scifio\0.25.1\scifio-0.25.1.jar;C:\Users\Admin\.m2\repository\io\scif\scifio-jai-imageio\1.1.0\scifio-jai-imageio-1.1.0.jar;C:\Users\Admin\.m2\repository\net\imagej\imagej-common\0.18.0\imagej-common-0.18.0.jar;C:\Users\Admin\.m2\repository\edu\ucar\udunits\4.3.18\udunits-4.3.18.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2\2.4.0\imglib2-2.4.0.jar;C:\Users\Admin\.m2\repository\org\scijava\scijava-common\2.48.0\scijava-common-2.48.0.jar;C:\Users\Admin\.m2\repository\com\googlecode\gentyref\gentyref\1.1.0\gentyref-1.1.0.jar;C:\Users\Admin\.m2\repository\org\bushe\eventbus\1.4\eventbus-1.4.jar;C:\Users\Admin\.m2\repository\org\mapdb\mapdb\1.0.3\mapdb-1.0.3.jar;C:\Users\Admin\.m2\repository\io\scif\scifio-bf-compat\2.0.0\scifio-bf-compat-2.0.0.jar;C:\Users\Admin\.m2\repository\io\scif\scifio-ome-xml\0.13.0\scifio-ome-xml-0.13.0.jar;C:\Users\Admin\.m2\repository\io\scif\scifio-cli\0.3.2\scifio-cli-0.3.2.jar;C:\Users\Admin\.m2\repository\args4j\args4j\2.0.25\args4j-2.0.25.jar;C:\Users\Admin\.m2\repository\sc\fiji\3D_Viewer\3.1.0\3D_Viewer-3.1.0.jar;C:\Users\Admin\.m2\repository\sc\fiji\VIB-lib\2.1.0\VIB-lib-2.1.0.jar;C:\Users\Admin\.m2\repository\sc\fiji\pal-optimization\2.0.0\pal-optimization-2.0.0.jar;C:\Users\Admin\.m2\repository\gov\nist\math\jama\1.0.3\jama-1.0.3.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-algorithm\0.3.3\imglib2-algorithm-0.3.3.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-roi\0.4.2\imglib2-roi-0.4.2.jar;C:\Users\Admin\.m2\repository\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-realtransform\2.0.0-beta-29\imglib2-realtransform-2.0.0-beta-29.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-algorithm-fft\0.1.2\imglib2-algorithm-fft-0.1.2.jar;C:\Users\Admin\.m2\repository\edu\mines\mines-jtk\20100113\mines-jtk-20100113.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-algorithm-gpl\0.1.5\imglib2-algorithm-gpl-0.1.5.jar;C:\Users\Admin\.m2\repository\mpicbg\mpicbg\1.0.2\mpicbg-1.0.2.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-ij\2.0.0-beta-31\imglib2-ij-2.0.0-beta-31.jar;C:\Users\Admin\.m2\repository\sc\fiji\spim_data\2.0.1\spim_data-2.0.1.jar;C:\Users\Admin\.m2\repository\org\jdom\jdom2\2.0.6\jdom2-2.0.6.jar;C:\Users\Admin\.m2\repository\sc\fiji\bigdataviewer-core\2.1.0\bigdataviewer-core-2.1.0.jar;C:\Users\Admin\.m2\repository\net\imglib2\imglib2-ui\2.0.0-beta-29\imglib2-ui-2.0.0-beta-29.jar;C:\Users\Admin\.m2\repository\cisd\jhdf5\14.12.0\jhdf5-14.12.0.jar;C:\Users\Admin\.m2\repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar spim.SPIMAcquisition
+Exception in thread "main" java.lang.NoClassDefFoundError: bsh/EvalError
+	at spim.SPIMAcquisition.main(SPIMAcquisition.java:1587)
+Caused by: java.lang.ClassNotFoundException: bsh.EvalError
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 1 more
+------------------------------------------------------------------------
+BUILD FAILURE
+------------------------------------------------------------------------
+Total time: 3.464s
+Finished at: Thu Dec 17 22:17:19 EST 2015
+Final Memory: 11M/222M
+------------------------------------------------------------------------
+Failed to execute goal org.codehaus.mojo:exec-maven-plugin:1.2.1:exec (default-cli) on project SPIMAcquisition: Command execution failed. Process exited with an error: 1 (Exit value: 1) -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.codehaus.mojo:exec-maven-plugin:1.2.1:exec (default-cli) on project SPIMAcquisition: Command execution failed.
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:217)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Command execution failed.
+	at org.codehaus.mojo.exec.ExecMojo.execute(ExecMojo.java:362)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	... 19 more
+Caused by: org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+	at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:377)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:160)
+	at org.codehaus.mojo.exec.ExecMojo.executeCommandLine(ExecMojo.java:610)
+	at org.codehaus.mojo.exec.ExecMojo.execute(ExecMojo.java:352)
+	... 21 more
+
+
+For more information about the errors and possible solutions, please read the following articles:
+[Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

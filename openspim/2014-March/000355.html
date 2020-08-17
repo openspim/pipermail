@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Fwd: Re: Off Center Rotation &amp; Calibration Tools in Open SPIM Software
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20Re%3A%20Off%20Center%20Rotation%20%26%20Calibration%20Tools%20in%20Open%0A%20SPIM%20Software&In-Reply-To=%3C5321366A.7030800%40wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000354.html">
+   <LINK REL="Next"  HREF="000356.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Fwd: Re: Off Center Rotation &amp; Calibration Tools in Open SPIM Software</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Fwd%3A%20Re%3A%20Off%20Center%20Rotation%20%26%20Calibration%20Tools%20in%20Open%0A%20SPIM%20Software&In-Reply-To=%3C5321366A.7030800%40wisc.edu%3E"
+       TITLE="[OpenSPIM] Fwd: Re: Off Center Rotation &amp; Calibration Tools in Open SPIM Software">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Mar 12 23:39:06 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000354.html">[OpenSPIM] Off Center Rotation &amp; Calibration Tools in Open SPIM	Software
+</A></li>
+        <LI>Next message: <A HREF="000356.html">[OpenSPIM] [OpenSpim] 4D imaging, slicing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#355">[ date ]</a>
+              <a href="thread.html#355">[ thread ]</a>
+              <a href="subject.html#355">[ subject ]</a>
+              <a href="author.html#355">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>(Forgot to CC the list, sorry!)
+
+
+-------- Original Message --------
+Subject: 	Re: [OpenSPIM] Off Center Rotation &amp; Calibration Tools in Open 
+SPIM Software
+Date: 	Wed, 12 Mar 2014 02:06:59 -0500
+From: 	Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt;
+To: 	LIM Soon Yew John (IMB) &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">john.lim at imb.a-star.edu.sg</A>&gt;
+
+
+
+Hi John,
+
+Solving this problem is precisely the goal of the automatic rotational
+axis calibration tool (opened by clicking 'Calibrate' on the stage
+control tab).
+
+I'm afraid it's poorly documented at the moment -- a failure on my part.
+I believe we have a ticket out to provide more documentation (or if we
+don't, we soon will).
+
+Here's a rough guide that should get you started:
+- Set the rotation stage to a low value -- -90 degrees or so.
+- Find a nice, bright bead in the live view, then open the calibrator.
+- Use FIJI's rectangle ROI tool to select a region around that bead. The
+region should be as large as possible without including other/brighter
+beads.
+- Click 'Obtain Next' to begin the axis detection. (This button will
+change to 'Interrupt' while the software is processing.) The system will
+scan through Z to localize the bead, then rotate the stage by one step
+and repeat, building a list of bead positions.
+- After about 90 degrees (though, the more locations it has, the
+better!), you can stop it with 'Interrupt', then click 'Recalculate' to
+determine the rotation axis location and direction.
+
+This is an optimistic guide, however; in my experience, the calibrator
+sometimes has trouble tracking a bead -- or a bead that looked bright
+quickly becomes dim and difficult to distinguish. The 'Scan Tweaks'
+button opens an advanced panel for controlling the tracking process:
+first/second delta control the Z scan size, X/Y determination is for
+localizing in the image plane, and so on. In particular, changing X/Y
+determination to 'Max Intens.' often produces better results than
+'Gaussian (Beads)'.
+
+Once the axis is detected, the calibration window can be closed or
+minimized. At this point, rotations with the mouse (i.e. holding Alt and
+dragging the mouse back and forth) will attempt to rotate around the
+detected axis. (I should note that the rotation slider does *not*
+implement this calculation at the moment! Only the mouse controls are
+properly affected.)
+
+I'm sorry I can't be more helpful presently; I'll check on that
+documentation ticket/create it if necessary, to make sure this feature
+is documented more thoroughly.
+
+Luke
+
+On 3/10/2014 11:08 PM, LIM Soon Yew John (IMB) wrote:
+&gt;<i> Dear All,
+</I>&gt;<i>
+</I>&gt;<i> I had a question regarding how to deal with off center rotation of the sample? And can this issue be deal with using the calibration tools in the Open SPIM software and is there instructions available on how to use the calibration tools in the software?
+</I>&gt;<i>
+</I>&gt;<i> Any help will be greatly appreciated,
+</I>&gt;<i> John
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20140312/871d7f17/attachment.html">http://openspim.org/pipermail/openspim/attachments/20140312/871d7f17/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000354.html">[OpenSPIM] Off Center Rotation &amp; Calibration Tools in Open SPIM	Software
+</A></li>
+	<LI>Next message: <A HREF="000356.html">[OpenSPIM] [OpenSpim] 4D imaging, slicing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#355">[ date ]</a>
+              <a href="thread.html#355">[ thread ]</a>
+              <a href="subject.html#355">[ subject ]</a>
+              <a href="author.html#355">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

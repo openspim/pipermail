@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Image Stitching Best Practices
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Image%20Stitching%20Best%20Practices&In-Reply-To=%3Cd71910eead294f79a9c3e935d126e5d0%40pitt-prodx-02.univ.pitt.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000767.html">
+   <LINK REL="Next"  HREF="000769.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Image Stitching Best Practices</H1>
+    <B>Feinstein, Timothy N</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Image%20Stitching%20Best%20Practices&In-Reply-To=%3Cd71910eead294f79a9c3e935d126e5d0%40pitt-prodx-02.univ.pitt.edu%3E"
+       TITLE="[OpenSPIM] Image Stitching Best Practices">tnf8 at pitt.edu
+       </A><BR>
+    <I>Mon Jun 29 22:58:50 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000767.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+        <LI>Next message: <A HREF="000769.html">[OpenSPIM] Alternative to Agarose
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#768">[ date ]</a>
+              <a href="thread.html#768">[ thread ]</a>
+              <a href="subject.html#768">[ subject ]</a>
+              <a href="author.html#768">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi folks, 
+
+As promised, here is a quick cheat sheet to terastitcher, at least the version that we used about a year ago.  
+
+<A HREF="https://www.dropbox.com/sh/z3kx6etqsn4bn56/AAAzv5boNf0zSh6i0kgp5I_ca?dl=0">https://www.dropbox.com/sh/z3kx6etqsn4bn56/AAAzv5boNf0zSh6i0kgp5I_ca?dl=0</A>
+
+The larger file shows a set of 9x9 image stacks, 1000x1000 pixels at 10 um per pixel and a z step of 50 microns (not a real experiment).  The other file is a screen shot of the folder hierarchy that we would make from it.  The first hierarchical level of folders is named for the Y-coordinate top left pixel position (in calibrated units, e.g. nm) of columns 1, 2 and 3 (i.e., 000000, 008000 and 016000 microns).  You have to use six digits for each number.  
+
+The next hierarchy of folders is named for the parent folder _underscore_ the X-coordinate of the top left pixel in each column extending to the right from the column for which the parent folder is named.  These units take into account overlap, so if each volume overlaps with neighboring volumes by 100 microns then the origin of each subsequent volume will be spaced 800 pixels apart rather than 1000.  You can estimate the overlap based on machine settings, but we found that column spacing was not always regular, and got better results by estimating X and Y overlap in ImageJ for each set of neighboring stacks.  
+
+Now for the hard part.  The last hierarchy is the image files.  These are named after the parent folder _underscore_ the Z position of each slice in calibrated units.   The Z position is absolute - this means you have estimate how every stack relates to the first or highest stack, whose top slice is at Z position 0.  The first slice of every other stack will start at a different positive integer.  We measured the Z misalignment by scrolling through neighboring stacks in ImageJ to see where they lined up.  You have to relate the starting position of each stack to its neighbor and so on until all of them exist in the same coordinate space as the highest stack.  Then you can name your files.  Like I said you basically can't do this without a bulk file naming utility.  
+	
+Having done the hard part yourself, Terastitcher then performs non-rigid alignment to give you one single stitched file.  The alignment itself is remarkably fast, even on computers with non-ludicrous processors and RAM.  
+
+I might have exaggerated a bit when I say we worked it out in a week.  I think it was more like two weeks.  Naturally we started with an experiment where the sample must have touched the objective a little so overlap in X, Y and Z was all over the place.  When stack acquisitions go more smoothly you can sometimes get away with assuming one overlap value across the board.  
+
+Hope this helps!
+
+All the best, 
+
+
+Tim 
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+-----Original Message-----
+From: <A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A> [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">m.pawlowska at nencki.gov.pl</A>] 
+Sent: Monday, June 29, 2015 9:37 AM
+To: Feinstein, Timothy N
+Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>
+Subject: Re: [OpenSPIM] Image Stitching Best Practices
+
+Hi Timothy,
+
+I heard about TeraStitcher and I tried to use it on my SPIM data, but I got stuck. TeraStitcher expects a certain format of data, OpenSPIM data is quite different, so either the data has to be converted or TeraStitcher settings changed, but I failed at it. Could you describe in more detail how you do it? You mention a &quot;cheat sheet&quot; in the other message.
+
+Regards,
+Monika
+
+W dniu 2015-06-29 15:18, Feinstein, Timothy N napisa&#322;(a):
+&gt;<i> Hi Gabriel,
+</I>&gt;<i> 
+</I>&gt;<i> Among the open source options I have had great results with the 
+</I>&gt;<i> TeraStitcher plugin for Vaa3d. See my message about it in another 
+</I>&gt;<i> forum here:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;L=CONFOCALMICROSCOPY&amp;P=R101">http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;L=CONFOCALMICROSCOPY&amp;P=R101</A>
+</I>&gt;<i> 49
+</I>&gt;<i> [1]
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> 
+</I>&gt;<i> Tim
+</I>&gt;<i> 
+</I>&gt;<i> Timothy Feinstein, Ph.D.
+</I>&gt;<i> Research Scientist
+</I>&gt;<i> University of Pittsburgh Department of Developmental Biology
+</I>&gt;<i> 
+</I>&gt;<i>  From: Gabriel Davis Jones &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">gabriel.jones at florey.edu.au</A>&gt;
+</I>&gt;<i>  Date: Saturday, June 27, 2015 at 1:18 AM
+</I>&gt;<i>  To: &quot;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&quot; &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>&gt;
+</I>&gt;<i>  Subject: [OpenSPIM] Image Stitching Best Practices
+</I>&gt;<i> 
+</I>&gt;<i> Hi All,
+</I>&gt;<i> 
+</I>&gt;<i> We are currently imaging large volumes that require us to acquire 
+</I>&gt;<i> multiple stacks of the same angle.
+</I>&gt;<i> Is there currently a best way to stitch images acquired OpenSPIM?
+</I>&gt;<i> Should we use the grid/collection stitching plugin or is there a 
+</I>&gt;<i> better way to go about it?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> 
+</I>&gt;<i> Gabriel
+</I>&gt;<i> 
+</I>&gt;<i> Links:
+</I>&gt;<i> ------
+</I>&gt;<i> [1]
+</I>&gt;<i> <A HREF="http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;amp;L=CONFOCALMICROSCOPY&amp;am">http://lists.umn.edu/cgi-bin/wa?A2=ind1411&amp;L=CONFOCALMICROSCOPY&amp;am</A>
+</I>&gt;<i> p;P=R10149
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000767.html">[OpenSPIM] Image Stitching Best Practices
+</A></li>
+	<LI>Next message: <A HREF="000769.html">[OpenSPIM] Alternative to Agarose
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#768">[ date ]</a>
+              <a href="thread.html#768">[ thread ]</a>
+              <a href="subject.html#768">[ subject ]</a>
+              <a href="author.html#768">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

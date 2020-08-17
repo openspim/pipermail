@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] SCAPE
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE&In-Reply-To=%3CCAG6WU3Wvnc3c1yFatO1NCrdMeWOah-N%3DQ58n%2BPTh3PSrzsQihA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] SCAPE</H1>
+    <B>Balki K</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20SCAPE&In-Reply-To=%3CCAG6WU3Wvnc3c1yFatO1NCrdMeWOah-N%3DQ58n%2BPTh3PSrzsQihA%40mail.gmail.com%3E"
+       TITLE="[OpenSPIM] SCAPE">beekayspim at gmail.com
+       </A><BR>
+    <I>Fri Jan 23 03:08:26 CST 2015</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1574">[ date ]</a>
+              <a href="thread.html#1574">[ thread ]</a>
+              <a href="subject.html#1574">[ subject ]</a>
+              <a href="author.html#1574">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Johannes,
+
+I am thinking in the direction Johannes suggested - adapt OpenSPIM to
+include SCAPE.
+
+I still have a question:
+
+You were saying that it requires a sophisticated reconstruction algorithm
+because of
+the non-uniform pixel spacings.
+
+In the article (Page 6 - SCAPE image analyisis and visualization) the
+authors say that
+
+&quot;Three-dimensional volume renderings were generated using volren modules in
+Amira
+using custom colourmaps. All data shown are in SCAPE (x′–y′–z′) image space
+(Fig. 1b).
+
+The SCAPE data shown in Fig. 2e, Supplementary Fig. 7 and Supplementary
+Movie 2
+were corrected for the skewing effect of the oblique light sheet by
+shifting each depth
+plane laterally by a constant, linear factor....... &quot;.
+
+I am not familiar with Amira (and Volren modules in that). But, is it so
+straightforward as stated
+OR
+involves a rigorous geometrical and computational work?
+
+If the authors of the article are seeing this, please help us understand!
+
+Best regards,
+Balki
+
+
+
+Hi Balki,
+
+On 2015-01-20 05:57, Balki K wrote:
+
+&gt;<i> I am a new entrant into SPIM as well this forum.
+</I>
+Welcome! ;-)
+
+&gt;<i> I have been asked to explore building a mSPIM system for our institute.
+</I>&gt;<i> But
+</I>&gt;<i> yesterday there was an update on a new type of system called SCAPE.
+</I>&gt;<i>
+</I>&gt;<i> Please have a look at the online version of the publication in Nature
+</I>&gt;<i> Photonics from Hillman's group in Columbia University, NY.
+</I>
+We are all busy, so it is a good practice to include a link if you
+already have one handy. I looked it up and I *think* you refer to this
+one?
+
+<A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/full/">http://www.nature.com/nphoton/journal/vaop/ncurrent/full/</A>
+nphoton.2014.323.html
+
+Unfortunately, I am not at a computer which can access the full text
+(and even more unfortunate: the authors did not upload preprints to
+arxiv nor bioRxiv) and you will understand that $32 is a bit much just
+to be able to analyze the technique for you ;-)
+
+&gt;<i> I have a clear understanding of SPIM system. But SCAPE is new to me. Is
+</I>&gt;<i> there someone who is familiar with the two different systems that can
+</I>&gt;<i> explain the pros &amp; cons o SCAPE system?
+</I>
+Please keep in mind that I bring the software engineering expertise to
+the OpenSPIM project in our lab, not the optics expertise (you probably
+have much more knowledge of optics, given that you are tasked to build a
+microscope). And please keep in mind that I form the following
+understanding only from reading the abstract of the article, supported
+only by the figure at
+<A HREF="http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/">http://www.nature.com/nphoton/journal/vaop/ncurrent/fig_tab/</A>
+nphoton.2014.323_F1.html.
+
+With those caveats in mind, my interpretation is that their microscope
+uses a scanning mirror (or cantilever) to move the light sheet through
+the specimen, and that the light sheet is not perpendicular to the
+acquisition axis but at an oblique angle.
+
+The OpenSPIM setup we published uses a stage to move the specimen
+instead of the light sheet (which means that the optical sections are
+parallel, unlike the sections obtained by rotating the light sheet with
+a cantilever ? even if they are *almost* parallel in practice). Further,
+in the OpenSPIM setup, the images have uniform pixel spacings because
+the light sheet is perpendicular to the acquisition axis, while the
+pixel spacings in images acquired by the SCAPE microscope differ not
+only depending on the current angle of the light sheet but also on the
+exact coordinate on the image plane.
+
+The major difference, therefore, appears that the SCAPE microscope can
+be much faster (because it moves the light sheet much faster), at the
+expense of requiring a sophisticated reconstruction algorithm because of
+the non-uniform pixel spacings (read: point spread functions).
+
+It would be really cool if you could adapt the OpenSPIM setup to support
+SCAPE microscopy; You should make sure that you have access to a gifted
+mathematician with intermediate programming skills to implement the
+image reconstruction (read: the all-too-common half-hearted Matlab
+snippet won't do at all).
+
+Looking forward to your progress!
+Johannes
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20150123/f3b4f906/attachment-0002.html">http://openspim.org/pipermail/openspim/attachments/20150123/f3b4f906/attachment-0002.html</A>&gt;
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1574">[ date ]</a>
+              <a href="thread.html#1574">[ thread ]</a>
+              <a href="subject.html#1574">[ subject ]</a>
+              <a href="author.html#1574">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

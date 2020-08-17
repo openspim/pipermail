@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C76e088601790.51af3e7f%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001003.html">
+   <LINK REL="Next"  HREF="001006.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3C76e088601790.51af3e7f%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Wed Jun  5 13:34:55 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001003.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001006.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1004">[ date ]</a>
+              <a href="thread.html#1004">[ thread ]</a>
+              <a href="subject.html#1004">[ subject ]</a>
+              <a href="author.html#1004">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+On 06/05/13, Alexis Maizel  wrote:
+&gt;<i> However, I realised that our laser (Cobolt) does not appear into the list of available Shutter. Any idea of what could go wrong? I can turn it ON/OFF using the Device/Properties editor of MM.
+</I>I just looked into this, and it seems the developers of the Cobolt device adapter didn't make the device a shutter -- as a result, it won't appear in the shutter list. I don't want to alter this myself just yet, for fear of stepping on the author's toes -- see <A HREF="http://valelab.ucsf.edu/~MM/MMwiki/index.php/Cobolt&#160;for">http://valelab.ucsf.edu/~MM/MMwiki/index.php/Cobolt for</A> details.
+Unfortunately, this will present problems with the OpenSPIM software, which expects a shutter device and might refuse to function without one. (At the very least, it should give you a warning.)
+You might try asking the Micro-Manager mailing list, or Karl Bellve (the DAL's author) in particular, if there are plans to implement this behavior. Or, if you're feeling ambitious, once we have your development environment working, you may wish to make the changes yourself and contribute them to Micro-Manager.
+
+
+&gt;<i> I only used 32bits versions so far. I'll test a 64bits versions when available.
+</I>I appreciate the volunteering! I'm hoping to have the rebase done before the month is over; I'll try to keep the mailing list informed.
+
+
+&gt;<i> I do have Visual C++ Express installed (2010). It resides on C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\VCExpress.exe
+</I>Yes, the old installer wouldn't have checked for (x86), because it's not expecting to be run on a 64-bit system; it probably wouldn't have found the IDE. The new installer was supposed to fix this, but...
+
+
+&gt;<i> Thanks for the latest installer. But it hangs at the same points, after unzipping, the same command prompt. If I understood correctly, this self-executing archive should install a Git environment, and perform a clone of the OpenSPIM repository. In my case, after unzipping nothing happen, no Git active, no cloning, only the ~19Mb of the archive are installed (see screenshot). Am I missing something?
+</I>When it hangs, do you mean it gives you the missing VC Express error? Or does it actually, physically stop doing anything?
+In the former case, it means there's a problem with detecting VC Express. Using regedit, please check the following registry keys:
+- HKEY_CLASSES_ROOT\VCExpress.DTE\CurVer (the default value should have something like &quot;VCExpress.DTE.10.0&quot;)
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VCExpress\10.0\InstallDir (it should match the path you gave me above)
+These two keys are used to piece together the path to VC Express. If either is missing or incorrect, the script won't continue and will give you the message from earlier. Please let me know if there are any problems with these registry settings; I'm trying to make the startup script as general as possible, so knowing, for example, that not everyone may have a VCExpress.DTE entry is very helpful.
+
+
+&gt;<i> Thanks for the tip on how to hack the /src/micromanager/openspim.sh, I will give it a shot from the source code I have 'manually' fetched from Git.
+</I>
+
+This still should be possible after the latest update: line 27 of openspim.sh should set the VCEXPRESS path. If you replace everything between the double-quotes with, for example, &quot;C:\\Program Files(x86)\\Microsoft Visual Studio 10.0\\Common7\\IDE\\VCExpress.exe&quot;, it should work.
+
+
+Thanks again,
+Luke Stuyvenberg
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001003.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001006.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1004">[ date ]</a>
+              <a href="thread.html#1004">[ thread ]</a>
+              <a href="subject.html#1004">[ subject ]</a>
+              <a href="author.html#1004">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

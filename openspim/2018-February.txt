@@ -1,0 +1,190 @@
+From quelleordure at gmail.com  Mon Feb 12 01:38:57 2018
+From: quelleordure at gmail.com (Emmanuel DUFOUR)
+Date: Mon, 12 Feb 2018 14:38:57 +0700
+Subject: [OpenSPIM] laser for openSPIM
+Message-ID: <CAKWGfdLFBD0pZ3sk5q1UHiS52W=6twhBusw1R+y4cf9-rasrMg@mail.gmail.com>
+
+Hello
+The laser parts listed in openSPIM are expensive (7000 euros).
+Is there a way to get cheaper lasers work  ?
+I've been trying to make a very small focus point with a cheap red laser
+diode without success. I often see several points instead of one. And I
+cant make the point(s) smaller than 0.1 mm .
+But I dont know if it's because of the cheap lenses I use, or the aperture
+that is too big, or the diode itself (transverse mode pattern ?).
+So, what are the bare requirements for the laser in order to make it focus
+to a size of about 10 um ?
+
+Thanks for your help
+Emmanuel DUFOUR
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180212/32d31596/attachment.html>
+
+From quelleordure at gmail.com  Mon Feb 12 01:40:25 2018
+From: quelleordure at gmail.com (Emmanuel DUFOUR)
+Date: Mon, 12 Feb 2018 14:40:25 +0700
+Subject: [OpenSPIM] laser for openSPIM
+Message-ID: <CAKWGfdKsh0kcGUqjv0n6ycwdDWRvK4gPxTOSm3eQhYcFpHt3sA@mail.gmail.com>
+
+Hello
+The laser parts listed in openSPIM are expensive (7000 euros).
+Is there a way to get cheaper lasers work  ?
+I've been trying to make a very small focus point with a cheap red laser
+diode without success. I often see several points instead of one. And I
+cant make the point(s) smaller than 0.1 mm .
+But I dont know if it's because of the cheap lenses I use, or the aperture
+that is too big, or the diode itself (transverse mode pattern ?).
+So, what are the bare requirements for the laser in order to make it focus
+to a size of about 10 um ?
+
+Thanks for your help
+Emmanuel DUFOUR
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180212/99a40350/attachment.html>
+
+From nikita.vladimirov at mdc-berlin.de  Mon Feb 12 02:38:02 2018
+From: nikita.vladimirov at mdc-berlin.de (Nikita Vladimirov)
+Date: Mon, 12 Feb 2018 09:38:02 +0100
+Subject: [OpenSPIM] laser for openSPIM
+In-Reply-To: <CAKWGfdKsh0kcGUqjv0n6ycwdDWRvK4gPxTOSm3eQhYcFpHt3sA@mail.gmail.com>
+References: <CAKWGfdKsh0kcGUqjv0n6ycwdDWRvK4gPxTOSm3eQhYcFpHt3sA@mail.gmail.com>
+Message-ID: <53c5d120-d0d9-b924-c396-06ba45ab6465@mdc-berlin.de>
+
+Hi, Emmanuel,
+
+As far as I know, diode lasers always give a beam elongated in one axis. 
+I would consider coupling a diode laser to a single-mode fiber, this 
+will clean up all other modes except Gaussian (TEM_00). The output of 
+the fiber can be collimated into a high-quality beam using an 
+off-the-shelf collimator (Thorlabs sells them, for example).
+
+I hope this helps,
+
+Nikita
+
+
+On 12/02/2018 08:40, Emmanuel DUFOUR wrote:
+> Hello
+> The laser parts listed in openSPIM are expensive (7000 euros).
+> Is there a way to get cheaper lasers work  ?
+> I've been trying to make a very small focus point with a cheap red 
+> laser diode without success. I often see several points instead of 
+> one. And I cant make the point(s) smaller than 0.1 mm .
+> But I dont know if it's because of the cheap lenses I use, or the 
+> aperture that is too big, or the diode itself (transverse mode pattern ?).
+> So, what are the bare requirements for the laser in order to make it 
+> focus to a size of about 10 um ?
+>
+> Thanks for your help
+> Emmanuel DUFOUR
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+-- 
+Nikita Vladimirov, PhD
+
+Preibisch Lab
+Berlin Institute for Medical Systems Biology (BIMSB)
+Max Delbrück Center for Molecular Medicine (MDC)
+Robert-Rössle-Str. 10
+Bld. 89, room 1.08
+13125 Berlin
+twitter.com/nvladimus
+github.com/nvladimus
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180212/d93b7649/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Mon Feb 12 03:30:36 2018
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Mon, 12 Feb 2018 10:30:36 +0100
+Subject: [OpenSPIM] laser for openSPIM
+In-Reply-To: <CAKWGfdKsh0kcGUqjv0n6ycwdDWRvK4gPxTOSm3eQhYcFpHt3sA@mail.gmail.com>
+References: <CAKWGfdKsh0kcGUqjv0n6ycwdDWRvK4gPxTOSm3eQhYcFpHt3sA@mail.gmail.com>
+Message-ID: <op.zebgparhahhlbl@monika-thinkpad.rz.uni-wuerzburg.de>
+
+You can find cheaper lasers with good beam quality, but if you have a  
+laser which can't be controlled from uManager, your sample will be  
+illuminated all the time, also during moving or timelapse waiting periods.  
+For some samples this will be a problem.
+
+However, if that's acceptable for you, in the first version of my setup I  
+was able to make a cheap diode laser work by focusing it onto a small  
+pinhole. It's a similar solution to the fiber one, but somewhat cheaper.  
+However, whether you use pinhole or fiber, you'll need a very precise XY  
+positioner for effective coupling which is also not cheap (I was using a  
+borrowed one).
+
+Regards,
+Monika Pawłowska
+
+W dniu .02.2018 o 08:40 Emmanuel DUFOUR <quelleordure at gmail.com> pisze:
+
+> Hello
+> The laser parts listed in openSPIM are expensive (7000 euros).
+> Is there a way to get cheaper lasers work  ?
+> I've been trying to make a very small focus point with a cheap red laser  
+> diode without success. I often see several points instead of one. And I  
+> cant >make the point(s) smaller than 0.1 mm .
+> But I dont know if it's because of the cheap lenses I use, or the  
+> aperture that is too big, or the diode itself (transverse mode pattern  
+> ?).
+> So, what are the bare requirements for the laser in order to make it  
+> focus to a size of about 10 um ?
+>
+> Thanks for your help
+> Emmanuel DUFOUR
+>
+
+
+
+-- 
+Monika Pawłowska
+Nencki Institute
+Laboratory of Neurobiology
+3, Pasteur Street
+02-093 Warsaw, Poland
+phone: (+48) 22 5892 382
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180212/01d8cf2e/attachment.html>
+
+From kevjon at umich.edu  Tue Feb 13 09:37:00 2018
+From: kevjon at umich.edu (Kevin Jones)
+Date: Tue, 13 Feb 2018 10:37:00 -0500
+Subject: [OpenSPIM] Looking to hire an Open SPIM Consultant!
+Message-ID: <CAOsEyeLG2HW=6NrucE=jT5yv3US-WBPb9jZ10Bnm=qLyVtGzQA@mail.gmail.com>
+
+Hi,
+
+My laboratory is very new to lightsheet microscopy and one the doctoral
+students in the lab recently built an openspim scope. She followed the
+specs on the Wiki page with little or no modification. Our hardware works
+fine, but as we are new to this we could use some help with the next steps
+(e.g. making sure its aligned, establishing a consistent workflow, etc).
+Please contact me directly, if you are interested in working with us to
+launch the scope.
+
+All the best,
+Kevin Jones
+
+-- 
+Kevin S. Jones, Ph.D.
+Assistant Professor
+Department of Pharmacology
+University of Michigan
+Medical Sciences Bldg I
+(734) 763-8826 (office)
+(734) 764-6123 (lab)
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20180213/9c2aeb4f/attachment.html>
+

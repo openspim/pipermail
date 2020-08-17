@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Running SPIMAcquisition Code in Netbeans
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Running%20SPIMAcquisition%20Code%20in%20Netbeans&In-Reply-To=%3Calpine.DEB.2.20.1512301551220.14434%40virtualbox%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001854.html">
+   <LINK REL="Next"  HREF="001851.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Running SPIMAcquisition Code in Netbeans</H1>
+    <B>Johannes Schindelin</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Running%20SPIMAcquisition%20Code%20in%20Netbeans&In-Reply-To=%3Calpine.DEB.2.20.1512301551220.14434%40virtualbox%3E"
+       TITLE="[OpenSPIM] Running SPIMAcquisition Code in Netbeans">Johannes.Schindelin at gmx.de
+       </A><BR>
+    <I>Wed Dec 30 08:56:19 CST 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001854.html">[OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</A></li>
+        <LI>Next message: <A HREF="001851.html">[OpenSPIM] Plugin Power Control
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1856">[ date ]</a>
+              <a href="thread.html#1856">[ thread ]</a>
+              <a href="subject.html#1856">[ subject ]</a>
+              <a href="author.html#1856">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Neil,
+
+On Tue, 22 Dec 2015, Anthony, Neil wrote:
+
+&gt;<i> I realized that I needed to right click and run the SPIMtestDrive file
+</I>&gt;<i> (newb trying to run the main acquisition part of the code).
+</I>&gt;<i> 
+</I>&gt;<i> It runs, pops up the &quot;Welcome to Micro-Manager&quot; window to fill out my details, after which it throws a &quot;Micro-Manager Error&quot; of:
+</I>&gt;<i> Error: Failed to load the MMCoreJ_wrap native library
+</I>&gt;<i> Mmcorj.MMCoreJJNI.swig_module_init()V
+</I>
+This means that it cannot find the DLL that implements the
+hardware-specific parts of Micro-Manager.
+
+I believe that you can fix this problem by telling Netbeans to start
+SPIMTestDrive with the environment variable PATH adjusted to point to the
+directory of your installed Micro-Manager that contains the MMCoreJ.dll
+file. I might be wrong, though :-(
+
+Ciao,
+Johannes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001854.html">[OpenSPIM] Running SPIMAcquisition Code in Netbeans
+</A></li>
+	<LI>Next message: <A HREF="001851.html">[OpenSPIM] Plugin Power Control
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1856">[ date ]</a>
+              <a href="thread.html#1856">[ thread ]</a>
+              <a href="subject.html#1856">[ subject ]</a>
+              <a href="author.html#1856">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

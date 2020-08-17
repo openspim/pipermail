@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3CEA5E2E1A-11B1-4968-BD5D-DFBCCCE1B8FD%40cos.uni-heidelberg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001012.html">
+   <LINK REL="Next"  HREF="001014.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM</H1>
+    <B>Alexis Maizel</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20HamamatsuHam%2C%20Windows%207%20%26%20OpenSPIM&In-Reply-To=%3CEA5E2E1A-11B1-4968-BD5D-DFBCCCE1B8FD%40cos.uni-heidelberg.de%3E"
+       TITLE="[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM">Alexis.Maizel at cos.uni-heidelberg.de
+       </A><BR>
+    <I>Fri Jun  7 08:47:01 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001012.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+        <LI>Next message: <A HREF="001014.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1013">[ date ]</a>
+              <a href="thread.html#1013">[ thread ]</a>
+              <a href="subject.html#1013">[ subject ]</a>
+              <a href="author.html#1013">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Luke,
+
+I have used CoherentCube's as a template and modified the Cobolt code to implement the Shutter API. 
+It compiles seamlessly. 
+However, OpenSPIM now complains about this new device adapter: &quot;Version Mismatch&quot; (and list it as  &quot;unavailable&quot;).
+
+I assume that I use the wrong code base; but I must confess I am now totally lost. Given that my version of OpenSPIM utilises MM v1.4.xx Dev, which MM source code version should I use? 
+
+Alexis
+
+
+
+On 6 Jun 2013, at 19:23, Luke Stuyvenberg &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">stuyvenberg at wisc.edu</A>&gt; wrote:
+
+&gt;<i> Hi Alexis,
+</I>&gt;<i> On 06/06/13, Johannes Schindelin  wrote:
+</I>&gt;&gt;<i> I *think* all you have to do is extend the CShutterBase class:
+</I>&gt;&gt;<i> <A HREF="https://github.com/openspim/micromanager/blob/openspim/DeviceAdapters/DemoCamera/DemoCamera.h#L695">https://github.com/openspim/micromanager/blob/openspim/DeviceAdapters/DemoCamera/DemoCamera.h#L695</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I suspect you'll also have to implement some specific member functions -- DemoCamera is a reasonable source, though I'd suggest using CoherentCube's DeviceAdapter for reference -- it doesn't contain code for a camera, and is more relevant to laser controllers. A quick overview of what I think will need changing:
+</I>&gt;<i> - Cobolt.h line 30: change CGenericBase&lt;Cobolt&gt; to CShutterBase&lt;Cobolt&gt;
+</I>&gt;<i> - Cobolt.h: add shutter API calls (see CoherentCube.h lines 153 - 156)
+</I>&gt;<i> - Cobolt.cpp: Implement the shutter API functions -- probably, they will just call LaserOnOff with the right value.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Seems that the &quot;reg&quot; tool is not as universally present as we originally
+</I>&gt;&gt;<i> thought!
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Oops! Sorry; I don't yet have a Win7 machine/VM to test on, so I wasn't aware of this. tclsh is included in our dev env package, so I suppose we'd best switch to that. Thanks Johannes for the substitute.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Please let us know how the tests go!
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks again,
+</I>&gt;<i> Luke Stuyvenberg
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001012.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+	<LI>Next message: <A HREF="001014.html">[OpenSPIM] HamamatsuHam, Windows 7 &amp; OpenSPIM
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1013">[ date ]</a>
+              <a href="thread.html#1013">[ thread ]</a>
+              <a href="subject.html#1013">[ subject ]</a>
+              <a href="author.html#1013">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

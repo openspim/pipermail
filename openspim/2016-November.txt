@@ -1,0 +1,785 @@
+From jetchart at bioingenieria.edu.ar  Tue Nov  1 13:36:49 2016
+From: jetchart at bioingenieria.edu.ar (Juan Ignacio Etchart)
+Date: Tue, 1 Nov 2016 15:36:49 -0300
+Subject: [OpenSPIM] Fwd: my own system
+In-Reply-To: <CAOVb5PZoDdXUdxPcf5v4iXdHMVCbHhFbF__St53umrSfrRucSw@mail.gmail.com>
+References: <CAOVb5PZoDdXUdxPcf5v4iXdHMVCbHhFbF__St53umrSfrRucSw@mail.gmail.com>
+Message-ID: <CAOVb5Pajsmkz3DNVbMeHBxVhBbdv4kgoaU6b4rd+2PjewimzpQ@mail.gmail.com>
+
+Hi every one,
+I would like to design my own spim system, the problem is that I do not
+have the funds to acquire the laser system, then, to get the money,
+previously i should simulate the design to define the optical elements
+necessary and the laser and thus apply for state funds.
+Here is my question, which design software do you recommend me to simulate
+the spim system?
+
+Regards
+
+-- 
+Bioing. Juan Ignacio Etchart
+Personal de Apoyo de CONICET
+Centro de Investigaciones y Transferencia de Entre Ríos (CITER)
+CONICET-UNER
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161101/54351010/attachment.html>
+
+From nvladimus at gmail.com  Tue Nov  1 14:13:13 2016
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Tue, 1 Nov 2016 15:13:13 -0400
+Subject: [OpenSPIM] Fwd: my own system
+In-Reply-To: <CAOVb5Pajsmkz3DNVbMeHBxVhBbdv4kgoaU6b4rd+2PjewimzpQ@mail.gmail.com>
+References: <CAOVb5PZoDdXUdxPcf5v4iXdHMVCbHhFbF__St53umrSfrRucSw@mail.gmail.com>
+ <CAOVb5Pajsmkz3DNVbMeHBxVhBbdv4kgoaU6b4rd+2PjewimzpQ@mail.gmail.com>
+Message-ID: <CAC+J2jnBGyHR0Yusghsb3fM9BvU=aoqqtLpv4HU-0FVE9YvsQg@mail.gmail.com>
+
+Hi, Juan,
+What kind of system do you want? In many cases, you do not need any
+simulation software to figure out desired properties and limitations of
+your system. There are a few useful formulas, which describe Gaussian beams
+- their thickness, divergence, and numerical aperture properties. See a pdf
+attached. Pretty much any light sheet with gaussian intensity profile
+should behave closely to these theoretical formulae. Let me know if you
+have any questions.
+Best,
+Nikita
+
+
+On Tue, Nov 1, 2016 at 2:36 PM, Juan Ignacio Etchart <
+jetchart at bioingenieria.edu.ar> wrote:
+
+>
+> Hi every one,
+> I would like to design my own spim system, the problem is that I do not
+> have the funds to acquire the laser system, then, to get the money,
+> previously i should simulate the design to define the optical elements
+> necessary and the laser and thus apply for state funds.
+> Here is my question, which design software do you recommend me to simulate
+> the spim system?
+>
+> Regards
+>
+> --
+> Bioing. Juan Ignacio Etchart
+> Personal de Apoyo de CONICET
+> Centro de Investigaciones y Transferencia de Entre Ríos (CITER)
+> CONICET-UNER
+>
+>
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161101/bd2c7b02/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Gaussian-Beam-Optics.pdf
+Type: application/pdf
+Size: 1207807 bytes
+Desc: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20161101/bd2c7b02/attachment-0001.pdf>
+
+From Matthew.Ford at ed.ac.uk  Wed Nov 16 10:52:46 2016
+From: Matthew.Ford at ed.ac.uk (FORD Matthew)
+Date: Wed, 16 Nov 2016 16:52:46 +0000
+Subject: [OpenSPIM] Optical abberations
+Message-ID: <AM4PR0501MB23074E65C7C71236D37BE823A0BE0@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+
+Hi OpenSPIMers,
+
+
+I am in the process of building an open spim system based on the original open spim. I've tried to image some fluorescent beads but am seeing an odd effect where beads around the edge are being distored with the curvature  of the lens (I have attached an image). We are using a LA1951-A - N-BK7 Plano-Convex Lens as a tube lens rather than the olympus U-TLU. I was wondering if the tube lens is what is causing the abborations but I am fairly new to optics so am not sure. If anyone has any advice on what might be causing the abborations I would lvoe to hear your suggestions as I'm a bit stuck.
+
+
+Thanks in advance for your advice,
+
+
+Matt
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161116/33614f81/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: test image_MMStack_Pos0.ome.tif
+Type: image/tiff
+Size: 8411916 bytes
+Desc: test image_MMStack_Pos0.ome.tif
+URL: <http://openspim.org/pipermail/openspim/attachments/20161116/33614f81/attachment-0001.tif>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20161116/33614f81/attachment-0001.ksh>
+
+From nvladimus at gmail.com  Wed Nov 16 18:53:14 2016
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Wed, 16 Nov 2016 19:53:14 -0500
+Subject: [OpenSPIM] Optical abberations
+In-Reply-To: <AM4PR0501MB23074E65C7C71236D37BE823A0BE0@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+References: <AM4PR0501MB23074E65C7C71236D37BE823A0BE0@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+Message-ID: <CAC+J2j=QWvmqFj2E11aoYBijqwUs3kz5ahB88PK_F9gU-Dkbgw@mail.gmail.com>
+
+Hi, Matt,
+The image seems to have really strong astigmatism, and the optical axis is
+way off center. The lens you use has f=25mm, it is a far cry from what the
+tube lens is expected to be, f=180 mm for Olympus objective. You cannot
+expect any decent quality from a tube lens which is so far from what the
+system design (objective - tube lens). You need a proper tube lens, or at
+least an achromat with similar focal distance to have a decent image
+quality.
+Best,
+Nikita
+
+
+
+On Wed, Nov 16, 2016 at 11:52 AM, FORD Matthew <Matthew.Ford at ed.ac.uk>
+wrote:
+
+> Hi OpenSPIMers,
+>
+>
+> I am in the process of building an open spim system based on the original
+> open spim. I've tried to image some fluorescent beads but am seeing an odd
+> effect where beads around the edge are being distored with the curvature  of
+> the lens (I have attached an image). We are using a * LA1951-A - N-BK7
+> Plano-Convex Lens* as a tube lens rather than the olympus U-TLU. I was
+> wondering if the tube lens is what is causing the abborations but I am
+> fairly new to optics so am not sure. If anyone has any advice on what might
+> be causing the abborations I would lvoe to hear your suggestions as I'm a
+> bit stuck.
+>
+>
+> Thanks in advance for your advice,
+>
+>
+> Matt
+>
+> The University of Edinburgh is a charitable body, registered in
+> Scotland, with registration number SC005336.
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161116/87ca6e16/attachment.html>
+
+From Matthew.Ford at ed.ac.uk  Thu Nov 17 05:05:35 2016
+From: Matthew.Ford at ed.ac.uk (FORD Matthew)
+Date: Thu, 17 Nov 2016 11:05:35 +0000
+Subject: [OpenSPIM] Optical abberations
+In-Reply-To: <CAC+J2j=QWvmqFj2E11aoYBijqwUs3kz5ahB88PK_F9gU-Dkbgw@mail.gmail.com>
+References: <AM4PR0501MB23074E65C7C71236D37BE823A0BE0@AM4PR0501MB2307.eurprd05.prod.outlook.com>,
+ <CAC+J2j=QWvmqFj2E11aoYBijqwUs3kz5ahB88PK_F9gU-Dkbgw@mail.gmail.com>
+Message-ID: <AM4PR0501MB2307D8835F95323D5616EA8CA0B10@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+
+Thanks for your advice. We are using either leica or nikon objectives for detection so I think a f=200mm is needed. I have found two lens on thorlabs which apear to do the job.
+
+
+https://www.thorlabs.com/thorproduct.cfm?partnumber=LBF254-200-A
+
+
+https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-200-A-ML
+
+
+One is an achromat doublet while the other is spherical. Do you have any advice on which would perform better as a tube lens using mutiple lazer lines?
+
+
+Best wishes,
+
+
+Matt
+
+________________________________
+From: Nikita Vladimirov <nvladimus at gmail.com>
+Sent: 17 November 2016 00:53:14
+To: FORD Matthew
+Cc: openspim at openspim.org
+Subject: Re: [OpenSPIM] Optical abberations
+
+Hi, Matt,
+The image seems to have really strong astigmatism, and the optical axis is way off center. The lens you use has f=25mm, it is a far cry from what the tube lens is expected to be, f=180 mm for Olympus objective. You cannot expect any decent quality from a tube lens which is so far from what the system design (objective - tube lens). You need a proper tube lens, or at least an achromat with similar focal distance to have a decent image quality.
+Best,
+Nikita
+
+
+
+On Wed, Nov 16, 2016 at 11:52 AM, FORD Matthew <Matthew.Ford at ed.ac.uk<mailto:Matthew.Ford at ed.ac.uk>> wrote:
+
+Hi OpenSPIMers,
+
+
+I am in the process of building an open spim system based on the original open spim. I've tried to image some fluorescent beads but am seeing an odd effect where beads around the edge are being distored with the curvature  of the lens (I have attached an image). We are using a LA1951-A - N-BK7 Plano-Convex Lens as a tube lens rather than the olympus U-TLU. I was wondering if the tube lens is what is causing the abborations but I am fairly new to optics so am not sure. If anyone has any advice on what might be causing the abborations I would lvoe to hear your suggestions as I'm a bit stuck.
+
+
+Thanks in advance for your advice,
+
+
+Matt
+
+The University of Edinburgh is a charitable body, registered in
+Scotland, with registration number SC005336.
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161117/d26b9b33/attachment.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: not available
+URL: <http://openspim.org/pipermail/openspim/attachments/20161117/d26b9b33/attachment.ksh>
+
+From m.pawlowska at nencki.gov.pl  Thu Nov 17 05:08:26 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Thu, 17 Nov 2016 12:08:26 +0100
+Subject: [OpenSPIM] Optical abberations
+In-Reply-To: <CAC+J2j=QWvmqFj2E11aoYBijqwUs3kz5ahB88PK_F9gU-Dkbgw@mail.gmail.com>
+References: <AM4PR0501MB23074E65C7C71236D37BE823A0BE0@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+ <CAC+J2j=QWvmqFj2E11aoYBijqwUs3kz5ahB88PK_F9gU-Dkbgw@mail.gmail.com>
+Message-ID: <op.yq2jwcwwahhlbl@pc507-99ff.ibd>
+
+I agree with Nikita, but independently from that, if the objective is  
+infinity-corrected, it is possible to test a tube lens and its distance  
+ from camera by attaching a tube lens to the camera, taking it to a big  
+room and trying to get a sharp image of something at the other end of the  
+room (I was taking a photo of a reagent bottle trying to get the text on  
+the label sharp...)
+
+Regards,
+Monika
+
+W dniu .11.2016 o 01:53 Nikita Vladimirov <nvladimus at gmail.com> pisze:
+
+> Hi, Matt,
+> The image seems to have really strong astigmatism, and the optical axis  
+> is way off center. The lens you use has f=25mm, it is a far cry from  
+> what the >tube lens is expected to be, f=180 mm for Olympus objective.  
+> You cannot expect any decent quality from a tube lens which is so far  
+> from what the >system design (objective - tube lens). You need a proper  
+> tube lens, or at least an achromat with similar focal distance to have a  
+> decent image quality.Best,
+> Nikita
+>
+>
+>
+> On Wed, Nov 16, 2016 at 11:52 AM, FORD Matthew <Matthew.Ford at ed.ac.uk>  
+> wrote:
+>>
+>> Hi OpenSPIMers,
+>>
+>>
+>>
+>> I am in the process of building an open spim system based on the  
+>> original open spim. I've tried to image some >>fluorescent beads but am  
+>> seeing an odd effect where beads around the edge are being distored  
+>> with the curvature  of >>the lens (I have attached an image). We are  
+>> using a LA1951-A - N-BK7 Plano-Convex Lens as a tube lens rather than  
+>> >>the olympus U-TLU. I was wondering if the tube lens is what is  
+>> causing the abborations but I am fairly new to optics so >>am not sure.  
+>> If anyone has any advice on what might be causing the abborations I  
+>> would lvoe to hear your suggestions >>as I'm a bit stuck.
+>>
+>>
+>>
+>> Thanks in advance for your advice,
+>>
+>>
+>>
+>> Matt
+>> The University of Edinburgh is a charitable body, registered in
+>> Scotland, with registration number SC005336.
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161117/107ccc94/attachment-0001.html>
+
+From nvladimus at gmail.com  Thu Nov 17 06:27:31 2016
+From: nvladimus at gmail.com (Nikita Vladimirov)
+Date: Thu, 17 Nov 2016 07:27:31 -0500
+Subject: [OpenSPIM] Optical abberations
+In-Reply-To: <AM4PR0501MB2307D8835F95323D5616EA8CA0B10@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+References: <AM4PR0501MB23074E65C7C71236D37BE823A0BE0@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+ <CAC+J2j=QWvmqFj2E11aoYBijqwUs3kz5ahB88PK_F9gU-Dkbgw@mail.gmail.com>
+ <AM4PR0501MB2307D8835F95323D5616EA8CA0B10@AM4PR0501MB2307.eurprd05.prod.outlook.com>
+Message-ID: <CAC+J2jm3qkmYffsn1--00uOkG6TpMRqqKMjhE_we+FwrLrWUrg@mail.gmail.com>
+
+Hi, Matt,
+If you have to choose between these two lenses, I would definitely go with
+the achromat. I would actually recommend 2" diameter lens (f=200 mm),
+because the quality of surface is best at the lens center, and 1" lens is
+quite small for your purposes.
+ Also, at a price of $100 this lens is not a big saving compared to the 200
+mm standard tube lens for Nikon objectives (you can buy it from Nikon for
+$250 I think).
+Best,
+Nikita
+
+
+
+On Thu, Nov 17, 2016 at 6:05 AM, FORD Matthew <Matthew.Ford at ed.ac.uk> wrote:
+
+> Thanks for your advice. We are using either leica or nikon objectives for
+> detection so I think a f=200mm is needed. I have found two lens on thorlabs
+> which apear to do the job.
+>
+>
+> https://www.thorlabs.com/thorproduct.cfm?partnumber=LBF254-200-A
+>
+>
+> https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-200-A-ML
+>
+>
+> One is an achromat doublet while the other is spherical. Do you have any
+> advice on which would perform better as a tube lens using mutiple lazer
+> lines?
+>
+>
+> Best wishes,
+>
+>
+> Matt
+> ------------------------------
+> *From:* Nikita Vladimirov <nvladimus at gmail.com>
+> *Sent:* 17 November 2016 00:53:14
+> *To:* FORD Matthew
+> *Cc:* openspim at openspim.org
+> *Subject:* Re: [OpenSPIM] Optical abberations
+>
+> Hi, Matt,
+> The image seems to have really strong astigmatism, and the optical axis is
+> way off center. The lens you use has f=25mm, it is a far cry from what the
+> tube lens is expected to be, f=180 mm for Olympus objective. You cannot
+> expect any decent quality from a tube lens which is so far from what the
+> system design (objective - tube lens). You need a proper tube lens, or at
+> least an achromat with similar focal distance to have a decent image
+> quality.
+> Best,
+> Nikita
+>
+>
+>
+> On Wed, Nov 16, 2016 at 11:52 AM, FORD Matthew <Matthew.Ford at ed.ac.uk>
+> wrote:
+>
+>> Hi OpenSPIMers,
+>>
+>>
+>> I am in the process of building an open spim system based on the original
+>> open spim. I've tried to image some fluorescent beads but am seeing an odd
+>> effect where beads around the edge are being distored with the curvature
+>> of the lens (I have attached an image). We are using a * LA1951-A -
+>> N-BK7 Plano-Convex Lens* as a tube lens rather than the olympus U-TLU. I
+>> was wondering if the tube lens is what is causing the abborations but I am
+>> fairly new to optics so am not sure. If anyone has any advice on what might
+>> be causing the abborations I would lvoe to hear your suggestions as I'm a
+>> bit stuck.
+>>
+>>
+>> Thanks in advance for your advice,
+>>
+>>
+>> Matt
+>>
+>> The University of Edinburgh is a charitable body, registered in
+>> Scotland, with registration number SC005336.
+>>
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>>
+>>
+>
+> The University of Edinburgh is a charitable body, registered in
+> Scotland, with registration number SC005336.
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161117/55b8c5e4/attachment.html>
+
+From Alexis.Maizel at cos.uni-heidelberg.de  Fri Nov 18 04:33:28 2016
+From: Alexis.Maizel at cos.uni-heidelberg.de (Alexis Maizel)
+Date: Fri, 18 Nov 2016 11:33:28 +0100
+Subject: [OpenSPIM] Issue with shutter/laser
+Message-ID: <6691CABC-FBD8-4770-B9E7-F93F9ADE523B@cos.uni-heidelberg.de>
+
+Hi everyone,
+
+I recently exchanged the computer driving our T-openSPIM. On the new computer, almost everything is working perfectly. Very strangely, I get an error when I want to trigger an image acquisition using MicroManager’s "Multi-Dimensional Acquisition” module: "Error in device "Cobolt": Invalid state (position) requested (12)”.
+I have no problem to acquire image otherwise (live mode, SPIMAcquisition plugin). The problem only seems to be with the MM MultiD module.
+
+I attach the Corelog.
+
+I have of course, created a brand new config file and reinstalled the drivers for the laser but that did not solve the issue. I am totally clueless, as this config had been working seamlessly for ages. When migrating to the new computer I took care of zipping Fiji/MM bundle and transfer it "as is” to the new machine.
+
+If anyone has an idea of what could have gone wrong…
+
+Many thanks in advance.
+
+
+
+
+—
+Prof. Dr. Alexis Maizel
+Developmental Plasticity in Plants
+Center for Organismal Studies
+University of Heidelberg
+Im Neuenheimer Feld 230
+69120 Heidelberg
+Germany
+
+Office:	+49 6221 54 64 56
+Fax: 	+49 6221 54 64 24
+Cell: 	+49 151 40 10 23 28
+Email:	 alexis.maizel at cos.uni-heidelberg.de
+URL: 	 www.maizel-lab.org
+Orcid:  	 http://orcid.org/0000-0001-6843-1059
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: <http://openspim.org/pipermail/openspim/attachments/20161118/561532c4/attachment.sig>
+
+From guenther at mpi-cbg.de  Fri Nov 18 04:40:54 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 18 Nov 2016 11:40:54 +0100
+Subject: [OpenSPIM] Issue with shutter/laser
+In-Reply-To: <6691CABC-FBD8-4770-B9E7-F93F9ADE523B@cos.uni-heidelberg.de>
+References: <6691CABC-FBD8-4770-B9E7-F93F9ADE523B@cos.uni-heidelberg.de>
+Message-ID: <01BB7ED1-5749-4A20-8ABD-3B004C3C38A9@mpi-cbg.de>
+
+Hi Alexis,
+
+
+does this only happen with certain imaging configurations, or in general when using Multi-D?
+Also, the corelog is not attached to your email (only your GPG signature). Could you resend it please?
+
+
+cheers!
+
+
+ulrik
+
+
+
+
+  —
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+
+> On Nov 18, 2016, at 11:33 AM, Alexis Maizel <alexis.maizel at cos.uni-heidelberg.de> wrote:
+> 
+> 
+> Hi everyone,
+> 
+> 
+> I recently exchanged the computer driving our T-openSPIM. On the new computer, almost everything is working perfectly. Very strangely, I get an error when I want to trigger an image acquisition using MicroManager’s "Multi-Dimensional Acquisition” module: "Error in device "Cobolt": Invalid state (position) requested (12)”.
+> I have no problem to acquire image otherwise (live mode, SPIMAcquisition plugin). The problem only seems to be with the MM MultiD module.
+> 
+> 
+> I attach the Corelog.
+> 
+> 
+> I have of course, created a brand new config file and reinstalled the drivers for the laser but that did not solve the issue. I am totally clueless, as this config had been working seamlessly for ages. When migrating to the new computer I took care of zipping Fiji/MM bundle and transfer it "as is” to the new machine.
+> 
+> 
+> If anyone has an idea of what could have gone wrong…
+> 
+> 
+> Many thanks in advance.
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> —
+> Prof. Dr. Alexis Maizel
+> Developmental Plasticity in Plants
+> Center for Organismal Studies
+> University of Heidelberg
+> Im Neuenheimer Feld 230
+> 69120 Heidelberg
+> Germany
+> 
+> 
+> Office: +49 6221 54 64 56
+> Fax: +49 6221 54 64 24
+> Cell: +49 151 40 10 23 28
+> Email: alexis.maizel at cos.uni-heidelberg.de
+> URL: www.maizel-lab.org
+> Orcid: http://orcid.org/0000-0001-6843-1059
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161118/8a5c5d70/attachment.html>
+
+From Alexis.Maizel at cos.uni-heidelberg.de  Fri Nov 18 05:55:25 2016
+From: Alexis.Maizel at cos.uni-heidelberg.de (Alexis Maizel)
+Date: Fri, 18 Nov 2016 12:55:25 +0100
+Subject: [OpenSPIM] Issue with shutter/laser
+In-Reply-To: <01BB7ED1-5749-4A20-8ABD-3B004C3C38A9@mpi-cbg.de>
+References: <6691CABC-FBD8-4770-B9E7-F93F9ADE523B@cos.uni-heidelberg.de>
+ <01BB7ED1-5749-4A20-8ABD-3B004C3C38A9@mpi-cbg.de>
+Message-ID: <1E857025-9E6A-4A77-B3DA-27DFFC3940AA@cos.uni-heidelberg.de>
+
+Sorry for the missing CoreLog… here it is.
+It happens in general.
+
+Best,
+
+Alexis
+
+
+> On 18 Nov 2016, at 11:40, Ulrik Günther <guenther at mpi-cbg.de> wrote:
+> 
+> Hi Alexis,
+> 
+> does this only happen with certain imaging configurations, or in general when using Multi-D?
+> Also, the corelog is not attached to your email (only your GPG signature). Could you resend it please?
+> 
+> cheers!
+> 
+> ulrik
+> 
+> 
+> —
+> Ulrik Günther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+> 
+>> On Nov 18, 2016, at 11:33 AM, Alexis Maizel <alexis.maizel at cos.uni-heidelberg.de> wrote:
+>> 
+>> Hi everyone,
+>> 
+>> I recently exchanged the computer driving our T-openSPIM. On the new computer, almost everything is working perfectly. Very strangely, I get an error when I want to trigger an image acquisition using MicroManager’s "Multi-Dimensional Acquisition” module: "Error in device "Cobolt": Invalid state (position) requested (12)”.
+>> I have no problem to acquire image otherwise (live mode, SPIMAcquisition plugin). The problem only seems to be with the MM MultiD module.
+>> 
+>> I attach the Corelog.
+>> 
+>> I have of course, created a brand new config file and reinstalled the drivers for the laser but that did not solve the issue. I am totally clueless, as this config had been working seamlessly for ages. When migrating to the new computer I took care of zipping Fiji/MM bundle and transfer it "as is” to the new machine.
+>> 
+>> If anyone has an idea of what could have gone wrong…
+>> 
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20161117T152135_pid2360.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20161118/484c371c/attachment-0001.txt>
+-------------- next part --------------
+> 
+>> Many thanks in advance.
+>> 
+>> 
+>> 
+>> 
+>> —
+>> Prof. Dr. Alexis Maizel
+>> Developmental Plasticity in Plants
+>> Center for Organismal Studies
+>> University of Heidelberg
+>> Im Neuenheimer Feld 230
+>> 69120 Heidelberg
+>> Germany
+>> 
+>> Office: +49 6221 54 64 56
+>> Fax: +49 6221 54 64 24
+>> Cell: +49 151 40 10 23 28
+>> Email: alexis.maizel at cos.uni-heidelberg.de
+>> URL: www.maizel-lab.org
+>> Orcid: http://orcid.org/0000-0001-6843-1059
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 363 bytes
+Desc: Message signed with OpenPGP using GPGMail
+URL: <http://openspim.org/pipermail/openspim/attachments/20161118/484c371c/attachment-0001.sig>
+
+From guenther at mpi-cbg.de  Fri Nov 18 06:27:55 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 18 Nov 2016 13:27:55 +0100
+Subject: [OpenSPIM] Issue with shutter/laser
+In-Reply-To: <1E857025-9E6A-4A77-B3DA-27DFFC3940AA@cos.uni-heidelberg.de>
+References: <6691CABC-FBD8-4770-B9E7-F93F9ADE523B@cos.uni-heidelberg.de>
+ <01BB7ED1-5749-4A20-8ABD-3B004C3C38A9@mpi-cbg.de>
+ <1E857025-9E6A-4A77-B3DA-27DFFC3940AA@cos.uni-heidelberg.de>
+Message-ID: <B144C110-E215-46F4-A59C-FAE49320E741@mpi-cbg.de>
+
+Hi Alexis,
+
+
+unfortunately, the corelog doesn’t shed too much light onto the problem.
+However, you could do the following:
+
+
+1) Update to a more recent MM version (corelog indicates you’re using 1.4.18, which is a little dated… the problem may have been fixed in the meantime).
+
+
+2) Try narrowing the problem down to a specific device by creating a config where you replace stage, shutter, cam one-by-one with the respective option from the DemoCamera class and see if that config works.
+
+
+cheers!
+
+
+ulrik
+> On Nov 18, 2016, at 12:55 PM, Alexis Maizel <alexis.maizel at cos.uni-heidelberg.de> wrote:
+> 
+> 
+> Sorry for the missing CoreLog… here it is.
+> It happens in general.
+> 
+> 
+> Best,
+> 
+> 
+> Alexis
+> 
+> 
+> 
+>> 
+>> 
+>> On 18 Nov 2016, at 11:40, Ulrik Günther <guenther at mpi-cbg.de> wrote:
+>> 
+>> 
+>> Hi Alexis,
+>> 
+>> 
+>> does this only happen with certain imaging configurations, or in general when using Multi-D?
+>> Also, the corelog is not attached to your email (only your GPG signature). Could you resend it please?
+>> 
+>> 
+>> cheers!
+>> 
+>> 
+>> ulrik
+>> 
+>> 
+>> 
+>> 
+>> 
+>> —
+>> Ulrik Günther, Dipl.-Phys.
+>> PhD Student
+>> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+>> Max Planck Institute of Molecular Cell Biology and Genetics
+>> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>>> 
+>>> 
+>>> On Nov 18, 2016, at 11:33 AM, Alexis Maizel <alexis.maizel at cos.uni-heidelberg.de> wrote:
+>>> 
+>>> 
+>>> Hi everyone,
+>>> 
+>>> 
+>>> I recently exchanged the computer driving our T-openSPIM. On the new computer, almost everything is working perfectly. Very strangely, I get an error when I want to trigger an image acquisition using MicroManager’s "Multi-Dimensional Acquisition” module: "Error in device "Cobolt": Invalid state (position) requested (12)”.
+>>> I have no problem to acquire image otherwise (live mode, SPIMAcquisition plugin). The problem only seems to be with the MM MultiD module.
+>>> 
+>>> 
+>>> I attach the Corelog.
+>>> 
+>>> 
+>>> I have of course, created a brand new config file and reinstalled the drivers for the laser but that did not solve the issue. I am totally clueless, as this config had been working seamlessly for ages. When migrating to the new computer I took care of zipping Fiji/MM bundle and transfer it "as is” to the new machine.
+>>> 
+>>> 
+>>> If anyone has an idea of what could have gone wrong…
+>>> > 
+>>> 
+>>> 
+>>> Many thanks in advance.
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> —
+>>> Prof. Dr. Alexis Maizel
+>>> Developmental Plasticity in Plants
+>>> Center for Organismal Studies
+>>> University of Heidelberg
+>>> Im Neuenheimer Feld 230
+>>> 69120 Heidelberg
+>>> Germany
+>>> 
+>>> 
+>>> Office: +49 6221 54 64 56
+>>> Fax: +49 6221 54 64 24
+>>> Cell: +49 151 40 10 23 28
+>>> Email: alexis.maizel at cos.uni-heidelberg.de
+>>> URL: www.maizel-lab.org
+>>> Orcid: http://orcid.org/0000-0001-6843-1059
+>>> _______________________________________________
+>>> OpenSPIM mailing list
+>>> OpenSPIM at openspim.org
+>>> http://openspim.org/mailman/listinfo/openspim
+>>> 
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161118/6a0fa1ba/attachment.html>
+

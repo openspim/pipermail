@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] asynchronous writing of stacks bug?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C7690dfdf5d53d.5215c932%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001109.html">
+   <LINK REL="Next"  HREF="001111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] asynchronous writing of stacks bug?</H1>
+    <B>Luke Stuyvenberg</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20asynchronous%20writing%20of%20stacks%20bug%3F&In-Reply-To=%3C7690dfdf5d53d.5215c932%40wiscmail.wisc.edu%3E"
+       TITLE="[OpenSPIM] asynchronous writing of stacks bug?">stuyvenberg at wisc.edu
+       </A><BR>
+    <I>Thu Aug 22 08:17:54 CDT 2013</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001109.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+        <LI>Next message: <A HREF="001111.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1110">[ date ]</a>
+              <a href="thread.html#1110">[ thread ]</a>
+              <a href="subject.html#1110">[ subject ]</a>
+              <a href="author.html#1110">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alexis,
+
+Here's the email I sent, sans the rest of the conversation thread (which may have been the cause of the rejection).
+
+
+Thanks,
+Luke
+
+
+P.S. The source code for the linked plugin is available, but split up into two branches on github -- async-fix and profiling -- in case anyone is looking for it. At the moment, neither merges cleanly into the main branch, since I've just merged the new device manager code yesterday.
+
+On 08/21/13, &quot;Luke Stuyvenberg&quot;  wrote:
+&gt;<i> Hi Alexis,
+</I>&gt;<i> 
+</I>&gt;<i> &gt; some more tests and hopefully some progresses. I scanned a 82Mb stack (1024*1024*41 @ 16bits)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; - RAM usage by Fiji and stack writing to disk: 
+</I>&gt;<i> &gt; ~20Mb used at start (out of 1Gb allocated) 
+</I>&gt;<i> &gt; as the scan progresses in ramps up to ~110Mb and then slowly decreases as the size of the file on disk increases; finally the garbage collector resets to 20Mb
+</I>&gt;<i> &gt; it takes up to 2 minutes to write the 84Mb and at least 1 minute more to write the remaining 2Mb (the metadata, I presume...)
+</I>&gt;<i> Okay; although the writing times are not at all ideal (my 400MB stacks were written synchronously and in their entirety in a little over a minute and a half), the RAM usage is more or less as expected.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &gt; If you open that stack &amp; metadata, you will see that the planes are not written in the right order. Look at the sequence (toward the end of the file above):
+</I>&gt;<i> 
+</I>&gt;<i> I have some mixed feelings on this; this is the definitive proof I was looking for, but I'm genuinely at a loss as to how this may have come about. My best guess is that the synchronization is too loose, and somehow the acquisition (&quot;main&quot;) thread is writing slices (because it feels it needs to) before the writing thread.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &gt; I have the feeling that my problems are somehow linked to Bio-Format	not behaving properly. 
+</I>&gt;<i> 
+</I>&gt;<i> I've tried the new Bio-Formats daily builds update site through the Fiji updater, and haven't noticed any problems from it; perhaps try enabling that update site and downloading the very latest versions?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Finally, I have most of the promised plugin updates. There are two main additions:
+</I>&gt;<i> - First, it does some timing over the acquisition, outputting the results to the log; although it isn't very detailed, it gives a breakdown of how time is used while acquiring (for example, if the async isn't appropriately asynchronous, the acquisition time will be roughly the same as though it were off).
+</I>&gt;<i> - Second, and more importantly for you, the async writer has been completely revamped. It now queues the begin/end stack events as well as new slices, so these operations shouldn't *ever* get out of order. It also puts up a monitor showing the state of its queue, which will let us know if it's filling up or not.
+</I>&gt;<i> If you're willing to play guinea pig again, please try replacing mmplugins/SPIMAcquisition.jar with the version from: <A HREF="https://dl.dropboxusercontent.com/u/57890359/SPIMAcquisition.jar">https://dl.dropboxusercontent.com/u/57890359/SPIMAcquisition.jar</A>
+</I>&gt;<i> Anyone is free to try this JAR out, but I haven't put it on our Fiji update site for a few reasons -- the new features are only conditionally useful, and can't (yet) be disabled. That said, if the new async fixes your output problems, I'll polish these changes and incorporate them.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Luke
+</I>&gt;<i> 
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001109.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+	<LI>Next message: <A HREF="001111.html">[OpenSPIM] asynchronous writing of stacks bug?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1110">[ date ]</a>
+              <a href="thread.html#1110">[ thread ]</a>
+              <a href="subject.html#1110">[ subject ]</a>
+              <a href="author.html#1110">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

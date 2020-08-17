@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] how many slices per second by the system
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20how%20many%20slices%20per%20second%20by%20the%20system&In-Reply-To=%3Cc035d305-564e-2fb1-7bbc-6fa2f5ccf554%40ist.ac.at%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="001919.html">
+   <LINK REL="Next"  HREF="001921.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] how many slices per second by the system</H1>
+    <B>Robert Hauschild</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20how%20many%20slices%20per%20second%20by%20the%20system&In-Reply-To=%3Cc035d305-564e-2fb1-7bbc-6fa2f5ccf554%40ist.ac.at%3E"
+       TITLE="[OpenSPIM] how many slices per second by the system">robert.hauschild at ist.ac.at
+       </A><BR>
+    <I>Thu Jun  2 02:11:14 CDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="001919.html">[OpenSPIM] how many slices per second by the system
+</A></li>
+        <LI>Next message: <A HREF="001921.html">[OpenSPIM] how many slices per second by the system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1920">[ date ]</a>
+              <a href="thread.html#1920">[ thread ]</a>
+              <a href="subject.html#1920">[ subject ]</a>
+              <a href="author.html#1920">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Yan,
+
+I  get about 1.5 slices /second with the openspim plugin. There is a lot 
+of overhead in the communication with the hardware (e.g. everything 
+(laser power, x,y,z etc.) is set and queried even if the only parameter 
+that changes is the z position.
+I never was able to quite figure out why it is so slow.
+Here is a profile output I posted to the list some time ago:
+
+&gt;<i> My setup is Orca R2, Coherent Cube, Picard stage.
+</I>&gt;<i> I tested a couple of things and it it still unclear to me where the 
+</I>&gt;<i> time is wasted.
+</I>&gt;<i>
+</I>&gt;<i> I attached the core log of a 10 frame long time series (100ms 
+</I>&gt;<i> exposure) recorded to memory with X/Y/Z Stage/Theta all unchecked and  
+</I>&gt;<i> without &quot;Update Live preview&quot;.
+</I>&gt;<i>
+</I>&gt;<i> I tried two configurations:
+</I>&gt;<i> 1. Orca  + Cube + Picard
+</I>&gt;<i> 2. Orca  + Picard
+</I>&gt;<i>
+</I>&gt;<i> &quot;1&quot; took 7.6 s of which (&quot;1&quot;- &quot;2&quot;) = 1.4 s are communication with 
+</I>&gt;<i> laser, which, while way too much, is not the source of the problem.
+</I>&gt;<i>
+</I>&gt;<i> Profiler(&quot;performAcquisition&quot;)[4 children]: 7.6113s
+</I>&gt;<i> 0.0017%:    Profiler(&quot;Output&quot;)[0 children]: 0.0001s
+</I>&gt;<i> 0.0000%:    Profiler(&quot;Acquisition&quot;)[0 children]: 0.0000s
+</I>&gt;<i> 24.0133%:    Profiler(&quot;Movement&quot;)[0 children]: 1.8277s
+</I>&gt;<i> 0.0013%:    Profiler(&quot;Setup&quot;)[0 children]: 0.0001s
+</I>&gt;<i>
+</I>&gt;<i> So most of the time the system is doing something that the Profiler is 
+</I>&gt;<i> not recording.
+</I>
+Best,
+
+Robert
+
+
+On 02.06.2016 05:08, 胡衍 wrote:
+&gt;<i> Hello, everyone,
+</I>&gt;<i>
+</I>&gt;<i> This is Yan.
+</I>&gt;<i> Is there anyone who could tell me how many slices the system would take with the Picard Industries stage, and Andor camera?
+</I>&gt;<i>
+</I>&gt;<i> I am estimating the cost time for a tissue sample with 1*1*1 mm3.
+</I>&gt;<i>
+</I>&gt;<i> I am looking forward for your reply.
+</I>&gt;<i>
+</I>&gt;<i> Sincerely,
+</I>&gt;<i> Yan
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+-- 
+
+Robert Hauschild
+staff scientist
+
+Institute of Science and Technology Austria (IST Austria)
+Am Campus 1
+A – 3400 Klosterneuburg
+Phone: +43 (0)2243 - 9000 - 1047
+Email:   <A HREF="http://openspim.org/mailman/listinfo/openspim">robert.hauschild at ist.ac.at</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="001919.html">[OpenSPIM] how many slices per second by the system
+</A></li>
+	<LI>Next message: <A HREF="001921.html">[OpenSPIM] how many slices per second by the system
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1920">[ date ]</a>
+              <a href="thread.html#1920">[ thread ]</a>
+              <a href="subject.html#1920">[ subject ]</a>
+              <a href="author.html#1920">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

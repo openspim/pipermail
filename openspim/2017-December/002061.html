@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] Acquire SPIM image data saving and Anti-Drift problem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Acquire%20SPIM%20image%20data%20saving%20and%20Anti-Drift%20problem&In-Reply-To=%3C9cb8518dac6147e29933b92f5465262b%40tum.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002062.html">
+   <LINK REL="Next"  HREF="002063.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] Acquire SPIM image data saving and Anti-Drift problem</H1>
+    <B>Bartels, Judith</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20Acquire%20SPIM%20image%20data%20saving%20and%20Anti-Drift%20problem&In-Reply-To=%3C9cb8518dac6147e29933b92f5465262b%40tum.de%3E"
+       TITLE="[OpenSPIM] Acquire SPIM image data saving and Anti-Drift problem">judith.bartels at tum.de
+       </A><BR>
+    <I>Mon Dec 18 08:22:07 CST 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002062.html">[OpenSPIM] where to save Fiji
+</A></li>
+        <LI>Next message (by thread): <A HREF="002063.html">[OpenSPIM] multi-channel openspim
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2061">[ date ]</a>
+              <a href="thread.html#2061">[ thread ]</a>
+              <a href="subject.html#2061">[ subject ]</a>
+              <a href="author.html#2061">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+thank you very much for this great project and the effort you put in answering all these questions.
+
+I spent the last few months building and aligning an OpenSpim microscope.
+Now two problems are left I was not yet able to solve.
+
+When defining an output directory and starting an acquisition, the Acquire SPIM image plugin throws an error (&quot;Error acquiring: [I cannot be cast to [B&quot;) and stops the acquisition. Fiji then has to be restarted.
+The error in the console reads:
+
+java.lang.RuntimeException: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:111)
+     at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.ClassCastException: [I cannot be cast to [B
+     at spim.io.OMETIFFHandler.processSlice(OMETIFFHandler.java:186)
+     at spim.io.AsyncOutputHandler.handleNext(AsyncOutputHandler.java:231)
+     at spim.io.AsyncOutputHandler.access$300(AsyncOutputHandler.java:16)
+     at spim.io.AsyncOutputHandler$2.run(AsyncOutputHandler.java:96)
+     ... 1 more
+
+The second problem is that I do not know how to use the Anti-Drift function. I am able to manually alter the position, but when selecting automatic application of the
+suggested value nothing changes and the sample just keeps drifting out of the field of view.
+
+Has anyone encountered these problems before or has an idea how to solve them?
+
+Thank you very much,
+Judith
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://openspim.org/pipermail/openspim/attachments/20171218/8ee216c7/attachment.html">http://openspim.org/pipermail/openspim/attachments/20171218/8ee216c7/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002062.html">[OpenSPIM] where to save Fiji
+</A></li>
+	<LI>Next message (by thread): <A HREF="002063.html">[OpenSPIM] multi-channel openspim
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2061">[ date ]</a>
+              <a href="thread.html#2061">[ thread ]</a>
+              <a href="subject.html#2061">[ subject ]</a>
+              <a href="author.html#2061">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

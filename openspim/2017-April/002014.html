@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] acquisition error
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20acquisition%20error&In-Reply-To=%3Cbe881187e4f91606b0c1dbeabc4065b6%40cam.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="002013.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] acquisition error</H1>
+    <B>Dr S. Hoehn</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20acquisition%20error&In-Reply-To=%3Cbe881187e4f91606b0c1dbeabc4065b6%40cam.ac.uk%3E"
+       TITLE="[OpenSPIM] acquisition error">S.Hoehn at damtp.cam.ac.uk
+       </A><BR>
+    <I>Fri Apr  7 07:20:25 CDT 2017</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="002013.html">[OpenSPIM] acquisition error
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2014">[ date ]</a>
+              <a href="thread.html#2014">[ thread ]</a>
+              <a href="subject.html#2014">[ subject ]</a>
+              <a href="author.html#2014">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I found this entry in the ImageJ Forum suggesting to disable the 
+BioFormats update site in the ImageJ updater. I did that and it fixed 
+the acquisition problem.
+
+<A HREF="http://imagej.1557.x6.nabble.com/Bio-Formats-problem-td5017863.html">http://imagej.1557.x6.nabble.com/Bio-Formats-problem-td5017863.html</A>
+
+
+
+On 2017-04-06 17:31, Dr S. Hoehn wrote:
+&gt;<i> Dear All,
+</I>&gt;<i> 
+</I>&gt;<i> when I try to acquire a stack with the OpenSPIM software I get the
+</I>&gt;<i> error below (it used to work before). I updated Fiji, but that didn't
+</I>&gt;<i> fix it. Has anyone seen this and knows what to do?
+</I>&gt;<i> 
+</I>&gt;<i> Thanks a lot!
+</I>&gt;<i> 
+</I>&gt;<i> Best wishes,
+</I>&gt;<i> Stephanie
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Unable to retrieve constructor for class 
+</I>&gt;<i> loci.formats.services.OMEXMLServiceImpl
+</I>&gt;<i> at 
+</I>&gt;<i> loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:190)
+</I>&gt;<i> at 
+</I>&gt;<i> loci.common.services.ServiceFactory.getInstance(ServiceFactory.java:161)
+</I>&gt;<i> at spim.io.OMETIFFHandler.&lt;init&gt;(OMETIFFHandler.java:73)
+</I>&gt;<i> at spim.SPIMAcquisition.actionPerformed(SPIMAcquisition.java:1982)
+</I>&gt;<i> at 
+</I>&gt;<i> javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+</I>&gt;<i> at 
+</I>&gt;<i> javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+</I>&gt;<i> at
+</I>&gt;<i> javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+</I>&gt;<i> at 
+</I>&gt;<i> javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+</I>&gt;<i> at
+</I>&gt;<i> javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+</I>&gt;<i> at java.awt.Component.processMouseEvent(Component.java:6505)
+</I>&gt;<i> at javax.swing.JComponent.processMouseEvent(JComponent.java:3320)
+</I>&gt;<i> at java.awt.Component.processEvent(Component.java:6270)
+</I>&gt;<i> at java.awt.Container.processEvent(Container.java:2229)
+</I>&gt;<i> at java.awt.Component.dispatchEventImpl(Component.java:4861)
+</I>&gt;<i> at java.awt.Container.dispatchEventImpl(Container.java:2287)
+</I>&gt;<i> at java.awt.Component.dispatchEvent(Component.java:4687)
+</I>&gt;<i> at 
+</I>&gt;<i> java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+</I>&gt;<i> at 
+</I>&gt;<i> java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+</I>&gt;<i> at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+</I>&gt;<i> at java.awt.Container.dispatchEventImpl(Container.java:2273)
+</I>&gt;<i> at java.awt.Window.dispatchEventImpl(Window.java:2719)
+</I>&gt;<i> at java.awt.Component.dispatchEvent(Component.java:4687)
+</I>&gt;<i> at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+</I>&gt;<i> at java.awt.EventQueue.access$200(EventQueue.java:103)
+</I>&gt;<i> at java.awt.EventQueue$3.run(EventQueue.java:694)
+</I>&gt;<i> at java.awt.EventQueue$3.run(EventQueue.java:692)
+</I>&gt;<i> at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i> at
+</I>&gt;<i> java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+</I>&gt;<i> at
+</I>&gt;<i> java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+</I>&gt;<i> at java.awt.EventQueue$4.run(EventQueue.java:708)
+</I>&gt;<i> at java.awt.EventQueue$4.run(EventQueue.java:706)
+</I>&gt;<i> at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i> at
+</I>&gt;<i> java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+</I>&gt;<i> at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+</I>&gt;<i> at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+</I>&gt;<i> at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+</I>&gt;<i> at
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+</I>&gt;<i> at 
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+</I>&gt;<i> at 
+</I>&gt;<i> java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+</I>&gt;<i> at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+</I>&gt;<i> Caused by: java.lang.NoClassDefFoundError: 
+</I>&gt;<i> loci/common/xml/XMLTools$SchemaReader
+</I>&gt;<i> at java.lang.Class.forName0(Native Method)
+</I>&gt;<i> at java.lang.Class.forName(Class.java:190)
+</I>&gt;<i> at 
+</I>&gt;<i> loci.common.services.ServiceFactory.getConstructor(ServiceFactory.java:185)
+</I>&gt;<i> ... 39 more
+</I>&gt;<i> Caused by: java.lang.ClassNotFoundException:
+</I>&gt;<i> loci.common.xml.XMLTools$SchemaReader
+</I>&gt;<i> at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+</I>&gt;<i> at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+</I>&gt;<i> at java.security.AccessController.doPrivileged(Native Method)
+</I>&gt;<i> at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+</I>&gt;<i> at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+</I>&gt;<i> at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+</I>&gt;<i> at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+</I>&gt;<i> ... 42 more
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> OpenSPIM mailing list
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">OpenSPIM at openspim.org</A>
+</I>&gt;<i> <A HREF="http://openspim.org/mailman/listinfo/openspim">http://openspim.org/mailman/listinfo/openspim</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="002013.html">[OpenSPIM] acquisition error
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2014">[ date ]</a>
+              <a href="thread.html#2014">[ thread ]</a>
+              <a href="subject.html#2014">[ subject ]</a>
+              <a href="author.html#2014">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

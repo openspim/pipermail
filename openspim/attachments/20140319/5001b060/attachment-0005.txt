@@ -1,0 +1,806 @@
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] -------->>
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] Core session started on 2014-03-11T10:50:45.373456 by Imaging on DSTORM
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] Debug logging disabled
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] Debug logging disabled
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] > MM Studio version: 1.4.x dev
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] > MMCore version 2.3.2
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] > Device API version 53, Module API version 7
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] > Operating System: Windows 7 6.1
+2014-03-11T10:50:45.373456 p:3056 t:4880 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.7.0_21; 32 bit
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > #uManager plugins: 119
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.util.Comparator
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.io.FilenameFilter
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.WindowListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.FocusListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Runnable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.lang.Iterable
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: java.util.EventListener
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.623061 p:3056 t:3692 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T10:50:45.638661 p:3056 t:3692 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-03-11T10:50:45.638661 p:3056 t:3692 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-03-11T10:50:45.638661 p:3056 t:3692 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-03-11T10:50:45.638661 p:3056 t:3692 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-03-11T10:50:45.638661 p:3056 t:3692 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-03-11T10:50:47.292293 p:3056 t:4880 [LOG] All devices unloaded.
+2014-03-11T10:50:47.292293 p:3056 t:4880 [LOG] Device HamamatsuHam_DCAM loaded from HamamatsuHam and labeled as Camera
+2014-03-11T10:50:47.853903 p:3056 t:4880 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-03-11T10:50:47.853903 p:3056 t:4880 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-03-11T10:50:47.853903 p:3056 t:4880 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-03-11T10:50:47.947505 p:3056 t:4880 [LOG] Starting initialization sequence for 4 devices...
+2014-03-11T10:50:49.290640 p:3056 t:4880 [LOG] Device Camera set as default camera.
+2014-03-11T10:50:49.290640 p:3056 t:4880 [LOG] Device Camera initialized.
+2014-03-11T10:50:49.350646 p:3056 t:4880 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-11T10:50:49.350646 p:3056 t:4880 [LOG] Device Picard XY Stage initialized.
+2014-03-11T10:50:49.362647 p:3056 t:4880 [LOG] Device Picard Z Stage initialized.
+2014-03-11T10:50:49.390650 p:3056 t:4880 [LOG] Device Picard Twister initialized.
+2014-03-11T10:50:49.390650 p:3056 t:4880 [LOG] Camera device set to Camera
+2014-03-11T10:50:49.390650 p:3056 t:4880 [LOG] Focus device set to Picard Z Stage
+2014-03-11T10:50:49.390650 p:3056 t:4880 [LOG] Auto shutter ON.
+2014-03-11T10:50:49.423653 p:3056 t:4880 [LOG] System state cache updated.
+2014-03-11T10:50:49.482659 p:3056 t:4880 [LOG] System state cache updated.
+2014-03-11T10:50:49.518662 p:3056 t:4880 [LOG] > Startup script file (C:\Open_SPIM_25102013\OpenSPIM.app/MMStartup.bsh) not present.
+2014-03-11T10:50:51.777888 p:3056 t:4880 [LOG] > Plugin command: Acquire SPIM image
+2014-03-11T10:50:51.786889 p:3056 t:4880 [LOG] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-03-11T10:50:51.786889 p:3056 t:4880 [LOG] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-03-11T10:50:51.786889 p:3056 t:4880 [LOG] Starting initialization sequence for 4 devices...
+2014-03-11T10:50:51.786889 p:3056 t:4880 [LOG] Device Camera set as default camera.
+2014-03-11T10:50:51.786889 p:3056 t:4880 [LOG] Device Camera initialized.
+2014-03-11T10:50:51.846895 p:3056 t:4880 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-11T10:50:51.846895 p:3056 t:4880 [LOG] Device Picard XY Stage initialized.
+2014-03-11T10:50:51.858896 p:3056 t:4880 [LOG] Device Picard Z Stage initialized.
+2014-03-11T10:50:51.886899 p:3056 t:4880 [LOG] Device Picard Twister initialized.
+2014-03-11T10:50:51.886899 p:3056 t:4880 [LOG] > Defined uncalibrated pixel size (1:1).
+2014-03-11T10:55:53.636071 p:3056 t:2900 [LOG] Auto shutter OFF.
+2014-03-11T10:55:53.903098 p:3056 t:2900 [LOG] > !!!--- SCANNING 4550.00 to 4570.00
+2014-03-11T10:55:54.054113 p:3056 t:2900 [LOG] > Error: Metadata width and height: 1024  1024   Acquisition Width and height: 2048 2048
+2014-03-11T10:55:58.911599 p:3056 t:2900 [LOG] > 
+org.micromanager.utils.MMScriptException: MMScript error: MMScript error: Image dimensions do not match MMAcquisition. in Thread[Thread-8,6,main]
+  at org.micromanager.acquisition.MMAcquisition.insertImage(MMAcquisition.java:650)
+  at org.micromanager.MMStudioMainFrame.addImage(MMStudioMainFrame.java:4366)
+  at spim.SPIMAutoCalibrator.scanBead(SPIMAutoCalibrator.java:426)
+  at spim.SPIMAutoCalibrator.getNextBead(SPIMAutoCalibrator.java:502)
+  at spim.SPIMAutoCalibrator.access$100(SPIMAutoCalibrator.java:66)
+  at spim.SPIMAutoCalibrator$1.run(SPIMAutoCalibrator.java:550)
+  at spim.SPIMAutoCalibrator$2.run(SPIMAutoCalibrator.java:598)
+Caused by: org.micromanager.utils.MMScriptException: MMScript error: Image dimensions do not match MMAcquisition.
+  at org.micromanager.acquisition.MMAcquisition.insertImage(MMAcquisition.java:633)
+  at org.micromanager.MMStudioMainFrame.addImage(MMStudioMainFrame.java:4366)
+  at spim.SPIMAutoCalibrator.scanBead(SPIMAutoCalibrator.java:426)
+  at spim.SPIMAutoCalibrator.getNextBead(SPIMAutoCalibrator.java:502)
+  at spim.SPIMAutoCalibrator.access$100(SPIMAutoCalibrator.java:66)
+  at spim.SPIMAutoCalibrator$1.run(SPIMAutoCalibrator.java:550)
+  at spim.SPIMAutoCalibrator$2.run(SPIMAutoCalibrator.java:598)
+
+
+2014-03-11T10:55:58.911599 p:3056 t:2900 [LOG] Auto shutter ON.
+2014-03-11T10:57:33.996276 p:3056 t:4880 [LOG] Resolution ID SPIM: for device Core defined as Initialize=1
+2014-03-11T10:57:33.997276 p:3056 t:4880 [LOG] Pixel size 1.290000 um set for resolution ID: SPIM
+2014-03-11T15:51:06.069194 p:3056 t:4880 [LOG] > Plugin command: Acquire SPIM image
+2014-03-11T16:01:48.602441 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.638444 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.661446 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.695450 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.726453 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.765457 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.810461 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.831463 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.866467 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.907471 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.928473 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:48.963477 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.005481 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.040484 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.061486 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.103491 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.138494 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.159496 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.194500 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.235504 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.256506 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.291509 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.333514 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.354516 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.389519 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.431523 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.466527 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.487529 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.528533 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.563537 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.584539 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.619542 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.661546 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.684549 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.717552 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.766557 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.787559 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.829563 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.864567 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.885569 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.926573 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.962577 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:49.983579 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.018582 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.059586 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.080588 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.115592 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.157596 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.192600 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.213602 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.254606 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.289609 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.310611 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.352616 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.387619 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.411621 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.452626 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.487629 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.508631 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.551635 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.576638 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.608641 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.651645 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.686649 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.707651 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.740654 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.779658 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.815662 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.838664 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.876668 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.911671 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.952676 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:50.976678 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.003681 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.051685 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.076688 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.102691 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.151695 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.176698 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.201700 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.251705 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.276708 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.301710 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.351715 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.376718 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.401720 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.433724 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.476728 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.501730 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.533734 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.576738 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.601740 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.630743 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.676748 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.701750 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.729753 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.779758 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.801760 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.828763 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.876768 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.901770 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.927773 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:51.976778 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.001780 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.026783 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.076788 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.101790 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.126793 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.176798 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.201800 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.226803 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.258806 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.301810 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.326813 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.358816 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.401820 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.426823 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.455826 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.501830 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.526833 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.554836 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.601840 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.626843 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.653846 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.701850 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.726853 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.760856 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.801860 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.826863 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.851865 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.901870 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.926873 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:52.951875 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:53.001880 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:53.026883 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:01:53.051885 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:01.106691 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:06.483228 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:06.990279 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:26.740254 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.240304 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.283308 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.308311 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.340314 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.383318 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.408321 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.437324 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.483328 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.508331 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.536334 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.583338 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.608341 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.635343 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.683348 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.708351 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.744354 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.768357 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.801360 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.843364 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.884368 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.899370 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.948375 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:27.969377 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.010381 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.046385 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.067387 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.108391 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.143394 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.167397 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.209401 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.244404 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.265406 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.300410 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.342414 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.363416 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.398420 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.440424 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.461426 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.496430 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.538434 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.573437 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.594439 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.635443 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.670447 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.691449 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.726453 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.768457 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.791459 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.825462 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.866467 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.902470 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.922472 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.972477 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:28.993479 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.034483 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.069487 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.090489 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.133493 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.168497 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.188499 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.223502 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.264506 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.285508 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.333513 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.358516 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.384518 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.433523 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.458526 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.483528 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.533533 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.558536 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.583538 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.633543 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.658546 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.683548 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.714551 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.758556 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.783558 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.815561 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.858566 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.883568 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.912571 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.945574 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:29.986579 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.011581 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.053585 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.094589 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.115591 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.158596 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.183598 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.209601 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.258606 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:02:30.283608 p:3056 t:4880 [LOG] > 16
+2014-03-11T16:15:36.198192 p:3056 t:4688 [LOG] Auto shutter OFF.
+2014-03-11T16:15:36.319204 p:3056 t:4688 [LOG] > Beginning stack along dimension 0
+2014-03-11T16:16:24.850057 p:3056 t:4688 [LOG] > Finished stack along dimension 0
+2014-03-11T16:16:25.134085 p:3056 t:4688 [LOG] Auto shutter ON.
+2014-03-11T16:19:48.892459 p:3056 t:3380 [LOG] Auto shutter OFF.
+2014-03-11T16:19:49.000470 p:3056 t:3380 [LOG] > Beginning stack along dimension 0
+2014-03-11T16:20:37.212290 p:3056 t:3380 [LOG] > Finished stack along dimension 0
+2014-03-11T16:20:37.366306 p:3056 t:3380 [LOG] Auto shutter ON.
+2014-03-11T16:22:08.813449 p:3056 t:3544 [LOG] Auto shutter OFF.
+2014-03-11T16:22:08.915460 p:3056 t:3544 [LOG] > Beginning stack along dimension 0
+2014-03-11T16:22:56.896257 p:3056 t:3544 [LOG] > Finished stack along dimension 0
+2014-03-11T16:22:57.046272 p:3056 t:3544 [LOG] Auto shutter ON.
+2014-03-11T16:24:47.032270 p:3056 t:2844 [LOG] Auto shutter OFF.
+2014-03-11T16:24:54.230990 p:3056 t:2844 [LOG] Error occurred. Device Picard Z Stage. wait timed out after 5000 ms. 
+, file MMCore.cpp, line 1191
+2014-03-11T16:27:05.653130 p:3056 t:5816 [LOG] Auto shutter OFF.
+2014-03-11T16:27:05.752140 p:3056 t:5816 [LOG] > Beginning stack along dimension 0
+2014-03-11T16:27:54.217986 p:3056 t:5816 [LOG] > Finished stack along dimension 0
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] -------->>
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] Core session started on 2014-03-11T16:53:19.603885 by Imaging on DSTORM
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] Debug logging disabled
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] Debug logging disabled
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] > MM Studio version: 1.4.x dev
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] > MMCore version 2.3.2
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] > Device API version 53, Module API version 7
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] > Operating System: Windows 7 6.1
+2014-03-11T16:53:19.603885 p:3088 t:2964 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.7.0_21; 32 bit
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > #uManager plugins: 119
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.util.Comparator
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.io.FilenameFilter
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.WindowListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.FocusListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Runnable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.lang.Iterable
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: java.util.EventListener
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:19.978292 p:3088 t:5812 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T16:53:20.009493 p:3088 t:5812 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-03-11T16:53:20.009493 p:3088 t:5812 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-03-11T16:53:20.025093 p:3088 t:5812 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-03-11T16:53:20.025093 p:3088 t:5812 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-03-11T16:53:20.025093 p:3088 t:5812 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-03-11T16:53:21.647524 p:3088 t:2964 [LOG] All devices unloaded.
+2014-03-11T16:53:21.678725 p:3088 t:2964 [LOG] Device HamamatsuHam_DCAM loaded from HamamatsuHam and labeled as Camera
+2014-03-11T16:53:22.271536 p:3088 t:2964 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-03-11T16:53:22.271536 p:3088 t:2964 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-03-11T16:53:22.271536 p:3088 t:2964 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-03-11T16:53:22.333937 p:3088 t:2964 [LOG] Starting initialization sequence for 4 devices...
+2014-03-11T16:53:23.757679 p:3088 t:2964 [LOG] Device Camera set as default camera.
+2014-03-11T16:53:23.757679 p:3088 t:2964 [LOG] Device Camera initialized.
+2014-03-11T16:53:23.809684 p:3088 t:2964 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-11T16:53:23.809684 p:3088 t:2964 [LOG] Device Picard XY Stage initialized.
+2014-03-11T16:53:23.821685 p:3088 t:2964 [LOG] Device Picard Z Stage initialized.
+2014-03-11T16:53:23.849688 p:3088 t:2964 [LOG] Device Picard Twister initialized.
+2014-03-11T16:53:23.849688 p:3088 t:2964 [LOG] Camera device set to Camera
+2014-03-11T16:53:23.850688 p:3088 t:2964 [LOG] Focus device set to Picard Z Stage
+2014-03-11T16:53:23.850688 p:3088 t:2964 [LOG] Auto shutter ON.
+2014-03-11T16:53:23.882691 p:3088 t:2964 [LOG] System state cache updated.
+2014-03-11T16:53:23.942697 p:3088 t:2964 [LOG] System state cache updated.
+2014-03-11T16:53:23.976700 p:3088 t:2964 [LOG] > Startup script file (C:\Open_SPIM_25102013\OpenSPIM.app/MMStartup.bsh) not present.
+2014-03-11T16:55:24.105712 p:3088 t:2964 [LOG] > Plugin command: Acquire SPIM image
+2014-03-11T16:55:24.138715 p:3088 t:2964 [LOG] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-03-11T16:55:24.147716 p:3088 t:2964 [LOG] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-03-11T16:55:24.147716 p:3088 t:2964 [LOG] Starting initialization sequence for 4 devices...
+2014-03-11T16:55:24.147716 p:3088 t:2964 [LOG] Device Camera set as default camera.
+2014-03-11T16:55:24.147716 p:3088 t:2964 [LOG] Device Camera initialized.
+2014-03-11T16:55:24.198721 p:3088 t:2964 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-11T16:55:24.198721 p:3088 t:2964 [LOG] Device Picard XY Stage initialized.
+2014-03-11T16:55:24.210723 p:3088 t:2964 [LOG] Device Picard Z Stage initialized.
+2014-03-11T16:55:24.238725 p:3088 t:2964 [LOG] Device Picard Twister initialized.
+2014-03-11T16:55:24.238725 p:3088 t:2964 [LOG] > Defined uncalibrated pixel size (1:1).
+2014-03-11T17:25:29.416225 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:29.919275 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:29.955279 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:29.998283 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.019285 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.055289 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.096293 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.118295 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.154299 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.196303 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.217305 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.252309 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.296313 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.317315 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.352319 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.394323 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.411325 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.452329 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.494333 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.515335 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.559339 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.581342 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.623346 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.643348 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.690353 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.715355 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.742358 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.791363 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.815365 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.840368 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.887372 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.908374 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.950379 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:30.972381 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:25:31.015385 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:27:31.281410 p:3088 t:3756 [LOG] Auto shutter OFF.
+2014-03-11T17:27:31.407423 p:3088 t:3756 [LOG] > Beginning stack along dimension 0
+2014-03-11T17:28:19.880270 p:3088 t:3756 [LOG] > Finished stack along dimension 0
+2014-03-11T17:28:20.181300 p:3088 t:3756 [LOG] Auto shutter ON.
+2014-03-11T17:29:53.919673 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.419723 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.445725 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.494730 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.520733 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.544735 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.577739 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.619743 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.644745 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.676749 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.720753 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.744755 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.776759 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.819763 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.845765 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.874768 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.919773 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.944775 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:54.973778 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.019783 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.044785 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.072788 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.106792 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.145795 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.171798 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.220803 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.244805 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.270808 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.319813 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:29:55.346816 p:3088 t:2964 [LOG] > 16
+2014-03-11T17:31:07.555036 p:3088 t:2348 [LOG] Auto shutter OFF.
+2014-03-11T17:31:07.643044 p:3088 t:2348 [LOG] > Beginning stack along dimension 0
+2014-03-11T17:31:54.896769 p:3088 t:2348 [LOG] > Finished stack along dimension 0
+2014-03-11T17:31:55.072787 p:3088 t:2348 [LOG] Auto shutter ON.
+2014-03-11T17:34:43.756654 p:3088 t:4984 [LOG] Auto shutter OFF.
+2014-03-11T17:34:43.874665 p:3088 t:4984 [LOG] > Beginning stack along dimension 0
+2014-03-11T17:35:32.087486 p:3088 t:4984 [LOG] > Finished stack along dimension 0
+2014-03-11T17:35:32.261504 p:3088 t:4984 [LOG] Auto shutter ON.
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] -------->>
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] Core session started on 2014-03-11T19:04:49.098109 by Imaging on DSTORM
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] Debug logging disabled
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] Debug logging disabled
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] > MM Studio version: 1.4.x dev
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] > MMCore version 2.3.2
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] > Device API version 53, Module API version 7
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] > Operating System: Windows 7 6.1
+2014-03-11T19:04:49.098109 p:3856 t:2892 [LOG] > JVM: Java HotSpot(TM) Client VM, version 1.7.0_21; 32 bit
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > #uManager plugins: 119
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: org.apache.commons.math3.analysis.MultivariateFunction
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.util.Comparator
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.io.FilenameFilter
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AntiDrift$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.ProgrammaticAcquisitor$AcqProgressCallback
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: org.micromanager.api.MMPlugin
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.SPIMAutoCalibrator$RunnableWRet
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.MouseMotionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.SPIMCalibrator
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.MouseListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.WindowListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.FocusListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ActionListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Thread$UncaughtExceptionHandler
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AcqOutputHandler
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Runnable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.progacq.AntiDrift$Callback
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: javax.swing.event.ChangeListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.KeyListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.lang.Iterable
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.awt.event.ItemListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: java.util.EventListener
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.519317 p:3856 t:5596 [LOG] > interface found: spim.setup.Device$Factory
+2014-03-11T19:04:49.566118 p:3856 t:5596 [LOG] > Attempting to install plugin spim.SPIMAcquisition
+2014-03-11T19:04:49.566118 p:3856 t:5596 [LOG] > Attempting to install autofocus plugin Autofocus
+2014-03-11T19:04:49.566118 p:3856 t:5596 [LOG] > Attempting to install autofocus plugin AutofocusDuo
+2014-03-11T19:04:49.566118 p:3856 t:5596 [LOG] > Attempting to install autofocus plugin AutofocusTB
+2014-03-11T19:04:49.566118 p:3856 t:5596 [LOG] > Attempting to install autofocus plugin OughtaFocus
+2014-03-11T19:04:52.046566 p:3856 t:2892 [LOG] All devices unloaded.
+2014-03-11T19:04:52.077767 p:3856 t:2892 [LOG] Device HamamatsuHam_DCAM loaded from HamamatsuHam and labeled as Camera
+2014-03-11T19:04:52.670578 p:3856 t:2892 [LOG] Device Picard XY Stage loaded from PicardStage and labeled as Picard XY Stage
+2014-03-11T19:04:52.670578 p:3856 t:2892 [LOG] Device Picard Z Stage loaded from PicardStage and labeled as Picard Z Stage
+2014-03-11T19:04:52.670578 p:3856 t:2892 [LOG] Device Picard Twister loaded from PicardStage and labeled as Picard Twister
+2014-03-11T19:04:52.764180 p:3856 t:2892 [LOG] Starting initialization sequence for 4 devices...
+2014-03-11T19:04:54.190520 p:3856 t:2892 [LOG] Device Camera set as default camera.
+2014-03-11T19:04:54.190520 p:3856 t:2892 [LOG] Device Camera initialized.
+2014-03-11T19:04:54.236525 p:3856 t:2892 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-11T19:04:54.236525 p:3856 t:2892 [LOG] Device Picard XY Stage initialized.
+2014-03-11T19:04:54.248526 p:3856 t:2892 [LOG] Device Picard Z Stage initialized.
+2014-03-11T19:04:54.276529 p:3856 t:2892 [LOG] Device Picard Twister initialized.
+2014-03-11T19:04:54.276529 p:3856 t:2892 [LOG] Camera device set to Camera
+2014-03-11T19:04:54.276529 p:3856 t:2892 [LOG] Focus device set to Picard Z Stage
+2014-03-11T19:04:54.276529 p:3856 t:2892 [LOG] Auto shutter ON.
+2014-03-11T19:04:54.309532 p:3856 t:2892 [LOG] System state cache updated.
+2014-03-11T19:04:54.368538 p:3856 t:2892 [LOG] System state cache updated.
+2014-03-11T19:04:54.403541 p:3856 t:2892 [LOG] > Startup script file (C:\Open_SPIM_25102013\OpenSPIM.app/MMStartup.bsh) not present.
+2014-03-11T19:05:19.723073 p:3856 t:2892 [LOG] > Plugin command: Acquire SPIM image
+2014-03-11T19:05:19.746075 p:3856 t:2892 [LOG] Resolution ID Uncalibrated: for device Core defined as Initialize=1
+2014-03-11T19:05:19.753076 p:3856 t:2892 [LOG] Pixel size 1.000000 um set for resolution ID: Uncalibrated
+2014-03-11T19:05:19.753076 p:3856 t:2892 [LOG] Starting initialization sequence for 4 devices...
+2014-03-11T19:05:19.753076 p:3856 t:2892 [LOG] Device Camera set as default camera.
+2014-03-11T19:05:19.753076 p:3856 t:2892 [LOG] Device Camera initialized.
+2014-03-11T19:05:19.805081 p:3856 t:2892 [LOG] Device Picard XY Stage set as default xyStage.
+2014-03-11T19:05:19.805081 p:3856 t:2892 [LOG] Device Picard XY Stage initialized.
+2014-03-11T19:05:19.817082 p:3856 t:2892 [LOG] Device Picard Z Stage initialized.
+2014-03-11T19:05:19.845085 p:3856 t:2892 [LOG] Device Picard Twister initialized.
+2014-03-11T19:05:19.845085 p:3856 t:2892 [LOG] > Defined uncalibrated pixel size (1:1).
+2014-03-11T19:09:51.573255 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.615259 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.638262 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.671265 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.714269 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.750273 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.771275 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.814279 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.835281 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.870285 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.913289 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.934291 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:51.970295 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.011299 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.047303 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.069305 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.111309 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.132311 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.168315 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.210319 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.246323 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.267325 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.309329 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.344332 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.366335 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.407339 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.444342 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.465344 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.508349 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.543352 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.574355 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.595357 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.637362 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.672365 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.693367 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.736372 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.759374 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.795377 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.837382 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.858384 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.894387 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.937392 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.958394 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:52.996398 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.037402 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.058404 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.097408 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.139412 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.160414 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.206419 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.231421 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.256424 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.288427 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.332431 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.356434 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.402438 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.424440 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.466445 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.487447 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.531451 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.556454 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.590457 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.632461 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.656464 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:09:53.683466 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:15:23.759471 p:3856 t:5380 [LOG] Auto shutter OFF.
+2014-03-11T19:15:23.867481 p:3856 t:5380 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:16:19.936088 p:3856 t:5380 [LOG] > Finished stack along dimension 0
+2014-03-11T19:16:20.421136 p:3856 t:5380 [LOG] Auto shutter ON.
+2014-03-11T19:19:26.616754 p:3856 t:5544 [LOG] Auto shutter OFF.
+2014-03-11T19:19:26.723765 p:3856 t:5544 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:20:22.875379 p:3856 t:5544 [LOG] > Finished stack along dimension 0
+2014-03-11T19:20:23.074399 p:3856 t:5544 [LOG] Auto shutter ON.
+2014-03-11T19:23:21.883278 p:3856 t:5460 [LOG] Auto shutter OFF.
+2014-03-11T19:23:21.996289 p:3856 t:5460 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:24:17.984888 p:3856 t:5460 [LOG] > Finished stack along dimension 0
+2014-03-11T19:24:18.180907 p:3856 t:5460 [LOG] Auto shutter ON.
+2014-03-11T19:25:28.664955 p:3856 t:2892 [LOG] > 16
+2014-03-11T19:27:05.504638 p:3856 t:5244 [LOG] Auto shutter OFF.
+2014-03-11T19:27:05.747662 p:3856 t:5244 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:28:01.385226 p:3856 t:5244 [LOG] > Finished stack along dimension 0
+2014-03-11T19:28:02.243311 p:3856 t:5244 [LOG] Auto shutter ON.
+2014-03-11T19:29:41.019188 p:3856 t:5252 [LOG] Auto shutter OFF.
+2014-03-11T19:29:41.273213 p:3856 t:5252 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:30:37.230809 p:3856 t:5252 [LOG] > Finished stack along dimension 0
+2014-03-11T19:30:37.426828 p:3856 t:5252 [LOG] Auto shutter ON.
+2014-03-11T19:32:29.852070 p:3856 t:5956 [LOG] Auto shutter OFF.
+2014-03-11T19:32:29.958080 p:3856 t:5956 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:33:25.399624 p:3856 t:5956 [LOG] > Finished stack along dimension 0
+2014-03-11T19:33:25.597644 p:3856 t:5956 [LOG] Auto shutter ON.
+2014-03-11T19:35:14.241507 p:3856 t:5468 [LOG] Auto shutter OFF.
+2014-03-11T19:35:14.347517 p:3856 t:5468 [LOG] > Beginning stack along dimension 0
+2014-03-11T19:36:10.362118 p:3856 t:5468 [LOG] > Finished stack along dimension 0
+2014-03-11T19:36:10.557138 p:3856 t:5468 [LOG] Auto shutter ON.
+2014-03-11T21:59:59.149911 p:3856 t:2892 [LOG] Resolution ID SPIM: for device Core defined as Initialize=1
+2014-03-11T21:59:59.149911 p:3856 t:2892 [LOG] Pixel size 1.300372 um set for resolution ID: SPIM
+2014-03-11T22:00:56.383634 p:3856 t:2892 [LOG] Resolution ID SPIM: for device Core defined as Initialize=1
+2014-03-11T22:00:56.384634 p:3856 t:2892 [LOG] Pixel size 1.324119 um set for resolution ID: SPIM

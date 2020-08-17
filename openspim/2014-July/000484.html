@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [OpenSPIM] search for 4D-stage dll
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20search%20for%204D-stage%20dll&In-Reply-To=%3C53BA94F6.1060902%40obs-vlfr.fr%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000498.html">
+   <LINK REL="Next"  HREF="000485.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[OpenSPIM] search for 4D-stage dll</H1>
+    <B>rouviere christian</B> 
+    <A HREF="mailto:openspim%40openspim.org?Subject=Re%3A%20%5BOpenSPIM%5D%20search%20for%204D-stage%20dll&In-Reply-To=%3C53BA94F6.1060902%40obs-vlfr.fr%3E"
+       TITLE="[OpenSPIM] search for 4D-stage dll">rouviere at obs-vlfr.fr
+       </A><BR>
+    <I>Mon Jul  7 07:39:18 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000498.html">[OpenSPIM] OpenSPIM Digest, Vol 15, Issue 7
+</A></li>
+        <LI>Next message: <A HREF="000485.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#484">[ date ]</a>
+              <a href="thread.html#484">[ thread ]</a>
+              <a href="subject.html#484">[ subject ]</a>
+              <a href="author.html#484">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>hello everybody
+
+I forget to mentioned that I cant run the Open SPIM package under Fiji 
+because all our computers are now under Windows 7.....
+
+Thank for your help.
+
+Christian
+
+Le 03/07/2014 17:37, rouviere christian a &#233;crit :
+&gt;<i> Hi Mark,
+</I>&gt;<i>
+</I>&gt;<i> I found the drivers ! thank you.
+</I>&gt;<i> I am building an OpenSPIM and, in, that technologie, I need to acquire 
+</I>&gt;<i> a stack of image by moving the stage in Y direction instead of Z 
+</I>&gt;<i> direction like in confocal microscopie. so I  tried to mislead 
+</I>&gt;<i> microManager by changing the adress between the Z and the Y motor.
+</I>&gt;<i> But unfortunatly that doesnt change anything, the Z motor continue to 
+</I>&gt;<i> move in place of the Y what I expected ! Do you know how I can do to 
+</I>&gt;<i> drive the Y motor instead of the Z with Micro Manager ?
+</I>&gt;<i> And a second question, sell you a joystick that drive the 4D stage ?: 
+</I>&gt;<i> It can be easiest and quicker to move the sample with that kind of 
+</I>&gt;<i> device between two acquisitions exp&#233;riment
+</I>&gt;<i> Best,
+</I>&gt;<i>
+</I>&gt;<i> Christian
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Le 24/06/2014 23:01, Mark Tsuchida a &#233;crit :
+</I>&gt;&gt;<i> Hi Christian,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 1) Make sure you are using a recent nightly build of Micro-Manager
+</I>&gt;&gt;<i> (the Picard device adapter has been in the OpenSPIM project for a
+</I>&gt;&gt;<i> while but was added to the official Micro-Manager project just _after_
+</I>&gt;&gt;<i> the 1.4.17 release).
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://micro-manager.org/wiki/Micro-Manager_Nightly_Builds">https://micro-manager.org/wiki/Micro-Manager_Nightly_Builds</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 2) You do not need to copy the Picard DLLs (they are included in the
+</I>&gt;&gt;<i> Micro-Manager installer) if you use a nightly build since 20140519.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best,
+</I>&gt;&gt;<i> Mark
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Tue, Jun 24, 2014 at 8:12 AM, Kevin W Eliceiri &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">eliceiri at wisc.edu</A>&gt; 
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;&gt;<i> Dear Christian,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Yes, we routinely use and works fine. When you install the driver, 
+</I>&gt;&gt;&gt;<i> you are saying Micromanager won't see? Luke can you help?
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> best
+</I>&gt;&gt;&gt;<i> kevin
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> On 06/24/14, Jean Depatie  wrote:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Hello Christian,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Sorry about your troubles with Micromanager.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> I have no experience with this software.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> But, I am hoping one of the people on the CC list (above) will 
+</I>&gt;&gt;&gt;&gt;<i> respond to your email soon.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> They are the people that have developed the software to bridge 
+</I>&gt;&gt;&gt;&gt;<i> Micromanager to our software DLL that controls the 4D-Stage.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Let me know if you are still having problems, I can contact them 
+</I>&gt;&gt;&gt;&gt;<i> directly for you.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Thanks
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Picard Industries
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Jean-Francois (John) Depatie
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Engineer/Owner
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> 585-589-0358
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> www.Picard-Industries.com(<A HREF="http://www.Picard-Industries.com">http://www.Picard-Industries.com</A>)
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> From: rouviere christian [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A>]
+</I>&gt;&gt;&gt;&gt;<i> Sent: Monday, June 23, 2014 9:20 AM
+</I>&gt;&gt;&gt;&gt;<i> To: Jean Depatie
+</I>&gt;&gt;&gt;&gt;<i> Cc: <A HREF="http://openspim.org/mailman/listinfo/openspim">openspim at openspim.org</A>; 'Nico Stuurman'; <A HREF="http://openspim.org/mailman/listinfo/openspim">marktsuchida at gmail.com</A>; 
+</I>&gt;&gt;&gt;&gt;<i> 'Curtis Rueden'; <A HREF="http://openspim.org/mailman/listinfo/openspim">eliceiri at wisc.edu</A>
+</I>&gt;&gt;&gt;&gt;<i> Subject: Re: search for 4D-stage dll
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Hello John,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> yes I dowload and can drive easely the 4Z stage with your software, 
+</I>&gt;&gt;&gt;&gt;<i> but under micro manager I did this protocol : (micromanager devices) :
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> PicardStagePicardStage
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Summary:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Picard Industries USB Slide I/II and USB Twister
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Author:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Johannes Schindelin and Luke Stuyvenberg
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> License:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> BSD
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Platforms:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Windows
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Installation
+</I>&gt;&gt;&gt;&gt;<i> Download the USB 4D stage 
+</I>&gt;&gt;&gt;&gt;<i> software(<A HREF="http://www.picard-industries.com/products.html#usb-4d-stage">http://www.picard-industries.com/products.html#usb-4d-stage</A>) 
+</I>&gt;&gt;&gt;&gt;<i> from Picard. Run the installer, and also copy the file 4D-Stage DLL 
+</I>&gt;&gt;&gt;&gt;<i> and Docs\Win32\PiUsb.dll (for 32-bit Micro-Manager) or 4D-Stage DLL 
+</I>&gt;&gt;&gt;&gt;<i> and Docs\x64\PiUsb.dll (for 64-bit Micro-Manager) into your 
+</I>&gt;&gt;&gt;&gt;<i> Micro-Manager folder.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> But un fortunatly I can't see the Picard industrie driver when a 
+</I>&gt;&gt;&gt;&gt;<i> run the hardware configuration wizard...
+</I>&gt;&gt;&gt;&gt;<i> If you know what happens there, thank to help me.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Best,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Christian
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Le 13/06/2014 17:32, Jean Depatie a &#233;crit :
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hello Christian,
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Sorry to hear about your troubles with our USB-4D-Stage software.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> The DLL files should have been loaded in the C:\Program 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Files\Picard Industries\USB 4D-Stage Application directory.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Check to see if they are there.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Are you able to run the Stage with our Windows application for 
+</I>&gt;&gt;&gt;&gt;&gt;<i> testing?
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> If so, then the DLL files must be there (somewhere), the 
+</I>&gt;&gt;&gt;&gt;&gt;<i> application uses them.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> If you have any question with using Micro Manager, I encourage you 
+</I>&gt;&gt;&gt;&gt;&gt;<i> to ask the micromanager list (at 
+</I>&gt;&gt;&gt;&gt;&gt;<i> www.Picard-Industries.com(<A HREF="https://www.micro-manager.org/wiki/Micro-Manager%20Community">https://www.micro-manager.org/wiki/Micro-Manager%20Community</A>&quot; 
+</I>&gt;&gt;&gt;&gt;&gt;<i> target=&quot;1&quot;&gt;<A HREF="https://www.micro-manager.org/wiki/Micro-Manager%20Community">https://www.micro-manager.org/wiki/Micro-Manager%20Community</A>) 
+</I>&gt;&gt;&gt;&gt;&gt;<i> with any questions as well. I've cced our collaborator Nico 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Stuurman who is lead of the micromanager project and one of the 
+</I>&gt;&gt;&gt;&gt;&gt;<i> lead programmers Mark Tsuchida. I know they would like to address 
+</I>&gt;&gt;&gt;&gt;&gt;<i> any questions or concerns you might have.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> As for my French, I grew-up with French speaking parents (from 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Quebec) so I did learn to speak French.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> But I was born in the States (Vermont) and went to English schools.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> There is very little opportunity to speak French here, except with 
+</I>&gt;&gt;&gt;&gt;&gt;<i> family.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> I would need to move to Quebec (or France) to regain my full use 
+</I>&gt;&gt;&gt;&gt;&gt;<i> of my original language.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> If I did, I am sure it would come back quickly.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Thanks (Merci)
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Picard Industries
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Jean-Francois (John) Depatie
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Engineer/Owner
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> 585-589-0358
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> From: rouviere christian [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A>&gt;]
+</I>&gt;&gt;&gt;&gt;&gt;<i> Sent: Friday, June 13, 2014 5:06 AM
+</I>&gt;&gt;&gt;&gt;&gt;<i> To: <A HREF="http://openspim.org/mailman/listinfo/openspim">jdepatie at picard-industries.com</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">jdepatie at picard-industries.com</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Subject: search for 4D-stage dll
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hello John,
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> I am trying to install the 4D stage under Micro Manager software. 
+</I>&gt;&gt;&gt;&gt;&gt;<i> (I am involved in the project with F . Brau that order the stage)
+</I>&gt;&gt;&gt;&gt;&gt;<i> Reading the instruction under the installation of that device into 
+</I>&gt;&gt;&gt;&gt;&gt;<i> the MManager website <A HREF="https://www.micro-manager.org/wiki/PicardStage">https://www.micro-manager.org/wiki/PicardStage</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> (here is a copy :
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> PicardStagePicardStage
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Summary:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Picard Industries USB Slide I/II and USB Twister
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Author:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Johannes Schindelin and Luke Stuyvenberg
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> License:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> BSD
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Platforms:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Windows
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Installation
+</I>&gt;&gt;&gt;&gt;&gt;<i> Download the USB 4D stage 
+</I>&gt;&gt;&gt;&gt;&gt;<i> software(<A HREF="http://www.picard-industries.com/products.html#usb-4d-stage">http://www.picard-industries.com/products.html#usb-4d-stage</A>) 
+</I>&gt;&gt;&gt;&gt;&gt;<i> from Picard. Run the installer, and also copy the file 4D-Stage 
+</I>&gt;&gt;&gt;&gt;&gt;<i> DLL and Docs\Win32\PiUsb.dll (for 32-bit Micro-Manager) or 
+</I>&gt;&gt;&gt;&gt;&gt;<i> 4D-Stage DLL and Docs\x64\PiUsb.dll (for 64-bit Micro-Manager) 
+</I>&gt;&gt;&gt;&gt;&gt;<i> into your Micro-Manager folder.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> But unfortunatly I do not find the 4D-stage DLL in the package 
+</I>&gt;&gt;&gt;&gt;&gt;<i> that I download from your site. Could you help in in that purpose ?
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Merci (are you speaking French ?)
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Christian Rouviere
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Hello Helene,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Your order for a USB 4D-Stage has been shipped using FedEx 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> International.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> The tracking number is 8658 5443 1413.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> You can use their website www.fedex.com(<A HREF="http://www.fedex.com">http://www.fedex.com</A>) to 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> check on its progress.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Attached is a copy of the invoice for this work.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> A hard copy was sent with your order.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Please see that it is forwarded to the correct people for prompt 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> payment.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> If there is anything else we can do to help with your 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> application, please
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> contact me directly.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Thanks (Merci)
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Picard Industries
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Jean-Francois (John) Depatie
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Engineer/Owner
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 585-589-0358
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> www.Picard-Industries.com(<A HREF="http://www.Picard-Industries.com">http://www.Picard-Industries.com</A>)
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> From: H&#233;l&#232;ne Choux [mailto:<A HREF="http://openspim.org/mailman/listinfo/openspim">choux at ipmc.cnrs.fr</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">choux at ipmc.cnrs.fr</A>&gt;]
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Sent: Friday, September 20, 2013 10:53 AM
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> To: Jean Depatie
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Cc: Fr&#233;d&#233;ric Brau
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Subject: Order N&#176; 60127
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Mr Depatie
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Vous trouverez en pi&#232;ce jointe le bon de commande pour l'achat 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> d'un &quot;USB
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> powered and controlled 4D-stage sample arm&quot; selon votre devis du 18
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> septembre.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Bien cordialement
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> -- 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> H&#233;l&#232;ne CHOUX
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Administrateur
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Institut de Pharmacologie Mol&#233;culaire et Cellulaire - UMR 7275 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 660, route
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> des Lucioles
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 06560 VALBONNE
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Tel. 04 93 95 77 09 - Fax 04 93 95 77 08
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> -- 
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> OBSERVATOIRE OCEANOLOGIQUE
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> UMR7009 Biologie du Developpement
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Christian Rouvi&#232;re
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> 181 chemin du Lazaret
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> 06230 VILLEFRANCHE SUR MER
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> M&#232;l : <A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Responsable plateforme d'imagerie (PIV)
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="http://biodev.obs-vlfr.fr/fr/services_a_la_recherche/imagerie.html">http://biodev.obs-vlfr.fr/fr/services_a_la_recherche/imagerie.html</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Tel : 04 93 76 37 72
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Fax : 04 93 76 37 92
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> WEB d'unit&#233;: www.biodev.obs-vlfr.fr(<A HREF="http://www.biodev.obs-vlfr.fr">http://www.biodev.obs-vlfr.fr</A>)
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Groupement des Plate-formes labellis&#233;es &quot;IBiSA&quot; : 
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="http://www.mica-bio.fr/">http://www.mica-bio.fr/</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> -- 
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> OBSERVATOIRE OCEANOLOGIQUE
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> UMR7009 Biologie du Developpement
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Christian Rouvi&#232;re
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> 181 chemin du Lazaret
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> 06230 VILLEFRANCHE SUR MER
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> M&#232;l : <A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A> &lt;<A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A>&gt;
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Responsable plateforme d'imagerie (PIV)
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://biodev.obs-vlfr.fr/fr/services_a_la_recherche/imagerie.html">http://biodev.obs-vlfr.fr/fr/services_a_la_recherche/imagerie.html</A>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Tel : 04 93 76 37 72
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Fax : 04 93 76 37 92
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> WEB d'unit&#233;: www.biodev.obs-vlfr.fr(<A HREF="http://www.biodev.obs-vlfr.fr">http://www.biodev.obs-vlfr.fr</A>)
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Groupement des Plate-formes labellis&#233;es &quot;IBiSA&quot; : 
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://www.mica-bio.fr/">http://www.mica-bio.fr/</A>
+</I>&gt;&gt;&gt;<i> -- 
+</I>&gt;&gt;&gt;<i> Kevin W. Eliceiri
+</I>&gt;&gt;&gt;<i> Director, Laboratory for Optical and Computational Instrumentation 
+</I>&gt;&gt;&gt;<i> (LOCI)
+</I>&gt;&gt;&gt;<i> Departments Cell and Molecular Biology and Biomedical Engineering
+</I>&gt;&gt;&gt;<i> Affiliate Principal Investigator, Morgridge Institute for Research 
+</I>&gt;&gt;&gt;<i> (MIR)
+</I>&gt;&gt;&gt;<i> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+</I>&gt;&gt;&gt;<i> Phone: 608-263-6288
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+
+OBSERVATOIRE OCEANOLOGIQUE
+UMR7009 Biologie du Developpement
+Christian Rouvi&#232;re
+181 chemin du Lazaret
+06230 VILLEFRANCHE SUR MER
+
+
+M&#232;l : <A HREF="http://openspim.org/mailman/listinfo/openspim">rouviere at obs-vlfr.fr</A>
+Responsable plateforme d'imagerie (PIV)
+<A HREF="http://biodev.obs-vlfr.fr/fr/services_a_la_recherche/imagerie.html">http://biodev.obs-vlfr.fr/fr/services_a_la_recherche/imagerie.html</A>
+Tel : 04 93 76 37 72
+Fax : 04 93 76 37 92
+WEB d'unit&#233;: www.biodev.obs-vlfr.fr
+Groupement des Plate-formes labellis&#233;es &quot;IBiSA&quot; : <A HREF="http://www.mica-bio.fr/">http://www.mica-bio.fr/</A>
+
+
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000498.html">[OpenSPIM] OpenSPIM Digest, Vol 15, Issue 7
+</A></li>
+	<LI>Next message: <A HREF="000485.html">[OpenSPIM] OpenSPIM in 64bit system?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#484">[ date ]</a>
+              <a href="thread.html#484">[ thread ]</a>
+              <a href="subject.html#484">[ subject ]</a>
+              <a href="author.html#484">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://openspim.org/mailman/listinfo/openspim">More information about the OpenSPIM
+mailing list</a><br>
+</body></html>

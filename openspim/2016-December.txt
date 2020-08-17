@@ -1,0 +1,1543 @@
+From KWeiss at morgridge.org  Mon Dec  5 16:22:22 2016
+From: KWeiss at morgridge.org (Weiss, Kurt)
+Date: Mon, 5 Dec 2016 22:22:22 +0000
+Subject: [OpenSPIM] mutli-channel OpenSPIM
+Message-ID: <05B1384DEE0EA04295A8A5F4557425C2A3B9F4@MIRIS1W.Morgridge.net>
+
+Hi,
+
+We are interested in adding more laser channels to our current OpenSPIM. There seem to be three options: (1) multi-channel lauch, (2) laser combiner unit, (3) combine with mirror + dichroic.
+
+If we go for option 1: Does anyone have experience with mult-channel modules which integrate well with the OpenSPIM platform? (Besides the Stradus Versalase I have seen mentioned on this forum, though updates on this unit might be helpful if anyone has strong feelings).
+
+Any other comments on options 2 or 3 would also be appreciated. A few concerns have been addressed here:
+http://openspim.org/pipermail/openspim/2013-December/001268.html
+
+Thanks,
+Kurt
+_______________________
+Kurt Weiss, Ph.D.
+Postdoctoral Associate
+Huisken Group, Medical Engineering
+Morgridge Institute for Research
+330 N Charter St.
+Madison, WI 53715
+KWeiss at morgridge.org
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161205/43660b2f/attachment.html>
+
+From tnf8 at pitt.edu  Mon Dec  5 16:31:14 2016
+From: tnf8 at pitt.edu (Feinstein, Timothy N)
+Date: Mon, 5 Dec 2016 22:31:14 +0000
+Subject: [OpenSPIM] mutli-channel OpenSPIM
+In-Reply-To: <05B1384DEE0EA04295A8A5F4557425C2A3B9F4@MIRIS1W.Morgridge.net>
+References: <05B1384DEE0EA04295A8A5F4557425C2A3B9F4@MIRIS1W.Morgridge.net>
+Message-ID: <D46B53E1.15919%tnf8@pitt.edu>
+
+Hi Kurt,
+
+I pasted below a response to a similar question posed earlier to the list.  I am quite happy with a four-laser launch made by Vortran in California (no commercial interest).  The only downside is that OpenSpim software cannot currently control multi-laser launches.  I currently make do with Micro-Manager, a 3D SpaceNavigator mouse for coarse sample movement and the software that comes with the Picard motorized stage for fine movement.
+
+Best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+
+---------
+
+Hi Matt,
+
+We use a 488/561 Versalase with an ESio TTL controller to enhance
+switching speed.  Our setup largely followed a design that was generously
+provided by Johannes Girstmair in the Telford lab at University College
+London, with a few modifications to fit our needs.  He provided me
+extensive help that I can pass along if he has not done already.
+
+Overall it works quite well.  If you use a TTL controller, you will want
+to add the following to the Configuration Settings window in
+Micro-Manager:
+
+Laser_[A/B/C/D]_LaserEmission
+Laser_[color]_DigitalPeakPowerSetting
+TTL_State (I rename this setting 'color' and name the TTL states that
+result in the desired outputs 'green', 'red' and 'off'.  This lets me set
+multi-channel images by assigning the 'color' variable in Multi-D
+Acquisition)
+
+Turn on DigitalModulation in the Device Property Browser and you should be
+set.  You have to switch LaserEmission on each time you boot up MM and if
+you use a TTL controller PeakPower will determine the laser intensity.
+
+Blanking mode will theoretically help acquire faster with minimized light
+exposure.  However I have not got that to work; Micro-Manager's
+auto-shutter seems to do the job well enough.
+
+All the best,
+
+
+Tim
+
+Timothy Feinstein, Ph.D.
+Research Scientist
+University of Pittsburgh Department of Developmental Biology
+From: OpenSPIM <openspim-bounces at openspim.org<mailto:openspim-bounces at openspim.org>> on behalf of "Weiss, Kurt" <KWeiss at morgridge.org<mailto:KWeiss at morgridge.org>>
+Date: Monday, December 5, 2016 at 5:22 PM
+To: "openspim at openspim.org<mailto:openspim at openspim.org>" <openspim at openspim.org<mailto:openspim at openspim.org>>
+Subject: [OpenSPIM] mutli-channel OpenSPIM
+
+Hi,
+
+We are interested in adding more laser channels to our current OpenSPIM. There seem to be three options: (1) multi-channel lauch, (2) laser combiner unit, (3) combine with mirror + dichroic.
+
+If we go for option 1: Does anyone have experience with mult-channel modules which integrate well with the OpenSPIM platform? (Besides the Stradus Versalase I have seen mentioned on this forum, though updates on this unit might be helpful if anyone has strong feelings).
+
+Any other comments on options 2 or 3 would also be appreciated. A few concerns have been addressed here:
+http://openspim.org/pipermail/openspim/2013-December/001268.html
+
+Thanks,
+Kurt
+_______________________
+Kurt Weiss, Ph.D.
+Postdoctoral Associate
+Huisken Group, Medical Engineering
+Morgridge Institute for Research
+330 N Charter St.
+Madison, WI 53715
+KWeiss at morgridge.org<mailto:KWeiss at morgridge.org>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161205/4babeaf7/attachment-0001.html>
+
+From ojabilez at stanford.edu  Fri Dec  9 17:38:46 2016
+From: ojabilez at stanford.edu (Oscar John Abilez)
+Date: Fri, 9 Dec 2016 23:38:46 +0000
+Subject: [OpenSPIM] 50/50 beam splitter?
+Message-ID: <BN6PR02MB2787F304ACF141CE8A1781DBAB870@BN6PR02MB2787.namprd02.prod.outlook.com>
+
+Hi,
+Simple question: is there a 50/50 beam splitter from Thorlabs someone could suggest for the dual illumination configuration?  I've found the BSW10 plate beamsplitter.   If there is an alternative method, please let me know. 
+Thanks,
+Oscar
+
+
+
+From huisken at mpi-cbg.de  Fri Dec  9 22:26:18 2016
+From: huisken at mpi-cbg.de (Jan Huisken)
+Date: Fri, 9 Dec 2016 22:26:18 -0600
+Subject: [OpenSPIM] 50/50 beam splitter?
+In-Reply-To: <BN6PR02MB2787F304ACF141CE8A1781DBAB870@BN6PR02MB2787.namprd02.prod.outlook.com>
+References: <BN6PR02MB2787F304ACF141CE8A1781DBAB870@BN6PR02MB2787.namprd02.prod.outlook.com>
+Message-ID: <8E75B3D7-C304-4119-8842-1337F6B21BE0@mpi-cbg.de>
+
+Hi Oscar
+
+I would recommend getting a half-wave plate <https://www.thorlabs.com/thorproduct.cfm?partnumber=WPMH05M-488> and a polarizing beamsplitter cube <https://www.thorlabs.com/thorproduct.cfm?partnumber=PBS101>. This is not cheap but the half-wave plate allows you to turn the polarization and to specify how much power you want in each arm. You can put (almost) all power in one arm or do a precise 50/50 illumination.
+
+Best
+Jan
+
+—
+Jan Huisken
+
+Director of Medical Engineering
+Lead Investigator of Multiscale Imaging
+Morgridge Institute for Research
+330 N Orchard St
+Madison, WI 53715, USA
+(608) 316-4417
+jhuisken at morgridge.org <mailto:jhuisken at morgridge.org>
+
+
+
+
+> On Dec 9, 2016, at 5:38 PM, Oscar John Abilez <ojabilez at stanford.edu <mailto:ojabilez at stanford.edu>> wrote:
+> 
+> Hi,
+> Simple question: is there a 50/50 beam splitter from Thorlabs someone could suggest for the dual illumination configuration?  I've found the BSW10 plate beamsplitter.   If there is an alternative method, please let me know. 
+> Thanks,
+> Oscar
+> 
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org <mailto:OpenSPIM at openspim.org>
+> http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161209/705c4986/attachment.html>
+
+From ojabilez at stanford.edu  Sun Dec 11 13:08:47 2016
+From: ojabilez at stanford.edu (Oscar John Abilez)
+Date: Sun, 11 Dec 2016 19:08:47 +0000
+Subject: [OpenSPIM] 50/50 beam splitter?
+In-Reply-To: <749202D4-1FCB-41C2-A87A-6E075C70A70F@morgridge.org>
+References: <BN6PR02MB2787F304ACF141CE8A1781DBAB870@BN6PR02MB2787.namprd02.prod.outlook.com>
+ <749202D4-1FCB-41C2-A87A-6E075C70A70F@morgridge.org>
+Message-ID: <BN6PR02MB2787836E77C106D0930550A6AB990@BN6PR02MB2787.namprd02.prod.outlook.com>
+
+Hi Jan,
+This is very helpful, thank you.
+Oscar
+
+From: Huisken, Jan [mailto:JHuisken at morgridge.org]
+Sent: 2016-December-09, Friday 20:23
+To: Oscar John Abilez; openspim at openspim.org
+Subject: Re: [OpenSPIM] 50/50 beam splitter?
+
+Hi Oscar
+
+I would recommend getting a half-wave plate<https://www.thorlabs.com/thorproduct.cfm?partnumber=WPMH05M-488> and a polarizing beamsplitter cube<https://www.thorlabs.com/thorproduct.cfm?partnumber=PBS101>. This is not cheap but the half-wave plate allows you to turn the polarization and to specify how much power you want in each arm. You can put (almost) all power in one arm or do a precise 50/50 illumination.
+
+Best
+Jan
+
+—
+Jan Huisken
+
+Director of Medical Engineering
+Lead Investigator of Multiscale Imaging
+Morgridge Institute for Research
+330 N Orchard St
+Madison, WI 53715, USA
+(608) 316-4417
+jhuisken at morgridge.org<mailto:jhuisken at morgridge.org>
+
+
+
+
+On Dec 9, 2016, at 5:38 PM, Oscar John Abilez <ojabilez at stanford.edu<mailto:ojabilez at stanford.edu>> wrote:
+
+Hi,
+Simple question: is there a 50/50 beam splitter from Thorlabs someone could suggest for the dual illumination configuration?  I've found the BSW10 plate beamsplitter.   If there is an alternative method, please let me know.
+Thanks,
+Oscar
+
+
+_______________________________________________
+OpenSPIM mailing list
+OpenSPIM at openspim.org<mailto:OpenSPIM at openspim.org>
+http://openspim.org/mailman/listinfo/openspim
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161211/1ccaf509/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Tue Dec 13 05:47:40 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Tue, 13 Dec 2016 12:47:40 +0100
+Subject: [OpenSPIM] Fwd: Standa Multi-Axis Precision Motion - Custom
+	Solutions
+In-Reply-To: <20161213113458.E34778BE2BA@gate.nencki.gov.pl>
+References: <20161213113458.E34778BE2BA@gate.nencki.gov.pl>
+Message-ID: <op.yseq1qg1ahhlbl@pc507-99ff.ibd>
+
+The question of alternatives to Picard appears sometimes on this list, so  
+I thought I'd forward this. Mechanically it looks good to me, but I  
+suppose some additional methods for the plugin would have to be added?
+
+Best,
+Monika
+
+
+
+
+------- Treść oryginalnej wiadomości -------
+Od: "Standa Ltd." <info at standa.lt>
+Do: "m.pawlowska" <m.pawlowska at nencki.gov.pl>
+Kopia dla:
+Temat: Multi-Axis Precision Motion - Custom Solutions
+Data: wtorek, .12.2016,
+
+Dear Monika Pawlowska ,
+
+We are pleased to present to you examples of STANDA`s unlimited  
+capabilities in building multi-axis automated systems and implementation  
+of OEM solutions, which combines wide range of our standard precision  
+motorized positioners with custom designed components.
+
+The capabilities are expanded by STANDA's series of motion controllers  
+such as 8SMC4 Series and Industrial EtherCat Servo Controllers, which have  
+great choice of programming options and examples compatible with Windows,  
+OS X and Linux.
+
+Looking forward of getting your tasks.
+www.standa.lt www.standaphotonics.com
+
+Multi-Axis Motion Systems Combined of Standard Positioners
+
+	
+
+XYZ Positioning with Rotation Motion:
+
+102x102x100mm linear + 360° rotation
+
+
+More Information...
+
+
+
+
+XZ Linear+Rotation+Goniometer Stages:
+
+Precision 2-axis goniometric motion with multi-axis linear positioning  
+capabilities
+
+
+More Information...	
+
+
+	
+
+XYZ+Rotation Precision Motion Platform:
+
+Optical breadboard with flat top surface motion within several degrees of  
+freedom
+
+
+More Information...
+
+
+
+
+
+For any inquiries, sales related questions or need of additional  
+information please contact us directly at sales at standa.lt, or contact your  
+local Standa distributor.
+
+Yours Sincerely,
+
+STANDA team
+
+
+STANDA P.O. BOX 377 , 03012 Vilnius, Lithuania
+Phone +370 5 2651474, Fax +370 5 2651483
+E-mail: sales at standa.LT
+Website: www.standa.LT, www.standaphotonics.com
+
+
+subscribe on Youtube | friend on Facebook | Unsubscribe
+
+
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161213/ec6ade23/attachment.html>
+
+From chens18 at rpi.edu  Mon Dec 19 10:20:34 2016
+From: chens18 at rpi.edu (Kathleen Chen)
+Date: Mon, 19 Dec 2016 11:20:34 -0500
+Subject: [OpenSPIM] Files for parts on OpenSPIM Wiki
+Message-ID: <CAGv7iOhrJzyAoVRkdnNdfnCoVo2e-8xoQC89dsFCd-dQLNW_1g@mail.gmail.com>
+
+Hello,
+
+My name is Kathleen Chen and I am a graduate student researcher at
+Rensselaer Polytechnic Institute. My lab group is interested in building an
+OpenSPIM according to the specifications provided on the OpenSPIM Wiki.
+
+I have recently been looking at the parts list for the OpenSPIM website, in
+particular the "self-made" parts. I noticed that there are some
+inconsistencies between the PDF version and the STL/STEP files for two
+parts: "RC1 vertical slit stilt" and "RC1 Ø1/2" lens stilt."
+
+Specifically, the measurements in the files are different. For example, the
+inner diameter of the slit stilt is 4.1mm on the PDF drawing, but the
+STEP/STL files show the inner diameter to be 4.25mm. Which measurement is
+the correct one to follow for the manufacturing process?
+
+Thank you,
+Kathleen Chen
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161219/69c884b5/attachment.html>
+
+From david.potter at monash.edu  Mon Dec 19 20:43:20 2016
+From: david.potter at monash.edu (David Potter)
+Date: Tue, 20 Dec 2016 13:43:20 +1100
+Subject: [OpenSPIM] OpenSPIM Digest, Vol 42, Issue 5
+In-Reply-To: <mailman.7.1482170402.123311.openspim@openspim.org>
+References: <mailman.7.1482170402.123311.openspim@openspim.org>
+Message-ID: <CAHmtN7nC-EKwXo9K3w2xqfjv8xySzzkiv7LHdOCMpPM2S06dxw@mail.gmail.com>
+
+Kathleen,
+
+The hole through the stilt is a clearance hole for the M4x0.7 cap screw (or
+#8-32 for the Americans) which will mount your 1/2" lens holder to the RC1.
+The size standard for cap screws dictates shoulder diameter as 4 mm
+maximum. A good quality cap screw is going to have a real world major
+diameter measured at the thread of ~ 3.90 to 3.95 mm. The standard diameter
+for a close fit clearance hole is 4.2 mm so you would go best with the 4.25
+mm diameter. 4.1 mm might work for a short cap screw, long screws can bind
+in the hole, but you'll need some "slop" in the fit to allow you room to
+move/tweek the 1/2" lens, in its holder, concentric and perpendicular to
+the beam axis.
+
+You should note: just screwed together and mounted on the table it is very
+unlikely your lens will be on the same axis as all of the parts purchased
+and custom manufactured by "you" will have fit tolerances and error
+including the concentricity of the Thorlabs doublet lens to the lens holder
+it's mounted in. Careful parts and sub-assembly matching will go a long way
+in tuning your build.
+
+For what it's worth: contrary to a common held belief, screws don't locate
+anything - they simply hold things down. Dowel pins or surfaces locate
+items. The part designer here is co-oping the close fit between the cap
+screw thread and the stilt hole it passes through in order to use the cap
+screw as a poor man's dowel rod. This was very likely done as a cost
+consideration as it's an inexpensive solution.
+
+Best of luck with your build.
+
+- David
+
+David Potter
+Lattice Light Sheet Microscopy Manager
+Monash Micro Imaging - Advanced Optical Microscopy
+Monash University Clayton, VIC 3800, Australia
+
+
+
+On 20 December 2016 at 05:00, <openspim-request at openspim.org> wrote:
+
+> Send OpenSPIM mailing list submissions to
+>         openspim at openspim.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>         http://openspim.org/mailman/listinfo/openspim
+> or, via email, send a message with subject or body 'help' to
+>         openspim-request at openspim.org
+>
+> You can reach the person managing the list at
+>         openspim-owner at openspim.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of OpenSPIM digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Files for parts on OpenSPIM Wiki (Kathleen Chen)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Mon, 19 Dec 2016 11:20:34 -0500
+> From: Kathleen Chen <chens18 at rpi.edu>
+> To: openspim at openspim.org
+> Subject: [OpenSPIM] Files for parts on OpenSPIM Wiki
+> Message-ID:
+>         <CAGv7iOhrJzyAoVRkdnNdfnCoVo2e-8xoQC89dsFCd-dQLNW_1g at mail.
+> gmail.com>
+> Content-Type: text/plain; charset="utf-8"
+>
+> Hello,
+>
+> My name is Kathleen Chen and I am a graduate student researcher at
+> Rensselaer Polytechnic Institute. My lab group is interested in building an
+> OpenSPIM according to the specifications provided on the OpenSPIM Wiki.
+>
+> I have recently been looking at the parts list for the OpenSPIM website, in
+> particular the "self-made" parts. I noticed that there are some
+> inconsistencies between the PDF version and the STL/STEP files for two
+> parts: "RC1 vertical slit stilt" and "RC1 Ø1/2" lens stilt."
+>
+> Specifically, the measurements in the files are different. For example, the
+> inner diameter of the slit stilt is 4.1mm on the PDF drawing, but the
+> STEP/STL files show the inner diameter to be 4.25mm. Which measurement is
+> the correct one to follow for the manufacturing process?
+>
+> Thank you,
+> Kathleen Chen
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <http://openspim.org/pipermail/openspim/
+> attachments/20161219/69c884b5/attachment-0001.html>
+>
+> ------------------------------
+>
+> Subject: Digest Footer
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+>
+>
+> ------------------------------
+>
+> End of OpenSPIM Digest, Vol 42, Issue 5
+> ***************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161220/62107f32/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Tue Dec 20 04:29:43 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Tue, 20 Dec 2016 11:29:43 +0100
+Subject: [OpenSPIM] Files for parts on OpenSPIM Wiki
+In-Reply-To: <CAGv7iOhrJzyAoVRkdnNdfnCoVo2e-8xoQC89dsFCd-dQLNW_1g@mail.gmail.com>
+References: <CAGv7iOhrJzyAoVRkdnNdfnCoVo2e-8xoQC89dsFCd-dQLNW_1g@mail.gmail.com>
+Message-ID: <op.ysrl3tinahhlbl@pc507-99ff.ibd>
+
+Hello,
+
+there are different options for manufacturing: 3D printing or from metal.  
+Many 3D-printed parts shrink slightly, so you have to design the parts  
+slightly bigger, and my guess is that this is what happened here.
+
+Anyway, you should look at the parts you are going to use - this  
+particular hole you describe is for a M4 screw, but if you use imperial  
+screw and not metric, it will be again slightly different, I guess.
+
+Regards,
+Monika
+
+W dniu .12.2016 o 17:20 Kathleen Chen <chens18 at rpi.edu> pisze:
+
+> Hello,
+>
+> My name is Kathleen Chen and I am a graduate student researcher at  
+> Rensselaer Polytechnic Institute. My lab group is interested in building  
+> an >OpenSPIM according to the specifications provided on the OpenSPIM  
+> Wiki.
+>
+> I have recently been looking at the parts list for the OpenSPIM website,  
+> in particular the "self-made" parts. I noticed that there are some  
+> inconsistencies >between the PDF version and the STL/STEP files for two  
+> parts: "RC1 vertical slit stilt" and "RC1 Ø1/2" lens stilt."
+> Specifically, the measurements in the files are different. For example,  
+> the inner diameter of the slit stilt is 4.1mm on the PDF drawing, but  
+> the STEP/STL >files show the inner diameter to be 4.25mm. Which  
+> measurement is the correct one to follow for the manufacturing process?
+>
+> Thank you,
+> Kathleen Chen
+
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161220/a02717a2/attachment.html>
+
+From guenther at mpi-cbg.de  Tue Dec 20 05:40:25 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 20 Dec 2016 12:40:25 +0100
+Subject: [OpenSPIM] Fwd: Standa Multi-Axis Precision Motion -
+	Custom	Solutions
+In-Reply-To: <op.yseq1qg1ahhlbl@pc507-99ff.ibd>
+References: <20161213113458.E34778BE2BA@gate.nencki.gov.pl>
+ <op.yseq1qg1ahhlbl@pc507-99ff.ibd>
+Message-ID: <ADD00240-1339-4B57-8DF4-644B2F9F16F1@mpi-cbg.de>
+
+Hi Monica,
+
+
+the controllers Standa makes are apparently supported by MicroManager (see https://micro-manager.org/wiki/Standa and https://www.micro-manager.org/wiki/Standa8SMC4), so actually no code changes should be needed from our side. If you’re willing to try these, I’d love to hear about your experience and would also help, should any integration issues arise.
+
+
+cheers!
+
+
+ulrik
+
+
+
+
+  —
+Ulrik Günther, Dipl.-Phys.
+PhD Student
+MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+Max Planck Institute of Molecular Cell Biology and Genetics
+Pfotenhauerstr. 108, D-01307 Dresden, Germany
+
+
+
+
+> On Dec 13, 2016, at 12:47 PM, Monika Pawłowska <m.pawlowska at nencki.gov.pl> wrote:
+> 
+> 
+> The question of alternatives to Picard appears sometimes on this list, so I thought I'd forward this. Mechanically it looks good to me, but I suppose some additional methods for the plugin would have to be added?
+> 
+> 
+> Best,
+> Monika
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> ------- Treść oryginalnej wiadomości -------
+> Od: "Standa Ltd." <info at standa.lt>
+> Do: "m.pawlowska" <m.pawlowska at nencki.gov.pl>
+> Kopia dla:
+> Temat: Multi-Axis Precision Motion - Custom Solutions
+> Data: wtorek, .12.2016,
+> 
+> Dear Monika Pawlowska ,
+> 
+> We are pleased to present to you examples of STANDA`s unlimited capabilities in building multi-axis automated systems and implementation of OEM solutions, which combines wide range of our standard precision motorized positioners
+>  with custom designed components.
+> 
+> The capabilities are expanded by STANDA's series of motion controllers such as 8SMC4 Series and Industrial EtherCat Servo Controllers
+> , which have great choice of programming options and examples compatible with Windows, OS X and Linux. 
+> 
+> Looking forward of getting your tasks.
+> 
+> www.standa.lt
+>  www.standaphotonics.com
+> 
+> 
+> <embedded image>
+> 
+> Multi-Axis Motion Systems Combined of Standard Positioners
+> 
+> 
+> 
+> <embedded image>
+> 
+> 
+> XYZ Positioning with Rotation Motion:
+> 
+> 102x102x100mm linear + 360° rotation 
+> 
+> 
+> <embedded image>
+> 
+> 
+> More Information...
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> XZ Linear+Rotation+Goniometer Stages:
+> 
+> Precision 2-axis goniometric motion with multi-axis linear positioning capabilities
+> 
+> 
+> <embedded image>
+> 
+> 
+> More Information...
+> 
+> <embedded image>
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> <embedded image>
+> 
+> 
+> XYZ+Rotation Precision Motion Platform:
+> 
+> Optical breadboard with flat top surface motion within several degrees of freedom
+> 
+> 
+> <embedded image>
+> 
+> 
+> More Information...
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> <embedded image>
+> 
+> 
+> 
+> For any inquiries, sales related questions or need of additional information please contact us directly at sales at standa.lt
+> , or contact your local Standa distributor.
+> 
+> 
+> Yours Sincerely,
+> 
+> STANDA team
+> 
+> 
+> 
+> <embedded image>
+> 
+> 
+> STANDA P.O. BOX 377 , 03012 Vilnius, Lithuania
+> Phone +370 5 2651474, Fax +370 5 2651483
+> E-mail: sales at standa.LT
+> 
+> Website: www.standa.LT
+> , www.standaphotonics.com
+> 
+> 
+> 
+> 
+> <embedded image>
+> 
+> subscribe on Youtube
+>  | friend on Facebook
+>  | Unsubscribe
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> -- 
+> Dr Monika Pawłowska
+> Nencki Institute
+> 02-093 Warsaw
+> Pasteura 3
+> Poland
+> 
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161220/c7bd8829/attachment-0001.html>
+
+From m.pawlowska at nencki.gov.pl  Tue Dec 20 08:34:00 2016
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Tue, 20 Dec 2016 15:34:00 +0100
+Subject: [OpenSPIM]
+ =?utf-8?q?Fwd=3A_Standa_Multi-Axis_Precision_Motion_-_?=
+ =?utf-8?q?Custom=09Solutions?=
+In-Reply-To: <ADD00240-1339-4B57-8DF4-644B2F9F16F1@mpi-cbg.de>
+References: <20161213113458.E34778BE2BA@gate.nencki.gov.pl>
+ <op.yseq1qg1ahhlbl@pc507-99ff.ibd>
+ <ADD00240-1339-4B57-8DF4-644B2F9F16F1@mpi-cbg.de>
+Message-ID: <376f4e90006a7b9c2602c0a1d0084676@nencki.gov.pl>
+
+Hi Ulrik,
+
+my Standa stages work with micro-manager. I can use them with Multi-D. 
+Acq. However, I am not managing to start the OpenSPIM plugin. See 
+Corelog attached. This is the crucial part:
+
+2016-12-20T15:22:50.467402 tid5404 [IFO,App] Plugin command: Acquire 
+SPIM image
+2016-12-20T15:22:50.469402 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:50.470402 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:50.477403 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm
+2016-12-20T15:22:50.478403 tid5404 [dbg,dev:Standa8SMC4XY] 
+Standa8SMC4XY::GetPositionUm returned  x=5602.47 y=15295.54
+2016-12-20T15:22:50.478403 tid5404 [IFO,App] Thread 16 
+(AWT-EventQueue-0) terminated with uncaught exception
+2016-12-20T15:22:50.478403 tid5404 [IFO,App] 
+java.lang.IllegalArgumentException: invalid range properties
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:102)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+javax.swing.JSlider.<init>(JSlider.java:274)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+javax.swing.JSlider.<init>(JSlider.java:241)
+2016-12-20T15:22:50.478403 tid5404 [IFO,App]   at 
+spim.gui.component.SteppedSlider.<init>(SteppedSlider.java:65)
+
+so basically the function that asks stage positions in order to create 
+the sliders in the plugin crashes.
+
+Regards,
+Monika
+
+
+
+W dniu 2016-12-20 12:40, Ulrik Günther napisał(a):
+> Hi Monica,
+> 
+> the controllers Standa makes are apparently supported by MicroManager
+> (see https://micro-manager.org/wiki/Standa and
+> https://www.micro-manager.org/wiki/Standa8SMC4), so actually no code
+> changes should be needed from our side. If you’re willing to try
+> these, I’d love to hear about your experience and would also help,
+> should any integration issues arise.
+> 
+> cheers!
+> 
+> ulrik
+> 
+> —
+> 
+> Ulrik Günther, Dipl.-Phys.
+> PhD Student
+> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+> Max Planck Institute of Molecular Cell Biology and Genetics
+> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+> 
+>> On Dec 13, 2016, at 12:47 PM, Monika Pawłowska
+>> <m.pawlowska at nencki.gov.pl> wrote:
+>> 
+>> The question of alternatives to Picard appears sometimes on this
+>> list, so I thought I'd forward this. Mechanically it looks good to
+>> me, but I suppose some additional methods for the plugin would have
+>> to be added?
+>> 
+>> Best,
+>> Monika
+>> 
+>> ------- Treść oryginalnej wiadomości -------
+>> Od: "Standa Ltd." <info at standa.lt>
+>> Do: "m.pawlowska" <m.pawlowska at nencki.gov.pl>
+>> Kopia dla:
+>> Temat: Multi-Axis Precision Motion - Custom Solutions
+>> Data: wtorek, .12.2016,
+>> 
+>> Dear Monika Pawlowska ,
+>> 
+>> We are pleased to present to you examples of STANDA`s unlimited
+>> capabilities in building multi-axis automated systems and
+>> implementation of OEM solutions, which combines wide range of our
+>> standard precision motorized positioners [1] with custom designed
+>> components.
+>> 
+>> The capabilities are expanded by STANDA's series of motion
+>> controllers such as 8SMC4 Series and Industrial EtherCat Servo
+>> Controllers [2], which have great choice of programming options and
+>> examples compatible with Windows, OS X and Linux.
+>> 
+>> Looking forward of getting your tasks. www.standa.lt [3]
+>> www.standaphotonics.com [4]
+>> 
+>> <embedded image>
+>> 
+>> MULTI-AXIS MOTION SYSTEMS COMBINED OF STANDARD POSITIONERS
+>> 
+>> <embedded image> [5]
+>> 
+>> XYZ Positioning with Rotation Motion:
+>> 
+>> *
+>> 102x102x100mm linear + 360° rotation
+>> 
+>> <embedded image> [6]
+>> 
+>> More Information...
+>> 
+>> XZ Linear+Rotation+Goniometer Stages:
+>> 
+>> *
+>> Precision 2-axis goniometric motion with multi-axis linear
+>> positioning capabilities
+>> 
+>> <embedded image> [7]
+>> 
+>> More Information... <embedded image> [8]
+>> 
+>> <embedded image> [9]
+>> 
+>> XYZ+Rotation Precision Motion Platform:
+>> 
+>> *
+>> Optical breadboard with flat top surface motion within several
+>> degrees of freedom
+>> 
+>> <embedded image> [10]
+>> 
+>> More Information...
+>> 
+>> <embedded image> [11]
+>> 
+>> For any inquiries, sales related questions or need of additional
+>> information please contact us directly at sales at standa.lt, or
+>> contact your local Standa distributor. [12]
+>> 
+>> Yours Sincerely,
+>> 
+>> STANDA team
+>> 
+>> <embedded image> [13]
+>> 
+>> STANDA P.O. BOX 377 , 03012 Vilnius, Lithuania
+>> Phone +370 5 2651474, Fax +370 5 2651483
+>> E-mail: sales at standa.LT
+>> Website: www.standa.LT [3], www.standaphotonics.com [4]
+>> 
+>> <embedded image>
+>> 
+>> subscribe on Youtube [14] | friend on Facebook [15] | Unsubscribe
+>> 
+>> --
+>> Dr Monika Pawłowska
+>> Nencki Institute
+>> 02-093 Warsaw
+>> Pasteura 3
+>> Poland
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+> 
+> 
+> Links:
+> ------
+> [1] http://www.standa.lt/products/catalog/motorised_positioners
+> [2] 
+> http://www.standa.lt/products/catalog/motorised_positioners#controller
+> [3] http://www.standa.lt
+> [4] http://www.standaphotonics.com
+> [5] http://www.standa.lt/products/catalog/custom_engineering?item=645
+> [6] https://youtu.be/WhjVMv9-yeA
+> [7] https://youtu.be/oeyCDxKE-EU
+> [8] http://www.standa.lt/products/catalog/custom_engineering?item=640
+> [9] http://www.standa.lt/products/catalog/custom_engineering?item=627
+> [10] https://youtu.be/DQCu3NOahk4
+> [11] http://www.standa.lt/products/catalog/custom_engineering
+> [12] http://www.standa.lt/contacts/worldwide
+> [13] http://webmail.nencki.gov.pl/www.standa.lt
+> [14] http://www.youtube.com/user/StandaLTD/videos
+> [15] http://www.facebook.com/Standa.ltd
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: CoreLog20161220T152233_pid2024.txt
+URL: <http://openspim.org/pipermail/openspim/attachments/20161220/e33a0a0f/attachment-0001.txt>
+
+From guenther at mpi-cbg.de  Tue Dec 20 12:56:53 2016
+From: guenther at mpi-cbg.de (=?UTF-8?Q?Ulrik_G=C3=BCnther?=)
+Date: 20 Dec 2016 19:56:53 +0100
+Subject: [OpenSPIM] Fwd: Standa Multi-Axis Precision Motion -
+	Custom	Solutions
+In-Reply-To: <376f4e90006a7b9c2602c0a1d0084676@nencki.gov.pl>
+References: <20161213113458.E34778BE2BA@gate.nencki.gov.pl>
+ <op.yseq1qg1ahhlbl@pc507-99ff.ibd>
+ <ADD00240-1339-4B57-8DF4-644B2F9F16F1@mpi-cbg.de>
+ <376f4e90006a7b9c2602c0a1d0084676@nencki.gov.pl>
+Message-ID: <84D13484-459A-4CF3-837B-A479FF612532@mpi-cbg.de>
+
+Hi Monika,
+
+
+the stage should actually work, for the function you mention the signatures are the same (see https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/Standa8SMC4/Standa8SMC4.cpp#L1024 vs. https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/PicardStage/PicardStage.cpp#L934, and, for fun also https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/DemoCamera/DemoCamera.cpp#L3430).
+
+
+However, it looks like the plugin is getting confused with which stage is which. That happens with non-Picard generic stages, as the plugin will then use GenericRotator/GenericXYStage, which match any stage device they find.
+
+
+Could you please try setting their names to XY, Z and Theta, while adding the XY first in the hardware configuration wizard, save the config, restart MM and try again?
+
+
+cheers!
+
+
+ulrik
+> On Dec 20, 2016, at 3:34 PM, <m.pawlowska at nencki.gov.pl> wrote:
+> 
+> 
+> Hi Ulrik,
+> 
+> 
+> my Standa stages work with micro-manager. I can use them with Multi-D. 
+> Acq. However, I am not managing to start the OpenSPIM plugin. See 
+> Corelog attached. This is the crucial part:
+> 
+> 
+> 2016-12-20T15:22:50.467402 tid5404 [IFO,App] Plugin command: Acquire 
+> SPIM image
+> 2016-12-20T15:22:50.469402 tid5404 [dbg,dev:Standa8SMC4XY] 
+> Standa8SMC4XY::GetPositionUm
+> 2016-12-20T15:22:50.470402 tid5404 [dbg,dev:Standa8SMC4XY] 
+> Standa8SMC4XY::GetPositionUm returned x=5602.47 y=15295.54
+> 2016-12-20T15:22:50.477403 tid5404 [dbg,dev:Standa8SMC4XY] 
+> Standa8SMC4XY::GetPositionUm
+> 2016-12-20T15:22:50.478403 tid5404 [dbg,dev:Standa8SMC4XY] 
+> Standa8SMC4XY::GetPositionUm returned x=5602.47 y=15295.54
+> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] Thread 16 
+> (AWT-EventQueue-0) terminated with uncaught exception
+> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] 
+> java.lang.IllegalArgumentException: invalid range properties
+> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at 
+> javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:102)
+> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at 
+> javax.swing.JSlider.<init>(JSlider.java:274)
+> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at 
+> javax.swing.JSlider.<init>(JSlider.java:241)
+> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at 
+> spim.gui.component.SteppedSlider.<init>(SteppedSlider.java:65)
+> 
+> 
+> so basically the function that asks stage positions in order to create 
+> the sliders in the plugin crashes.
+> 
+> 
+> Regards,
+> Monika
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> W dniu 2016-12-20 12:40, Ulrik Günther napisał(a):
+>> 
+>> 
+>> Hi Monica,
+>> 
+>> 
+>> the controllers Standa makes are apparently supported by MicroManager
+>> (see https://micro-manager.org/wiki/Standa and
+>> https://www.micro-manager.org/wiki/Standa8SMC4), so actually no code
+>> changes should be needed from our side. If you’re willing to try
+>> these, I’d love to hear about your experience and would also help,
+>> should any integration issues arise.
+>> 
+>> 
+>> cheers!
+>> 
+>> 
+>> ulrik
+>> 
+>> 
+>> —
+>> 
+>> 
+>> Ulrik Günther, Dipl.-Phys.
+>> PhD Student
+>> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+>> Max Planck Institute of Molecular Cell Biology and Genetics
+>> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>>> 
+>>> 
+>>> On Dec 13, 2016, at 12:47 PM, Monika Pawłowska
+>>> <m.pawlowska at nencki.gov.pl> wrote:
+>>> 
+>>> 
+>>> The question of alternatives to Picard appears sometimes on this
+>>> list, so I thought I'd forward this. Mechanically it looks good to
+>>> me, but I suppose some additional methods for the plugin would have
+>>> to be added?
+>>> 
+>>> 
+>>> Best,
+>>> Monika
+>>> 
+>>> 
+>>> ------- Treść oryginalnej wiadomości -------
+>>> Od: "Standa Ltd." <info at standa.lt>
+>>> Do: "m.pawlowska" <m.pawlowska at nencki.gov.pl>
+>>> Kopia dla:
+>>> Temat: Multi-Axis Precision Motion - Custom Solutions
+>>> Data: wtorek, .12.2016,
+>>> 
+>>> 
+>>> Dear Monika Pawlowska ,
+>>> 
+>>> 
+>>> We are pleased to present to you examples of STANDA`s unlimited
+>>> capabilities in building multi-axis automated systems and
+>>> implementation of OEM solutions, which combines wide range of our
+>>> standard precision motorized positioners [1] with custom designed
+>>> components.
+>>> 
+>>> 
+>>> The capabilities are expanded by STANDA's series of motion
+>>> controllers such as 8SMC4 Series and Industrial EtherCat Servo
+>>> Controllers [2], which have great choice of programming options and
+>>> examples compatible with Windows, OS X and Linux.
+>>> 
+>>> 
+>>> Looking forward of getting your tasks. www.standa.lt [3]
+>>> www.standaphotonics.com [4]
+>>> 
+>>> 
+>>> <embedded image>
+>>> 
+>>> 
+>>> MULTI-AXIS MOTION SYSTEMS COMBINED OF STANDARD POSITIONERS
+>>> 
+>>> 
+>>> <embedded image> [5]
+>>> 
+>>> 
+>>> XYZ Positioning with Rotation Motion:
+>>> 
+>>> 
+>>> *
+>>> 102x102x100mm linear + 360° rotation
+>>> 
+>>> 
+>>> <embedded image> [6]
+>>> 
+>>> 
+>>> More Information...
+>>> 
+>>> 
+>>> XZ Linear+Rotation+Goniometer Stages:
+>>> 
+>>> 
+>>> *
+>>> Precision 2-axis goniometric motion with multi-axis linear
+>>> positioning capabilities
+>>> 
+>>> 
+>>> <embedded image> [7]
+>>> 
+>>> 
+>>> More Information... <embedded image> [8]
+>>> 
+>>> 
+>>> <embedded image> [9]
+>>> 
+>>> 
+>>> XYZ+Rotation Precision Motion Platform:
+>>> 
+>>> 
+>>> *
+>>> Optical breadboard with flat top surface motion within several
+>>> degrees of freedom
+>>> 
+>>> 
+>>> <embedded image> [10]
+>>> 
+>>> 
+>>> More Information...
+>>> 
+>>> 
+>>> <embedded image> [11]
+>>> 
+>>> 
+>>> For any inquiries, sales related questions or need of additional
+>>> information please contact us directly at sales at standa.lt, or
+>>> contact your local Standa distributor. [12]
+>>> 
+>>> 
+>>> Yours Sincerely,
+>>> 
+>>> 
+>>> STANDA team
+>>> 
+>>> 
+>>> <embedded image> [13]
+>>> 
+>>> 
+>>> STANDA P.O. BOX 377 , 03012 Vilnius, Lithuania
+>>> Phone +370 5 2651474, Fax +370 5 2651483
+>>> E-mail: sales at standa.LT
+>>> Website: www.standa.LT [3], www.standaphotonics.com [4]
+>>> 
+>>> 
+>>> <embedded image>
+>>> 
+>>> 
+>>> subscribe on Youtube [14] | friend on Facebook [15] | Unsubscribe
+>>> 
+>>> 
+>>> --
+>>> Dr Monika Pawłowska
+>>> Nencki Institute
+>>> 02-093 Warsaw
+>>> Pasteura 3
+>>> Poland
+>>> _______________________________________________
+>>> OpenSPIM mailing list
+>>> OpenSPIM at openspim.org
+>>> http://openspim.org/mailman/listinfo/openspim
+>>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> Links:
+>> ------
+>> [1] http://www.standa.lt/products/catalog/motorised_positioners
+>> [2] 
+>> http://www.standa.lt/products/catalog/motorised_positioners#controller
+>> [3] http://www.standa.lt
+>> [4] http://www.standaphotonics.com
+>> [5] http://www.standa.lt/products/catalog/custom_engineering?item=645
+>> [6] https://youtu.be/WhjVMv9-yeA
+>> [7] https://youtu.be/oeyCDxKE-EU
+>> [8] http://www.standa.lt/products/catalog/custom_engineering?item=640
+>> [9] http://www.standa.lt/products/catalog/custom_engineering?item=627
+>> [10] https://youtu.be/DQCu3NOahk4
+>> [11] http://www.standa.lt/products/catalog/custom_engineering
+>> [12] http://www.standa.lt/contacts/worldwide
+>> [13] http://webmail.nencki.gov.pl/www.standa.lt
+>> [14] http://www.youtube.com/user/StandaLTD/videos
+>> [15] http://www.facebook.com/Standa.ltd
+>> 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://openspim.org/pipermail/openspim/attachments/20161220/8e01bf05/attachment.html>
+
+From m.pawlowska at nencki.gov.pl  Wed Dec 21 09:56:12 2016
+From: m.pawlowska at nencki.gov.pl (m.pawlowska at nencki.gov.pl)
+Date: Wed, 21 Dec 2016 16:56:12 +0100
+Subject: [OpenSPIM]
+ =?utf-8?q?Fwd=3A_Standa_Multi-Axis_Precision_Motion_-_?=
+ =?utf-8?q?Custom=09Solutions?=
+In-Reply-To: <84D13484-459A-4CF3-837B-A479FF612532@mpi-cbg.de>
+References: <20161213113458.E34778BE2BA@gate.nencki.gov.pl>
+ <op.yseq1qg1ahhlbl@pc507-99ff.ibd>
+ <ADD00240-1339-4B57-8DF4-644B2F9F16F1@mpi-cbg.de>
+ <376f4e90006a7b9c2602c0a1d0084676@nencki.gov.pl>
+ <84D13484-459A-4CF3-837B-A479FF612532@mpi-cbg.de>
+Message-ID: <b76eed50e4613fd6506467878e8d005d@nencki.gov.pl>
+
+Ok, I have it. The problem was somewhere else.
+
+Standa stages don't have a maximum position property. As a result, the 
+plugin tries to initialize with the default limit of 9000. My current 
+position at the time of first testing was >9000, therefore invalid. When 
+I moved all stages to 0, I can start the plugin and move the stage - up 
+to 9000... Not satisfactory. I don't know how to fix it. I had a similar 
+problem with the Picard Hi-Res, but that one had a Maximum property that 
+can be read in the code. Standa only has 'Port' and 'Unit Multiplier' at 
+config and the TransposeMirror in property browser, as far as I can see.
+
+Ideas?
+
+Regards,
+Monika
+
+
+
+W dniu 2016-12-20 19:56, Ulrik Günther napisał(a):
+> Hi Monika,
+> 
+> the stage should actually work, for the function you mention the
+> signatures are the same (see
+> https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/Standa8SMC4/Standa8SMC4.cpp#L1024
+> vs.
+> https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/PicardStage/PicardStage.cpp#L934,
+> and, for fun also
+> https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/DemoCamera/DemoCamera.cpp#L3430).
+> 
+> 
+> However, it looks like the plugin is getting confused with which stage
+> is which. That happens with non-Picard generic stages, as the plugin
+> will then use GenericRotator/GenericXYStage, which match any stage
+> device they find.
+> 
+> Could you please try setting their names to XY, Z and Theta, while
+> adding the XY first in the hardware configuration wizard, save the
+> config, restart MM and try again?
+> 
+> cheers!
+> 
+> ulrik
+> 
+>> On Dec 20, 2016, at 3:34 PM, <m.pawlowska at nencki.gov.pl> wrote:
+>> 
+>> Hi Ulrik,
+>> 
+>> my Standa stages work with micro-manager. I can use them with
+>> Multi-D.
+>> Acq. However, I am not managing to start the OpenSPIM plugin. See
+>> Corelog attached. This is the crucial part:
+>> 
+>> 2016-12-20T15:22:50.467402 tid5404 [IFO,App] Plugin command: Acquire
+>> 
+>> SPIM image
+>> 2016-12-20T15:22:50.469402 tid5404 [dbg,dev:Standa8SMC4XY]
+>> Standa8SMC4XY::GetPositionUm
+>> 2016-12-20T15:22:50.470402 tid5404 [dbg,dev:Standa8SMC4XY]
+>> Standa8SMC4XY::GetPositionUm returned x=5602.47 y=15295.54
+>> 2016-12-20T15:22:50.477403 tid5404 [dbg,dev:Standa8SMC4XY]
+>> Standa8SMC4XY::GetPositionUm
+>> 2016-12-20T15:22:50.478403 tid5404 [dbg,dev:Standa8SMC4XY]
+>> Standa8SMC4XY::GetPositionUm returned x=5602.47 y=15295.54
+>> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] Thread 16
+>> (AWT-EventQueue-0) terminated with uncaught exception
+>> 2016-12-20T15:22:50.478403 tid5404 [IFO,App]
+>> java.lang.IllegalArgumentException: invalid range properties
+>> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at
+>> 
+> javax.swing.DefaultBoundedRangeModel.<init>(DefaultBoundedRangeModel.java:102)
+>> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at
+>> javax.swing.JSlider.<init>(JSlider.java:274)
+>> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at
+>> javax.swing.JSlider.<init>(JSlider.java:241)
+>> 2016-12-20T15:22:50.478403 tid5404 [IFO,App] at
+>> spim.gui.component.SteppedSlider.<init>(SteppedSlider.java:65)
+>> 
+>> so basically the function that asks stage positions in order to
+>> create
+>> the sliders in the plugin crashes.
+>> 
+>> Regards,
+>> Monika
+>> 
+>> W dniu 2016-12-20 12:40, Ulrik Günther napisał(a):
+>> 
+>> Hi Monica,
+>> 
+>> the controllers Standa makes are apparently supported by
+>> MicroManager
+>> (see https://micro-manager.org/wiki/Standa and
+>> https://www.micro-manager.org/wiki/Standa8SMC4), so actually no code
+>> changes should be needed from our side. If you’re willing to try
+>> these, I’d love to hear about your experience and would also help,
+>> should any integration issues arise.
+>> 
+>> cheers!
+>> 
+>> ulrik
+>> 
+>> —
+>> 
+>> Ulrik Günther, Dipl.-Phys.
+>> PhD Student
+>> MOSAIC Group & Tomancak Lab, Center of Systems Biology Dresden
+>> Max Planck Institute of Molecular Cell Biology and Genetics
+>> Pfotenhauerstr. 108, D-01307 Dresden, Germany
+>> 
+>> On Dec 13, 2016, at 12:47 PM, Monika Pawłowska
+>> <m.pawlowska at nencki.gov.pl> wrote:
+>> 
+>> The question of alternatives to Picard appears sometimes on this
+>> list, so I thought I'd forward this. Mechanically it looks good to
+>> me, but I suppose some additional methods for the plugin would have
+>> to be added?
+>> 
+>> Best,
+>> Monika
+>> 
+>> ------- Treść oryginalnej wiadomości -------
+>> Od: "Standa Ltd." <info at standa.lt>
+>> Do: "m.pawlowska" <m.pawlowska at nencki.gov.pl>
+>> Kopia dla:
+>> Temat: Multi-Axis Precision Motion - Custom Solutions
+>> Data: wtorek, .12.2016,
+>> 
+>> Dear Monika Pawlowska ,
+>> 
+>> We are pleased to present to you examples of STANDA`s unlimited
+>> capabilities in building multi-axis automated systems and
+>> implementation of OEM solutions, which combines wide range of our
+>> standard precision motorized positioners [1] with custom designed
+>> components.
+>> 
+>> The capabilities are expanded by STANDA's series of motion
+>> controllers such as 8SMC4 Series and Industrial EtherCat Servo
+>> Controllers [2], which have great choice of programming options and
+>> examples compatible with Windows, OS X and Linux.
+>> 
+>> Looking forward of getting your tasks. www.standa.lt [3]
+>> www.standaphotonics.com [4]
+>> 
+>> <embedded image>
+>> 
+>> MULTI-AXIS MOTION SYSTEMS COMBINED OF STANDARD POSITIONERS
+>> 
+>> <embedded image> [5]
+>> 
+>> XYZ Positioning with Rotation Motion:
+>> 
+>> *
+>> 102x102x100mm linear + 360° rotation
+>> 
+>> <embedded image> [6]
+>> 
+>> More Information...
+>> 
+>> XZ Linear+Rotation+Goniometer Stages:
+>> 
+>> *
+>> Precision 2-axis goniometric motion with multi-axis linear
+>> positioning capabilities
+>> 
+>> <embedded image> [7]
+>> 
+>> More Information... <embedded image> [8]
+>> 
+>> <embedded image> [9]
+>> 
+>> XYZ+Rotation Precision Motion Platform:
+>> 
+>> *
+>> Optical breadboard with flat top surface motion within several
+>> degrees of freedom
+>> 
+>> <embedded image> [10]
+>> 
+>> More Information...
+>> 
+>> <embedded image> [11]
+>> 
+>> For any inquiries, sales related questions or need of additional
+>> information please contact us directly at sales at standa.lt, or
+>> contact your local Standa distributor. [12]
+>> 
+>> Yours Sincerely,
+>> 
+>> STANDA team
+>> 
+>> <embedded image> [13]
+>> 
+>> STANDA P.O. BOX 377 , 03012 Vilnius, Lithuania
+>> Phone +370 5 2651474, Fax +370 5 2651483
+>> E-mail: sales at standa.LT
+>> Website: www.standa.LT [3], www.standaphotonics.com [4]
+>> 
+>> <embedded image>
+>> 
+>> subscribe on Youtube [14] | friend on Facebook [15] | Unsubscribe
+>> 
+>> --
+>> Dr Monika Pawłowska
+>> Nencki Institute
+>> 02-093 Warsaw
+>> Pasteura 3
+>> Poland
+>> _______________________________________________
+>> OpenSPIM mailing list
+>> OpenSPIM at openspim.org
+>> http://openspim.org/mailman/listinfo/openspim
+>> 
+>> Links:
+>> ------
+>> [1] http://www.standa.lt/products/catalog/motorised_positioners
+>> [2]
+>> 
+> http://www.standa.lt/products/catalog/motorised_positioners#controller
+>> [3] http://www.standa.lt
+>> [4] http://www.standaphotonics.com
+>> [5]
+>> http://www.standa.lt/products/catalog/custom_engineering?item=645
+>> [6] https://youtu.be/WhjVMv9-yeA
+>> [7] https://youtu.be/oeyCDxKE-EU
+>> [8]
+>> http://www.standa.lt/products/catalog/custom_engineering?item=640
+>> [9]
+>> http://www.standa.lt/products/catalog/custom_engineering?item=627
+>> [10] https://youtu.be/DQCu3NOahk4
+>> [11] http://www.standa.lt/products/catalog/custom_engineering
+>> [12] http://www.standa.lt/contacts/worldwide
+>> [13] http://webmail.nencki.gov.pl/www.standa.lt
+>> [14] http://www.youtube.com/user/StandaLTD/videos
+>> [15] http://www.facebook.com/Standa.ltd
+
+
+From huyan1020 at sjtu.edu.cn  Wed Dec 21 21:24:45 2016
+From: huyan1020 at sjtu.edu.cn (=?gb2312?B?uvrR3A==?=)
+Date: Thu, 22 Dec 2016 11:24:45 +0800 (CST)
+Subject: [OpenSPIM] The shape of light-sheet from a illumination objective
+Message-ID: <454038682.8350824.1482377085191.JavaMail.zimbra@sjtu.edu.cn>
+
+Dear openSPIM list,
+
+This is Yan, from China.
+I built a light-sheet microscopy following the openSPIM,
+but I found the light sheet shape changing from vertical to horizontal.
+
+The optic path followed the openSPIM,
+There was a vertical light sheet in front of the illumination objective.
+This sheet focused in the position of working distance away from illumination objective,
+the thinnest sheet in vertical direction.
+But after this position the vertical direction height became smaller, 
+and the horizontal direction width became larger. 
+There is a position long away from the illumination position, 
+the light sheet became thinnest in the horizontal direction.
+
+Is there anyone knowing such thing? What is the problem?
+I don't know the reason, so I don't know how to change the optic path.
+
+I am looking forward for your reply.
+Best regards,
+Yan
+
+
+From m.pawlowska at nencki.gov.pl  Thu Dec 22 05:43:41 2016
+From: m.pawlowska at nencki.gov.pl (=?utf-8?B?TW9uaWthIFBhd8WCb3dza2E=?=)
+Date: Thu, 22 Dec 2016 12:43:41 +0100
+Subject: [OpenSPIM] The shape of light-sheet from a illumination
+	objective
+In-Reply-To: <454038682.8350824.1482377085191.JavaMail.zimbra@sjtu.edu.cn>
+References: <454038682.8350824.1482377085191.JavaMail.zimbra@sjtu.edu.cn>
+Message-ID: <op.ysveu3diahhlbl@pc507-99ff.ibd>
+
+Sounds like your distances are off. Check out the tips in the 'Assembling  
+the telescope' instruction  
+http://openspim.org/Install_illumination_axis_on_the_optical_breadboard_-_Part_2#Assembling_the_telescope
+
+Best,
+Monika
+
+W dniu .12.2016 o 04:24 胡衍 <huyan1020 at sjtu.edu.cn> pisze:
+
+> Dear openSPIM list,
+>
+> This is Yan, from China.
+> I built a light-sheet microscopy following the openSPIM,
+> but I found the light sheet shape changing from vertical to horizontal.
+>
+> The optic path followed the openSPIM,
+> There was a vertical light sheet in front of the illumination objective.
+> This sheet focused in the position of working distance away from  
+> illumination objective,
+> the thinnest sheet in vertical direction.
+> But after this position the vertical direction height became smaller,
+> and the horizontal direction width became larger.
+> There is a position long away from the illumination position,
+> the light sheet became thinnest in the horizontal direction.
+>
+> Is there anyone knowing such thing? What is the problem?
+> I don't know the reason, so I don't know how to change the optic path.
+>
+> I am looking forward for your reply.
+> Best regards,
+> Yan
+>
+> _______________________________________________
+> OpenSPIM mailing list
+> OpenSPIM at openspim.org
+> http://openspim.org/mailman/listinfo/openspim
+
+
+-- 
+Dr Monika Pawłowska
+Nencki Institute
+02-093 Warsaw
+Pasteura 3
+Poland
+
+
